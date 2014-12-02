@@ -4,7 +4,7 @@
 #  include "c/strlen.h"
 #  include "c/_exit.h"
 #  include "c/_write.h"
-#  include "c/__c++/__c_NORETURN.h"
+#  include "c/__internal/__c_NORETURN.h"
 #  define __c_DIE(what, message) __die(what, message, __FILE__, __LINE__, __FUNCTION__)
 
 #  ifdef __cplusplus
