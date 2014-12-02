@@ -2,7 +2,7 @@
 #define _c__strlen_h
 
 #include "c/size_t.h"
-#include "c/__c_CONSTEXPR.h"
+#include "c/__c++/__c_CONSTEXPR.h"
 
 #ifdef __cplusplus
 inline namespace c {
