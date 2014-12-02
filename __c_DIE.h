@@ -23,15 +23,15 @@ void
 __die(const char* what, const char* message, const char* file, uint32_t line, const char* function)
 {
     // Super naive.
-    __write_stderr("\033[31m");
+    __write_stderr("\033[31;1m");
     __write_stderr(what);
     __write_stderr(":\033[0m ");
     __write_stderr(message);
-    __write_stderr("\n  * file: ");
-    __write_stderr(file);
     __write_stderr("\n  * function: ");
     __write_stderr(function);
-    __write_stderr("\n  * line: (TODO)");
+    __write_stderr("\n  * file:     ");
+    __write_stderr(file);
+    __write_stderr("\n  * line:     TODO");
     __write_stderr("\n");
 
     _exit(EXIT_FAILURE);

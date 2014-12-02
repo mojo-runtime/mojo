@@ -7,7 +7,7 @@
 #else
 #  include "c/__c_DIE.h"
 #  include "c/__c++/__c_STATIC_CAST.h"
-#  define assert(x) ((x) ? __c_STATIC_CAST(void, 0) : __c_DIE("assertion failed", #x))
+#  define assert(x) ((x) ? __c_STATIC_CAST(void, 0) : __c_DIE("assertion error", #x))
 #endif
 
 #endif
