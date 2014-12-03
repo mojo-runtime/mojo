@@ -8,6 +8,7 @@
 #include "c/_sys_write.h"
 #include "c/__internal/__c_NORETURN.h"
 #include "c/__internal/__c_STATIC_CAST.h"
+#include "c/__internal/__c_UNUSED.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -16,7 +17,7 @@ inline namespace c {
 __c_NORETURN
 static
 void
-__assertion_error(const char* expression, const char* file, unsigned int line, const char* function)
+__assertion_error(const char* expression, const char* file, __c_UNUSED unsigned int line, const char* function)
 {
 
 #define __WRITE(data) _sys_write(STDERR_FILENO, __c_STATIC_CAST(const void*, data), strlen(data))
