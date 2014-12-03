@@ -1,5 +1,5 @@
-#ifndef _c__linux__x86_64___exit_h
-#define _c__linux__x86_64___exit_h
+#ifndef _c__linux__x86_64___sys_exit_h
+#define _c__linux__x86_64___sys_exit_h
 
 #include "c/linux/x86_64/SYS_exit.h"
 #include "c/linux/x86_64/_ExitStatus.h"
@@ -15,7 +15,7 @@ inline namespace x86_64 {
 __c_NORETURN
 static
 void
-_exit(_ExitStatus status)
+_sys_exit(_ExitStatus status)
 {
     register
     _ExitStatus

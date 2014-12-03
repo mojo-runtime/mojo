@@ -4,8 +4,8 @@
 #include "c/EXIT_FAILURE.h"
 #include "c/STDERR_FILENO.h"
 #include "c/strlen.h"
-#include "c/_exit.h"
-#include "c/_write.h"
+#include "c/_sys_exit.h"
+#include "c/_sys_write.h"
 #include "c/__internal/__c_NORETURN.h"
 #include "c/__internal/__c_STATIC_CAST.h"
 
@@ -19,7 +19,7 @@ void
 __assertion_error(const char* expression, const char* file, uint32_t line, const char* function)
 {
 
-#define __WRITE(data) _write(STDERR_FILENO, __c_STATIC_CAST(const void*, data), strlen(data))
+#define __WRITE(data) _sys_write(STDERR_FILENO, __c_STATIC_CAST(const void*, data), strlen(data))
 
     // Super naive.
     __WRITE("\033[31;1massertion error:\033[0m ");
@@ -33,7 +33,7 @@ __assertion_error(const char* expression, const char* file, uint32_t line, const
 
 #undef __WRITE
 
-    _exit(EXIT_FAILURE);
+    _sys_exit(EXIT_FAILURE);
 }
 
 #  ifdef __cplusplus

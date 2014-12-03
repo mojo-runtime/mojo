@@ -1,5 +1,5 @@
-#ifndef _c__linux__x86_64___write_h
-#define _c__linux__x86_64___write_h
+#ifndef _c__linux__x86_64___sys_write_h
+#define _c__linux__x86_64___sys_write_h
 
 #include "c/linux/x86_64/SYS_write.h"
 #include "c/linux/x86_64/size_t.h"
@@ -14,7 +14,7 @@ inline namespace x86_64 {
 
 static
 _SystemCallResult
-_write(_FileDescriptor fd, const void* data, size_t length)
+_sys_write(_FileDescriptor fd, const void* data, size_t length)
 {
     _SystemCallResult
     result;
