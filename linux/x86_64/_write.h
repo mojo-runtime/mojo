@@ -34,7 +34,7 @@ _write(_FileDescriptor fd, const void* data, size_t length)
     __asm__ volatile (
         "syscall"
         : /* outputs  */ "=a" (result)
-        : /* inputs   */ "ra" (SYS_write), "r" (r1), "r" (r2), "r" (r3)
+        : /* inputs   */ "0" (SYS_write), "r" (r1), "r" (r2), "r" (r3)
         : /* clobbers */ "rcx", "r11"
     );
 
