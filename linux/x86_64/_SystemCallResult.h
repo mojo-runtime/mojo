@@ -9,7 +9,11 @@ inline namespace linux {
 inline namespace x86_64 {
 #endif
 
-typedef uint64_t _SystemCallResult;
+typedef struct
+{
+    uint64_t
+    __word;
+} _SystemCallResult;
 
 #ifdef __cplusplus
 } // inline namespace x86_64
