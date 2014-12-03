@@ -2,6 +2,6 @@
 #  ifdef __cplusplus
 #    define __c_NORETURN [[noreturn]]
 #  else
-#    define __c_NORETURN __attribute__((__noreturn__))
+#    define __c_NORETURN _Noreturn
 #  endif
 #endif
