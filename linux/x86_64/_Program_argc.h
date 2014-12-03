@@ -1,5 +1,5 @@
-#ifndef _c__linux__x86_64___argument_count_h
-#define _c__linux__x86_64___argument_count_h
+#ifndef _c__linux__x86_64___Program_argc_h
+#define _c__linux__x86_64___Program_argc_h
 
 #include "c/linux/x86_64/_Program.h"
 #include "c/__internal/__c_REINTERPRET_CAST.h"
@@ -12,9 +12,9 @@ inline namespace x86_64 {
 
 static
 uint64_t
-_argument_count(const _Program* program)
+_Program_argc(const _Program* program)
 {
-    return *__c_REINTERPRET_CAST(const uint64_t*, program); // @see _environment_pointers
+    return *__c_REINTERPRET_CAST(const uint64_t*, program); // @see _Program_envp
 }
 
 #ifdef __cplusplus
