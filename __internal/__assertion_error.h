@@ -16,7 +16,7 @@ inline namespace c {
 __c_NORETURN
 static
 void
-__assertion_error(const char* expression, const char* file, uint32_t line, const char* function)
+__assertion_error(const char* expression, const char* file, unsigned int line, const char* function)
 {
 
 #define __WRITE(data) _sys_write(STDERR_FILENO, __c_STATIC_CAST(const void*, data), strlen(data))
