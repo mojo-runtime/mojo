@@ -1,7 +1,7 @@
-#ifndef _c__linux__x86_64___Program_envp_h
-#define _c__linux__x86_64___Program_envp_h
+#ifndef _c__linux__x86_64___Application_envp_h
+#define _c__linux__x86_64___Application_envp_h
 
-#include "c/linux/x86_64/_Program.h"
+#include "c/linux/x86_64/_Application.h"
 #include "c/__internal/__c_REINTERPRET_CAST.h"
 
 #ifdef __cplusplus
@@ -44,11 +44,11 @@ inline namespace x86_64 {
 
 static
 const char* const*
-_Program_envp(const _Program* program)
+_Application_envp(const _Application* self)
 {
 
-    return __c_REINTERPRET_CAST(const char* const*, program)
-       + (*__c_REINTERPRET_CAST(const uint64_t*,    program)) // argc
+    return __c_REINTERPRET_CAST(const char* const*, self)
+       + (*__c_REINTERPRET_CAST(const uint64_t*,    self)) // argc
        + 2;
 }
 
