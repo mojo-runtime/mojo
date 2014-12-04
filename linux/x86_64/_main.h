@@ -3,9 +3,18 @@
 
 #include "c/linux/x86_64/_Program.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+__attribute__((used))
 __attribute__((visibility("internal")))
 void
 _main(const _Program* program); // `program` can be safely omitted by the implementor
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 __asm__(
     ".globl _start\n\t"
