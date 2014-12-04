@@ -1,5 +1,5 @@
-#ifndef _c__linux__x86_64___main_h
-#define _c__linux__x86_64___main_h
+#ifndef _c__linux__x86_64____main___h
+#define _c__linux__x86_64____main___h
 
 #include "c/linux/x86_64/_Program.h"
 
@@ -10,7 +10,7 @@ extern "C" {
 __attribute__((used))
 __attribute__((visibility("internal")))
 void
-_main(const _Program* program); // `program` can be safely omitted by the implementor
+__main__(const _Program* program); // `program` can be safely omitted by the implementor
 
 #ifdef __cplusplus
 } // extern "C"
@@ -47,7 +47,7 @@ __asm__(
 
     // Give 'er a rip, and if...
 
-    "call _main\n\t"
+    "call __main__\n\t"
 
     // ... we returned normally...
 
