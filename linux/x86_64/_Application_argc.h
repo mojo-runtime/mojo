@@ -1,6 +1,7 @@
 #ifndef _c__linux__x86_64___Application_argc_h
 #define _c__linux__x86_64___Application_argc_h
 
+#include "c/uint64_t.h"
 #include "c/linux/x86_64/_Application.h"
 #include "c/__internal/__c_REINTERPRET_CAST.h"
 
