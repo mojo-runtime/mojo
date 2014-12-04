@@ -1,20 +1,5 @@
-#ifndef _c__linux__x86_64____main___h
-#define _c__linux__x86_64____main___h
-
-#include "c/linux/x86_64/_Application.h"
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-__attribute__((used))
-__attribute__((visibility("internal")))
-void
-__main__(const _Application* application); // `application` can be safely omitted by the implementor
-
-#ifdef __cplusplus
-} // extern "C"
-#endif
+#ifndef _c__linux__x86_64___start_h
+#define _c__linux__x86_64___start_h
 
 __asm__(
     ".globl _start\n\t"
