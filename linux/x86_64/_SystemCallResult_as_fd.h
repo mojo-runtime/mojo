@@ -1,5 +1,5 @@
-#ifndef _c__linux__x86_64___SystemCallResult_as_FileDescriptor_h
-#define _c__linux__x86_64___SystemCallResult_as_FileDescriptor_h
+#ifndef _c__linux__x86_64___SystemCallResult_as_fd_h
+#define _c__linux__x86_64___SystemCallResult_as_fd_h
 
 #include "c/linux/x86_64/_FileDescriptor.h"
 #include "c/linux/x86_64/_SystemCallResult.h"
@@ -13,7 +13,7 @@ inline namespace x86_64 {
 
 static
 _FileDescriptor
-_SystemCallResult_as_FileDescriptor(_SystemCallResult result)
+_SystemCallResult_as_fd(_SystemCallResult result)
 {
     return __c_STATIC_CAST(_FileDescriptor, result.__word);
 }
