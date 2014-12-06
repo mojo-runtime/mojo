@@ -25,7 +25,6 @@ _exit(_ExitStatus status)
         "syscall"
         : /* outputs  */
         : /* inputs   */ "ra" (SYS_exit), "r" (r1)
-        : /* clobbers */ "rcx", "r11"
     );
 
     __builtin_unreachable();
