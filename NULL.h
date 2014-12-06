@@ -8,7 +8,7 @@ inline namespace c {
 #ifdef __cplusplus
 static const auto NULL = nullptr;
 #else
-static const void* const NULL = 0; // This might be going too far.
+static void* NULL = 0; // This might be going too far.
 #endif
 
 #ifdef __cplusplus
