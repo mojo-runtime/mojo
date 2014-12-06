@@ -1,5 +1,5 @@
-#ifndef _c__linux__x86_64___WaitFlags_h
-#define _c__linux__x86_64___WaitFlags_h
+#ifndef _c__linux__x86_64___WaitOptions_h
+#define _c__linux__x86_64___WaitOptions_h
 
 #include "c/int32_t.h"
 
@@ -9,7 +9,7 @@ inline namespace linux {
 inline namespace x86_64 {
 #endif
 
-typedef int32_t _WaitFlags;
+typedef int32_t _WaitOptions;
 
 #ifdef __cplusplus
 } // inline namespace x86_64
