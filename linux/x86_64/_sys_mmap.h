@@ -7,6 +7,7 @@
 #include "c/linux/x86_64/_FileDescriptor.h"
 #include "c/linux/x86_64/_MapFlags.h"
 #include "c/linux/x86_64/_ProtectionFlags.h"
+#include "c/linux/x86_64/_SystemCallResult.h"
 
 #ifdef __cplusplus
 inline namespace c {
