@@ -4,7 +4,7 @@
 #include "c/linux/x86_64/SYS_waitid.h"
 #include "c/linux/x86_64/pid_t.h"
 #include "c/linux/x86_64/rusage.h"
-#include "c/linux/x86_64/siginfo_t.h"
+#include "c/linux/x86_64/_Siginfo__Waitid.h"
 #include "c/linux/x86_64/_SystemCallResult.h"
 #include "c/linux/x86_64/_WaitOptions.h"
 #include "c/linux/x86_64/_WaitType.h"
@@ -17,7 +17,7 @@ inline namespace x86_64 {
 
 static
 _SystemCallResult
-_sys_waitid(_WaitType type, pid_t pid, siginfo_t* info, _WaitOptions options, struct rusage* usage)
+_sys_waitid(_WaitType type, pid_t pid, _Siginfo__Waitid* info, _WaitOptions options, struct rusage* usage)
 {
     _SystemCallResult
     result;
@@ -31,7 +31,7 @@ _sys_waitid(_WaitType type, pid_t pid, siginfo_t* info, _WaitOptions options, st
     r2 __asm__ ("rsi") = pid;
 
     register
-    siginfo_t*
+    _Siginfo__Waitid*
     r3 __asm__ ("rdx") = info;
 
     register
