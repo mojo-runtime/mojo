@@ -4,7 +4,6 @@
 #include "c/linux/x86_64/clock_t.h"
 #include "c/linux/x86_64/pid_t.h"
 #include "c/linux/x86_64/sigval_t.h"
-#include "c/linux/x86_64/timer_t.h"
 #include "c/linux/x86_64/uid_t.h"
 #include "c/linux/x86_64/_BandEvent.h"
 #include "c/linux/x86_64/_ErrorNumber.h"
@@ -13,7 +12,6 @@
 #include "c/linux/x86_64/_Short.h"
 #include "c/linux/x86_64/_SignalCode.h"
 #include "c/linux/x86_64/_SignalNumber.h"
-#include "c/linux/x86_64/_SystemCallNumber.h"
 #include "c/linux/x86_64/_UnsignedInt.h"
 
 #ifdef __cplusplus
@@ -23,7 +21,6 @@ inline namespace x86_64 {
 #endif
 
 typedef struct siginfo
-
 {
     // Explicit padding for -Wpadded
 
