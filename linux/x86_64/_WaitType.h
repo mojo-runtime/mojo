@@ -1,5 +1,5 @@
-#ifndef _c__linux__x86_64___WaitidType_h
-#define _c__linux__x86_64___WaitidType_h
+#ifndef _c__linux__x86_64___WaitType_h
+#define _c__linux__x86_64___WaitType_h
 
 #include "c/linux/x86_64/_Int.h"
 
@@ -9,7 +9,7 @@ inline namespace linux {
 inline namespace x86_64 {
 #endif
 
-typedef _Int _WaitidType;
+typedef _Int _WaitType;
 
 #ifdef __cplusplus
 } // inline namespace x86_64
