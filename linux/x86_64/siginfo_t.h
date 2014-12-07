@@ -12,6 +12,8 @@
 #include "c/linux/x86_64/_Short.h"
 #include "c/linux/x86_64/_SignalCode.h"
 #include "c/linux/x86_64/_SignalNumber.h"
+#include "c/linux/x86_64/_TimerId.h"
+#include "c/linux/x86_64/_TimerOverrunCount.h"
 #include "c/linux/x86_64/_UnsignedInt.h"
 
 #ifdef __cplusplus
@@ -71,10 +73,10 @@ typedef struct siginfo
 
         struct
         {
-            _Int // timer ID
+            _TimerId
             _tid;
 
-            _Int
+            _TimerOverrunCount
             _overrun;
 
             sigval_t
