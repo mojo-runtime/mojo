@@ -1,6 +1,7 @@
 #ifndef _c__linux__x86_64__siginfo_t_h
 #define _c__linux__x86_64__siginfo_t_h
 
+#include "c/int16_t.h"
 #include "c/linux/x86_64/clock_t.h"
 #include "c/linux/x86_64/pid_t.h"
 #include "c/linux/x86_64/sigval_t.h"
@@ -9,12 +10,10 @@
 #include "c/linux/x86_64/_ErrorNumber.h"
 #include "c/linux/x86_64/_ExitStatus.h"
 #include "c/linux/x86_64/_FileDescriptor.h"
-#include "c/linux/x86_64/_Short.h"
 #include "c/linux/x86_64/_SignalCode.h"
 #include "c/linux/x86_64/_SignalNumber.h"
 #include "c/linux/x86_64/_TimerId.h"
 #include "c/linux/x86_64/_TimerOverrunCount.h"
-#include "c/linux/x86_64/_UnsignedInt.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -124,7 +123,7 @@ typedef struct siginfo
             _VoidPointer
             _addr;
 
-            _Short
+            int16_t // short
             _addr_lsb;
 
             char
@@ -150,10 +149,10 @@ typedef struct siginfo
             _VoidPointer
             _call_addr;
 
-            _Int
+            int32_t // int
             _syscall;
 
-            _UnsignedInt
+            uint32_t // unsigned int
             _arch;
         }
         _sigsys;

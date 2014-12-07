@@ -1,8 +1,8 @@
 #ifndef _c__linux__x86_64__rusage_h
 #define _c__linux__x86_64__rusage_h
 
+#include "c/int64_t.h"
 #include "c/linux/x86_64/timeval.h"
-#include "c/linux/x86_64/_Long.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -20,46 +20,46 @@ struct rusage
     struct timeval
     ru_stime;
 
-    _Long
+    int64_t
     ru_maxrss;
 
-    _Long
+    int64_t
     ru_ixrss;
 
-    _Long
+    int64_t
     ru_idrss;
 
-    _Long
+    int64_t
     ru_isrss;
 
-    _Long
+    int64_t
     ru_minflt;
 
-    _Long
+    int64_t
     ru_majflt;
 
-    _Long
+    int64_t
     ru_nswap;
 
-    _Long
+    int64_t
     ru_inblock;
 
-    _Long
+    int64_t
     ru_oublock;
 
-    _Long
+    int64_t
     ru_msgsnd;
 
-    _Long
+    int64_t
     ru_msgrcv;
 
-    _Long
+    int64_t
     ru_nsignals;
 
-    _Long
+    int64_t
     ru_nvcsw;
 
-    _Long
+    int64_t
     ru_nivcsw;
 };
 
