@@ -1,9 +1,9 @@
 #ifndef _c__linux__x86_64___exit_h
 #define _c__linux__x86_64___exit_h
 
+#include "builtin/__builtin_unreachable.h"
 #include "c/linux/x86_64/SYS_exit.h"
 #include "c/linux/x86_64/_ExitStatus.h"
-#include "c/__compiler/__builtin_unreachable?.h"
 #include "c/__internal/__c_NORETURN.h"
 
 #ifdef __cplusplus
