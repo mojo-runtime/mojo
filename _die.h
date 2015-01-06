@@ -1,5 +1,5 @@
-#ifndef _c____internal____assertion_error_h
-#define _c____internal____assertion_error_h
+#ifndef _c___die_h
+#define _c___die_h
 
 #include "c/EXIT_FAILURE.h"
 #include "c/STDERR_FILENO.h"
@@ -17,14 +17,16 @@ inline namespace c {
 __c_NORETURN
 static
 void
-__assertion_error(const char* expression, const char* file, __c_UNUSED unsigned int line, const char* function)
+_die(const char* reason, const char* message, const char* file, __c_UNUSED unsigned int line, const char* function)
 {
 
 #define __WRITE(data) _sys_write(STDERR_FILENO, __c_STATIC_CAST(const void*, data), strlen(data))
 
     // Super naive.
-    __WRITE("\033[31;1massertion error:\033[0m ");
-    __WRITE(expression);
+    __WRITE("\033[31;1m");
+    __WRITE(reason);
+    __WRITE(":\033[0m ");
+    __WRITE(message);
     __WRITE("\n  * function: ");
     __WRITE(function);
     __WRITE("\n  * file:     ");
