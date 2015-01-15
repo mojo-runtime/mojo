@@ -3,7 +3,7 @@
 
 #include "c/linux/x86_64/_FileDescriptor.h"
 #include "c/linux/x86_64/_SystemCallResult.h"
-#include "c/__internal/__c_STATIC_CAST.h"
+#include "c/__c_STATIC_CAST.h"
 
 #ifdef __cplusplus
 inline namespace c {

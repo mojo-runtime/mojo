@@ -2,7 +2,7 @@
 #define _c__linux__EPOLLET_h
 
 #include "c/linux/_EpollEvents.h"
-#include "c/__internal/__c_STATIC_CAST.h"
+#include "c/__c_STATIC_CAST.h"
 
 #ifdef __cplusplus
 inline namespace c {

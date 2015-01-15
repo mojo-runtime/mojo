@@ -1,7 +1,7 @@
 #ifndef _c__strcmp_h
 #define _c__strcmp_h
 
-#include "c/__internal/__c_CONSTEXPR.h"
+#include "c/__c_CONSTEXPR.h"
 
 #ifdef __cplusplus
 inline namespace c {

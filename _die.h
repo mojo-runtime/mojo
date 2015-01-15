@@ -6,9 +6,9 @@
 #include "c/strlen.h"
 #include "c/_exit.h"
 #include "c/_sys_write.h"
-#include "c/__internal/__c_NORETURN.h"
-#include "c/__internal/__c_STATIC_CAST.h"
-#include "c/__internal/__c_UNUSED.h"
+#include "c/__c_NORETURN.h"
+#include "c/__c_STATIC_CAST.h"
+#include "c/__c_UNUSED.h"
 
 #ifdef __cplusplus
 inline namespace c {
