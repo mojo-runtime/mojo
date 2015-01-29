@@ -1,8 +1,8 @@
 #ifndef _c__linux__x86_64__getpid_h
 #define _c__linux__x86_64__getpid_h
 
-#include "c/linux/x86_64/SYS_getpid.h"
-#include "c/linux/x86_64/pid_t.h"
+#include "c/SYS_getpid.h"
+#include "c/pid_t.h"
 
 #ifdef __cplusplus
 inline namespace c {

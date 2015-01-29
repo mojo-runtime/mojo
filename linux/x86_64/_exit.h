@@ -1,10 +1,10 @@
 #ifndef _c__linux__x86_64___exit_h
 #define _c__linux__x86_64___exit_h
 
-#include "builtin/__builtin_unreachable.h"
-#include "c/linux/x86_64/SYS_exit.h"
-#include "c/linux/x86_64/ExitStatus.h"
+#include "c/SYS_exit.h"
+#include "c/alias/ExitStatus.h"
 #include "c/_NORETURN.h"
+#include "c/__builtin_unreachable.h"
 
 #ifdef __cplusplus
 inline namespace c {
