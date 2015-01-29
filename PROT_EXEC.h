@@ -1,14 +1,14 @@
 #ifndef _c__PROT_EXEC_h
 #define _c__PROT_EXEC_h
 
-#include "c/_ProtectionFlags.h"
+#include "c/alias/MemoryProtection.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _ProtectionFlags
+const MemoryProtection
 PROT_EXEC =
 #ifdef __linux__
  4

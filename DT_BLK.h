@@ -1,14 +1,14 @@
 #ifndef _c__DT_BLK_h
 #define _c__DT_BLK_h
 
-#include "c/_DirentType.h"
+#include "c/alias/DirectoryEntryKind.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _DirentType
+const DirectoryEntryKind
 DT_BLK =
 #ifdef __linux__
  6

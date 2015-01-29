@@ -1,14 +1,14 @@
 #ifndef _c__POLLOUT_h
 #define _c__POLLOUT_h
 
-#include "c/_PollEvents.h"
+#include "c/alias/PollEvents.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _PollEvents
+const PollEvents
 POLLOUT =
 #ifdef __linux__
  4

@@ -1,14 +1,14 @@
 #ifndef _c__ENOSYS_h
 #define _c__ENOSYS_h
 
-#include "c/_ErrorNumber.h"
+#include "c/alias/ErrorNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _ErrorNumber
+const ErrorNumber
 ENOSYS =
 #ifdef __linux__
 #  ifdef __x86_64__

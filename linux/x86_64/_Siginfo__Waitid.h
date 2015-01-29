@@ -3,10 +3,10 @@
 
 #include "c/linux/x86_64/pid_t.h"
 #include "c/linux/x86_64/uid_t.h"
-#include "c/linux/x86_64/_ErrorNumber.h"
-#include "c/linux/x86_64/_ExitStatus.h"
-#include "c/linux/x86_64/_SignalCode.h"
-#include "c/linux/x86_64/_SignalNumber.h"
+#include "c/linux/x86_64/ErrorNumber.h"
+#include "c/linux/x86_64/ExitStatus.h"
+#include "c/linux/x86_64/SignalCode.h"
+#include "c/linux/x86_64/SignalNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -16,13 +16,13 @@ inline namespace x86_64 {
 
 typedef struct
 {
-    _SignalNumber
+    SignalNumber
     si_signo;
 
-    _ErrorNumber
+    ErrorNumber
     si_errno;
 
-    _SignalCode
+    SignalCode
     si_code;
 
     char
@@ -34,7 +34,7 @@ typedef struct
     uid_t
     si_uid;
 
-    _ExitStatus
+    ExitStatus
     si_status;
 }
 _Siginfo__Waitid;

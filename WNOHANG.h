@@ -1,14 +1,14 @@
 #ifndef _c__WNOHANG_h
 #define _c__WNOHANG_h
 
-#include "c/_WaitOptions.h"
+#include "c/alias/WaitFlags.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _WaitOptions
+const WaitFlags
 WNOHANG =
 #ifdef __linux__
  1

@@ -1,14 +1,14 @@
 #ifndef _c__ELOOP_h
 #define _c__ELOOP_h
 
-#include "c/_ErrorNumber.h"
+#include "c/alias/ErrorNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _ErrorNumber
+const ErrorNumber
 ELOOP =
 #ifdef __linux__
 #  ifdef __x86_64__

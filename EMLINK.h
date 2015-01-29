@@ -1,14 +1,14 @@
 #ifndef _c__EMLINK_h
 #define _c__EMLINK_h
 
-#include "c/_ErrorNumber.h"
+#include "c/alias/ErrorNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _ErrorNumber
+const ErrorNumber
 EMLINK =
 #ifdef __linux__
  31

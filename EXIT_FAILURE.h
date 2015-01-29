@@ -1,13 +1,13 @@
 #ifndef _c__EXIT_FAILURE_h
 #define _c__EXIT_FAILURE_h
 
-#include "c/_ExitStatus.h"
+#include "c/alias/ExitStatus.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
-static const _ExitStatus EXIT_FAILURE = 1;
+static const ExitStatus EXIT_FAILURE = 1;
 
 #ifdef __cplusplus
 } // inline namespace c

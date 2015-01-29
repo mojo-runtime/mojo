@@ -1,14 +1,14 @@
 #ifndef _c__SIGCHLD_h
 #define _c__SIGCHLD_h
 
-#include "c/_SignalNumber.h"
+#include "c/alias/SignalNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _SignalNumber
+const SignalNumber
 SIGCHLD =
 #ifdef __linux__
 #  ifdef __x86_64__

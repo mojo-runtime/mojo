@@ -1,14 +1,14 @@
 #ifndef _c__ENFILE_h
 #define _c__ENFILE_h
 
-#include "c/_ErrorNumber.h"
+#include "c/alias/ErrorNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _ErrorNumber
+const ErrorNumber
 ENFILE =
 #ifdef __linux__
  23

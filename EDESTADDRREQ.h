@@ -1,14 +1,14 @@
 #ifndef _c__EDESTADDRREQ_h
 #define _c__EDESTADDRREQ_h
 
-#include "c/_ErrorNumber.h"
+#include "c/alias/ErrorNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _ErrorNumber
+const ErrorNumber
 EDESTADDRREQ =
 #ifdef __linux__
 #  ifdef __x86_64__

@@ -1,14 +1,14 @@
 #ifndef _c__SIGPIPE_h
 #define _c__SIGPIPE_h
 
-#include "c/_SignalNumber.h"
+#include "c/alias/SignalNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _SignalNumber
+const SignalNumber
 SIGPIPE =
 #ifdef __linux__
  13

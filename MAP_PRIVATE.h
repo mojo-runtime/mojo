@@ -1,14 +1,14 @@
 #ifndef _c__MAP_PRIVATE_h
 #define _c__MAP_PRIVATE_h
 
-#include "c/_MapFlags.h"
+#include "c/alias/MemoryMapFlags.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _MapFlags
+const MemoryMapFlags
 MAP_PRIVATE =
 #ifdef __linux__
  2

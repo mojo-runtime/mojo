@@ -3,7 +3,7 @@
 
 #include "builtin/__builtin_unreachable.h"
 #include "c/linux/x86_64/SYS_exit.h"
-#include "c/linux/x86_64/_ExitStatus.h"
+#include "c/linux/x86_64/ExitStatus.h"
 #include "c/__c_NORETURN.h"
 
 #ifdef __cplusplus
@@ -15,10 +15,10 @@ inline namespace x86_64 {
 __c_NORETURN
 static
 void
-_exit(_ExitStatus status)
+_exit(ExitStatus status)
 {
     register
-    _ExitStatus
+    ExitStatus
     r1 __asm__ ("rdi") = status;
 
     __asm__ volatile (

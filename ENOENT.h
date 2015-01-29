@@ -1,14 +1,14 @@
 #ifndef _c__ENOENT_h
 #define _c__ENOENT_h
 
-#include "c/_ErrorNumber.h"
+#include "c/alias/ErrorNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _ErrorNumber
+const ErrorNumber
 ENOENT =
 #ifdef __linux__
  2

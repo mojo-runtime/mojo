@@ -2,14 +2,14 @@
 #define _c__EPOLLHUP_h
 
 #include "c/POLLHUP.h"
-#include "c/_EpollEvents.h"
+#include "c/alias/EpollEvents.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _EpollEvents
+const EpollEvents
 EPOLLHUP =
 #ifdef __linux__
  POLLHUP

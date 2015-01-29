@@ -24,7 +24,7 @@ struct linux_dirent
     char
     pad;
 
-    _DirentType (char)
+    DirectoryEntryKind (char)
     d_type;
     */
 #else

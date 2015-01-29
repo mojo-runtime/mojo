@@ -5,15 +5,15 @@
 #include "c/pid_t.h"
 #include "c/sigval_t.h"
 #include "c/uid_t.h"
-#include "c/_ErrorNumber.h"
-#include "c/_ExitStatus.h"
-#include "c/_FileDescriptor.h"
-#include "c/_SignalBand.h"
-#include "c/_SignalCode.h"
-#include "c/_SignalNumber.h"
-#include "c/_SystemCallNumber.h"
-#include "c/_TimerId.h"
-#include "c/_TimerOverrunCount.h"
+#include "c/alias/ErrorNumber.h"
+#include "c/alias/ExitStatus.h"
+#include "c/alias/FileDescriptor.h"
+#include "c/alias/SignalBand.h"
+#include "c/alias/SignalCode.h"
+#include "c/alias/SignalNumber.h"
+#include "c/alias/SystemCallNumber.h"
+#include "c/alias/TimerId.h"
+#include "c/alias/TimerOverrun.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -25,13 +25,13 @@ typedef struct siginfo
 {
     // Explicit padding for -Wpadded
 
-    _SignalNumber
+    SignalNumber
     si_signo;
 
-    _ErrorNumber
+    ErrorNumber
     si_errno;
 
-    _SignalCode
+    SignalCode
     si_code;
 
     char
@@ -72,10 +72,10 @@ typedef struct siginfo
 
         struct
         {
-            _TimerId
+            TimerId
             _tid;
 
-            _TimerOverrunCount
+            TimerOverrun
             _overrun;
 
             sigval_t
@@ -104,7 +104,7 @@ typedef struct siginfo
             uid_t
             _uid;
 
-            _ExitStatus
+            ExitStatus
             _status;
 
             char
@@ -133,10 +133,10 @@ typedef struct siginfo
 
         struct
         {
-            _SignalBand
+            SignalBand
             _band;
 
-            _FileDescriptor
+            FileDescriptor
             _fd;
 
             char
@@ -149,7 +149,7 @@ typedef struct siginfo
             void*
             _call_addr;
 
-            _SystemCallNumber
+            SystemCallNumber
             _syscall;
 
             unsigned int // uint32_t

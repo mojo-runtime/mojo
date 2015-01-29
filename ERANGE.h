@@ -1,14 +1,14 @@
 #ifndef _c__ERANGE_h
 #define _c__ERANGE_h
 
-#include "c/_ErrorNumber.h"
+#include "c/alias/ErrorNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _ErrorNumber
+const ErrorNumber
 ERANGE =
 #ifdef __linux__
  34

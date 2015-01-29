@@ -1,14 +1,14 @@
 #ifndef _c__POLLHUP_h
 #define _c__POLLHUP_h
 
-#include "c/_PollEvents.h"
+#include "c/alias/PollEvents.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _PollEvents
+const PollEvents
 POLLHUP =
 #ifdef __linux__
  0x10

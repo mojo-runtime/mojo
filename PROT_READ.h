@@ -1,14 +1,14 @@
 #ifndef _c__PROT_READ_h
 #define _c__PROT_READ_h
 
-#include "c/_ProtectionFlags.h"
+#include "c/alias/MemoryProtection.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _ProtectionFlags
+const MemoryProtection
 PROT_READ =
 #ifdef __linux__
  1

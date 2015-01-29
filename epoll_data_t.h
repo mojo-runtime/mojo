@@ -3,7 +3,7 @@
 
 #include "c/uint32_t.h"
 #include "c/uint64_t.h"
-#include "c/_FileDescriptor.h"
+#include "c/alias/FileDescriptor.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -19,7 +19,7 @@ typedef union
     void*
     ptr;
 
-    _FileDescriptor
+    FileDescriptor
     fd;
 
     uint32_t

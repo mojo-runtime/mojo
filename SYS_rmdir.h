@@ -1,14 +1,14 @@
 #ifndef _c__SYS_rmdir_h
 #define _c__SYS_rmdir_h
 
-#include "c/_SystemCallNumber.h"
+#include "c/alias/SystemCallNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _SystemCallNumber
+const SystemCallNumber
 SYS_rmdir =
 #ifdef __linux__
 #  ifdef __x86_64__

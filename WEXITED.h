@@ -1,14 +1,14 @@
 #ifndef _c__WEXITED_h
 #define _c__WEXITED_h
 
-#include "c/_WaitOptions.h"
+#include "c/alias/WaitFlags.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _WaitOptions
+const WaitFlags
 WEXITED =
 #ifdef __linux__
  4

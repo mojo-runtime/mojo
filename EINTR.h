@@ -1,14 +1,14 @@
 #ifndef _c__EINTR_h
 #define _c__EINTR_h
 
-#include "c/_ErrorNumber.h"
+#include "c/alias/ErrorNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _ErrorNumber
+const ErrorNumber
 EINTR =
 #ifdef __linux__
  4

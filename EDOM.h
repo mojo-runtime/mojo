@@ -1,14 +1,14 @@
 #ifndef _c__EDOM_h
 #define _c__EDOM_h
 
-#include "c/_ErrorNumber.h"
+#include "c/alias/ErrorNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _ErrorNumber
+const ErrorNumber
 EDOM =
 #ifdef __linux__
  33

@@ -1,14 +1,14 @@
 #ifndef _c__P_PGID_h
 #define _c__P_PGID_h
 
-#include "c/_WaitType.h"
+#include "c/alias/WaitKind.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _WaitType
+const WaitKind
 P_PGID =
 #ifdef __linux__
  2

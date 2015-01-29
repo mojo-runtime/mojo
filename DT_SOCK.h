@@ -1,14 +1,14 @@
 #ifndef _c__DT_SOCK_h
 #define _c__DT_SOCK_h
 
-#include "c/_DirentType.h"
+#include "c/alias/DirectoryEntryKind.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _DirentType
+const DirectoryEntryKind
 DT_SOCK =
 #ifdef __linux__
  12

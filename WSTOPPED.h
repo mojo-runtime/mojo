@@ -1,14 +1,14 @@
 #ifndef _c__WSTOPPED_h
 #define _c__WSTOPPED_h
 
-#include "c/_WaitOptions.h"
+#include "c/alias/WaitFlags.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _WaitOptions
+const WaitFlags
 WSTOPPED =
 #ifdef __linux__
  2 // WUNTRACED

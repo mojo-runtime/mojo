@@ -1,14 +1,14 @@
 #ifndef _c__EPIPE_h
 #define _c__EPIPE_h
 
-#include "c/_ErrorNumber.h"
+#include "c/alias/ErrorNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _ErrorNumber
+const ErrorNumber
 EPIPE =
 #ifdef __linux__
  32

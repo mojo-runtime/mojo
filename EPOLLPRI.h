@@ -2,14 +2,14 @@
 #define _c__EPOLLPRI_h
 
 #include "c/POLLPRI.h"
-#include "c/_EpollEvents.h"
+#include "c/alias/EpollEvents.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
 static
-const _EpollEvents
+const EpollEvents
 EPOLLPRI =
 #ifdef __linux__
  POLLPRI
