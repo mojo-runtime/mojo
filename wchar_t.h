@@ -1,16 +1,16 @@
-#ifndef _c__wchar_t__h
-#define _c__wchar_t__h
-
-#include "builtin/__WCHAR_TYPE__.h"
+#ifndef _c__wchar_t_h
+#define _c__wchar_t_h
 
 #ifdef __cplusplus
-inline namespace c {
-#endif
-
-typedef __WCHAR_TYPE__ wchar_t;
-
-#ifdef __cplusplus
-} // inline namespace c
+// No need
+#else
+typedef
+#  ifdef __WCHAR_TYPE__
+__WCHAR_TYPE__
+#  else
+#    error
+#  endif
+wchar_t;
 #endif
 
 #endif

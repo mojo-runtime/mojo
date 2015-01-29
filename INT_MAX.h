@@ -1,4 +1,7 @@
 #ifndef INT_MAX
-#  include "builtin/__INT_MAX__.h"
-#  define INT_MAX __INT_MAX__
+#  ifdef __INT_MAX__
+#    define INT_MAX __INT_MAX__
+#  else
+#    error
+#  endif
 #endif

@@ -1,16 +1,16 @@
-#ifndef _c__char16_t__h
-#define _c__char16_t__h
-
-#include "builtin/__CHAR16_TYPE__.h"
+#ifndef _c__char16_t_h
+#define _c__char16_t_h
 
 #ifdef __cplusplus
-inline namespace c {
-#endif
-
-typedef __CHAR16_TYPE__ char16_t;
-
-#ifdef __cplusplus
-} // inline namespace c
+// Assuming C++11
+#else
+typedef
+#  ifdef __CHAR16_TYPE__
+__CHAR16_TYPE__
+#  else
+#    error
+#  endif
+char16_t;
 #endif
 
 #endif

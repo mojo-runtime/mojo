@@ -1,16 +1,16 @@
-#ifndef _c__char32_t__h
-#define _c__char32_t__h
-
-#include "builtin/__CHAR32_TYPE__.h"
+#ifndef _c__char32_t_h
+#define _c__char32_t_h
 
 #ifdef __cplusplus
-inline namespace c {
-#endif
-
-typedef __CHAR32_TYPE__ char32_t;
-
-#ifdef __cplusplus
-} // inline namespace c
+// Assuming C++11
+#else
+typedef
+#  ifdef __CHAR32_TYPE__
+__CHAR32_TYPE__
+#  else
+#    error
+#  endif
+char32_t;
 #endif
 
 #endif
