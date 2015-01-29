@@ -3,8 +3,8 @@
 
 #include "c/EOF.h"
 #include "c/STDOUT_FILENO.h"
+#include "c/SYS_write.h"
 #include "c/strlen.h"
-#include "c/_sys_write.h"
 #include "c/_SystemCallResult_is_error.h"
 
 #ifdef __cplusplus
