@@ -1,7 +1,7 @@
 #ifndef _c__EPOLLONESHOT_h
 #define _c__EPOLLONESHOT_h
 
-#include "c/alias/EpollEvents.h"
+#include "c/EpollEvents.h"
 
 #ifdef __cplusplus
 inline namespace c {

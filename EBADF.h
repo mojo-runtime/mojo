@@ -1,7 +1,7 @@
 #ifndef _c__EBADF_h
 #define _c__EBADF_h
 
-#include "c/alias/ErrorNumber.h"
+#include "c/ErrorNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {

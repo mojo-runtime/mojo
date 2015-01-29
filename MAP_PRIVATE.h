@@ -1,7 +1,7 @@
 #ifndef _c__MAP_PRIVATE_h
 #define _c__MAP_PRIVATE_h
 
-#include "c/alias/MemoryMapFlags.h"
+#include "c/MemoryMapFlags.h"
 
 #ifdef __cplusplus
 inline namespace c {

@@ -1,7 +1,7 @@
 #ifndef _c__CLD_STOPPED_h
 #define _c__CLD_STOPPED_h
 
-#include "c/alias/ChildStatus.h"
+#include "c/ChildStatus.h"
 
 #ifdef __cplusplus
 inline namespace c {

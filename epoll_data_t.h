@@ -3,7 +3,7 @@
 
 #include "c/uint32_t.h"
 #include "c/uint64_t.h"
-#include "c/alias/FileDescriptor.h"
+#include "c/FileDescriptor.h"
 
 #ifdef __cplusplus
 inline namespace c {

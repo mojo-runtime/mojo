@@ -1,7 +1,7 @@
 #ifndef _c__EPOLL_CTL_MOD_h
 #define _c__EPOLL_CTL_MOD_h
 
-#include "c/alias/EpollControlKind.h"
+#include "c/EpollControlKind.h"
 
 #ifdef __cplusplus
 inline namespace c {

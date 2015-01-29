@@ -1,7 +1,7 @@
 #ifndef _c__POLLIN_h
 #define _c__POLLIN_h
 
-#include "c/alias/PollEvents.h"
+#include "c/PollEvents.h"
 
 #ifdef __cplusplus
 inline namespace c {

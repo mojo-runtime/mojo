@@ -1,7 +1,7 @@
 #ifndef _c__EXIT_SUCCESS_h
 #define _c__EXIT_SUCCESS_h
 
-#include "c/alias/ExitStatus.h"
+#include "c/ExitStatus.h"
 
 #ifdef __cplusplus
 inline namespace c {

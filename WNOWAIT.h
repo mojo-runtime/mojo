@@ -1,7 +1,7 @@
 #ifndef _c__WNOWAIT_h
 #define _c__WNOWAIT_h
 
-#include "c/alias/WaitFlags.h"
+#include "c/WaitFlags.h"
 
 #ifdef __cplusplus
 inline namespace c {

@@ -2,7 +2,7 @@
 #define _c__EPOLL_CLOEXEC_h
 
 #include "c/O_CLOEXEC.h"
-#include "c/alias/EpollCreateFlags.h"
+#include "c/EpollCreateFlags.h"
 
 #ifdef __cplusplus
 inline namespace c {

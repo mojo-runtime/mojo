@@ -1,7 +1,7 @@
 #ifndef _c__O_CREAT_h
 #define _c__O_CREAT_h
 
-#include "c/alias/OpenFlags.h"
+#include "c/OpenFlags.h"
 
 #ifdef __cplusplus
 inline namespace c {

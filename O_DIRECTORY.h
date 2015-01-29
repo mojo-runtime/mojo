@@ -1,7 +1,7 @@
 #ifndef _c__O_DIRECTORY_h
 #define _c__O_DIRECTORY_h
 
-#include "c/alias/OpenFlags.h"
+#include "c/OpenFlags.h"
 
 #ifdef __cplusplus
 inline namespace c {

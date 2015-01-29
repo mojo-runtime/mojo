@@ -1,7 +1,7 @@
 #ifndef _c__EFAULT_h
 #define _c__EFAULT_h
 
-#include "c/alias/ErrorNumber.h"
+#include "c/ErrorNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {

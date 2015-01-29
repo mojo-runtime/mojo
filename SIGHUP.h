@@ -1,7 +1,7 @@
 #ifndef _c__SIGHUP_h
 #define _c__SIGHUP_h
 
-#include "c/alias/SignalNumber.h"
+#include "c/SignalNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {

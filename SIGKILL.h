@@ -1,7 +1,7 @@
 #ifndef _c__SIGKILL_h
 #define _c__SIGKILL_h
 
-#include "c/alias/SignalNumber.h"
+#include "c/SignalNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {

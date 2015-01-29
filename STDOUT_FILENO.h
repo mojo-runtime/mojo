@@ -1,7 +1,7 @@
 #ifndef _c__STDOUT_FILENO_h
 #define _c__STDOUT_FILENO_h
 
-#include "c/alias/FileDescriptor.h"
+#include "c/FileDescriptor.h"
 
 #ifdef __cplusplus
 inline namespace c {

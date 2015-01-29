@@ -1,7 +1,7 @@
 #ifndef _c__SYS_kill_h
 #define _c__SYS_kill_h
 
-#include "c/alias/SystemCallNumber.h"
+#include "c/SystemCallNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {

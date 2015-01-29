@@ -2,7 +2,7 @@
 #define _c__EPOLLERR_h
 
 #include "c/POLLERR.h"
-#include "c/alias/EpollEvents.h"
+#include "c/EpollEvents.h"
 
 #ifdef __cplusplus
 inline namespace c {

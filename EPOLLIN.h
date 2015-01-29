@@ -2,7 +2,7 @@
 #define _c__EPOLLIN_h
 
 #include "c/POLLIN.h"
-#include "c/alias/EpollEvents.h"
+#include "c/EpollEvents.h"
 
 #ifdef __cplusplus
 inline namespace c {

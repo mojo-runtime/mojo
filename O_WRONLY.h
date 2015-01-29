@@ -1,7 +1,7 @@
 #ifndef _c__O_WRONLY_h
 #define _c__O_WRONLY_h
 
-#include "c/alias/OpenFlags.h"
+#include "c/OpenFlags.h"
 
 #ifdef __cplusplus
 inline namespace c {

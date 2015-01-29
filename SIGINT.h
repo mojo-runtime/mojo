@@ -1,7 +1,7 @@
 #ifndef _c__SIGINT_h
 #define _c__SIGINT_h
 
-#include "c/alias/SignalNumber.h"
+#include "c/SignalNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {

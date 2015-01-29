@@ -1,7 +1,7 @@
 #ifndef _c__O_EXCL_h
 #define _c__O_EXCL_h
 
-#include "c/alias/OpenFlags.h"
+#include "c/OpenFlags.h"
 
 #ifdef __cplusplus
 inline namespace c {

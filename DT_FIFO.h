@@ -1,7 +1,7 @@
 #ifndef _c__DT_FIFO_h
 #define _c__DT_FIFO_h
 
-#include "c/alias/DirectoryEntryKind.h"
+#include "c/DirectoryEntryKind.h"
 
 #ifdef __cplusplus
 inline namespace c {

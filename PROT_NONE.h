@@ -1,7 +1,7 @@
 #ifndef _c__PROT_NONE_h
 #define _c__PROT_NONE_h
 
-#include "c/alias/MemoryProtection.h"
+#include "c/MemoryProtection.h"
 
 #ifdef __cplusplus
 inline namespace c {

@@ -1,9 +1,8 @@
-#ifndef _c__alias__SignalBand_h
-#define _c__alias__SignalBand_h
+#ifndef _c__SignalBand_h
+#define _c__SignalBand_h
 
 #ifdef __cplusplus
 inline namespace c {
-inline namespace alias {
 #endif
 
 typedef
@@ -19,7 +18,6 @@ long // int16_t
 SignalBand;
 
 #ifdef __cplusplus
-} // inline namespace alias
 } // inline namespace c
 #endif
 

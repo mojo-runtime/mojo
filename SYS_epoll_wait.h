@@ -1,7 +1,7 @@
 #ifndef _c__SYS_epoll_wait_h
 #define _c__SYS_epoll_wait_h
 
-#include "c/alias/SystemCallNumber.h"
+#include "c/SystemCallNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {

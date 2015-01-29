@@ -2,7 +2,7 @@
 #define _c__EPOLLHUP_h
 
 #include "c/POLLHUP.h"
-#include "c/alias/EpollEvents.h"
+#include "c/EpollEvents.h"
 
 #ifdef __cplusplus
 inline namespace c {

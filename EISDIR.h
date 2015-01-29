@@ -1,7 +1,7 @@
 #ifndef _c__EISDIR_h
 #define _c__EISDIR_h
 
-#include "c/alias/ErrorNumber.h"
+#include "c/ErrorNumber.h"
 
 #ifdef __cplusplus
 inline namespace c {
