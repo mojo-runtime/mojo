@@ -2,13 +2,13 @@
 #define _c__strlen_h
 
 #include "c/size_t.h"
-#include "c/__c_CONSTEXPR.h"
+#include "c/compatibility/_CONSTEXPR.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
-static __c_CONSTEXPR
+static _CONSTEXPR
 size_t
 strlen(const char* data)
 {

@@ -4,7 +4,7 @@
 #include "builtin/__builtin_unreachable.h"
 #include "c/linux/x86_64/SYS_exit.h"
 #include "c/linux/x86_64/ExitStatus.h"
-#include "c/__c_NORETURN.h"
+#include "c/_NORETURN.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -12,7 +12,7 @@ inline namespace linux {
 inline namespace x86_64 {
 #endif
 
-__c_NORETURN
+_NORETURN
 static
 void
 _exit(ExitStatus status)
