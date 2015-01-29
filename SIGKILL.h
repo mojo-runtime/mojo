@@ -1,5 +1,24 @@
+#ifndef _c__SIGKILL_h
+#define _c__SIGKILL_h
+
+#include "c/_SignalNumber.h"
+
+#ifdef __cplusplus
+inline namespace c {
+#endif
+
+static
+const _SignalNumber
+SIGKILL =
 #ifdef __linux__
-#  include "c/linux/SIGKILL.h"
+ 9
 #else
-#  error todo
+#  error
+#endif
+ ;
+
+#ifdef __cplusplus
+} // inline namespace c
+#endif
+
 #endif

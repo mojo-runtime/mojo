@@ -1,5 +1,24 @@
+#ifndef _c__CLD_KILLED_h
+#define _c__CLD_KILLED_h
+
+#include "c/_ChildStatus.h"
+
+#ifdef __cplusplus
+inline namespace c {
+#endif
+
+static
+const _ChildStatus
+CLD_KILLED =
 #ifdef __linux__
-#  include "c/linux/CLD_KILLED.h"
+ 2
 #else
-#  error todo
+#  error
+#endif
+ ;
+
+#ifdef __cplusplus
+} // inline namespace c
+#endif
+
 #endif

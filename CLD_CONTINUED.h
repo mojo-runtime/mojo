@@ -1,5 +1,24 @@
+#ifndef _c__CLD_CONTINUED_h
+#define _c__CLD_CONTINUED_h
+
+#include "c/_ChildStatus.h"
+
+#ifdef __cplusplus
+inline namespace c {
+#endif
+
+static
+const _ChildStatus
+CLD_CONTINUED =
 #ifdef __linux__
-#  include "c/linux/CLD_CONTINUED.h"
+ 6
 #else
-#  error todo
+#  error
+#endif
+ ;
+
+#ifdef __cplusplus
+} // inline namespace c
+#endif
+
 #endif

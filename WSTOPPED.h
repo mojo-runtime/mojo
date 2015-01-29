@@ -1,5 +1,24 @@
+#ifndef _c__WSTOPPED_h
+#define _c__WSTOPPED_h
+
+#include "c/_WaitOptions.h"
+
+#ifdef __cplusplus
+inline namespace c {
+#endif
+
+static
+const _WaitOptions
+WSTOPPED =
 #ifdef __linux__
-#  include "c/linux/WSTOPPED.h"
+ 2 // WUNTRACED
 #else
-#  error todo
+#  error
+#endif
+ ;
+
+#ifdef __cplusplus
+} // inline namespace c
+#endif
+
 #endif

@@ -1,5 +1,28 @@
+#ifndef _c__MAP_ANONYMOUS_h
+#define _c__MAP_ANONYMOUS_h
+
+#include "c/_MapFlags.h"
+
+#ifdef __cplusplus
+inline namespace c {
+#endif
+
+static
+const _MapFlags
+MAP_ANONYMOUS =
 #ifdef __linux__
-#  include "c/linux/MAP_ANONYMOUS.h"
+#  ifdef __x86_64__
+ 0x20 // generic
+#  else
+#    error
+#  endif
 #else
-#  error todo
+#  error
+#endif
+ ;
+
+#ifdef __cplusplus
+} // inline namespace c
+#endif
+
 #endif

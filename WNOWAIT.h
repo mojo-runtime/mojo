@@ -1,5 +1,24 @@
+#ifndef _c__WNOWAIT_h
+#define _c__WNOWAIT_h
+
+#include "c/_WaitOptions.h"
+
+#ifdef __cplusplus
+inline namespace c {
+#endif
+
+static
+const _WaitOptions
+WNOWAIT =
 #ifdef __linux__
-#  include "c/linux/WNOWAIT.h"
+ 0x1000000
 #else
-#  error todo
+#  error
+#endif
+ ;
+
+#ifdef __cplusplus
+} // inline namespace c
+#endif
+
 #endif

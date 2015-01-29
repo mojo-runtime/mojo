@@ -1,0 +1,24 @@
+#ifndef _c__SIGTRAP_h
+#define _c__SIGTRAP_h
+
+#include "c/_SignalNumber.h"
+
+#ifdef __cplusplus
+inline namespace c {
+#endif
+
+static
+const _SignalNumber
+SIGTRAP =
+#ifdef __linux__
+ 5
+#else
+#  error
+#endif
+ ;
+
+#ifdef __cplusplus
+} // inline namespace c
+#endif
+
+#endif

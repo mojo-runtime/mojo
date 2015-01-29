@@ -1,5 +1,24 @@
+#ifndef _c__WNOHANG_h
+#define _c__WNOHANG_h
+
+#include "c/_WaitOptions.h"
+
+#ifdef __cplusplus
+inline namespace c {
+#endif
+
+static
+const _WaitOptions
+WNOHANG =
 #ifdef __linux__
-#  include "c/linux/WNOHANG.h"
+ 1
 #else
-#  error todo
+#  error
+#endif
+ ;
+
+#ifdef __cplusplus
+} // inline namespace c
+#endif
+
 #endif

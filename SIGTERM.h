@@ -1,5 +1,24 @@
+#ifndef _c__SIGTERM_h
+#define _c__SIGTERM_h
+
+#include "c/_SignalNumber.h"
+
+#ifdef __cplusplus
+inline namespace c {
+#endif
+
+static
+const _SignalNumber
+SIGTERM =
 #ifdef __linux__
-#  include "c/linux/SIGTERM.h"
+ 15
 #else
-#  error todo
+#  error
+#endif
+ ;
+
+#ifdef __cplusplus
+} // inline namespace c
+#endif
+
 #endif

@@ -1,5 +1,24 @@
+#ifndef _c__DT_FIFO_h
+#define _c__DT_FIFO_h
+
+#include "c/_DirentType.h"
+
+#ifdef __cplusplus
+inline namespace c {
+#endif
+
+static
+const _DirentType
+DT_FIFO =
 #ifdef __linux__
-#  include "c/linux/DT_FIFO.h"
+ 1
 #else
-#  error todo
+#  error
+#endif
+ ;
+
+#ifdef __cplusplus
+} // inline namespace c
+#endif
+
 #endif

@@ -1,5 +1,24 @@
+#ifndef _c__CLD_EXITED_h
+#define _c__CLD_EXITED_h
+
+#include "c/_ChildStatus.h"
+
+#ifdef __cplusplus
+inline namespace c {
+#endif
+
+static
+const _ChildStatus
+CLD_EXITED =
 #ifdef __linux__
-#  include "c/linux/CLD_EXITED.h"
+ 1
 #else
-#  error todo
+#  error
+#endif
+ ;
+
+#ifdef __cplusplus
+} // inline namespace c
+#endif
+
 #endif
