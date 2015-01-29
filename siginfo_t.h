@@ -1,5 +1,9 @@
 #ifdef __linux__
-#  include "c/linux/siginfo_t.h"
+#  ifdef __x86_64__
+#    include "c/linux/x86_64/siginfo_t.h"
+#  else
+#    error
+#  endif
 #else
 #  error todo
 #endif

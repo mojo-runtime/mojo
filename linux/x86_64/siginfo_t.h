@@ -1,19 +1,19 @@
 #ifndef _c__linux__x86_64__siginfo_t_h
 #define _c__linux__x86_64__siginfo_t_h
 
-#include "c/int16_t.h"
-#include "c/linux/x86_64/clock_t.h"
-#include "c/linux/x86_64/pid_t.h"
-#include "c/linux/x86_64/sigval_t.h"
-#include "c/linux/x86_64/uid_t.h"
-#include "c/linux/x86_64/_BandEvent.h"
-#include "c/linux/x86_64/_ErrorNumber.h"
-#include "c/linux/x86_64/_ExitStatus.h"
-#include "c/linux/x86_64/_FileDescriptor.h"
-#include "c/linux/x86_64/_SignalCode.h"
-#include "c/linux/x86_64/_SignalNumber.h"
-#include "c/linux/x86_64/_TimerId.h"
-#include "c/linux/x86_64/_TimerOverrunCount.h"
+#include "c/clock_t.h"
+#include "c/pid_t.h"
+#include "c/sigval_t.h"
+#include "c/uid_t.h"
+#include "c/_ErrorNumber.h"
+#include "c/_ExitStatus.h"
+#include "c/_FileDescriptor.h"
+#include "c/_SignalBand.h"
+#include "c/_SignalCode.h"
+#include "c/_SignalNumber.h"
+#include "c/_SystemCallNumber.h"
+#include "c/_TimerId.h"
+#include "c/_TimerOverrunCount.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -120,10 +120,10 @@ typedef struct siginfo
 
         struct
         {
-            _VoidPointer
+            void*
             _addr;
 
-            int16_t // short
+            short // int16_t
             _addr_lsb;
 
             char
@@ -133,7 +133,7 @@ typedef struct siginfo
 
         struct
         {
-            _BandEvent
+            _SignalBand
             _band;
 
             _FileDescriptor
@@ -146,13 +146,13 @@ typedef struct siginfo
 
         struct
         {
-            _VoidPointer
+            void*
             _call_addr;
 
-            int32_t // int
+            _SystemCallNumber
             _syscall;
 
-            uint32_t // unsigned int
+            unsigned int // uint32_t
             _arch;
         }
         _sigsys;

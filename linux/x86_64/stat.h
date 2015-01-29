@@ -1,16 +1,16 @@
 #ifndef _c__linux__x86_64__stat_h
 #define _c__linux__x86_64__stat_h
 
-#include "c/linux/x86_64/blksize_t.h"
-#include "c/linux/x86_64/blkcnt_t.h"
-#include "c/linux/x86_64/dev_t.h"
-#include "c/linux/x86_64/gid_t.h"
-#include "c/linux/x86_64/ino_t.h"
-#include "c/linux/x86_64/mode_t.h"
-#include "c/linux/x86_64/nlink_t.h"
-#include "c/linux/x86_64/off_t.h"
-#include "c/linux/x86_64/time_t.h"
-#include "c/linux/x86_64/uid_t.h"
+#include "c/blksize_t.h"
+#include "c/blkcnt_t.h"
+#include "c/dev_t.h"
+#include "c/gid_t.h"
+#include "c/ino_t.h"
+#include "c/mode_t.h"
+#include "c/nlink_t.h"
+#include "c/off_t.h"
+#include "c/time_t.h"
+#include "c/uid_t.h"
 
 #ifdef __cplusplus
 inline namespace c {

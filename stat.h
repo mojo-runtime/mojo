@@ -1,5 +1,9 @@
 #ifdef __linux__
-#  include "c/linux/stat.h"
+#  ifdef __x86_64__
+#    include "c/linux/x86_64/stat.h"
+#  else
+#    error
+#  endif
 #else
 #  error todo
 #endif
