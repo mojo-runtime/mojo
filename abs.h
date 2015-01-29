@@ -1,7 +1,7 @@
 #ifndef _c__abs_h
 #define _c__abs_h
 
-#include "c/compatibility/_CONSTEXPR.h"
+#include "c/_CONSTEXPR.h"
 
 #ifdef __cplusplus
 inline namespace c {
