@@ -1,5 +1,24 @@
+#ifndef _c__nlink_t_h
+#define _c__nlink_t_h
+
+#ifdef __cplusplus
+inline namespace c {
+#endif
+
+typedef
 #ifdef __linux__
-#  include "c/linux/nlink_t.h"
+#  ifdef __x86_64__
+unsigned long // uint64_t
+#  else
+#    error
+#  endif
 #else
-#  error todo
+#  error
+#endif
+nlink_t;
+
+#ifdef __cplusplus
+} // inline namespace c
+#endif
+
 #endif

@@ -1,5 +1,5 @@
-#ifndef _c__time_t_h
-#define _c__time_t_h
+#ifndef _c__timer_t_h
+#define _c__timer_t_h
 
 #ifdef __cplusplus
 inline namespace c {
@@ -8,14 +8,14 @@ inline namespace c {
 typedef
 #ifdef __linux__
 #  ifdef __x86_64__
-long // int64_t
+void*
 #  else
 #    error
 #  endif
 #else
 #  error
 #endif
-time_t;
+timer_t;
 
 #ifdef __cplusplus
 } // inline namespace c

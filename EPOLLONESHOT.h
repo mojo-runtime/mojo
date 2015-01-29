@@ -1,21 +1,21 @@
-#ifndef _c__time_t_h
-#define _c__time_t_h
+#ifndef _c__EPOLLONESHOT_h
+#define _c__EPOLLONESHOT_h
+
+#include "c/_EpollEvents.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
-typedef
+static
+const _EpollEvents
+EPOLLONESHOT =
 #ifdef __linux__
-#  ifdef __x86_64__
-long // int64_t
-#  else
-#    error
-#  endif
+ (1 << 30)
 #else
 #  error
 #endif
-time_t;
+ ;
 
 #ifdef __cplusplus
 } // inline namespace c

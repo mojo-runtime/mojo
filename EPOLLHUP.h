@@ -1,21 +1,22 @@
-#ifndef _c__time_t_h
-#define _c__time_t_h
+#ifndef _c__EPOLLHUP_h
+#define _c__EPOLLHUP_h
+
+#include "c/POLLHUP.h"
+#include "c/_EpollEvents.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
-typedef
+static
+const _EpollEvents
+EPOLLHUP =
 #ifdef __linux__
-#  ifdef __x86_64__
-long // int64_t
-#  else
-#    error
-#  endif
+ POLLHUP
 #else
 #  error
 #endif
-time_t;
+ ;
 
 #ifdef __cplusplus
 } // inline namespace c

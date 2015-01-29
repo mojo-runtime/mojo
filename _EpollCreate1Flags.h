@@ -1,13 +1,11 @@
-#ifndef _c__ssize_t__h
-#define _c__ssize_t__h
-
-#include "c/ptrdiff_t.h"
+#ifndef _c___EpollCreate1Flags_h
+#define _c___EpollCreate1Flags_h
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
-typedef ptrdiff_t ssize_t;
+typedef int _EpollCreate1Flags;
 
 #ifdef __cplusplus
 } // inline namespace c

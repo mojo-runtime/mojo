@@ -1,5 +1,24 @@
+#ifndef _c__blksize_t_h
+#define _c__blksize_t_h
+
+#ifdef __cplusplus
+inline namespace c {
+#endif
+
+typedef
 #ifdef __linux__
-#  include "c/linux/blksize_t.h"
+#  ifdef __x86_64__
+long // int64_t
+#  else
+#    error
+#  endif
 #else
-#  error todo
+#  error
+#endif
+blksize_t;
+
+#ifdef __cplusplus
+} // inline namespace c
+#endif
+
 #endif
