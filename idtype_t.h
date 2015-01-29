@@ -1,21 +1,17 @@
-#ifndef _c__P_PGID_h
-#define _c__P_PGID_h
-
-#include "c/idtype_t.h"
+#ifndef _c__idtype_t_h
+#define _c__idtype_t_h
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
-static
-const idtype_t
-P_PGID =
+typedef
 #ifdef __linux__
- 2
+int
 #else
 #  error
 #endif
- ;
+idtype_t;
 
 #ifdef __cplusplus
 } // inline namespace c
