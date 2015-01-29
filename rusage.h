@@ -2,7 +2,6 @@
 #define _c__rusage_h
 
 #include "c/timeval.h"
-#include "c/_KernelLong.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -14,20 +13,20 @@ struct rusage
     // LINUX/include/uapi/linux/resource.h
     struct timeval ru_utime;
     struct timeval ru_stime;
-    _KernelLong    ru_maxrss;
-    _KernelLong    ru_ixrss;
-    _KernelLong    ru_idrss;
-    _KernelLong    ru_isrss;
-    _KernelLong    ru_minflt;
-    _KernelLong    ru_majflt;
-    _KernelLong    ru_nswap;
-    _KernelLong    ru_inblock;
-    _KernelLong    ru_oublock;
-    _KernelLong    ru_msgsnd;
-    _KernelLong    ru_msgrcv;
-    _KernelLong    ru_nsignals;
-    _KernelLong    ru_nvcsw;
-    _KernelLong    ru_nivcsw;
+    long           ru_maxrss;
+    long           ru_ixrss;
+    long           ru_idrss;
+    long           ru_isrss;
+    long           ru_minflt;
+    long           ru_majflt;
+    long           ru_nswap;
+    long           ru_inblock;
+    long           ru_oublock;
+    long           ru_msgsnd;
+    long           ru_msgrcv;
+    long           ru_nsignals;
+    long           ru_nvcsw;
+    long           ru_nivcsw;
 #else
 #  error
 #endif
