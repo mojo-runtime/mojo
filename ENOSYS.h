@@ -15,6 +15,7 @@ ENOSYS =
  38 // generic
 #  else
 #    error
+#  endif
 #else
 #  error
 #endif
