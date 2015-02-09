@@ -1,5 +1,5 @@
-#ifndef _c__SYS_fork_h
-#define _c__SYS_fork_h
+#ifndef c_SYS_fork_h_
+#define c_SYS_fork_h_
 
 #include "c/SystemCallNumber.h"
 

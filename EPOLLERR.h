@@ -1,5 +1,5 @@
-#ifndef _c__EPOLLERR_h
-#define _c__EPOLLERR_h
+#ifndef c_EPOLLERR_h_
+#define c_EPOLLERR_h_
 
 #include "c/POLLERR.h"
 #include "c/EpollEvents.h"

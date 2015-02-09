@@ -1,5 +1,5 @@
-#ifndef _c__EPOLLOUT_h
-#define _c__EPOLLOUT_h
+#ifndef c_EPOLLOUT_h_
+#define c_EPOLLOUT_h_
 
 #include "c/POLLOUT.h"
 #include "c/EpollEvents.h"

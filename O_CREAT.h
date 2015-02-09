@@ -1,5 +1,5 @@
-#ifndef _c__O_CREAT_h
-#define _c__O_CREAT_h
+#ifndef c_O_CREAT_h_
+#define c_O_CREAT_h_
 
 #include "c/OpenFlags.h"
 

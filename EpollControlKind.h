@@ -1,5 +1,5 @@
-#ifndef _c__EpollControlKind_h
-#define _c__EpollControlKind_h
+#ifndef c_EpollControlKind_h_
+#define c_EpollControlKind_h_
 
 #ifdef __cplusplus
 inline namespace c {

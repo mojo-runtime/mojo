@@ -1,5 +1,5 @@
-#ifndef _c__epoll_event_h
-#define _c__epoll_event_h
+#ifndef c_epoll_event_h_
+#define c_epoll_event_h_
 
 #include "c/epoll_data_t.h"
 #include "c/uint32_t.h"

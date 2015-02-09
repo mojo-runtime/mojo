@@ -1,5 +1,5 @@
-#ifndef _c__ELOOP_h
-#define _c__ELOOP_h
+#ifndef c_ELOOP_h_
+#define c_ELOOP_h_
 
 #include "c/ErrorNumber.h"
 

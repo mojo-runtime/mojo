@@ -1,5 +1,5 @@
-#ifndef _c__P_ALL_h
-#define _c__P_ALL_h
+#ifndef c_P_ALL_h_
+#define c_P_ALL_h_
 
 #include "c/idtype_t.h"
 

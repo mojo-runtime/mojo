@@ -1,5 +1,5 @@
-#ifndef _c__FileDescriptor_h
-#define _c__FileDescriptor_h
+#ifndef c_FileDescriptor_h_
+#define c_FileDescriptor_h_
 
 #ifdef __cplusplus
 inline namespace c {

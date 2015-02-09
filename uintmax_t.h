@@ -1,5 +1,5 @@
-#ifndef _c__uintmax_t_h
-#define _c__uintmax_t_h
+#ifndef c_uintmax_t_h_
+#define c_uintmax_t_h_
 
 #ifdef __cplusplus
 inline namespace c {

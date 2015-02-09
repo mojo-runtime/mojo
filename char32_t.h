@@ -1,5 +1,5 @@
-#ifndef _c__char32_t_h
-#define _c__char32_t_h
+#ifndef c_char32_t_h_
+#define c_char32_t_h_
 
 #ifdef __cplusplus
 // Assuming C++11

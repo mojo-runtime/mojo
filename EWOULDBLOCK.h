@@ -1,5 +1,5 @@
-#ifndef _c__EWOULDBLOCK_h
-#define _c__EWOULDBLOCK_h
+#ifndef c_EWOULDBLOCK_h_
+#define c_EWOULDBLOCK_h_
 
 #include "c/ErrorNumber.h"
 

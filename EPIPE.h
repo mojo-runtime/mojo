@@ -1,5 +1,5 @@
-#ifndef _c__EPIPE_h
-#define _c__EPIPE_h
+#ifndef c_EPIPE_h_
+#define c_EPIPE_h_
 
 #include "c/ErrorNumber.h"
 

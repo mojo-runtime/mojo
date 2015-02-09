@@ -1,5 +1,5 @@
-#ifndef _c__TimerOverrun_h
-#define _c__TimerOverrun_h
+#ifndef c_TimerOverrun_h_
+#define c_TimerOverrun_h_
 
 #ifdef __cplusplus
 inline namespace c {

@@ -1,5 +1,5 @@
-#ifndef _c__ECHILD_h
-#define _c__ECHILD_h
+#ifndef c_ECHILD_h_
+#define c_ECHILD_h_
 
 #include "c/ErrorNumber.h"
 

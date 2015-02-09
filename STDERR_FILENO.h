@@ -1,5 +1,5 @@
-#ifndef _c__STDERR_FILENO_h
-#define _c__STDERR_FILENO_h
+#ifndef c_STDERR_FILENO_h_
+#define c_STDERR_FILENO_h_
 
 #include "c/FileDescriptor.h"
 

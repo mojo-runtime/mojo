@@ -1,5 +1,5 @@
-#ifndef _c__ENXIO_h
-#define _c__ENXIO_h
+#ifndef c_ENXIO_h_
+#define c_ENXIO_h_
 
 #include "c/ErrorNumber.h"
 

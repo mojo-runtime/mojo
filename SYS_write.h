@@ -1,5 +1,5 @@
-#ifndef _c__SYS_write_h
-#define _c__SYS_write_h
+#ifndef c_SYS_write_h_
+#define c_SYS_write_h_
 
 #include "c/SystemCallNumber.h"
 

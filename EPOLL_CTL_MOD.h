@@ -1,5 +1,5 @@
-#ifndef _c__EPOLL_CTL_MOD_h
-#define _c__EPOLL_CTL_MOD_h
+#ifndef c_EPOLL_CTL_MOD_h_
+#define c_EPOLL_CTL_MOD_h_
 
 #include "c/EpollControlKind.h"
 

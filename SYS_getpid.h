@@ -1,5 +1,5 @@
-#ifndef _c__SYS_getpid_h
-#define _c__SYS_getpid_h
+#ifndef c_SYS_getpid_h_
+#define c_SYS_getpid_h_
 
 #include "c/SystemCallNumber.h"
 

@@ -1,5 +1,5 @@
-#ifndef _c__EMLINK_h
-#define _c__EMLINK_h
+#ifndef c_EMLINK_h_
+#define c_EMLINK_h_
 
 #include "c/ErrorNumber.h"
 

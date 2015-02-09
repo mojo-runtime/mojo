@@ -1,5 +1,5 @@
-#ifndef _c__EDQUOT_h
-#define _c__EDQUOT_h
+#ifndef c_EDQUOT_h_
+#define c_EDQUOT_h_
 
 #include "c/ErrorNumber.h"
 

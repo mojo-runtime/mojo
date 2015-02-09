@@ -1,5 +1,5 @@
-#ifndef _c__WNOHANG_h
-#define _c__WNOHANG_h
+#ifndef c_WNOHANG_h_
+#define c_WNOHANG_h_
 
 #include "c/WaitFlags.h"
 

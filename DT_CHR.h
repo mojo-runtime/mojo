@@ -1,5 +1,5 @@
-#ifndef _c__DT_CHR_h
-#define _c__DT_CHR_h
+#ifndef c_DT_CHR_h_
+#define c_DT_CHR_h_
 
 #include "c/DirectoryEntryKind.h"
 

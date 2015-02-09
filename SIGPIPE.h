@@ -1,5 +1,5 @@
-#ifndef _c__SIGPIPE_h
-#define _c__SIGPIPE_h
+#ifndef c_SIGPIPE_h_
+#define c_SIGPIPE_h_
 
 #include "c/SignalNumber.h"
 

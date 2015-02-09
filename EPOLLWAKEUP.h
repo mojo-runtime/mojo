@@ -1,5 +1,5 @@
-#ifndef _c__EPOLLWAKEUP_h
-#define _c__EPOLLWAKEUP_h
+#ifndef c_EPOLLWAKEUP_h_
+#define c_EPOLLWAKEUP_h_
 
 #include "c/EpollEvents.h"
 

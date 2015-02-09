@@ -1,5 +1,5 @@
-#ifndef _c__O_CLOEXEC_h
-#define _c__O_CLOEXEC_h
+#ifndef c_O_CLOEXEC_h_
+#define c_O_CLOEXEC_h_
 
 #include "c/OpenFlags.h"
 

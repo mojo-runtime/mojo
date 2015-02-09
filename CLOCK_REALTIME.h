@@ -1,5 +1,5 @@
-#ifndef _c__CLOCK_REALTIME_h
-#define _c__CLOCK_REALTIME_h
+#ifndef c_CLOCK_REALTIME_h_
+#define c_CLOCK_REALTIME_h_
 
 #include "c/clockid_t.h"
 

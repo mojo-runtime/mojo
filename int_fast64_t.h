@@ -1,5 +1,5 @@
-#ifndef _c__int_fast64_t_h
-#define _c__int_fast64_t_h
+#ifndef c_int_fast64_t_h_
+#define c_int_fast64_t_h_
 
 #ifdef __cplusplus
 inline namespace c {

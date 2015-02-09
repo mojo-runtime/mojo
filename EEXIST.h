@@ -1,5 +1,5 @@
-#ifndef _c__EEXIST_h
-#define _c__EEXIST_h
+#ifndef c_EEXIST_h_
+#define c_EEXIST_h_
 
 #include "c/ErrorNumber.h"
 

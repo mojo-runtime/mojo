@@ -1,5 +1,5 @@
-#ifndef _c__MAP_SHARED_h
-#define _c__MAP_SHARED_h
+#ifndef c_MAP_SHARED_h_
+#define c_MAP_SHARED_h_
 
 #include "c/MemoryMapFlags.h"
 

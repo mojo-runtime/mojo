@@ -1,5 +1,5 @@
-#ifndef _c__MAP_DENYWRITE_h
-#define _c__MAP_DENYWRITE_h
+#ifndef c_MAP_DENYWRITE_h_
+#define c_MAP_DENYWRITE_h_
 
 #include "c/MemoryMapFlags.h"
 

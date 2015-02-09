@@ -1,5 +1,5 @@
-#ifndef _c__NCCS_h
-#define _c__NCCS_h
+#ifndef c_NCCS_h_
+#define c_NCCS_h_
 
 #include "c/size_t.h"
 

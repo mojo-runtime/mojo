@@ -1,5 +1,5 @@
-#ifndef _c__SYS_mmap_h
-#define _c__SYS_mmap_h
+#ifndef c_SYS_mmap_h_
+#define c_SYS_mmap_h_
 
 #include "c/SystemCallNumber.h"
 

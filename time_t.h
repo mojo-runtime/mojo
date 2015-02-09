@@ -1,5 +1,5 @@
-#ifndef _c__time_t_h
-#define _c__time_t_h
+#ifndef c_time_t_h_
+#define c_time_t_h_
 
 #ifdef __cplusplus
 inline namespace c {

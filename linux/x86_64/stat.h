@@ -1,5 +1,5 @@
-#ifndef _c__linux__x86_64__stat_h
-#define _c__linux__x86_64__stat_h
+#ifndef c_linux__x86_64__stat_h_
+#define c_linux__x86_64__stat_h_
 
 #include "c/blksize_t.h"
 #include "c/blkcnt_t.h"

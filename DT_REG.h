@@ -1,5 +1,5 @@
-#ifndef _c__DT_REG_h
-#define _c__DT_REG_h
+#ifndef c_DT_REG_h_
+#define c_DT_REG_h_
 
 #include "c/DirectoryEntryKind.h"
 

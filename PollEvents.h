@@ -1,5 +1,5 @@
-#ifndef _c__PollEvents_h
-#define _c__PollEvents_h
+#ifndef c_PollEvents_h_
+#define c_PollEvents_h_
 
 #ifdef __cplusplus
 inline namespace c {

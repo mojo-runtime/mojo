@@ -1,5 +1,5 @@
-#ifndef _c__EBADF_h
-#define _c__EBADF_h
+#ifndef c_EBADF_h_
+#define c_EBADF_h_
 
 #include "c/ErrorNumber.h"
 

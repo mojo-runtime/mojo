@@ -1,5 +1,5 @@
-#ifndef _c__ENOSYS_h
-#define _c__ENOSYS_h
+#ifndef c_ENOSYS_h_
+#define c_ENOSYS_h_
 
 #include "c/ErrorNumber.h"
 

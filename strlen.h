@@ -1,5 +1,5 @@
-#ifndef _c__strlen_h
-#define _c__strlen_h
+#ifndef c_strlen_h_
+#define c_strlen_h_
 
 #include "c/size_t.h"
 #include "c/_CONSTEXPR.h"

@@ -1,5 +1,5 @@
-#ifndef _c__EACCES_h
-#define _c__EACCES_h
+#ifndef c_EACCES_h_
+#define c_EACCES_h_
 
 #include "c/ErrorNumber.h"
 

@@ -1,5 +1,5 @@
-#ifndef _c__O_RDWR_h
-#define _c__O_RDWR_h
+#ifndef c_O_RDWR_h_
+#define c_O_RDWR_h_
 
 #include "c/OpenFlags.h"
 

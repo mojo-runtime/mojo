@@ -1,5 +1,5 @@
-#ifndef _c__SIGSEGV_h
-#define _c__SIGSEGV_h
+#ifndef c_SIGSEGV_h_
+#define c_SIGSEGV_h_
 
 #include "c/SignalNumber.h"
 

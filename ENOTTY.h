@@ -1,5 +1,5 @@
-#ifndef _c__ENOTTY_h
-#define _c__ENOTTY_h
+#ifndef c_ENOTTY_h_
+#define c_ENOTTY_h_
 
 #include "c/ErrorNumber.h"
 

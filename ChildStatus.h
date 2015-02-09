@@ -1,5 +1,5 @@
-#ifndef _c__ChildStatus_h
-#define _c__ChildStatus_h
+#ifndef c_ChildStatus_h_
+#define c_ChildStatus_h_
 
 #ifdef __cplusplus
 inline namespace c {

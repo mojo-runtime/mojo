@@ -1,5 +1,5 @@
-#ifndef _c__EOVERFLOW_h
-#define _c__EOVERFLOW_h
+#ifndef c_EOVERFLOW_h_
+#define c_EOVERFLOW_h_
 
 #include "c/ErrorNumber.h"
 

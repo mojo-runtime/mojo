@@ -1,5 +1,5 @@
-#ifndef _c__NULL_h
-#define _c__NULL_h
+#ifndef c_NULL_h_
+#define c_NULL_h_
 
 #ifdef __cplusplus
 inline namespace c {

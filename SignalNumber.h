@@ -1,5 +1,5 @@
-#ifndef _c__SignalNumber_h
-#define _c__SignalNumber_h
+#ifndef c_SignalNumber_h_
+#define c_SignalNumber_h_
 
 #ifdef __cplusplus
 inline namespace c {

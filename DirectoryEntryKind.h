@@ -1,5 +1,5 @@
-#ifndef _c__DirectoryEntryKind_h
-#define _c__DirectoryEntryKind_h
+#ifndef c_DirectoryEntryKind_h_
+#define c_DirectoryEntryKind_h_
 
 #ifdef __cplusplus
 inline namespace c {

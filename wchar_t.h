@@ -1,5 +1,5 @@
-#ifndef _c__wchar_t_h
-#define _c__wchar_t_h
+#ifndef c_wchar_t_h_
+#define c_wchar_t_h_
 
 #ifdef __cplusplus
 // No need

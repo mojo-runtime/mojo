@@ -1,5 +1,5 @@
-#ifndef _c__EBUSY_h
-#define _c__EBUSY_h
+#ifndef c_EBUSY_h_
+#define c_EBUSY_h_
 
 #include "c/ErrorNumber.h"
 

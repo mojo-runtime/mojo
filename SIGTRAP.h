@@ -1,5 +1,5 @@
-#ifndef _c__SIGTRAP_h
-#define _c__SIGTRAP_h
+#ifndef c_SIGTRAP_h_
+#define c_SIGTRAP_h_
 
 #include "c/SignalNumber.h"
 

@@ -1,5 +1,5 @@
-#ifndef _c__P_PGID_h
-#define _c__P_PGID_h
+#ifndef c_P_PGID_h_
+#define c_P_PGID_h_
 
 #include "c/idtype_t.h"
 

@@ -1,5 +1,5 @@
-#ifndef _c__ENOTBLK_h
-#define _c__ENOTBLK_h
+#ifndef c_ENOTBLK_h_
+#define c_ENOTBLK_h_
 
 #include "c/ErrorNumber.h"
 

@@ -1,5 +1,5 @@
-#ifndef _c__EPOLL_CLOEXEC_h
-#define _c__EPOLL_CLOEXEC_h
+#ifndef c_EPOLL_CLOEXEC_h_
+#define c_EPOLL_CLOEXEC_h_
 
 #include "c/O_CLOEXEC.h"
 #include "c/EpollCreateFlags.h"

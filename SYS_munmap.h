@@ -1,5 +1,5 @@
-#ifndef _c__SYS_munmap_h
-#define _c__SYS_munmap_h
+#ifndef c_SYS_munmap_h_
+#define c_SYS_munmap_h_
 
 #include "c/SystemCallNumber.h"
 

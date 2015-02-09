@@ -1,5 +1,5 @@
-#ifndef _c__ENAMETOOLONG_h
-#define _c__ENAMETOOLONG_h
+#ifndef c_ENAMETOOLONG_h_
+#define c_ENAMETOOLONG_h_
 
 #include "c/ErrorNumber.h"
 

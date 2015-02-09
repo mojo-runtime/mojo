@@ -1,5 +1,5 @@
-#ifndef _c__TimerId_h
-#define _c__TimerId_h
+#ifndef c_TimerId_h_
+#define c_TimerId_h_
 
 #ifdef __cplusplus
 inline namespace c {

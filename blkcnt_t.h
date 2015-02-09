@@ -1,5 +1,5 @@
-#ifndef _c__blkcnt_t_h
-#define _c__blkcnt_t_h
+#ifndef c_blkcnt_t_h_
+#define c_blkcnt_t_h_
 
 #ifdef __cplusplus
 inline namespace c {

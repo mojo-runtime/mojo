@@ -1,5 +1,5 @@
-#ifndef _c__ssize_t__h
-#define _c__ssize_t__h
+#ifndef c_ssize_t__h_
+#define c_ssize_t__h_
 
 #include "c/ptrdiff_t.h"
 

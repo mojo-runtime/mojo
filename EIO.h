@@ -1,5 +1,5 @@
-#ifndef _c__EIO_h
-#define _c__EIO_h
+#ifndef c_EIO_h_
+#define c_EIO_h_
 
 #include "c/ErrorNumber.h"
 

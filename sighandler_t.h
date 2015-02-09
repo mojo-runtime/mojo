@@ -1,5 +1,5 @@
-#ifndef _c__sighandler_t_h
-#define _c__sighandler_t_h
+#ifndef c_sighandler_t_h_
+#define c_sighandler_t_h_
 
 #include "c/SignalNumber.h"
 

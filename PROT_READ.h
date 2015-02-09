@@ -1,5 +1,5 @@
-#ifndef _c__PROT_READ_h
-#define _c__PROT_READ_h
+#ifndef c_PROT_READ_h_
+#define c_PROT_READ_h_
 
 #include "c/MemoryProtection.h"
 

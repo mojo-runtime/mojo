@@ -1,5 +1,5 @@
-#ifndef _c__EPOLLIN_h
-#define _c__EPOLLIN_h
+#ifndef c_EPOLLIN_h_
+#define c_EPOLLIN_h_
 
 #include "c/POLLIN.h"
 #include "c/EpollEvents.h"

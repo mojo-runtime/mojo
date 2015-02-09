@@ -1,5 +1,5 @@
-#ifndef _c__ESRCH_h
-#define _c__ESRCH_h
+#ifndef c_ESRCH_h_
+#define c_ESRCH_h_
 
 #include "c/ErrorNumber.h"
 

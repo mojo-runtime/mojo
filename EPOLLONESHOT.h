@@ -1,5 +1,5 @@
-#ifndef _c__EPOLLONESHOT_h
-#define _c__EPOLLONESHOT_h
+#ifndef c_EPOLLONESHOT_h_
+#define c_EPOLLONESHOT_h_
 
 #include "c/EpollEvents.h"
 

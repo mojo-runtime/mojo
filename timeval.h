@@ -1,5 +1,5 @@
-#ifndef _c__timeval_h
-#define _c__timeval_h
+#ifndef c_timeval_h_
+#define c_timeval_h_
 
 #include "c/time_t.h"
 #include "c/suseconds_t.h"

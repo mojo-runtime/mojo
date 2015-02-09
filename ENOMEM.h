@@ -1,5 +1,5 @@
-#ifndef _c__ENOMEM_h
-#define _c__ENOMEM_h
+#ifndef c_ENOMEM_h_
+#define c_ENOMEM_h_
 
 #include "c/ErrorNumber.h"
 

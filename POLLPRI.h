@@ -1,5 +1,5 @@
-#ifndef _c__POLLPRI_h
-#define _c__POLLPRI_h
+#ifndef c_POLLPRI_h_
+#define c_POLLPRI_h_
 
 #include "c/PollEvents.h"
 

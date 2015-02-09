@@ -1,5 +1,5 @@
-#ifndef _c__SIGQUIT_h
-#define _c__SIGQUIT_h
+#ifndef c_SIGQUIT_h_
+#define c_SIGQUIT_h_
 
 #include "c/SignalNumber.h"
 

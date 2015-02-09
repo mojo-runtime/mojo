@@ -1,5 +1,5 @@
-#ifndef _c__CLD_KILLED_h
-#define _c__CLD_KILLED_h
+#ifndef c_CLD_KILLED_h_
+#define c_CLD_KILLED_h_
 
 #include "c/ChildStatus.h"
 

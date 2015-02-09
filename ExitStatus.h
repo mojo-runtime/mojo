@@ -1,5 +1,5 @@
-#ifndef _c__ExitStatus_h
-#define _c__ExitStatus_h
+#ifndef c_ExitStatus_h_
+#define c_ExitStatus_h_
 
 #ifdef __cplusplus
 inline namespace c {

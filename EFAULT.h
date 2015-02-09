@@ -1,5 +1,5 @@
-#ifndef _c__EFAULT_h
-#define _c__EFAULT_h
+#ifndef c_EFAULT_h_
+#define c_EFAULT_h_
 
 #include "c/ErrorNumber.h"
 

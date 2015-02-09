@@ -1,5 +1,5 @@
-#ifndef _c__O_RDONLY_h
-#define _c__O_RDONLY_h
+#ifndef c_O_RDONLY_h_
+#define c_O_RDONLY_h_
 
 #include "c/OpenFlags.h"
 

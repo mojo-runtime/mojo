@@ -1,5 +1,5 @@
-#ifndef _c__WSTOPPED_h
-#define _c__WSTOPPED_h
+#ifndef c_WSTOPPED_h_
+#define c_WSTOPPED_h_
 
 #include "c/WaitFlags.h"
 

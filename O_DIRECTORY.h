@@ -1,5 +1,5 @@
-#ifndef _c__O_DIRECTORY_h
-#define _c__O_DIRECTORY_h
+#ifndef c_O_DIRECTORY_h_
+#define c_O_DIRECTORY_h_
 
 #include "c/OpenFlags.h"
 

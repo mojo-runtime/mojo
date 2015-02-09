@@ -1,5 +1,5 @@
-#ifndef _c__OpenFlags_h
-#define _c__OpenFlags_h
+#ifndef c_OpenFlags_h_
+#define c_OpenFlags_h_
 
 #ifdef __cplusplus
 inline namespace c {

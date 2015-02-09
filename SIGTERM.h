@@ -1,5 +1,5 @@
-#ifndef _c__SIGTERM_h
-#define _c__SIGTERM_h
+#ifndef c_SIGTERM_h_
+#define c_SIGTERM_h_
 
 #include "c/SignalNumber.h"
 

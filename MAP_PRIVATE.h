@@ -1,5 +1,5 @@
-#ifndef _c__MAP_PRIVATE_h
-#define _c__MAP_PRIVATE_h
+#ifndef c_MAP_PRIVATE_h_
+#define c_MAP_PRIVATE_h_
 
 #include "c/MemoryMapFlags.h"
 

@@ -1,5 +1,5 @@
-#ifndef _c__linux_dirent_h
-#define _c__linux_dirent_h
+#ifndef c_linux_dirent_h_
+#define c_linux_dirent_h_
 
 #ifdef __cplusplus
 inline namespace c {

@@ -1,5 +1,5 @@
-#ifndef _c__EROFS_h
-#define _c__EROFS_h
+#ifndef c_EROFS_h_
+#define c_EROFS_h_
 
 #include "c/ErrorNumber.h"
 

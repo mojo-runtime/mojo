@@ -1,5 +1,5 @@
-#ifndef _c__ENFILE_h
-#define _c__ENFILE_h
+#ifndef c_ENFILE_h_
+#define c_ENFILE_h_
 
 #include "c/ErrorNumber.h"
 

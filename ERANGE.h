@@ -1,5 +1,5 @@
-#ifndef _c__ERANGE_h
-#define _c__ERANGE_h
+#ifndef c_ERANGE_h_
+#define c_ERANGE_h_
 
 #include "c/ErrorNumber.h"
 

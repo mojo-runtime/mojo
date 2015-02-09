@@ -1,5 +1,5 @@
-#ifndef _c__termios_h
-#define _c__termios_h
+#ifndef c_termios_h_
+#define c_termios_h_
 
 #include "c/NCCS.h"
 #include "c/cc_t.h"

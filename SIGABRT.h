@@ -1,5 +1,5 @@
-#ifndef _c__SIGABRT_h
-#define _c__SIGABRT_h
+#ifndef c_SIGABRT_h_
+#define c_SIGABRT_h_
 
 #include "c/SignalNumber.h"
 

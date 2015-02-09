@@ -1,5 +1,5 @@
-#ifndef _c__nlink_t_h
-#define _c__nlink_t_h
+#ifndef c_nlink_t_h_
+#define c_nlink_t_h_
 
 #ifdef __cplusplus
 inline namespace c {

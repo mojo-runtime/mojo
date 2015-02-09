@@ -1,5 +1,5 @@
-#ifndef _c__EPOLLHUP_h
-#define _c__EPOLLHUP_h
+#ifndef c_EPOLLHUP_h_
+#define c_EPOLLHUP_h_
 
 #include "c/POLLHUP.h"
 #include "c/EpollEvents.h"

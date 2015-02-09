@@ -1,5 +1,5 @@
-#ifndef _c__rusage_h
-#define _c__rusage_h
+#ifndef c_rusage_h_
+#define c_rusage_h_
 
 #include "c/timeval.h"
 

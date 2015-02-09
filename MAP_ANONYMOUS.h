@@ -1,5 +1,5 @@
-#ifndef _c__MAP_ANONYMOUS_h
-#define _c__MAP_ANONYMOUS_h
+#ifndef c_MAP_ANONYMOUS_h_
+#define c_MAP_ANONYMOUS_h_
 
 #include "c/MemoryMapFlags.h"
 

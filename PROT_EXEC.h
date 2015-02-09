@@ -1,5 +1,5 @@
-#ifndef _c__PROT_EXEC_h
-#define _c__PROT_EXEC_h
+#ifndef c_PROT_EXEC_h_
+#define c_PROT_EXEC_h_
 
 #include "c/MemoryProtection.h"
 

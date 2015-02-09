@@ -1,5 +1,5 @@
-#ifndef _c__CLD_DUMPED_h
-#define _c__CLD_DUMPED_h
+#ifndef c_CLD_DUMPED_h_
+#define c_CLD_DUMPED_h_
 
 #include "c/ChildStatus.h"
 

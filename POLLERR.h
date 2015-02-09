@@ -1,5 +1,5 @@
-#ifndef _c__POLLERR_h
-#define _c__POLLERR_h
+#ifndef c_POLLERR_h_
+#define c_POLLERR_h_
 
 #include "c/PollEvents.h"
 

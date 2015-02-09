@@ -1,5 +1,5 @@
-#ifndef _c__EDESTADDRREQ_h
-#define _c__EDESTADDRREQ_h
+#ifndef c_EDESTADDRREQ_h_
+#define c_EDESTADDRREQ_h_
 
 #include "c/ErrorNumber.h"
 

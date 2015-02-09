@@ -1,5 +1,5 @@
-#ifndef _c__ENOEXEC_h
-#define _c__ENOEXEC_h
+#ifndef c_ENOEXEC_h_
+#define c_ENOEXEC_h_
 
 #include "c/ErrorNumber.h"
 

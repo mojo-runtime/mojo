@@ -1,5 +1,5 @@
-#ifndef _c__ELIBBAD_h
-#define _c__ELIBBAD_h
+#ifndef c_ELIBBAD_h_
+#define c_ELIBBAD_h_
 
 #include "c/ErrorNumber.h"
 

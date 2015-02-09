@@ -1,5 +1,5 @@
-#ifndef _c__DT_FIFO_h
-#define _c__DT_FIFO_h
+#ifndef c_DT_FIFO_h_
+#define c_DT_FIFO_h_
 
 #include "c/DirectoryEntryKind.h"
 

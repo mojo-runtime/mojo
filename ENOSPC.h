@@ -1,5 +1,5 @@
-#ifndef _c__ENOSPC_h
-#define _c__ENOSPC_h
+#ifndef c_ENOSPC_h_
+#define c_ENOSPC_h_
 
 #include "c/ErrorNumber.h"
 

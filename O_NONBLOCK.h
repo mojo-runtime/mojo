@@ -1,5 +1,5 @@
-#ifndef _c__O_NONBLOCK_h
-#define _c__O_NONBLOCK_h
+#ifndef c_O_NONBLOCK_h_
+#define c_O_NONBLOCK_h_
 
 #include "c/OpenFlags.h"
 

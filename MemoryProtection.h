@@ -1,5 +1,5 @@
-#ifndef _c__MemoryProtection_h
-#define _c__MemoryProtection_h
+#ifndef c_MemoryProtection_h_
+#define c_MemoryProtection_h_
 
 #ifdef __cplusplus
 inline namespace c {

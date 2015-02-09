@@ -1,5 +1,5 @@
-#ifndef _c__uint_least16_t_h
-#define _c__uint_least16_t_h
+#ifndef c_uint_least16_t_h_
+#define c_uint_least16_t_h_
 
 #ifdef __cplusplus
 inline namespace c {

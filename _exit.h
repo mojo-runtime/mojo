@@ -1,5 +1,5 @@
-#ifndef _c___exit_h
-#define _c___exit_h
+#ifndef c__exit_h_
+#define c__exit_h_
 
 #include "c/ExitStatus.h"
 #include "c/SYS_exit.h"

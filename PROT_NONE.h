@@ -1,5 +1,5 @@
-#ifndef _c__PROT_NONE_h
-#define _c__PROT_NONE_h
+#ifndef c_PROT_NONE_h_
+#define c_PROT_NONE_h_
 
 #include "c/MemoryProtection.h"
 

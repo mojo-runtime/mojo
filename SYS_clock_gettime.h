@@ -1,5 +1,5 @@
-#ifndef _c__SYS_clock_gettime_h
-#define _c__SYS_clock_gettime_h
+#ifndef c_SYS_clock_gettime_h_
+#define c_SYS_clock_gettime_h_
 
 #include "c/SystemCallNumber.h"
 

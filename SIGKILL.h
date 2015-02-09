@@ -1,5 +1,5 @@
-#ifndef _c__SIGKILL_h
-#define _c__SIGKILL_h
+#ifndef c_SIGKILL_h_
+#define c_SIGKILL_h_
 
 #include "c/SignalNumber.h"
 

@@ -1,5 +1,5 @@
-#ifndef _c__DT_SOCK_h
-#define _c__DT_SOCK_h
+#ifndef c_DT_SOCK_h_
+#define c_DT_SOCK_h_
 
 #include "c/DirectoryEntryKind.h"
 

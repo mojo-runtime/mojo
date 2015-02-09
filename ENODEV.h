@@ -1,5 +1,5 @@
-#ifndef _c__ENODEV_h
-#define _c__ENODEV_h
+#ifndef c_ENODEV_h_
+#define c_ENODEV_h_
 
 #include "c/ErrorNumber.h"
 

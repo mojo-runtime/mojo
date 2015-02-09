@@ -1,5 +1,5 @@
-#ifndef _c__EISDIR_h
-#define _c__EISDIR_h
+#ifndef c_EISDIR_h_
+#define c_EISDIR_h_
 
 #include "c/ErrorNumber.h"
 

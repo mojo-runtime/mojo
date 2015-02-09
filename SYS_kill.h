@@ -1,5 +1,5 @@
-#ifndef _c__SYS_kill_h
-#define _c__SYS_kill_h
+#ifndef c_SYS_kill_h_
+#define c_SYS_kill_h_
 
 #include "c/SystemCallNumber.h"
 

@@ -1,5 +1,5 @@
-#ifndef _c__EXDEV_h
-#define _c__EXDEV_h
+#ifndef c_EXDEV_h_
+#define c_EXDEV_h_
 
 #include "c/ErrorNumber.h"
 

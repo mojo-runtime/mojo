@@ -1,5 +1,5 @@
-#ifndef _c__abs_h
-#define _c__abs_h
+#ifndef c_abs_h_
+#define c_abs_h_
 
 #include "c/_CONSTEXPR.h"
 

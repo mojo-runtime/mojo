@@ -1,5 +1,5 @@
-#ifndef _c__CLD_TRAPPED_h
-#define _c__CLD_TRAPPED_h
+#ifndef c_CLD_TRAPPED_h_
+#define c_CLD_TRAPPED_h_
 
 #include "c/ChildStatus.h"
 

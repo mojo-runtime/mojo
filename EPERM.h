@@ -1,5 +1,5 @@
-#ifndef _c__EPERM_h
-#define _c__EPERM_h
+#ifndef c_EPERM_h_
+#define c_EPERM_h_
 
 #include "c/ErrorNumber.h"
 

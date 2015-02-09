@@ -1,5 +1,5 @@
-#ifndef _c__uint32_t_h
-#define _c__uint32_t_h
+#ifndef c_uint32_t_h_
+#define c_uint32_t_h_
 
 #ifdef __cplusplus
 inline namespace c {

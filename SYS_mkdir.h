@@ -1,5 +1,5 @@
-#ifndef _c__SYS_mkdir_h
-#define _c__SYS_mkdir_h
+#ifndef c_SYS_mkdir_h_
+#define c_SYS_mkdir_h_
 
 #include "c/SystemCallNumber.h"
 

@@ -1,5 +1,5 @@
-#ifndef _c__SystemCallResult_h
-#define _c__SystemCallResult_h
+#ifndef c_SystemCallResult_h_
+#define c_SystemCallResult_h_
 
 #ifdef __cplusplus
 inline namespace c {

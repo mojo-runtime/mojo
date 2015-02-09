@@ -1,5 +1,5 @@
-#ifndef _c__EOPNOTSUPP_h
-#define _c__EOPNOTSUPP_h
+#ifndef c_EOPNOTSUPP_h_
+#define c_EOPNOTSUPP_h_
 
 #include "c/ErrorNumber.h"
 

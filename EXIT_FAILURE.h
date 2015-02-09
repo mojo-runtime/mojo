@@ -1,5 +1,5 @@
-#ifndef _c__EXIT_FAILURE_h
-#define _c__EXIT_FAILURE_h
+#ifndef c_EXIT_FAILURE_h_
+#define c_EXIT_FAILURE_h_
 
 #include "c/ExitStatus.h"
 

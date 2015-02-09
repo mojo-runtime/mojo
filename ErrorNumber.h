@@ -1,5 +1,5 @@
-#ifndef _c__ErrorNumber_h
-#define _c__ErrorNumber_h
+#ifndef c_ErrorNumber_h_
+#define c_ErrorNumber_h_
 
 #ifdef __cplusplus
 inline namespace c {

@@ -1,5 +1,5 @@
-#ifndef _c__timespec_h
-#define _c__timespec_h
+#ifndef c_timespec_h_
+#define c_timespec_h_
 
 #include "c/time_t.h"
 

@@ -1,5 +1,5 @@
-#ifndef _c__ESPIPE_h
-#define _c__ESPIPE_h
+#ifndef c_ESPIPE_h_
+#define c_ESPIPE_h_
 
 #include "c/ErrorNumber.h"
 

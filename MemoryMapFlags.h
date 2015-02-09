@@ -1,5 +1,5 @@
-#ifndef _c__MemoryMapFlags_h
-#define _c__MemoryMapFlags_h
+#ifndef c_MemoryMapFlags_h_
+#define c_MemoryMapFlags_h_
 
 #ifdef __cplusplus
 inline namespace c {

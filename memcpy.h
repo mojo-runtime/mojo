@@ -1,5 +1,5 @@
-#ifndef _c__memcpy_h
-#define _c__memcpy_h
+#ifndef c_memcpy_h_
+#define c_memcpy_h_
 
 #include "c/size_t.h"
 #include "c/_REINTERPRET_CAST.h"

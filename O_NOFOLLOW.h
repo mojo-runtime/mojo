@@ -1,5 +1,5 @@
-#ifndef _c__O_NOFOLLOW_h
-#define _c__O_NOFOLLOW_h
+#ifndef c_O_NOFOLLOW_h_
+#define c_O_NOFOLLOW_h_
 
 #include "c/OpenFlags.h"
 

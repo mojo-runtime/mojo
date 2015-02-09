@@ -1,5 +1,5 @@
-#ifndef _c__EPOLLET_h
-#define _c__EPOLLET_h
+#ifndef c_EPOLLET_h_
+#define c_EPOLLET_h_
 
 #include "c/EpollEvents.h"
 #include "c/_STATIC_CAST.h"

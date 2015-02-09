@@ -1,5 +1,5 @@
-#ifndef _c__SYS_stat_h
-#define _c__SYS_stat_h
+#ifndef c_SYS_stat_h_
+#define c_SYS_stat_h_
 
 #include "c/SystemCallNumber.h"
 

@@ -1,5 +1,5 @@
-#ifndef _c__DT_LNK_h
-#define _c__DT_LNK_h
+#ifndef c_DT_LNK_h_
+#define c_DT_LNK_h_
 
 #include "c/DirectoryEntryKind.h"
 

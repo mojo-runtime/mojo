@@ -1,5 +1,5 @@
-#ifndef _c__SIGHUP_h
-#define _c__SIGHUP_h
+#ifndef c_SIGHUP_h_
+#define c_SIGHUP_h_
 
 #include "c/SignalNumber.h"
 

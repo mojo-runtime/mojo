@@ -1,5 +1,5 @@
-#ifndef _c__strcmp_h
-#define _c__strcmp_h
+#ifndef c_strcmp_h_
+#define c_strcmp_h_
 
 #include "c/_CONSTEXPR.h"
 

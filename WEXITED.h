@@ -1,5 +1,5 @@
-#ifndef _c__WEXITED_h
-#define _c__WEXITED_h
+#ifndef c_WEXITED_h_
+#define c_WEXITED_h_
 
 #include "c/WaitFlags.h"
 

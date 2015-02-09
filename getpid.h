@@ -1,5 +1,5 @@
-#ifndef _c__getpid_h
-#define _c__getpid_h
+#ifndef c_getpid_h_
+#define c_getpid_h_
 
 #include "c/SYS_getpid.h"
 #include "c/pid_t.h"

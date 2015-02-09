@@ -1,5 +1,5 @@
-#ifndef _c__ENOTDIR_h
-#define _c__ENOTDIR_h
+#ifndef c_ENOTDIR_h_
+#define c_ENOTDIR_h_
 
 #include "c/ErrorNumber.h"
 

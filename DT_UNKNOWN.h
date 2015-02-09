@@ -1,5 +1,5 @@
-#ifndef _c__DT_UNKNOWN_h
-#define _c__DT_UNKNOWN_h
+#ifndef c_DT_UNKNOWN_h_
+#define c_DT_UNKNOWN_h_
 
 #include "c/DirectoryEntryKind.h"
 

@@ -1,5 +1,5 @@
-#ifndef _c__EINVAL_h
-#define _c__EINVAL_h
+#ifndef c_EINVAL_h_
+#define c_EINVAL_h_
 
 #include "c/ErrorNumber.h"
 
