@@ -2,6 +2,7 @@
 #define c_auxv_t_h_
 
 #include "c/AuxiliaryVectorType.h"
+#include "c/Word.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -11,6 +12,9 @@ typedef struct
 {
     AuxiliaryVectorType
     a_type;
+
+    char
+    _padding[sizeof(Word) - sizeof(AuxiliaryVectorType)];
 
     union
     {
