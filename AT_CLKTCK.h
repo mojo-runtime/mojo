@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_CLKTCK
+AT_CLKTCK =
 #ifdef __linux__
  17
 #else

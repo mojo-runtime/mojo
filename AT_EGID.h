@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_EGID
+AT_EGID =
 #ifdef __linux__
  14
 #else

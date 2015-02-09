@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_NULL
+AT_NULL =
 #ifdef __linux__
  0
 #else

@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_EXECFD
+AT_EXECFD =
 #ifdef __linux__
  2
 #else

@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_PLATFORM
+AT_PLATFORM =
 #ifdef __linux__
  15
 #else

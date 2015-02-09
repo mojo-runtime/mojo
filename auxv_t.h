@@ -1,7 +1,7 @@
 #ifndef c_auxv_t_h_
 #define c_auxv_t_h_
 
-#include "c/uint64_t.h"
+#include "c/AuxiliaryVectorType.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -9,11 +9,9 @@ inline namespace c {
 
 typedef struct
 {
-    int
+    AuxiliaryVectorType
     a_type;
 
-    char
-    [sizeof
     union
     {
         long
@@ -27,7 +25,7 @@ typedef struct
     }
     a_un;
 }
-Elf64_auxv_t;
+auxv_t;
 
 #ifdef __cplusplus
 } // inline namespace c

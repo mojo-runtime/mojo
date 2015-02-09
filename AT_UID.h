@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_UID
+AT_UID =
 #ifdef __linux__
  11
 #else

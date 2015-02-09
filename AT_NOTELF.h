@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_NOTELF
+AT_NOTELF =
 #ifdef __linux__
  10
 #else

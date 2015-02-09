@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_ENTRY
+AT_ENTRY =
 #ifdef __linux__
  9
 #else

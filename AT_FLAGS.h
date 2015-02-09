@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_FLAGS
+AT_FLAGS =
 #ifdef __linux__
  8
 #else

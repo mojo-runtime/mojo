@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_GID
+AT_GID =
 #ifdef __linux__
  13
 #else

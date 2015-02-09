@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_IGNORE
+AT_IGNORE =
 #ifdef __linux__
  1
 #else

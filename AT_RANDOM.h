@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_RANDOM
+AT_RANDOM =
 #ifdef __linux__
  25
 #else

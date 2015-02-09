@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_SECURE
+AT_SECURE =
 #ifdef __linux__
  23
 #else

@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_EXECFN
+AT_EXECFN =
 #ifdef __linux__
  31
 #else

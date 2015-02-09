@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_PHDR
+AT_PHDR =
 #ifdef __linux__
  3
 #else

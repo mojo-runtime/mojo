@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_PHNUM
+AT_PHNUM =
 #ifdef __linux__
  5
 #else

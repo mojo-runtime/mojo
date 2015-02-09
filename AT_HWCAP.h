@@ -9,7 +9,7 @@ inline namespace c {
 
 static
 const AuxiliaryVectorType
-AT_HWCAP
+AT_HWCAP =
 #ifdef __linux__
  16
 #else
