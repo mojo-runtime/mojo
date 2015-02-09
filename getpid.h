@@ -1,17 +1,17 @@
 #ifndef c_getpid_h_
 #define c_getpid_h_
 
-#include "c/SYS_getpid.h"
+#include "c/noexcept.h"
 #include "c/pid_t.h"
-#include "c/_NOEXCEPT.h"
+#include "c/SYS_getpid.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
-static
+static inline
 pid_t
-getpid() _NOEXCEPT
+getpid() noexcept
 {
     pid_t result;
 

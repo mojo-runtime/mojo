@@ -2,7 +2,7 @@
 #define c_EPOLLET_h_
 
 #include "c/EpollEvents.h"
-#include "c/_STATIC_CAST.h"
+#include "c/STATIC_CAST.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -13,7 +13,7 @@ const EpollEvents
 EPOLLET =
 #ifdef __linux__
 // 0x80000000
- _STATIC_CAST(EpollEvents, (1u << 31))
+ STATIC_CAST(EpollEvents, (1u << 31))
 #else
 #  error
 #endif

@@ -2,7 +2,7 @@
 #define c_memcpy_h_
 
 #include "c/size_t.h"
-#include "c/_REINTERPRET_CAST.h"
+#include "c/REINTERPRET_CAST.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -10,15 +10,15 @@ inline namespace c {
 
 static
 void
-_memcpy(void* target, const void* source, size_t bytes)
+memcpy_(void* target, const void* source, size_t bytes)
 {
     // Placeholder implementation
 
     char*
-    target_bytes = _REINTERPRET_CAST(char*, target);
+    target_bytes = REINTERPRET_CAST(char*, target);
 
     const char*
-    source_bytes = _REINTERPRET_CAST(const char*, source);
+    source_bytes = REINTERPRET_CAST(const char*, source);
 
     char*
     target_bytes_end = target_bytes + bytes;
@@ -32,7 +32,7 @@ static
 void*
 memcpy(void* target, const void* source, size_t bytes)
 {
-    _memcpy(target, source, bytes);
+    memcpy_(target, source, bytes);
     return target;
 }
 

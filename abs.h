@@ -1,13 +1,13 @@
 #ifndef c_abs_h_
 #define c_abs_h_
 
-#include "c/_CONSTEXPR.h"
+#include "c/constexpr.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
-static _CONSTEXPR
+static constexpr
 int
 abs(int x)
 {
