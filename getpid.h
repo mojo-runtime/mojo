@@ -3,16 +3,15 @@
 
 #include "c/SYS_getpid.h"
 #include "c/pid_t.h"
-#include "c/_NOTHROW.h"
+#include "c/_NOEXCEPT.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
-_NOTHROW
 static
 pid_t
-getpid()
+getpid() _NOEXCEPT
 {
     pid_t result;
 
