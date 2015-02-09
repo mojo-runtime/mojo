@@ -1,5 +1,5 @@
-#ifndef c_SystemCallResult_h_
-#define c_SystemCallResult_h_
+#ifndef c_SystemResult_h_
+#define c_SystemResult_h_
 
 #ifdef __cplusplus
 inline namespace c {
@@ -7,7 +7,7 @@ inline namespace c {
 
 #ifdef __linux__
 #  ifdef __x86_64__
-typedef unsigned long SystemCallResult;
+typedef unsigned long SystemResult;
 #  else
 #    error
 #  endif
