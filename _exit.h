@@ -1,17 +1,17 @@
-#ifndef c__exit_h_
-#define c__exit_h_
+#ifndef c_exit_h_
+#define c_exit_h_
 
 #include "c/ExitStatus.h"
 #include "c/SYS_exit.h"
 #include "c/noexcept.h"
-#include "c/_Noreturn.h"
+#include "c/NORETURN.h"
 #include "c/__builtin_unreachable.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
-_Noreturn
+NORETURN
 static
 void
 _exit(ExitStatus status) noexcept
