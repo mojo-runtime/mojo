@@ -4,6 +4,7 @@
 #include "c/FileDescriptor.h"
 #include "c/noexcept.h"
 #include "c/SYS_close.h"
+#include "c/_c_syscall1.h"
 
 __c_namespace_open
 
@@ -11,21 +12,7 @@ static
 SystemCallResult
 close_(FileDescriptor fd) noexcept
 {
-    SystemCallResult
-    result;
-
-#if defined(__linux__) && defined(__x86_64__)
-    register const FileDescriptor r1 __asm__("rdi") = fd;
-
-    __asm__ __volatile__ ("syscall"
-                          : "=a" (result)
-                          : "0" (SYS_close), "r" (r1)
-                          : "rcx", "r11");
-#else
-#  error
-#endif
-
-    return result;
+    return _c_syscall1(SYS_close, fd);
 }
 
 __c_namespace_close

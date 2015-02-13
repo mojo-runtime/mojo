@@ -2,8 +2,8 @@
 #define c_fork_h_
 
 #include "c/noexcept.h"
-#include "c/SystemCallResult.h"
 #include "c/SYS_fork.h"
+#include "c/_c_syscall0.h"
 
 __c_namespace_open
 
@@ -11,19 +11,7 @@ static
 SystemCallResult
 fork_() noexcept
 {
-    SystemCallResult
-    result;
-
-#if defined(__linux__) && defined(__x86_64__)
-    __asm__ __volatile__ ("syscall"
-                          : "=a" (result)
-                          : "0" (SYS_fork)
-                          : "rcx", "r11");
-#else
-#  error
-#endif
-
-    return result;
+    return _c_syscall0(SYS_fork);
 }
 
 __c_namespace_close
