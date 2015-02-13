@@ -26,14 +26,6 @@ memcpy_(void* target, const void* source, size_t bytes)
     }
 }
 
-static
-void*
-memcpy(void* target, const void* source, size_t bytes)
-{
-    memcpy_(target, source, bytes);
-    return target;
-}
-
 __c_namespace_close
 
 #endif
