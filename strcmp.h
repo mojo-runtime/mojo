@@ -1,11 +1,12 @@
 #ifndef c_strcmp_h_
 #define c_strcmp_h_
 
-#include "c/__c_constexpr.h"
+#include "c/_c_constexpr.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
-static __c_constexpr
+static _c_constexpr
 int
 strcmp(const char* x, const char* y)
 {

@@ -1,12 +1,12 @@
 #ifndef c_abs_h_
 #define c_abs_h_
 
-#include "c/__c_constexpr.h"
+#include "c/_c_constexpr.h"
 #include "c/__c_namespace.h"
 
 __c_namespace_open
 
-static __c_constexpr
+static _c_constexpr
 int
 abs(int x)
 {
