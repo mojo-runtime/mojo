@@ -4,9 +4,7 @@
 #include "c/O_CLOEXEC.h"
 #include "c/EpollCreateFlags.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const EpollCreateFlags
@@ -18,8 +16,6 @@ EPOLL_CLOEXEC =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

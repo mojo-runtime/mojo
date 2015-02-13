@@ -3,14 +3,10 @@
 
 #include "c/SignalNumber.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 typedef void (*sighandler_t)(SignalNumber);
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

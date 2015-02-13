@@ -2,7 +2,7 @@
 #define c_clock_t_h_
 
 #ifdef __cplusplus
-inline namespace c {
+__c_namespace_open
 #endif
 
 typedef
@@ -18,7 +18,7 @@ long // int64_t
 clock_t;
 
 #ifdef __cplusplus
-} // inline namespace c
+__c_namespace_close
 #endif
 
 #endif

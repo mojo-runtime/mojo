@@ -3,9 +3,7 @@
 
 #include "c/ChildStatus.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const ChildStatus
@@ -17,8 +15,6 @@ CLD_EXITED =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

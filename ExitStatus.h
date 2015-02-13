@@ -2,13 +2,13 @@
 #define c_ExitStatus_h_
 
 #ifdef __cplusplus
-inline namespace c {
+__c_namespace_open
 #endif
 
 typedef int ExitStatus;
 
 #ifdef __cplusplus
-} // inline namespace c
+__c_namespace_close
 #endif
 
 #endif

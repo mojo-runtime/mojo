@@ -1,14 +1,12 @@
 #ifndef c_ChildStatus_h_
 #define c_ChildStatus_h_
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+#include "c/__c_namespace.h"
+
+__c_namespace_open
 
 typedef int ChildStatus;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

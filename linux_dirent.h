@@ -1,9 +1,9 @@
 #ifndef c_linux_dirent_h_
 #define c_linux_dirent_h_
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+#include "c/__c_namespace.h"
+
+__c_namespace_open
 
 struct linux_dirent
 {
@@ -32,8 +32,6 @@ struct linux_dirent
 #endif
 };
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

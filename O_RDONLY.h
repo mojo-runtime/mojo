@@ -3,9 +3,7 @@
 
 #include "c/OpenFlags.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const OpenFlags
@@ -17,8 +15,6 @@ O_RDONLY =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

@@ -1,9 +1,9 @@
 #ifndef c_wint_t_h_
 #define c_wint_t_h_
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+#include "c/__c_namespace.h"
+
+__c_namespace_open
 
 typedef
 #ifdef __WINT_TYPE__
@@ -13,8 +13,6 @@ __WINT_TYPE__
 #endif
 wint_t;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

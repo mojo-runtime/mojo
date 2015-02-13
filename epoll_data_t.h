@@ -5,9 +5,7 @@
 #include "c/uint64_t.h"
 #include "c/FileDescriptor.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 #ifdef __linux__
 
@@ -34,8 +32,6 @@ epoll_data_t;
 #  error
 #endif
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

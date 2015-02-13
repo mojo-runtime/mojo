@@ -6,9 +6,7 @@
 #include "c/speed_t.h"
 #include "c/tcflag_t.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 struct termios
 {
@@ -35,8 +33,6 @@ struct termios
 #endif
 };
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

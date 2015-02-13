@@ -3,9 +3,7 @@
 
 #include "c/DirectoryEntryKind.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const DirectoryEntryKind
@@ -17,8 +15,6 @@ DT_REG =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

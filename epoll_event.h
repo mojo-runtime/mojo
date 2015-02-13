@@ -4,9 +4,7 @@
 #include "c/epoll_data_t.h"
 #include "c/uint32_t.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 struct epoll_event
 {
@@ -21,8 +19,6 @@ struct epoll_event
 #endif
 };
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

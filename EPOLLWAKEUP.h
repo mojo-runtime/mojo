@@ -3,9 +3,7 @@
 
 #include "c/EpollEvents.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const EpollEvents
@@ -17,8 +15,6 @@ EPOLLWAKEUP =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

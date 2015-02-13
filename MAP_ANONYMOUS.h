@@ -3,9 +3,7 @@
 
 #include "c/MemoryMapFlags.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const MemoryMapFlags
@@ -21,8 +19,6 @@ MAP_ANONYMOUS =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

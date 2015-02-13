@@ -1,9 +1,9 @@
 #ifndef c_uint32_t_h_
 #define c_uint32_t_h_
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+#include "c/__c_namespace.h"
+
+__c_namespace_open
 
 typedef
 #ifdef __UINT32_TYPE__
@@ -13,8 +13,6 @@ __UINT32_TYPE__
 #endif
 uint32_t;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

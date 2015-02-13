@@ -3,9 +3,7 @@
 
 #include "c/time_t.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 struct timespec
 {
@@ -20,8 +18,6 @@ struct timespec
 #endif
 };
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

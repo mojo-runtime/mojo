@@ -1,14 +1,14 @@
 #ifndef c_EOF_h_
 #define c_EOF_h_
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+#include "c/__c_namespace.h"
 
-static const int EOF = -1;
+__c_namespace_open
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+static
+const int
+EOF = -1;
+
+__c_namespace_close
 
 #endif

@@ -1,9 +1,9 @@
 #ifndef c_clockid_t_h_
 #define c_clockid_t_h_
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+#include "c/__c_namespace.h"
+
+__c_namespace_open
 
 typedef
 #ifdef __linux__
@@ -17,8 +17,6 @@ int // int32_t
 #endif
 clockid_t;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

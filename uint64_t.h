@@ -1,9 +1,9 @@
 #ifndef c_uint64_t_h_
 #define c_uint64_t_h_
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+#include "c/__c_namespace.h"
+
+__c_namespace_open
 
 typedef
 #ifdef __UINT64_TYPE__
@@ -13,8 +13,6 @@ __UINT64_TYPE__
 #endif
 uint64_t;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

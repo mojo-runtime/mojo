@@ -13,7 +13,7 @@
 #include "c/uid_t.h"
 
 #ifdef __cplusplus
-inline namespace c {
+__c_namespace_open
 inline namespace linux {
 inline namespace x86_64 {
 #endif
@@ -84,7 +84,7 @@ struct stat
 #ifdef __cplusplus
 } // inline namespace x86_64
 } // inline namespace linux
-} // inline namespace c
+__c_namespace_close
 #endif
 
 #endif

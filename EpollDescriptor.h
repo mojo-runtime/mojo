@@ -3,14 +3,10 @@
 
 #include "c/FileDescriptor.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 typedef FileDescriptor EpollDescriptor;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

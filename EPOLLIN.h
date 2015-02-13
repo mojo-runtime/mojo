@@ -4,9 +4,7 @@
 #include "c/POLLIN.h"
 #include "c/EpollEvents.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const EpollEvents
@@ -18,8 +16,6 @@ EPOLLIN =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

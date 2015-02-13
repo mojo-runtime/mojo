@@ -1,9 +1,9 @@
 #ifndef c_NULL_h_
 #define c_NULL_h_
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+#include "c/__c_namespace.h"
+
+__c_namespace_open
 
 #ifdef __cplusplus
 static const auto NULL = nullptr;
@@ -11,8 +11,6 @@ static const auto NULL = nullptr;
 static void* NULL = 0; // This might be going too far.
 #endif
 
-#ifdef __cplusplus
- } // inline namespace c
-#endif
+ __c_namespace_close
 
 #endif

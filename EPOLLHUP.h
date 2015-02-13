@@ -4,9 +4,7 @@
 #include "c/POLLHUP.h"
 #include "c/EpollEvents.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const EpollEvents
@@ -18,8 +16,6 @@ EPOLLHUP =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

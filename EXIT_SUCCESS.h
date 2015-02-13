@@ -3,14 +3,12 @@
 
 #include "c/ExitStatus.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
-static const ExitStatus EXIT_SUCCESS = 0;
+static
+const ExitStatus
+EXIT_SUCCESS = 0;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

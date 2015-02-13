@@ -3,9 +3,7 @@
 
 #include "c/AuxiliaryVectorType.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const AuxiliaryVectorType
@@ -17,8 +15,6 @@ AT_CLKTCK =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

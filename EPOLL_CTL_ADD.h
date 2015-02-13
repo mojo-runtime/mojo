@@ -3,9 +3,7 @@
 
 #include "c/EpollControlKind.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const EpollControlKind
@@ -17,8 +15,6 @@ EPOLL_CTL_ADD =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

@@ -3,14 +3,10 @@
 
 #include "c/ptrdiff_t.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 typedef ptrdiff_t ssize_t;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

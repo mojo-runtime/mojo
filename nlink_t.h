@@ -1,9 +1,7 @@
 #ifndef c_nlink_t_h_
 #define c_nlink_t_h_
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 typedef
 #ifdef __linux__
@@ -17,8 +15,6 @@ unsigned long // uint64_t
 #endif
 nlink_t;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

@@ -4,9 +4,7 @@
 #include "c/AuxiliaryVectorType.h"
 #include "c/Word.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 typedef struct
 {
@@ -31,8 +29,6 @@ typedef struct
 }
 auxv_t;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

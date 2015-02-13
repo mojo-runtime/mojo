@@ -5,9 +5,7 @@
 #include "c/SYS_getpid.h"
 #include "c/__c_noexcept.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static inline
 pid_t
@@ -27,8 +25,6 @@ getpid() __c_noexcept
     return result;
 }
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

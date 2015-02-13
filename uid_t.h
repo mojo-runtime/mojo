@@ -1,9 +1,9 @@
 #ifndef c_uid_t_h_
 #define c_uid_t_h_
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+#include "c/__c_namespace.h"
+
+__c_namespace_open
 
 typedef
 #ifdef __linux__
@@ -17,8 +17,6 @@ unsigned int // uint32_t
 #endif
 uid_t;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

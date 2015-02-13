@@ -3,14 +3,12 @@
 
 #include "c/FileDescriptor.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
-static const FileDescriptor STDERR_FILENO = 2;
+static
+const FileDescriptor
+STDERR_FILENO = 2;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

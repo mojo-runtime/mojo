@@ -4,9 +4,7 @@
 #include "c/size_t.h"
 #include "c/__c_constexpr.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static __c_constexpr
 size_t
@@ -23,8 +21,6 @@ strlen(const char* data)
     return result;
 }
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

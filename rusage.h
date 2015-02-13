@@ -3,9 +3,7 @@
 
 #include "c/timeval.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 struct rusage
 {
@@ -32,8 +30,6 @@ struct rusage
 #endif
 };
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

@@ -7,7 +7,7 @@
 #include "c/__c_noreturn.h"
 
 #ifdef __cplusplus
-inline namespace c {
+__c_namespace_open
 #endif
 
 __c_noreturn
@@ -28,7 +28,7 @@ _exit(ExitStatus status) __c_noexcept
 }
 
 #ifdef __cplusplus
-} // inline namespace c
+__c_namespace_close
 #endif
 
 #endif

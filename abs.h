@@ -2,10 +2,9 @@
 #define c_abs_h_
 
 #include "c/__c_constexpr.h"
+#include "c/__c_namespace.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static __c_constexpr
 int
@@ -14,8 +13,6 @@ abs(int x)
     return x < 0 ? -x : x;
 }
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

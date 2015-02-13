@@ -3,9 +3,7 @@
 
 #include "c/MemoryProtection.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const MemoryProtection
@@ -17,8 +15,6 @@ PROT_READ =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

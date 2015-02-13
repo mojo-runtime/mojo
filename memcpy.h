@@ -4,9 +4,7 @@
 #include "c/size_t.h"
 #include "c/__c_reinterpret_cast.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 void
@@ -36,8 +34,6 @@ memcpy(void* target, const void* source, size_t bytes)
     return target;
 }
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

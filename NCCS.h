@@ -3,9 +3,7 @@
 
 #include "c/size_t.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const size_t
@@ -21,8 +19,6 @@ NCCS =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

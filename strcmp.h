@@ -3,9 +3,7 @@
 
 #include "c/__c_constexpr.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static __c_constexpr
 int
@@ -28,8 +26,6 @@ strcmp(const char* x, const char* y)
     }
 }
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

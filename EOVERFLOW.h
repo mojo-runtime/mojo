@@ -3,9 +3,7 @@
 
 #include "c/ErrorNumber.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const ErrorNumber
@@ -21,8 +19,6 @@ EOVERFLOW =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

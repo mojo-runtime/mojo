@@ -3,9 +3,7 @@
 
 #include "c/SystemCallNumber.h"
 
-#ifdef __cplusplus
-inline namespace c {
-#endif
+__c_namespace_open
 
 static
 const SystemCallNumber
@@ -21,8 +19,6 @@ SYS_epoll_ctl =
 #endif
  ;
 
-#ifdef __cplusplus
-} // inline namespace c
-#endif
+__c_namespace_close
 
 #endif

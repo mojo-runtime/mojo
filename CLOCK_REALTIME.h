@@ -4,7 +4,7 @@
 #include "c/clockid_t.h"
 
 #ifdef __cplusplus
-inline namespace c {
+__c_namespace_open
 #endif
 
 static
@@ -18,7 +18,7 @@ CLOCK_REALTIME =
  ;
 
 #ifdef __cplusplus
-} // inline namespace c
+__c_namespace_close
 #endif
 
 #endif
