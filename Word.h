@@ -5,13 +5,7 @@
 
 __c_namespace_open
 
-typedef
-#ifdef __x86_64__
-unsigned long
-#else
-#  error
-#endif
-Word;
+typedef int Word __attribute__((__mode__(__word__)));
 
 __c_namespace_close
 
