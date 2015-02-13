@@ -3,18 +3,17 @@
 
 #include "c/ExitStatus.h"
 #include "c/SYS_exit.h"
-#include "c/noexcept.h"
-#include "c/NORETURN.h"
-#include "c/__builtin_unreachable.h"
+#include "c/__c_noexcept.h"
+#include "c/__c_noreturn.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
-NORETURN
+__c_noreturn
 static
 void
-_exit(ExitStatus status) noexcept
+_exit(ExitStatus status) __c_noexcept
 {
 #if defined(__linux__) && defined(__x86_64__)
     register ExitStatus r1 __asm__ ("rdi") = status;

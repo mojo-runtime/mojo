@@ -1,9 +1,9 @@
 #ifndef c_getpid_h_
 #define c_getpid_h_
 
-#include "c/noexcept.h"
 #include "c/pid_t.h"
 #include "c/SYS_getpid.h"
+#include "c/__c_noexcept.h"
 
 #ifdef __cplusplus
 inline namespace c {
@@ -11,7 +11,7 @@ inline namespace c {
 
 static inline
 pid_t
-getpid() noexcept
+getpid() __c_noexcept
 {
     pid_t result;
 

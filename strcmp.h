@@ -1,13 +1,13 @@
 #ifndef c_strcmp_h_
 #define c_strcmp_h_
 
-#include "c/constexpr.h"
+#include "c/__c_constexpr.h"
 
 #ifdef __cplusplus
 inline namespace c {
 #endif
 
-static constexpr
+static __c_constexpr
 int
 strcmp(const char* x, const char* y)
 {
