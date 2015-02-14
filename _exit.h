@@ -5,6 +5,7 @@
 #include "c/noexcept.h"
 #include "c/noreturn.h"
 #include "c/SYS_exit.h"
+#include "c/_c_unreachable.h"
 
 __c_namespace_open
 
@@ -22,7 +23,7 @@ _exit(ExitStatus status) noexcept
 #else
 #  error
 #endif
-    __builtin_unreachable();
+    _c_unreachable();
 }
 
 __c_namespace_close
