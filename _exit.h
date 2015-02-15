@@ -3,13 +3,13 @@
 
 #include "c/ExitStatus.h"
 #include "c/noexcept.h"
-#include "c/noreturn.h"
 #include "c/SYS_exit.h"
+#include "c/_c_noreturn.h"
 #include "c/_c_unreachable.h"
 
 __c_namespace_open
 
-noreturn
+_c_noreturn
 static
 void
 _exit(ExitStatus status) noexcept
