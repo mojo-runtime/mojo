@@ -1,11 +1,11 @@
 #ifndef c_exit_h_
 #define c_exit_h_
 
+#include "builtin/__builtin_unreachable.h"
 #include "c/ExitStatus.h"
 #include "c/noexcept.h"
 #include "c/SYS_exit.h"
 #include "c/_c_noreturn.h"
-#include "c/_c_unreachable.h"
 
 __c_namespace_open
 
@@ -23,7 +23,7 @@ _exit(ExitStatus status) noexcept
 #else
 #  error
 #endif
-    _c_unreachable();
+    __builtin_unreachable();
 }
 
 __c_namespace_close
