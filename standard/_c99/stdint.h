@@ -1,5 +1,5 @@
-#ifndef c_posix_stdint_h_
-#define c_posix_stdint_h_
+#ifndef c_standard_c99_stdint_h_
+#define c_standard_c99_stdint_h_
 
 // Structure and comments follow:
 // http://pubs.opengroup.org/onlinepubs/009695399/basedefs/stdint.h.html
@@ -22,12 +22,12 @@
 // Temporarily define whether this is the case.
 
 #if __LP64__
-#  define _c_posix_stdint_64 1
+#  define _c_stdint_64 1
 #else
 #  error todo
 #endif
 
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/int64_t.h"
 #  include "c/uint64_t.h"
 #endif
@@ -38,14 +38,14 @@
 #include "c/int_least8_t.h"
 #include "c/int_least16_t.h"
 #include "c/int_least32_t.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/int_least64_t.h"
 #endif
 
 #include "c/uint_least8_t.h"
 #include "c/uint_least16_t.h"
 #include "c/uint_least32_t.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/uint_least64_t.h"
 #endif
 
@@ -55,14 +55,14 @@
 #include "c/int_fast8_t.h"
 #include "c/int_fast16_t.h"
 #include "c/int_fast32_t.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/int_fast64_t.h"
 #endif
 
 #include "c/uint_fast8_t.h"
 #include "c/uint_fast16_t.h"
 #include "c/uint_fast32_t.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/uint_fast64_t.h"
 #endif
 
@@ -95,7 +95,7 @@
 #include "c/INT8_MAX.h"
 #include "c/INT16_MAX.h"
 #include "c/INT32_MAX.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/INT64_MAX.h"
 #endif
 
@@ -105,7 +105,7 @@
 #include "c/INT8_MIN.h"
 #include "c/INT16_MIN.h"
 #include "c/INT32_MIN.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/INT64_MIN.h"
 #endif
 
@@ -115,7 +115,7 @@
 #include "c/UINT8_MAX.h"
 #include "c/UINT16_MAX.h"
 #include "c/UINT32_MAX.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/UINT64_MAX.h"
 #endif
 
@@ -126,7 +126,7 @@
 #include "c/INT_LEAST8_MIN.h"
 #include "c/INT_LEAST16_MIN.h"
 #include "c/INT_LEAST32_MIN.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/INT_LEAST64_MIN.h"
 #endif
 
@@ -136,7 +136,7 @@
 #include "c/INT_LEAST8_MAX.h"
 #include "c/INT_LEAST16_MAX.h"
 #include "c/INT_LEAST32_MAX.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/INT_LEAST64_MAX.h"
 #endif
 
@@ -146,7 +146,7 @@
 #include "c/UINT_LEAST8_MAX.h"
 #include "c/UINT_LEAST16_MAX.h"
 #include "c/UINT_LEAST32_MAX.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/UINT_LEAST64_MAX.h"
 #endif
 
@@ -157,7 +157,7 @@
 #include "c/INT_FAST8_MIN.h"
 #include "c/INT_FAST16_MIN.h"
 #include "c/INT_FAST32_MIN.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/INT_FAST64_MIN.h"
 #endif
 
@@ -167,7 +167,7 @@
 #include "c/INT_FAST8_MAX.h"
 #include "c/INT_FAST16_MAX.h"
 #include "c/INT_FAST32_MAX.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/INT_FAST64_MAX.h"
 #endif
 
@@ -177,7 +177,7 @@
 #include "c/UINT_FAST8_MAX.h"
 #include "c/UINT_FAST16_MAX.h"
 #include "c/UINT_FAST32_MAX.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/UINT_FAST64_MAX.h"
 #endif
 
@@ -250,14 +250,14 @@
 #include "c/INT8_C.h"
 #include "c/INT16_C.h"
 #include "c/INT32_C.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/INT64_C.h"
 #endif
 
 #include "c/UINT8_C.h"
 #include "c/UINT16_C.h"
 #include "c/UINT32_C.h"
-#if _c_posix_stdint_64
+#if _c_stdint_64
 #  include "c/UINT64_C.h"
 #endif
 
@@ -269,6 +269,6 @@
 
 //------------------------------------------------------------------------------------------------//
 
-#undef _c_posix_stdint_64
+#undef _c_stdint_64
 
 #endif

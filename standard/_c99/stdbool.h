@@ -1,7 +1,7 @@
-#ifndef c_posix_stdbool_h_
-#define c_posix_stdbool_h_
+#ifndef c_standard_c99_stdbool_h_
+#define c_standard_c99_stdbool_h_
 
-// See: http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/stdbool.h.html
+// Per: http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/stdbool.h.html
 
 //------------------------------------------------------------------------------------------------//
 // "The <stdbool.h> header shall define the following macros:"
