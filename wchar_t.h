@@ -4,13 +4,15 @@
 #ifdef __cplusplus
 // No need
 #else
-typedef
-#  ifdef __WCHAR_TYPE__
-__WCHAR_TYPE__
-#  else
-#    error
-#  endif
-wchar_t;
-#endif
+#  include "builtin/__WCHAR_TYPE__.h"
+#  include "c/__c_namespace.h"
+
+__c_namespace_open
+
+typedef __WCHAR_TYPE__ wchar_t;
+
+__c_namespace_close
+
+#endif // __cplusplus
 
 #endif
