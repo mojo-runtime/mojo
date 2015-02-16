@@ -1,7 +1,4 @@
 #ifndef alloca
-#  ifdef __GNUC__
-#    define alloca(size) __builtin_alloca(size)
-#  else
-#    error
-#  endif
+#  include "builtin/__builtin_alloca.h"
+#  define alloca(size) __builtin_alloca(size)
 #endif
