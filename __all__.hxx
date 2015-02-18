@@ -25,6 +25,7 @@
 #include "munmap.hxx"
 #include "open.hxx"
 #include "pause.hxx"
+#include "pipe2.hxx"
 #include "read.hxx"
 #include "tgkill.hxx"
 #include "waitid.hxx"
