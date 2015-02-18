@@ -6,6 +6,7 @@
 #include "epoll_wait.hxx"
 #include "execve.hxx"
 #include "exit.hxx"
+#include "exit_group.hxx"
 #include "fork.hxx"
 #include "fstat.hxx"
 #include "getcwd.hxx"
