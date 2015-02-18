@@ -16,3 +16,4 @@
 #include "open.hxx"
 #include "read.hxx"
 #include "waitid.hxx"
+#include "write.hxx"
