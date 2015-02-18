@@ -38,6 +38,7 @@
 #include "pause.hxx"
 #include "pipe2.hxx"
 #include "read.hxx"
+#include "readlink.hxx"
 #include "rmdir.hxx"
 #include "symlink.hxx"
 #include "tgkill.hxx"
