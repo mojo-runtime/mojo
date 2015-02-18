@@ -27,6 +27,7 @@
 #include "pause.hxx"
 #include "pipe2.hxx"
 #include "read.hxx"
+#include "rmdir.hxx"
 #include "tgkill.hxx"
 #include "waitid.hxx"
 #include "write.hxx"
