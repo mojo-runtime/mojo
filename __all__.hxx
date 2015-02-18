@@ -19,6 +19,7 @@
 #include "gettid.hxx"
 #include "getuid.hxx"
 #include "kill.hxx"
+#include "mkdir.hxx"
 #include "mmap.hxx"
 #include "mremap.hxx"
 #include "munmap.hxx"
