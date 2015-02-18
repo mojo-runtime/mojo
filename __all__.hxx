@@ -1,4 +1,5 @@
 #include "chdir.hxx"
+#include "clone.hxx"
 #include "close.hxx"
 #include "epoll_create1.hxx"
 #include "epoll_ctl.hxx"
