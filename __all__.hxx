@@ -1,4 +1,5 @@
 #include "close.hxx"
+#include "execve.hxx"
 #include "fork.hxx"
 #include "fstat.hxx"
 #include "mmap.hxx"
