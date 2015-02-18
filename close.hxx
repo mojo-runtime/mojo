@@ -4,7 +4,6 @@
 #include "c/EBADF.h"
 #include "c/EINTR.h"
 #include "c/EIO.h"
-#include "c/FileDescriptor.h"
 #include "c/SYS_close.h"
 #include "c/_c_syscall1.h"
 
@@ -14,7 +13,7 @@ namespace linux {
 
 static inline
 auto
-close(FileDescriptor fd) noexcept
+close(int fd) noexcept
 {
     enum Error
     {

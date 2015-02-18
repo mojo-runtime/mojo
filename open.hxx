@@ -25,8 +25,6 @@
 #include "c/EROFS.h"
 #include "c/ETXTBSY.h"
 #include "c/EWOULDBLOCK.h"
-#include "c/FileDescriptor.h"
-#include "c/OpenFlags.h"
 #include "c/SYS_open.h"
 #include "c/_c_syscall2.h"
 
@@ -36,7 +34,7 @@ namespace linux {
 
 static inline
 auto
-open(const char* pathname, OpenFlags flags) noexcept
+open(const char* pathname, int flags) noexcept
 {
     enum Error
     {
@@ -66,7 +64,7 @@ open(const char* pathname, OpenFlags flags) noexcept
         EWOULDBLOCK  = EWOULDBLOCK,
     };
 
-    return Result<FileDescriptor, Error>(_c_syscall2(SYS_open, pathname, flags));
+    return Result<int, Error>(_c_syscall2(SYS_open, pathname, flags));
 }
 
 } // namespace linux

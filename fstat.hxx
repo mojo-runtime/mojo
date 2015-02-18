@@ -20,7 +20,7 @@ namespace linux {
 
 static inline
 auto
-fstat(FileDescriptor fd, struct stat* buffer) noexcept
+fstat(int fd, struct stat* buffer) noexcept
 {
     enum Error
     {

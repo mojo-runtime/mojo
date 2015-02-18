@@ -11,9 +11,6 @@
 #include "c/EOVERFLOW.h"
 #include "c/EPERM.h"
 #include "c/ETXTBSY.h"
-#include "c/FileDescriptor.h"
-#include "c/MemoryMapFlags.h"
-#include "c/MemoryProtection.h"
 #include "c/SYS_mmap.h"
 #include "c/off_t.h"
 #include "c/size_t.h"
@@ -25,12 +22,7 @@ namespace linux {
 
 static inline
 auto
-open(void*            addr,
-     size_t           length,
-     MemoryProtection prot,
-     MemoryMapFlags   flags,
-     FileDescriptor   fd,
-     off_t            offset) noexcept
+open(void* addr, size_t length, int prot, int flags, int fd, off_t offset) noexcept
 {
     enum Error
     {
