@@ -29,6 +29,7 @@
 #include "kill.hxx"
 #include "mkdir.hxx"
 #include "mmap.hxx"
+#include "mmap_/__all__.hxx"
 #include "mremap.hxx"
 #include "munmap.hxx"
 #include "open.hxx"
