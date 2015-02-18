@@ -15,6 +15,7 @@
 #include "getgid.hxx"
 #include "getpid.hxx"
 #include "getppid.hxx"
+#include "getuid.hxx"
 #include "kill.hxx"
 #include "mmap.hxx"
 #include "mremap.hxx"
