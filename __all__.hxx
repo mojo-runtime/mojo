@@ -15,5 +15,6 @@
 #include "munmap.hxx"
 #include "open.hxx"
 #include "read.hxx"
+#include "tgkill.hxx"
 #include "waitid.hxx"
 #include "write.hxx"
