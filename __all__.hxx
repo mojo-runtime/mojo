@@ -30,5 +30,6 @@
 #include "rmdir.hxx"
 #include "symlink.hxx"
 #include "tgkill.hxx"
+#include "uname.hxx"
 #include "waitid.hxx"
 #include "write.hxx"
