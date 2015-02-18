@@ -24,6 +24,7 @@
 #include "mremap.hxx"
 #include "munmap.hxx"
 #include "open.hxx"
+#include "pause.hxx"
 #include "read.hxx"
 #include "tgkill.hxx"
 #include "waitid.hxx"
