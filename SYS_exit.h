@@ -8,12 +8,8 @@ __c_namespace_open
 static
 const SystemCallNumber
 SYS_exit =
-#ifdef __linux__
-#  ifdef __x86_64__
+#if defined(__linux__) && defined(__x86_64__)
  60
-#  else
-#    error
-#  endif
 #else
 #  error
 #endif
