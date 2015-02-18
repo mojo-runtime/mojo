@@ -7,7 +7,7 @@
 #include "c/EPERM.h"
 #include "c/SYS_clone.h"
 #include "c/pid_t.h"
-#include "c/pt_regs.h"
+#include "c/struct-pt_regs.h"
 #include "c/_c_syscall5.h"
 
 #include "linux/Result.hxx"

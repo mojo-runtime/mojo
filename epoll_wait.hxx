@@ -6,7 +6,7 @@
 #include "c/EINTR.h"
 #include "c/EINVAL.h"
 #include "c/SYS_epoll_wait.h"
-#include "c/epoll_event.h"
+#include "c/struct-epoll_event.h"
 #include "c/_c_syscall4.h"
 
 #include "linux/Result.hxx"

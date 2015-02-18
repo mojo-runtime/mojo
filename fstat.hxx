@@ -11,7 +11,7 @@
 #include "c/ENOTDIR.h"
 #include "c/EOVERFLOW.h"
 #include "c/SYS_fstat.h"
-#include "c/stat.h"
+#include "c/struct-stat.h"
 #include "c/_c_syscall2.h"
 
 #include "linux/Result.hxx"

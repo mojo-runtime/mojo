@@ -7,8 +7,8 @@
 #include "c/ENOENT.h"
 #include "c/ENOTDIR.h"
 #include "c/SYS_getdents.h"
-#include "c/linux_dirent.h"
 #include "c/size_t.h"
+#include "c/struct-linux_dirent.h"
 #include "c/_c_syscall3.h"
 
 #include "linux/Result.hxx"

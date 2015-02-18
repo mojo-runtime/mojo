@@ -8,8 +8,8 @@
 #include "c/id_t.h"
 #include "c/idtype_t.h"
 #include "c/pid_t.h"
-#include "c/rusage.h"
 #include "c/siginfo_t.h"
+#include "c/struct-rusage.h"
 #include "c/_c_syscall5.h"
 
 #include "linux/Result.hxx"
