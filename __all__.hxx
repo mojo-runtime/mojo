@@ -20,6 +20,7 @@
 #include "getppid.hxx"
 #include "gettid.hxx"
 #include "getuid.hxx"
+#include "ioctl/__all__.hxx"
 #include "inotify_add_watch.hxx"
 #include "inotify_init1.hxx"
 #include "inotify_rm_watch.hxx"
