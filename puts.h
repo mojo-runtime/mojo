@@ -1,15 +1,16 @@
 #ifndef c_puts_h_
 #define c_puts_h_
 
-#include "c/alloca.h"
 #include "c/EOF.h"
+#include "c/STDOUT_FILENO.h"
+#include "c/SYS_write.h"
+#include "c/SystemCallResult_is_error.h"
+#include "c/alloca.h"
 #include "c/memcpy_.h"
 #include "c/noexcept.h"
-#include "c/STDOUT_FILENO.h"
 #include "c/strlen.h"
-#include "c/SystemCallResult_is_error.h"
-#include "c/write_.h"
 #include "c/_c_reinterpret_cast.h"
+#include "c/_c_syscall3.h"
 
 __c_namespace_open
 
@@ -31,7 +32,8 @@ puts(const char* string) noexcept
     _c_reinterpret_cast(char*, data)[string_length] = '\n';
 
     return SystemCallResult_is_error(
-        write_(
+        _c_syscall3(
+            SYS_write,
             STDOUT_FILENO,
             data,
             length
