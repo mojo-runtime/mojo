@@ -1,9 +1,9 @@
 #ifndef c_clock_t_h_
 #define c_clock_t_h_
 
-#ifdef __cplusplus
+#include "c/__c_namespace.h"
+
 __c_namespace_open
-#endif
 
 typedef
 #ifdef __linux__
@@ -17,8 +17,6 @@ long // int64_t
 #endif
 clock_t;
 
-#ifdef __cplusplus
 __c_namespace_close
-#endif
 
 #endif
