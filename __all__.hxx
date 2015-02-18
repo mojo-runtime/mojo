@@ -11,6 +11,7 @@
 #include "fstat.hxx"
 #include "getcwd.hxx"
 #include "getdents.hxx"
+#include "getgid.hxx"
 #include "getpid.hxx"
 #include "getppid.hxx"
 #include "kill.hxx"
