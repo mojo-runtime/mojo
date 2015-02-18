@@ -12,6 +12,7 @@
 #include "exit_group.hxx"
 #include "fork.hxx"
 #include "fstat.hxx"
+#include "get_thread_area.hxx"
 #include "getcwd.hxx"
 #include "getdents.hxx"
 #include "getegid.hxx"
