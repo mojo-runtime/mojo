@@ -9,5 +9,6 @@
 #include "getcwd.hxx"
 #include "kill.hxx"
 #include "mmap.hxx"
+#include "mremap.hxx"
 #include "munmap.hxx"
 #include "open.hxx"
