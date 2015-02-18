@@ -32,5 +32,6 @@
 #include "tgkill.hxx"
 #include "uname.hxx"
 #include "unlink.hxx"
+#include "vfork.hxx"
 #include "waitid.hxx"
 #include "write.hxx"
