@@ -1,5 +1,5 @@
-#ifndef c_linux_x86_64_stat_h_
-#define c_linux_x86_64_stat_h_
+#ifndef c_linux_x86_64_struct_stat_h_
+#define c_linux_x86_64_struct_stat_h_
 
 #include "c/blksize_t.h"
 #include "c/blkcnt_t.h"
@@ -9,8 +9,8 @@
 #include "c/mode_t.h"
 #include "c/nlink_t.h"
 #include "c/off_t.h"
+#include "c/struct-timespec.h"
 #include "c/time_t.h"
-#include "c/timespec.h"
 #include "c/uid_t.h"
 
 __c_namespace_open

@@ -1,5 +1,5 @@
-#ifndef c_linux_dirent_h_
-#define c_linux_dirent_h_
+#ifndef c_struct_linux_dirent_h_
+#define c_struct_linux_dirent_h_
 
 #include "c/__c_namespace.h"
 

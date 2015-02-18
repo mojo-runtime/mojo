@@ -1,5 +1,5 @@
-#ifndef c_pt_regs_h_
-#define c_pt_regs_h_
+#ifndef c_struct_pt_regs_h_
+#define c_struct_pt_regs_h_
 
 __c_namespace_open
 
