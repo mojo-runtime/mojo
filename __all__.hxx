@@ -12,6 +12,7 @@
 #include "getcwd.hxx"
 #include "getdents.hxx"
 #include "getpid.hxx"
+#include "getppid.hxx"
 #include "kill.hxx"
 #include "mmap.hxx"
 #include "mremap.hxx"
