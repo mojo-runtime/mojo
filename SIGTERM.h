@@ -1,12 +1,12 @@
 #ifndef c_SIGTERM_h_
 #define c_SIGTERM_h_
 
-#include "c/SignalNumber.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const SignalNumber
+const int
 SIGTERM =
 #ifdef __linux__
  15

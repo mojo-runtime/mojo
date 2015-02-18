@@ -1,12 +1,12 @@
 #ifndef c_PROT_EXEC_h_
 #define c_PROT_EXEC_h_
 
-#include "c/MemoryProtection.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const MemoryProtection
+const int
 PROT_EXEC =
 #ifdef __linux__
  4

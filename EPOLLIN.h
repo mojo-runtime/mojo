@@ -2,12 +2,12 @@
 #define c_EPOLLIN_h_
 
 #include "c/POLLIN.h"
-#include "c/EpollEvents.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const EpollEvents
+const int
 EPOLLIN =
 #ifdef __linux__
  POLLIN

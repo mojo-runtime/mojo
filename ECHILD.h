@@ -1,12 +1,12 @@
 #ifndef c_ECHILD_h_
 #define c_ECHILD_h_
 
-#include "c/ErrorNumber.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const ErrorNumber
+const int
 ECHILD =
 #ifdef __linux__
  10

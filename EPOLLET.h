@@ -1,13 +1,13 @@
 #ifndef c_EPOLLET_h_
 #define c_EPOLLET_h_
 
-#include "c/EpollEvents.h"
+#include "c/__c_namespace.h"
 #include "c/_c_static_cast.h"
 
 __c_namespace_open
 
 static
-const EpollEvents
+const int
 EPOLLET =
 #ifdef __linux__
 // 0x80000000

@@ -1,12 +1,12 @@
 #ifndef c_SIGFPE_h_
 #define c_SIGFPE_h_
 
-#include "c/SignalNumber.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const SignalNumber
+const int
 SIGFPE =
 #ifdef __linux__
  8

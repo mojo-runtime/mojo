@@ -1,12 +1,12 @@
 #ifndef c_CLD_TRAPPED_h_
 #define c_CLD_TRAPPED_h_
 
-#include "c/ChildStatus.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const ChildStatus
+const int
 CLD_TRAPPED =
 #ifdef __linux__
  4

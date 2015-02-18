@@ -1,12 +1,12 @@
 #ifndef c_EDESTADDRREQ_h_
 #define c_EDESTADDRREQ_h_
 
-#include "c/ErrorNumber.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const ErrorNumber
+const int
 EDESTADDRREQ =
 #ifdef __linux__
 #  ifdef __x86_64__

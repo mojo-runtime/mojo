@@ -1,12 +1,12 @@
 #ifndef c_ERANGE_h_
 #define c_ERANGE_h_
 
-#include "c/ErrorNumber.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const ErrorNumber
+const int
 ERANGE =
 #ifdef __linux__
  34

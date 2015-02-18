@@ -1,12 +1,12 @@
 #ifndef c_WCONTINUED_h_
 #define c_WCONTINUED_h_
 
-#include "c/WaitFlags.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const WaitFlags
+const int
 WCONTINUED =
 #ifdef __linux__
  8

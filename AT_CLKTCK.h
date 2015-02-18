@@ -1,12 +1,12 @@
 #ifndef c_AT_CLKTCK_h_
 #define c_AT_CLKTCK_h_
 
-#include "c/AuxiliaryVectorType.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const AuxiliaryVectorType
+const int
 AT_CLKTCK =
 #ifdef __linux__
  17

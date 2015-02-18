@@ -1,12 +1,12 @@
 #ifndef c_EXIT_SUCCESS_h_
 #define c_EXIT_SUCCESS_h_
 
-#include "c/ExitStatus.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const ExitStatus
+const int
 EXIT_SUCCESS = 0;
 
 __c_namespace_close

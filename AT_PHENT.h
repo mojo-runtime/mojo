@@ -1,12 +1,12 @@
 #ifndef c_AT_PHENT_h_
 #define c_AT_PHENT_h_
 
-#include "c/AuxiliaryVectorType.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const AuxiliaryVectorType
+const int
 AT_PHENT =
 #ifdef __linux__
  4

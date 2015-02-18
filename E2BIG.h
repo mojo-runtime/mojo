@@ -1,12 +1,12 @@
 #ifndef c_E2BIG_h_
 #define c_E2BIG_h_
 
-#include "c/ErrorNumber.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const ErrorNumber
+const int
 E2BIG =
 #ifdef __linux__
  7

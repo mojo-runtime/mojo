@@ -1,12 +1,12 @@
 #ifndef c_MAP_PRIVATE_h_
 #define c_MAP_PRIVATE_h_
 
-#include "c/MemoryMapFlags.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const MemoryMapFlags
+const int
 MAP_PRIVATE =
 #ifdef __linux__
  2

@@ -1,18 +1,21 @@
 #ifndef c_auxv_t_h_
 #define c_auxv_t_h_
 
-#include "c/AuxiliaryVectorType.h"
-#include "c/Word.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 typedef struct
 {
-    AuxiliaryVectorType
+    int
     a_type;
 
+#ifdef __x86_64__
     char
-    _padding[sizeof(Word) - sizeof(AuxiliaryVectorType)];
+    _padding[4];
+#else
+#  error todo
+#endif
 
     union
     {

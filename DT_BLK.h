@@ -1,12 +1,12 @@
 #ifndef c_DT_BLK_h_
 #define c_DT_BLK_h_
 
-#include "c/DirectoryEntryKind.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const DirectoryEntryKind
+const char
 DT_BLK =
 #ifdef __linux__
  6

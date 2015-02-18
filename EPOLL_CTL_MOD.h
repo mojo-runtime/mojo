@@ -1,7 +1,7 @@
 #ifndef c_EPOLL_CTL_MOD_h_
 #define c_EPOLL_CTL_MOD_h_
 
-#include "c/EpollControlKind.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 

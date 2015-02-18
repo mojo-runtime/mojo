@@ -1,12 +1,12 @@
 #ifndef c_POLLHUP_h_
 #define c_POLLHUP_h_
 
-#include "c/PollEvents.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const PollEvents
+const int
 POLLHUP =
 #ifdef __linux__
  0x10

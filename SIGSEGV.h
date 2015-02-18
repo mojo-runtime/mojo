@@ -1,12 +1,12 @@
 #ifndef c_SIGSEGV_h_
 #define c_SIGSEGV_h_
 
-#include "c/SignalNumber.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const SignalNumber
+const int
 SIGSEGV =
 #ifdef __linux__
  11

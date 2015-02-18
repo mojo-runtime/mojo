@@ -3,7 +3,6 @@
 
 #include "c/uint32_t.h"
 #include "c/uint64_t.h"
-#include "c/FileDescriptor.h"
 
 __c_namespace_open
 
@@ -17,7 +16,7 @@ typedef union
     void*
     ptr;
 
-    FileDescriptor
+    int
     fd;
 
     uint32_t

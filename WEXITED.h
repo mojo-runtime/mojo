@@ -1,12 +1,12 @@
 #ifndef c_WEXITED_h_
 #define c_WEXITED_h_
 
-#include "c/WaitFlags.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const WaitFlags
+const int
 WEXITED =
 #ifdef __linux__
  4

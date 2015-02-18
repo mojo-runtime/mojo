@@ -1,12 +1,12 @@
 #ifndef c_ETXTBSY_h_
 #define c_ETXTBSY_h_
 
-#include "c/ErrorNumber.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const ErrorNumber
+const int
 ETXTBSY =
 #ifdef __linux__
  26

@@ -1,12 +1,12 @@
 #ifndef c_EFBIG_h_
 #define c_EFBIG_h_
 
-#include "c/ErrorNumber.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const ErrorNumber
+const int
 EFBIG =
 #ifdef __linux__
  27

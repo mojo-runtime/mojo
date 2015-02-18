@@ -2,7 +2,6 @@
 #define c_exit_h_
 
 #include "builtin/__builtin_unreachable.h"
-#include "c/ExitStatus.h"
 #include "c/noexcept.h"
 #include "c/SYS_exit.h"
 #include "c/_c_noreturn.h"
@@ -12,10 +11,10 @@ __c_namespace_open
 _c_noreturn
 static
 void
-_exit(ExitStatus status) noexcept
+_exit(int status) noexcept
 {
 #if defined(__linux__) && defined(__x86_64__)
-    register ExitStatus r1 __asm__ ("rdi") = status;
+    register int r1 __asm__ ("rdi") = status;
 
     __asm__ __volatile__ ("syscall"
                           :

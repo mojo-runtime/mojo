@@ -1,12 +1,12 @@
 #ifndef c_EBUSY_h_
 #define c_EBUSY_h_
 
-#include "c/ErrorNumber.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const ErrorNumber
+const int
 EBUSY =
 #ifdef __linux__
  16

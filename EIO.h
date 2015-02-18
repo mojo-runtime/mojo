@@ -1,12 +1,12 @@
 #ifndef c_EIO_h_
 #define c_EIO_h_
 
-#include "c/ErrorNumber.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const ErrorNumber
+const int
 EIO =
 #ifdef __linux__
  5

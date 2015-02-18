@@ -5,15 +5,7 @@
 #include "c/pid_t.h"
 #include "c/sigval_t.h"
 #include "c/uid_t.h"
-#include "c/ErrorNumber.h"
-#include "c/ExitStatus.h"
-#include "c/FileDescriptor.h"
-#include "c/SignalBand.h"
-#include "c/SignalCode.h"
-#include "c/SignalNumber.h"
 #include "c/SystemCallNumber.h"
-#include "c/TimerId.h"
-#include "c/TimerOverrun.h"
 
 __c_namespace_open
 
@@ -21,13 +13,13 @@ typedef struct siginfo
 {
     // Explicit padding for -Wpadded
 
-    SignalNumber
+    int
     si_signo;
 
-    ErrorNumber
+    int
     si_errno;
 
-    SignalCode
+    int
     si_code;
 
     char
@@ -68,10 +60,10 @@ typedef struct siginfo
 
         struct
         {
-            TimerId
+            int
             _tid;
 
-            TimerOverrun
+            int
             _overrun;
 
             sigval_t
@@ -100,7 +92,7 @@ typedef struct siginfo
             uid_t
             _uid;
 
-            ExitStatus
+            int
             _status;
 
             char
@@ -129,10 +121,10 @@ typedef struct siginfo
 
         struct
         {
-            SignalBand
+            int
             _band;
 
-            FileDescriptor
+            int
             _fd;
 
             char

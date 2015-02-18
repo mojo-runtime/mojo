@@ -2,12 +2,12 @@
 #define c_EPOLLPRI_h_
 
 #include "c/POLLPRI.h"
-#include "c/EpollEvents.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const EpollEvents
+const int
 EPOLLPRI =
 #ifdef __linux__
  POLLPRI

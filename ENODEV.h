@@ -1,12 +1,12 @@
 #ifndef c_ENODEV_h_
 #define c_ENODEV_h_
 
-#include "c/ErrorNumber.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const ErrorNumber
+const int
 ENODEV =
 #ifdef __linux__
  19

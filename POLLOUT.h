@@ -1,12 +1,12 @@
 #ifndef c_POLLOUT_h_
 #define c_POLLOUT_h_
 
-#include "c/PollEvents.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const PollEvents
+const int
 POLLOUT =
 #ifdef __linux__
  4

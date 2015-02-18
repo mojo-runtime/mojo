@@ -1,12 +1,12 @@
 #ifndef c_O_WRONLY_h_
 #define c_O_WRONLY_h_
 
-#include "c/OpenFlags.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const OpenFlags
+const int
 O_WRONLY =
 #ifdef __linux__
  1

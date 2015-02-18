@@ -1,12 +1,12 @@
 #ifndef c_CLD_KILLED_h_
 #define c_CLD_KILLED_h_
 
-#include "c/ChildStatus.h"
+#include "c/__c_namespace.h"
 
 __c_namespace_open
 
 static
-const ChildStatus
+const int
 CLD_KILLED =
 #ifdef __linux__
  2
