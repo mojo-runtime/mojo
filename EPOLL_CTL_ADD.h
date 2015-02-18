@@ -6,7 +6,7 @@
 __c_namespace_open
 
 static
-const EpollControlKind
+const int
 EPOLL_CTL_ADD =
 #ifdef __linux__
  1

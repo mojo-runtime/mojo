@@ -6,7 +6,7 @@
 __c_namespace_open
 
 static
-const EpollControlKind
+const int
 EPOLL_CTL_DEL =
 #ifdef __linux__
  1
