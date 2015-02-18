@@ -5,6 +5,7 @@
 #include "close.hxx"
 #include "epoll_create1.hxx"
 #include "epoll_ctl.hxx"
+#include "epoll_ctl_/__all__.hxx"
 #include "epoll_wait.hxx"
 #include "execve.hxx"
 #include "exit.hxx"
