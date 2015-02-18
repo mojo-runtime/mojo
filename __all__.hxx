@@ -20,6 +20,7 @@
 #include "getuid.hxx"
 #include "inotify_add_watch.hxx"
 #include "inotify_init1.hxx"
+#include "inotify_rm_watch.hxx"
 #include "kill.hxx"
 #include "mkdir.hxx"
 #include "mmap.hxx"
