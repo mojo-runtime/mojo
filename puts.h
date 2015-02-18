@@ -6,7 +6,7 @@
 #include "c/SYS_write.h"
 #include "c/SystemCallResult_is_error.h"
 #include "c/alloca.h"
-#include "c/memcpy_.h"
+#include "c/memcpy.h"
 #include "c/noexcept.h"
 #include "c/strlen.h"
 #include "c/_c_reinterpret_cast.h"
