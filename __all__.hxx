@@ -31,5 +31,6 @@
 #include "symlink.hxx"
 #include "tgkill.hxx"
 #include "uname.hxx"
+#include "unlink.hxx"
 #include "waitid.hxx"
 #include "write.hxx"
