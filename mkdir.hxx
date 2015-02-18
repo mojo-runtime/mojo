@@ -42,7 +42,7 @@ mkdir(const char* pathname, mode_t mode) noexcept
         // `pathname` points outside your accessible address space.
         EFAULT = EFAULT,
 
-        // Too many symbolic links were encountered in resolving pathname.
+        // Too many symbolic links were encountered in resolving `pathname`.
         ELOOP = ELOOP,
 
         // The number of links to the parent directory would exceed LINK_MAX.
