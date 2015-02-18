@@ -32,6 +32,7 @@
 #include "mremap.hxx"
 #include "munmap.hxx"
 #include "open.hxx"
+#include "open_/__all__.hxx"
 #include "pause.hxx"
 #include "pipe2.hxx"
 #include "read.hxx"
