@@ -7,6 +7,7 @@
 #include "fork.hxx"
 #include "fstat.hxx"
 #include "getcwd.hxx"
+#include "getdents.hxx"
 #include "kill.hxx"
 #include "mmap.hxx"
 #include "mremap.hxx"
