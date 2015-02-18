@@ -18,6 +18,7 @@
 #include "getppid.hxx"
 #include "gettid.hxx"
 #include "getuid.hxx"
+#include "inotify_add_watch.hxx"
 #include "inotify_init1.hxx"
 #include "kill.hxx"
 #include "mkdir.hxx"
