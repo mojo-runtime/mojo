@@ -18,7 +18,7 @@ namespace linux {
 
 static inline
 auto
-epoll_create1(int epfd, int op, int fd, struct epoll_event* event) noexcept
+epoll_ctl(int epfd, int op, int fd, struct epoll_event* event) noexcept
 {
     enum Error
     {
