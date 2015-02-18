@@ -28,6 +28,7 @@
 #include "pipe2.hxx"
 #include "read.hxx"
 #include "rmdir.hxx"
+#include "symlink.hxx"
 #include "tgkill.hxx"
 #include "waitid.hxx"
 #include "write.hxx"
