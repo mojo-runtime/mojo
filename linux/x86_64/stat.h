@@ -1,5 +1,5 @@
-#ifndef c_linux__x86_64__stat_h_
-#define c_linux__x86_64__stat_h_
+#ifndef c_linux_x86_64_stat_h_
+#define c_linux_x86_64_stat_h_
 
 #include "c/blksize_t.h"
 #include "c/blkcnt_t.h"
@@ -10,13 +10,10 @@
 #include "c/nlink_t.h"
 #include "c/off_t.h"
 #include "c/time_t.h"
+#include "c/timespec.h"
 #include "c/uid_t.h"
 
-#ifdef __cplusplus
 __c_namespace_open
-inline namespace linux {
-inline namespace x86_64 {
-#endif
 
 struct stat
 {
@@ -41,8 +38,8 @@ struct stat
     gid_t
     st_gid;
 
-    uint32_t // unsigned int
-    __pad0;
+    char
+    __pad0[4];
 
     dev_t
     st_rdev;
@@ -56,35 +53,23 @@ struct stat
     blkcnt_t
     st_blocks;
 
-    // timespecs - could be unions, but
-    // don't force that dependency, at least for now
+    struct timespec
+    st_atim;
 
-    time_t
-    st_atime;
+    struct timespec
+    st_mtim;
 
-    uint64_t
-    st_atime_nsec;
+    struct timespec
+    st_ctim;
 
-    time_t
-    st_mtime;
+    #define st_atime st_atim.tv_sec
+    #define st_mtime st_mtim.tv_sec
+    #define st_ctime st_ctim.tv_sec
 
-    uint64_t
-    st_mtime_nsec;
-
-    time_t
-    st_ctime;
-
-    uint64_t
-    st_ctime_nsec;
-
-    uint64_t
-    __unused[3];
+    char
+    __unused[24];
 };
 
-#ifdef __cplusplus
-} // inline namespace x86_64
-} // inline namespace linux
 __c_namespace_close
-#endif
 
 #endif

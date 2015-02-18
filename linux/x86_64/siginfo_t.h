@@ -1,5 +1,5 @@
-#ifndef c_linux__x86_64__siginfo_t_h_
-#define c_linux__x86_64__siginfo_t_h_
+#ifndef c_linux_x86_64_siginfo_t_h_
+#define c_linux_x86_64_siginfo_t_h_
 
 #include "c/clock_t.h"
 #include "c/pid_t.h"
@@ -15,11 +15,7 @@
 #include "c/TimerId.h"
 #include "c/TimerOverrun.h"
 
-#ifdef __cplusplus
 __c_namespace_open
-inline namespace linux {
-inline namespace x86_64 {
-#endif
 
 typedef struct siginfo
 {
@@ -180,10 +176,6 @@ siginfo_t;
 #define si_syscall   _sifields._sigsys._syscall
 #define si_arch      _sifields._sigsys._arch
 
-#ifdef __cplusplus
-} // inline namespace x86_64
-} // inline namespace linux
 __c_namespace_close
-#endif
 
 #endif
