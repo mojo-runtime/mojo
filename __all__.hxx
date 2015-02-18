@@ -1,5 +1,6 @@
 #include "chdir.hxx"
 #include "chmod.hxx"
+#include "chown.hxx"
 #include "clone.hxx"
 #include "close.hxx"
 #include "epoll_create1.hxx"
