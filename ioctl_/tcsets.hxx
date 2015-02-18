@@ -1,18 +1,13 @@
 #ifndef linux_ioctl_tcsets_hxx_
 #define linux_ioctl_tcsets_hxx_
 
-#include "c/EBADF.h"
-#include "c/EFAULT.h"
-#include "c/ENOTTY.h"
-#include "c/SYS_ioctl.h"
 #include "c/TCSETS.h"
 #include "c/struct-termios.h"
-#include "c/_c_syscall3.h"
 
-#include "linux/Result.hxx"
+#include "linux/ioctl.hxx"
 
 namespace linux {
-namespace ioctl {
+namespace ioctl_ {
 
 // Set the current serial port settings.
 static inline
@@ -27,10 +22,10 @@ tcsets(int fd, const struct termios* buffer) noexcept
         ENOTTY = ENOTTY, // `fd` is not a terminal descriptor
     };
 
-    return Result<void, Error>(_c_syscall3(SYS_ioctl, fd, TCGETS, buffer));
+    return ioctl(fd, TCGETS, buffer)._with_error<Error>();
 }
 
-} // namespace ioctl
+} // namespace ioctl_
 } // namespace linux
 
 #endif

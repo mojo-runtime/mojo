@@ -44,6 +44,15 @@ struct Result
         return static_cast<Ok>(this->__word);
     }
 
+    //--------------------------------------------------------------------------------------------//
+
+    template <typename NewError>
+    auto
+    _with_error() const noexcept
+    {
+        Result<Ok, NewError>(this->__word);
+    }
+
   private:
     Word
     __word;
