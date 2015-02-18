@@ -1,3 +1,4 @@
+#include "chdir.hxx"
 #include "close.hxx"
 #include "execve.hxx"
 #include "fork.hxx"
