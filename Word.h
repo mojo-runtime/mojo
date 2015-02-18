@@ -5,7 +5,7 @@
 
 __c_namespace_open
 
-typedef int Word __attribute__((__mode__(__word__)));
+typedef unsigned int Word __attribute__((__mode__(__word__)));
 
 __c_namespace_close
 
