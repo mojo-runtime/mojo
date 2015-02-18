@@ -13,3 +13,4 @@
 #include "mremap.hxx"
 #include "munmap.hxx"
 #include "open.hxx"
+#include "waitid.hxx"
