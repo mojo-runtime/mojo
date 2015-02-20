@@ -27,6 +27,19 @@ get_thread_area(struct user_desc* u_info) noexcept
     return Result<void, Error>(_c_syscall1(SYS_get_thread_area, u_info));
 }
 
+static inline
+auto
+get_thread_area(struct user_desc& u_info) noexcept
+{
+    enum Error
+    {
+        // EFAULT
+        EINVAL = EINVAL,
+    };
+
+    return Result<void, Error>(_c_syscall1(SYS_get_thread_area, &u_info));
+}
+
 } // namespace linux
 
 #endif
