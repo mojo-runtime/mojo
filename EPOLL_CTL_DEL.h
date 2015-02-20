@@ -1,20 +1,12 @@
 #ifndef c_EPOLL_CTL_DEL_h_
 #define c_EPOLL_CTL_DEL_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_EPOLL_CTL_.h"
 
-__c_namespace_open
-
-static
-const int
-EPOLL_CTL_DEL =
 #ifdef __linux__
- 1
+_c_define_EPOLL_CTL_(DEL, 2);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif
