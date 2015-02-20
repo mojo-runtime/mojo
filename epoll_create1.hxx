@@ -35,6 +35,21 @@ epoll_create1(int flags) noexcept
     return Result<int, Error>(_c_syscall1(SYS_epoll_create1, flags));
 }
 
+static inline
+auto
+epoll_create1() noexcept
+{
+    enum Error
+    {
+        // EINVAL
+        EMFILE = EMFILE,
+        ENFILE = ENFILE,
+        ENOMEM = ENOMEM,
+    };
+
+    return epoll_create1(0)._with_error<Error>();
+}
+
 } // namespace linux
 
 #endif
