@@ -74,6 +74,31 @@ write(int fd, const void* buf, size_t count) noexcept
     return Result<size_t, Error>(_c_syscall3(SYS_write, fd, buf, count));
 }
 
+template <typename T, size_t n>
+static inline
+auto
+write(int fd, const T(& array)[n]) noexcept
+{
+    enum Error
+    {
+        EAGAIN_or_EWOULDBLOCK = EAGAIN,
+        EBADF                 = EBADF,
+        EDESTADDRREQ          = EDESTADDRREQ,
+        EDQUOT                = EDQUOT,
+        // EFAULT
+        EFBIG                 = EFBIG,
+        EINTR                 = EINTR,
+        EINVAL                = EINVAL,
+        EIO                   = EIO,
+        ENOSPC                = ENOSPC,
+        EPIPE                 = EPIPE,
+        // XXX: Other errors may occur, depending on the object connected to fd.
+    };
+
+    // We can't use write(...)._with_error; see `read_::into`.
+    return Result<size_t, Error>(_c_syscall3(SYS_write, fd, array, n * sizeof(T)));
+}
+
 } // namespace linux
 
 #endif

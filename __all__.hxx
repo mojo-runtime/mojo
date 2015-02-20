@@ -41,7 +41,6 @@
 #include "pipe2.hxx"
 #include "read.hxx"
 #include "readlink.hxx"
-#include "read_/__all__.hxx"
 #include "rmdir.hxx"
 #include "stat.hxx"
 #include "symlink.hxx"
@@ -51,4 +50,3 @@
 #include "vfork.hxx"
 #include "waitid.hxx"
 #include "write.hxx"
-#include "write_/__all__.hxx"
