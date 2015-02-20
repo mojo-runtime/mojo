@@ -3,6 +3,7 @@
 #include "chown.hxx"
 #include "clone.hxx"
 #include "close.hxx"
+#include "dup3.hxx"
 #include "epoll_create1.hxx"
 #include "epoll_ctl.hxx"
 #include "epoll_ctl_/__all__.hxx"
