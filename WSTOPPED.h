@@ -1,20 +1,12 @@
 #ifndef c_WSTOPPED_h_
 #define c_WSTOPPED_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_W.h"
 
-__c_namespace_open
-
-static
-const int
-WSTOPPED =
 #ifdef __linux__
- 2 // WUNTRACED
+_c_define_W(STOPPED, 2);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

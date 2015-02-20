@@ -1,20 +1,12 @@
 #ifndef c_WNOWAIT_h_
 #define c_WNOWAIT_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_W.h"
 
-__c_namespace_open
-
-static
-const int
-WNOWAIT =
 #ifdef __linux__
- 0x1000000
+_c_define_W(NOWAIT, 0x1000000);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif
