@@ -1,6 +1,6 @@
-#ifndef _c_CLOCK_
+#ifndef _c_define_CLOCK_
 #  include "clockid_t.h"
-#  define _c_CLOCK_(name, value) \
+#  define _c_define_CLOCK_(name, value) \
     __c_namespace_open \
     static \
     const clockid_t \
