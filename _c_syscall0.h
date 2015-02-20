@@ -1,11 +1,10 @@
 #ifndef _c_syscall0
-#  include "c/SystemCallResult.h"
 #  if defined(__linux__) && defined(__x86_64__)
+     // FIXME: temporary _Pragma(...)
+#    pragma clang diagnostic ignored "-Wgnu-statement-expression"
 #    define _c_syscall0(number)                                         \
-    _Pragma("clang diagnostic push")                                    \
-    _Pragma("clang diagnostic ignored \"-Wgnu-statement-expression\"")  \
     ({                                                                  \
-        SystemCallResult result;                                        \
+        unsigned long result;                                           \
                                                                         \
         __asm__ __volatile__ ("syscall"                                 \
                               : "=a" (result)                           \
@@ -13,8 +12,7 @@
                               : "rcx", "r11");                          \
                                                                         \
         result;                                                         \
-    })                                                                  \
-    _Pragma("clang diagnostic pop")
+    })
 #  else
 #    error
 #  endif

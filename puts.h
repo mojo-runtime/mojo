@@ -4,13 +4,13 @@
 #include "c/EOF.h"
 #include "c/STDOUT_FILENO.h"
 #include "c/SYS_write.h"
-#include "c/SystemCallResult_is_error.h"
 #include "c/alloca.h"
 #include "c/memcpy.h"
 #include "c/noexcept.h"
 #include "c/strlen.h"
 #include "c/_c_reinterpret_cast.h"
 #include "c/_c_syscall3.h"
+#include "c/_c_syscall_failed.h"
 
 __c_namespace_open
 
@@ -31,7 +31,7 @@ puts(const char* string) noexcept
 
     _c_reinterpret_cast(char*, data)[string_length] = '\n';
 
-    return SystemCallResult_is_error(
+    return _c_syscall_failed(
         _c_syscall3(
             SYS_write,
             STDOUT_FILENO,
