@@ -68,6 +68,27 @@ fstatat(int dirfd, const char* pathname, struct stat* buf, int flags) noexcept
     return Result<void, Error>(_c_syscall4(SYS_fstatat, dirfd, pathname, buf, flags));
 }
 
+static inline
+auto
+fstatat(int dirfd, const char* pathname, struct stat* buf) noexcept
+{
+    enum Error
+    {
+        EACCES = EACCES,
+        EBADF = EBADF,
+        EFAULT = EFAULT,
+        // EINVAL
+        ELOOP = ELOOP,
+        ENAMETOOLONG = ENAMETOOLONG,
+        ENOENT = ENOENT,
+        ENOMEM = ENOMEM,
+        ENOTDIR = ENOTDIR,
+        EOVERFLOW = EOVERFLOW,
+    };
+
+    return fstatat(dirfd, pathname, buf, 0)._with_error<Error>();
+}
+
 } // namespace linux
 
 #endif
