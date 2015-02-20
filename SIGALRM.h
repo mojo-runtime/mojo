@@ -1,7 +1,7 @@
 #ifndef c_SIGALRM_h_
 #define c_SIGALRM_h_
 
-#include "_c_define_SIG.h"
+#include "_define/SIG.h"
 
 #ifdef __linux__
 _c_define_SIG(ALRM, 14);

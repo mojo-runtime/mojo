@@ -1,7 +1,7 @@
 #ifndef c_EWOULDBLOCK_h_
 #define c_EWOULDBLOCK_h_
 
-#include "_c_define_E.h"
+#include "_define/E.h"
 
 #ifdef __linux__
 #  include "EAGAIN.h"

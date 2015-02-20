@@ -1,7 +1,7 @@
 #ifndef c_WEXITED_h_
 #define c_WEXITED_h_
 
-#include "_c_define_W.h"
+#include "_define/W.h"
 
 #ifdef __linux__
 _c_define_W(EXITED, 4);

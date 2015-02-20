@@ -1,7 +1,7 @@
 #ifndef c_EPOLLONESHOT_h_
 #define c_EPOLLONESHOT_h_
 
-#include "_c_define_EPOLL.h"
+#include "_define/EPOLL.h"
 
 #ifdef __linux__
 _c_define_EPOLL(ONESHOT, 1 << 30);

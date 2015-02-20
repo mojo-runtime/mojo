@@ -1,7 +1,7 @@
 #ifndef c_EPOLLPRI_h_
 #define c_EPOLLPRI_h_
 
-#include "_c_define_EPOLL.h"
+#include "_define/EPOLL.h"
 
 #ifdef __linux__
 #  include "POLLPRI.h"

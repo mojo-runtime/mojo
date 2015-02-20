@@ -1,7 +1,7 @@
 #ifndef c_AT_PHENT_h_
 #define c_AT_PHENT_h_
 
-#include "_c_define_AT_.h"
+#include "_define/AT_.h"
 
 #ifdef __linux__
 _c_define_AT_(PHENT, 4);
