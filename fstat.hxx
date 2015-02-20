@@ -1,14 +1,9 @@
 #ifndef linux_fstat_hxx_
 #define linux_fstat_hxx_
 
-#include "c/EACCES.h"
 #include "c/EBADF.h"
 #include "c/EFAULT.h"
-#include "c/ELOOP.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
 #include "c/ENOMEM.h"
-#include "c/ENOTDIR.h"
 #include "c/EOVERFLOW.h"
 #include "c/SYS_fstat.h"
 #include "c/struct-stat.h"
@@ -20,22 +15,27 @@ namespace linux {
 
 static inline
 auto
-fstat(int fd, struct stat* buffer) noexcept
+fstat(int fd, struct stat* buf) noexcept
 {
     enum Error
     {
-        EACCES       = EACCES,       // TODO: `stat` only?
-        EBADF        = EBADF,
-        EFAULT       = EFAULT,
-        ELOOP        = ELOOP,        // TODO: `stat` only?
-        ENAMETOOLONG = ENAMETOOLONG, // TODO: `stat` only?
-        ENOENT       = ENOENT,       // TODO: `stat` only?
-        ENOMEM       = ENOMEM,
-        ENOTDIR      = ENOTDIR,      // TODO: `stat` only?
-        EOVERFLOW    = EOVERFLOW,    // TODO: prune for architectures where this can't occur?
+        // `fd` is bad.
+        EBADF = EBADF,
+
+        // Bad (`buf`) address.
+        EFAULT = EFAULT,
+
+        // Out of (kernel) memory.
+        ENOMEM = ENOMEM,
+
+        // `fd` refers to a file whose size, inode number, or number of blocks
+        // cannot be represented in, respectively, the types off_t, ino_t, or blkcnt_t.
+        // This error can occur when, for example, an application compiled on a 32-bit platform
+        // without -D_FILE_OFFSET_BITS=64 calls stat() on a file whose size exceeds (1<<31)-1 bytes.
+        EOVERFLOW = EOVERFLOW,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_fstat, fd, buffer));
+    return Result<void, Error>(_c_syscall2(SYS_fstat, fd, buf));
 }
 
 } // namespace linux
