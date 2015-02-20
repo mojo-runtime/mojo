@@ -31,7 +31,7 @@ read_only(const char* pathname) noexcept
         ENOMEM       = ENOMEM,
         // ENOSPC
         ENOTDIR      = ENOTDIR,
-        // ENXIO
+        ENXIO        = ENXIO,
         // EOPNOTSUPP
         EOVERFLOW    = EOVERFLOW,
         // EPERM
