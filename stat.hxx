@@ -59,6 +59,25 @@ stat(const char* pathname, struct stat* buf) noexcept
     return Result<void, Error>(_c_syscall2(SYS_stat, pathname, buf));
 }
 
+static inline
+auto
+stat(const char* pathname, struct stat& buf) noexcept
+{
+    enum Error
+    {
+        EACCES       = EACCES,
+        // EFAULT
+        ELOOP        = ELOOP,
+        ENAMETOOLONG = ENAMETOOLONG,
+        ENOENT       = ENOENT,
+        ENOMEM       = ENOMEM,
+        ENOTDIR      = ENOTDIR,
+        EOVERFLOW    = EOVERFLOW,
+    };
+
+    return Result<void, Error>(_c_syscall2(SYS_stat, pathname, &buf));
+}
+
 } // namespace linux
 
 #endif
