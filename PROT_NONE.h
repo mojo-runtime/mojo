@@ -1,20 +1,12 @@
 #ifndef c_PROT_NONE_h_
 #define c_PROT_NONE_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_PROT_.h"
 
-__c_namespace_open
-
-static
-const int
-PROT_NONE =
 #ifdef __linux__
- 0
+_c_define_PROT_(NONE, 0);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

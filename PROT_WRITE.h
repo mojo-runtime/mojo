@@ -1,20 +1,12 @@
 #ifndef c_PROT_WRITE_h_
 #define c_PROT_WRITE_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_PROT_.h"
 
-__c_namespace_open
-
-static
-const int
-PROT_WRITE =
 #ifdef __linux__
- 2
+_c_define_PROT_(WRITE, 2);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif
