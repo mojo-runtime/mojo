@@ -50,3 +50,4 @@
 #include "vfork.hxx"
 #include "waitid.hxx"
 #include "write.hxx"
+#include "write_/__all__.hxx"
