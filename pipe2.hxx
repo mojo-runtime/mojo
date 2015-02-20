@@ -34,6 +34,21 @@ pipe2(int pipefd[2], int flags) noexcept
     return Result<void, Error>(_c_syscall2(SYS_pipe2, pipefd, flags));
 }
 
+static inline
+auto
+pipe2(int pipefd[2]) noexcept
+{
+    enum Error
+    {
+        EFAULT = EFAULT,
+        // EINVAL
+        EMFILE = EMFILE,
+        ENFILE = ENFILE,
+    };
+
+    return pipe2(pipefd, 0)._with_error<Error>();
+}
+
 } // namespace linux
 
 #endif
