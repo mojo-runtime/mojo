@@ -1,20 +1,12 @@
 #ifndef c_SIGALRM_h_
 #define c_SIGALRM_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_SIG.h"
 
-__c_namespace_open
-
-static
-const int
-SIGALRM =
 #ifdef __linux__
- 14
+_c_define_SIG(ALRM, 14);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

@@ -1,20 +1,12 @@
 #ifndef c_SIGILL_h_
 #define c_SIGILL_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_SIG.h"
 
-__c_namespace_open
-
-static
-const int
-SIGILL =
 #ifdef __linux__
- 4
+_c_define_SIG(ILL, 4);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

@@ -1,20 +1,12 @@
 #ifndef c_SIGTERM_h_
 #define c_SIGTERM_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_SIG.h"
 
-__c_namespace_open
-
-static
-const int
-SIGTERM =
 #ifdef __linux__
- 15
+_c_define_SIG(TERM, 15);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

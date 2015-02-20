@@ -1,20 +1,12 @@
 #ifndef c_SIGPIPE_h_
 #define c_SIGPIPE_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_SIG.h"
 
-__c_namespace_open
-
-static
-const int
-SIGPIPE =
 #ifdef __linux__
- 13
+_c_define_SIG(PIPE, 13);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif
