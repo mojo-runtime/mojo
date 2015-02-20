@@ -1,20 +1,12 @@
 #ifndef c_SYS_epoll_ctl_h_
 #define c_SYS_epoll_ctl_h_
 
-#include "c/SystemCallNumber.h"
+#include "_c_define_SYS_.h"
 
-__c_namespace_open
-
-static
-const SystemCallNumber
-SYS_epoll_ctl =
 #if defined(__linux__) && defined(__x86_64__)
- 233
+_c_define_SYS_(epoll_ctl, 233);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

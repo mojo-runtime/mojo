@@ -1,20 +1,12 @@
 #ifndef c_SYS_epoll_create1_h_
 #define c_SYS_epoll_create1_h_
 
-#include "c/SystemCallNumber.h"
+#include "_c_define_SYS_.h"
 
-__c_namespace_open
-
-static
-const SystemCallNumber
-SYS_epoll_create1 =
 #if defined(__linux__) && defined(__x86_64__)
- 291
+_c_define_SYS_(epoll_create1, 291);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

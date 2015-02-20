@@ -1,20 +1,12 @@
 #ifndef c_SYS_chmod_h_
 #define c_SYS_chmod_h_
 
-#include "c/SystemCallNumber.h"
+#include "_c_define_SYS_.h"
 
-__c_namespace_open
-
-static
-const SystemCallNumber
-SYS_chmod =
 #if defined(__linux__) && defined(__x86_64__)
- 90
+_c_define_SYS_(chmod, 90);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

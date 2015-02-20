@@ -5,7 +5,6 @@
 #include "c/pid_t.h"
 #include "c/sigval_t.h"
 #include "c/uid_t.h"
-#include "c/SystemCallNumber.h"
 
 __c_namespace_open
 
@@ -137,7 +136,7 @@ typedef struct siginfo
             void*
             _call_addr;
 
-            SystemCallNumber
+            int
             _syscall;
 
             unsigned int // uint32_t

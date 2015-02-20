@@ -1,10 +1,10 @@
-#ifndef c_SYS_exit_h_
-#define c_SYS_exit_h_
+#ifndef c_SYS_set_thread_area_h_
+#define c_SYS_set_thread_area_h_
 
 #include "_c_define_SYS_.h"
 
 #if defined(__linux__) && defined(__x86_64__)
-_c_define_SYS_(exit, 60);
+_c_define_SYS_(set_thread_area, 205);
 #else
 #  error
 #endif
