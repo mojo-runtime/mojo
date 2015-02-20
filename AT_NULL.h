@@ -1,20 +1,12 @@
 #ifndef c_AT_NULL_h_
 #define c_AT_NULL_h_
 
-#include "c/__c_namespace.h"
+#include "_c_AT_.h"
 
-__c_namespace_open
-
-static
-const int
-AT_NULL =
-#ifdef __linux__
- 0
+#if defined(__linux__)
+_c_AT_(NULL, 0);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

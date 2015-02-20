@@ -1,20 +1,12 @@
 #ifndef c_AT_BASE_PLATFORM_h_
 #define c_AT_BASE_PLATFORM_h_
 
-#include "c/__c_namespace.h"
+#include "_c_AT_.h"
 
-__c_namespace_open
-
-static
-const int
-AT_BASE_PLATFORM =
-#ifdef __linux__
- 24
+#if defined(__linux__)
+_c_AT_(BASE_PLATFORM, 24);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

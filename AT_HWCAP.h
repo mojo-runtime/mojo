@@ -1,20 +1,12 @@
 #ifndef c_AT_HWCAP_h_
 #define c_AT_HWCAP_h_
 
-#include "c/__c_namespace.h"
+#include "_c_AT_.h"
 
-__c_namespace_open
-
-static
-const int
-AT_HWCAP =
-#ifdef __linux__
- 16
+#if defined(__linux__)
+_c_AT_(HWCAP, 16);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif
