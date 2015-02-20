@@ -1,20 +1,12 @@
 #ifndef c_DT_FIFO_h_
 #define c_DT_FIFO_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_DT_.h"
 
-__c_namespace_open
-
-static
-const char
-DT_FIFO =
-#ifdef __linux__
- 1
+#if defined(__linux__)
+_c_define_DT_(FIFO, 1);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

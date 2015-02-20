@@ -1,20 +1,12 @@
 #ifndef c_DT_LNK_h_
 #define c_DT_LNK_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_DT_.h"
 
-__c_namespace_open
-
-static
-const char
-DT_LNK =
-#ifdef __linux__
- 10
+#if defined(__linux__)
+_c_define_DT_(LNK, 10);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif
