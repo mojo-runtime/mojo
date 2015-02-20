@@ -34,6 +34,21 @@ inotify_init1(int flags) noexcept
     return Result<int, Error>(_c_syscall1(SYS_inotify_init1, flags));
 }
 
+static inline
+auto
+inotify_init1() noexcept
+{
+    enum Error
+    {
+        // EINVAL
+        EMFILE = EMFILE,
+        ENFILE = ENFILE,
+        ENOMEM = ENOMEM,
+    };
+
+    return inotify_init1(0)._with_error<Error>();
+}
+
 } // namespace linux
 
 #endif
