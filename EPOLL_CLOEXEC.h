@@ -1,20 +1,13 @@
 #ifndef c_EPOLL_CLOEXEC_h_
 #define c_EPOLL_CLOEXEC_h_
 
-#include "c/O_CLOEXEC.h"
+#include "_c_define_EPOLL_.h"
 
-__c_namespace_open
-
-static
-const int
-EPOLL_CLOEXEC =
 #ifdef __linux__
- O_CLOEXEC
+#  include "O_CLOEXEC.h"
+_c_define_EPOLL_(CLOEXEC, O_CLOEXEC);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif
