@@ -1,14 +1,8 @@
 #ifndef c_EXIT_FAILURE_h_
 #define c_EXIT_FAILURE_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_EXIT_.h"
 
-__c_namespace_open
-
-static
-const int
-EXIT_FAILURE = 1;
-
-__c_namespace_close
+_c_define_EXIT_(FAILURE, 1);
 
 #endif
