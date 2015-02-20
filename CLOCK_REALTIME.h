@@ -3,7 +3,7 @@
 
 #include "_c_define_CLOCK_.h"
 
-#if defined(__linux__)
+#ifdef __linux__
 _c_define_CLOCK_(REALTIME, 0);
 #else
 #  error

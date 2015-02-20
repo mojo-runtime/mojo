@@ -3,7 +3,7 @@
 
 #include "_c_define_AT_.h"
 
-#if defined(__linux__)
+#ifdef __linux__
 _c_define_AT_(PHENT, 4);
 #else
 #  error
