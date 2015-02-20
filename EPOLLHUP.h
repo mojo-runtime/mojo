@@ -1,21 +1,13 @@
 #ifndef c_EPOLLHUP_h_
 #define c_EPOLLHUP_h_
 
-#include "c/POLLHUP.h"
-#include "c/__c_namespace.h"
+#include "_c_define_EPOLL.h"
 
-__c_namespace_open
-
-static
-const int
-EPOLLHUP =
 #ifdef __linux__
- POLLHUP
+#  include "POLLHUP.h"
+_c_define_EPOLL(HUP, POLLHUP);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

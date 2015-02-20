@@ -1,20 +1,12 @@
 #ifndef c_EPOLLONESHOT_h_
 #define c_EPOLLONESHOT_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_EPOLL.h"
 
-__c_namespace_open
-
-static
-const int
-EPOLLONESHOT =
 #ifdef __linux__
- (1 << 30)
+_c_define_EPOLL(ONESHOT, 1 << 30);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

@@ -1,21 +1,13 @@
 #ifndef c_EPOLLIN_h_
 #define c_EPOLLIN_h_
 
-#include "c/POLLIN.h"
-#include "c/__c_namespace.h"
+#include "_c_define_EPOLL.h"
 
-__c_namespace_open
-
-static
-const int
-EPOLLIN =
 #ifdef __linux__
- POLLIN
+#  include "POLLIN.h"
+_c_define_EPOLL(IN, POLLIN);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif
