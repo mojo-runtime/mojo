@@ -28,7 +28,7 @@ memcpy_(void* target, const void* source, size_t bytes) noexcept
 }
 
 static inline
-void
+void*
 memcpy(void* target, const void* source, size_t bytes) noexcept
 {
     memcpy_(target, source, bytes);
