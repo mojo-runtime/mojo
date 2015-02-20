@@ -40,6 +40,7 @@
 #include "read.hxx"
 #include "readlink.hxx"
 #include "rmdir.hxx"
+#include "stat.hxx"
 #include "symlink.hxx"
 #include "tgkill.hxx"
 #include "uname.hxx"
