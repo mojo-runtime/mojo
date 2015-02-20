@@ -38,30 +38,115 @@ open(const char* pathname, int flags) noexcept
 {
     enum Error
     {
-        EACCES       = EACCES,
-        EDQUOT       = EDQUOT,
-        EEXIST       = EEXIST,
-        EFAULT       = EFAULT,
-        EFBIG        = EFBIG,
-        EINTR        = EINTR,
-        EINVAL       = EINVAL,
-        EISDIR       = EISDIR,
-        ELOOP        = ELOOP,
-        EMFILE       = EMFILE,
+        // The requested access to the file is not allowed.
+        //
+        // Search permission is denied for one of the directories in the path prefix of `pathname`.
+        //
+        // The file did not exist yet and write access to the parent directory is not allowed.
+        EACCES = EACCES,
+
+        // Where O_CREAT is specified, the file does not exist,
+        // and the user's quota of disk blocks or inodes on the filesystem has been exhausted.
+        EDQUOT = EDQUOT,
+
+        // `pathname` already exists and O_CREAT and O_EXCL were used.
+        EEXIST = EEXIST,
+
+        // `pathname` points outside your accessible address space.
+        EFAULT = EFAULT,
+
+        // See EOVERFLOW.
+        EFBIG = EFBIG,
+
+        // While blocked waiting to complete an open of a slow device (e.g., a FIFO; see fifo(7)),
+        // the call was interrupted by a signal handler; see signal(7).
+        EINTR = EINTR,
+
+        // The filesystem does not support the O_DIRECT flag.
+        //
+        // Invalid value in `flags`.
+        //
+        // O_TMPFILE was specified in `flags`, but neither O_WRONLY nor O_RDWR was specified.
+        EINVAL = EINVAL,
+
+        // `pathname` refers to a directory and the access requested involved writing.
+        //
+        // `pathname` refers to an existing directory,
+        //
+        // O_TMPFILE and one of O_WRONLY or O_RDWR were specified in `flags`,
+        // but this kernel version does not provide the O_TMPFILE functionality.
+        EISDIR = EISDIR,
+
+        // Too many symbolic links were encountered in resolving pathname.
+        //
+        // `pathname` was a symbolic link, and `flags` specified O_NOFOLLOW but not O_PATH.
+        ELOOP = ELOOP,
+
+        // The process already has the maximum number of files open.
+        EMFILE = EMFILE,
+
+        // `pathname` was too long.
         ENAMETOOLONG = ENAMETOOLONG,
-        ENFILE       = ENFILE,
-        ENODEV       = ENODEV,
-        ENOENT       = ENOENT,
-        ENOMEM       = ENOMEM,
-        ENOSPC       = ENOSPC,
-        ENOTDIR      = ENOTDIR,
-        ENXIO        = ENXIO,
-        EOPNOTSUPP   = EOPNOTSUPP,
-        EOVERFLOW    = EOVERFLOW,
-        EPERM        = EPERM,
-        EROFS        = EROFS,
-        ETXTBSY      = ETXTBSY,
-        EWOULDBLOCK  = EWOULDBLOCK,
+
+        // The system limit on the total number of open files has been reached.
+        ENFILE = ENFILE,
+
+        // `pathname` refers to a device special file and no corresponding device exists.
+        // (This is a Linux kernel bug; in this situation ENXIO must be returned.)
+        ENODEV = ENODEV,
+
+        // O_CREAT is not set and the named file does not exist.
+        //
+        // A directory component in `pathname` does not exist or is a dangling symbolic link.
+        //
+        // `pathname` refers to a nonexistent directory,
+        // O_TMPFILE and one of O_WRONLY or O_RDWR were specified in flags,
+        // but this kernel version does not provide the O_TMPFILE functionality.
+        ENOENT = ENOENT,
+
+        // Insufficient kernel memory was available.
+        ENOMEM = ENOMEM,
+
+        // `pathname` was to be created
+        // but the device containing `pathname` has no room for the new file.
+        ENOSPC = ENOSPC,
+
+        // A component used as a directory in `pathname` is not, in fact, a directory,
+        //
+        // O_DIRECTORY was specified and `pathname` was not a directory.
+        ENOTDIR = ENOTDIR,
+
+        // O_NONBLOCK | O_WRONLY is set, the named file is a FIFO
+        // and no process has the file open for reading.
+        //
+        // The file is a device special file and no corresponding device exists.
+        ENXIO = ENXIO,
+
+        // The filesystem containing pathname does not support O_TMPFILE.
+        EOPNOTSUPP = EOPNOTSUPP,
+
+        // `pathname` refers to a regular file that is too large to be opened.
+        // The usual scenario here is that an application compiled on a 32-bit platform
+        // without -D_FILE_OFFSET_BITS = 64 tried to open a file whose size exceeds (2<<31)-1 bits;
+        // This is the error specified by POSIX.1-2001;
+        // in kernels before 2.6.24, Linux gave the error EFBIG for this case.
+        EOVERFLOW = EOVERFLOW,
+
+        // The O_NOATIME flag was specified,
+        // but the effective user ID of the caller did not match the owner of the file
+        // and the caller was not privileged (CAP_FOWNER).
+        EPERM = EPERM,
+
+        // `pathname` refers to a file on a read-only filesystem and write access was requested.
+        EROFS = EROFS,
+
+        // `pathname` refers to an executable image which is currently being executed
+        // and write access was requested.
+        ETXTBSY = ETXTBSY,
+
+        // The O_NONBLOCK flag was specified,
+        // and an incompatible lease was held on the file (see fcntl(2)).
+        EWOULDBLOCK = EWOULDBLOCK,
     };
 
     return Result<int, Error>(_c_syscall2(SYS_open, pathname, flags));
