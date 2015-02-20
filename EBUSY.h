@@ -1,20 +1,12 @@
 #ifndef c_EBUSY_h_
 #define c_EBUSY_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_E.h"
 
-__c_namespace_open
-
-static
-const int
-EBUSY =
 #ifdef __linux__
- 16
+_c_define_E(BUSY, 16);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

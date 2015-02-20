@@ -1,20 +1,12 @@
 #ifndef c_EEXIST_h_
 #define c_EEXIST_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_E.h"
 
-__c_namespace_open
-
-static
-const int
-EEXIST =
 #ifdef __linux__
- 17
+_c_define_E(EXIST, 17);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

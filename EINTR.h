@@ -1,20 +1,12 @@
 #ifndef c_EINTR_h_
 #define c_EINTR_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_E.h"
 
-__c_namespace_open
-
-static
-const int
-EINTR =
 #ifdef __linux__
- 4
+_c_define_E(INTR, 4);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

@@ -1,20 +1,12 @@
 #ifndef c_EFBIG_h_
 #define c_EFBIG_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_E.h"
 
-__c_namespace_open
-
-static
-const int
-EFBIG =
 #ifdef __linux__
- 27
+_c_define_E(FBIG, 27);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

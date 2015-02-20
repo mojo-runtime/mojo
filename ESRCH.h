@@ -1,20 +1,12 @@
 #ifndef c_ESRCH_h_
 #define c_ESRCH_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_E.h"
 
-__c_namespace_open
-
-static
-const int
-ESRCH =
 #ifdef __linux__
- 3
+_c_define_E(SRCH, 3);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

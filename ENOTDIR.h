@@ -1,20 +1,12 @@
 #ifndef c_ENOTDIR_h_
 #define c_ENOTDIR_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_E.h"
 
-__c_namespace_open
-
-static
-const int
-ENOTDIR =
 #ifdef __linux__
- 20
+_c_define_E(NOTDIR, 20);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

@@ -1,20 +1,12 @@
 #ifndef c_ENOEXEC_h_
 #define c_ENOEXEC_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_E.h"
 
-__c_namespace_open
-
-static
-const int
-ENOEXEC =
 #ifdef __linux__
- 8
+_c_define_E(NOEXEC, 8);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

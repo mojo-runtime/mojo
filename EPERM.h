@@ -1,20 +1,12 @@
 #ifndef c_EPERM_h_
 #define c_EPERM_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_E.h"
 
-__c_namespace_open
-
-static
-const int
-EPERM =
 #ifdef __linux__
- 1
+_c_define_E(PERM, 1);
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

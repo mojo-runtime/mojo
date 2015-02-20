@@ -1,20 +1,12 @@
 #ifndef c_E2BIG_h_
 #define c_E2BIG_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_E.h"
 
-__c_namespace_open
-
-static
-const int
-E2BIG =
 #ifdef __linux__
- 7
+_c_define_E(2BIG, 7);
 #else
-#  error todo
+#  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif

@@ -1,24 +1,16 @@
 #ifndef c_ENAMETOOLONG_h_
 #define c_ENAMETOOLONG_h_
 
-#include "c/__c_namespace.h"
+#include "_c_define_E.h"
 
-__c_namespace_open
-
-static
-const int
-ENAMETOOLONG =
 #ifdef __linux__
 #  ifdef __x86_64__
- 36 // generic
+_c_define_E(NAMETOOLONG, 36); // generic
 #  else
 #    error
 #  endif
 #else
 #  error
 #endif
- ;
-
-__c_namespace_close
 
 #endif
