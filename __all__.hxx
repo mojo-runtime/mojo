@@ -2,6 +2,7 @@
 #include "chmod.hxx"
 #include "chown.hxx"
 #include "clock_gettime.hxx"
+#include "clock_settime.hxx"
 #include "clone.hxx"
 #include "close.hxx"
 #include "dup3.hxx"
