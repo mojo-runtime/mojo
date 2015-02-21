@@ -1,7 +1,7 @@
-#ifndef linux_open_write_only_hxx_
-#define linux_open_write_only_hxx_
+#ifndef linux_open_rdonly_hxx_
+#define linux_open_rdonly_hxx_
 
-#include "c/O_WRONLY.h"
+#include "c/O_RDONLY.h"
 
 #include "linux/open.hxx"
 
@@ -10,7 +10,7 @@ namespace open_ {
 
 static inline
 auto
-write_only(const char* pathname) noexcept
+rdonly(const char* pathname) noexcept
 {
     enum Error
     {
@@ -21,7 +21,7 @@ write_only(const char* pathname) noexcept
         EFBIG        = EFBIG,
         EINTR        = EINTR,
         // EINVAL
-        EISDIR       = EISDIR,
+        // EISDIR
         ELOOP        = ELOOP,
         EMFILE       = EMFILE,
         ENAMETOOLONG = ENAMETOOLONG,
@@ -33,14 +33,14 @@ write_only(const char* pathname) noexcept
         ENOTDIR      = ENOTDIR,
         ENXIO        = ENXIO,
         // EOPNOTSUPP
-        // EOVERFLOW
+        EOVERFLOW    = EOVERFLOW,
         // EPERM
-        EROFS        = EROFS,
-        ETXTBSY      = ETXTBSY,
+        // EROFS
+        // ETXTBSY
         // EWOULDBLOCK
     };
 
-    return open(pathname, O_WRONLY)._with_error<Error>();
+    return open(pathname, O_RDONLY)._with_error<Error>();
 }
 
 } // namespace open_

@@ -1,2 +1,2 @@
-#include "read_only.hxx"
-#include "write_only.hxx"
+#include "rdonly.hxx"
+#include "wronly.hxx"
