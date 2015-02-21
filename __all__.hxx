@@ -15,6 +15,7 @@
 #include "execve.hxx"
 #include "exit.hxx"
 #include "exit_group.hxx"
+#include "fchdir.hxx"
 #include "fork.hxx"
 #include "fstat.hxx"
 #include "fstatat.hxx"
