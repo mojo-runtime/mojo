@@ -3,6 +3,7 @@
 #include "chown.hxx"
 #include "clock_getres.hxx"
 #include "clock_gettime.hxx"
+#include "clock_nanosleep.hxx"
 #include "clock_settime.hxx"
 #include "clone.hxx"
 #include "close.hxx"
