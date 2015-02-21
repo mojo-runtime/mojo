@@ -52,14 +52,14 @@ fcntl(int fd, int cmd, Arg arg) noexcept
         // For F_GETLK and F_SETLK,
         // the command was interrupted by a signal before the lock was checked or acquired.
         // Most likely when locking a remote file (e.g., locking over NFS),
-        //but can sometimes happen locally.
+        // but can sometimes happen locally.
         EINTR = EINTR,
 
         // For F_DUPFD,
         // `arg` is negative or is greater than the maximum allowable value.
         //
         // For F_SETSIG,
-        // arg is not an allowable signal number.
+        // `arg` is not an allowable signal number.
         EINVAL = EINVAL,
 
         // For F_DUPFD,
@@ -77,7 +77,7 @@ fcntl(int fd, int cmd, Arg arg) noexcept
         EPERM = EPERM,
     };
 
-    return Result<void, Error>(_c_syscall3(SYS_fcntl, fd, cmd, arg));
+    return Result<Ok, Error>(_c_syscall3(SYS_fcntl, fd, cmd, arg));
 }
 
 template <typename Ok>
