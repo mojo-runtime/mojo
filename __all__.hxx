@@ -1,6 +1,7 @@
 #include "chdir.hxx"
 #include "chmod.hxx"
 #include "chown.hxx"
+#include "clock_getres.hxx"
 #include "clock_gettime.hxx"
 #include "clock_settime.hxx"
 #include "clone.hxx"
