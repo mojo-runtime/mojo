@@ -12,6 +12,7 @@
 #include "c/ENOLCK.h"
 #include "c/EPERM.h"
 #include "c/SYS_fcntl.h"
+#include "c/_c_syscall2.h"
 #include "c/_c_syscall3.h"
 
 #include "linux/Result.hxx"
@@ -77,6 +78,14 @@ fcntl(int fd, int cmd, Arg arg) noexcept
     };
 
     return Result<void, Error>(_c_syscall3(SYS_fcntl, fd, cmd, arg));
+}
+
+template <typename Ok>
+static inline
+auto
+fcntl(int fd, int cmd) noexcept
+{
+    return decltype(fcntl<Ok>(fd, cmd, 0))(_c_syscall2(SYS_fcntl, fd, cmd));
 }
 
 } // namespace linux
