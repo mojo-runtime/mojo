@@ -47,10 +47,11 @@ struct Result
     //--------------------------------------------------------------------------------------------//
 
     template <typename NewError>
+    constexpr
     auto
     _with_error() const noexcept
     {
-        Result<Ok, NewError>(this->__word);
+        return Result<Ok, NewError>(this->__word);
     }
 
   private:
