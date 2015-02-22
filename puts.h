@@ -1,8 +1,6 @@
 #ifndef c_puts_h_
 #define c_puts_h_
 
-#include "x/x_noexcept.h"
-#include "x/x_reinterpret_cast.h"
 
 #include "EOF.h"
 #include "STDOUT_FILENO.h"
@@ -10,8 +8,10 @@
 #include "alloca.h"
 #include "memcpy.h"
 #include "strlen.h"
-#include "_c_syscall3.h"
-#include "_c_syscall_failed.h"
+#include "x/x_noexcept.h"
+#include "x/x_reinterpret_cast.h"
+#include "x/x_syscall3.h"
+#include "x/x_syscall_failed.h"
 
 _c_namespace
 
@@ -32,8 +32,8 @@ puts(const char* string) x_noexcept
 
     x_reinterpret_cast(char*, data)[string_length] = '\n';
 
-    return _c_syscall_failed(
-        _c_syscall3(
+    return x_syscall_failed(
+        x_syscall3(
             SYS_write,
             STDOUT_FILENO,
             data,
