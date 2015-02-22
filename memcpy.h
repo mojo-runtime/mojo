@@ -1,8 +1,8 @@
 #ifndef c_memcpy_h_
 #define c_memcpy_h_
 
-#include "x/x_noexcept.h"
-#include "x/x_reinterpret_cast.h"
+#include "extension/x_noexcept.h"
+#include "extension/x_reinterpret_cast.h"
 
 #include "size_t.h"
 

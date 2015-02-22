@@ -8,10 +8,10 @@
 #include "alloca.h"
 #include "memcpy.h"
 #include "strlen.h"
-#include "x/x_noexcept.h"
-#include "x/x_reinterpret_cast.h"
-#include "x/x_syscall3.h"
-#include "x/x_syscall_failed.h"
+#include "extension/x_noexcept.h"
+#include "extension/x_reinterpret_cast.h"
+#include "extension/x_syscall3.h"
+#include "extension/x_syscall_failed.h"
 
 _c_namespace
 

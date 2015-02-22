@@ -2,7 +2,7 @@
 #define c_strlen_h_
 
 #include "size_t.h"
-#include "x/x_constexpr.h"
+#include "extension/x_constexpr.h"
 
 _c_namespace
 

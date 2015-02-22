@@ -2,8 +2,8 @@
 #define c_exit_h_
 
 #include "builtin/__builtin_unreachable.h"
-#include "x/x_noexcept.h"
-#include "x/x_noreturn.h"
+#include "extension/x_noexcept.h"
+#include "extension/x_noreturn.h"
 
 #include "SYS_exit.h"
 

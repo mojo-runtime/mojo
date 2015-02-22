@@ -1,7 +1,7 @@
 #ifndef c_strcmp_h_
 #define c_strcmp_h_
 
-#include "x/x_constexpr.h"
+#include "extension/x_constexpr.h"
 
 #include "_internal/_c_namespace.h"
 

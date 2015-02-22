@@ -4,7 +4,7 @@
 #include "_internal/_c_define_EPOLL.h"
 
 #ifdef __linux__
-#  include "x/x_static_cast.h"
+#  include "extension/x_static_cast.h"
 _c_define_EPOLL(ET, x_static_cast(int, 1u << 31));
 #else
 #  error
