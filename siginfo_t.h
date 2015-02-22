@@ -1,6 +1,6 @@
 #ifdef __linux__
 #  ifdef __x86_64__
-#    include "linux/x86_64/siginfo_t.h"
+#    include "_linux/_x86_64/siginfo_t.h"
 #  else
 #    error
 #  endif
