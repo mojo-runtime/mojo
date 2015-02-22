@@ -26,7 +26,7 @@
 #include "c/ETXTBSY.h"
 #include "c/EWOULDBLOCK.h"
 #include "c/SYS_open.h"
-#include "c/_c_syscall2.h"
+#include "c/extension/x_syscall2.h"
 
 #include "linux/Result.hxx"
 
@@ -149,7 +149,7 @@ open(const char* pathname, int flags) noexcept
         EWOULDBLOCK = EWOULDBLOCK,
     };
 
-    return Result<int, Error>(_c_syscall2(SYS_open, pathname, flags));
+    return Result<int, Error>(x_syscall2(SYS_open, pathname, flags));
 }
 
 } // namespace linux

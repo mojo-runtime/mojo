@@ -9,7 +9,7 @@
 #include "c/SYS_getdents.h"
 #include "c/size_t.h"
 #include "c/struct-linux_dirent.h"
-#include "c/_c_syscall3.h"
+#include "c/extension/x_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -39,7 +39,7 @@ getdents(/* unsigned */ int fd, struct linux_dirent* dirp, unsigned int count) n
 
     // On success, the number of bytes read is returned.
 
-    return Result<size_t, Error>(_c_syscall3(SYS_getdents, fd, dirp, count));
+    return Result<size_t, Error>(x_syscall3(SYS_getdents, fd, dirp, count));
 }
 
 } // namespace linux

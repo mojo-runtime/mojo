@@ -8,7 +8,7 @@
 #include "c/SYS_clone.h"
 #include "c/pid_t.h"
 #include "c/struct-pt_regs.h"
-#include "c/_c_syscall5.h"
+#include "c/extension/x_syscall5.h"
 
 #include "linux/Result.hxx"
 
@@ -59,7 +59,7 @@ clone(unsigned long flags, void* child_stack, void* ptid, void* ctid, struct pt_
         EPERM = EPERM,
     };
 
-    return Result<pid_t, Error>(_c_syscall5(SYS_clone, flags, child_stack, ptid, ctid, regs));
+    return Result<pid_t, Error>(x_syscall5(SYS_clone, flags, child_stack, ptid, ctid, regs));
 }
 
 } // namespace linux

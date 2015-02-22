@@ -19,7 +19,7 @@
 #include "c/EPERM.h"
 #include "c/ETXTBSY.h"
 #include "c/SYS_execve.h"
-#include "c/_c_syscall3.h"
+#include "c/extension/x_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -100,7 +100,7 @@ execve(const char* filename, char* const argv[], char* const envp[]) noexcept
         ETXTBSY = ETXTBSY,
     };
 
-    return Result<void, Error>(_c_syscall3(SYS_execve, filename, argv, envp));
+    return Result<void, Error>(x_syscall3(SYS_execve, filename, argv, envp));
 }
 
 } // namespace linux

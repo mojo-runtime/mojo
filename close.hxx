@@ -5,7 +5,7 @@
 #include "c/EINTR.h"
 #include "c/EIO.h"
 #include "c/SYS_close.h"
-#include "c/_c_syscall1.h"
+#include "c/extension/x_syscall1.h"
 
 #include "linux/Result.hxx"
 
@@ -27,7 +27,7 @@ close(int fd) noexcept
         EIO = EIO,
     };
 
-    return Result<void, Error>(_c_syscall1(SYS_close, fd));
+    return Result<void, Error>(x_syscall1(SYS_close, fd));
 }
 
 } // namespace linux

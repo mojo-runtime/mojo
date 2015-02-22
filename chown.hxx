@@ -13,7 +13,7 @@
 #include "c/SYS_chown.h"
 #include "c/gid_t.h"
 #include "c/uid_t.h"
-#include "c/_c_syscall3.h"
+#include "c/extension/x_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -53,7 +53,7 @@ chown(const char* pathname, uid_t owner, gid_t group) noexcept
         EROFS = EROFS,
     };
 
-    return Result<void, Error>(_c_syscall3(SYS_chown, pathname, owner, group));
+    return Result<void, Error>(x_syscall3(SYS_chown, pathname, owner, group));
 }
 
 } // namespace linux

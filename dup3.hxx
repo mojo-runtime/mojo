@@ -7,7 +7,7 @@
 #include "c/EINVAL.h"
 #include "c/EMFILE.h"
 #include "c/SYS_dup3.h"
-#include "c/_c_syscall3.h"
+#include "c/extension/x_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -40,7 +40,7 @@ dup3(int oldfd, int newfd, int flags) noexcept
         EMFILE = EMFILE,
     };
 
-    return Result<int, Error>(_c_syscall3(SYS_dup3, oldfd, newfd, flags));
+    return Result<int, Error>(x_syscall3(SYS_dup3, oldfd, newfd, flags));
 }
 
 } // namespace linux

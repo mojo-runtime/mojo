@@ -16,7 +16,7 @@
 #include "c/EROFS.h"
 #include "c/SYS_mkdir.h"
 #include "c/mode_t.h"
-#include "c/_c_syscall2.h"
+#include "c/extension/x_syscall2.h"
 
 #include "linux/Result.hxx"
 
@@ -72,7 +72,7 @@ mkdir(const char* pathname, mode_t mode) noexcept
         EROFS = EROFS,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_mkdir, pathname, mode));
+    return Result<void, Error>(x_syscall2(SYS_mkdir, pathname, mode));
 }
 
 } // namespace linux

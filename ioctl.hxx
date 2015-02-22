@@ -6,7 +6,7 @@
 #include "c/EINVAL.h"
 #include "c/ENOTTY.h"
 #include "c/SYS_ioctl.h"
-#include "c/_c_syscall3.h"
+#include "c/extension/x_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -39,7 +39,7 @@ ioctl(int fd, int request, Arg arg) noexcept
         ENOTTY = ENOTTY,
     };
 
-    return Result<void, Error>(_c_syscall3(SYS_ioctl, fd, request, arg));
+    return Result<void, Error>(x_syscall3(SYS_ioctl, fd, request, arg));
 }
 
 } // namespace linux

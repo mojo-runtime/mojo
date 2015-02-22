@@ -14,7 +14,7 @@
 #include "c/EPIPE.h"
 #include "c/SYS_write.h"
 #include "c/size_t.h"
-#include "c/_c_syscall3.h"
+#include "c/extension/x_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -71,7 +71,7 @@ write(int fd, const void* buf, size_t count) noexcept
         //   XXX: totally ignoring this
     };
 
-    return Result<size_t, Error>(_c_syscall3(SYS_write, fd, buf, count));
+    return Result<size_t, Error>(x_syscall3(SYS_write, fd, buf, count));
 }
 
 template <typename T, size_t n>
@@ -96,7 +96,7 @@ write(int fd, const T(& array)[n]) noexcept
     };
 
     // We can't use write(...)._with_error; see `read_::into`.
-    return Result<size_t, Error>(_c_syscall3(SYS_write, fd, array, n * sizeof(T)));
+    return Result<size_t, Error>(x_syscall3(SYS_write, fd, array, n * sizeof(T)));
 }
 
 } // namespace linux

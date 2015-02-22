@@ -10,7 +10,7 @@
 #include "c/pid_t.h"
 #include "c/siginfo_t.h"
 #include "c/struct-rusage.h"
-#include "c/_c_syscall5.h"
+#include "c/extension/x_syscall5.h"
 
 #include "linux/Result.hxx"
 
@@ -35,7 +35,7 @@ waitid(idtype_t idtype, id_t id, siginfo_t* infop, int options, struct rusage* u
     };
 
     return Result<pid_t, Error>(
-        _c_syscall5(SYS_getdents, idtype, id, infop, options, usage)
+        x_syscall5(SYS_getdents, idtype, id, infop, options, usage)
     );
 }
 

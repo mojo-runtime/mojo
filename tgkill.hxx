@@ -5,7 +5,7 @@
 #include "c/EPERM.h"
 #include "c/ESRCH.h"
 #include "c/SYS_tgkill.h"
-#include "c/_c_syscall3.h"
+#include "c/extension/x_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -27,7 +27,7 @@ tgkill(int tgid, int tid, int sig) noexcept
         ESRCH = ESRCH,
     };
 
-    return Result<void, Error>(_c_syscall3(SYS_tgkill, tgid, tid, sig));
+    return Result<void, Error>(x_syscall3(SYS_tgkill, tgid, tid, sig));
 }
 
 } // namespace linux

@@ -7,7 +7,7 @@
 #include "c/EINVAL.h"
 #include "c/SYS_epoll_wait.h"
 #include "c/struct-epoll_event.h"
-#include "c/_c_syscall4.h"
+#include "c/extension/x_syscall4.h"
 
 #include "linux/Result.hxx"
 
@@ -40,7 +40,7 @@ epoll_wait(int epfd, struct epoll_event* events, int maxevents, int timeout) noe
 
     // ... unsigned, I guess?
 
-    return Result<unsigned, Error>(_c_syscall4(SYS_epoll_wait, epfd, events, maxevents, timeout));
+    return Result<unsigned, Error>(x_syscall4(SYS_epoll_wait, epfd, events, maxevents, timeout));
 }
 
 } // namespace linux

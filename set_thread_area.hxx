@@ -6,7 +6,7 @@
 #include "c/ESRCH.h"
 #include "c/SYS_set_thread_area.h"
 #include "c/struct-user_desc.h"
-#include "c/_c_syscall1.h"
+#include "c/extension/x_syscall1.h"
 
 #include "linux/Result.hxx"
 
@@ -28,7 +28,7 @@ set_thread_area(struct user_desc* u_info) noexcept
         ESRCH = ESRCH,
     };
 
-    return Result<void, Error>(_c_syscall1(SYS_set_thread_area, u_info));
+    return Result<void, Error>(x_syscall1(SYS_set_thread_area, u_info));
 }
 
 } // namespace linux

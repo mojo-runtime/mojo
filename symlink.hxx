@@ -15,7 +15,7 @@
 #include "c/EPERM.h"
 #include "c/EROFS.h"
 #include "c/SYS_symlink.h"
-#include "c/_c_syscall2.h"
+#include "c/extension/x_syscall2.h"
 
 #include "linux/Result.hxx"
 
@@ -71,7 +71,7 @@ symlink(const char* target, const char* linkpath) noexcept
         EROFS = EROFS,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_symlink, target, linkpath));
+    return Result<void, Error>(x_syscall2(SYS_symlink, target, linkpath));
 }
 
 } // namespace linux

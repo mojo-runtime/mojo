@@ -11,7 +11,7 @@
 #include "c/ENOSPC.h"
 #include "c/SYS_inotify_add_watch.h"
 #include "c/uint32_t.h"
-#include "c/_c_syscall3.h"
+#include "c/extension/x_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -50,7 +50,7 @@ inotify_add_watch(int fd, const char* pathname, uint32_t mask) noexcept
         ENOSPC = ENOSPC,
     };
 
-    return Result<int, Error>(_c_syscall3(SYS_inotify_add_watch, fd, pathname, mask));
+    return Result<int, Error>(x_syscall3(SYS_inotify_add_watch, fd, pathname, mask));
 }
 
 } // namespace linux

@@ -4,7 +4,7 @@
 #include "c/EFAULT.h"
 #include "c/SYS_uname.h"
 #include "c/struct-utsname.h"
-#include "c/_c_syscall1.h"
+#include "c/extension/x_syscall1.h"
 
 #include "linux/Result.hxx"
 
@@ -20,7 +20,7 @@ uname(struct utsname* buf) noexcept
         EFAULT = EFAULT,
     };
 
-    return Result<void, Error>(_c_syscall1(SYS_uname, buf));
+    return Result<void, Error>(x_syscall1(SYS_uname, buf));
 }
 
 } // namespace linux
