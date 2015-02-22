@@ -4,8 +4,6 @@
 #include "size_t.h"
 #include "extension/x_constexpr.h"
 
-_c_namespace
-
 static x_constexpr
 size_t
 strlen(const char* data)
@@ -20,7 +18,5 @@ strlen(const char* data)
 
     return result;
 }
-
-_c_namespace_end
 
 #endif

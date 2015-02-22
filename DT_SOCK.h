@@ -1,12 +1,7 @@
-#ifndef c_DT_SOCK_h_
-#define c_DT_SOCK_h_
-
-#include "_internal/_c_define_DT_.h"
-
-#if defined(__linux__)
-_c_define_DT_(SOCK, 12);
-#else
-#  error
-#endif
-
+#ifndef DT_SOCK
+#  ifdef __linux__
+#    define DT_SOCK 12
+#  else
+#    error
+#  endif
 #endif

@@ -6,8 +6,6 @@
 #include "pid_t.h"
 #include "SYS_getpid.h"
 
-_c_namespace
-
 static
 pid_t
 getpid() x_noexcept
@@ -25,7 +23,5 @@ getpid() x_noexcept
 
     return result;
 }
-
-_c_namespace_end
 
 #endif

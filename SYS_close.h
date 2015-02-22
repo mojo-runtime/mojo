@@ -1,12 +1,11 @@
-#ifndef c_SYS_close_h_
-#define c_SYS_close_h_
-
-#include "_internal/_c_define_SYS_.h"
-
-#if defined(__linux__) && defined(__x86_64__)
-_c_define_SYS_(close, 3);
-#else
-#  error
-#endif
-
+#ifndef SYS_close
+#  ifdef __linux__
+#    ifdef __x86_64__
+#      define SYS_close 3
+#    else
+#      error
+#    endif
+#  else
+#    error
+#  endif
 #endif

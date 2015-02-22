@@ -1,12 +1,7 @@
-#ifndef c_EXDEV_h_
-#define c_EXDEV_h_
-
-#include "_internal/_c_define_E.h"
-
-#ifdef __linux__
-_c_define_E(XDEV, 18);
-#else
-#  error
-#endif
-
+#ifndef EXDEV
+#  ifdef __linux__
+#    define EXDEV 18
+#  else
+#    error
+#  endif
 #endif

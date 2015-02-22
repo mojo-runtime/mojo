@@ -1,16 +1,11 @@
-#ifndef c_ELOOP_h_
-#define c_ELOOP_h_
-
-#include "_internal/_c_define_E.h"
-
-#ifdef __linux__
-#  ifdef __x86_64__
-_c_define_E(LOOP, 40); // generic
+#ifndef ELOOP
+#  ifdef __linux__
+#    ifdef __x86_64__
+#      define ELOOP 40
+#    else
+#      error
+#    endif
 #  else
 #    error
 #  endif
-#else
-#  error
-#endif
-
 #endif

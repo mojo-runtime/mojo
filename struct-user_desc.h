@@ -1,10 +1,6 @@
 #ifndef c_struct_user_desc_h_
 #define c_struct_user_desc_h_
 
-#include "_internal/_c_namespace.h"
-
-_c_namespace
-
 struct user_desc
 {
 #if defined(__linux__) && defined(__x86_64__)
@@ -22,7 +18,5 @@ struct user_desc
 #  error
 #endif
 };
-
-_c_namespace_end
 
 #endif

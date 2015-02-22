@@ -1,12 +1,11 @@
-#ifndef c_SYS_vfork_h_
-#define c_SYS_vfork_h_
-
-#include "_internal/_c_define_SYS_.h"
-
-#if defined(__linux__) && defined(__x86_64__)
-_c_define_SYS_(vfork, 58);
-#else
-#  error
-#endif
-
+#ifndef SYS_vfork
+#  ifdef __linux__
+#    ifdef __x86_64__
+#      define SYS_vfork 58
+#    else
+#      error
+#    endif
+#  else
+#    error
+#  endif
 #endif

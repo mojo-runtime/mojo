@@ -1,8 +1,3 @@
-#ifndef c_EXIT_FAILURE_h_
-#define c_EXIT_FAILURE_h_
-
-#include "_internal/_c_define_EXIT_.h"
-
-_c_define_EXIT_(FAILURE, 1);
-
+#ifndef EXIT_FAILURE
+#define EXIT_FAILURE 1
 #endif

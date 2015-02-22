@@ -4,8 +4,6 @@
 #include "epoll_data_t.h"
 #include "uint32_t.h"
 
-_c_namespace
-
 struct epoll_event
 {
 #ifdef __linux__
@@ -18,7 +16,5 @@ struct epoll_event
 #  error
 #endif
 };
-
-_c_namespace_end
 
 #endif

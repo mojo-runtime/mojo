@@ -1,12 +1,7 @@
-#ifndef c_EPOLL_CTL_ADD_h_
-#define c_EPOLL_CTL_ADD_h_
-
-#include "_internal/_c_define_EPOLL_CTL_.h"
-
-#ifdef __linux__
-_c_define_EPOLL_CTL_(ADD, 1);
-#else
-#  error
-#endif
-
+#ifndef EPOLL_CTL_ADD
+#  ifdef __linux__
+#    define EPOLL_CTL_ADD 1
+#  else
+#    error
+#  endif
 #endif

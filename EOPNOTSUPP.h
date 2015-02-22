@@ -1,16 +1,11 @@
-#ifndef c_EOPNOTSUPP_h_
-#define c_EOPNOTSUPP_h_
-
-#include "_internal/_c_define_E.h"
-
-#ifdef __linux__
-#  ifdef __x86_64__
-_c_define_E(OPNOTSUPP, 95); // generic
+#ifndef EOPNOTSUPP
+#  ifdef __linux__
+#    ifdef __x86_64__
+#      define EOPNOTSUPP 94
+#    else
+#      error
+#    endif
 #  else
 #    error
 #  endif
-#else
-#  error
-#endif
-
 #endif

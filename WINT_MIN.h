@@ -4,6 +4,6 @@
 #  elif defined(__WINT_UNSIGNED__)
 #    define WINT_MIN (0u)
 #  else
-#    error
+#    define WINT_MIN 0
 #  endif
 #endif

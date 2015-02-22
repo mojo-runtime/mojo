@@ -1,18 +1,13 @@
-#ifndef c_F_GETLK_h_
-#define c_F_GETLK_h_
-
-#include "_internal/_c_define_F_.h"
-
-#ifdef __linux__
-#  if defined(__alpha__) || defined(__sparc__)
-_c_define_F_(GETLK, 7);
-#  elif defined(__mips__)
-_c_define_F_(GETLK, 14);
+#ifndef F_GETLK
+#  ifdef __linux__
+#    if defined(__alpha__) || defined(__sparc__)
+#      define F_GETLK 7
+#    elif defined(__mips__)
+#      define F_GETLK 14
+#    else
+#      define F_GETLK 5
+#    endif
 #  else
-_c_define_F_(GETLK, 5);
+#    error
 #  endif
-#else
-#  error
-#endif
-
 #endif

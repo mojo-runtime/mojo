@@ -1,12 +1,11 @@
-#ifndef c_SYS_execve_h_
-#define c_SYS_execve_h_
-
-#include "_internal/_c_define_SYS_.h"
-
-#if defined(__linux__) && defined(__x86_64__)
-_c_define_SYS_(execve, 59);
-#else
-#  error
-#endif
-
+#ifndef SYS_execve
+#  ifdef __linux__
+#    ifdef __x86_64__
+#      define SYS_execve 59
+#    else
+#      error
+#    endif
+#  else
+#    error
+#  endif
 #endif

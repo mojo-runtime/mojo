@@ -1,14 +1,3 @@
-#ifndef c_STDIN_FILENO_h_
-#define c_STDIN_FILENO_h_
-
-#include "_internal/_c_namespace.h"
-
-_c_namespace
-
-static
-const int
-STDIN_FILENO = 0;
-
-_c_namespace_end
-
+#ifndef STDIN_FILENO
+#define STDIN_FILENO 0
 #endif

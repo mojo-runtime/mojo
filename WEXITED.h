@@ -1,12 +1,7 @@
-#ifndef c_WEXITED_h_
-#define c_WEXITED_h_
-
-#include "_internal/_c_define_W.h"
-
-#ifdef __linux__
-_c_define_W(EXITED, 4);
-#else
-#  error
-#endif
-
+#ifndef WEXITED
+#  ifdef __linux__
+#    define WEXITED 4
+#  else
+#    error
+#  endif
 #endif

@@ -1,12 +1,11 @@
-#ifndef c_SYS_getppid_h_
-#define c_SYS_getppid_h_
-
-#include "_internal/_c_define_SYS_.h"
-
-#if defined(__linux__) && defined(__x86_64__)
-_c_define_SYS_(getppid, 110);
-#else
-#  error
-#endif
-
+#ifndef SYS_getppid
+#  ifdef __linux__
+#    ifdef __x86_64__
+#      define SYS_getppid 110
+#    else
+#      error
+#    endif
+#  else
+#    error
+#  endif
 #endif

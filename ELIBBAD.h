@@ -1,16 +1,11 @@
-#ifndef c_ELIBBAD_h_
-#define c_ELIBBAD_h_
-
-#include "_internal/_c_define_E.h"
-
-#ifdef __linux__
-#  ifdef __x86_64__
-_c_define_E(LIBBAD, 80); // generic
+#ifndef ELIBBAD
+#  ifdef __linux__
+#    ifdef __x86_64__
+#      define ELIBBAD 80
+#    else
+#      error
+#    endif
 #  else
 #    error
 #  endif
-#else
-#  error
-#endif
-
 #endif

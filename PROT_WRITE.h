@@ -1,12 +1,7 @@
-#ifndef c_PROT_WRITE_h_
-#define c_PROT_WRITE_h_
-
-#include "_internal/_c_define_PROT_.h"
-
-#ifdef __linux__
-_c_define_PROT_(WRITE, 2);
-#else
-#  error
-#endif
-
+#ifndef PROT_WRITE
+#  ifdef __linux__
+#    define PROT_WRITE 2
+#  else
+#    error
+#  endif
 #endif

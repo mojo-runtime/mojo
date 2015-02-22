@@ -1,16 +1,11 @@
-#ifndef c_F_SETLK_h_
-#define c_F_SETLK_h_
-
-#include "_internal/_c_define_F_.h"
-
-#ifdef __linux__
-#  if defined(__alpha__) || defined(__sparc__)
-_c_define_F_(SETLK, 8);
+#ifndef F_SETLK
+#  ifdef __linux__
+#    if defined(__alpha__) || defined(__sparc__)
+#      define F_SETLK 8
+#    else
+#      define F_SETLK 6
+#    endif
 #  else
-_c_define_F_(SETLK, 6);
+#    error
 #  endif
-#else
-#  error
-#endif
-
 #endif

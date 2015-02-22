@@ -1,12 +1,7 @@
-#ifndef c_PROT_EXEC_h_
-#define c_PROT_EXEC_h_
-
-#include "_internal/_c_define_PROT_.h"
-
-#ifdef __linux__
-_c_define_PROT_(EXEC, 4);
-#else
-#  error
-#endif
-
+#ifndef PROT_EXEC
+#  ifdef __linux__
+#    define PROT_EXEC 4
+#  else
+#    error
+#  endif
 #endif

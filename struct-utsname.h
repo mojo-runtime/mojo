@@ -1,10 +1,6 @@
 #ifndef c_struct_utsname_h_
 #define c_struct_utsname_h_
 
-#include "_internal/_c_namespace.h"
-
-_c_namespace
-
 struct utsname
 {
 #ifdef __linux__
@@ -18,7 +14,5 @@ struct utsname
 #  error
 #endif
 };
-
-_c_namespace_end
 
 #endif

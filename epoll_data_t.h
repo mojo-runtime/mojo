@@ -4,8 +4,6 @@
 #include "uint32_t.h"
 #include "uint64_t.h"
 
-_c_namespace
-
 #ifdef __linux__
 
 // This union is not defined in the linux source,
@@ -30,7 +28,5 @@ epoll_data_t;
 #else
 #  error
 #endif
-
-_c_namespace_end
 
 #endif

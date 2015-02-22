@@ -1,10 +1,6 @@
 #ifndef c_tcflag_t_h_
 #define c_tcflag_t_h_
 
-#include "_internal/_c_namespace.h"
-
-_c_namespace
-
 typedef
 #ifdef __linux__
 #  if !(defined(__sparc__) && defined(__arch64__))
@@ -16,7 +12,5 @@ unsigned int
 #  error
 #endif
 tcflag_t;
-
-_c_namespace_end
 
 #endif

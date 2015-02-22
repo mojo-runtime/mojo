@@ -1,7 +1,11 @@
 #ifndef PTRDIFF_MIN
 #  ifdef __PTRDIFF_WIDTH__
 #    if __PTRDIFF_WIDTH__ == 64
-#      define PTRDIFF_MIN (-9223372036854775807L - 1)
+#      include "INT64_MIN.h"
+#      define PTRDIFF_MIN INT64_MIN
+#    elif __PTRDIFF_WIDTH__ == 32
+#      include "INT32_MIN.h"
+#      define PTRDIFF_MIN INT32_MIN
 #    else
 #      error
 #    endif

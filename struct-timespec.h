@@ -3,8 +3,6 @@
 
 #include "time_t.h"
 
-_c_namespace
-
 struct timespec
 {
 #ifdef __linux__
@@ -17,7 +15,5 @@ struct timespec
 #  error
 #endif
 };
-
-_c_namespace_end
 
 #endif

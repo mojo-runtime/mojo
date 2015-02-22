@@ -1,7 +1,6 @@
 #ifndef c_puts_h_
 #define c_puts_h_
 
-
 #include "EOF.h"
 #include "STDOUT_FILENO.h"
 #include "SYS_write.h"
@@ -12,8 +11,6 @@
 #include "extension/x_reinterpret_cast.h"
 #include "extension/x_syscall3.h"
 #include "extension/x_syscall_failed.h"
-
-_c_namespace
 
 static
 int
@@ -28,7 +25,7 @@ puts(const char* string) x_noexcept
     void*
     data = alloca(length);
 
-    memcpy_(data, string, string_length);
+    memcpy(data, string, string_length);
 
     x_reinterpret_cast(char*, data)[string_length] = '\n';
 
@@ -41,7 +38,5 @@ puts(const char* string) x_noexcept
         )
     ) ? EOF : 1; // nonnegative number on success
 }
-
-_c_namespace_end
 
 #endif

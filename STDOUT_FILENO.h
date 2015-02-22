@@ -1,14 +1,3 @@
-#ifndef c_STDOUT_FILENO_h_
-#define c_STDOUT_FILENO_h_
-
-#include "_internal/_c_namespace.h"
-
-_c_namespace
-
-static
-const int
-STDOUT_FILENO = 1;
-
-_c_namespace_end
-
+#ifndef STDOUT_FILENO
+#define STDOUT_FILENO 1
 #endif

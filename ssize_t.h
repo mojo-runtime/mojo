@@ -3,10 +3,6 @@
 
 #include "ptrdiff_t.h"
 
-_c_namespace
-
 typedef ptrdiff_t ssize_t;
-
-_c_namespace_end
 
 #endif

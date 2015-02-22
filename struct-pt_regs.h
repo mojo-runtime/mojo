@@ -1,10 +1,6 @@
 #ifndef c_struct_pt_regs_h_
 #define c_struct_pt_regs_h_
 
-_c_namespace
-
-// Used by Linux, but there's no reason to enforce that.
-
 struct pt_regs
 {
 #ifdef __x86_64__
@@ -34,7 +30,5 @@ struct pt_regs
 #  error
 #endif
 };
-
-_c_namespace_end
 
 #endif

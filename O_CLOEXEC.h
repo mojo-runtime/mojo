@@ -1,16 +1,13 @@
-#ifndef c_O_CLOEXEC_h_
-#define c_O_CLOEXEC_h_
-
-#include "_internal/_c_define_O_.h"
-
-#ifdef __linux__
-#  ifdef __x86_64__
-_c_define_O_(CLOEXEC, 02000000); // generic
+#ifndef O_CLOEXEC
+#  ifdef __linux__
+#    if defined(__alpha__) || defined(__parisc__)
+#      define O_CLOEXEC 010000000
+#    elif defined(__sparc__)
+#      define O_CLOEXEC 0x400000
+#    else
+#      define O_CLOEXEC 02000000
+#    endif
 #  else
 #    error
 #  endif
-#else
-#  error
-#endif
-
 #endif

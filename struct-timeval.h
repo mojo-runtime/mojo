@@ -4,8 +4,6 @@
 #include "time_t.h"
 #include "suseconds_t.h"
 
-_c_namespace
-
 struct timeval
 {
 #ifdef __linux__
@@ -18,7 +16,5 @@ struct timeval
 #  error
 #endif
 };
-
-_c_namespace_end
 
 #endif

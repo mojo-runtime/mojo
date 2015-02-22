@@ -1,12 +1,7 @@
-#ifndef c_ECHILD_h_
-#define c_ECHILD_h_
-
-#include "_internal/_c_define_E.h"
-
-#ifdef __linux__
-_c_define_E(CHILD, 10);
-#else
-#  error
-#endif
-
+#ifndef ECHILD
+#  ifdef __linux__
+#    define ECHILD 10
+#  else
+#    error
+#  endif
 #endif

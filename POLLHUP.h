@@ -1,12 +1,7 @@
-#ifndef c_POLLHUP_h_
-#define c_POLLHUP_h_
-
-#include "_internal/_c_define_POLL.h"
-
-#ifdef __linux__
-_c_define_POLL(HUP, 16);
-#else
-#  error
-#endif
-
+#ifndef POLLHUP
+#  ifdef __linux__
+#    define POLLHUP 16
+#  else
+#    error
+#  endif
 #endif

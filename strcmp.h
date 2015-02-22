@@ -3,10 +3,6 @@
 
 #include "extension/x_constexpr.h"
 
-#include "_internal/_c_namespace.h"
-
-_c_namespace
-
 static x_constexpr
 int
 strcmp(const char* x, const char* y)
@@ -27,7 +23,5 @@ strcmp(const char* x, const char* y)
             return x_byte < y_byte ? -1 : 1;
     }
 }
-
-_c_namespace_end
 
 #endif

@@ -1,10 +1,6 @@
 #ifndef c_struct_linux_dirent_h_
 #define c_struct_linux_dirent_h_
 
-#include "_internal/_c_namespace.h"
-
-_c_namespace
-
 struct linux_dirent
 {
 #ifdef __linux__
@@ -34,7 +30,5 @@ struct linux_dirent
 #  error
 #endif
 };
-
-_c_namespace_end
 
 #endif

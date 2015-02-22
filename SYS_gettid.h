@@ -1,12 +1,11 @@
-#ifndef c_SYS_gettid_h_
-#define c_SYS_gettid_h_
-
-#include "_internal/_c_define_SYS_.h"
-
-#if defined(__linux__) && defined(__x86_64__)
-_c_define_SYS_(gettid, 186);
-#else
-#  error
-#endif
-
+#ifndef SYS_gettid
+#  ifdef __linux__
+#    ifdef __x86_64__
+#      define SYS_gettid 186
+#    else
+#      error
+#    endif
+#  else
+#    error
+#  endif
 #endif

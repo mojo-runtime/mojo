@@ -6,8 +6,6 @@
 #include "../../sigval_t.h"
 #include "../../uid_t.h"
 
-_c_namespace
-
 typedef struct siginfo
 {
     // Explicit padding for -Wpadded
@@ -166,7 +164,5 @@ siginfo_t;
 #define si_call_addr _sifields._sigsys._call_addr
 #define si_syscall   _sifields._sigsys._syscall
 #define si_arch      _sifields._sigsys._arch
-
-_c_namespace_end
 
 #endif

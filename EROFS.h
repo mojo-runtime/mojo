@@ -1,12 +1,7 @@
-#ifndef c_EROFS_h_
-#define c_EROFS_h_
-
-#include "_internal/_c_define_E.h"
-
-#ifdef __linux__
-_c_define_E(ROFS, 30);
-#else
-#  error
-#endif
-
+#ifndef EROFS
+#  ifdef __linux__
+#    define EROFS 30
+#  else
+#    error
+#  endif
 #endif

@@ -1,12 +1,7 @@
-#ifndef c_EDOM_h_
-#define c_EDOM_h_
-
-#include "_internal/_c_define_E.h"
-
-#ifdef __linux__
-_c_define_E(DOM, 33);
-#else
-#  error
-#endif
-
+#ifndef EDOM
+#  ifdef __linux__
+#    define EDOM 33
+#  else
+#    error
+#  endif
 #endif

@@ -7,8 +7,6 @@
 
 #include "SYS_exit.h"
 
-_c_namespace
-
 x_noreturn
 static
 void
@@ -25,7 +23,5 @@ _exit(int status) x_noexcept
 #endif
     x_unreachable();
 }
-
-_c_namespace_end
 
 #endif

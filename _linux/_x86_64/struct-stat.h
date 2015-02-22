@@ -13,8 +13,6 @@
 #include "../../time_t.h"
 #include "../../uid_t.h"
 
-_c_namespace
-
 struct stat
 {
     // Gleened from both glibc and linux sources, the best being
@@ -69,7 +67,5 @@ struct stat
     char
     __unused[24];
 };
-
-_c_namespace_end
 
 #endif

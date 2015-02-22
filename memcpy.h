@@ -6,11 +6,9 @@
 
 #include "size_t.h"
 
-_c_namespace
-
 static inline
-void
-memcpy_(void* target, const void* source, size_t bytes) x_noexcept
+void*
+memcpy(void* target, const void* source, size_t bytes) x_noexcept
 {
     // Placeholder implementation
 
@@ -26,16 +24,8 @@ memcpy_(void* target, const void* source, size_t bytes) x_noexcept
     while (target_bytes != target_bytes_end) {
         *target_bytes++ = *source_bytes++;
     }
-}
 
-static inline
-void*
-memcpy(void* target, const void* source, size_t bytes) x_noexcept
-{
-    memcpy_(target, source, bytes);
     return target;
 }
-
-_c_namespace_end
 
 #endif

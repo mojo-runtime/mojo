@@ -1,16 +1,15 @@
-#ifndef c_O_DIRECTORY_h_
-#define c_O_DIRECTORY_h_
-
-#include "_internal/_c_define_O_.h"
-
-#ifdef __linux__
-#  ifdef __x86_64__
-_c_define_O_(DIRECTORY, 0200000); // generic
+#ifndef O_DIRECTORY
+#  ifdef __linux__
+#    if defined(__alpha__)
+#      define O_DIRECTORY 0100000
+#    elif defined(__arm__) || defined(__arm64__) || defined(__blackfin__) || defined(__m68k__) || defined(__powerpc__)
+#      define O_DIRECTORY 040000
+#    elif defined(__parisc__)
+#      define O_DIRECTORY 010000
+#    else
+#      define O_DIRECTORY 0200000
+#    endif
 #  else
 #    error
 #  endif
-#else
-#  error
-#endif
-
 #endif

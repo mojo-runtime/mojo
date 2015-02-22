@@ -1,16 +1,11 @@
-#ifndef c_O_NOFOLLOW_h_
-#define c_O_NOFOLLOW_h_
-
-#include "_internal/_c_define_O_.h"
-
-#ifdef __linux__
-#  ifdef __x86_64__
-_c_define_O_(NOFOLLOW, 0400000); // generic
+#ifndef O_NOFOLLOW
+#  ifdef __linux__
+#    ifdef __x86_64__
+#      define O_NOFOLLOW 0400000
+#    else
+#      error
+#    endif
 #  else
 #    error
 #  endif
-#else
-#  error
-#endif
-
 #endif

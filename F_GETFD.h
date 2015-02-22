@@ -1,12 +1,7 @@
-#ifndef c_F_GETFD_h_
-#define c_F_GETFD_h_
-
-#include "_internal/_c_define_F_.h"
-
-#ifdef __linux__
-_c_define_F_(GETFD, 1);
-#else
-#  error
-#endif
-
+#ifndef F_GETFD
+#  ifdef __linux__
+#    define F_GETFD 1
+#  else
+#    error
+#  endif
 #endif

@@ -1,16 +1,11 @@
-#ifndef c_ENOSYS_h_
-#define c_ENOSYS_h_
-
-#include "_internal/_c_define_E.h"
-
-#ifdef __linux__
-#  ifdef __x86_64__
-_c_define_E(NOSYS, 38); // generic
+#ifndef ENOSYS
+#  ifdef __linux__
+#    ifdef __x86_64__
+#      define ENOSYS 38
+#    else
+#      error
+#    endif
 #  else
 #    error
 #  endif
-#else
-#  error
-#endif
-
 #endif

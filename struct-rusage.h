@@ -3,8 +3,6 @@
 
 #include "struct-timeval.h"
 
-_c_namespace
-
 struct rusage
 {
 #ifdef __linux__
@@ -29,7 +27,5 @@ struct rusage
 #  error
 #endif
 };
-
-_c_namespace_end
 
 #endif

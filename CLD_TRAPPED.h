@@ -1,12 +1,7 @@
-#ifndef c_CLD_TRAPPED_h_
-#define c_CLD_TRAPPED_h_
-
-#include "_internal/_c_define_CLD_.h"
-
-#if defined(__linux__)
-_c_define_CLD_(TRAPPED, 4);
-#else
-#  error
-#endif
-
+#ifndef CLD_TRAPPED
+#  ifdef __linux__
+#    define CLD_TRAPPED 4
+#  else
+#    error
+#  endif
 #endif

@@ -1,16 +1,11 @@
-#ifndef c_O_CREAT_h_
-#define c_O_CREAT_h_
-
-#include "_internal/_c_define_O_.h"
-
-#ifdef __linux__
-#  ifdef __x86_64__
-_c_define_O_(CREAT, 0100); // generic
+#ifndef O_CREAT
+#  ifdef __linux__
+#    if __x86_64__
+#      define O_CREAT 0100
+#    else
+#      error
+#    endif
 #  else
 #    error
 #  endif
-#else
-#  error
-#endif
-
 #endif
