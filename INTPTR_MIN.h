@@ -3,7 +3,7 @@
 
 #include "builtin/__INTPTR_WIDTH__.h"
 #include "c/intptr_t.h"
-#include "c/_c_namespace.h"
+#include "_internal/_c_namespace.h"
 
 _c_namespace
 

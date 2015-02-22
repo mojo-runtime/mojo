@@ -1,7 +1,7 @@
 #ifndef c_F_SETLK_h_
 #define c_F_SETLK_h_
 
-#include "_define/F_.h"
+#include "_internal/_c_define_F_.h"
 
 #ifdef __linux__
 #  if defined(__alpha__) || defined(__sparc__)

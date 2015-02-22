@@ -1,7 +1,7 @@
 #ifndef c_POLLIN_h_
 #define c_POLLIN_h_
 
-#include "_define/POLL.h"
+#include "_internal/_c_define_POLL.h"
 
 #ifdef __linux__
 _c_define_POLL(IN, 1);

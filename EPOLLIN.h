@@ -1,7 +1,7 @@
 #ifndef c_EPOLLIN_h_
 #define c_EPOLLIN_h_
 
-#include "_define/EPOLL.h"
+#include "_internal/_c_define_EPOLL.h"
 
 #ifdef __linux__
 #  include "POLLIN.h"

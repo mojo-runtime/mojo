@@ -2,7 +2,7 @@
 #define c_INT_FAST32_MIN_h_
 
 #include "c/int_fast32_t.h"
-#include "c/_c_namespace.h"
+#include "_internal/_c_namespace.h"
 
 _c_namespace
 

@@ -3,7 +3,7 @@
 
 #include "builtin/__INTMAX_MAX__.h"
 #include "c/intmax_t.h"
-#include "c/_c_namespace.h"
+#include "_internal/_c_namespace.h"
 
 _c_namespace
 

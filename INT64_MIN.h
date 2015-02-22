@@ -2,7 +2,7 @@
 #define c_INT64_MIN_h_
 
 #include "c/int64_t.h"
-#include "c/_c_namespace.h"
+#include "_internal/_c_namespace.h"
 
 _c_namespace
 

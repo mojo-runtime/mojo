@@ -3,7 +3,7 @@
 
 #include "builtin/__PTRDIFF_MAX__.h"
 #include "c/ptrdiff_t.h"
-#include "c/_c_namespace.h"
+#include "_internal/_c_namespace.h"
 
 _c_namespace
 

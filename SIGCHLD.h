@@ -1,7 +1,7 @@
 #ifndef c_SIGCHLD_h_
 #define c_SIGCHLD_h_
 
-#include "_define/SIG.h"
+#include "_internal/_c_define_SIG.h"
 
 #ifdef __linux__
 #  ifdef __x86_64__

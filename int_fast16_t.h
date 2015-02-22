@@ -2,7 +2,7 @@
 #define c_int_fast16_t_h_
 
 #include "builtin/__INT_FAST16_TYPE__.h"
-#include "c/_c_namespace.h"
+#include "_internal/_c_namespace.h"
 
 _c_namespace
 

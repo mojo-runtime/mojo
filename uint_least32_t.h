@@ -2,7 +2,7 @@
 #define c_uint_least32_t_h_
 
 #include "builtin/__UINT_LEAST32_TYPE__.h"
-#include "c/_c_namespace.h"
+#include "_internal/_c_namespace.h"
 
 _c_namespace
 

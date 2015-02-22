@@ -1,7 +1,7 @@
 #ifndef c_EPOLLOUT_h_
 #define c_EPOLLOUT_h_
 
-#include "_define/EPOLL.h"
+#include "_internal/_c_define_EPOLL.h"
 
 #ifdef __linux__
 #  include "POLLOUT.h"

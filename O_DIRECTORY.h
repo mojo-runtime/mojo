@@ -1,7 +1,7 @@
 #ifndef c_O_DIRECTORY_h_
 #define c_O_DIRECTORY_h_
 
-#include "_define/O_.h"
+#include "_internal/_c_define_O_.h"
 
 #ifdef __linux__
 #  ifdef __x86_64__

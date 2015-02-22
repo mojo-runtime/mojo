@@ -1,7 +1,7 @@
 #ifndef c_struct_linux_dirent_h_
 #define c_struct_linux_dirent_h_
 
-#include "c/_c_namespace.h"
+#include "_internal/_c_namespace.h"
 
 _c_namespace
 

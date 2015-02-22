@@ -1,10 +1,10 @@
 #ifndef c_TCGETS_h_
 #define c_TCGETS_h_
 
-#include "_define/TC.h"
+#include "_internal/_c_define_ioctl.h"
 
 #ifdef __linux__
-_c_define_TC(GETS, 0x5401);
+_c_define_ioctl(TCGETS, 0x5401);
 #else
 #  error
 #endif

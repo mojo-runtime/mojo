@@ -2,7 +2,7 @@
 #define c_uint32_t_h_
 
 #include "builtin/__UINT32_TYPE__.h"
-#include "c/_c_namespace.h"
+#include "_internal/_c_namespace.h"
 
 _c_namespace
 

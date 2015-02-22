@@ -1,7 +1,7 @@
 #ifndef c_ESPIPE_h_
 #define c_ESPIPE_h_
 
-#include "_define/E.h"
+#include "_internal/_c_define_E.h"
 
 #ifdef __linux__
 _c_define_E(SPIPE, 29);

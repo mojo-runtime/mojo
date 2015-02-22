@@ -3,7 +3,7 @@
 
 #include "builtin/__UINT_LEAST32_MAX__.h"
 #include "c/uint_least32_t.h"
-#include "c/_c_namespace.h"
+#include "_internal/_c_namespace.h"
 
 _c_namespace
 

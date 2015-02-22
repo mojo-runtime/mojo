@@ -3,7 +3,7 @@
 
 #include "builtin/__INT_FAST32_MAX__.h"
 #include "c/int_fast32_t.h"
-#include "c/_c_namespace.h"
+#include "_internal/_c_namespace.h"
 
 _c_namespace
 
