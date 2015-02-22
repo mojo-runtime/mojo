@@ -1,8 +1,8 @@
 #ifndef c_epoll_data_t_h_
 #define c_epoll_data_t_h_
 
-#include "c/uint32_t.h"
-#include "c/uint64_t.h"
+#include "uint32_t.h"
+#include "uint64_t.h"
 
 _c_namespace
 

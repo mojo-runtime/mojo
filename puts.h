@@ -4,14 +4,14 @@
 #include "x/x_noexcept.h"
 #include "x/x_reinterpret_cast.h"
 
-#include "c/EOF.h"
-#include "c/STDOUT_FILENO.h"
-#include "c/SYS_write.h"
-#include "c/alloca.h"
-#include "c/memcpy.h"
-#include "c/strlen.h"
-#include "c/_c_syscall3.h"
-#include "c/_c_syscall_failed.h"
+#include "EOF.h"
+#include "STDOUT_FILENO.h"
+#include "SYS_write.h"
+#include "alloca.h"
+#include "memcpy.h"
+#include "strlen.h"
+#include "_c_syscall3.h"
+#include "_c_syscall_failed.h"
 
 _c_namespace
 

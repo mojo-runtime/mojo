@@ -1,7 +1,7 @@
 #ifndef c_ssize_t_h_
 #define c_ssize_t_h_
 
-#include "c/ptrdiff_t.h"
+#include "ptrdiff_t.h"
 
 _c_namespace
 

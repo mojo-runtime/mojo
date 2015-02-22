@@ -1,8 +1,8 @@
 #ifndef c_struct_epoll_event_h_
 #define c_struct_epoll_event_h_
 
-#include "c/epoll_data_t.h"
-#include "c/uint32_t.h"
+#include "epoll_data_t.h"
+#include "uint32_t.h"
 
 _c_namespace
 

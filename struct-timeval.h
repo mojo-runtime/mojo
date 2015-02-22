@@ -1,8 +1,8 @@
 #ifndef c_struct_timeval_h_
 #define c_struct_timeval_h_
 
-#include "c/time_t.h"
-#include "c/suseconds_t.h"
+#include "time_t.h"
+#include "suseconds_t.h"
 
 _c_namespace
 

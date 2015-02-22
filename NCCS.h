@@ -1,7 +1,7 @@
 #ifndef c_NCCS_h_
 #define c_NCCS_h_
 
-#include "c/size_t.h"
+#include "size_t.h"
 
 _c_namespace
 

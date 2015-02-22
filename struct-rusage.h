@@ -1,7 +1,7 @@
 #ifndef c_struct_rusage_h_
 #define c_struct_rusage_h_
 
-#include "c/struct-timeval.h"
+#include "struct-timeval.h"
 
 _c_namespace
 

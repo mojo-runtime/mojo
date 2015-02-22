@@ -3,8 +3,8 @@
 
 #include "x/x_noexcept.h"
 
-#include "c/pid_t.h"
-#include "c/SYS_getpid.h"
+#include "pid_t.h"
+#include "SYS_getpid.h"
 
 _c_namespace
 

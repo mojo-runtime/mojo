@@ -4,7 +4,7 @@
 #include "x/x_noexcept.h"
 #include "x/x_reinterpret_cast.h"
 
-#include "c/size_t.h"
+#include "size_t.h"
 
 _c_namespace
 

@@ -1,7 +1,7 @@
 #ifndef c_strlen_h_
 #define c_strlen_h_
 
-#include "c/size_t.h"
+#include "size_t.h"
 #include "x/x_constexpr.h"
 
 _c_namespace

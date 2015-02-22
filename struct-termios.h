@@ -1,10 +1,10 @@
 #ifndef c_struct_termios_h_
 #define c_struct_termios_h_
 
-#include "c/NCCS.h"
-#include "c/cc_t.h"
-#include "c/speed_t.h"
-#include "c/tcflag_t.h"
+#include "NCCS.h"
+#include "cc_t.h"
+#include "speed_t.h"
+#include "tcflag_t.h"
 
 _c_namespace
 

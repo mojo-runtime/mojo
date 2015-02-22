@@ -5,7 +5,7 @@
 #include "x/x_noexcept.h"
 #include "x/x_noreturn.h"
 
-#include "c/SYS_exit.h"
+#include "SYS_exit.h"
 
 _c_namespace
 
