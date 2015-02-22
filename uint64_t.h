@@ -1,12 +1,15 @@
 #ifndef c_uint64_t_h_
 #define c_uint64_t_h_
 
-#include "builtin/__UINT64_TYPE__.h"
 #include "_internal/_c_namespace.h"
 
 _c_namespace
 
+#ifdef __UINT64_TYPE__
 typedef __UINT64_TYPE__ uint64_t;
+#else
+#  error
+#endif
 
 _c_namespace_end
 

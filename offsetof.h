@@ -1,4 +1,7 @@
 #ifndef offsetof
-#  include "builtin/__builtin_offsetof.h"
-#  define offsetof(x, y) __builtin_offsetof(x, y)
+#  ifdef __GNUC__
+#    define offsetof __builtin_offsetof
+#  else
+#    error
+#  endif
 #endif

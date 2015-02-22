@@ -1,12 +1,17 @@
 #ifndef c_wint_t_h_
 #define c_wint_t_h_
 
-#include "builtin/__WINT_TYPE__.h"
 #include "_internal/_c_namespace.h"
 
 _c_namespace
 
-typedef __WINT_TYPE__ wint_t;
+typedef
+#ifdef __WINT_TYPE__
+__WINT_TYPE__
+#else
+#  error
+#endif
+wint_t;
 
 _c_namespace_end
 

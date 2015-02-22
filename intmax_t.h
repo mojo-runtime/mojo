@@ -1,12 +1,17 @@
 #ifndef c_intmax_t_h_
 #define c_intmax_t_h_
 
-#include "builtin/__INTMAX_TYPE__.h"
 #include "_internal/_c_namespace.h"
 
 _c_namespace
 
-typedef __INTMAX_TYPE__ intmax_t;
+typedef
+#ifdef __INTMAX_TYPE__
+__INTMAX_TYPE__
+#else
+#  error
+#endif
+intmax_t;
 
 _c_namespace_end
 
