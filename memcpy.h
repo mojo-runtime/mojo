@@ -6,7 +6,7 @@
 
 #include "c/size_t.h"
 
-__c_namespace_open
+_c_namespace
 
 static inline
 void
@@ -36,6 +36,6 @@ memcpy(void* target, const void* source, size_t bytes) x_noexcept
     return target;
 }
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

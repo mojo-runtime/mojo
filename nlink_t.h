@@ -1,7 +1,7 @@
 #ifndef c_nlink_t_h_
 #define c_nlink_t_h_
 
-__c_namespace_open
+_c_namespace
 
 typedef
 #ifdef __linux__
@@ -15,6 +15,6 @@ unsigned long // uint64_t
 #endif
 nlink_t;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

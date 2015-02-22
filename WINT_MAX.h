@@ -3,14 +3,14 @@
 
 #include "builtin/__WINT_MAX__.h"
 #include "c/wint_t.h"
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 static
 const wint_t
 WINT_MAX = __WINT_MAX__;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

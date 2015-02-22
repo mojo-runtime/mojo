@@ -13,7 +13,7 @@
 #include "c/_c_syscall3.h"
 #include "c/_c_syscall_failed.h"
 
-__c_namespace_open
+_c_namespace
 
 static
 int
@@ -42,6 +42,6 @@ puts(const char* string) x_noexcept
     ) ? EOF : 1; // nonnegative number on success
 }
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

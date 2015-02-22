@@ -1,9 +1,9 @@
 #ifndef _c_define_constant
-#  include "../__c_namespace.h"
+#  include "../_c_namespace.h"
 #  define _c_define_constant(Type, name, value)  \
-    __c_namespace_open \
+    _c_namespace \
     static \
     const Type \
     name = value; \
-    __c_namespace_close
+    _c_namespace_end
 #endif

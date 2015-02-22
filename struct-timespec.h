@@ -3,7 +3,7 @@
 
 #include "c/time_t.h"
 
-__c_namespace_open
+_c_namespace
 
 struct timespec
 {
@@ -18,6 +18,6 @@ struct timespec
 #endif
 };
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

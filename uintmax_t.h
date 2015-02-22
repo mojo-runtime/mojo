@@ -2,12 +2,12 @@
 #define c_uintmax_t_h_
 
 #include "builtin/__UINTMAX_TYPE__.h"
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 typedef __UINTMAX_TYPE__ uintmax_t;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

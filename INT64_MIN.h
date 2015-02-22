@@ -2,14 +2,14 @@
 #define c_INT64_MIN_h_
 
 #include "c/int64_t.h"
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 static
 const int64_t
 INT64_MIN = -9223372036854775807L - 1; // -2^(64-1), with compiler happiness
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

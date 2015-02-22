@@ -1,7 +1,7 @@
 #ifndef c_struct_pt_regs_h_
 #define c_struct_pt_regs_h_
 
-__c_namespace_open
+_c_namespace
 
 // Used by Linux, but there's no reason to enforce that.
 
@@ -35,6 +35,6 @@ struct pt_regs
 #endif
 };
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

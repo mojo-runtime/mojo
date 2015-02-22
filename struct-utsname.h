@@ -1,9 +1,9 @@
 #ifndef c_struct_utsname_h_
 #define c_struct_utsname_h_
 
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 struct utsname
 {
@@ -19,6 +19,6 @@ struct utsname
 #endif
 };
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

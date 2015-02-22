@@ -3,14 +3,14 @@
 
 #include "builtin/__INT_FAST32_MAX__.h"
 #include "c/int_fast32_t.h"
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 static
 const int_fast32_t
 INT_FAST32_MAX = __INT_FAST32_MAX__;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

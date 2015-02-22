@@ -3,14 +3,14 @@
 
 #include "builtin/__INT_MAX__.h"
 #include "c/size_t.h"
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 static
 const size_t
 SIZE_MAX = __SIZE_MAX__;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

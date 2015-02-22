@@ -3,14 +3,14 @@
 
 #include "builtin/__UINT8_MAX__.h"
 #include "c/uint8_t.h"
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 static
 const uint8_t
 UINT8_MAX = __UINT8_MAX__;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

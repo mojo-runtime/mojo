@@ -2,12 +2,12 @@
 #define c_uint64_t_h_
 
 #include "builtin/__UINT64_TYPE__.h"
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 typedef __UINT64_TYPE__ uint64_t;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

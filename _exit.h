@@ -7,7 +7,7 @@
 
 #include "c/SYS_exit.h"
 
-__c_namespace_open
+_c_namespace
 
 x_noreturn
 static
@@ -26,6 +26,6 @@ _exit(int status) x_noexcept
     __builtin_unreachable();
 }
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

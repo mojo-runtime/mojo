@@ -6,7 +6,7 @@
 #include "c/sigval_t.h"
 #include "c/uid_t.h"
 
-__c_namespace_open
+_c_namespace
 
 typedef struct siginfo
 {
@@ -167,6 +167,6 @@ siginfo_t;
 #define si_syscall   _sifields._sigsys._syscall
 #define si_arch      _sifields._sigsys._arch
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

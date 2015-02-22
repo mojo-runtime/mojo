@@ -13,7 +13,7 @@
 #include "c/time_t.h"
 #include "c/uid_t.h"
 
-__c_namespace_open
+_c_namespace
 
 struct stat
 {
@@ -70,6 +70,6 @@ struct stat
     __unused[24];
 };
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

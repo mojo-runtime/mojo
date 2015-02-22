@@ -6,7 +6,7 @@
 #include "c/speed_t.h"
 #include "c/tcflag_t.h"
 
-__c_namespace_open
+_c_namespace
 
 struct termios
 {
@@ -33,6 +33,6 @@ struct termios
 #endif
 };
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

@@ -4,7 +4,7 @@
 #include "c/uint32_t.h"
 #include "c/uint64_t.h"
 
-__c_namespace_open
+_c_namespace
 
 #ifdef __linux__
 
@@ -31,6 +31,6 @@ epoll_data_t;
 #  error
 #endif
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

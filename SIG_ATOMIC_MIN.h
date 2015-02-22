@@ -3,14 +3,14 @@
 
 #include "builtin/__SIG_ATOMIC_MIN__.h"
 #include "c/sig_atomic_t.h"
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 static
 const sig_atomic_t
 SIG_ATOMIC_MIN = __SIG_ATOMIC_MIN__;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

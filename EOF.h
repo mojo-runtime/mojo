@@ -1,14 +1,14 @@
 #ifndef c_EOF_h_
 #define c_EOF_h_
 
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 static
 const int
 EOF = -1;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

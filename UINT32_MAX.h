@@ -3,14 +3,14 @@
 
 #include "builtin/__UINT32_MAX__.h"
 #include "c/uint32_t.h"
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 static
 const uint32_t
 UINT32_MAX = __UINT32_MAX__;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

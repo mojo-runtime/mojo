@@ -5,13 +5,13 @@
 // No need
 #else
 #  include "builtin/__WCHAR_TYPE__.h"
-#  include "c/__c_namespace.h"
+#  include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 typedef __WCHAR_TYPE__ wchar_t;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif // __cplusplus
 

@@ -4,7 +4,7 @@
 #include "c/time_t.h"
 #include "c/suseconds_t.h"
 
-__c_namespace_open
+_c_namespace
 
 struct timeval
 {
@@ -19,6 +19,6 @@ struct timeval
 #endif
 };
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

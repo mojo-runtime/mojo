@@ -3,14 +3,14 @@
 
 #include "builtin/__UINT16_MAX__.h"
 #include "c/uint16_t.h"
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 static
 const uint16_t
 UINT16_MAX = __UINT16_MAX__;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

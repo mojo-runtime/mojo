@@ -1,14 +1,14 @@
 #ifndef c_STDERR_FILENO_h_
 #define c_STDERR_FILENO_h_
 
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 static
 const int
 STDERR_FILENO = 2;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif

@@ -2,14 +2,14 @@
 #define c_INT_MAX_h_
 
 #include "builtin/__INT_MAX__.h"
-#include "c/__c_namespace.h"
+#include "c/_c_namespace.h"
 
-__c_namespace_open
+_c_namespace
 
 static
 const int
 INT_MAX = __INT_MAX__;
 
-__c_namespace_close
+_c_namespace_end
 
 #endif
