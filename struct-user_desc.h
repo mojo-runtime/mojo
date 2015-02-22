@@ -1,22 +1,26 @@
 #ifndef c_struct_user_desc_h_
 #define c_struct_user_desc_h_
 
+#if defined(__linux__) && defined(__x86_64__)
+#  include "uint32_t.h"
+
 struct user_desc
 {
-#if defined(__linux__) && defined(__x86_64__)
-    unsigned int entry_number;
-    unsigned int base_addr;
-    unsigned int limit;
-    unsigned int seg_32bit:1;
-    unsigned int contents:2;
-    unsigned int read_exec_only:1;
-    unsigned int limit_in_pages:1;
-    unsigned int seg_not_present:1;
-    unsigned int useable:1;
-    unsigned int lm:1;
+    uint32_t entry_number;
+    uint32_t base_addr;
+    uint32_t limit;
+    uint32_t seg_32bit:1;
+    uint32_t contents:2;
+    uint32_t read_exec_only:1;
+    uint32_t limit_in_pages:1;
+    uint32_t seg_not_present:1;
+    uint32_t useable:1;
+    uint32_t lm:1;
+    char __pad[3];
+};
+
 #else
 #  error
 #endif
-};
 
 #endif
