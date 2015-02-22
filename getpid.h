@@ -1,7 +1,8 @@
 #ifndef c_getpid_h_
 #define c_getpid_h_
 
-#include "c/noexcept.h"
+#include "x/x_noexcept.h"
+
 #include "c/pid_t.h"
 #include "c/SYS_getpid.h"
 
@@ -9,7 +10,7 @@ __c_namespace_open
 
 static
 pid_t
-getpid() noexcept
+getpid() x_noexcept
 {
     pid_t result;
 

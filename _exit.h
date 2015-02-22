@@ -2,16 +2,17 @@
 #define c_exit_h_
 
 #include "builtin/__builtin_unreachable.h"
-#include "c/noexcept.h"
+#include "x/x_noexcept.h"
+#include "x/x_noreturn.h"
+
 #include "c/SYS_exit.h"
-#include "c/_c_noreturn.h"
 
 __c_namespace_open
 
-_c_noreturn
+x_noreturn
 static
 void
-_exit(int status) noexcept
+_exit(int status) x_noexcept
 {
 #if defined(__linux__) && defined(__x86_64__)
     register int r1 __asm__ ("rdi") = status;

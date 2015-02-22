@@ -341,7 +341,6 @@
 #include "char32_t.h"
 #include "clock_t.h"
 #include "clockid_t.h"
-#include "decltype.h"
 #include "dev_t.h"
 #include "div_t.h"
 #include "epoll_data_t.h"
@@ -370,7 +369,6 @@
 #include "memcpy.h"
 #include "mode_t.h"
 #include "nlink_t.h"
-#include "noexcept.h"
 
 #ifndef __cplusplus
 #  include "noreturn.h"

@@ -4,8 +4,8 @@
 #include "_define/EPOLL.h"
 
 #ifdef __linux__
-#  include "_c_static_cast.h"
-_c_define_EPOLL(ET, _c_static_cast(int, 1u << 31));
+#  include "x/x_static_cast.h"
+_c_define_EPOLL(ET, x_static_cast(int, 1u << 31));
 #else
 #  error
 #endif

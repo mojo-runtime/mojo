@@ -1,5 +1,5 @@
 #ifndef _c_syscall4
-#  include "c/decltype.h"
+#  include "x/x_decltype.h"
 #  if defined(__linux__) && defined(__x86_64__)
      // FIXME: temporary _Pragma(...)
 #    pragma clang diagnostic ignored "-Wgnu-statement-expression"
@@ -7,10 +7,10 @@
     ({                                                                  \
         unsigned long result;                                           \
                                                                         \
-        register decltype(a1) r1 __asm__ ("rdi") = a1;                  \
-        register decltype(a2) r2 __asm__ ("rsi") = a2;                  \
-        register decltype(a3) r3 __asm__ ("rdx") = a3;                  \
-        register decltype(a4) r4 __asm__ ("r10") = a4;                  \
+        register x_decltype(a1) r1 __asm__ ("rdi") = a1;                \
+        register x_decltype(a2) r2 __asm__ ("rsi") = a2;                \
+        register x_decltype(a3) r3 __asm__ ("rdx") = a3;                \
+        register x_decltype(a4) r4 __asm__ ("r10") = a4;                \
                                                                         \
         __asm__ __volatile__ ("syscall"                                 \
                               : "=a" (result)                           \

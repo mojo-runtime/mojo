@@ -1,23 +1,24 @@
 #ifndef c_memcpy_h_
 #define c_memcpy_h_
 
-#include "c/noexcept.h"
+#include "x/x_noexcept.h"
+#include "x/x_reinterpret_cast.h"
+
 #include "c/size_t.h"
-#include "c/_c_reinterpret_cast.h"
 
 __c_namespace_open
 
 static inline
 void
-memcpy_(void* target, const void* source, size_t bytes) noexcept
+memcpy_(void* target, const void* source, size_t bytes) x_noexcept
 {
     // Placeholder implementation
 
     char*
-    target_bytes = _c_reinterpret_cast(char*, target);
+    target_bytes = x_reinterpret_cast(char*, target);
 
     const char*
-    source_bytes = _c_reinterpret_cast(const char*, source);
+    source_bytes = x_reinterpret_cast(const char*, source);
 
     char*
     target_bytes_end = target_bytes + bytes;
@@ -29,7 +30,7 @@ memcpy_(void* target, const void* source, size_t bytes) noexcept
 
 static inline
 void*
-memcpy(void* target, const void* source, size_t bytes) noexcept
+memcpy(void* target, const void* source, size_t bytes) x_noexcept
 {
     memcpy_(target, source, bytes);
     return target;
