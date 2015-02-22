@@ -6,7 +6,7 @@
 
 #include "size_t.h"
 
-static inline
+static
 void*
 memcpy(void* target, const void* source, size_t bytes) x_noexcept
 {

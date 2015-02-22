@@ -1,5 +1,7 @@
 // For internal testing only.
 
+#pragma clang diagnostic ignored "-Wunused-function"
+
 #include "AT_BASE.h"
 #include "AT_BASE_PLATFORM.h"
 #include "AT_CLKTCK.h"
