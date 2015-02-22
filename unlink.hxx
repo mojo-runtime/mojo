@@ -29,38 +29,38 @@ unlink(const char* pathname) noexcept
         // Write access to the directory containing `pathname` was not allowed
         // for the process's effective UID, or one of the directories in `pathname`
         // did not allow search permission.
-        EACCES = EACCES,
+        EACCES_ = EACCES,
 
         // The file `pathname` cannot be unlinked because it is being used by
         // the system or another process; for example, it is a mount point or
         // the NFS client software created it to represent an active
         // but otherwise nameless inode ("NFS silly renamed").
-        EBUSY = EBUSY,
+        EBUSY_ = EBUSY,
 
         // `pathname` points outside your accessible address space.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // An I/O error occurred.
-        EIO = EIO,
+        EIO_ = EIO,
 
         // `pathname` refers to a directory.
-        EISDIR = EISDIR,
+        EISDIR_ = EISDIR,
 
         // Too many symbolic links were encountered in translating `pathname`.
-        ELOOP = ELOOP,
+        ELOOP_ = ELOOP,
 
         // `pathname` was too long.
-        ENAMETOOLONG = ENAMETOOLONG,
+        ENAMETOOLONG_ = ENAMETOOLONG,
 
         // A component in `pathname` does not exist or is a dangling symbolic link,
         // or, `pathname` is empty.
-        ENOENT = ENOENT,
+        ENOENT_ = ENOENT,
 
         // Insufficient kernel memory was available.
-        ENOMEM = ENOMEM,
+        ENOMEM_ = ENOMEM,
 
         // A component used as a directory in `pathname` is not, in fact, a directory.
-        ENOTDIR = ENOTDIR,
+        ENOTDIR_ = ENOTDIR,
 
         // The filesystem does not allow unlinking of files.
         //
@@ -68,10 +68,10 @@ unlink(const char* pathname) noexcept
         // The directory containing pathname has the sticky bit (S_ISVTX) set and
         // the process's effective UID is neither the UID of the file to be deleted
         // nor that of the directory containing it, and the process is not privileged.
-        EPERM = EPERM,
+        EPERM_ = EPERM,
 
         // `pathname` refers to a file on a read-only filesystem.
-        EROFS = EROFS,
+        EROFS_ = EROFS,
     };
 
     return Result<void, Error>(x_syscall1(SYS_unlink, pathname));

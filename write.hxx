@@ -28,44 +28,44 @@ write(int fd, const void* buf, size_t count) noexcept
     {
         // The file descriptor `fd` has been marked nonblocking (O_NONBLOCK),
         // and the read would block.
-        EAGAIN_or_EWOULDBLOCK = EAGAIN,
+        EAGAIN_or_EWOULDBLOCK_ = EAGAIN,
 
         // `fd` is not a valid file descriptor or is not open for writing.
-        EBADF = EBADF,
+        EBADF_ = EBADF,
 
         // `fd` refers to a datagram socket for which a
         // peer address has not been set using connect(2).
-        EDESTADDRREQ = EDESTADDRREQ,
+        EDESTADDRREQ_ = EDESTADDRREQ,
 
         // The user's quota of disk blocks on the filesystem containing
         // the file referred to by `fd` has been exhausted.
-        EDQUOT = EDQUOT,
+        EDQUOT_ = EDQUOT,
 
         // `buf` is outside your accessible address space.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // An attempt was made to write a file that exceeds
         // the implementation-defined maximum file size or the process's file size limit,
         // or to write at a position past the maximum allowed offset.
-        EFBIG = EFBIG,
+        EFBIG_ = EFBIG,
 
         // The call was interrupted by a signal before any data was written.
-        EINTR = EINTR,
+        EINTR_ = EINTR,
 
         // `fd` is attached to an object which is unsuitable for writing;
         // or the file was opened with the O_DIRECT flag, and either
         // the address specified in `buf`, the value specified in `count`,
         // or the current file offset is not suitably aligned.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // A low-level I/O error occurred while modifying the inode.
-        EIO = EIO,
+        EIO_ = EIO,
 
         // The device containing the file referred to by `fd` has no room for the data.
-        ENOSPC = ENOSPC,
+        ENOSPC_ = ENOSPC,
 
         // `fd` is connected to a pipe or socket whose reading end is closed.
-        EPIPE = EPIPE,
+        EPIPE_ = EPIPE,
 
         // "Other errors may occur, depending on the object connected to fd."
         //   XXX: totally ignoring this
@@ -81,17 +81,17 @@ write(int fd, const T(& array)[n]) noexcept
 {
     enum Error
     {
-        EAGAIN_or_EWOULDBLOCK = EAGAIN,
-        EBADF                 = EBADF,
-        EDESTADDRREQ          = EDESTADDRREQ,
-        EDQUOT                = EDQUOT,
+        EAGAIN_or_EWOULDBLOCK_ = EAGAIN,
+        EBADF_                 = EBADF,
+        EDESTADDRREQ_          = EDESTADDRREQ,
+        EDQUOT_                = EDQUOT,
         // EFAULT
-        EFBIG                 = EFBIG,
-        EINTR                 = EINTR,
-        EINVAL                = EINVAL,
-        EIO                   = EIO,
-        ENOSPC                = ENOSPC,
-        EPIPE                 = EPIPE,
+        EFBIG_                 = EFBIG,
+        EINTR_                 = EINTR,
+        EINVAL_                = EINVAL,
+        EIO_                   = EIO,
+        ENOSPC_                = ENOSPC,
+        EPIPE_                 = EPIPE,
         // XXX: Other errors may occur, depending on the object connected to fd.
     };
 

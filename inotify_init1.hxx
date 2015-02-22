@@ -19,16 +19,16 @@ inotify_init1(int flags) noexcept
     enum Error
     {
         // An invalid value was specified in `flags`.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // The user limit on the total number of inotify instances has been reached.
-        EMFILE = EMFILE,
+        EMFILE_ = EMFILE,
 
         // The system limit on the total number of file descriptors has been reached.
-        ENFILE = ENFILE,
+        ENFILE_ = ENFILE,
 
         // Insufficient kernel memory is available.
-        ENOMEM = ENOMEM,
+        ENOMEM_ = ENOMEM,
     };
 
     return Result<int, Error>(x_syscall1(SYS_inotify_init1, flags));
@@ -41,9 +41,9 @@ inotify_init1() noexcept
     enum Error
     {
         // EINVAL
-        EMFILE = EMFILE,
-        ENFILE = ENFILE,
-        ENOMEM = ENOMEM,
+        EMFILE_ = EMFILE,
+        ENFILE_ = ENFILE,
+        ENOMEM_ = ENOMEM,
     };
 
     return inotify_init1(0)._with_error<Error>();

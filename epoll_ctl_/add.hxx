@@ -14,13 +14,13 @@ add(int epfd, int fd, struct epoll_event* event) noexcept
 {
     enum Error
     {
-        EBADF  = EBADF,
-        EEXIST = EEXIST,
-        EINVAL = EINVAL,
+        EBADF_ = EBADF,
+        EEXIST_ = EEXIST,
+        EINVAL_ = EINVAL,
         // ENOENT
-        ENOMEM = ENOMEM,
-        ENOSPC = ENOSPC,
-        EPERM  = EPERM,
+        ENOMEM_ = ENOMEM,
+        ENOSPC_ = ENOSPC,
+        EPERM_ = EPERM,
     };
 
     return epoll_ctl(epfd, EPOLL_CTL_ADD, fd, event)._with_error<Error>();

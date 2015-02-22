@@ -28,37 +28,37 @@ rmdir(const char* pathname) noexcept
     {
         // Write access to the directory containing `pathname` was not allowed, or
         // one of the directories in the path prefix of `pathname` did not allow search permission.
-        EACCES = EACCES,
+        EACCES_ = EACCES,
 
         // `pathname` is currently in use by the system or some process that prevents its removal.
         // On Linux this means `pathname` is currently used as a mount point or is the root
         // directory of the calling process.
-        EBUSY = EBUSY,
+        EBUSY_ = EBUSY,
 
         // `pathname` points outside your accessible address space.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // `pathname` has . as last component.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // Too many symbolic links were encountered in resolving pathname.
-        ELOOP = ELOOP,
+        ELOOP_ = ELOOP,
 
         // `pathname` was too long.
-        ENAMETOOLONG = ENAMETOOLONG,
+        ENAMETOOLONG_ = ENAMETOOLONG,
 
         // A directory component in `pathname` does not exist or is a dangling symbolic link.
-        ENOENT = ENOENT,
+        ENOENT_ = ENOENT,
 
         // Insufficient kernel memory was available.
-        ENOMEM = ENOMEM,
+        ENOMEM_ = ENOMEM,
 
         // A component used as a directory in `pathname` is not, in fact, a directory.
-        ENOTDIR = ENOTDIR,
+        ENOTDIR_ = ENOTDIR,
 
         // `pathname` contains entries other than . and .. ; or,
         // `pathname` has ..  as its final component.
-        ENOTEMPTY = ENOTEMPTY,
+        ENOTEMPTY_ = ENOTEMPTY,
 
         // The directory containing `pathname` has the sticky bit (S_ISVTX) set
         // and the process's effective user ID is neither the user ID of the file
@@ -66,10 +66,10 @@ rmdir(const char* pathname) noexcept
         // and the process is not privileged.
         //
         // The filesystem containing `pathname` does not support the removal of directories.
-        EPERM = EPERM,
+        EPERM_ = EPERM,
 
         // `pathname` refers to a directory on a read-only filesystem.
-        EROFS = EROFS,
+        EROFS_ = EROFS,
     };
 
     return Result<void, Error>(x_syscall1(SYS_rmdir, pathname));

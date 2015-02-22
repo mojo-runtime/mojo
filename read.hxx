@@ -24,16 +24,16 @@ read(int fd, void* buf, size_t count) noexcept
     {
         // The file descriptor `fd` has been marked nonblocking (O_NONBLOCK),
         // and the read would block.
-        EAGAIN_or_EWOULDBLOCK = EAGAIN,
+        EAGAIN_or_EWOULDBLOCK_ = EAGAIN,
 
         // `fd` is not a valid file descriptor or is not open for reading.
-        EBADF = EBADF,
+        EBADF_ = EBADF,
 
         // `buf` is outside your accessible address space.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // The call was interrupted by a signal before any data was read.
-        EINTR = EINTR,
+        EINTR_ = EINTR,
 
         // `fd` is attached to an object which is unsuitable for reading;
         // or the file was opened with the O_DIRECT flag, and either
@@ -42,13 +42,13 @@ read(int fd, void* buf, size_t count) noexcept
         //
         // `fd` was created via a call to timerfd_create(2) and
         // the wrong size buffer was given to read().
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // I/O error.
-        EIO = EIO,
+        EIO_ = EIO,
 
         // `fd` refers to a directory.
-        EISDIR = EISDIR,
+        EISDIR_ = EISDIR,
 
         // Other errors may occur, depending on the object connected to fd.
         //   XXX: totally ignoring this
@@ -65,12 +65,12 @@ read(int fd, T(& array)[n]) noexcept
     enum Error
     {
         EAGAIN_or_EWOULDBLOCK = EAGAIN,
-        EBADF                 = EBADF,
+        EBADF_                = EBADF,
         // EFAULT
-        EINTR                 = EINTR,
-        EINVAL                = EINVAL,
-        EIO                   = EIO,
-        EISDIR                = EISDIR,
+        EINTR_                = EINTR,
+        EINVAL_               = EINVAL,
+        EIO_                  = EIO,
+        EISDIR_               = EISDIR,
         // XXX: Other errors may occur, depending on the object connected to fd.
     };
 

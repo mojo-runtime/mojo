@@ -31,13 +31,13 @@ mmap(void* addr, size_t length, int prot, int flags, int fd, off_t offset) noexc
         // Or MAP_SHARED was requested and PROT_WRITE is set,
         // but `fd` is not open in read/write (O_RDWR) mode.
         // Or PROT_WRITE is set, but the file is append-only.
-        EACCES = EACCES,
+        EACCES_ = EACCES,
 
         // The file has been locked, or too much memory has been locked (see setrlimit(2)).
-        EAGAIN = EAGAIN,
+        EAGAIN_ = EAGAIN,
 
         // `fd` is not a valid file descriptor (and MAP_ANONYMOUS was not set).
-        EBADF = EBADF,
+        EBADF_ = EBADF,
 
         // We don't like `addr`, `length`, or `offset`
         // (e.g., they are too large, or not aligned on a page boundary).
@@ -45,29 +45,29 @@ mmap(void* addr, size_t length, int prot, int flags, int fd, off_t offset) noexc
         // (since Linux 2.6.12) `length` was 0.
         //
         // `flags` contained neither MAP_PRIVATE or MAP_SHARED, or contained both of these values.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // The system limit on the total number of open files has been reached.
-        ENFILE = ENFILE,
+        ENFILE_ = ENFILE,
 
         // The underlying filesystem of the specified file does not support memory mapping.
-        ENODEV = ENODEV,
+        ENODEV_ = ENODEV,
 
         // No memory is available, or
         // the process's maximum number of mappings would have been exceeded.
-        ENOMEM = ENOMEM,
+        ENOMEM_ = ENOMEM,
 
         // On 32-bit architecture together with the large file extension (i.e., using 64-bit off_t):
         // the number of pages used for `length` plus number of pages used for `offset`
         // would overflow unsigned long (32 bits).
-        EOVERFLOW = EOVERFLOW,
+        EOVERFLOW_ = EOVERFLOW,
 
         // The `prot` argument asks for PROT_EXEC
         // but the mapped area belongs to a file on a filesystem that was mounted no-exec.
-        EPERM = EPERM,
+        EPERM_ = EPERM,
 
         // MAP_DENYWRITE was set but the object specified by `fd` is open for writing.
-        ETXTBSY = ETXTBSY,
+        ETXTBSY_ = ETXTBSY,
     };
 
     return Result<void*, Error>(x_syscall6(SYS_mmap, addr, length, prot, flags, fd, offset));

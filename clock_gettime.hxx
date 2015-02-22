@@ -19,10 +19,10 @@ clock_gettime(clockid_t clk_id, struct timespec* tp) noexcept
     enum Error
     {
         // `tp` points outside the accessible address space.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // The `clk_id` specified is not supported on this system.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
     };
 
     return Result<void, Error>(x_syscall2(SYS_clock_gettime, clk_id, tp));

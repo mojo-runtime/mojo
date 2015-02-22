@@ -24,36 +24,36 @@ stat(const char* pathname, struct stat* buf) noexcept
     enum Error
     {
         // Search permission is denied for one of the directories in the path prefix of `pathname`.
-        EACCES = EACCES,
+        EACCES_ = EACCES,
 
         // `fd` is bad.
         // EBADF
 
         // Bad address.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // Too many symbolic links encountered while traversing the path.
-        ELOOP = ELOOP,
+        ELOOP_ = ELOOP,
 
         // `pathname` is too long.
-        ENAMETOOLONG = ENAMETOOLONG,
+        ENAMETOOLONG_ = ENAMETOOLONG,
 
         // A component of `pathname` does not exist.
         //
         // `pathname is an empty string.
-        ENOENT = ENOENT,
+        ENOENT_ = ENOENT,
 
         // Out of (kernel) memory.
-        ENOMEM = ENOMEM,
+        ENOMEM_ = ENOMEM,
 
         // A component of the path prefix of `pathname` is not a directory.
-        ENOTDIR = ENOTDIR,
+        ENOTDIR_ = ENOTDIR,
 
         // `pathname` refers to a file whose size, inode number, or number of blocks
         // cannot be represented in, respectively, the types off_t, ino_t, or blkcnt_t.
         // This error can occur when, for example, an application compiled on a 32-bit platform
         // without -D_FILE_OFFSET_BITS=64 calls stat() on a file whose size exceeds (1<<31)-1 bytes.
-        EOVERFLOW = EOVERFLOW,
+        EOVERFLOW_ = EOVERFLOW,
     };
 
     return Result<void, Error>(x_syscall2(SYS_stat, pathname, buf));
@@ -65,14 +65,14 @@ stat(const char* pathname, struct stat& buf) noexcept
 {
     enum Error
     {
-        EACCES       = EACCES,
+        EACCES_       = EACCES,
         // EFAULT
-        ELOOP        = ELOOP,
-        ENAMETOOLONG = ENAMETOOLONG,
-        ENOENT       = ENOENT,
-        ENOMEM       = ENOMEM,
-        ENOTDIR      = ENOTDIR,
-        EOVERFLOW    = EOVERFLOW,
+        ELOOP_        = ELOOP,
+        ENAMETOOLONG_ = ENAMETOOLONG,
+        ENOENT_       = ENOENT,
+        ENOMEM_       = ENOMEM,
+        ENOTDIR_      = ENOTDIR,
+        EOVERFLOW_    = EOVERFLOW,
     };
 
     return Result<void, Error>(x_syscall2(SYS_stat, pathname, &buf));

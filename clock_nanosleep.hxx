@@ -20,17 +20,17 @@ clock_nanosleep(clockid_t clock_id, int flags, const struct timespec* request, s
     enum Error
     {
         // `request` or `remain` specified an invalid address.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // The sleep was interrupted by a signal handler.
-        EINTR = EINTR,
+        EINTR_ = EINTR,
 
         // The value in the `tv_nsec` field was not in the range 0 to 999999999.
         //
         // `tv_sec` was negative.
         //
         // `clock_id` was invalid.  (CLOCK_THREAD_CPUTIME_ID is not a permitted value for clock_id.)
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
     };
 
     return Result<void, Error>(x_syscall4(SYS_clock_nanosleep, clock_id, flags, request, remain));

@@ -16,10 +16,10 @@ tcgets(int fd, struct termios* buffer) noexcept
 {
     enum Error
     {
-        EBADF  = EBADF,  // bad `fd`
-        EFAULT = EFAULT, // bad `buffer`
-        //     = EINVAL, // bad `TCGETS`
-        ENOTTY = ENOTTY, // `fd` is not a terminal descriptor
+        EBADF_ = EBADF,  // bad `fd`
+        EFAULT_ = EFAULT, // bad `buffer`
+        //    _ = EINVAL, // bad `TCGETS`
+        ENOTTY_ = ENOTTY, // `fd` is not a terminal descriptor
     };
 
     return ioctl(fd, TCGETS, buffer)._with_error<Error>();

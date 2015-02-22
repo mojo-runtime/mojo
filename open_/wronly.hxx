@@ -14,29 +14,29 @@ wronly(const char* pathname) noexcept
 {
     enum Error
     {
-        EACCES       = EACCES,
+        EACCES_       = EACCES,
         // EDQUOT
         // EEXIST
-        EFAULT       = EFAULT,
-        EFBIG        = EFBIG,
-        EINTR        = EINTR,
+        EFAULT_       = EFAULT,
+        EFBIG_        = EFBIG,
+        EINTR_        = EINTR,
         // EINVAL
-        EISDIR       = EISDIR,
-        ELOOP        = ELOOP,
-        EMFILE       = EMFILE,
-        ENAMETOOLONG = ENAMETOOLONG,
-        ENFILE       = ENFILE,
-        ENODEV       = ENODEV,
-        ENOENT       = ENOENT,
-        ENOMEM       = ENOMEM,
+        EISDIR_       = EISDIR,
+        ELOOP_        = ELOOP,
+        EMFILE_       = EMFILE,
+        ENAMETOOLONG_ = ENAMETOOLONG,
+        ENFILE_       = ENFILE,
+        ENODEV_       = ENODEV,
+        ENOENT_       = ENOENT,
+        ENOMEM_       = ENOMEM,
         // ENOSPC
-        ENOTDIR      = ENOTDIR,
-        ENXIO        = ENXIO,
+        ENOTDIR_      = ENOTDIR,
+        ENXIO_        = ENXIO,
         // EOPNOTSUPP
         // EOVERFLOW
         // EPERM
-        EROFS        = EROFS,
-        ETXTBSY      = ETXTBSY,
+        EROFS_        = EROFS,
+        ETXTBSY_      = ETXTBSY,
         // EWOULDBLOCK
     };
 

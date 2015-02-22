@@ -16,13 +16,13 @@ anonymous(void* addr, size_t length, int prot, int flags) noexcept
     enum Error
     {
         // EACCES
-        EAGAIN    = EAGAIN, // → Too much memory has been locked
+        EAGAIN_    = EAGAIN,    // → Too much memory has been locked
         // EBADF
-        EINVAL    = EINVAL,
-        ENFILE    = ENFILE,
+        EINVAL_    = EINVAL,
+        ENFILE_    = ENFILE,
         // ENODEV
-        ENOMEM    = ENOMEM,
-        EOVERFLOW = EOVERFLOW, // This might be for files only?
+        ENOMEM_    = ENOMEM,
+        EOVERFLOW_ = EOVERFLOW, // This might be for files only?
         // EPERM
         // ETXTBSY
     };

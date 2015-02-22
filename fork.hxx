@@ -25,14 +25,14 @@ fork() noexcept
         // the caller's RLIMIT_NPROC resource limit was encountered.
         // To exceed this limit, the process must have either the CAP_SYS_ADMIN
         // or the CAP_SYS_RESOURCE capability.
-        EAGAIN = EAGAIN,
+        EAGAIN_ = EAGAIN,
 
         // fork() failed to allocate the necessary kernel structures because memory is tight.
-        ENOMEM = ENOMEM,
+        ENOMEM_ = ENOMEM,
 
         // fork() is not supported on this platform
         // (for example, hardware without a Memory-Management Unit).
-        ENOSYS = ENOSYS,
+        ENOSYS_ = ENOSYS,
     };
 
     return Result<pid_t, Error>(x_syscall0(SYS_fork));

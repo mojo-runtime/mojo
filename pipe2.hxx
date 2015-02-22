@@ -19,16 +19,16 @@ pipe2(int pipefd[2], int flags) noexcept
     enum Error
     {
         // `pipefd` is not valid.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // Invalid value in `flags`.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // Too many file descriptors are in use by the process.
-        EMFILE = EMFILE,
+        EMFILE_ = EMFILE,
 
         // The system limit on the total number of open files has been reached.
-        ENFILE = ENFILE,
+        ENFILE_ = ENFILE,
     };
 
     return Result<void, Error>(x_syscall2(SYS_pipe2, pipefd, flags));
@@ -40,10 +40,10 @@ pipe2(int pipefd[2]) noexcept
 {
     enum Error
     {
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
         // EINVAL
-        EMFILE = EMFILE,
-        ENFILE = ENFILE,
+        EMFILE_ = EMFILE,
+        ENFILE_ = ENFILE,
     };
 
     return pipe2(pipefd, 0)._with_error<Error>();

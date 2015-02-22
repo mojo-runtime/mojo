@@ -17,11 +17,11 @@ inotify_rm_watch(int fd, int wd) noexcept
     enum Error
     {
         // `fd` is not a valid file descriptor.
-        EBADF = EBADF,
+        EBADF_ = EBADF,
 
         // The watch descriptor `wd` is not valid; or
         // `fd` is not an inotify file descriptor.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
     };
 
     return Result<void, Error>(x_syscall2(SYS_inotify_rm_watch, fd, wd));

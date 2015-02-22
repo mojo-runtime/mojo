@@ -27,24 +27,24 @@ fcntl(int fd, int cmd, Arg arg) noexcept
     enum Error
     {
         // Operation is prohibited by locks held by other processes.
-        EACCES = EACCES,
+        EACCES_ = EACCES,
 
         // Operation is prohibited by locks held by other processes.
         //
         // The operation is prohibited because the file has been memory-mapped by another process.
-        EAGAIN = EAGAIN,
+        EAGAIN_ = EAGAIN,
 
         // `fd` is not an open file descriptor.
         //
         // The command was F_SETLK or F_SETLKW
         // and the file descriptor open mode doesn't match with the type of lock requested.
-        EBADF = EBADF,
+        EBADF_ = EBADF,
 
         // It was detected that the specified F_SETLKW command would cause a deadlock.
-        EDEADLK = EDEADLK,
+        EDEADLK_ = EDEADLK,
 
         // `lock` is outside your accessible address space.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // For F_SETLKW,
         // the command was interrupted by a signal; see signal(7).
@@ -53,28 +53,28 @@ fcntl(int fd, int cmd, Arg arg) noexcept
         // the command was interrupted by a signal before the lock was checked or acquired.
         // Most likely when locking a remote file (e.g., locking over NFS),
         // but can sometimes happen locally.
-        EINTR = EINTR,
+        EINTR_ = EINTR,
 
         // For F_DUPFD,
         // `arg` is negative or is greater than the maximum allowable value.
         //
         // For F_SETSIG,
         // `arg` is not an allowable signal number.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // For F_DUPFD,
         // the process already has the maximum number of file descriptors open.
-        EMFILE = EMFILE,
+        EMFILE_ = EMFILE,
 
         // Too many segment locks open.
         //
         // Lock table is full.
         //
         // A remote locking protocol failed (e.g., locking over NFS).
-        ENOLCK = ENOLCK,
+        ENOLCK_ = ENOLCK,
 
         // Attempted to clear the O_APPEND flag on a file that has the append-only attribute set.
-        EPERM = EPERM,
+        EPERM_ = EPERM,
     };
 
     return Result<Ok, Error>(x_syscall3(SYS_fcntl, fd, cmd, arg));

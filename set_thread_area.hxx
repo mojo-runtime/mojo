@@ -19,13 +19,13 @@ set_thread_area(struct user_desc* u_info) noexcept
     enum Error
     {
         // `u_info` is an invalid pointer.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // `u_info->entry_number` is out of bounds.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // A free TLS entry count not be located.
-        ESRCH = ESRCH,
+        ESRCH_ = ESRCH,
     };
 
     return Result<void, Error>(x_syscall1(SYS_set_thread_area, u_info));

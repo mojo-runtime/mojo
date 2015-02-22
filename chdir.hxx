@@ -25,28 +25,28 @@ chdir(const char* path) noexcept
     enum Error
     {
         // Search permission is denied for one of the components of `path`.
-        EACCES = EACCES,
+        EACCES_ = EACCES,
 
         // `path` points outside your accessible address space.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // An I/O error occurred.
-        EIO = EIO,
+        EIO_ = EIO,
 
         // Too many symbolic links were encountered in resolving `path`.
-        ELOOP = ELOOP,
+        ELOOP_ = ELOOP,
 
         // `path` is too long.
-        ENAMETOOLONG = ENAMETOOLONG,
+        ENAMETOOLONG_ = ENAMETOOLONG,
 
         // The file does not exist.
-        ENOENT = ENOENT,
+        ENOENT_ = ENOENT,
 
         // Insufficient kernel memory was available.
-        ENOMEM = ENOMEM,
+        ENOMEM_ = ENOMEM,
 
         // A component of `path` is not a directory.
-        ENOTDIR = ENOTDIR,
+        ENOTDIR_ = ENOTDIR,
     };
 
     return Result<void, Error>(x_syscall1(SYS_chdir, path));

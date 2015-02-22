@@ -24,30 +24,30 @@ inotify_add_watch(int fd, const char* pathname, uint32_t mask) noexcept
     enum Error
     {
         // Read access to the given file is not permitted.
-        EACCES = EACCES,
+        EACCES_ = EACCES,
 
         // The given file descriptor is not valid.
-        EBADF = EBADF,
+        EBADF_ = EBADF,
 
         // `pathname` points outside of the process's accessible address space.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // The given event mask contains no valid events; or
         // `fd` is not an inotify file descriptor.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // `pathname` is too long.
-        ENAMETOOLONG = ENAMETOOLONG,
+        ENAMETOOLONG_ = ENAMETOOLONG,
 
         // A directory component in `pathname` does not exist or is a dangling symbolic link.
-        ENOENT = ENOENT,
+        ENOENT_ = ENOENT,
 
         // Insufficient kernel memory was available.
-        ENOMEM = ENOMEM,
+        ENOMEM_ = ENOMEM,
 
         // The user limit on the total number of inotify watches was reached
         // or the kernel failed to allocate a needed resource.
-        ENOSPC = ENOSPC,
+        ENOSPC_ = ENOSPC,
     };
 
     return Result<int, Error>(x_syscall3(SYS_inotify_add_watch, fd, pathname, mask));

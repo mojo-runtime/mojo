@@ -25,13 +25,13 @@ waitid(idtype_t idtype, id_t id, siginfo_t* infop, int options, struct rusage* u
         // The process specified by (id) does not exist or is not a child of the calling process.
         // (This can happen for one's own child if the action for SIGCHLD is set to SIG_IGN.
         // See also the Linux Notes section about threads.)
-        ECHILD = ECHILD,
+        ECHILD_ = ECHILD,
 
         // WNOHANG was not set and an unblocked signal or a SIGCHLD was caught; see signal(7).
-        EINTR = EINTR,
+        EINTR_ = EINTR,
 
         // The `options` argument was invalid.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
     };
 
     return Result<pid_t, Error>(

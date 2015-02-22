@@ -19,10 +19,10 @@ fchdir(int fd) noexcept
     enum Error
     {
         // Search permission was denied on the directory open on `fd`.
-        EACCES = EACCES,
+        EACCES_ = EACCES,
 
         // `fd` is not a valid file descriptor.
-        EBADF = EBADF,
+        EBADF_ = EBADF,
 
         // ENOTDIR, I imagine?
     };

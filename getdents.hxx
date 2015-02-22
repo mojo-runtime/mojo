@@ -22,19 +22,19 @@ getdents(/* unsigned */ int fd, struct linux_dirent* dirp, unsigned int count) n
     enum Error
     {
         // Invalid file descriptor `fd`.
-        EBADF = EBADF,
+        EBADF_ = EBADF,
 
         // Argument points outside the calling process's address space.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // Result buffer is too small.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // No such directory.
-        ENOENT = ENOENT,
+        ENOENT_ = ENOENT,
 
         // File descriptor does not refer to a directory.
-        ENOTDIR = ENOTDIR,
+        ENOTDIR_ = ENOTDIR,
     };
 
     // On success, the number of bytes read is returned.

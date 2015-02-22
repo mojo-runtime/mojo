@@ -30,46 +30,46 @@ mkdir(const char* pathname, mode_t mode) noexcept
     {
         // The parent directory does not allow write permission to the process,
         // or one of the directories in `pathname` did not allow search permission.
-        EACCES = EACCES,
+        EACCES_ = EACCES,
 
         // The user's quota of disk blocks or inodes on the filesystem has been exhausted.
-        EDQUOT = EDQUOT,
+        EDQUOT_ = EDQUOT,
 
         // `pathname` already exists (not necessarily as a directory).
         // This includes the case where `pathname` is a symbolic link, dangling or not.
-        EEXIST = EEXIST,
+        EEXIST_ = EEXIST,
 
         // `pathname` points outside your accessible address space.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // Too many symbolic links were encountered in resolving `pathname`.
-        ELOOP = ELOOP,
+        ELOOP_ = ELOOP,
 
         // The number of links to the parent directory would exceed LINK_MAX.
-        EMLINK = EMLINK,
+        EMLINK_ = EMLINK,
 
         // `pathname` was too long.
-        ENAMETOOLONG = ENAMETOOLONG,
+        ENAMETOOLONG_ = ENAMETOOLONG,
 
         // A directory component in `pathname` does not exist or is a dangling symbolic link.
-        ENOENT = ENOENT,
+        ENOENT_ = ENOENT,
 
         // Insufficient kernel memory was available.
-        ENOMEM = ENOMEM,
+        ENOMEM_ = ENOMEM,
 
         // The device containing `pathname` has no room for the new directory.
         //
         // The new directory cannot be created because the user's disk quota is exhausted.
-        ENOSPC = ENOSPC,
+        ENOSPC_ = ENOSPC,
 
         // A component used as a directory in `pathname` is not, in fact, a directory.
-        ENOTDIR = ENOTDIR,
+        ENOTDIR_ = ENOTDIR,
 
         // The filesystem containing `pathname` does not support the creation of directories.
-        EPERM = EPERM,
+        EPERM_ = EPERM,
 
         // `pathname` refers to a file on a read-only filesystem.
-        EROFS = EROFS,
+        EROFS_ = EROFS,
     };
 
     return Result<void, Error>(x_syscall2(SYS_mkdir, pathname, mode));

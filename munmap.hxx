@@ -17,7 +17,7 @@ open(void* addr, size_t length) noexcept
     enum Error
     {
         // XXX: documentation sucks
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
     };
 
     return Result<void, Error>(x_syscall2(SYS_munmap, addr, length));

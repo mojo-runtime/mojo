@@ -29,46 +29,46 @@ symlink(const char* target, const char* linkpath) noexcept
     {
         // Write access to the directory containing `linkpath` is denied, or
         // one of the directories in the path prefix of `linkpath` did not allow search permission.
-        EACCES = EACCES,
+        EACCES_ = EACCES,
 
         // The user's quota of resources on the filesystem has been exhausted.
         // The resources could be inodes or disk blocks,
         // depending on the filesystem implementation.
-        EDQUOT = EDQUOT,
+        EDQUOT_ = EDQUOT,
 
         // `linkpath` already exists.
-        EEXIST = EEXIST,
+        EEXIST_ = EEXIST,
 
         // `target` or `linkpath` points outside your accessible address space.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // An I/O error occurred.
-        EIO = EIO,
+        EIO_ = EIO,
 
         // Too many symbolic links were encountered in resolving `linkpath`.
-        ELOOP = ELOOP,
+        ELOOP_ = ELOOP,
 
         // `target` or `linkpath` was too long.
-        ENAMETOOLONG = ENAMETOOLONG,
+        ENAMETOOLONG_ = ENAMETOOLONG,
 
         // A directory component in `linkpath` does not exist or is a dangling symbolic link,
         // or `target` is the empty string.
-        ENOENT = ENOENT,
+        ENOENT_ = ENOENT,
 
         // Insufficient kernel memory was available.
-        ENOMEM = ENOMEM,
+        ENOMEM_ = ENOMEM,
 
         // The device containing the file has no room for the new directory entry.
-        ENOSPC = ENOSPC,
+        ENOSPC_ = ENOSPC,
 
         // A component used as a directory in `linkpath` is not, in fact, a directory.
-        ENOTDIR = ENOTDIR,
+        ENOTDIR_ = ENOTDIR,
 
         // The filesystem containing `linkpath` does not support the creation of symbolic links.
-        EPERM = EPERM,
+        EPERM_ = EPERM,
 
         // `linkpath` is on a read-only filesystem.
-        EROFS = EROFS,
+        EROFS_ = EROFS,
     };
 
     return Result<void, Error>(x_syscall2(SYS_symlink, target, linkpath));

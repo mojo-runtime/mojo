@@ -14,13 +14,13 @@ mod(int epfd, int fd, struct epoll_event* event) noexcept
 {
     enum Error
     {
-        EBADF  = EBADF,
+        EBADF_ = EBADF,
         // EEXIST
-        EINVAL = EINVAL,
-        ENOENT = ENOENT,
-        ENOMEM = ENOMEM,
+        EINVAL_ = EINVAL,
+        ENOENT_ = ENOENT,
+        ENOMEM_ = ENOMEM,
         // ENOSPC
-        EPERM  = EPERM,
+        EPERM_ = EPERM,
     };
 
     return epoll_ctl(epfd, EPOLL_CTL_MOD, fd, event)._with_error<Error>();

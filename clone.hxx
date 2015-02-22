@@ -21,7 +21,7 @@ clone(unsigned long flags, void* child_stack, void* ptid, void* ctid, struct pt_
     enum Error
     {
         // Too many processes are already running.
-        EAGAIN = EAGAIN,
+        EAGAIN_ = EAGAIN,
 
         // CLONE_SIGHAND was specified, but CLONE_VM was not. (Since Linux 2.6.0-test6.)
         //
@@ -46,17 +46,17 @@ clone(unsigned long flags, void* child_stack, void* ptid, void* ctid, struct pt_
         //
         // CLONE_NEWUTS was specified in flags,
         // but the kernel was not configured with the CONFIG_UTS option.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // Cannot allocate sufficient memory to allocate a task structure for the child,
         // or to copy those parts of the caller's context that need to be copied.
-        ENOMEM = ENOMEM,
+        ENOMEM_ = ENOMEM,
 
         // CLONE_NEWIPC, CLONE_NEWNET, CLONE_NEWNS, CLONE_NEWPID, or CLONE_NEWUTS
         // was specified by an unprivileged process (process without CAP_SYS_ADMIN).
         //
         // CLONE_PID was specified by a process other than process 0.
-        EPERM = EPERM,
+        EPERM_ = EPERM,
     };
 
     return Result<pid_t, Error>(x_syscall5(SYS_clone, flags, child_stack, ptid, ctid, regs));

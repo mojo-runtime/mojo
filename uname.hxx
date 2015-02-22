@@ -17,7 +17,7 @@ uname(struct utsname* buf) noexcept
     enum Error
     {
         // `buf` is not valid.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
     };
 
     return Result<void, Error>(x_syscall1(SYS_uname, buf));

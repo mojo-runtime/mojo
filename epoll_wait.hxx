@@ -20,18 +20,18 @@ epoll_wait(int epfd, struct epoll_event* events, int maxevents, int timeout) noe
     enum Error
     {
         // `epfd` is not a valid file descriptor.
-        EBADF  = EBADF,
+        EBADF_ = EBADF,
 
         // The memory area pointed to by `events` is not accessible with write permissions.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // The call was interrupted by a signal handler before either
         // (1) any of the requested events occurred or (2) the timeout expired;
-        EINTR  = EINTR,
+        EINTR_ = EINTR,
 
         // `epfd` is not an epoll file descriptor, or
         // `maxevents` is less than or equal to zero.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
     };
 
     // When successful, epoll_wait() returns the number of file descriptors

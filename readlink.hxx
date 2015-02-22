@@ -25,33 +25,33 @@ readlink(const char* pathname, char* buf, size_t bufsiz) noexcept
     enum Error
     {
         // Search permission is denied for a component of the path prefix.
-        EACCES = EACCES,
+        EACCES_ = EACCES,
 
         // `buf` extends outside the process's allocated address space.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // `bufsiz` is not positive.
         //
         // The named file is not a symbolic link.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // An I/O error occurred while reading from the filesystem.
-        EIO = EIO,
+        EIO_ = EIO,
 
         // Too many symbolic links were encountered in translating the pathname.
-        ELOOP = ELOOP,
+        ELOOP_ = ELOOP,
 
         // A pathname, or a component of a pathname, was too long.
-        ENAMETOOLONG = ENAMETOOLONG,
+        ENAMETOOLONG_ = ENAMETOOLONG,
 
         // The named file does not exist.
-        ENOENT = ENOENT,
+        ENOENT_ = ENOENT,
 
         // Insufficient kernel memory was available.
-        ENOMEM = ENOMEM,
+        ENOMEM_ = ENOMEM,
 
         // A component of the path prefix is not a directory.
-        ENOTDIR = ENOTDIR,
+        ENOTDIR_ = ENOTDIR,
     };
 
     return Result<size_t, Error>(x_syscall3(SYS_readlink, pathname, buf, bufsiz));

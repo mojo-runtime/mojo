@@ -18,13 +18,13 @@ close(int fd) noexcept
     enum Error
     {
         // `fd` isn't a valid open file descriptor.
-        EBADF = EBADF,
+        EBADF_ = EBADF,
 
         // The close() call was interrupted by a signal; see signal(7).
-        EINTR = EINTR,
+        EINTR_ = EINTR,
 
         // An I/O error occurred.
-        EIO = EIO,
+        EIO_ = EIO,
     };
 
     return Result<void, Error>(x_syscall1(SYS_close, fd));

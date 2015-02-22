@@ -22,21 +22,21 @@ getcwd(char* buf, size_t size) noexcept
     enum Error
     {
         // Permission to read or search a component of the filename was denied.
-        EACCES = EACCES,
+        EACCES_ = EACCES,
 
         // `buf` points to a bad address.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // The `size` argument is zero and `buf` is not a null pointer.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // The current working directory has been unlinked.
-        ENOENT = ENOENT,
+        ENOENT_ = ENOENT,
 
         // The size argument is less than the length of the absolute pathname
         // of the working directory, including the terminating null byte.
         // You need to allocate a bigger array and try again.
-        ERANGE = ERANGE,
+        ERANGE_ = ERANGE,
     };
 
     // "On success, these functions return a pointer to a string

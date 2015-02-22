@@ -24,19 +24,19 @@ ioctl(int fd, int request, Arg arg) noexcept
     enum Error
     {
         // `d` is not a valid descriptor.
-        EBADF = EBADF,
+        EBADF_ = EBADF,
 
         // `argp` references an inaccessible memory area.
-        EFAULT = EFAULT,
+        EFAULT_ = EFAULT,
 
         // `request` or `argp` is not valid.
-        EINVAL = EINVAL,
+        EINVAL_ = EINVAL,
 
         // `d` is not associated with a character special device.
         //
         // The specified request does not apply to the kind of object
         // that the descriptor `d` references.
-        ENOTTY = ENOTTY,
+        ENOTTY_ = ENOTTY,
     };
 
     return Result<void, Error>(x_syscall3(SYS_ioctl, fd, request, arg));

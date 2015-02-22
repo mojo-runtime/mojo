@@ -15,9 +15,9 @@ getfl(int fd) noexcept
 {
     enum Error
     {
-        EACCES = EACCES,
-        EAGAIN = EAGAIN,
-        EBADF  = EBADF, // → `fd` is not an open file descriptor
+        EACCES_ = EACCES,
+        EAGAIN_ = EAGAIN,
+        EBADF_ = EBADF, // → `fd` is not an open file descriptor
         // EDEADLK
         // EFAULT
         // EINTR
