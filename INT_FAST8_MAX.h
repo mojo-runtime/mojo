@@ -1,16 +1,7 @@
-#ifndef c_INT_FAST8_MAX_h_
-#define c_INT_FAST8_MAX_h_
-
-#include "builtin/__INT_FAST8_MAX__.h"
-#include "c/int_fast8_t.h"
-#include "_internal/_c_namespace.h"
-
-_c_namespace
-
-static
-const int_fast8_t
-INT_FAST8_MAX = __INT_FAST8_MAX__;
-
-_c_namespace_end
-
+#ifdef INT_FAST8_MAX
+#  ifdef __INT_FAST8_MAX__
+#    define INT_FAST8_MAX __INT_FAST8_MAX__
+#  else
+#    error
+#  endif
 #endif

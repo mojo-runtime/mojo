@@ -1,16 +1,11 @@
-#ifndef c_WINT_MAX_h_
-#define c_WINT_MAX_h_
-
-#include "builtin/__WINT_MAX__.h"
-#include "c/wint_t.h"
-#include "_internal/_c_namespace.h"
-
-_c_namespace
-
-static
-const wint_t
-WINT_MAX = __WINT_MAX__;
-
-_c_namespace_end
-
+#ifndef WINT_MAX
+#  ifdef __WINT_MAX__
+#    define WINT_MAX __WINT_MAX__
+#  elif defined(__WINT_UNSIGNED__) && defined(__WINT_WIDTH__)
+#    if __WINT_UNSIGNED__ && __WINT_WIDTH__ == 32
+#      define WINT_MAX (4294967295u)
+#    else
+#      error
+#    endif
+#  endif
 #endif

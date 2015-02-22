@@ -1,4 +1,9 @@
 #ifndef INT16_C
-#  include "builtin/__INT16_C.h"
-#  define INT16_C(x) __INT16_C(x)
+#  ifdef __INT16_C
+#    define INT16_C(x) __INT16_C(x)
+#  elif defined(__INT16_C_SUFFIX__)
+#    define INT16_C(x) x ## __INT16_C_SUFFIX__
+#  else
+#    error
+#  endif
 #endif

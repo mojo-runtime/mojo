@@ -1,16 +1,12 @@
-#ifndef c_WCHAR_MIN_h_
-#define c_WCHAR_MIN_h_
-
-#include "builtin/__WCHAR_MIN__.h"
-#include "c/wchar_t.h"
-#include "_internal/_c_namespace.h"
-
-_c_namespace
-
-static
-const wchar_t
-WCHAR_MIN = __WCHAR_MIN__;
-
-_c_namespace_end
-
+#ifndef WCHAR_MIN
+#  ifdef __WCHAR_MIN__
+#    define WCHAR_MIN __WCHAR_MIN__
+#  elif defined(__WCHAR_WIDTH__)
+#    include "WCHAR_MAX.h"
+#    if WCHAR_MAX == 2147483647
+#      define WCHAR_MIN (-2147483648)
+#    else
+#      error
+#    endif
+#  endif
 #endif

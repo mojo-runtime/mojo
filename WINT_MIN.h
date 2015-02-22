@@ -1,16 +1,9 @@
-#ifndef c_WINT_MIN_h_
-#define c_WINT_MIN_h_
-
-#include "builtin/__WINT_MIN__.h"
-#include "c/wint_t.h"
-#include "_internal/_c_namespace.h"
-
-_c_namespace
-
-static
-const wint_t
-WINT_MIN = __WINT_MIN__;
-
-_c_namespace_end
-
+#ifndef WINT_MIN
+#  ifdef __WINT_MIN__
+#    define WINT_MIN __WINT_MIN__
+#  elif defined(__WINT_UNSIGNED__)
+#    define WINT_MIN (0u)
+#  else
+#    error
+#  endif
 #endif

@@ -1,16 +1,7 @@
-#ifndef c_UINTPTR_MAX_h_
-#define c_UINTPTR_MAX_h_
-
-#include "builtin/__UINTPTR_MAX__.h"
-#include "c/uintptr_t.h"
-#include "_internal/_c_namespace.h"
-
-_c_namespace
-
-static
-const uintptr_t
-UINTPTR_MAX = __UINTPTR_MAX__;
-
-_c_namespace_end
-
+#ifndef UINTPTR_MAX
+#  ifdef __UINTPTR_MAX__
+#    define UINTPTR_MAX __UINTPTR_MAX__
+#  else
+#    error
+#  endif
 #endif
