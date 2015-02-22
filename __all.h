@@ -380,7 +380,6 @@
 #include "offsetof.h"
 #include "pid_t.h"
 #include "ptrdiff_t.h"
-#include "puts.h"
 #include "sig_atomic_t.h"
 #include "sighandler_t.h"
 #include "siginfo_t.h"
