@@ -1,1 +1,0 @@
-_posix/stropts.h
