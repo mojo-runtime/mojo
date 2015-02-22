@@ -21,8 +21,8 @@
 
 // Temporarily define whether this is the case.
 
-#if __LP64__
-#  define _c_stdint_64 1
+#ifdef __INTMAX_WIDTH__
+#  define _c_stdint_64 (__INTMAX_WIDTH__ >= 64)
 #else
 #  error todo
 #endif
