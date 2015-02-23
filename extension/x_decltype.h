@@ -1,9 +1,10 @@
 #ifndef x_decltype
-#  if defined(__cplusplus) && __cplusplus >= 201103L
+#  include "has/cxx/decltype.h"
+#  if has_cxx_decltype
 #    define x_decltype decltype
-#  elif defined(__GNUC__)
-#    define x_decltype __typeof__
-#  else
-#    error
 #  endif
+#endif
+
+#ifndef x_decltype
+#  error
 #endif
