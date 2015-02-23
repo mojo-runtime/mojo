@@ -29,7 +29,8 @@ epoll_wait(int epfd, struct epoll_event* events, int maxevents, int timeout) noe
         // (1) any of the requested events occurred or (2) the timeout expired;
         EINTR_ = EINTR,
 
-        // `epfd` is not an epoll file descriptor, or
+        // `epfd` is not an epoll file descriptor.
+        //
         // `maxevents` is less than or equal to zero.
         EINVAL_ = EINVAL,
     };

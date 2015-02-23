@@ -27,8 +27,9 @@ unlink(const char* pathname) noexcept
     enum Error
     {
         // Write access to the directory containing `pathname` was not allowed
-        // for the process's effective UID, or one of the directories in `pathname`
-        // did not allow search permission.
+        // for the process's effective UID.
+        //
+        // One of the directories in `pathname` did not allow search permission.
         EACCES_ = EACCES,
 
         // The file `pathname` cannot be unlinked because it is being used by
@@ -52,8 +53,9 @@ unlink(const char* pathname) noexcept
         // `pathname` was too long.
         ENAMETOOLONG_ = ENAMETOOLONG,
 
-        // A component in `pathname` does not exist or is a dangling symbolic link,
-        // or, `pathname` is empty.
+        // A component in `pathname` does not exist or is a dangling symbolic link.
+        //
+        // `pathname` is empty.
         ENOENT_ = ENOENT,
 
         // Insufficient kernel memory was available.

@@ -26,8 +26,9 @@ rmdir(const char* pathname) noexcept
 {
     enum Error
     {
-        // Write access to the directory containing `pathname` was not allowed, or
-        // one of the directories in the path prefix of `pathname` did not allow search permission.
+        // Write access to the directory containing `pathname` was not allowed.
+        //
+        // One of the directories in the path prefix of `pathname` did not allow search permission.
         EACCES_ = EACCES,
 
         // `pathname` is currently in use by the system or some process that prevents its removal.
@@ -56,7 +57,8 @@ rmdir(const char* pathname) noexcept
         // A component used as a directory in `pathname` is not, in fact, a directory.
         ENOTDIR_ = ENOTDIR,
 
-        // `pathname` contains entries other than . and .. ; or,
+        // `pathname` contains entries other than . and ..
+        //
         // `pathname` has ..  as its final component.
         ENOTEMPTY_ = ENOTEMPTY,
 

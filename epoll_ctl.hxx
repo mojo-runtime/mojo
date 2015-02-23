@@ -29,8 +29,11 @@ epoll_ctl(int epfd, int op, int fd, struct epoll_event* event) noexcept
         // `fd` is already registered with this epoll instance.
         EEXIST_ = EEXIST,
 
-        // `epfd` is not an epoll file descriptor, or `fd` is the same as `epfd`,
-        // or the requested operation `op` is not supported by this interface.
+        // `epfd` is not an epoll file descriptor.
+        //
+        // `fd` is the same as `epfd`.
+        //
+        // The requested operation `op` is not supported by this interface.
         EINVAL_ = EINVAL,
 
         // `op` was EPOLL_CTL_MOD or EPOLL_CTL_DEL, and

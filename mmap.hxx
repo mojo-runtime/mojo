@@ -27,13 +27,18 @@ mmap(void* addr, size_t length, int prot, int flags, int fd, off_t offset) noexc
     enum Error
     {
         // A file descriptor refers to a non-regular file.
-        // Or a file mapping was requested, but fd is not open for reading.
-        // Or MAP_SHARED was requested and PROT_WRITE is set,
+        //
+        // A file mapping was requested, but fd is not open for reading.
+        //
+        // MAP_SHARED was requested and PROT_WRITE is set,
         // but `fd` is not open in read/write (O_RDWR) mode.
-        // Or PROT_WRITE is set, but the file is append-only.
+        //
+        // PROT_WRITE is set, but the file is append-only.
         EACCES_ = EACCES,
 
-        // The file has been locked, or too much memory has been locked (see setrlimit(2)).
+        // The file has been locked.
+        //
+        // Too much memory has been locked (see setrlimit(2)).
         EAGAIN_ = EAGAIN,
 
         // `fd` is not a valid file descriptor (and MAP_ANONYMOUS was not set).
@@ -53,8 +58,9 @@ mmap(void* addr, size_t length, int prot, int flags, int fd, off_t offset) noexc
         // The underlying filesystem of the specified file does not support memory mapping.
         ENODEV_ = ENODEV,
 
-        // No memory is available, or
-        // the process's maximum number of mappings would have been exceeded.
+        // No memory is available.
+        //
+        // The process's maximum number of mappings would have been exceeded.
         ENOMEM_ = ENOMEM,
 
         // On 32-bit architecture together with the large file extension (i.e., using 64-bit off_t):

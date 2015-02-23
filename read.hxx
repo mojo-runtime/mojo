@@ -35,8 +35,9 @@ read(int fd, void* buf, size_t count) noexcept
         // The call was interrupted by a signal before any data was read.
         EINTR_ = EINTR,
 
-        // `fd` is attached to an object which is unsuitable for reading;
-        // or the file was opened with the O_DIRECT flag, and either
+        // `fd` is attached to an object which is unsuitable for reading.
+        //
+        // The file was opened with the O_DIRECT flag, and either
         // the address specified in `buf`, the value specified in `count`,
         // or the current file offset is not suitably aligned.
         //

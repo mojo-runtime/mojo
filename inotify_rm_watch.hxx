@@ -19,7 +19,8 @@ inotify_rm_watch(int fd, int wd) noexcept
         // `fd` is not a valid file descriptor.
         EBADF_ = EBADF,
 
-        // The watch descriptor `wd` is not valid; or
+        // The watch descriptor `wd` is not valid.
+        //
         // `fd` is not an inotify file descriptor.
         EINVAL_ = EINVAL,
     };

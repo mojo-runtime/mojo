@@ -32,7 +32,8 @@ inotify_add_watch(int fd, const char* pathname, uint32_t mask) noexcept
         // `pathname` points outside of the process's accessible address space.
         EFAULT_ = EFAULT,
 
-        // The given event mask contains no valid events; or
+        // The given event mask contains no valid events.
+        //
         // `fd` is not an inotify file descriptor.
         EINVAL_ = EINVAL,
 
@@ -45,8 +46,9 @@ inotify_add_watch(int fd, const char* pathname, uint32_t mask) noexcept
         // Insufficient kernel memory was available.
         ENOMEM_ = ENOMEM,
 
-        // The user limit on the total number of inotify watches was reached
-        // or the kernel failed to allocate a needed resource.
+        // The user limit on the total number of inotify watches was reached.
+        //
+        // The kernel failed to allocate a needed resource.
         ENOSPC_ = ENOSPC,
     };
 

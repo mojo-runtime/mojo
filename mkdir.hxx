@@ -28,8 +28,9 @@ mkdir(const char* pathname, mode_t mode) noexcept
 {
     enum Error
     {
-        // The parent directory does not allow write permission to the process,
-        // or one of the directories in `pathname` did not allow search permission.
+        // The parent directory does not allow write permission to the process.
+        //
+        // One of the directories in `pathname` did not allow search permission.
         EACCES_ = EACCES,
 
         // The user's quota of disk blocks or inodes on the filesystem has been exhausted.

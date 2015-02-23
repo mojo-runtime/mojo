@@ -30,7 +30,9 @@ write(int fd, const void* buf, size_t count) noexcept
         // and the read would block.
         EAGAIN_or_EWOULDBLOCK_ = EAGAIN,
 
-        // `fd` is not a valid file descriptor or is not open for writing.
+        // `fd` is not a valid file descriptor.
+        //
+        // `fd` is not open for writing.
         EBADF_ = EBADF,
 
         // `fd` refers to a datagram socket for which a
@@ -52,8 +54,9 @@ write(int fd, const void* buf, size_t count) noexcept
         // The call was interrupted by a signal before any data was written.
         EINTR_ = EINTR,
 
-        // `fd` is attached to an object which is unsuitable for writing;
-        // or the file was opened with the O_DIRECT flag, and either
+        // `fd` is attached to an object which is unsuitable for writing.
+        //
+        // The file was opened with the O_DIRECT flag, and either
         // the address specified in `buf`, the value specified in `count`,
         // or the current file offset is not suitably aligned.
         EINVAL_ = EINVAL,

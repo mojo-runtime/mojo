@@ -29,7 +29,9 @@ ioctl(int fd, int request, Arg arg) noexcept
         // `argp` references an inaccessible memory area.
         EFAULT_ = EFAULT,
 
-        // `request` or `argp` is not valid.
+        // `request` is not valid.
+        //
+        // `argp` is not valid.
         EINVAL_ = EINVAL,
 
         // `d` is not associated with a character special device.

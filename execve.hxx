@@ -74,8 +74,9 @@ execve(const char* filename, char* const argv[], char* const envp[]) noexcept
         // The system limit on the total number of open files has been reached.
         ENFILE_ = ENFILE,
 
-        // The file `filename` or a script or ELF interpreter does not exist,
-        // or a shared library needed for file or interpreter cannot be found.
+        // The file `filename` or a script or ELF interpreter does not exist.
+        //
+        // A shared library needed for file or interpreter cannot be found.
         ENOENT_ = ENOENT,
 
         // An executable is not in a recognized format, is for the wrong architecture,

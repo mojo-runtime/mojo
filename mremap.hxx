@@ -42,7 +42,8 @@ mremap(void* old_address, size_t old_size, size_t new_size, int flags) noexcept
 
         // The  memory  area  cannot  be  expanded at the current virtual address,
         // and the MREMAP_MAYMOVE flag is not set in flags.
-        // Or, there is not enough (virtual) memory available.
+        //
+        // There is not enough (virtual) memory available.
         ENOMEM_ = ENOMEM,
     };
 

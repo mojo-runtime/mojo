@@ -27,8 +27,9 @@ symlink(const char* target, const char* linkpath) noexcept
 {
     enum Error
     {
-        // Write access to the directory containing `linkpath` is denied, or
-        // one of the directories in the path prefix of `linkpath` did not allow search permission.
+        // Write access to the directory containing `linkpath` is denied.
+        //
+        // One of the directories in the path prefix of `linkpath` did not allow search permission.
         EACCES_ = EACCES,
 
         // The user's quota of resources on the filesystem has been exhausted.
@@ -51,8 +52,9 @@ symlink(const char* target, const char* linkpath) noexcept
         // `target` or `linkpath` was too long.
         ENAMETOOLONG_ = ENAMETOOLONG,
 
-        // A directory component in `linkpath` does not exist or is a dangling symbolic link,
-        // or `target` is the empty string.
+        // A directory component in `linkpath` does not exist or is a dangling symbolic link.
+        //
+        // `target` is the empty string.
         ENOENT_ = ENOENT,
 
         // Insufficient kernel memory was available.
