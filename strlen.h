@@ -1,23 +1,18 @@
 #ifndef c_strlen_h_
 #define c_strlen_h_
 
-#include "_c_constexpr.h"
-
+#include "has/builtin/strlen.h"
 #include "size_t.h"
 
-static _c_constexpr
+static
 size_t
 strlen(const char* data)
 {
-    size_t
-    result = 0;
-
-    while (*data != '\0') {
-        result += 1;
-        data   += 1;
-    }
-
-    return result;
+#if has_builtin_strlen
+    return __builtin_strlen(data);
+#else
+#  error
+#endif
 }
 
 #endif
