@@ -346,6 +346,13 @@
 #include "div_t.h"
 #include "epoll_data_t.h"
 #include "false.h"
+#include "getegid.h"
+#include "geteuid.h"
+#include "getgid.h"
+#include "getpid.h"
+#include "getppid.h"
+#include "gettid.h"
+#include "getuid.h"
 #include "gid_t.h"
 #include "id_t.h"
 #include "idtype_t.h"
@@ -369,11 +376,7 @@
 #include "memcpy.h"
 #include "mode_t.h"
 #include "nlink_t.h"
-
-#ifndef __cplusplus
-#  include "noreturn.h"
-#endif
-
+#include "noreturn.h"
 #include "off_t.h"
 #include "offsetof.h"
 #include "pid_t.h"
