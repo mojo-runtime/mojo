@@ -2,7 +2,8 @@
 #  ifdef __has_feature
 #    define has_cxx_digit_separators __has_feature(cxx_digit_separators)
 #  elif defined __GNUC__
-#    error todo - 4.9 (N3797)
+#    include "has/gcc/minor.h"
+#    define has_cxx_digit_separators has_gcc_minor(4, 9) // XXX: N3797?
 #  else
 #    error todo
 #  endif
