@@ -10,6 +10,7 @@
 #include "huge_valf.h"
 #include "huge_vall.h"
 #include "memcmp.h"
+#include "memcpy.h"
 #include "memset.h"
 #include "offsetof.h"
 #include "operator_delete.h"
