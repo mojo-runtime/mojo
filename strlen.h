@@ -1,11 +1,11 @@
 #ifndef c_strlen_h_
 #define c_strlen_h_
 
-#include "x/constexpr.h"
+#include "_c_constexpr.h"
 
 #include "size_t.h"
 
-static x_constexpr
+static _c_constexpr
 size_t
 strlen(const char* data)
 {

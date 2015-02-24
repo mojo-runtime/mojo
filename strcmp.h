@@ -1,9 +1,9 @@
 #ifndef c_strcmp_h_
 #define c_strcmp_h_
 
-#include "x/constexpr.h"
+#include "_c_constexpr.h"
 
-static x_constexpr
+static _c_constexpr
 int
 strcmp(const char* x, const char* y)
 {
