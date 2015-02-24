@@ -11,7 +11,7 @@
 #include "size_t.h"
 
 #include "linux/Result.hxx"
-#include "linux/__call2.hxx"
+#include "_internal/_c_syscall2.h"
 
 namespace linux {
 
@@ -48,7 +48,7 @@ getcwd(char* buf, size_t size) noexcept
     // "The kernel system call just returns the length of the buffer filled
     // (which includes the ending '\0' character)"
 
-    return Result<size_t, Error>(__call2(SYS_getcwd, buf, size));
+    return Result<size_t, Error>(_c_syscall2(SYS_getcwd, buf, size));
 }
 
 } // namespace linux

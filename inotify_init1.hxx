@@ -8,7 +8,7 @@
 #include "SYS_inotify_init1.h"
 
 #include "linux/Result.hxx"
-#include "linux/__call1.hxx"
+#include "_internal/_c_syscall1.h"
 
 namespace linux {
 
@@ -31,7 +31,7 @@ inotify_init1(int flags) noexcept
         ENOMEM_ = ENOMEM,
     };
 
-    return Result<int, Error>(__call1(SYS_inotify_init1, flags));
+    return Result<int, Error>(_c_syscall1(SYS_inotify_init1, flags));
 }
 
 static inline

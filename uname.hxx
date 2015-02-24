@@ -6,7 +6,7 @@
 #include "struct-utsname.h"
 
 #include "linux/Result.hxx"
-#include "linux/__call1.hxx"
+#include "_internal/_c_syscall1.h"
 
 namespace linux {
 
@@ -20,7 +20,7 @@ uname(struct utsname* buf) noexcept
         EFAULT_ = EFAULT,
     };
 
-    return Result<void, Error>(__call1(SYS_uname, buf));
+    return Result<void, Error>(_c_syscall1(SYS_uname, buf));
 }
 
 } // namespace linux

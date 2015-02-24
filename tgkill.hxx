@@ -7,7 +7,7 @@
 #include "SYS_tgkill.h"
 
 #include "linux/Result.hxx"
-#include "linux/__call3.hxx"
+#include "_internal/_c_syscall3.h"
 
 namespace linux {
 
@@ -27,7 +27,7 @@ tgkill(int tgid, int tid, int sig) noexcept
         ESRCH_ = ESRCH,
     };
 
-    return Result<void, Error>(__call3(SYS_tgkill, tgid, tid, sig));
+    return Result<void, Error>(_c_syscall3(SYS_tgkill, tgid, tid, sig));
 }
 
 } // namespace linux

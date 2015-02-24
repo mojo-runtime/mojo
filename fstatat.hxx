@@ -14,7 +14,7 @@
 #include "struct-stat.h"
 
 #include "linux/Result.hxx"
-#include "linux/__call4.hxx"
+#include "_internal/_c_syscall4.h"
 
 namespace linux {
 
@@ -65,7 +65,7 @@ fstatat(int dirfd, const char* pathname, struct stat* buf, int flags) noexcept
         EOVERFLOW_ = EOVERFLOW,
     };
 
-    return Result<void, Error>(__call4(SYS_fstatat, dirfd, pathname, buf, flags));
+    return Result<void, Error>(_c_syscall4(SYS_fstatat, dirfd, pathname, buf, flags));
 }
 
 static inline

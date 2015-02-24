@@ -28,7 +28,7 @@
 #include "SYS_open.h"
 
 #include "linux/Result.hxx"
-#include "linux/__call2.hxx"
+#include "_internal/_c_syscall2.h"
 
 namespace linux {
 
@@ -149,7 +149,7 @@ open(const char* pathname, int flags) noexcept
         EWOULDBLOCK_ = EWOULDBLOCK,
     };
 
-    return Result<int, Error>(__call2(SYS_open, pathname, flags));
+    return Result<int, Error>(_c_syscall2(SYS_open, pathname, flags));
 }
 
 } // namespace linux

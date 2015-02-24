@@ -9,8 +9,8 @@
 #include "size_t.h"
 
 #include "linux/Result.hxx"
-#include "linux/__call4.hxx"
-#include "linux/__call5.hxx"
+#include "_internal/_c_syscall4.h"
+#include "_internal/_c_syscall5.h"
 
 namespace linux {
 
@@ -48,7 +48,7 @@ mremap(void* old_address, size_t old_size, size_t new_size, int flags) noexcept
     };
 
     return Result<void, Error>(
-        __call4(SYS_mremap, old_address, old_size, new_size, flags)
+        _c_syscall4(SYS_mremap, old_address, old_size, new_size, flags)
     );
 }
 
@@ -57,7 +57,7 @@ auto
 mremap(void* old_address, size_t old_size, size_t new_size, int flags, void* new_address) noexcept
 {
     return decltype(mremap(old_address, old_size, new_size, flags))(
-        __call5(SYS_mremap, old_address, old_size, new_size, flags, new_address)
+        _c_syscall5(SYS_mremap, old_address, old_size, new_size, flags, new_address)
     );
 }
 

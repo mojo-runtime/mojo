@@ -4,7 +4,7 @@
 #include "SYS_getgid.h"
 #include "gid_t.h"
 
-#include "linux/__call0.hxx"
+#include "_internal/_c_syscall0.h"
 
 namespace linux {
 
@@ -12,7 +12,7 @@ static inline
 gid_t
 getgid() noexcept
 {
-    return static_cast<gid_t>(__call0(SYS_getgid));
+    return static_cast<gid_t>(_c_syscall0(SYS_getgid));
 }
 
 } // namespace linux

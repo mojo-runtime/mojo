@@ -8,7 +8,7 @@
 #include "pid_t.h"
 
 #include "linux/Result.hxx"
-#include "linux/__call2.hxx"
+#include "_internal/_c_syscall2.h"
 
 namespace linux {
 
@@ -29,7 +29,7 @@ kill(pid_t pid, int sig) noexcept
         ESRCH_ = ESRCH,
     };
 
-    return Result<void, Error>(__call2(SYS_kill, pid, sig));
+    return Result<void, Error>(_c_syscall2(SYS_kill, pid, sig));
 }
 
 } // namespace linux

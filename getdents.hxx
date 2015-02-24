@@ -11,7 +11,7 @@
 #include "struct-linux_dirent.h"
 
 #include "linux/Result.hxx"
-#include "linux/__call3.hxx"
+#include "_internal/_c_syscall3.h"
 
 namespace linux {
 
@@ -39,7 +39,7 @@ getdents(/* unsigned */ int fd, struct linux_dirent* dirp, unsigned int count) n
 
     // On success, the number of bytes read is returned.
 
-    return Result<size_t, Error>(__call3(SYS_getdents, fd, dirp, count));
+    return Result<size_t, Error>(_c_syscall3(SYS_getdents, fd, dirp, count));
 }
 
 } // namespace linux

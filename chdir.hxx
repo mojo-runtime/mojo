@@ -12,7 +12,7 @@
 #include "SYS_chdir.h"
 
 #include "linux/Result.hxx"
-#include "linux/__call1.hxx"
+#include "_internal/_c_syscall1.h"
 
 namespace linux {
 
@@ -49,7 +49,7 @@ chdir(const char* path) noexcept
         ENOTDIR_ = ENOTDIR,
     };
 
-    return Result<void, Error>(__call1(SYS_chdir, path));
+    return Result<void, Error>(_c_syscall1(SYS_chdir, path));
 }
 
 } // namespace linux

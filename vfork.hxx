@@ -11,7 +11,7 @@ static inline
 auto
 vfork() noexcept
 {
-    return decltype(fork())(__call0(SYS_vfork)); // Same Result
+    return decltype(fork())(_c_syscall0(SYS_vfork)); // Same Result
 }
 
 } // namespace linux

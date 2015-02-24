@@ -9,7 +9,7 @@
 #include "struct-stat.h"
 
 #include "linux/Result.hxx"
-#include "linux/__call2.hxx"
+#include "_internal/_c_syscall2.h"
 
 namespace linux {
 
@@ -35,7 +35,7 @@ fstat(int fd, struct stat* buf) noexcept
         EOVERFLOW_ = EOVERFLOW,
     };
 
-    return Result<void, Error>(__call2(SYS_fstat, fd, buf));
+    return Result<void, Error>(_c_syscall2(SYS_fstat, fd, buf));
 }
 
 } // namespace linux

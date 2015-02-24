@@ -3,7 +3,7 @@
 
 #include "SYS_exit.h"
 
-#include "linux/__call1.hxx"
+#include "_internal/_c_syscall1.h"
 
 namespace linux {
 
@@ -12,7 +12,7 @@ static inline
 void
 exit(int status) noexcept
 {
-    __call1(SYS_exit, status);
+    _c_syscall1(SYS_exit, status);
     __builtin_unreachable();
 }
 

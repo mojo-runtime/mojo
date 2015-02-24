@@ -3,7 +3,7 @@
 
 #include "SYS_pause.h"
 
-#include "linux/__call0.hxx"
+#include "_internal/_c_syscall0.h"
 
 namespace linux {
 
@@ -11,7 +11,7 @@ static inline
 void
 pause() noexcept
 {
-    __call0(SYS_pause);
+    _c_syscall0(SYS_pause);
 }
 
 } // namespace linux
