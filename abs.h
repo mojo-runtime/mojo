@@ -1,9 +1,7 @@
 #ifndef c_abs_h_
 #define c_abs_h_
 
-#include "_c_constexpr.h"
-
-static _c_constexpr
+static
 int
 abs(int x)
 {
