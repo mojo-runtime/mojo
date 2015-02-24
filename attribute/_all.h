@@ -17,6 +17,7 @@
 #include "packed.h"
 #include "pure.h"
 #include "transparent_union.h"
+#include "unavailable.h"
 #include "unused.h"
 #include "used.h"
 #include "visibility.h"
