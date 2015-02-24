@@ -1,10 +1,11 @@
 #ifndef c_exit_h_
 #define c_exit_h_
 
+#include "x/noexcept.h"
+#include "x/noreturn.h"
+#include "x/unreachable.h"
+
 #include "SYS_exit.h"
-#include "extension/x_noexcept.h"
-#include "extension/x_noreturn.h"
-#include "extension/x_unreachable.h"
 #include "extension/x_syscall1.h"
 
 x_noreturn

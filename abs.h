@@ -1,7 +1,7 @@
 #ifndef c_abs_h_
 #define c_abs_h_
 
-#include "extension/x_constexpr.h"
+#include "x/constexpr.h"
 
 static x_constexpr
 int

@@ -1,8 +1,9 @@
 #ifndef c_strlen_h_
 #define c_strlen_h_
 
+#include "x/constexpr.h"
+
 #include "size_t.h"
-#include "extension/x_constexpr.h"
 
 static x_constexpr
 size_t

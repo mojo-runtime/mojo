@@ -1,5 +1,5 @@
 #ifndef x_syscall5
-#  include "x_decltype.h"
+#  include "x/decltype.h"
 #  if defined(__linux__) && defined(__x86_64__)
      // FIXME: temporary _Pragma(...)
 #    pragma clang diagnostic ignored "-Wgnu-statement-expression"
