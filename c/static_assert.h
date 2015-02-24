@@ -2,7 +2,8 @@
 #  ifdef __has_feature
 #    define has_c_static_assert __has_feature(c_static_assert)
 #  elif defined __GNUC__
-#    error todo - GCC 4.6
+#    include "has/gcc/minor.h"
+#    define has_c_static_assert has_gcc_minor(4, 6)
 #  else
 #    error todo
 #  endif

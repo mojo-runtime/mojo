@@ -2,7 +2,8 @@
 #  ifdef __has_feature
 #    define has_cxx_relaxed_constexpr __has_feature(cxx_relaxed_constexpr)
 #  elif defined __GNUC__
-#    error todo - GCC 5
+#    include "has/gcc/major.h"
+#    define has_cxx_relaxed_constexpr has_gcc_major(5)
 #  else
 #    error todo
 #  endif

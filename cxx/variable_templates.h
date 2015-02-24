@@ -2,7 +2,8 @@
 #  ifdef __has_feature
 #    define has_cxx_variable_templates __has_feature(cxx_variable_templates)
 #  elif defined __GNUC__
-#    error todo - GCC 5
+#    include "has/gcc/major.h"
+#    define has_cxx_variable_templates has_gcc_major(5)
 #  else
 #    error todo
 #  endif
