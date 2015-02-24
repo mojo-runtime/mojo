@@ -1,14 +1,12 @@
 #ifndef c_memcpy_h_
 #define c_memcpy_h_
 
-#include "x/noexcept.h"
-
 #include "size_t.h"
 #include "_c_reinterpret_cast.h"
 
 static
 void*
-memcpy(void* target, const void* source, size_t bytes) x_noexcept
+memcpy(void* target, const void* source, size_t bytes)
 {
     // Placeholder implementation
 
