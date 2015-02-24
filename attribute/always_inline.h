@@ -2,7 +2,8 @@
 #  ifdef __has_attribute
 #    define has_attribute_always_inline __has_attribute(__always_inline__)
 #  elif defined __GNUC__
-#    define has_attribute_always_inline 1 /* assuming */
+#    include "has/gcc/minor.h"
+#    define has_attribute_always_inline has_gcc_minor(3, 2)
 #  else
 #    error todo
 #  endif

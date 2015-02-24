@@ -2,7 +2,8 @@
 #  ifdef __has_attribute
 #    define has_attribute_used __has_attribute(__used__)
 #  elif defined __GNUC__
-#    define has_attribute_used 1 /* assuming */
+#    include "has/gcc/minor.h"
+#    define has_attribute_used has_gcc_minor(3, 1)
 #  else
 #    error todo
 #  endif

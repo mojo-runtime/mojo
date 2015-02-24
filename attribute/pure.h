@@ -2,7 +2,8 @@
 #  ifdef __has_attribute
 #    define has_attribute_pure __has_attribute(__pure__)
 #  elif defined __GNUC__
-#    define has_attribute_pure 1 /* assuming */
+#    include "has/gcc/minor.h"
+#    define has_attribute_pure has_gcc_minor(2, 96)
 #  else
 #    error todo
 #  endif
