@@ -1,7 +1,10 @@
 #ifndef noreturn
-#  ifdef __cplusplus
-#    error Refusing to break C++11 '[[noreturn]]' by defining C11 convenience macro 'noreturn'
+#  ifndef __cplusplus
+#    include "has/c/noreturn.h"
+#    if has_c_noreturn
+#      define noreturn _Noreturn
+#    else
+#      error todo
+#    endif
 #  endif
-#  include "c/_c_noreturn.h"
-#  define noreturn _c_noreturn
 #endif
