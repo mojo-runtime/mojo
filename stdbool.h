@@ -1,5 +1,5 @@
-#ifndef c_standard_c99_stdbool_h_
-#define c_standard_c99_stdbool_h_
+#ifndef _stdbool_h_
+#define _stdbool_h_
 
 // Per: http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/stdbool.h.html
 
