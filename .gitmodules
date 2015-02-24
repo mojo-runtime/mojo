@@ -1,0 +1,6 @@
+[submodule "has"]
+	path = has
+	url = git@github.com:blake-sheridan/include-has.git
+[submodule "c"]
+	path = c
+	url = git@github.com:blake-sheridan/include-c.git
