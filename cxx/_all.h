@@ -32,7 +32,6 @@
 #include "relaxed_constexpr.h"
 #include "return_type_deduction.h"
 #include "rtti.h"
-#include "runtime_array.h"
 #include "rvalue_references.h"
 #include "static_assert.h"
 #include "strong_enums.h"
