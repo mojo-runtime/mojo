@@ -5,8 +5,8 @@
 	path = c
 	url = git@github.com:blake-sheridan/include-c.git
 [submodule "c++/std"]
-	path = c++/std
+	path = std
 	url = git@github.com:blake-sheridan/include-std.git
 [submodule "c++/linux"]
-	path = c++/linux
+	path = linux
 	url = git@github.com:blake-sheridan/include-linux.git
