@@ -8,4 +8,6 @@
 #include "memcmp.h"
 #include "memset.h"
 #include "readcyclecounter.h"
+#include "strcmp.h"
+#include "strlen.h"
 #include "unreachable.h"
