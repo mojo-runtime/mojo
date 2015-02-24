@@ -329,6 +329,7 @@
 #include "WINT_MAX.h"
 #include "WINT_MIN.h"
 
+#include "_exit.h"
 #include "abs.h"
 #include "alignas.h"
 #include "alignof.h"
