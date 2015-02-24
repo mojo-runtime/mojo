@@ -1,5 +1,6 @@
 #ifndef offsetof
-#  ifdef __GNUC__
+#  include "has/builtin/offsetof.h"
+#  if has_builtin_offsetof
 #    define offsetof __builtin_offsetof
 #  else
 #    error

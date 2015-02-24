@@ -1,9 +1,11 @@
 #ifndef static_assert
-#  if defined(__cplusplus) && __cplusplus >= 201103L
-//
-#  elif defined(__STDC_VERSION__) && __STDC_VERSION__ >= 201112L
-#    define static_assert(x, message) _Static_assert(x, message)
+#  include "has/c/static_assert.h"
+#  if has_c_static_assert
+#    define static_assert _Static_assert
 #  else
-#    error
+#    include "has/cxx/static_assert.h"
+#    if !has_cxx_static_assert
+#      error
+#    endif
 #  endif
 #endif
