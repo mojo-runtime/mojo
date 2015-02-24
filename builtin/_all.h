@@ -5,5 +5,7 @@
 #include "huge_val.h"
 #include "huge_valf.h"
 #include "huge_vall.h"
+#include "memcmp.h"
+#include "memset.h"
 #include "readcyclecounter.h"
 #include "unreachable.h"
