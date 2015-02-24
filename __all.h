@@ -1,3 +1,4 @@
+#include "assume.h"
 #include "constexpr.h"
 #include "decltype.h"
 #include "has/__all.h"
