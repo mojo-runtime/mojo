@@ -2,7 +2,7 @@
 #define linux_epoll_ctl_del_hxx_
 
 #include "c/EPOLL_CTL_DEL.h"
-#include "c/extension/x_syscall3.h"
+#include "linux/__call3.hxx"
 
 #include "linux/epoll_ctl.hxx"
 
@@ -24,7 +24,7 @@ del(int epfd, int fd /*, struct epoll_event* event */) noexcept
         EPERM_ = EPERM,
     };
 
-    return Result<void, Error>(x_syscall3(SYS_epoll_ctl, epfd, EPOLL_CTL_DEL, fd));
+    return Result<void, Error>(__call3(SYS_epoll_ctl, epfd, EPOLL_CTL_DEL, fd));
 }
 
 } // namespace epoll_ctl_

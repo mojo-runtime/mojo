@@ -10,7 +10,7 @@
 #include "c/EPERM.h"
 #include "c/SYS_epoll_ctl.h"
 #include "c/struct-epoll_event.h"
-#include "c/extension/x_syscall4.h"
+#include "linux/__call4.hxx"
 
 #include "linux/Result.hxx"
 
@@ -52,7 +52,7 @@ epoll_ctl(int epfd, int op, int fd, struct epoll_event* event) noexcept
         EPERM_ = EPERM,
     };
 
-    return Result<void, Error>(x_syscall4(SYS_epoll_ctl, epfd, op, fd, event));
+    return Result<void, Error>(__call4(SYS_epoll_ctl, epfd, op, fd, event));
 }
 
 } // namespace linux

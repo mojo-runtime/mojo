@@ -14,7 +14,7 @@
 #include "c/SYS_mmap.h"
 #include "c/off_t.h"
 #include "c/size_t.h"
-#include "c/extension/x_syscall6.h"
+#include "linux/__call6.hxx"
 
 #include "linux/Result.hxx"
 
@@ -73,10 +73,10 @@ mmap(void* addr, size_t length, int prot, int flags, int fd, off_t offset) noexc
         EPERM_ = EPERM,
 
         // MAP_DENYWRITE was set but the object specified by `fd` is open for writing.
-        ETXTBSY_ = ETXTBSY,
+        ETXTBSY_ = ETXTBSY
     };
 
-    return Result<void*, Error>(x_syscall6(SYS_mmap, addr, length, prot, flags, fd, offset));
+    return Result<void*, Error>(__call6(SYS_mmap, addr, length, prot, flags, fd, offset));
 }
 
 } // namespace linux

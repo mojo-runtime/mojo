@@ -3,7 +3,7 @@
 
 #include "c/SYS_getuid.h"
 #include "c/uid_t.h"
-#include "c/extension/x_syscall0.h"
+#include "linux/__call0.hxx"
 
 namespace linux {
 
@@ -11,7 +11,7 @@ static inline
 uid_t
 getuid() noexcept
 {
-    return static_cast<uid_t>(x_syscall0(SYS_getuid));
+    return static_cast<uid_t>(__call0(SYS_getuid));
 }
 
 } // namespace linux

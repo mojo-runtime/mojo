@@ -7,7 +7,7 @@
 #include "c/SYS_clock_nanosleep.h"
 #include "c/clockid_t.h"
 #include "c/struct-timespec.h"
-#include "c/extension/x_syscall4.h"
+#include "linux/__call4.hxx"
 
 #include "linux/Result.hxx"
 
@@ -33,7 +33,7 @@ clock_nanosleep(clockid_t clock_id, int flags, const struct timespec* request, s
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(x_syscall4(SYS_clock_nanosleep, clock_id, flags, request, remain));
+    return Result<void, Error>(__call4(SYS_clock_nanosleep, clock_id, flags, request, remain));
 }
 
 } // namespace linux

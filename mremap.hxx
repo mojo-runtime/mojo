@@ -7,8 +7,8 @@
 #include "c/ENOMEM.h"
 #include "c/SYS_mremap.h"
 #include "c/size_t.h"
-#include "c/extension/x_syscall4.h"
-#include "c/extension/x_syscall5.h"
+#include "linux/__call4.hxx"
+#include "linux/__call5.hxx"
 
 #include "linux/Result.hxx"
 
@@ -48,7 +48,7 @@ mremap(void* old_address, size_t old_size, size_t new_size, int flags) noexcept
     };
 
     return Result<void, Error>(
-        x_syscall4(SYS_mremap, old_address, old_size, new_size, flags)
+        __call4(SYS_mremap, old_address, old_size, new_size, flags)
     );
 }
 
@@ -57,7 +57,7 @@ auto
 mremap(void* old_address, size_t old_size, size_t new_size, int flags, void* new_address) noexcept
 {
     return decltype(mremap(old_address, old_size, new_size, flags))(
-        x_syscall5(SYS_mremap, old_address, old_size, new_size, flags, new_address)
+        __call5(SYS_mremap, old_address, old_size, new_size, flags, new_address)
     );
 }
 

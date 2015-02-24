@@ -7,7 +7,7 @@
 #include "c/EOVERFLOW.h"
 #include "c/SYS_fstat.h"
 #include "c/struct-stat.h"
-#include "c/extension/x_syscall2.h"
+#include "linux/__call2.hxx"
 
 #include "linux/Result.hxx"
 
@@ -35,7 +35,7 @@ fstat(int fd, struct stat* buf) noexcept
         EOVERFLOW_ = EOVERFLOW,
     };
 
-    return Result<void, Error>(x_syscall2(SYS_fstat, fd, buf));
+    return Result<void, Error>(__call2(SYS_fstat, fd, buf));
 }
 
 } // namespace linux

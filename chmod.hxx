@@ -13,7 +13,7 @@
 #include "c/EROFS.h"
 #include "c/SYS_chmod.h"
 #include "c/mode_t.h"
-#include "c/extension/x_syscall2.h"
+#include "linux/__call2.hxx"
 
 #include "linux/Result.hxx"
 
@@ -57,7 +57,7 @@ chmod(const char* pathname, mode_t mode) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(x_syscall2(SYS_chmod, pathname, mode));
+    return Result<void, Error>(__call2(SYS_chmod, pathname, mode));
 }
 
 } // namespace linux

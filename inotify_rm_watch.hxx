@@ -4,7 +4,7 @@
 #include "c/EBADF.h"
 #include "c/EINVAL.h"
 #include "c/SYS_inotify_rm_watch.h"
-#include "c/extension/x_syscall2.h"
+#include "linux/__call2.hxx"
 
 #include "linux/Result.hxx"
 
@@ -25,7 +25,7 @@ inotify_rm_watch(int fd, int wd) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(x_syscall2(SYS_inotify_rm_watch, fd, wd));
+    return Result<void, Error>(__call2(SYS_inotify_rm_watch, fd, wd));
 }
 
 } // namespace linux

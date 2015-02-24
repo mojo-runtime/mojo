@@ -12,7 +12,7 @@
 #include "c/EOVERFLOW.h"
 #include "c/SYS_fstatat.h"
 #include "c/struct-stat.h"
-#include "c/extension/x_syscall4.h"
+#include "linux/__call4.hxx"
 
 #include "linux/Result.hxx"
 
@@ -65,7 +65,7 @@ fstatat(int dirfd, const char* pathname, struct stat* buf, int flags) noexcept
         EOVERFLOW_ = EOVERFLOW,
     };
 
-    return Result<void, Error>(x_syscall4(SYS_fstatat, dirfd, pathname, buf, flags));
+    return Result<void, Error>(__call4(SYS_fstatat, dirfd, pathname, buf, flags));
 }
 
 static inline

@@ -6,7 +6,7 @@
 #include "c/ENFILE.h"
 #include "c/ENOMEM.h"
 #include "c/SYS_inotify_init1.h"
-#include "c/extension/x_syscall1.h"
+#include "linux/__call1.hxx"
 
 #include "linux/Result.hxx"
 
@@ -31,7 +31,7 @@ inotify_init1(int flags) noexcept
         ENOMEM_ = ENOMEM,
     };
 
-    return Result<int, Error>(x_syscall1(SYS_inotify_init1, flags));
+    return Result<int, Error>(__call1(SYS_inotify_init1, flags));
 }
 
 static inline

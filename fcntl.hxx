@@ -12,8 +12,8 @@
 #include "c/ENOLCK.h"
 #include "c/EPERM.h"
 #include "c/SYS_fcntl.h"
-#include "c/extension/x_syscall2.h"
-#include "c/extension/x_syscall3.h"
+#include "linux/__call2.hxx"
+#include "linux/__call3.hxx"
 
 #include "linux/Result.hxx"
 
@@ -77,7 +77,7 @@ fcntl(int fd, int cmd, Arg arg) noexcept
         EPERM_ = EPERM,
     };
 
-    return Result<Ok, Error>(x_syscall3(SYS_fcntl, fd, cmd, arg));
+    return Result<Ok, Error>(__call3(SYS_fcntl, fd, cmd, arg));
 }
 
 template <typename Ok>
@@ -85,7 +85,7 @@ static inline
 auto
 fcntl(int fd, int cmd) noexcept
 {
-    return decltype(fcntl<Ok>(fd, cmd, 0))(x_syscall2(SYS_fcntl, fd, cmd));
+    return decltype(fcntl<Ok>(fd, cmd, 0))(__call2(SYS_fcntl, fd, cmd));
 }
 
 } // namespace linux

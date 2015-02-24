@@ -6,7 +6,7 @@
 #include "c/SYS_clock_getres.h"
 #include "c/clockid_t.h"
 #include "c/struct-timespec.h"
-#include "c/extension/x_syscall2.h"
+#include "linux/__call2.hxx"
 
 #include "linux/Result.hxx"
 
@@ -25,7 +25,7 @@ clock_getres(clockid_t clk_id, const struct timespec* tp) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(x_syscall2(SYS_clock_getres, clk_id, tp));
+    return Result<void, Error>(__call2(SYS_clock_getres, clk_id, tp));
 }
 
 } // namespace linux

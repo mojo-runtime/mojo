@@ -6,7 +6,7 @@
 #include "c/ENOSYS.h"
 #include "c/SYS_fork.h"
 #include "c/pid_t.h"
-#include "c/extension/x_syscall0.h"
+#include "linux/__call0.hxx"
 
 #include "linux/Result.hxx"
 
@@ -35,7 +35,7 @@ fork() noexcept
         ENOSYS_ = ENOSYS,
     };
 
-    return Result<pid_t, Error>(x_syscall0(SYS_fork));
+    return Result<pid_t, Error>(__call0(SYS_fork));
 }
 
 } // namespace linux

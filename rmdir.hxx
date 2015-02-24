@@ -14,7 +14,7 @@
 #include "c/EPERM.h"
 #include "c/EROFS.h"
 #include "c/SYS_rmdir.h"
-#include "c/extension/x_syscall1.h"
+#include "linux/__call1.hxx"
 
 #include "linux/Result.hxx"
 
@@ -74,7 +74,7 @@ rmdir(const char* pathname) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(x_syscall1(SYS_rmdir, pathname));
+    return Result<void, Error>(__call1(SYS_rmdir, pathname));
 }
 
 } // namespace linux
