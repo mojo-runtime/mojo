@@ -1,1 +1,1 @@
-_posix/stropts.h
+#error not implemented

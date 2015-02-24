@@ -1,1 +1,1 @@
-_posix/langinfo.h
+#error not implemented

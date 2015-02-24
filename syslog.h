@@ -1,1 +1,1 @@
-_posix/syslog.h
+#error not implemented

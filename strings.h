@@ -1,1 +1,1 @@
-_posix/strings.h
+#error not implemented

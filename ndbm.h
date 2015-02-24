@@ -1,1 +1,1 @@
-_posix/ndbm.h
+#error not implemented
