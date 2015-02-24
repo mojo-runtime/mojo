@@ -2,6 +2,7 @@
 #include "always_inline.h"
 #include "assume_aligned.h"
 #include "const.h"
+#include "mode.h"
 #include "nonnull.h"
 #include "noreturn.h"
 #include "nothrow.h"
