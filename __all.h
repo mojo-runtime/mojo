@@ -329,7 +329,6 @@
 #include "WINT_MAX.h"
 #include "WINT_MIN.h"
 
-#include "_exit.h"
 #include "abs.h"
 #include "alignas.h"
 #include "alignof.h"
@@ -347,7 +346,6 @@
 #include "div_t.h"
 #include "epoll_data_t.h"
 #include "false.h"
-#include "getpid.h"
 #include "gid_t.h"
 #include "id_t.h"
 #include "idtype_t.h"
