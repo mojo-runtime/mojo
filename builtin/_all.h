@@ -1,3 +1,6 @@
 #include "assume.h"
+#include "huge_val.h"
+#include "huge_valf.h"
+#include "huge_vall.h"
 #include "readcyclecounter.h"
 #include "unreachable.h"
