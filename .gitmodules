@@ -4,3 +4,6 @@
 [submodule "c"]
 	path = c
 	url = git@github.com:blake-sheridan/include-c.git
+[submodule "c++/std"]
+	path = c++/std
+	url = git@github.com:blake-sheridan/include-std.git
