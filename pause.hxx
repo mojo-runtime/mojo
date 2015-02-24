@@ -1,7 +1,8 @@
 #ifndef linux_pause_hxx_
 #define linux_pause_hxx_
 
-#include "c/SYS_pause.h"
+#include "SYS_pause.h"
+
 #include "linux/__call0.hxx"
 
 namespace linux {

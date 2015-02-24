@@ -1,8 +1,9 @@
 #ifndef linux_getuid_hxx_
 #define linux_getuid_hxx_
 
-#include "c/SYS_getuid.h"
-#include "c/uid_t.h"
+#include "SYS_getuid.h"
+#include "uid_t.h"
+
 #include "linux/__call0.hxx"
 
 namespace linux {

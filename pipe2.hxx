@@ -1,14 +1,14 @@
 #ifndef linux_pipe2_hxx_
 #define linux_pipe2_hxx_
 
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/EMFILE.h"
-#include "c/ENFILE.h"
-#include "c/SYS_pipe2.h"
-#include "linux/__call2.hxx"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "EMFILE.h"
+#include "ENFILE.h"
+#include "SYS_pipe2.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call2.hxx"
 
 namespace linux {
 

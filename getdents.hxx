@@ -1,17 +1,17 @@
 #ifndef linux_getdents_hxx_
 #define linux_getdents_hxx_
 
-#include "c/EBADF.h"
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/ENOENT.h"
-#include "c/ENOTDIR.h"
-#include "c/SYS_getdents.h"
-#include "c/size_t.h"
-#include "c/struct-linux_dirent.h"
-#include "linux/__call3.hxx"
+#include "EBADF.h"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "ENOENT.h"
+#include "ENOTDIR.h"
+#include "SYS_getdents.h"
+#include "size_t.h"
+#include "struct-linux_dirent.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call3.hxx"
 
 namespace linux {
 

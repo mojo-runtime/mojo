@@ -1,7 +1,7 @@
 #ifndef linux_vfork_hxx_
 #define linux_vfork_hxx_
 
-#include "c/SYS_vfork.h"
+#include "SYS_vfork.h"
 
 #include "linux/fork.hxx"
 

@@ -1,22 +1,22 @@
 #ifndef linux_mmap_hxx_
 #define linux_mmap_hxx_
 
-#include "c/EACCES.h"
-#include "c/EAGAIN.h"
-#include "c/EBADF.h"
-#include "c/EINVAL.h"
-#include "c/ENFILE.h"
-#include "c/ENODEV.h"
-#include "c/ENOMEM.h"
-#include "c/EOVERFLOW.h"
-#include "c/EPERM.h"
-#include "c/ETXTBSY.h"
-#include "c/SYS_mmap.h"
-#include "c/off_t.h"
-#include "c/size_t.h"
-#include "linux/__call6.hxx"
+#include "EACCES.h"
+#include "EAGAIN.h"
+#include "EBADF.h"
+#include "EINVAL.h"
+#include "ENFILE.h"
+#include "ENODEV.h"
+#include "ENOMEM.h"
+#include "EOVERFLOW.h"
+#include "EPERM.h"
+#include "ETXTBSY.h"
+#include "SYS_mmap.h"
+#include "off_t.h"
+#include "size_t.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call6.hxx"
 
 namespace linux {
 

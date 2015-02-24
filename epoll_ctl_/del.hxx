@@ -1,7 +1,7 @@
 #ifndef linux_epoll_ctl_del_hxx_
 #define linux_epoll_ctl_del_hxx_
 
-#include "c/EPOLL_CTL_DEL.h"
+#include "EPOLL_CTL_DEL.h"
 #include "linux/__call3.hxx"
 
 #include "linux/epoll_ctl.hxx"

@@ -1,13 +1,13 @@
 #ifndef linux_tgkill_hxx_
 #define linux_tgkill_hxx_
 
-#include "c/EINVAL.h"
-#include "c/EPERM.h"
-#include "c/ESRCH.h"
-#include "c/SYS_tgkill.h"
-#include "linux/__call3.hxx"
+#include "EINVAL.h"
+#include "EPERM.h"
+#include "ESRCH.h"
+#include "SYS_tgkill.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call3.hxx"
 
 namespace linux {
 

@@ -1,20 +1,20 @@
 #ifndef linux_readlink_hxx_
 #define linux_readlink_hxx_
 
-#include "c/EACCES.h"
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/EIO.h"
-#include "c/ELOOP.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOTDIR.h"
-#include "c/SYS_readlink.h"
-#include "c/size_t.h"
-#include "linux/__call3.hxx"
+#include "EACCES.h"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "EIO.h"
+#include "ELOOP.h"
+#include "ENAMETOOLONG.h"
+#include "ENOENT.h"
+#include "ENOMEM.h"
+#include "ENOTDIR.h"
+#include "SYS_readlink.h"
+#include "size_t.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call3.hxx"
 
 namespace linux {
 

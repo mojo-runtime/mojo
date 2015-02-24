@@ -1,8 +1,8 @@
 #ifndef linux_ioctl_tcsets_hxx_
 #define linux_ioctl_tcsets_hxx_
 
-#include "c/TCSETS.h"
-#include "c/struct-termios.h"
+#include "TCSETS.h"
+#include "struct-termios.h"
 
 #include "linux/ioctl.hxx"
 

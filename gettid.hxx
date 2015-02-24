@@ -1,8 +1,9 @@
 #ifndef linux_gettid_hxx_
 #define linux_gettid_hxx_
 
-#include "c/SYS_gettid.h"
-#include "c/pid_t.h"
+#include "SYS_gettid.h"
+#include "pid_t.h"
+
 #include "linux/__call0.hxx"
 
 namespace linux {

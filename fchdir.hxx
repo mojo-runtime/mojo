@@ -1,12 +1,12 @@
 #ifndef linux_fchdir_hxx_
 #define linux_fchdir_hxx_
 
-#include "c/EACCES.h"
-#include "c/EBADF.h"
-#include "c/SYS_fchdir.h"
-#include "linux/__call1.hxx"
+#include "EACCES.h"
+#include "EBADF.h"
+#include "SYS_fchdir.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call1.hxx"
 
 namespace linux {
 

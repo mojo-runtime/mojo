@@ -1,14 +1,14 @@
 #ifndef linux_set_thread_area_hxx_
 #define linux_set_thread_area_hxx_
 
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/ESRCH.h"
-#include "c/SYS_set_thread_area.h"
-#include "c/struct-user_desc.h"
-#include "linux/__call1.hxx"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "ESRCH.h"
+#include "SYS_set_thread_area.h"
+#include "struct-user_desc.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call1.hxx"
 
 namespace linux {
 

@@ -1,7 +1,7 @@
 #ifndef linux_mmap_anonymous_hxx_
 #define linux_mmap_anonymous_hxx_
 
-#include "c/MAP_ANONYMOUS.h"
+#include "MAP_ANONYMOUS.h"
 #include "linux/__call4.hxx"
 
 #include "linux/mmap.hxx"

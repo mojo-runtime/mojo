@@ -1,21 +1,21 @@
 #ifndef linux_chown_hxx_
 #define linux_chown_hxx_
 
-#include "c/EACCES.h"
-#include "c/EFAULT.h"
-#include "c/ELOOP.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOTDIR.h"
-#include "c/EPERM.h"
-#include "c/EROFS.h"
-#include "c/SYS_chown.h"
-#include "c/gid_t.h"
-#include "c/uid_t.h"
-#include "linux/__call3.hxx"
+#include "EACCES.h"
+#include "EFAULT.h"
+#include "ELOOP.h"
+#include "ENAMETOOLONG.h"
+#include "ENOENT.h"
+#include "ENOMEM.h"
+#include "ENOTDIR.h"
+#include "EPERM.h"
+#include "EROFS.h"
+#include "SYS_chown.h"
+#include "gid_t.h"
+#include "uid_t.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call3.hxx"
 
 namespace linux {
 

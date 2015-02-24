@@ -1,7 +1,8 @@
 #ifndef linux_exit_hxx_
 #define linux_exit_hxx_
 
-#include "c/SYS_exit.h"
+#include "SYS_exit.h"
+
 #include "linux/__call1.hxx"
 
 namespace linux {

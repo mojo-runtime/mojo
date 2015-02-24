@@ -1,21 +1,21 @@
 #ifndef linux_chmod_hxx_
 #define linux_chmod_hxx_
 
-#include "c/EACCES.h"
-#include "c/EFAULT.h"
-#include "c/EIO.h"
-#include "c/ELOOP.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOTDIR.h"
-#include "c/EPERM.h"
-#include "c/EROFS.h"
-#include "c/SYS_chmod.h"
-#include "c/mode_t.h"
-#include "linux/__call2.hxx"
+#include "EACCES.h"
+#include "EFAULT.h"
+#include "EIO.h"
+#include "ELOOP.h"
+#include "ENAMETOOLONG.h"
+#include "ENOENT.h"
+#include "ENOMEM.h"
+#include "ENOTDIR.h"
+#include "EPERM.h"
+#include "EROFS.h"
+#include "SYS_chmod.h"
+#include "mode_t.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call2.hxx"
 
 namespace linux {
 

@@ -1,14 +1,14 @@
 #ifndef linux_fork_hxx_
 #define linux_fork_hxx_
 
-#include "c/EAGAIN.h"
-#include "c/ENOMEM.h"
-#include "c/ENOSYS.h"
-#include "c/SYS_fork.h"
-#include "c/pid_t.h"
-#include "linux/__call0.hxx"
+#include "EAGAIN.h"
+#include "ENOMEM.h"
+#include "ENOSYS.h"
+#include "SYS_fork.h"
+#include "pid_t.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call0.hxx"
 
 namespace linux {
 

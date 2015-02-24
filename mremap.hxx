@@ -1,16 +1,16 @@
 #ifndef linux_mremap_hxx_
 #define linux_mremap_hxx_
 
-#include "c/EAGAIN.h"
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/ENOMEM.h"
-#include "c/SYS_mremap.h"
-#include "c/size_t.h"
-#include "linux/__call4.hxx"
-#include "linux/__call5.hxx"
+#include "EAGAIN.h"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "ENOMEM.h"
+#include "SYS_mremap.h"
+#include "size_t.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call4.hxx"
+#include "linux/__call5.hxx"
 
 namespace linux {
 

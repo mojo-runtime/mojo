@@ -1,19 +1,19 @@
 #ifndef linux_inotify_add_watch_hxx_
 #define linux_inotify_add_watch_hxx_
 
-#include "c/EACCES.h"
-#include "c/EBADF.h"
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOSPC.h"
-#include "c/SYS_inotify_add_watch.h"
-#include "c/uint32_t.h"
-#include "linux/__call3.hxx"
+#include "EACCES.h"
+#include "EBADF.h"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "ENAMETOOLONG.h"
+#include "ENOENT.h"
+#include "ENOMEM.h"
+#include "ENOSPC.h"
+#include "SYS_inotify_add_watch.h"
+#include "uint32_t.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call3.hxx"
 
 namespace linux {
 

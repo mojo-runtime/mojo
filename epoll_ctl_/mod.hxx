@@ -1,7 +1,7 @@
 #ifndef linux_epoll_ctl_mod_hxx_
 #define linux_epoll_ctl_mod_hxx_
 
-#include "c/EPOLL_CTL_MOD.h"
+#include "EPOLL_CTL_MOD.h"
 
 #include "linux/epoll_ctl.hxx"
 

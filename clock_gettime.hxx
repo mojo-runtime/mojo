@@ -1,14 +1,14 @@
 #ifndef linux_clock_gettime_hxx_
 #define linux_clock_gettime_hxx_
 
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/SYS_clock_gettime.h"
-#include "c/clockid_t.h"
-#include "c/struct-timespec.h"
-#include "linux/__call2.hxx"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "SYS_clock_gettime.h"
+#include "clockid_t.h"
+#include "struct-timespec.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call2.hxx"
 
 namespace linux {
 

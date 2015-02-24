@@ -1,12 +1,12 @@
 #ifndef linux_inotify_rm_watch_hxx_
 #define linux_inotify_rm_watch_hxx_
 
-#include "c/EBADF.h"
-#include "c/EINVAL.h"
-#include "c/SYS_inotify_rm_watch.h"
-#include "linux/__call2.hxx"
+#include "EBADF.h"
+#include "EINVAL.h"
+#include "SYS_inotify_rm_watch.h"
 
 #include "linux/Result.hxx"
+#include "linux/__call2.hxx"
 
 namespace linux {
 

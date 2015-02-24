@@ -1,8 +1,9 @@
 #ifndef linux_getgid_hxx_
 #define linux_getgid_hxx_
 
-#include "c/SYS_getgid.h"
-#include "c/gid_t.h"
+#include "SYS_getgid.h"
+#include "gid_t.h"
+
 #include "linux/__call0.hxx"
 
 namespace linux {
