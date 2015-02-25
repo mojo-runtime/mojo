@@ -1,8 +1,8 @@
 #ifndef _c_noexcept
-#  include "has/cxx/exceptions.h"
-#  if has_cxx_exceptions
-#    include "has/cxx/noexcept.h"
-#    if has_cxx_noexcept
+#  include "compiler/has/cxx/exceptions.h"
+#  if compiler_has_cxx_exceptions
+#    include "compiler/has/cxx/noexcept.h"
+#    if compiler_has_cxx_noexcept
 #      define _c_noexcept noexcept
 #    else
 #      error
