@@ -1,0 +1,3 @@
+#ifndef INT_LEAST32_MIN
+#define INT_LEAST32_MIN (-2147483648)
+#endif

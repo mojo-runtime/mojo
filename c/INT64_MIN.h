@@ -1,0 +1,3 @@
+#ifndef INT64_MIN
+#define INT64_MIN (-9223372036854775807L - 1)
+#endif
