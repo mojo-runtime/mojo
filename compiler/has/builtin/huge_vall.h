@@ -2,8 +2,8 @@
 #  ifdef __has_builtin
 #    define compiler_has_builtin_huge_vall __has_builtin(__builtin_huge_vall)
 #  elif defined __GNUC__
-#    include "compiler/has/gcc/minor.h"
-#    define compiler_has_builtin_huge_vall has_gcc_minor(3, 3)
+#    include "compiler/has/_gnuc/minor.h"
+#    define compiler_has_builtin_huge_vall _compiler_has_gnuc_minor(3, 3)
 #  else
 #    error todo
 #  endif

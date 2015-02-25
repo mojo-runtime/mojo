@@ -2,8 +2,8 @@
 #  ifdef __has_attribute
 #    define compiler_has_attribute_artificial __has_attribute(__artificial__)
 #  elif defined __GNUC__
-#    include "compiler/has/gcc/minor.h"
-#    define compiler_has_attribute_artificial has_gcc_minor(4, 3)
+#    include "compiler/has/_gnuc/minor.h"
+#    define compiler_has_attribute_artificial _compiler_has_gnuc_minor(4, 3)
 #  else
 #    error todo
 #  endif
