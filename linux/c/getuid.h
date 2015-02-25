@@ -2,18 +2,17 @@
 #define linux_getuid_h_
 
 #include "compiler/nothrow.h"
-#include "compat/_c_static_cast.h"
 
 #include "SYS_getuid.h"
 #include "uid_t.h"
-#include "_linux_syscall0.h"
+#include "_linux_syscall0_cannot_fail.h"
 
 compiler_nothrow
 static
 uid_t
 getuid()
 {
-    return _c_static_cast(uid_t, _linux_syscall0(SYS_getuid));
+    return _linux_syscall0_cannot_fail(SYS_getuid, uid_t);
 }
 
 #endif
