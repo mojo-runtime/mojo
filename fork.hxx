@@ -8,7 +8,7 @@
 #include "pid_t.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall0.h"
+#include "abi/_abi_syscall_0.h"
 
 namespace linux {
 
@@ -35,7 +35,7 @@ fork() noexcept
         ENOSYS_ = ENOSYS,
     };
 
-    return Result<pid_t, Error>(_c_syscall0(SYS_fork));
+    return Result<pid_t, Error>(_abi_syscall_0(SYS_fork));
 }
 
 } // namespace linux

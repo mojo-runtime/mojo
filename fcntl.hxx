@@ -14,8 +14,8 @@
 #include "SYS_fcntl.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall2.h"
-#include "_internal/_c_syscall3.h"
+#include "abi/_abi_syscall_2.h"
+#include "abi/_abi_syscall_3.h"
 
 namespace linux {
 
@@ -77,7 +77,7 @@ fcntl(int fd, int cmd, Arg arg) noexcept
         EPERM_ = EPERM,
     };
 
-    return Result<Ok, Error>(_c_syscall3(SYS_fcntl, fd, cmd, arg));
+    return Result<Ok, Error>(_abi_syscall_3(SYS_fcntl, fd, cmd, arg));
 }
 
 template <typename Ok>
@@ -85,7 +85,7 @@ static inline
 auto
 fcntl(int fd, int cmd) noexcept
 {
-    return decltype(fcntl<Ok>(fd, cmd, 0))(_c_syscall2(SYS_fcntl, fd, cmd));
+    return decltype(fcntl<Ok>(fd, cmd, 0))(_abi_syscall_2(SYS_fcntl, fd, cmd));
 }
 
 } // namespace linux

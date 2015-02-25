@@ -12,7 +12,7 @@
 #include "struct-rusage.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall5.h"
+#include "abi/_abi_syscall_5.h"
 
 namespace linux {
 
@@ -35,7 +35,7 @@ waitid(idtype_t idtype, id_t id, siginfo_t* infop, int options, struct rusage* u
     };
 
     return Result<pid_t, Error>(
-        _c_syscall5(SYS_getdents, idtype, id, infop, options, usage)
+        _abi_syscall_5(SYS_getdents, idtype, id, infop, options, usage)
     );
 }
 

@@ -8,7 +8,7 @@
 #include "SYS_pipe2.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall2.h"
+#include "abi/_abi_syscall_2.h"
 
 namespace linux {
 
@@ -31,7 +31,7 @@ pipe2(int pipefd[2], int flags) noexcept
         ENFILE_ = ENFILE,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_pipe2, pipefd, flags));
+    return Result<void, Error>(_abi_syscall_2(SYS_pipe2, pipefd, flags));
 }
 
 static inline

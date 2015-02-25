@@ -16,7 +16,7 @@
 #include "size_t.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall3.h"
+#include "abi/_abi_syscall_3.h"
 
 namespace linux {
 
@@ -74,7 +74,7 @@ write(int fd, const void* buf, size_t count) noexcept
         //   XXX: totally ignoring this
     };
 
-    return Result<size_t, Error>(_c_syscall3(SYS_write, fd, buf, count));
+    return Result<size_t, Error>(_abi_syscall_3(SYS_write, fd, buf, count));
 }
 
 template <typename T, size_t n>
@@ -99,7 +99,7 @@ write(int fd, const T(& array)[n]) noexcept
     };
 
     // We can't use write(...)._with_error; see `read_::into`.
-    return Result<size_t, Error>(_c_syscall3(SYS_write, fd, array, n * sizeof(T)));
+    return Result<size_t, Error>(_abi_syscall_3(SYS_write, fd, array, n * sizeof(T)));
 }
 
 } // namespace linux

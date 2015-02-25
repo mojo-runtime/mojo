@@ -6,7 +6,7 @@
 #include "SYS_inotify_rm_watch.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall2.h"
+#include "abi/_abi_syscall_2.h"
 
 namespace linux {
 
@@ -25,7 +25,7 @@ inotify_rm_watch(int fd, int wd) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_inotify_rm_watch, fd, wd));
+    return Result<void, Error>(_abi_syscall_2(SYS_inotify_rm_watch, fd, wd));
 }
 
 } // namespace linux

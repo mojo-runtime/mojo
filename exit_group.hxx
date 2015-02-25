@@ -3,7 +3,7 @@
 
 #include "SYS_exit_group.h"
 
-#include "_internal/_c_syscall1.h"
+#include "abi/_abi_syscall_1.h"
 
 namespace linux {
 
@@ -12,7 +12,7 @@ static inline
 void
 exit_group(int status) noexcept
 {
-    _c_syscall1(SYS_exit_group, status);
+    _abi_syscall_1(SYS_exit_group, status);
     __builtin_unreachable();
 }
 

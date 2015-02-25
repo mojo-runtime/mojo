@@ -9,7 +9,7 @@
 #include "struct-timespec.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall4.h"
+#include "abi/_abi_syscall_4.h"
 
 namespace linux {
 
@@ -33,7 +33,7 @@ clock_nanosleep(clockid_t clock_id, int flags, const struct timespec* request, s
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(_c_syscall4(SYS_clock_nanosleep, clock_id, flags, request, remain));
+    return Result<void, Error>(_abi_syscall_4(SYS_clock_nanosleep, clock_id, flags, request, remain));
 }
 
 } // namespace linux

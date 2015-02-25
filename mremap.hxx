@@ -9,8 +9,8 @@
 #include "size_t.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall4.h"
-#include "_internal/_c_syscall5.h"
+#include "abi/_abi_syscall_4.h"
+#include "abi/_abi_syscall_5.h"
 
 namespace linux {
 
@@ -48,7 +48,7 @@ mremap(void* old_address, size_t old_size, size_t new_size, int flags) noexcept
     };
 
     return Result<void, Error>(
-        _c_syscall4(SYS_mremap, old_address, old_size, new_size, flags)
+        _abi_syscall_4(SYS_mremap, old_address, old_size, new_size, flags)
     );
 }
 
@@ -57,7 +57,7 @@ auto
 mremap(void* old_address, size_t old_size, size_t new_size, int flags, void* new_address) noexcept
 {
     return decltype(mremap(old_address, old_size, new_size, flags))(
-        _c_syscall5(SYS_mremap, old_address, old_size, new_size, flags, new_address)
+        _abi_syscall_5(SYS_mremap, old_address, old_size, new_size, flags, new_address)
     );
 }
 

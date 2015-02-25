@@ -16,7 +16,7 @@
 #include "size_t.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall6.h"
+#include "abi/_abi_syscall_6.h"
 
 namespace linux {
 
@@ -76,7 +76,7 @@ mmap(void* addr, size_t length, int prot, int flags, int fd, off_t offset) noexc
         ETXTBSY_ = ETXTBSY
     };
 
-    return Result<void*, Error>(_c_syscall6(SYS_mmap, addr, length, prot, flags, fd, offset));
+    return Result<void*, Error>(_abi_syscall_6(SYS_mmap, addr, length, prot, flags, fd, offset));
 }
 
 } // namespace linux

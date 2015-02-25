@@ -16,7 +16,7 @@
 #include "SYS_unlink.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall1.h"
+#include "abi/_abi_syscall_1.h"
 
 namespace linux {
 
@@ -76,7 +76,7 @@ unlink(const char* pathname) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(_c_syscall1(SYS_unlink, pathname));
+    return Result<void, Error>(_abi_syscall_1(SYS_unlink, pathname));
 }
 
 } // namespace linux

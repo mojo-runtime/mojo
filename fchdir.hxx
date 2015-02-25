@@ -6,7 +6,7 @@
 #include "SYS_fchdir.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall1.h"
+#include "abi/_abi_syscall_1.h"
 
 namespace linux {
 
@@ -27,7 +27,7 @@ fchdir(int fd) noexcept
         // ENOTDIR, I imagine?
     };
 
-    return Result<void, Error>(_c_syscall1(SYS_fchdir, fd));
+    return Result<void, Error>(_abi_syscall_1(SYS_fchdir, fd));
 }
 
 } // namespace linux

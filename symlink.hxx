@@ -17,7 +17,7 @@
 #include "SYS_symlink.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall2.h"
+#include "abi/_abi_syscall_2.h"
 
 namespace linux {
 
@@ -73,7 +73,7 @@ symlink(const char* target, const char* linkpath) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_symlink, target, linkpath));
+    return Result<void, Error>(_abi_syscall_2(SYS_symlink, target, linkpath));
 }
 
 } // namespace linux

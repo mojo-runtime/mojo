@@ -6,7 +6,7 @@
 #include "size_t.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall2.h"
+#include "abi/_abi_syscall_2.h"
 
 namespace linux {
 
@@ -20,7 +20,7 @@ open(void* addr, size_t length) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_munmap, addr, length));
+    return Result<void, Error>(_abi_syscall_2(SYS_munmap, addr, length));
 }
 
 } // namespace linux

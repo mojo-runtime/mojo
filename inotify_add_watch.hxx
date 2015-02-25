@@ -13,7 +13,7 @@
 #include "uint32_t.h"
 
 #include "linux/Result.hxx"
-#include "_internal/_c_syscall3.h"
+#include "abi/_abi_syscall_3.h"
 
 namespace linux {
 
@@ -52,7 +52,7 @@ inotify_add_watch(int fd, const char* pathname, uint32_t mask) noexcept
         ENOSPC_ = ENOSPC,
     };
 
-    return Result<int, Error>(_c_syscall3(SYS_inotify_add_watch, fd, pathname, mask));
+    return Result<int, Error>(_abi_syscall_3(SYS_inotify_add_watch, fd, pathname, mask));
 }
 
 } // namespace linux
