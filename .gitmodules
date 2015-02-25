@@ -1,5 +1,5 @@
 [submodule "has"]
-	path = has
+	path = compiler
 	url = git@github.com:blake-sheridan/include-has.git
 [submodule "c"]
 	path = c
