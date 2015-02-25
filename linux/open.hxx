@@ -1,7 +1,7 @@
 #ifndef linux_open_hxx_
 #define linux_open_hxx_
 
-#include "linux/c/_c_syscall2.h"
+#include "linux/c/_linux_syscall2.h"
 #include "linux/c/EACCES.h"
 #include "linux/c/EDQUOT.h"
 #include "linux/c/EEXIST.h"
@@ -149,7 +149,7 @@ open(const char* pathname, int flags) noexcept
         EWOULDBLOCK_ = EWOULDBLOCK,
     };
 
-    return Result<int, Error>(_c_syscall2(SYS_open, pathname, flags));
+    return Result<int, Error>(_linux_syscall2(SYS_open, pathname, flags));
 }
 
 } // namespace linux

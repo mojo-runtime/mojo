@@ -1,7 +1,7 @@
 #ifndef linux_fork_hxx_
 #define linux_fork_hxx_
 
-#include "linux/c/_c_syscall0.h"
+#include "linux/c/_linux_syscall0.h"
 #include "linux/c/EAGAIN.h"
 #include "linux/c/ENOMEM.h"
 #include "linux/c/ENOSYS.h"
@@ -35,7 +35,7 @@ fork() noexcept
         ENOSYS_ = ENOSYS,
     };
 
-    return Result<pid_t, Error>(_c_syscall0(SYS_fork));
+    return Result<pid_t, Error>(_linux_syscall0(SYS_fork));
 }
 
 } // namespace linux

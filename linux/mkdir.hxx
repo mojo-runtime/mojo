@@ -1,7 +1,7 @@
 #ifndef linux_mkdir_hxx_
 #define linux_mkdir_hxx_
 
-#include "linux/c/_c_syscall2.h"
+#include "linux/c/_linux_syscall2.h"
 #include "linux/c/EACCES.h"
 #include "linux/c/EDQUOT.h"
 #include "linux/c/EEXIST.h"
@@ -73,7 +73,7 @@ mkdir(const char* pathname, mode_t mode) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_mkdir, pathname, mode));
+    return Result<void, Error>(_linux_syscall2(SYS_mkdir, pathname, mode));
 }
 
 } // namespace linux

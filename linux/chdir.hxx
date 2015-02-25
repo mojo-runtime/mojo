@@ -10,7 +10,7 @@
 #include "linux/c/ENOMEM.h"
 #include "linux/c/ENOTDIR.h"
 #include "linux/c/SYS_chdir.h"
-#include "linux/c/_c_syscall1.h"
+#include "linux/c/_linux_syscall1.h"
 
 #include "linux/Result.hxx"
 
@@ -49,7 +49,7 @@ chdir(const char* path) noexcept
         ENOTDIR_ = ENOTDIR,
     };
 
-    return Result<void, Error>(_c_syscall1(SYS_chdir, path));
+    return Result<void, Error>(_linux_syscall1(SYS_chdir, path));
 }
 
 } // namespace linux

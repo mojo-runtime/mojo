@@ -1,7 +1,7 @@
 #ifndef linux_symlink_hxx_
 #define linux_symlink_hxx_
 
-#include "linux/c/_c_syscall2.h"
+#include "linux/c/_linux_syscall2.h"
 #include "linux/c/EACCES.h"
 #include "linux/c/EDQUOT.h"
 #include "linux/c/EEXIST.h"
@@ -73,7 +73,7 @@ symlink(const char* target, const char* linkpath) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_symlink, target, linkpath));
+    return Result<void, Error>(_linux_syscall2(SYS_symlink, target, linkpath));
 }
 
 } // namespace linux

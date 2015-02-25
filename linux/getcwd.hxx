@@ -10,7 +10,7 @@
 #include "linux/c/ENOENT.h"
 #include "linux/c/ERANGE.h"
 #include "linux/c/SYS_getcwd.h"
-#include "linux/c/_c_syscall2.h"
+#include "linux/c/_linux_syscall2.h"
 
 #include "linux/Result.hxx"
 
@@ -49,7 +49,7 @@ getcwd(char* buf, size_t size) noexcept
     // "The kernel system call just returns the length of the buffer filled
     // (which includes the ending '\0' character)"
 
-    return Result<size_t, Error>(_c_syscall2(SYS_getcwd, buf, size));
+    return Result<size_t, Error>(_linux_syscall2(SYS_getcwd, buf, size));
 }
 
 } // namespace linux

@@ -1,7 +1,7 @@
 #ifndef linux_epoll_ctl_hxx_
 #define linux_epoll_ctl_hxx_
 
-#include "linux/c/_c_syscall4.h"
+#include "linux/c/_linux_syscall4.h"
 #include "linux/c/EBADF.h"
 #include "linux/c/EEXIST.h"
 #include "linux/c/EINVAL.h"
@@ -52,7 +52,7 @@ epoll_ctl(int epfd, int op, int fd, struct epoll_event* event) noexcept
         EPERM_ = EPERM,
     };
 
-    return Result<void, Error>(_c_syscall4(SYS_epoll_ctl, epfd, op, fd, event));
+    return Result<void, Error>(_linux_syscall4(SYS_epoll_ctl, epfd, op, fd, event));
 }
 
 } // namespace linux

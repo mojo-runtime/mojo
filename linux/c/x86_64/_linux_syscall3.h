@@ -1,6 +1,6 @@
-#ifndef _c_syscall3
+#ifndef _linux_syscall3
 #pragma clang diagnostic ignored "-Wgnu-statement-expression"
-#define _c_syscall3(number, a1, a2, a3)                                 \
+#define _linux_syscall3(number, a1, a2, a3)                             \
     ({                                                                  \
         unsigned long result;                                           \
                                                                         \

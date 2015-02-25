@@ -1,7 +1,7 @@
 #ifndef linux_chown_hxx_
 #define linux_chown_hxx_
 
-#include "linux/c/_c_syscall3.h"
+#include "linux/c/_linux_syscall3.h"
 #include "linux/c/EACCES.h"
 #include "linux/c/EFAULT.h"
 #include "linux/c/ELOOP.h"
@@ -53,7 +53,7 @@ chown(const char* pathname, uid_t owner, gid_t group) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(_c_syscall3(SYS_chown, pathname, owner, group));
+    return Result<void, Error>(_linux_syscall3(SYS_chown, pathname, owner, group));
 }
 
 } // namespace linux

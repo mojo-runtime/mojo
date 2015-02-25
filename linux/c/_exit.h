@@ -6,14 +6,14 @@
 #include "compat/_c_unreachable.h"
 
 #include "SYS_exit.h"
-#include "_c_syscall1.h"
+#include "_linux_syscall1.h"
 
 _c_noreturn
 static
 void
 _exit(int status) _c_noexcept
 {
-    _c_syscall1(SYS_exit, status);
+    _linux_syscall1(SYS_exit, status);
     _c_unreachable();
 }
 

@@ -1,7 +1,7 @@
 #ifndef linux_epoll_wait_hxx_
 #define linux_epoll_wait_hxx_
 
-#include "linux/c/_c_syscall4.h"
+#include "linux/c/_linux_syscall4.h"
 #include "linux/c/EBADF.h"
 #include "linux/c/EFAULT.h"
 #include "linux/c/EINTR.h"
@@ -41,7 +41,7 @@ epoll_wait(int epfd, struct epoll_event* events, int maxevents, int timeout) noe
 
     // ... unsigned, I guess?
 
-    return Result<unsigned, Error>(_c_syscall4(SYS_epoll_wait, epfd, events, maxevents, timeout));
+    return Result<unsigned, Error>(_linux_syscall4(SYS_epoll_wait, epfd, events, maxevents, timeout));
 }
 
 } // namespace linux

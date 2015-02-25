@@ -2,7 +2,7 @@
 #define linux_mmap_anonymous_hxx_
 
 #include "linux/c/MAP_ANONYMOUS.h"
-#include "linux/c/_c_syscall4.h"
+#include "linux/c/_linux_syscall4.h"
 
 #include "linux/mmap.hxx"
 
@@ -31,7 +31,7 @@ anonymous(void* addr, size_t length, int prot, int flags) noexcept
     // however, some emplementations require `fd` to be -1 if MAP_ANONYMOUS is specified,
     // and portable applications should ensure with.
 
-    return Result<void*, Error>(_c_syscall4(SYS_mmap, addr, length, prot, flags | MAP_ANONYMOUS));
+    return Result<void*, Error>(_linux_syscall4(SYS_mmap, addr, length, prot, flags | MAP_ANONYMOUS));
 }
 
 } // namespace mmap_

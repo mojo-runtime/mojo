@@ -1,7 +1,7 @@
 #ifndef linux_fstatat_hxx_
 #define linux_fstatat_hxx_
 
-#include "linux/c/_c_syscall4.h"
+#include "linux/c/_linux_syscall4.h"
 #include "linux/c/EACCES.h"
 #include "linux/c/EBADF.h"
 #include "linux/c/EFAULT.h"
@@ -65,7 +65,7 @@ fstatat(int dirfd, const char* pathname, struct stat* buf, int flags) noexcept
         EOVERFLOW_ = EOVERFLOW,
     };
 
-    return Result<void, Error>(_c_syscall4(SYS_fstatat, dirfd, pathname, buf, flags));
+    return Result<void, Error>(_linux_syscall4(SYS_fstatat, dirfd, pathname, buf, flags));
 }
 
 static inline

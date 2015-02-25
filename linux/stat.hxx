@@ -1,7 +1,7 @@
 #ifndef linux_stat_hxx_
 #define linux_stat_hxx_
 
-#include "linux/c/_c_syscall2.h"
+#include "linux/c/_linux_syscall2.h"
 #include "linux/c/EACCES.h"
 #include "linux/c/EFAULT.h"
 #include "linux/c/ELOOP.h"
@@ -56,7 +56,7 @@ stat(const char* pathname, struct stat* buf) noexcept
         EOVERFLOW_ = EOVERFLOW,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_stat, pathname, buf));
+    return Result<void, Error>(_linux_syscall2(SYS_stat, pathname, buf));
 }
 
 static inline
@@ -75,7 +75,7 @@ stat(const char* pathname, struct stat& buf) noexcept
         EOVERFLOW_    = EOVERFLOW,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_stat, pathname, &buf));
+    return Result<void, Error>(_linux_syscall2(SYS_stat, pathname, &buf));
 }
 
 } // namespace linux
