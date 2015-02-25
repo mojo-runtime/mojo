@@ -1,10 +1,10 @@
 #ifndef linux_inotify_rm_watch_hxx_
 #define linux_inotify_rm_watch_hxx_
 
-#include "abi/_abi_syscall_2.h"
-#include "c/EBADF.h"
-#include "c/EINVAL.h"
-#include "c/SYS_inotify_rm_watch.h"
+#include "linux/c/_c_syscall2.h"
+#include "linux/c/EBADF.h"
+#include "linux/c/EINVAL.h"
+#include "linux/c/SYS_inotify_rm_watch.h"
 
 #include "linux/Result.hxx"
 
@@ -25,7 +25,7 @@ inotify_rm_watch(int fd, int wd) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(_abi_syscall_2(SYS_inotify_rm_watch, fd, wd));
+    return Result<void, Error>(_c_syscall2(SYS_inotify_rm_watch, fd, wd));
 }
 
 } // namespace linux

@@ -1,18 +1,19 @@
 #ifndef linux_readlink_hxx_
 #define linux_readlink_hxx_
 
-#include "abi/_abi_syscall_3.h"
-#include "c/EACCES.h"
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/EIO.h"
-#include "c/ELOOP.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOTDIR.h"
-#include "c/SYS_readlink.h"
 #include "c/size_t.h"
+
+#include "linux/c/EACCES.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/EINVAL.h"
+#include "linux/c/EIO.h"
+#include "linux/c/ELOOP.h"
+#include "linux/c/ENAMETOOLONG.h"
+#include "linux/c/ENOENT.h"
+#include "linux/c/ENOMEM.h"
+#include "linux/c/ENOTDIR.h"
+#include "linux/c/SYS_readlink.h"
+#include "linux/c/_c_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -54,7 +55,7 @@ readlink(const char* pathname, char* buf, size_t bufsiz) noexcept
         ENOTDIR_ = ENOTDIR,
     };
 
-    return Result<size_t, Error>(_abi_syscall_3(SYS_readlink, pathname, buf, bufsiz));
+    return Result<size_t, Error>(_c_syscall3(SYS_readlink, pathname, buf, bufsiz));
 }
 
 } // namespace linux

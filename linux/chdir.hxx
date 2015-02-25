@@ -1,16 +1,16 @@
 #ifndef linux_chdir_hxx_
 #define linux_chdir_hxx_
 
-#include "abi/_abi_syscall_1.h"
-#include "c/EACCES.h"
-#include "c/EFAULT.h"
-#include "c/EIO.h"
-#include "c/ELOOP.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOTDIR.h"
-#include "c/SYS_chdir.h"
+#include "linux/c/EACCES.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/EIO.h"
+#include "linux/c/ELOOP.h"
+#include "linux/c/ENAMETOOLONG.h"
+#include "linux/c/ENOENT.h"
+#include "linux/c/ENOMEM.h"
+#include "linux/c/ENOTDIR.h"
+#include "linux/c/SYS_chdir.h"
+#include "linux/c/_c_syscall1.h"
 
 #include "linux/Result.hxx"
 
@@ -49,7 +49,7 @@ chdir(const char* path) noexcept
         ENOTDIR_ = ENOTDIR,
     };
 
-    return Result<void, Error>(_abi_syscall_1(SYS_chdir, path));
+    return Result<void, Error>(_c_syscall1(SYS_chdir, path));
 }
 
 } // namespace linux

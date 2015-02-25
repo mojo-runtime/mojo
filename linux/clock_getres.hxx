@@ -1,12 +1,12 @@
 #ifndef linux_clock_getres_hxx_
 #define linux_clock_getres_hxx_
 
-#include "abi/_abi_syscall_2.h"
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/SYS_clock_getres.h"
-#include "c/clockid_t.h"
-#include "c/struct-timespec.h"
+#include "linux/c/_c_syscall2.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/EINVAL.h"
+#include "linux/c/SYS_clock_getres.h"
+#include "linux/c/clockid_t.h"
+#include "linux/c/struct-timespec.h"
 
 #include "linux/Result.hxx"
 
@@ -25,7 +25,7 @@ clock_getres(clockid_t clk_id, const struct timespec* tp) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(_abi_syscall_2(SYS_clock_getres, clk_id, tp));
+    return Result<void, Error>(_c_syscall2(SYS_clock_getres, clk_id, tp));
 }
 
 } // namespace linux

@@ -1,7 +1,7 @@
 #ifndef linux_vfork_hxx_
 #define linux_vfork_hxx_
 
-#include "c/SYS_vfork.h"
+#include "linux/c/SYS_vfork.h"
 
 #include "linux/fork.hxx"
 
@@ -11,7 +11,7 @@ static inline
 auto
 vfork() noexcept
 {
-    return decltype(fork())(_abi_syscall_0(SYS_vfork)); // Same Result
+    return decltype(fork())(_c_syscall0(SYS_vfork)); // Same Result
 }
 
 } // namespace linux

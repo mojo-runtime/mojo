@@ -1,16 +1,16 @@
 #ifndef linux_epoll_ctl_hxx_
 #define linux_epoll_ctl_hxx_
 
-#include "abi/_abi_syscall_4.h"
-#include "c/EBADF.h"
-#include "c/EEXIST.h"
-#include "c/EINVAL.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOSPC.h"
-#include "c/EPERM.h"
-#include "c/SYS_epoll_ctl.h"
-#include "c/struct-epoll_event.h"
+#include "linux/c/_c_syscall4.h"
+#include "linux/c/EBADF.h"
+#include "linux/c/EEXIST.h"
+#include "linux/c/EINVAL.h"
+#include "linux/c/ENOENT.h"
+#include "linux/c/ENOMEM.h"
+#include "linux/c/ENOSPC.h"
+#include "linux/c/EPERM.h"
+#include "linux/c/SYS_epoll_ctl.h"
+#include "linux/c/struct-epoll_event.h"
 
 #include "linux/Result.hxx"
 
@@ -52,7 +52,7 @@ epoll_ctl(int epfd, int op, int fd, struct epoll_event* event) noexcept
         EPERM_ = EPERM,
     };
 
-    return Result<void, Error>(_abi_syscall_4(SYS_epoll_ctl, epfd, op, fd, event));
+    return Result<void, Error>(_c_syscall4(SYS_epoll_ctl, epfd, op, fd, event));
 }
 
 } // namespace linux

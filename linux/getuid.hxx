@@ -1,9 +1,9 @@
 #ifndef linux_getuid_hxx_
 #define linux_getuid_hxx_
 
-#include "abi/_abi_syscall_0.h"
-#include "c/SYS_getuid.h"
-#include "c/uid_t.h"
+#include "linux/c/_c_syscall0.h"
+#include "linux/c/SYS_getuid.h"
+#include "linux/c/uid_t.h"
 
 namespace linux {
 
@@ -11,7 +11,7 @@ static inline
 uid_t
 getuid() noexcept
 {
-    return static_cast<uid_t>(_abi_syscall_0(SYS_getuid));
+    return static_cast<uid_t>(_c_syscall0(SYS_getuid));
 }
 
 } // namespace linux

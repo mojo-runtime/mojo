@@ -1,20 +1,21 @@
 #ifndef linux_write_hxx_
 #define linux_write_hxx_
 
-#include "abi/_abi_syscall_3.h"
-#include "c/EAGAIN.h"
-#include "c/EBADF.h"
-#include "c/EDESTADDRREQ.h"
-#include "c/EDQUOT.h"
-#include "c/EFAULT.h"
-#include "c/EFBIG.h"
-#include "c/EINTR.h"
-#include "c/EINVAL.h"
-#include "c/EIO.h"
-#include "c/ENOSPC.h"
-#include "c/EPIPE.h"
-#include "c/SYS_write.h"
 #include "c/size_t.h"
+
+#include "linux/c/EAGAIN.h"
+#include "linux/c/EBADF.h"
+#include "linux/c/EDESTADDRREQ.h"
+#include "linux/c/EDQUOT.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/EFBIG.h"
+#include "linux/c/EINTR.h"
+#include "linux/c/EINVAL.h"
+#include "linux/c/EIO.h"
+#include "linux/c/ENOSPC.h"
+#include "linux/c/EPIPE.h"
+#include "linux/c/SYS_write.h"
+#include "linux/c/_c_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -74,7 +75,7 @@ write(int fd, const void* buf, size_t count) noexcept
         //   XXX: totally ignoring this
     };
 
-    return Result<size_t, Error>(_abi_syscall_3(SYS_write, fd, buf, count));
+    return Result<size_t, Error>(_c_syscall3(SYS_write, fd, buf, count));
 }
 
 template <typename T, size_t n>
@@ -99,7 +100,7 @@ write(int fd, const T(& array)[n]) noexcept
     };
 
     // We can't use write(...)._with_error; see `read_::into`.
-    return Result<size_t, Error>(_abi_syscall_3(SYS_write, fd, array, n * sizeof(T)));
+    return Result<size_t, Error>(_c_syscall3(SYS_write, fd, array, n * sizeof(T)));
 }
 
 } // namespace linux

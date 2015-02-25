@@ -1,16 +1,17 @@
 #ifndef linux_read_hxx_
 #define linux_read_hxx_
 
-#include "abi/_abi_syscall_3.h"
-#include "c/EAGAIN.h"
-#include "c/EBADF.h"
-#include "c/EFAULT.h"
-#include "c/EINTR.h"
-#include "c/EINVAL.h"
-#include "c/EIO.h"
-#include "c/EISDIR.h"
-#include "c/SYS_read.h"
 #include "c/size_t.h"
+
+#include "linux/c/EAGAIN.h"
+#include "linux/c/EBADF.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/EINTR.h"
+#include "linux/c/EINVAL.h"
+#include "linux/c/EIO.h"
+#include "linux/c/EISDIR.h"
+#include "linux/c/SYS_read.h"
+#include "linux/c/_c_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -55,7 +56,7 @@ read(int fd, void* buf, size_t count) noexcept
         //   XXX: totally ignoring this
     };
 
-    return Result<size_t, Error>(_abi_syscall_3(SYS_read, fd, buf, count));
+    return Result<size_t, Error>(_c_syscall3(SYS_read, fd, buf, count));
 }
 
 template <typename T, size_t n>
@@ -79,7 +80,7 @@ read(int fd, T(& array)[n]) noexcept
     // return read(fd, array, n * sizeof(T))._with_error<Error>();
     // return read(fd, array, n * sizeof(T)).template _with_error<Error>();
 
-    return Result<size_t, Error>(_abi_syscall_3(SYS_read, fd, array, n * sizeof(T)));
+    return Result<size_t, Error>(_c_syscall3(SYS_read, fd, array, n * sizeof(T)));
 }
 
 } // namespace linux

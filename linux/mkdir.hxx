@@ -1,22 +1,22 @@
 #ifndef linux_mkdir_hxx_
 #define linux_mkdir_hxx_
 
-#include "abi/_abi_syscall_2.h"
-#include "c/EACCES.h"
-#include "c/EDQUOT.h"
-#include "c/EEXIST.h"
-#include "c/EFAULT.h"
-#include "c/ELOOP.h"
-#include "c/EMLINK.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOSPC.h"
-#include "c/ENOTDIR.h"
-#include "c/EPERM.h"
-#include "c/EROFS.h"
-#include "c/SYS_mkdir.h"
-#include "c/mode_t.h"
+#include "linux/c/_c_syscall2.h"
+#include "linux/c/EACCES.h"
+#include "linux/c/EDQUOT.h"
+#include "linux/c/EEXIST.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/ELOOP.h"
+#include "linux/c/EMLINK.h"
+#include "linux/c/ENAMETOOLONG.h"
+#include "linux/c/ENOENT.h"
+#include "linux/c/ENOMEM.h"
+#include "linux/c/ENOSPC.h"
+#include "linux/c/ENOTDIR.h"
+#include "linux/c/EPERM.h"
+#include "linux/c/EROFS.h"
+#include "linux/c/SYS_mkdir.h"
+#include "linux/c/mode_t.h"
 
 #include "linux/Result.hxx"
 
@@ -73,7 +73,7 @@ mkdir(const char* pathname, mode_t mode) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(_abi_syscall_2(SYS_mkdir, pathname, mode));
+    return Result<void, Error>(_c_syscall2(SYS_mkdir, pathname, mode));
 }
 
 } // namespace linux

@@ -1,12 +1,12 @@
 #ifndef linux_epoll_create1_hxx_
 #define linux_epoll_create1_hxx_
 
-#include "abi/_abi_syscall_1.h"
-#include "c/EINVAL.h"
-#include "c/EMFILE.h"
-#include "c/ENFILE.h"
-#include "c/ENOMEM.h"
-#include "c/SYS_epoll_create1.h"
+#include "linux/c/_c_syscall1.h"
+#include "linux/c/EINVAL.h"
+#include "linux/c/EMFILE.h"
+#include "linux/c/ENFILE.h"
+#include "linux/c/ENOMEM.h"
+#include "linux/c/SYS_epoll_create1.h"
 
 #include "linux/Result.hxx"
 
@@ -32,7 +32,7 @@ epoll_create1(int flags) noexcept
         ENOMEM_ = ENOMEM,
     };
 
-    return Result<int, Error>(_abi_syscall_1(SYS_epoll_create1, flags));
+    return Result<int, Error>(_c_syscall1(SYS_epoll_create1, flags));
 }
 
 static inline

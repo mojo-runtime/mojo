@@ -1,19 +1,19 @@
 #ifndef linux_fcntl_hxx_
 #define linux_fcntl_hxx_
 
-#include "abi/_abi_syscall_2.h"
-#include "abi/_abi_syscall_3.h"
-#include "c/EACCES.h"
-#include "c/EAGAIN.h"
-#include "c/EBADF.h"
-#include "c/EDEADLK.h"
-#include "c/EFAULT.h"
-#include "c/EINTR.h"
-#include "c/EINVAL.h"
-#include "c/EMFILE.h"
-#include "c/ENOLCK.h"
-#include "c/EPERM.h"
-#include "c/SYS_fcntl.h"
+#include "linux/c/_c_syscall2.h"
+#include "linux/c/_c_syscall3.h"
+#include "linux/c/EACCES.h"
+#include "linux/c/EAGAIN.h"
+#include "linux/c/EBADF.h"
+#include "linux/c/EDEADLK.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/EINTR.h"
+#include "linux/c/EINVAL.h"
+#include "linux/c/EMFILE.h"
+#include "linux/c/ENOLCK.h"
+#include "linux/c/EPERM.h"
+#include "linux/c/SYS_fcntl.h"
 
 #include "linux/Result.hxx"
 
@@ -77,7 +77,7 @@ fcntl(int fd, int cmd, Arg arg) noexcept
         EPERM_ = EPERM,
     };
 
-    return Result<Ok, Error>(_abi_syscall_3(SYS_fcntl, fd, cmd, arg));
+    return Result<Ok, Error>(_c_syscall3(SYS_fcntl, fd, cmd, arg));
 }
 
 template <typename Ok>
@@ -85,7 +85,7 @@ static inline
 auto
 fcntl(int fd, int cmd) noexcept
 {
-    return decltype(fcntl<Ok>(fd, cmd, 0))(_abi_syscall_2(SYS_fcntl, fd, cmd));
+    return decltype(fcntl<Ok>(fd, cmd, 0))(_c_syscall2(SYS_fcntl, fd, cmd));
 }
 
 } // namespace linux

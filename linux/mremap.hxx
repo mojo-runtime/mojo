@@ -1,14 +1,15 @@
 #ifndef linux_mremap_hxx_
 #define linux_mremap_hxx_
 
-#include "abi/_abi_syscall_4.h"
-#include "abi/_abi_syscall_5.h"
-#include "c/EAGAIN.h"
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/ENOMEM.h"
-#include "c/SYS_mremap.h"
 #include "c/size_t.h"
+
+#include "linux/c/EAGAIN.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/EINVAL.h"
+#include "linux/c/ENOMEM.h"
+#include "linux/c/SYS_mremap.h"
+#include "linux/c/_c_syscall4.h"
+#include "linux/c/_c_syscall5.h"
 
 #include "linux/Result.hxx"
 
@@ -24,7 +25,7 @@ mremap(void* old_address, size_t old_size, size_t new_size, int flags) noexcept
         // this was not possible without exceeding the RLIMIT_MEMLOCK resource limit.
         EAGAIN_ = EAGAIN,
 
-        // "Segmentation fault." Some address in the range old_address to old_address+old_size
+        // "c/Segmentation fault." Some address in the range old_address to old_address+old_size
         // is an invalid virtual memory address for this process. You can also get EFAULT
         // even if there exist mappings that cover the whole address space requested,
         // but those mappings are of different types.
@@ -48,7 +49,7 @@ mremap(void* old_address, size_t old_size, size_t new_size, int flags) noexcept
     };
 
     return Result<void, Error>(
-        _abi_syscall_4(SYS_mremap, old_address, old_size, new_size, flags)
+        _c_syscall4(SYS_mremap, old_address, old_size, new_size, flags)
     );
 }
 
@@ -57,7 +58,7 @@ auto
 mremap(void* old_address, size_t old_size, size_t new_size, int flags, void* new_address) noexcept
 {
     return decltype(mremap(old_address, old_size, new_size, flags))(
-        _abi_syscall_5(SYS_mremap, old_address, old_size, new_size, flags, new_address)
+        _c_syscall5(SYS_mremap, old_address, old_size, new_size, flags, new_address)
     );
 }
 

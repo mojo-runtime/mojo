@@ -1,19 +1,19 @@
 #ifndef linux_chmod_hxx_
 #define linux_chmod_hxx_
 
-#include "abi/_abi_syscall_2.h"
-#include "c/EACCES.h"
-#include "c/EFAULT.h"
-#include "c/EIO.h"
-#include "c/ELOOP.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOTDIR.h"
-#include "c/EPERM.h"
-#include "c/EROFS.h"
-#include "c/SYS_chmod.h"
-#include "c/mode_t.h"
+#include "linux/c/EACCES.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/EIO.h"
+#include "linux/c/ELOOP.h"
+#include "linux/c/ENAMETOOLONG.h"
+#include "linux/c/ENOENT.h"
+#include "linux/c/ENOMEM.h"
+#include "linux/c/ENOTDIR.h"
+#include "linux/c/EPERM.h"
+#include "linux/c/EROFS.h"
+#include "linux/c/SYS_chmod.h"
+#include "linux/c/mode_t.h"
+#include "linux/c/_c_syscall2.h"
 
 #include "linux/Result.hxx"
 
@@ -57,7 +57,7 @@ chmod(const char* pathname, mode_t mode) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(_abi_syscall_2(SYS_chmod, pathname, mode));
+    return Result<void, Error>(_c_syscall2(SYS_chmod, pathname, mode));
 }
 
 } // namespace linux

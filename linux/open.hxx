@@ -1,32 +1,32 @@
 #ifndef linux_open_hxx_
 #define linux_open_hxx_
 
-#include "abi/_abi_syscall_2.h"
-#include "c/EACCES.h"
-#include "c/EDQUOT.h"
-#include "c/EEXIST.h"
-#include "c/EFAULT.h"
-#include "c/EFBIG.h"
-#include "c/EINTR.h"
-#include "c/EINVAL.h"
-#include "c/EISDIR.h"
-#include "c/ELOOP.h"
-#include "c/EMFILE.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENFILE.h"
-#include "c/ENODEV.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOSPC.h"
-#include "c/ENOTDIR.h"
-#include "c/ENXIO.h"
-#include "c/EOPNOTSUPP.h"
-#include "c/EOVERFLOW.h"
-#include "c/EPERM.h"
-#include "c/EROFS.h"
-#include "c/ETXTBSY.h"
-#include "c/EWOULDBLOCK.h"
-#include "c/SYS_open.h"
+#include "linux/c/_c_syscall2.h"
+#include "linux/c/EACCES.h"
+#include "linux/c/EDQUOT.h"
+#include "linux/c/EEXIST.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/EFBIG.h"
+#include "linux/c/EINTR.h"
+#include "linux/c/EINVAL.h"
+#include "linux/c/EISDIR.h"
+#include "linux/c/ELOOP.h"
+#include "linux/c/EMFILE.h"
+#include "linux/c/ENAMETOOLONG.h"
+#include "linux/c/ENFILE.h"
+#include "linux/c/ENODEV.h"
+#include "linux/c/ENOENT.h"
+#include "linux/c/ENOMEM.h"
+#include "linux/c/ENOSPC.h"
+#include "linux/c/ENOTDIR.h"
+#include "linux/c/ENXIO.h"
+#include "linux/c/EOPNOTSUPP.h"
+#include "linux/c/EOVERFLOW.h"
+#include "linux/c/EPERM.h"
+#include "linux/c/EROFS.h"
+#include "linux/c/ETXTBSY.h"
+#include "linux/c/EWOULDBLOCK.h"
+#include "linux/c/SYS_open.h"
 
 #include "linux/Result.hxx"
 
@@ -149,7 +149,7 @@ open(const char* pathname, int flags) noexcept
         EWOULDBLOCK_ = EWOULDBLOCK,
     };
 
-    return Result<int, Error>(_abi_syscall_2(SYS_open, pathname, flags));
+    return Result<int, Error>(_c_syscall2(SYS_open, pathname, flags));
 }
 
 } // namespace linux

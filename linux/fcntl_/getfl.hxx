@@ -1,7 +1,7 @@
 #ifndef linux_fcntl_getfl_hxx_
 #define linux_fcntl_getfl_hxx_
 
-#include "F_GETFL.h"
+#include "linux/c/F_GETFL.h"
 
 #include "linux/fcntl.hxx"
 

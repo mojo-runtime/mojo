@@ -1,13 +1,13 @@
 #ifndef linux_fstat_hxx_
 #define linux_fstat_hxx_
 
-#include "abi/_abi_syscall_2.h"
-#include "c/EBADF.h"
-#include "c/EFAULT.h"
-#include "c/ENOMEM.h"
-#include "c/EOVERFLOW.h"
-#include "c/SYS_fstat.h"
-#include "c/struct-stat.h"
+#include "linux/c/_c_syscall2.h"
+#include "linux/c/EBADF.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/ENOMEM.h"
+#include "linux/c/EOVERFLOW.h"
+#include "linux/c/SYS_fstat.h"
+#include "linux/c/struct-stat.h"
 
 #include "linux/Result.hxx"
 
@@ -35,7 +35,7 @@ fstat(int fd, struct stat* buf) noexcept
         EOVERFLOW_ = EOVERFLOW,
     };
 
-    return Result<void, Error>(_abi_syscall_2(SYS_fstat, fd, buf));
+    return Result<void, Error>(_c_syscall2(SYS_fstat, fd, buf));
 }
 
 } // namespace linux

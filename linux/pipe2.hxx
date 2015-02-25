@@ -1,12 +1,12 @@
 #ifndef linux_pipe2_hxx_
 #define linux_pipe2_hxx_
 
-#include "abi/_abi_syscall_2.h"
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/EMFILE.h"
-#include "c/ENFILE.h"
-#include "c/SYS_pipe2.h"
+#include "linux/c/_c_syscall2.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/EINVAL.h"
+#include "linux/c/EMFILE.h"
+#include "linux/c/ENFILE.h"
+#include "linux/c/SYS_pipe2.h"
 
 #include "linux/Result.hxx"
 
@@ -31,7 +31,7 @@ pipe2(int pipefd[2], int flags) noexcept
         ENFILE_ = ENFILE,
     };
 
-    return Result<void, Error>(_abi_syscall_2(SYS_pipe2, pipefd, flags));
+    return Result<void, Error>(_c_syscall2(SYS_pipe2, pipefd, flags));
 }
 
 static inline

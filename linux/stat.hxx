@@ -1,17 +1,17 @@
 #ifndef linux_stat_hxx_
 #define linux_stat_hxx_
 
-#include "abi/_abi_syscall_2.h"
-#include "c/EACCES.h"
-#include "c/EFAULT.h"
-#include "c/ELOOP.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOTDIR.h"
-#include "c/EOVERFLOW.h"
-#include "c/SYS_stat.h"
-#include "c/struct-stat.h"
+#include "linux/c/_c_syscall2.h"
+#include "linux/c/EACCES.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/ELOOP.h"
+#include "linux/c/ENAMETOOLONG.h"
+#include "linux/c/ENOENT.h"
+#include "linux/c/ENOMEM.h"
+#include "linux/c/ENOTDIR.h"
+#include "linux/c/EOVERFLOW.h"
+#include "linux/c/SYS_stat.h"
+#include "linux/c/struct-stat.h"
 
 #include "linux/Result.hxx"
 
@@ -56,7 +56,7 @@ stat(const char* pathname, struct stat* buf) noexcept
         EOVERFLOW_ = EOVERFLOW,
     };
 
-    return Result<void, Error>(_abi_syscall_2(SYS_stat, pathname, buf));
+    return Result<void, Error>(_c_syscall2(SYS_stat, pathname, buf));
 }
 
 static inline
@@ -75,7 +75,7 @@ stat(const char* pathname, struct stat& buf) noexcept
         EOVERFLOW_    = EOVERFLOW,
     };
 
-    return Result<void, Error>(_abi_syscall_2(SYS_stat, pathname, &buf));
+    return Result<void, Error>(_c_syscall2(SYS_stat, pathname, &buf));
 }
 
 } // namespace linux

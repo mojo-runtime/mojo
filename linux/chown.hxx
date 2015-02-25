@@ -1,19 +1,19 @@
 #ifndef linux_chown_hxx_
 #define linux_chown_hxx_
 
-#include "abi/_abi_syscall_3.h"
-#include "c/EACCES.h"
-#include "c/EFAULT.h"
-#include "c/ELOOP.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOTDIR.h"
-#include "c/EPERM.h"
-#include "c/EROFS.h"
-#include "c/SYS_chown.h"
-#include "c/gid_t.h"
-#include "c/uid_t.h"
+#include "linux/c/_c_syscall3.h"
+#include "linux/c/EACCES.h"
+#include "linux/c/EFAULT.h"
+#include "linux/c/ELOOP.h"
+#include "linux/c/ENAMETOOLONG.h"
+#include "linux/c/ENOENT.h"
+#include "linux/c/ENOMEM.h"
+#include "linux/c/ENOTDIR.h"
+#include "linux/c/EPERM.h"
+#include "linux/c/EROFS.h"
+#include "linux/c/SYS_chown.h"
+#include "linux/c/gid_t.h"
+#include "linux/c/uid_t.h"
 
 #include "linux/Result.hxx"
 
@@ -53,7 +53,7 @@ chown(const char* pathname, uid_t owner, gid_t group) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(_abi_syscall_3(SYS_chown, pathname, owner, group));
+    return Result<void, Error>(_c_syscall3(SYS_chown, pathname, owner, group));
 }
 
 } // namespace linux

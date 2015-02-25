@@ -1,11 +1,11 @@
 #ifndef linux_close_hxx_
 #define linux_close_hxx_
 
-#include "abi/_abi_syscall_1.h"
-#include "c/EBADF.h"
-#include "c/EINTR.h"
-#include "c/EIO.h"
-#include "c/SYS_close.h"
+#include "linux/c/_c_syscall1.h"
+#include "linux/c/EBADF.h"
+#include "linux/c/EINTR.h"
+#include "linux/c/EIO.h"
+#include "linux/c/SYS_close.h"
 
 #include "linux/Result.hxx"
 
@@ -27,7 +27,7 @@ close(int fd) noexcept
         EIO_ = EIO,
     };
 
-    return Result<void, Error>(_abi_syscall_1(SYS_close, fd));
+    return Result<void, Error>(_c_syscall1(SYS_close, fd));
 }
 
 } // namespace linux
