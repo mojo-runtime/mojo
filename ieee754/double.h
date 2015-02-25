@@ -1,5 +1,5 @@
-#ifndef has_ieee754_double
-#define has_ieee754_double                           \
+#ifndef compiler_has_ieee754_double
+#define compiler_has_ieee754_double                           \
     (__DBL_DIG__        ==    15) &&                 \
     (__DBL_MANT_DIG__   ==    53) &&                 \
     (__DBL_MAX_10_EXP__ ==   308) &&                 \
