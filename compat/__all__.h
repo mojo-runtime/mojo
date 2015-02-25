@@ -1,5 +1,2 @@
-#include "_c_noexcept.h"
-#include "_c_noreturn.h"
 #include "_c_reinterpret_cast.h"
 #include "_c_static_cast.h"
-#include "_c_unreachable.h"
