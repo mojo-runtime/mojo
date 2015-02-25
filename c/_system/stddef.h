@@ -7,15 +7,15 @@
 //------------------------------------------------------------------------------------------------//
 // "The types are..."
 
-#include "ptrdiff_t.h"
-#include "size_t.h"
-#include "wchar_t.h"
+#include "c/ptrdiff_t.h"
+#include "c/size_t.h"
+#include "c/wchar_t.h"
 
 //------------------------------------------------------------------------------------------------//
 // "The macros are..."
 
-#include "NULL.h"
-#include "offsetof.h"
+#include "c/NULL.h"
+#include "c/offsetof.h"
 
 //------------------------------------------------------------------------------------------------//
 

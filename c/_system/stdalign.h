@@ -1,7 +1,7 @@
 #ifndef _stdalign_h_
 #define _stdalign_h_
 
-#include "alignas.h"
-#include "alignof.h"
+#include "c/alignas.h"
+#include "c/alignof.h"
 
 #endif
