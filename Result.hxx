@@ -1,7 +1,7 @@
 #ifndef linux_Result_hxx_
 #define linux_Result_hxx_
 
-#include "linux/__Word.hxx"
+#include "abi/Word.hxx"
 
 namespace linux {
 
@@ -9,7 +9,7 @@ template <typename Ok, typename Error>
 struct Result
 {
     constexpr explicit
-    Result(__Word word)
+    Result(abi::Word word)
         : __word(word)
     {
     }
@@ -20,7 +20,7 @@ struct Result
     bool
     is_error() const noexcept
     {
-        return this->__word > static_cast<__Word>(-4096);
+        return this->__word > static_cast<abi::Word>(-4096);
     }
 
     constexpr
@@ -55,7 +55,7 @@ struct Result
     }
 
   private:
-    __Word
+    abi::Word
     __word;
 };
 
