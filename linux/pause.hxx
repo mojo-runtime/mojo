@@ -1,9 +1,8 @@
 #ifndef linux_pause_hxx_
 #define linux_pause_hxx_
 
-#include "SYS_pause.h"
-
 #include "abi/_abi_syscall_0.h"
+#include "c/SYS_pause.h"
 
 namespace linux {
 

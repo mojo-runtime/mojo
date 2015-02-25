@@ -1,16 +1,16 @@
 #ifndef linux_clone_hxx_
 #define linux_clone_hxx_
 
-#include "EAGAIN.h"
-#include "EINVAL.h"
-#include "ENOMEM.h"
-#include "EPERM.h"
-#include "SYS_clone.h"
-#include "pid_t.h"
-#include "struct-pt_regs.h"
+#include "abi/_abi_syscall_5.h"
+#include "c/EAGAIN.h"
+#include "c/EINVAL.h"
+#include "c/ENOMEM.h"
+#include "c/EPERM.h"
+#include "c/SYS_clone.h"
+#include "c/pid_t.h"
+#include "c/struct-pt_regs.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_5.h"
 
 namespace linux {
 

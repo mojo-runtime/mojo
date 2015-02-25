@@ -1,12 +1,12 @@
 #ifndef linux_uname_hxx_
 #define linux_uname_hxx_
 
-#include "EFAULT.h"
-#include "SYS_uname.h"
-#include "struct-utsname.h"
+#include "abi/_abi_syscall_1.h"
+#include "c/EFAULT.h"
+#include "c/SYS_uname.h"
+#include "c/struct-utsname.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_1.h"
 
 namespace linux {
 

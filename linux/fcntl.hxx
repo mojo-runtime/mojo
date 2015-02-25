@@ -1,21 +1,21 @@
 #ifndef linux_fcntl_hxx_
 #define linux_fcntl_hxx_
 
-#include "EACCES.h"
-#include "EAGAIN.h"
-#include "EBADF.h"
-#include "EDEADLK.h"
-#include "EFAULT.h"
-#include "EINTR.h"
-#include "EINVAL.h"
-#include "EMFILE.h"
-#include "ENOLCK.h"
-#include "EPERM.h"
-#include "SYS_fcntl.h"
-
-#include "linux/Result.hxx"
 #include "abi/_abi_syscall_2.h"
 #include "abi/_abi_syscall_3.h"
+#include "c/EACCES.h"
+#include "c/EAGAIN.h"
+#include "c/EBADF.h"
+#include "c/EDEADLK.h"
+#include "c/EFAULT.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/EMFILE.h"
+#include "c/ENOLCK.h"
+#include "c/EPERM.h"
+#include "c/SYS_fcntl.h"
+
+#include "linux/Result.hxx"
 
 namespace linux {
 

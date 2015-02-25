@@ -1,18 +1,18 @@
 #ifndef linux_waitid_hxx_
 #define linux_waitid_hxx_
 
-#include "ECHILD.h"
-#include "EINTR.h"
-#include "EINVAL.h"
-#include "SYS_waitid.h"
-#include "id_t.h"
-#include "idtype_t.h"
-#include "pid_t.h"
-#include "siginfo_t.h"
-#include "struct-rusage.h"
+#include "abi/_abi_syscall_5.h"
+#include "c/ECHILD.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/SYS_waitid.h"
+#include "c/id_t.h"
+#include "c/idtype_t.h"
+#include "c/pid_t.h"
+#include "c/siginfo_t.h"
+#include "c/struct-rusage.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_5.h"
 
 namespace linux {
 

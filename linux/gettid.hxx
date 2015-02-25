@@ -1,10 +1,9 @@
 #ifndef linux_gettid_hxx_
 #define linux_gettid_hxx_
 
-#include "SYS_gettid.h"
-#include "pid_t.h"
-
 #include "abi/_abi_syscall_0.h"
+#include "c/SYS_gettid.h"
+#include "c/pid_t.h"
 
 namespace linux {
 

@@ -1,13 +1,13 @@
 #ifndef linux_close_hxx_
 #define linux_close_hxx_
 
-#include "EBADF.h"
-#include "EINTR.h"
-#include "EIO.h"
-#include "SYS_close.h"
+#include "abi/_abi_syscall_1.h"
+#include "c/EBADF.h"
+#include "c/EINTR.h"
+#include "c/EIO.h"
+#include "c/SYS_close.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_1.h"
 
 namespace linux {
 

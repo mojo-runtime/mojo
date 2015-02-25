@@ -1,10 +1,9 @@
 #ifndef linux_getuid_hxx_
 #define linux_getuid_hxx_
 
-#include "SYS_getuid.h"
-#include "uid_t.h"
-
 #include "abi/_abi_syscall_0.h"
+#include "c/SYS_getuid.h"
+#include "c/uid_t.h"
 
 namespace linux {
 

@@ -1,15 +1,15 @@
 #ifndef linux_fstat_hxx_
 #define linux_fstat_hxx_
 
-#include "EBADF.h"
-#include "EFAULT.h"
-#include "ENOMEM.h"
-#include "EOVERFLOW.h"
-#include "SYS_fstat.h"
-#include "struct-stat.h"
+#include "abi/_abi_syscall_2.h"
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/ENOMEM.h"
+#include "c/EOVERFLOW.h"
+#include "c/SYS_fstat.h"
+#include "c/struct-stat.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_2.h"
 
 namespace linux {
 

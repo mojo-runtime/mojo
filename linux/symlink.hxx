@@ -1,23 +1,23 @@
 #ifndef linux_symlink_hxx_
 #define linux_symlink_hxx_
 
-#include "EACCES.h"
-#include "EDQUOT.h"
-#include "EEXIST.h"
-#include "EFAULT.h"
-#include "EIO.h"
-#include "ELOOP.h"
-#include "ENAMETOOLONG.h"
-#include "ENOENT.h"
-#include "ENOMEM.h"
-#include "ENOSPC.h"
-#include "ENOTDIR.h"
-#include "EPERM.h"
-#include "EROFS.h"
-#include "SYS_symlink.h"
+#include "abi/_abi_syscall_2.h"
+#include "c/EACCES.h"
+#include "c/EDQUOT.h"
+#include "c/EEXIST.h"
+#include "c/EFAULT.h"
+#include "c/EIO.h"
+#include "c/ELOOP.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ENOMEM.h"
+#include "c/ENOSPC.h"
+#include "c/ENOTDIR.h"
+#include "c/EPERM.h"
+#include "c/EROFS.h"
+#include "c/SYS_symlink.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_2.h"
 
 namespace linux {
 

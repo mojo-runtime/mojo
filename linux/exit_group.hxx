@@ -1,9 +1,8 @@
 #ifndef linux_exit_group_hxx_
 #define linux_exit_group_hxx_
 
-#include "SYS_exit_group.h"
-
 #include "abi/_abi_syscall_1.h"
+#include "c/SYS_exit_group.h"
 
 namespace linux {
 

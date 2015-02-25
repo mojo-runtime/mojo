@@ -1,10 +1,9 @@
 #ifndef linux_getgid_hxx_
 #define linux_getgid_hxx_
 
-#include "SYS_getgid.h"
-#include "gid_t.h"
-
 #include "abi/_abi_syscall_0.h"
+#include "c/SYS_getgid.h"
+#include "c/gid_t.h"
 
 namespace linux {
 

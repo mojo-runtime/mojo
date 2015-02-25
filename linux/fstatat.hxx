@@ -1,20 +1,20 @@
 #ifndef linux_fstatat_hxx_
 #define linux_fstatat_hxx_
 
-#include "EACCES.h"
-#include "EBADF.h"
-#include "EFAULT.h"
-#include "EINVAL.h"
-#include "ELOOP.h"
-#include "ENAMETOOLONG.h"
-#include "ENOMEM.h"
-#include "ENOTDIR.h"
-#include "EOVERFLOW.h"
-#include "SYS_fstatat.h"
-#include "struct-stat.h"
+#include "abi/_abi_syscall_4.h"
+#include "c/EACCES.h"
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/ELOOP.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOMEM.h"
+#include "c/ENOTDIR.h"
+#include "c/EOVERFLOW.h"
+#include "c/SYS_fstatat.h"
+#include "c/struct-stat.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_4.h"
 
 namespace linux {
 

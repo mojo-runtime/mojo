@@ -1,15 +1,15 @@
 #ifndef linux_clock_nanosleep_hxx_
 #define linux_clock_nanosleep_hxx_
 
-#include "EFAULT.h"
-#include "EINTR.h"
-#include "EINVAL.h"
-#include "SYS_clock_nanosleep.h"
-#include "clockid_t.h"
-#include "struct-timespec.h"
+#include "abi/_abi_syscall_4.h"
+#include "c/EFAULT.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/SYS_clock_nanosleep.h"
+#include "c/clockid_t.h"
+#include "c/struct-timespec.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_4.h"
 
 namespace linux {
 

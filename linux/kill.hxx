@@ -1,14 +1,14 @@
 #ifndef linux_kill_hxx_
 #define linux_kill_hxx_
 
-#include "EINVAL.h"
-#include "EPERM.h"
-#include "ESRCH.h"
-#include "SYS_kill.h"
-#include "pid_t.h"
+#include "abi/_abi_syscall_2.h"
+#include "c/EINVAL.h"
+#include "c/EPERM.h"
+#include "c/ESRCH.h"
+#include "c/SYS_kill.h"
+#include "c/pid_t.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_2.h"
 
 namespace linux {
 

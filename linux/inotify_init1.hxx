@@ -1,14 +1,14 @@
 #ifndef linux_inotify_init1_hxx_
 #define linux_inotify_init1_hxx_
 
-#include "EINVAL.h"
-#include "EMFILE.h"
-#include "ENFILE.h"
-#include "ENOMEM.h"
-#include "SYS_inotify_init1.h"
+#include "abi/_abi_syscall_1.h"
+#include "c/EINVAL.h"
+#include "c/EMFILE.h"
+#include "c/ENFILE.h"
+#include "c/ENOMEM.h"
+#include "c/SYS_inotify_init1.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_1.h"
 
 namespace linux {
 

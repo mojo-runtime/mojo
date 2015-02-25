@@ -1,14 +1,14 @@
 #ifndef linux_ioctl_hxx_
 #define linux_ioctl_hxx_
 
-#include "EBADF.h"
-#include "EFAULT.h"
-#include "EINVAL.h"
-#include "ENOTTY.h"
-#include "SYS_ioctl.h"
+#include "abi/_abi_syscall_3.h"
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/ENOTTY.h"
+#include "c/SYS_ioctl.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_3.h"
 
 namespace linux {
 

@@ -1,10 +1,9 @@
 #ifndef linux_getppid_hxx_
 #define linux_getppid_hxx_
 
-#include "SYS_getppid.h"
-#include "pid_t.h"
-
 #include "abi/_abi_syscall_0.h"
+#include "c/SYS_getppid.h"
+#include "c/pid_t.h"
 
 namespace linux {
 

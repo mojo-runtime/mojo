@@ -1,12 +1,12 @@
 #ifndef linux_munmap_hxx_
 #define linux_munmap_hxx_
 
-#include "EINVAL.h"
-#include "SYS_munmap.h"
-#include "size_t.h"
+#include "abi/_abi_syscall_2.h"
+#include "c/EINVAL.h"
+#include "c/SYS_munmap.h"
+#include "c/size_t.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_2.h"
 
 namespace linux {
 

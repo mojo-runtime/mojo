@@ -1,15 +1,15 @@
 #ifndef linux_dup3_hxx_
 #define linux_dup3_hxx_
 
-#include "EBADF.h"
-#include "EBUSY.h"
-#include "EINTR.h"
-#include "EINVAL.h"
-#include "EMFILE.h"
-#include "SYS_dup3.h"
+#include "abi/_abi_syscall_3.h"
+#include "c/EBADF.h"
+#include "c/EBUSY.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/EMFILE.h"
+#include "c/SYS_dup3.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_3.h"
 
 namespace linux {
 

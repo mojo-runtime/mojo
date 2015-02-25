@@ -1,22 +1,22 @@
 #ifndef linux_rmdir_hxx_
 #define linux_rmdir_hxx_
 
-#include "EACCES.h"
-#include "EBUSY.h"
-#include "EFAULT.h"
-#include "EINVAL.h"
-#include "ELOOP.h"
-#include "ENAMETOOLONG.h"
-#include "ENOENT.h"
-#include "ENOMEM.h"
-#include "ENOTDIR.h"
-#include "ENOTEMPTY.h"
-#include "EPERM.h"
-#include "EROFS.h"
-#include "SYS_rmdir.h"
+#include "abi/_abi_syscall_1.h"
+#include "c/EACCES.h"
+#include "c/EBUSY.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/ELOOP.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ENOMEM.h"
+#include "c/ENOTDIR.h"
+#include "c/ENOTEMPTY.h"
+#include "c/EPERM.h"
+#include "c/EROFS.h"
+#include "c/SYS_rmdir.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_1.h"
 
 namespace linux {
 

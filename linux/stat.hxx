@@ -1,19 +1,19 @@
 #ifndef linux_stat_hxx_
 #define linux_stat_hxx_
 
-#include "EACCES.h"
-#include "EFAULT.h"
-#include "ELOOP.h"
-#include "ENAMETOOLONG.h"
-#include "ENOENT.h"
-#include "ENOMEM.h"
-#include "ENOTDIR.h"
-#include "EOVERFLOW.h"
-#include "SYS_stat.h"
-#include "struct-stat.h"
+#include "abi/_abi_syscall_2.h"
+#include "c/EACCES.h"
+#include "c/EFAULT.h"
+#include "c/ELOOP.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ENOMEM.h"
+#include "c/ENOTDIR.h"
+#include "c/EOVERFLOW.h"
+#include "c/SYS_stat.h"
+#include "c/struct-stat.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_2.h"
 
 namespace linux {
 

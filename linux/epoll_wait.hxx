@@ -1,15 +1,15 @@
 #ifndef linux_epoll_wait_hxx_
 #define linux_epoll_wait_hxx_
 
-#include "EBADF.h"
-#include "EFAULT.h"
-#include "EINTR.h"
-#include "EINVAL.h"
-#include "SYS_epoll_wait.h"
-#include "struct-epoll_event.h"
+#include "abi/_abi_syscall_4.h"
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/SYS_epoll_wait.h"
+#include "c/struct-epoll_event.h"
 
 #include "linux/Result.hxx"
-#include "abi/_abi_syscall_4.h"
 
 namespace linux {
 
