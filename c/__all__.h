@@ -1,7 +1,3 @@
-// For internal testing only.
-
-#pragma clang diagnostic ignored "-Wunused-function"
-
 #include "EXIT_FAILURE.h"
 #include "EXIT_SUCCESS.h"
 
