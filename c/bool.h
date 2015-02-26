@@ -1,8 +1,8 @@
-#ifndef __bool_true_false_are_defined
-#define __bool_true_false_are_defined 1
-#  ifndef __cplusplus
+#if !defined(bool) && !defined(__cplusplus)
+#  include "has/c/boolean_type.h"
+#  if has_c_boolean_type
 #    define bool _Bool
-#    define true 1
-#    define false 0
+#  else
+#    error
 #  endif
 #endif

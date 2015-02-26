@@ -1,11 +1,9 @@
-#ifndef _stdbool_h_
-#define _stdbool_h_
+#ifndef __bool_true_false_are_defined
 
-// All three of these perform the (reentrant) task of <stdbool.h>.
 // See: http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/stdbool.h.html
 
 #include "c/bool.h"
-//#include "c/true.h"
-//#include "c/false.h"
+#include "c/true.h"
+#include "c/false.h"
 
-#endif
+#define __bool_true_false_are_defined 1

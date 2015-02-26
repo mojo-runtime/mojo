@@ -1,1 +1,3 @@
-#include "bool.h" /* package deal */
+#if !defined(false) && !defined(__cplusplus)
+#  define false 0
+#endif
