@@ -1,4 +1,5 @@
 #include "addressof.h"
 #include "assume.h"
+#include "assume_aligned.h"
 #include "expect.h"
 #include "unreachable.h"
