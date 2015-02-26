@@ -2,8 +2,8 @@
 #  ifdef __has_attribute
 #    define has_attribute_warn_unused_result __has_attribute(__warn_unused_result__)
 #  elif defined __GNUC__
-#    include "has/_gnuc/minor.h"
-#    define has_attribute_warn_unused_result _has_gnuc_minor(3, 4)
+#    include "has/gnuc/minor.h"
+#    define has_attribute_warn_unused_result has_gnuc_minor(3, 4)
 #  else
 #    error todo
 #  endif

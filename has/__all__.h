@@ -2,6 +2,6 @@
 #include "builtin/__all__.h"
 #include "c/__all__.h"
 #include "cxx/__all__.h"
+#include "gnuc/__all__.h"
 #include "ieee754/__all__.h"
 #include "integer/__all__.h"
-#include "_gnuc/__all__.h"

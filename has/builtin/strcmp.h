@@ -2,8 +2,8 @@
 #  ifdef __has_builtin
 #    define has_builtin_strcmp __has_builtin(__builtin_strcmp)
 #  elif defined __GNUC__
-#    include "has/_gnuc/minor.h"
-#    define has_builtin_strcmp _has_gnuc_minor(3, 2)
+#    include "has/gnuc/minor.h"
+#    define has_builtin_strcmp has_gnuc_minor(3, 2)
 #  else
 #    error todo
 #  endif
