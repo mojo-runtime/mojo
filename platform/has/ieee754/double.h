@@ -1,5 +1,5 @@
-#ifndef abi_has_ieee754_double
-#define abi_has_ieee754_double                       \
+#ifndef platform_has_ieee754_double
+#define platform_has_ieee754_double                  \
     (__DBL_DIG__        ==    15) &&                 \
     (__DBL_MANT_DIG__   ==    53) &&                 \
     (__DBL_MAX_10_EXP__ ==   308) &&                 \
