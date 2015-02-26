@@ -1,8 +1,12 @@
 #ifndef c_int64_t_h_
 #define c_int64_t_h_
 
-#include "builtin/S64.h"
-
-typedef S64 int64_t;
+typedef
+#ifdef __INT64_TYPE__
+__INT64_TYPE__
+#else
+#  error
+#endif
+int64_t;
 
 #endif
