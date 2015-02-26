@@ -4,12 +4,10 @@
     ({                                                                  \
         unsigned long result;                                           \
                                                                         \
-        register __typeof__(a1) r1 __asm__ ("rdi") = a1;                \
-                                                                        \
         __asm__ __volatile__ (                                          \
             "syscall"                                                   \
             : "=a" (result)                                             \
-            : "0" (number), "r" (r1)                                    \
+            : "0" (number), "D" (a1)                                    \
             : "rcx", "r11");                                            \
                                                                         \
         result;                                                         \
