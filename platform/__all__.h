@@ -1,6 +1,4 @@
 #include "has/__all__.h"
 
-#ifdef __cplusplus
-#include "Byte.hxx"
-#include "Word.hxx"
-#endif
+#include "_Byte.h"
+#include "_Word.h"
