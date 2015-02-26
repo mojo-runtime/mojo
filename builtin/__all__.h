@@ -1,3 +1,5 @@
+#include "Bool.h"
+
 #include "S8.h"
 #include "S16.h"
 #include "S32.h"
