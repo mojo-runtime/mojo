@@ -1,6 +1,0 @@
-#include "architecture/__all__.h"
-#include "c/__all__.h"
-#include "compat/__all__.h"
-#include "compiler/__all__.h"
-#include "cxx/__all__.h"
-#include "linux/__all__.h"
