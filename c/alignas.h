@@ -1,4 +1,4 @@
-#ifndef __alignas_is_defined
+#ifndef alignas
 #  if defined __cplusplus
 #    include "has/cxx/alignas.h"
 #    if !has_cxx_alignas
@@ -12,5 +12,4 @@
 #      error
 #    endif
 #  endif
-#  define __alignas_is_defined
 #endif

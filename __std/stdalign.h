@@ -1,7 +1,7 @@
-#ifndef _stdalign_h_
-#define _stdalign_h_
-
+#ifndef __alignas_is_defined
 #include "c/alignas.h"
-#include "c/alignof.h"
+#define __alignas_is_defined 1
 
-#endif
+#ifndef __alignof_is_defined
+#include "c/alignof.h"
+#define __alignof_is_defined 1

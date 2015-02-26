@@ -1,7 +1,7 @@
-#ifndef __alignof_is_defined
+#ifndef alignof
 #  if defined __cplusplus
 #    include "has/cxx/alignof.h"
-#    if has_cxx_alignof
+#    if !has_cxx_alignof
 #      error
 #    endif
 #  else
@@ -12,5 +12,4 @@
 #      error
 #    endif
 #  endif
-#  define __alignof_is_defined
 #endif
