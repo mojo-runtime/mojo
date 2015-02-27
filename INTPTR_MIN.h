@@ -1,15 +1,16 @@
 #ifndef INTPTR_MIN
-#  ifdef __INTPTR_WIDTH__
-#    if __INTPTR_WIDTH__ == 64
-#      include "INT64_MIN.h"
-#      define INTPTR_MIN INT64_MIN
-#    elif __INTPTR_WIDTH__ == 32
+#  include "INTPTR_MAX.h"
+#  include "INT64_MAX.h"
+#  if (INTPTR_MAX == INT64_MAX)
+#    include "INT64_MIN.h"
+#    define INTPTR_MIN INT64_MIN
+#  else
+#    include "INT32_MAX.h"
+#    if (INTPTR_MAX == INT32_MAX)
 #      include "INT32_MIN.h"
 #      define INTPTR_MIN INT32_MIN
 #    else
 #      error
 #    endif
-#  else
-#    error
 #  endif
 #endif
