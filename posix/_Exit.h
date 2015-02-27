@@ -1,5 +1,5 @@
-#ifndef linux_c_Exit_h_
-#define linux_c_Exit_h_
+#ifndef c_posix_Exit_h_
+#define c_posix_Exit_h_
 
 #include "builtin/unreachable.h"
 #include "attribute/noreturn.h"

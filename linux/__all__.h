@@ -269,5 +269,3 @@
 #include "_c_syscall4.h"
 #include "_c_syscall5.h"
 #include "_c_syscall6.h"
-
-#include "_Exit.h"

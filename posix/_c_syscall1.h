@@ -1,5 +1,5 @@
 #ifdef __linux__
-#  include "posix/_Exit.h"
+#  include "linux/_c_syscall1.h"
 #else
 #  error
 #endif
