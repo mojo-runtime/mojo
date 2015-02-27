@@ -2,6 +2,7 @@
 #include "builtin/__all__.h"
 #include "has/__all__.h"
 #include "linux/__all__.h"
+#include "posix/__all__.h"
 
 #include "EDOM.h"
 #include "EILSEQ.h"
@@ -75,10 +76,6 @@
 #include "SIG_IGN.h"
 
 #include "SIZE_MAX.h"
-
-#include "STDERR_FILENO.h"
-#include "STDIN_FILENO.h"
-#include "STDOUT_FILENO.h"
 
 #include "UINT8_C.h"
 #include "UINT16_C.h"
