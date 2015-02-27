@@ -70,6 +70,10 @@
 #include "SIG_ATOMIC_MAX.h"
 #include "SIG_ATOMIC_MIN.h"
 
+#include "SIG_DFL.h"
+#include "SIG_ERR.h"
+#include "SIG_IGN.h"
+
 #include "SIZE_MAX.h"
 
 #include "STDERR_FILENO.h"
