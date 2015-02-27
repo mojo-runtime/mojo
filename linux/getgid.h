@@ -5,14 +5,14 @@
 
 #include "SYS_getgid.h"
 #include "gid_t.h"
-#include "_linux_syscall0_cannot_fail.h"
+#include "_c_syscall0_cannot_fail.h"
 
 attribute_nothrow
 static
 gid_t
 getgid()
 {
-    return _linux_syscall0_cannot_fail(SYS_getgid, gid_t);
+    return _c_syscall0_cannot_fail(SYS_getgid, gid_t);
 }
 
 #endif

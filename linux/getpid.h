@@ -5,14 +5,14 @@
 
 #include "SYS_getpid.h"
 #include "pid_t.h"
-#include "_linux_syscall0_cannot_fail.h"
+#include "_c_syscall0_cannot_fail.h"
 
 attribute_nothrow
 static
 pid_t
 getpid()
 {
-    return _linux_syscall0_cannot_fail(SYS_getpid, pid_t);
+    return _c_syscall0_cannot_fail(SYS_getpid, pid_t);
 }
 
 #endif
