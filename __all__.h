@@ -135,6 +135,7 @@
 #include "intptr_t.h"
 #include "ldiv_t.h"
 #include "lldiv_t.h"
+#include "memcmp.h"
 #include "memcpy.h"
 #include "memset.h"
 #include "noreturn.h"
