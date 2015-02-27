@@ -1,9 +1,9 @@
-#ifndef has_builtin_constant_p
-#  ifdef __has_builtin
+#if !defined(has_builtin_constant_p)
+#  if defined(__has_builtin)
 #    define has_builtin_constant_p __has_builtin(__builtin_constant_p)
-#  elif defined __GNUC__
-#    define has_builtin_constant_p 1 /* XXX: assuming */
+#  elif defined(__GNUC__) // TODO: version
+#    define has_builtin_constant_p
 #  else
-#    error todo
+#    error
 #  endif
 #endif

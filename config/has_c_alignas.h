@@ -1,10 +1,10 @@
-#ifndef has_c_alignas
-#  ifdef __has_feature
+#if !defined(has_c_alignas)
+#  if defined(__has_feature)
 #    define has_c_alignas __has_feature(c_alignas)
-#  elif defined __GNUC__
-#    include "has/gnuc/minor.h"
-#    define has_c_alignas has_gnuc_minor(4, 7)
+#  elif defined(__GNUC__)
+#    include "_has_gnuc_minor.h"
+#    define has_c_alignas _has_gnuc_minor(4, 7)
 #  else
-#    error todo
+#    error
 #  endif
 #endif

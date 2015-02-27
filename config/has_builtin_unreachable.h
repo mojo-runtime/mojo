@@ -1,9 +1,9 @@
-#ifndef has_builtin_unreachable
-#  ifdef __has_builtin
+#if !defined(has_builtin_unreachable)
+#  if defined(__has_builtin)
 #    define has_builtin_unreachable __has_builtin(__builtin_unreachable)
-#  elif defined __GNUC__
-#    define has_builtin_unreachable 1 /* assuming */
+#  elif defined(__GNUC__) // TODO: version
+#    define has_builtin_unreachable 1
 #  else
-#    error todo
+#    error
 #  endif
 #endif

@@ -1,10 +1,9 @@
-#ifndef has_builtin_expect
-#  ifdef __has_builtin
+#if !defined(has_builtin_expect)
+#  if defined(__has_builtin)
 #    define has_builtin_expect __has_builtin(__builtin_expect)
-#  elif defined __GNUC__
-#    include "has/gnuc/major.h"
-#    define has_builtin_expect has_gcc_major(3)
+#  elif defined(__GNUC__)
+#    define has_builtin_expect (__GNUC__ >= 3)
 #  else
-#    error todo
+#    error
 #  endif
 #endif

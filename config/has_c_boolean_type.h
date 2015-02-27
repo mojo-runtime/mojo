@@ -1,7 +1,7 @@
-#ifndef has_c_boolean_type
-#  ifdef __GNUC__
+#if !defined(has_c_boolean_type)
+#  if defined(__GNUC__)
 #    define has_c_boolean_type (__GNUC__ >= 3)
 #  else
-#    error todo
+#    error
 #  endif
 #endif

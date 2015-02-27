@@ -25,3 +25,17 @@
 #include "has_c_boolean_type.h"
 #include "has_c_noreturn.h"
 #include "has_c_static_assert.h"
+
+#include "has_cxx_alignas.h"
+#include "has_cxx_alignof.h"
+#include "has_cxx_exceptions.h"
+#include "has_cxx_rtti.h"
+#include "has_cxx_static_assert.h"
+
+#include "has_ieee754_double.h"
+#include "has_ieee754_float.h"
+
+#include "has_width_64_integer_types.h"
+
+#include "_has_clang_minor.h"
+#include "_has_gnuc_minor.h"

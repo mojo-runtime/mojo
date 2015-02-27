@@ -1,9 +1,9 @@
-#ifndef has_builtin_assume_aligned
-#  ifdef __has_builtin
+#if !defined(has_builtin_assume_aligned)
+#  if defined(__has_builtin)
 #    define has_builtin_assume_aligned __has_builtin(__builtin_assume_aligned)
-#  elif defined __GNUC__
-#    define has_builtin_assume_aligned 1 /* assuming */
+#  elif defined(__GNUC__) // TODO: version
+#    define has_builtin_assume_aligned 1
 #  else
-#    error todo
+#    error
 #  endif
 #endif

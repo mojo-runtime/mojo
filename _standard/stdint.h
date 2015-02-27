@@ -19,9 +19,9 @@
 // "If an implementation provides integer types with width 64 that meet these requirements,
 // then the following types are required:"
 
-#include "../config/has_width_64_integers.h"
+#include "../config/has_width_64_integer_types.h"
 
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../int64_t.h"
 #  include "../uint64_t.h"
 #endif
@@ -32,14 +32,14 @@
 #include "../int_least8_t.h"
 #include "../int_least16_t.h"
 #include "../int_least32_t.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../int_least64_t.h"
 #endif
 
 #include "../uint_least8_t.h"
 #include "../uint_least16_t.h"
 #include "../uint_least32_t.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../uint_least64_t.h"
 #endif
 
@@ -49,14 +49,14 @@
 #include "../int_fast8_t.h"
 #include "../int_fast16_t.h"
 #include "../int_fast32_t.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../int_fast64_t.h"
 #endif
 
 #include "../uint_fast8_t.h"
 #include "../uint_fast16_t.h"
 #include "../uint_fast32_t.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../uint_fast64_t.h"
 #endif
 
@@ -89,7 +89,7 @@
 #include "../INT8_MAX.h"
 #include "../INT16_MAX.h"
 #include "../INT32_MAX.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../INT64_MAX.h"
 #endif
 
@@ -99,7 +99,7 @@
 #include "../INT8_MIN.h"
 #include "../INT16_MIN.h"
 #include "../INT32_MIN.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../INT64_MIN.h"
 #endif
 
@@ -109,7 +109,7 @@
 #include "../UINT8_MAX.h"
 #include "../UINT16_MAX.h"
 #include "../UINT32_MAX.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../UINT64_MAX.h"
 #endif
 
@@ -120,7 +120,7 @@
 #include "../INT_LEAST8_MIN.h"
 #include "../INT_LEAST16_MIN.h"
 #include "../INT_LEAST32_MIN.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../INT_LEAST64_MIN.h"
 #endif
 
@@ -130,7 +130,7 @@
 #include "../INT_LEAST8_MAX.h"
 #include "../INT_LEAST16_MAX.h"
 #include "../INT_LEAST32_MAX.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../INT_LEAST64_MAX.h"
 #endif
 
@@ -140,7 +140,7 @@
 #include "../UINT_LEAST8_MAX.h"
 #include "../UINT_LEAST16_MAX.h"
 #include "../UINT_LEAST32_MAX.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../UINT_LEAST64_MAX.h"
 #endif
 
@@ -151,7 +151,7 @@
 #include "../INT_FAST8_MIN.h"
 #include "../INT_FAST16_MIN.h"
 #include "../INT_FAST32_MIN.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../INT_FAST64_MIN.h"
 #endif
 
@@ -161,7 +161,7 @@
 #include "../INT_FAST8_MAX.h"
 #include "../INT_FAST16_MAX.h"
 #include "../INT_FAST32_MAX.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../INT_FAST64_MAX.h"
 #endif
 
@@ -171,7 +171,7 @@
 #include "../UINT_FAST8_MAX.h"
 #include "../UINT_FAST16_MAX.h"
 #include "../UINT_FAST32_MAX.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../UINT_FAST64_MAX.h"
 #endif
 
@@ -244,14 +244,14 @@
 #include "../INT8_C.h"
 #include "../INT16_C.h"
 #include "../INT32_C.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../INT64_C.h"
 #endif
 
 #include "../UINT8_C.h"
 #include "../UINT16_C.h"
 #include "../UINT32_C.h"
-#if has_integer_64
+#if has_width_64_integer_types
 #  include "../UINT64_C.h"
 #endif
 
