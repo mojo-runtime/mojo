@@ -1,9 +1,9 @@
 #ifndef PTRDIFF_MIN
-#  ifdef __PTRDIFF_WIDTH__
-#    if __PTRDIFF_WIDTH__ == 64
+#  if defined(__SIZEOF_PTRDIFF_T__)
+#    if ((__SIZEOF_PTRDIFF_T__) == 8)
 #      include "INT64_MIN.h"
 #      define PTRDIFF_MIN INT64_MIN
-#    elif __PTRDIFF_WIDTH__ == 32
+#    elif ((__SIZEOF_PTRDIFF_T__) == 4)
 #      include "INT32_MIN.h"
 #      define PTRDIFF_MIN INT32_MIN
 #    else
