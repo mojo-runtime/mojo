@@ -136,6 +136,7 @@
 #include "ldiv_t.h"
 #include "lldiv_t.h"
 #include "memcpy.h"
+#include "memset.h"
 #include "noreturn.h"
 #include "offsetof.h"
 #include "ptrdiff_t.h"
