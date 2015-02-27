@@ -1,18 +1,20 @@
 #ifndef c_memcpy_h_
 #define c_memcpy_h_
 
-#include "has/builtin/memcpy.h"
-#include "size_t.h"
+#if !defined(has_builtin_memcpy)
+#  if defined(__has_builtin)
+#    define has_builtin_memcpy (__has_builtin(__builtin_memcpy))
+#  elif defined(__GNUC__) // TODO: version
+#    define has_builtin_memcpy 1
+#  else
+#    error
+#  endif
+#endif
 
-static
-void*
-memcpy(void* target, const void* source, size_t bytes)
-{
 #if has_builtin_memcpy
-    return __builtin_memcpy(target, source, bytes);
+#  define memcpy __builtin_memcpy
 #else
 #  error
 #endif
-}
 
 #endif
