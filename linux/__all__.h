@@ -269,4 +269,4 @@
 #include "_linux_syscall5.h"
 #include "_linux_syscall6.h"
 
-#include "_exit.h"
+#include "_Exit.h"

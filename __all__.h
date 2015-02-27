@@ -106,7 +106,7 @@
 #include "WINT_MAX.h"
 #include "WINT_MIN.h"
 
-#include "_exit.h"
+#include "_Exit.h"
 #include "abs.h"
 #include "alignas.h"
 #include "alignof.h"
