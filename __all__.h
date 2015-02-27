@@ -100,6 +100,7 @@
 #include "alignas.h"
 #include "alignof.h"
 #include "alloca.h"
+#include "auxv_t.h"
 #include "bool.h"
 #include "char16_t.h"
 #include "char32_t.h"
