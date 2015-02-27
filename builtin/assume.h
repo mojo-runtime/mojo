@@ -1,8 +1,12 @@
-#ifndef assume
-#  include "config/has_builtin_assume.h"
-#  if has_builtin_assume
-#    define assume __builtin_assume
-#  else
-#    define assume(x)
-#  endif
+#ifndef c_builtin_assume_h_
+#define c_builtin_assume_h_
+
+#include "config/has_builtin_assume.h"
+
+#if has_builtin_assume
+#  define assume __builtin_assume
+#else
+#  define assume(x)
+#endif
+
 #endif
