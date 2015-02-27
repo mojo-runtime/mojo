@@ -139,6 +139,7 @@
 #include "noreturn.h"
 #include "offsetof.h"
 #include "ptrdiff_t.h"
+#include "puts.h"
 #include "size_t.h"
 #include "ssize_t.h"
 #include "static_assert.h"
