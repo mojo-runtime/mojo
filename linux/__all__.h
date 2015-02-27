@@ -221,7 +221,6 @@
 #include "WNOWAIT.h"
 #include "WSTOPPED.h"
 
-#include "auxv_t.h"
 #include "blkcnt_t.h"
 #include "blksize_t.h"
 #include "cc_t.h"
