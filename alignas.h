@@ -2,7 +2,7 @@
 #define c_alignas_h_
 
 #if !defined(__cplusplus)
-#  include "has/c/alignas.h"
+#  include "config/has_c_alignas.h"
 #  if has_c_alignas
 #    define alignas _Alignas
 #  else

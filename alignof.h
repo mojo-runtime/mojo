@@ -2,7 +2,7 @@
 #define c_alignof_h_
 
 #if !defined(__cplusplus)
-#  include "has/c/alignof.h"
+#  include "config/has_c_alignof.h"
 #  if has_c_alignof
 #    define alignof _Alignof
 #  else
