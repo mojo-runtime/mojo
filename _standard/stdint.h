@@ -19,7 +19,7 @@
 // "If an implementation provides integer types with width 64 that meet these requirements,
 // then the following types are required:"
 
-#include "../has/integer/64.h"
+#include "../config/has_width_64_integers.h"
 
 #if has_integer_64
 #  include "../int64_t.h"

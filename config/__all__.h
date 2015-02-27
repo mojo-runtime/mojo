@@ -1,3 +1,6 @@
+#include "has_attribute_noreturn.h"
+#include "has_attribute_nothrow.h"
+
 #include "has_builtin_addressof.h"
 #include "has_builtin_alloca.h"
 #include "has_builtin_assume.h"
@@ -16,3 +19,9 @@
 #include "has_builtin_va_end.h"
 #include "has_builtin_va_list.h"
 #include "has_builtin_va_start.h"
+
+#include "has_c_alignas.h"
+#include "has_c_alignof.h"
+#include "has_c_boolean_type.h"
+#include "has_c_noreturn.h"
+#include "has_c_static_assert.h"

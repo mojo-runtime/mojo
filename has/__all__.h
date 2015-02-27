@@ -1,5 +1,0 @@
-#include "clang/__all__.h"
-#include "cxx/__all__.h"
-#include "gnuc/__all__.h"
-#include "ieee754/__all__.h"
-#include "integer/__all__.h"
