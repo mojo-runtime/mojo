@@ -1,5 +1,5 @@
-#ifndef linux_getgid_h_
-#define linux_getgid_h_
+#ifndef c_linux_getgid_h_
+#define c_linux_getgid_h_
 
 #include "attribute/nothrow.h"
 

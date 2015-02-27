@@ -1,5 +1,5 @@
-#ifndef linux_getpid_h_
-#define linux_getpid_h_
+#ifndef c_linux_getpid_h_
+#define c_linux_getpid_h_
 
 #include "attribute/nothrow.h"
 

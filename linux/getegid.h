@@ -1,5 +1,5 @@
-#ifndef linux_getegid_h_
-#define linux_getegid_h_
+#ifndef c_linux_getegid_h_
+#define c_linux_getegid_h_
 
 #include "attribute/nothrow.h"
 

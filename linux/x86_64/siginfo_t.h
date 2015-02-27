@@ -1,5 +1,5 @@
-#ifndef linux_x86_64_siginfo_t_h_
-#define linux_x86_64_siginfo_t_h_
+#ifndef c_linux_x86_64_siginfo_t_h_
+#define c_linux_x86_64_siginfo_t_h_
 
 #include "../sigval_t.h"
 #include "clock_t.h"

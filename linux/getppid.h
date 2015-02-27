@@ -1,5 +1,5 @@
-#ifndef linux_getppid_h_
-#define linux_getppid_h_
+#ifndef c_linux_getppid_h_
+#define c_linux_getppid_h_
 
 #include "attribute/nothrow.h"
 

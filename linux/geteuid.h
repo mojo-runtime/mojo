@@ -1,5 +1,5 @@
-#ifndef linux_geteuid_h_
-#define linux_geteuid_h_
+#ifndef c_linux_geteuid_h_
+#define c_linux_geteuid_h_
 
 #include "attribute/nothrow.h"
 
