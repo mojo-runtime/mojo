@@ -1,6 +1,0 @@
-#include "attribute/__all__.h"
-#include "builtin/__all__.h"
-#include "c/__all__.h"
-#include "clang/__all__.h"
-#include "cxx/__all__.h"
-#include "gnuc/__all__.h"
