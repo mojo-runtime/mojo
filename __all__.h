@@ -3,6 +3,10 @@
 #include "has/__all__.h"
 #include "linux/__all__.h"
 
+#include "EDOM.h"
+#include "EILSEQ.h"
+#include "ERANGE.h"
+
 #include "EXIT_FAILURE.h"
 #include "EXIT_SUCCESS.h"
 
