@@ -60,6 +60,13 @@
 
 #include "RAND_MAX.h"
 
+#include "SIGABRT.h"
+#include "SIGFPE.h"
+#include "SIGILL.h"
+#include "SIGINT.h"
+#include "SIGSEGV.h"
+#include "SIGTERM.h"
+
 #include "SIG_ATOMIC_MAX.h"
 #include "SIG_ATOMIC_MIN.h"
 
