@@ -1,4 +1,3 @@
-#include "builtin/__all__.h"
 #include "c/__all__.h"
 #include "compatibility/__all__.h"
 #include "elf/__all__.h"
