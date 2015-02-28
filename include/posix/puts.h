@@ -10,8 +10,8 @@
 
 #include "STDOUT_FILENO.h"
 #include "SYS_write.h"
-#include "_system_call_3.h"
-#include "_system_Result_is_error.h"
+#include "_syscall_3.h"
+#include "_syscall_Result_is_error.h"
 
 _Nothrow
 static
@@ -31,8 +31,8 @@ puts(const char* string)
 
     _c_reinterpret_cast(char*, data)[string_length] = '\n';
 
-    return _system_Result_is_error(
-        _system_call_3(
+    return _syscall_Result_is_error(
+        _syscall_3(
             SYS_write,
             STDOUT_FILENO,
             data,

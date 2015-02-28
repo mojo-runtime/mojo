@@ -1,5 +1,5 @@
 #ifdef __x86_64__
-#  include "x86_64/_system_call_6.h"
+#  include "x86_64/_syscall_2.h"
 #else
 #  error
 #endif

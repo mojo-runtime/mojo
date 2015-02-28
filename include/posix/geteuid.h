@@ -5,15 +5,15 @@
 
 #include "SYS_geteuid.h"
 #include "uid_t.h"
-#include "_system_call_0.h"
-#include "_system_Result_ok.h"
+#include "_syscall_0.h"
+#include "_syscall_Result_ok.h"
 
 _Nothrow
 static
 uid_t
 geteuid()
 {
-    return _system_Result_ok(uid_t, _system_call_0(SYS_geteuid));
+    return _syscall_Result_ok(uid_t, _syscall_0(SYS_geteuid));
 }
 
 #endif

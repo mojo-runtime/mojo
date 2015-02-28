@@ -5,15 +5,15 @@
 
 #include "SYS_getgid.h"
 #include "gid_t.h"
-#include "_system_call_0.h"
-#include "_system_Result_ok.h"
+#include "_syscall_0.h"
+#include "_syscall_Result_ok.h"
 
 _Nothrow
 static
 gid_t
 getgid()
 {
-    return _system_Result_ok(gid_t, _system_call_0(SYS_getgid));
+    return _syscall_Result_ok(gid_t, _syscall_0(SYS_getgid));
 }
 
 #endif
