@@ -5,7 +5,7 @@
 #include "c/alloca.h"
 #include "c/memcpy.h"
 #include "c/strlen.h"
-#include "compat/NOTHROW.h"
+#include "compat/_Nothrow.h"
 #include "compat/_c_reinterpret_cast.h"
 
 #include "STDOUT_FILENO.h"
@@ -13,7 +13,7 @@
 #include "_system_call_3.h"
 #include "_system_Result_is_error.h"
 
-NOTHROW
+_Nothrow
 static
 int
 puts(const char* string)

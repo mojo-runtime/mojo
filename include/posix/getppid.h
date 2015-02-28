@@ -1,14 +1,14 @@
 #ifndef c_posix_getppid_h_
 #define c_posix_getppid_h_
 
-#include "compat/NOTHROW.h"
+#include "compat/_Nothrow.h"
 
 #include "SYS_getppid.h"
 #include "pid_t.h"
 #include "_system_call_0.h"
 #include "_system_Result_ok.h"
 
-NOTHROW
+_Nothrow
 static
 pid_t
 getppid()

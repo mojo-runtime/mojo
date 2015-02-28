@@ -1,9 +1,8 @@
-#include "NOTHROW.h"
-
 #include "nullptr.h"
 #include "unavailable.h"
 
 #include "_Noreturn.h"
+#include "_Nothrow.h"
 
 #include "_c_reinterpret_cast.h"
 #include "_c_static_cast.h"
