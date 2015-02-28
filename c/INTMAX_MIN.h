@@ -1,3 +1,0 @@
-#ifndef INTMAX_MIN
-#  define INTMAX_MIN (-9223372036854775807L - 1)
-#endif

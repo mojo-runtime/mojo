@@ -1,3 +1,0 @@
-#ifndef INT_FAST32_MIN
-#define INT_FAST32_MIN (-2147483648)
-#endif
