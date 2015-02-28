@@ -3,6 +3,7 @@
 #include "STATIC_CAST.h"
 
 #include "nullptr.h"
+#include "unavailable.h"
 
 #include "_Noreturn.h"
 
@@ -15,4 +16,3 @@
 #include "__builtin_expect.h"
 #include "__builtin_unreachable.h"
 
-#include "__unavailable__.h"
