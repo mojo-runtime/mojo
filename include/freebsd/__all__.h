@@ -13,6 +13,15 @@
 #include "SIG_ERR.h"
 #include "SIG_IGN.h"
 
+#include "SYS_exit.h"
+#include "SYS_getegid.h"
+#include "SYS_geteuid.h"
+#include "SYS_getgid.h"
+#include "SYS_getpid.h"
+#include "SYS_getppid.h"
+#include "SYS_getuid.h"
+#include "SYS_write.h"
+
 #include "gid_t.h"
 #include "pid_t.h"
 #include "uid_t.h"
