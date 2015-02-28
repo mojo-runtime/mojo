@@ -1,5 +1,4 @@
-#ifndef c_va_copy_h_
-#define c_va_copy_h_
+#ifndef va_copy
 
 #include "feature/has_builtin_va_copy.h"
 

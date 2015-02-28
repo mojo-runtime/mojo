@@ -1,5 +1,4 @@
-#ifndef c_va_arg_h_
-#define c_va_arg_h_
+#ifndef va_arg
 
 #include "feature/has_builtin_va_arg.h"
 

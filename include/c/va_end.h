@@ -1,5 +1,4 @@
-#ifndef c_va_end_h_
-#define c_va_end_h_
+#ifndef va_end
 
 #include "feature/has_builtin_va_end.h"
 

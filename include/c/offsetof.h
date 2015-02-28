@@ -1,5 +1,4 @@
-#ifndef c_offsetof_h_
-#define c_offsetof_h_
+#ifndef offsetof
 
 #include "feature/has_builtin_offsetof.h"
 

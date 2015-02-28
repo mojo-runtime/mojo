@@ -1,5 +1,4 @@
-#ifndef c_va_start_h_
-#define c_va_start_h_
+#ifndef va_start
 
 #include "feature/has_builtin_va_start.h"
 

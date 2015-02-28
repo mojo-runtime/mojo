@@ -1,5 +1,4 @@
-#ifndef c_true_h_
-#define c_true_h_
+#ifndef true
 
 #if !defined(__cplusplus)
 #  define true 1

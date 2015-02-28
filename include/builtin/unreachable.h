@@ -1,5 +1,4 @@
-#ifndef c_builtin_unreachable_h_
-#define c_builtin_unreachable_h_
+#ifndef unreachable
 
 #include "feature/has_builtin_unreachable.h"
 

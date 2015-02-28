@@ -1,5 +1,4 @@
-#ifndef c_va_list_h_
-#define c_va_list_h_
+#ifndef va_list
 
 #include "feature/has_builtin_va_list.h"
 

@@ -1,5 +1,4 @@
-#ifndef c_builtin_expect_h_
-#define c_builtin_expect_h_
+#ifndef expect
 
 #include "feature/has_builtin_expect.h"
 

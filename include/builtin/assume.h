@@ -1,5 +1,4 @@
-#ifndef c_builtin_assume_h_
-#define c_builtin_assume_h_
+#ifndef assume
 
 #include "feature/has_builtin_assume.h"
 

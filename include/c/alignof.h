@@ -1,5 +1,4 @@
-#ifndef c_alignof_h_
-#define c_alignof_h_
+#ifndef alignof
 
 #if !defined(__cplusplus)
 #  include "feature/has_c_alignof.h"

@@ -1,5 +1,4 @@
-#ifndef c_builtin_constant_p_h_
-#define c_builtin_constant_p_h_
+#ifndef constant_p
 
 #include "feature/has_builtin_constant_p.h"
 

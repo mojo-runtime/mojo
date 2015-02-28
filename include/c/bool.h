@@ -1,5 +1,4 @@
-#ifndef c_bool_h_
-#define c_bool_h_
+#ifndef bool
 
 #if !defined(__cplusplus)
 #  include "feature/has_c_boolean_type.h"

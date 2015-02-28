@@ -1,5 +1,4 @@
-#ifndef c_alignas_h_
-#define c_alignas_h_
+#ifndef alignas
 
 #if !defined(__cplusplus)
 #  include "feature/has_c_alignas.h"

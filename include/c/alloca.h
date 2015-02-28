@@ -1,5 +1,4 @@
-#ifndef c_alloca_h_
-#define c_alloca_h_
+#ifndef alloca
 
 #include "feature/has_builtin_alloca.h"
 

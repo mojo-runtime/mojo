@@ -1,5 +1,4 @@
-#ifndef c_builtin_addressof_h_
-#define c_builtin_addressof_h_
+#ifndef addressof
 
 #if !defined(__cplusplus)
 #  define addressof(x) (&(x))

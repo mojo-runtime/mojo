@@ -1,5 +1,4 @@
-#ifndef c_builtin_assume_aligned_h_
-#define c_builtin_assume_aligned_h_
+#ifndef assume_aligned
 
 #include "feature/has_builtin_assume_aligned.h"
 
