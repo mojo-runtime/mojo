@@ -5,6 +5,8 @@
 #include "has_builtin_alloca.h"
 #include "has_builtin_assume.h"
 #include "has_builtin_assume_aligned.h"
+#include "has_builtin_bswap32.h"
+#include "has_builtin_bswap64.h"
 #include "has_builtin_constant_p.h"
 #include "has_builtin_expect.h"
 #include "has_builtin_memcmp.h"
