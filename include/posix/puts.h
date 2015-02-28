@@ -5,8 +5,8 @@
 #include "c/alloca.h"
 #include "c/memcpy.h"
 #include "c/strlen.h"
-#include "compatibility/NOTHROW.h"
-#include "compatibility/REINTERPRET_CAST.h"
+#include "compat/NOTHROW.h"
+#include "compat/REINTERPRET_CAST.h"
 
 #include "STDOUT_FILENO.h"
 #include "SYS_write.h"

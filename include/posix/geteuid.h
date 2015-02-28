@@ -1,7 +1,7 @@
 #ifndef c_posix_geteuid_h_
 #define c_posix_geteuid_h_
 
-#include "compatibility/NOTHROW.h"
+#include "compat/NOTHROW.h"
 
 #include "SYS_geteuid.h"
 #include "uid_t.h"

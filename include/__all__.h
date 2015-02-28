@@ -1,5 +1,5 @@
 #include "c/__all__.h"
-#include "compatibility/__all__.h"
+#include "compat/__all__.h"
 #include "elf/__all__.h"
 #include "feature/__all__.h"
 #include "linux/__all__.h"

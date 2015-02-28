@@ -1,12 +1,12 @@
 #ifndef assert
 
 #if defined(NDEBUG)
-#  include "compatibility/__builtin_assume.h"
+#  include "compat/__builtin_assume.h"
 #  define assert __builtin_assume
 #else
 #  include "platform/RUNTIME.h"
 #  if (RUNTIME == RUNTIME_GNU)
-#    include "compatibility/STATIC_CAST.h"
+#    include "compat/STATIC_CAST.h"
 #    include "__glibc/__assert_fail.h"
 #    define assert(x) ((x)                                              \
                        ? STATIC_CAST(void, 0)                           \

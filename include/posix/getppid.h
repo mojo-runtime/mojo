@@ -1,7 +1,7 @@
 #ifndef c_posix_getppid_h_
 #define c_posix_getppid_h_
 
-#include "compatibility/NOTHROW.h"
+#include "compat/NOTHROW.h"
 
 #include "SYS_getppid.h"
 #include "pid_t.h"

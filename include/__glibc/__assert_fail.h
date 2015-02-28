@@ -1,8 +1,8 @@
 #ifndef glibc_assert_fail_h_
 #define glibc_assert_fail_h_
 
-#include "compatibility/NORETURN.h"
-#include "compatibility/NOTHROW.h"
+#include "compat/NORETURN.h"
+#include "compat/NOTHROW.h"
 
 #ifdef __cplusplus
 extern "C" {

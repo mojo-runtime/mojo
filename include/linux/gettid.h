@@ -1,7 +1,7 @@
 #ifndef c_linux_gettid_h_
 #define c_linux_gettid_h_
 
-#include "compatibility/NOTHROW.h"
+#include "compat/NOTHROW.h"
 
 #include "SYS_gettid.h"
 #include "pid_t.h"

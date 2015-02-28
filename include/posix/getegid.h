@@ -1,7 +1,7 @@
 #ifndef c_posix_getegid_h_
 #define c_posix_getegid_h_
 
-#include "compatibility/NOTHROW.h"
+#include "compat/NOTHROW.h"
 
 #include "SYS_getegid.h"
 #include "gid_t.h"
