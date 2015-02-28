@@ -2,14 +2,14 @@
 #define c_posix_Exit_h_
 
 #include "builtin/unreachable.h"
-#include "compatibility/x_noreturn.h"
-#include "compatibility/x_nothrow.h"
+#include "compatibility/NORETURN.h"
+#include "compatibility/NOTHROW.h"
 
 #include "SYS_exit.h"
 #include "_system_call_1.h"
 
-x_noreturn
-x_nothrow
+NORETURN
+NOTHROW
 static
 void
 _Exit(int status)

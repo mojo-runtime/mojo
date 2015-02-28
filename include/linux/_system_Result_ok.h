@@ -1,4 +1,4 @@
 #ifndef _system_Result_ok
-#  include "compatibility/x_static_cast.h"
-#  define _system_Result_ok(T, self) x_static_cast(T, self)
+#  include "compatibility/STATIC_CAST.h"
+#  define _system_Result_ok(T, self) STATIC_CAST(T, self)
 #endif

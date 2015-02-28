@@ -5,15 +5,15 @@
 #include "c/alloca.h"
 #include "c/memcpy.h"
 #include "c/strlen.h"
-#include "compatibility/x_nothrow.h"
-#include "compatibility/x_reinterpret_cast.h"
+#include "compatibility/NOTHROW.h"
+#include "compatibility/REINTERPRET_CAST.h"
 
 #include "STDOUT_FILENO.h"
 #include "SYS_write.h"
 #include "_system_call_3.h"
 #include "_system_Result_is_error.h"
 
-x_nothrow
+NOTHROW
 static
 int
 puts(const char* string)
@@ -29,7 +29,7 @@ puts(const char* string)
 
     memcpy(data, string, string_length);
 
-    x_reinterpret_cast(char*, data)[string_length] = '\n';
+    REINTERPRET_CAST(char*, data)[string_length] = '\n';
 
     return _system_Result_is_error(
         _system_call_3(
