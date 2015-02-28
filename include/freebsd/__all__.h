@@ -12,3 +12,7 @@
 #include "SIG_DFL.h"
 #include "SIG_ERR.h"
 #include "SIG_IGN.h"
+
+#include "gid_t.h"
+#include "pid_t.h"
+#include "uid_t.h"
