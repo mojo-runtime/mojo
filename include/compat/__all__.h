@@ -1,5 +1,4 @@
 #include "nullptr.h"
-#include "unavailable.h"
 
 #include "_Noreturn.h"
 #include "_Nothrow.h"
@@ -15,3 +14,5 @@
 #include "__builtin_constant_p.h"
 #include "__builtin_expect.h"
 #include "__builtin_unreachable.h"
+
+#include "__unavailable__.h"
