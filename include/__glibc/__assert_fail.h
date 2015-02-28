@@ -1,14 +1,14 @@
 #ifndef glibc_assert_fail_h_
 #define glibc_assert_fail_h_
 
-#include "compat/NORETURN.h"
 #include "compat/NOTHROW.h"
+#include "compat/_Noreturn.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-NORETURN
+_Noreturn
 NOTHROW
 extern
 void

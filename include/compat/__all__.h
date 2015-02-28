@@ -1,9 +1,10 @@
-#include "NORETURN.h"
 #include "NOTHROW.h"
 #include "REINTERPRET_CAST.h"
 #include "STATIC_CAST.h"
 
 #include "nullptr.h"
+
+#include "_Noreturn.h"
 
 #include "__builtin_addressof.h"
 #include "__builtin_assume.h"
