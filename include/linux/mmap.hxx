@@ -3,19 +3,19 @@
 
 #include "c/size_t.h"
 
-#include "linux/c/EACCES.h"
-#include "linux/c/EAGAIN.h"
-#include "linux/c/EBADF.h"
-#include "linux/c/EINVAL.h"
-#include "linux/c/ENFILE.h"
-#include "linux/c/ENODEV.h"
-#include "linux/c/ENOMEM.h"
-#include "linux/c/EOVERFLOW.h"
-#include "linux/c/EPERM.h"
-#include "linux/c/ETXTBSY.h"
-#include "linux/c/SYS_mmap.h"
-#include "linux/c/off_t.h"
-#include "linux/c/_linux_syscall6.h"
+#include "linux/EACCES.h"
+#include "linux/EAGAIN.h"
+#include "linux/EBADF.h"
+#include "linux/EINVAL.h"
+#include "linux/ENFILE.h"
+#include "linux/ENODEV.h"
+#include "linux/ENOMEM.h"
+#include "linux/EOVERFLOW.h"
+#include "linux/EPERM.h"
+#include "linux/ETXTBSY.h"
+#include "linux/SYS_mmap.h"
+#include "linux/off_t.h"
+#include "linux/_c_syscall6.h"
 
 #include "linux/Result.hxx"
 
@@ -77,7 +77,7 @@ mmap(void* addr, size_t length, int prot, int flags, int fd, off_t offset) noexc
         ETXTBSY_ = ETXTBSY
     };
 
-    return Result<void*, Error>(_linux_syscall6(SYS_mmap, addr, length, prot, flags, fd, offset));
+    return Result<void*, Error>(_c_syscall6(SYS_mmap, addr, length, prot, flags, fd, offset));
 }
 
 } // namespace linux

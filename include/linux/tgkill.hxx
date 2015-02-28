@@ -1,11 +1,11 @@
 #ifndef linux_tgkill_hxx_
 #define linux_tgkill_hxx_
 
-#include "linux/c/_linux_syscall3.h"
-#include "linux/c/EINVAL.h"
-#include "linux/c/EPERM.h"
-#include "linux/c/ESRCH.h"
-#include "linux/c/SYS_tgkill.h"
+#include "linux/_c_syscall3.h"
+#include "linux/EINVAL.h"
+#include "linux/EPERM.h"
+#include "linux/ESRCH.h"
+#include "linux/SYS_tgkill.h"
 
 #include "linux/Result.hxx"
 
@@ -27,7 +27,7 @@ tgkill(int tgid, int tid, int sig) noexcept
         ESRCH_ = ESRCH,
     };
 
-    return Result<void, Error>(_linux_syscall3(SYS_tgkill, tgid, tid, sig));
+    return Result<void, Error>(_c_syscall3(SYS_tgkill, tgid, tid, sig));
 }
 
 } // namespace linux

@@ -3,9 +3,9 @@
 
 #include "c/size_t.h"
 
-#include "linux/c/EINVAL.h"
-#include "linux/c/SYS_munmap.h"
-#include "linux/c/_linux_syscall2.h"
+#include "linux/EINVAL.h"
+#include "linux/SYS_munmap.h"
+#include "linux/_c_syscall2.h"
 
 #include "linux/Result.hxx"
 
@@ -21,7 +21,7 @@ open(void* addr, size_t length) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(_linux_syscall2(SYS_munmap, addr, length));
+    return Result<void, Error>(_c_syscall2(SYS_munmap, addr, length));
 }
 
 } // namespace linux

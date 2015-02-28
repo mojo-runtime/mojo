@@ -1,25 +1,25 @@
 #ifndef linux_execve_hxx_
 #define linux_execve_hxx_
 
-#include "linux/c/_linux_syscall3.h"
-#include "linux/c/E2BIG.h"
-#include "linux/c/EACCES.h"
-#include "linux/c/EFAULT.h"
-#include "linux/c/EINVAL.h"
-#include "linux/c/EIO.h"
-#include "linux/c/EISDIR.h"
-#include "linux/c/ELIBBAD.h"
-#include "linux/c/ELOOP.h"
-#include "linux/c/EMFILE.h"
-#include "linux/c/ENAMETOOLONG.h"
-#include "linux/c/ENFILE.h"
-#include "linux/c/ENOENT.h"
-#include "linux/c/ENOEXEC.h"
-#include "linux/c/ENOMEM.h"
-#include "linux/c/ENOTDIR.h"
-#include "linux/c/EPERM.h"
-#include "linux/c/ETXTBSY.h"
-#include "linux/c/SYS_execve.h"
+#include "linux/_c_syscall3.h"
+#include "linux/E2BIG.h"
+#include "linux/EACCES.h"
+#include "linux/EFAULT.h"
+#include "linux/EINVAL.h"
+#include "linux/EIO.h"
+#include "linux/EISDIR.h"
+#include "linux/ELIBBAD.h"
+#include "linux/ELOOP.h"
+#include "linux/EMFILE.h"
+#include "linux/ENAMETOOLONG.h"
+#include "linux/ENFILE.h"
+#include "linux/ENOENT.h"
+#include "linux/ENOEXEC.h"
+#include "linux/ENOMEM.h"
+#include "linux/ENOTDIR.h"
+#include "linux/EPERM.h"
+#include "linux/ETXTBSY.h"
+#include "linux/SYS_execve.h"
 
 #include "linux/Result.hxx"
 
@@ -101,7 +101,7 @@ execve(const char* filename, char* const argv[], char* const envp[]) noexcept
         ETXTBSY_ = ETXTBSY,
     };
 
-    return Result<void, Error>(_linux_syscall3(SYS_execve, filename, argv, envp));
+    return Result<void, Error>(_c_syscall3(SYS_execve, filename, argv, envp));
 }
 
 } // namespace linux

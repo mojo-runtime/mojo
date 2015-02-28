@@ -3,17 +3,17 @@
 
 #include "c/size_t.h"
 
-#include "linux/c/EACCES.h"
-#include "linux/c/EFAULT.h"
-#include "linux/c/EINVAL.h"
-#include "linux/c/EIO.h"
-#include "linux/c/ELOOP.h"
-#include "linux/c/ENAMETOOLONG.h"
-#include "linux/c/ENOENT.h"
-#include "linux/c/ENOMEM.h"
-#include "linux/c/ENOTDIR.h"
-#include "linux/c/SYS_readlink.h"
-#include "linux/c/_linux_syscall3.h"
+#include "linux/EACCES.h"
+#include "linux/EFAULT.h"
+#include "linux/EINVAL.h"
+#include "linux/EIO.h"
+#include "linux/ELOOP.h"
+#include "linux/ENAMETOOLONG.h"
+#include "linux/ENOENT.h"
+#include "linux/ENOMEM.h"
+#include "linux/ENOTDIR.h"
+#include "linux/SYS_readlink.h"
+#include "linux/_c_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -55,7 +55,7 @@ readlink(const char* pathname, char* buf, size_t bufsiz) noexcept
         ENOTDIR_ = ENOTDIR,
     };
 
-    return Result<size_t, Error>(_linux_syscall3(SYS_readlink, pathname, buf, bufsiz));
+    return Result<size_t, Error>(_c_syscall3(SYS_readlink, pathname, buf, bufsiz));
 }
 
 } // namespace linux

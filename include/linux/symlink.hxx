@@ -1,21 +1,21 @@
 #ifndef linux_symlink_hxx_
 #define linux_symlink_hxx_
 
-#include "linux/c/_linux_syscall2.h"
-#include "linux/c/EACCES.h"
-#include "linux/c/EDQUOT.h"
-#include "linux/c/EEXIST.h"
-#include "linux/c/EFAULT.h"
-#include "linux/c/EIO.h"
-#include "linux/c/ELOOP.h"
-#include "linux/c/ENAMETOOLONG.h"
-#include "linux/c/ENOENT.h"
-#include "linux/c/ENOMEM.h"
-#include "linux/c/ENOSPC.h"
-#include "linux/c/ENOTDIR.h"
-#include "linux/c/EPERM.h"
-#include "linux/c/EROFS.h"
-#include "linux/c/SYS_symlink.h"
+#include "linux/_c_syscall2.h"
+#include "linux/EACCES.h"
+#include "linux/EDQUOT.h"
+#include "linux/EEXIST.h"
+#include "linux/EFAULT.h"
+#include "linux/EIO.h"
+#include "linux/ELOOP.h"
+#include "linux/ENAMETOOLONG.h"
+#include "linux/ENOENT.h"
+#include "linux/ENOMEM.h"
+#include "linux/ENOSPC.h"
+#include "linux/ENOTDIR.h"
+#include "linux/EPERM.h"
+#include "linux/EROFS.h"
+#include "linux/SYS_symlink.h"
 
 #include "linux/Result.hxx"
 
@@ -73,7 +73,7 @@ symlink(const char* target, const char* linkpath) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(_linux_syscall2(SYS_symlink, target, linkpath));
+    return Result<void, Error>(_c_syscall2(SYS_symlink, target, linkpath));
 }
 
 } // namespace linux

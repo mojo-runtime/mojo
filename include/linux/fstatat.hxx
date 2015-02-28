@@ -1,18 +1,18 @@
 #ifndef linux_fstatat_hxx_
 #define linux_fstatat_hxx_
 
-#include "linux/c/_linux_syscall4.h"
-#include "linux/c/EACCES.h"
-#include "linux/c/EBADF.h"
-#include "linux/c/EFAULT.h"
-#include "linux/c/EINVAL.h"
-#include "linux/c/ELOOP.h"
-#include "linux/c/ENAMETOOLONG.h"
-#include "linux/c/ENOMEM.h"
-#include "linux/c/ENOTDIR.h"
-#include "linux/c/EOVERFLOW.h"
-#include "linux/c/SYS_fstatat.h"
-#include "linux/c/struct-stat.h"
+#include "linux/_c_syscall4.h"
+#include "linux/EACCES.h"
+#include "linux/EBADF.h"
+#include "linux/EFAULT.h"
+#include "linux/EINVAL.h"
+#include "linux/ELOOP.h"
+#include "linux/ENAMETOOLONG.h"
+#include "linux/ENOMEM.h"
+#include "linux/ENOTDIR.h"
+#include "linux/EOVERFLOW.h"
+#include "linux/SYS_fstatat.h"
+#include "linux/struct-stat.h"
 
 #include "linux/Result.hxx"
 
@@ -65,7 +65,7 @@ fstatat(int dirfd, const char* pathname, struct stat* buf, int flags) noexcept
         EOVERFLOW_ = EOVERFLOW,
     };
 
-    return Result<void, Error>(_linux_syscall4(SYS_fstatat, dirfd, pathname, buf, flags));
+    return Result<void, Error>(_c_syscall4(SYS_fstatat, dirfd, pathname, buf, flags));
 }
 
 static inline

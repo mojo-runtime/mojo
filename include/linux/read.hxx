@@ -3,15 +3,15 @@
 
 #include "c/size_t.h"
 
-#include "linux/c/EAGAIN.h"
-#include "linux/c/EBADF.h"
-#include "linux/c/EFAULT.h"
-#include "linux/c/EINTR.h"
-#include "linux/c/EINVAL.h"
-#include "linux/c/EIO.h"
-#include "linux/c/EISDIR.h"
-#include "linux/c/SYS_read.h"
-#include "linux/c/_linux_syscall3.h"
+#include "linux/EAGAIN.h"
+#include "linux/EBADF.h"
+#include "linux/EFAULT.h"
+#include "linux/EINTR.h"
+#include "linux/EINVAL.h"
+#include "linux/EIO.h"
+#include "linux/EISDIR.h"
+#include "linux/SYS_read.h"
+#include "linux/_c_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -56,7 +56,7 @@ read(int fd, void* buf, size_t count) noexcept
         //   XXX: totally ignoring this
     };
 
-    return Result<size_t, Error>(_linux_syscall3(SYS_read, fd, buf, count));
+    return Result<size_t, Error>(_c_syscall3(SYS_read, fd, buf, count));
 }
 
 template <typename T, size_t n>
@@ -80,7 +80,7 @@ read(int fd, T(& array)[n]) noexcept
     // return read(fd, array, n * sizeof(T))._with_error<Error>();
     // return read(fd, array, n * sizeof(T)).template _with_error<Error>();
 
-    return Result<size_t, Error>(_linux_syscall3(SYS_read, fd, array, n * sizeof(T)));
+    return Result<size_t, Error>(_c_syscall3(SYS_read, fd, array, n * sizeof(T)));
 }
 
 } // namespace linux

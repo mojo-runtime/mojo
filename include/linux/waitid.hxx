@@ -1,16 +1,16 @@
 #ifndef linux_waitid_hxx_
 #define linux_waitid_hxx_
 
-#include "linux/c/_linux_syscall5.h"
-#include "linux/c/ECHILD.h"
-#include "linux/c/EINTR.h"
-#include "linux/c/EINVAL.h"
-#include "linux/c/SYS_waitid.h"
-#include "linux/c/id_t.h"
-#include "linux/c/idtype_t.h"
-#include "linux/c/pid_t.h"
-#include "linux/c/siginfo_t.h"
-#include "linux/c/struct-rusage.h"
+#include "linux/_c_syscall5.h"
+#include "linux/ECHILD.h"
+#include "linux/EINTR.h"
+#include "linux/EINVAL.h"
+#include "linux/SYS_waitid.h"
+#include "linux/id_t.h"
+#include "linux/idtype_t.h"
+#include "linux/pid_t.h"
+#include "linux/siginfo_t.h"
+#include "linux/struct-rusage.h"
 
 #include "linux/Result.hxx"
 
@@ -35,7 +35,7 @@ waitid(idtype_t idtype, id_t id, siginfo_t* infop, int options, struct rusage* u
     };
 
     return Result<pid_t, Error>(
-        _linux_syscall5(SYS_getdents, idtype, id, infop, options, usage)
+        _c_syscall5(SYS_getdents, idtype, id, infop, options, usage)
     );
 }
 

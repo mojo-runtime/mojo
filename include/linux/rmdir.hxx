@@ -1,20 +1,20 @@
 #ifndef linux_rmdir_hxx_
 #define linux_rmdir_hxx_
 
-#include "linux/c/_linux_syscall1.h"
-#include "linux/c/EACCES.h"
-#include "linux/c/EBUSY.h"
-#include "linux/c/EFAULT.h"
-#include "linux/c/EINVAL.h"
-#include "linux/c/ELOOP.h"
-#include "linux/c/ENAMETOOLONG.h"
-#include "linux/c/ENOENT.h"
-#include "linux/c/ENOMEM.h"
-#include "linux/c/ENOTDIR.h"
-#include "linux/c/ENOTEMPTY.h"
-#include "linux/c/EPERM.h"
-#include "linux/c/EROFS.h"
-#include "linux/c/SYS_rmdir.h"
+#include "linux/_c_syscall1.h"
+#include "linux/EACCES.h"
+#include "linux/EBUSY.h"
+#include "linux/EFAULT.h"
+#include "linux/EINVAL.h"
+#include "linux/ELOOP.h"
+#include "linux/ENAMETOOLONG.h"
+#include "linux/ENOENT.h"
+#include "linux/ENOMEM.h"
+#include "linux/ENOTDIR.h"
+#include "linux/ENOTEMPTY.h"
+#include "linux/EPERM.h"
+#include "linux/EROFS.h"
+#include "linux/SYS_rmdir.h"
 
 #include "linux/Result.hxx"
 
@@ -74,7 +74,7 @@ rmdir(const char* pathname) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(_linux_syscall1(SYS_rmdir, pathname));
+    return Result<void, Error>(_c_syscall1(SYS_rmdir, pathname));
 }
 
 } // namespace linux

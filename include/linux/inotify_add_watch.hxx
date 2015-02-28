@@ -3,16 +3,16 @@
 
 #include "c/uint32_t.h"
 
-#include "linux/c/EACCES.h"
-#include "linux/c/EBADF.h"
-#include "linux/c/EFAULT.h"
-#include "linux/c/EINVAL.h"
-#include "linux/c/ENAMETOOLONG.h"
-#include "linux/c/ENOENT.h"
-#include "linux/c/ENOMEM.h"
-#include "linux/c/ENOSPC.h"
-#include "linux/c/SYS_inotify_add_watch.h"
-#include "linux/c/_linux_syscall3.h"
+#include "linux/EACCES.h"
+#include "linux/EBADF.h"
+#include "linux/EFAULT.h"
+#include "linux/EINVAL.h"
+#include "linux/ENAMETOOLONG.h"
+#include "linux/ENOENT.h"
+#include "linux/ENOMEM.h"
+#include "linux/ENOSPC.h"
+#include "linux/SYS_inotify_add_watch.h"
+#include "linux/_c_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -53,7 +53,7 @@ inotify_add_watch(int fd, const char* pathname, uint32_t mask) noexcept
         ENOSPC_ = ENOSPC,
     };
 
-    return Result<int, Error>(_linux_syscall3(SYS_inotify_add_watch, fd, pathname, mask));
+    return Result<int, Error>(_c_syscall3(SYS_inotify_add_watch, fd, pathname, mask));
 }
 
 } // namespace linux

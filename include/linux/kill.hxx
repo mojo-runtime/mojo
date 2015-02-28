@@ -1,12 +1,12 @@
 #ifndef linux_kill_hxx_
 #define linux_kill_hxx_
 
-#include "linux/c/_linux_syscall2.h"
-#include "linux/c/EINVAL.h"
-#include "linux/c/EPERM.h"
-#include "linux/c/ESRCH.h"
-#include "linux/c/SYS_kill.h"
-#include "linux/c/pid_t.h"
+#include "linux/_c_syscall2.h"
+#include "linux/EINVAL.h"
+#include "linux/EPERM.h"
+#include "linux/ESRCH.h"
+#include "linux/SYS_kill.h"
+#include "linux/pid_t.h"
 
 #include "linux/Result.hxx"
 
@@ -29,7 +29,7 @@ kill(pid_t pid, int sig) noexcept
         ESRCH_ = ESRCH,
     };
 
-    return Result<void, Error>(_linux_syscall2(SYS_kill, pid, sig));
+    return Result<void, Error>(_c_syscall2(SYS_kill, pid, sig));
 }
 
 } // namespace linux

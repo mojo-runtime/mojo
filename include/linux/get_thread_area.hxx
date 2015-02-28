@@ -1,11 +1,11 @@
 #ifndef linux_get_thread_area_hxx_
 #define linux_get_thread_area_hxx_
 
-#include "linux/c/_linux_syscall1.h"
-#include "linux/c/EFAULT.h"
-#include "linux/c/EINVAL.h"
-#include "linux/c/SYS_get_thread_area.h"
-#include "linux/c/struct-user_desc.h"
+#include "linux/_c_syscall1.h"
+#include "linux/EFAULT.h"
+#include "linux/EINVAL.h"
+#include "linux/SYS_get_thread_area.h"
+#include "linux/struct-user_desc.h"
 
 #include "linux/Result.hxx"
 
@@ -24,7 +24,7 @@ get_thread_area(struct user_desc* u_info) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(_linux_syscall1(SYS_get_thread_area, u_info));
+    return Result<void, Error>(_c_syscall1(SYS_get_thread_area, u_info));
 }
 
 static inline
@@ -37,7 +37,7 @@ get_thread_area(struct user_desc& u_info) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(_linux_syscall1(SYS_get_thread_area, &u_info));
+    return Result<void, Error>(_c_syscall1(SYS_get_thread_area, &u_info));
 }
 
 } // namespace linux

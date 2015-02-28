@@ -3,14 +3,14 @@
 
 #include "c/size_t.h"
 
-#include "linux/c/EBADF.h"
-#include "linux/c/EFAULT.h"
-#include "linux/c/EINVAL.h"
-#include "linux/c/ENOENT.h"
-#include "linux/c/ENOTDIR.h"
-#include "linux/c/SYS_getdents.h"
-#include "linux/c/struct-linux_dirent.h"
-#include "linux/c/_linux_syscall3.h"
+#include "linux/EBADF.h"
+#include "linux/EFAULT.h"
+#include "linux/EINVAL.h"
+#include "linux/ENOENT.h"
+#include "linux/ENOTDIR.h"
+#include "linux/SYS_getdents.h"
+#include "linux/struct-linux_dirent.h"
+#include "linux/_c_syscall3.h"
 
 #include "linux/Result.hxx"
 
@@ -40,7 +40,7 @@ getdents(/* unsigned */ int fd, struct linux_dirent* dirp, unsigned int count) n
 
     // On success, the number of bytes read is returned.
 
-    return Result<size_t, Error>(_linux_syscall3(SYS_getdents, fd, dirp, count));
+    return Result<size_t, Error>(_c_syscall3(SYS_getdents, fd, dirp, count));
 }
 
 } // namespace linux
