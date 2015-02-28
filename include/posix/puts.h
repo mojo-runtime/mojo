@@ -1,12 +1,12 @@
 #ifndef c_posix_puts_h_
 #define c_posix_puts_h_
 
-#include "../EOF.h"
-#include "../alloca.h"
-#include "../attribute/nothrow.h"
-#include "../memcpy.h"
-#include "../strlen.h"
-#include "../_c_reinterpret_cast.h"
+#include "attribute/nothrow.h"
+#include "c/EOF.h"
+#include "c/alloca.h"
+#include "c/memcpy.h"
+#include "c/strlen.h"
+#include "compat/_c_reinterpret_cast.h"
 
 #include "STDOUT_FILENO.h"
 #include "SYS_write.h"

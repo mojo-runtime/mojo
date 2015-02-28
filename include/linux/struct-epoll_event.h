@@ -1,7 +1,7 @@
 #ifndef c_linux_struct_epoll_event_h_
 #define c_linux_struct_epoll_event_h_
 
-#include "../uint32_t.h"
+#include "c/uint32_t.h"
 
 #include "epoll_data_t.h"
 
