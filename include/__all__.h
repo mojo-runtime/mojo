@@ -1,7 +1,7 @@
 #include "c/__all__.h"
 #include "compat/__all__.h"
+#include "config/__all__.h"
 #include "elf/__all__.h"
 #include "feature/__all__.h"
 #include "linux/__all__.h"
-#include "platform/__all__.h"
 #include "posix/__all__.h"
