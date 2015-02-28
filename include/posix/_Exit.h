@@ -6,7 +6,7 @@
 #include "attribute/nothrow.h"
 
 #include "SYS_exit.h"
-#include "_c_syscall1.h"
+#include "_system_call_1.h"
 
 attribute_noreturn
 attribute_nothrow
@@ -14,7 +14,7 @@ static
 void
 _Exit(int status)
 {
-    _c_syscall1(SYS_exit, status);
+    _system_call_1(SYS_exit, status);
     unreachable();
 }
 

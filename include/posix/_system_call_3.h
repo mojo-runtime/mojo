@@ -1,5 +1,5 @@
 #ifdef __linux__
-#  include "linux/_c_syscall0.h"
+#  include "linux/_system_call_3.h"
 #else
 #  error
 #endif
