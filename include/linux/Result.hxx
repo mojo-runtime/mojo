@@ -2,6 +2,7 @@
 #define linux_Result_hxx_
 
 #include "linux/_syscall_Result_is_error.h"
+#include "linux/_syscall_Result_error.h"
 #include "linux/_syscall_Result_ok.h"
 
 namespace linux {
@@ -37,7 +38,7 @@ struct Result
     Error
     error() const noexcept
     {
-        return static_cast<Error>(-this->__word);
+        return _syscall_Result_error(Error, this->__word);
     }
 
     constexpr
