@@ -1,15 +1,18 @@
 #ifndef linux_Result_hxx_
 #define linux_Result_hxx_
 
-#include "platform/_Word.h"
+#include "linux/_syscall_Result_is_error.h"
+#include "linux/_syscall_Result_ok.h"
 
 namespace linux {
 
 template <typename Ok, typename Error>
 struct Result
 {
+    typedef unsigned int __Word __attribute__((__mode__(__word__)));
+
     constexpr explicit
-    Result(_Word word)
+    Result(__Word word)
         : __word(word)
     {
     }
@@ -20,7 +23,7 @@ struct Result
     bool
     is_error() const noexcept
     {
-        return this->__word > static_cast<_Word>(-4096);
+        return _syscall_Result_is_error(this->__word);
     }
 
     constexpr
@@ -41,7 +44,7 @@ struct Result
     Ok
     ok() const noexcept
     {
-        return static_cast<Ok>(this->__word);
+        return _syscall_Result_ok(Ok, this->__word);
     }
 
     //--------------------------------------------------------------------------------------------//
@@ -55,7 +58,7 @@ struct Result
     }
 
   private:
-    _Word
+    __Word
     __word;
 };
 
