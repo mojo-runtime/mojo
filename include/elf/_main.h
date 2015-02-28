@@ -18,6 +18,10 @@ _main(_Arguments* __attribute__((__unused__)) arguments);
 __attribute__((__noreturn__, __nothrow__, __used__))
 static
 void
+__start(_Arguments* arguments) asm("__start");
+
+static
+void
 __start(_Arguments* arguments)
 {
     _main(arguments);
