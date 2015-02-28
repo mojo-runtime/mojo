@@ -1,5 +1,7 @@
+#include "has_attribute_error.h"
 #include "has_attribute_noreturn.h"
 #include "has_attribute_nothrow.h"
+#include "has_attribute_unavailable_with_message.h"
 
 #include "has_builtin_addressof.h"
 #include "has_builtin_alloca.h"

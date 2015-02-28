@@ -2,6 +2,7 @@
 #include "NOTHROW.h"
 #include "REINTERPRET_CAST.h"
 #include "STATIC_CAST.h"
+#include "UNAVAILABLE.h"
 
 #include "nullptr.h"
 
