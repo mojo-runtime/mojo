@@ -1,7 +1,6 @@
-#include "attribute/__all__.h"
 #include "builtin/__all__.h"
 #include "c/__all__.h"
-#include "compat/__all__.h"
+#include "compatibility/__all__.h"
 #include "config/__all__.h"
 #include "elf/__all__.h"
 #include "linux/__all__.h"

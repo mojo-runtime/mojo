@@ -1,19 +1,19 @@
 #ifndef c_posix_puts_h_
 #define c_posix_puts_h_
 
-#include "attribute/nothrow.h"
 #include "c/EOF.h"
 #include "c/alloca.h"
 #include "c/memcpy.h"
 #include "c/strlen.h"
-#include "compat/_c_reinterpret_cast.h"
+#include "compatibility/x_nothrow.h"
+#include "compatibility/x_reinterpret_cast.h"
 
 #include "STDOUT_FILENO.h"
 #include "SYS_write.h"
 #include "_system_call_3.h"
 #include "_system_Result_is_error.h"
 
-attribute_nothrow
+x_nothrow
 static
 int
 puts(const char* string)
@@ -29,7 +29,7 @@ puts(const char* string)
 
     memcpy(data, string, string_length);
 
-    _c_reinterpret_cast(char*, data)[string_length] = '\n';
+    x_reinterpret_cast(char*, data)[string_length] = '\n';
 
     return _system_Result_is_error(
         _system_call_3(
