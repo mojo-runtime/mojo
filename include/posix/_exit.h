@@ -1,5 +1,5 @@
-#ifndef c_posix_Exit_h_
-#define c_posix_Exit_h_
+#ifndef c_posix_exit_h_
+#define c_posix_exit_h_
 
 #include "compat/_Nothrow.h"
 #include "compat/_Noreturn.h"
@@ -12,7 +12,7 @@ _Noreturn
 _Nothrow
 static
 void
-_Exit(int status)
+_exit(int status)
 {
     _system_call_1(SYS_exit, status);
     __builtin_unreachable();
