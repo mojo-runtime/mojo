@@ -106,6 +106,7 @@
 #include "alignas.h"
 #include "alignof.h"
 #include "alloca.h"
+#include "assert.h"
 #include "bool.h"
 #include "char16_t.h"
 #include "char32_t.h"
