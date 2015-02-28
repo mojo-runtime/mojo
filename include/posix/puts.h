@@ -6,7 +6,7 @@
 #include "c/memcpy.h"
 #include "c/strlen.h"
 #include "compat/NOTHROW.h"
-#include "compat/REINTERPRET_CAST.h"
+#include "compat/_c_reinterpret_cast.h"
 
 #include "STDOUT_FILENO.h"
 #include "SYS_write.h"
@@ -29,7 +29,7 @@ puts(const char* string)
 
     memcpy(data, string, string_length);
 
-    REINTERPRET_CAST(char*, data)[string_length] = '\n';
+    _c_reinterpret_cast(char*, data)[string_length] = '\n';
 
     return _system_Result_is_error(
         _system_call_3(

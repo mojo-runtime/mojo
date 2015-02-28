@@ -6,10 +6,10 @@
 #else
 #  include "platform/RUNTIME.h"
 #  if (RUNTIME == RUNTIME_GNU)
-#    include "compat/STATIC_CAST.h"
+#    include "compat/_c_static_cast.h"
 #    include "__glibc/__assert_fail.h"
 #    define assert(x) ((x)                                              \
-                       ? STATIC_CAST(void, 0)                           \
+                       ? _c_static_cast(void, 0)                        \
                        : __assert_fail(#x, __FILE__, __LINE__, __PRETTY_FUNCTION__))
 #  else
 #    error

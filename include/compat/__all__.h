@@ -1,11 +1,12 @@
 #include "NOTHROW.h"
-#include "REINTERPRET_CAST.h"
-#include "STATIC_CAST.h"
 
 #include "nullptr.h"
 #include "unavailable.h"
 
 #include "_Noreturn.h"
+
+#include "_c_reinterpret_cast.h"
+#include "_c_static_cast.h"
 
 #include "__builtin_addressof.h"
 #include "__builtin_assume.h"
@@ -15,4 +16,3 @@
 #include "__builtin_constant_p.h"
 #include "__builtin_expect.h"
 #include "__builtin_unreachable.h"
-
