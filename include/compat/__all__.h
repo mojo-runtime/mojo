@@ -2,7 +2,6 @@
 #include "NOTHROW.h"
 #include "REINTERPRET_CAST.h"
 #include "STATIC_CAST.h"
-#include "UNAVAILABLE.h"
 
 #include "nullptr.h"
 
@@ -14,3 +13,5 @@
 #include "__builtin_constant_p.h"
 #include "__builtin_expect.h"
 #include "__builtin_unreachable.h"
+
+#include "__unavailable__.h"
