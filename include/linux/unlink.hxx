@@ -1,7 +1,7 @@
 #ifndef linux_unlink_hxx_
 #define linux_unlink_hxx_
 
-#include "linux/_c_syscall1.h"
+#include "linux/_syscall_1.h"
 #include "linux/EACCES.h"
 #include "linux/EBUSY.h"
 #include "linux/EFAULT.h"
@@ -76,7 +76,7 @@ unlink(const char* pathname) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(_c_syscall1(SYS_unlink, pathname));
+    return Result<void, Error>(_syscall_1(SYS_unlink, pathname));
 }
 
 } // namespace linux

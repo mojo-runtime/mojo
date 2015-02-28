@@ -1,7 +1,7 @@
 #ifndef linux_clock_settime_hxx_
 #define linux_clock_settime_hxx_
 
-#include "linux/_c_syscall2.h"
+#include "linux/_syscall_2.h"
 #include "linux/EFAULT.h"
 #include "linux/EINVAL.h"
 #include "linux/EPERM.h"
@@ -29,7 +29,7 @@ clock_settime(clockid_t clk_id, const struct timespec* tp) noexcept
         EPERM_ = EPERM,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_clock_settime, clk_id, tp));
+    return Result<void, Error>(_syscall_2(SYS_clock_settime, clk_id, tp));
 }
 
 } // namespace linux

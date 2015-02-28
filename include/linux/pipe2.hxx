@@ -1,7 +1,7 @@
 #ifndef linux_pipe2_hxx_
 #define linux_pipe2_hxx_
 
-#include "linux/_c_syscall2.h"
+#include "linux/_syscall_2.h"
 #include "linux/EFAULT.h"
 #include "linux/EINVAL.h"
 #include "linux/EMFILE.h"
@@ -31,7 +31,7 @@ pipe2(int pipefd[2], int flags) noexcept
         ENFILE_ = ENFILE,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_pipe2, pipefd, flags));
+    return Result<void, Error>(_syscall_2(SYS_pipe2, pipefd, flags));
 }
 
 static inline

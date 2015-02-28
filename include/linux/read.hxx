@@ -11,7 +11,7 @@
 #include "linux/EIO.h"
 #include "linux/EISDIR.h"
 #include "linux/SYS_read.h"
-#include "linux/_c_syscall3.h"
+#include "linux/_syscall_3.h"
 
 #include "linux/Result.hxx"
 
@@ -56,7 +56,7 @@ read(int fd, void* buf, size_t count) noexcept
         //   XXX: totally ignoring this
     };
 
-    return Result<size_t, Error>(_c_syscall3(SYS_read, fd, buf, count));
+    return Result<size_t, Error>(_syscall_3(SYS_read, fd, buf, count));
 }
 
 template <typename T, size_t n>
@@ -80,7 +80,7 @@ read(int fd, T(& array)[n]) noexcept
     // return read(fd, array, n * sizeof(T))._with_error<Error>();
     // return read(fd, array, n * sizeof(T)).template _with_error<Error>();
 
-    return Result<size_t, Error>(_c_syscall3(SYS_read, fd, array, n * sizeof(T)));
+    return Result<size_t, Error>(_syscall_3(SYS_read, fd, array, n * sizeof(T)));
 }
 
 } // namespace linux

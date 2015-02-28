@@ -1,7 +1,7 @@
 #ifndef linux_waitid_hxx_
 #define linux_waitid_hxx_
 
-#include "linux/_c_syscall5.h"
+#include "linux/_syscall_5.h"
 #include "linux/ECHILD.h"
 #include "linux/EINTR.h"
 #include "linux/EINVAL.h"
@@ -35,7 +35,7 @@ waitid(idtype_t idtype, id_t id, siginfo_t* infop, int options, struct rusage* u
     };
 
     return Result<pid_t, Error>(
-        _c_syscall5(SYS_getdents, idtype, id, infop, options, usage)
+        _syscall_5(SYS_getdents, idtype, id, infop, options, usage)
     );
 }
 

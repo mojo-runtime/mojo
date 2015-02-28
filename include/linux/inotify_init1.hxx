@@ -1,7 +1,7 @@
 #ifndef linux_inotify_init1_hxx_
 #define linux_inotify_init1_hxx_
 
-#include "linux/_c_syscall1.h"
+#include "linux/_syscall_1.h"
 #include "linux/EINVAL.h"
 #include "linux/EMFILE.h"
 #include "linux/ENFILE.h"
@@ -31,7 +31,7 @@ inotify_init1(int flags) noexcept
         ENOMEM_ = ENOMEM,
     };
 
-    return Result<int, Error>(_c_syscall1(SYS_inotify_init1, flags));
+    return Result<int, Error>(_syscall_1(SYS_inotify_init1, flags));
 }
 
 static inline

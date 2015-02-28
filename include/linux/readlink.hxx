@@ -13,7 +13,7 @@
 #include "linux/ENOMEM.h"
 #include "linux/ENOTDIR.h"
 #include "linux/SYS_readlink.h"
-#include "linux/_c_syscall3.h"
+#include "linux/_syscall_3.h"
 
 #include "linux/Result.hxx"
 
@@ -55,7 +55,7 @@ readlink(const char* pathname, char* buf, size_t bufsiz) noexcept
         ENOTDIR_ = ENOTDIR,
     };
 
-    return Result<size_t, Error>(_c_syscall3(SYS_readlink, pathname, buf, bufsiz));
+    return Result<size_t, Error>(_syscall_3(SYS_readlink, pathname, buf, bufsiz));
 }
 
 } // namespace linux

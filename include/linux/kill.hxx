@@ -1,7 +1,7 @@
 #ifndef linux_kill_hxx_
 #define linux_kill_hxx_
 
-#include "linux/_c_syscall2.h"
+#include "linux/_syscall_2.h"
 #include "linux/EINVAL.h"
 #include "linux/EPERM.h"
 #include "linux/ESRCH.h"
@@ -29,7 +29,7 @@ kill(pid_t pid, int sig) noexcept
         ESRCH_ = ESRCH,
     };
 
-    return Result<void, Error>(_c_syscall2(SYS_kill, pid, sig));
+    return Result<void, Error>(_syscall_2(SYS_kill, pid, sig));
 }
 
 } // namespace linux

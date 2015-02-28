@@ -1,7 +1,7 @@
 #ifndef linux_set_thread_area_hxx_
 #define linux_set_thread_area_hxx_
 
-#include "linux/_c_syscall1.h"
+#include "linux/_syscall_1.h"
 #include "linux/EFAULT.h"
 #include "linux/EINVAL.h"
 #include "linux/ESRCH.h"
@@ -28,7 +28,7 @@ set_thread_area(struct user_desc* u_info) noexcept
         ESRCH_ = ESRCH,
     };
 
-    return Result<void, Error>(_c_syscall1(SYS_set_thread_area, u_info));
+    return Result<void, Error>(_syscall_1(SYS_set_thread_area, u_info));
 }
 
 } // namespace linux
