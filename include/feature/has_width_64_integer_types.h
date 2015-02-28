@@ -1,6 +1,8 @@
 #ifndef has_width_64_integer_types
 
-#if defined(__LP64__)
+#include "platform/WORD_WIDTH.h"
+
+#if WORD_WIDTH == 64
 #  define has_width_64_integers 1
 #else
 #  error
