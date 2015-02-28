@@ -1,5 +1,5 @@
-#ifndef c_posix_getppid_h_
-#define c_posix_getppid_h_
+#ifndef unix_getppid_h_
+#define unix_getppid_h_
 
 #include "compat/_Nothrow.h"
 

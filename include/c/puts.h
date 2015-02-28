@@ -1,5 +1,5 @@
-#ifdef __linux__
-#  include "posix/puts.h"
+#ifdef __unix__
+#  include "unix/puts.h"
 #else
 #  error
 #endif

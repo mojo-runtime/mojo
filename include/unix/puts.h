@@ -1,5 +1,5 @@
-#ifndef c_posix_puts_h_
-#define c_posix_puts_h_
+#ifndef unix_puts_h_
+#define unix_puts_h_
 
 #include "c/EOF.h"
 #include "c/alloca.h"

@@ -1,5 +1,5 @@
-#ifndef c_posix_exit_h_
-#define c_posix_exit_h_
+#ifndef unix_exit_h_
+#define unix_exit_h_
 
 #include "compat/_Nothrow.h"
 #include "compat/_Noreturn.h"

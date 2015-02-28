@@ -2,7 +2,7 @@
 #define c_Exit_h_
 
 #if defined(__unix__)
-#  include "posix/_exit.h"
+#  include "unix/_exit.h"
 #else
 #  error
 #endif

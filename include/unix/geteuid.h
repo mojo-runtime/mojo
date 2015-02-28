@@ -1,5 +1,5 @@
-#ifndef c_posix_geteuid_h_
-#define c_posix_geteuid_h_
+#ifndef unix_geteuid_h_
+#define unix_geteuid_h_
 
 #include "compat/_Nothrow.h"
 
