@@ -4,7 +4,7 @@
 #if !defined(__cplusplus)
 #  define addressof(x) (&(x))
 #else
-#  include "config/has_builtin_addressof.h"
+#  include "feature/has_builtin_addressof.h"
 #  if has_builtin_addressof
 #    define addressof __builtin_addressof
 #  else
