@@ -42,6 +42,10 @@
 #endif
 
 #if defined(__unix__)
+#  include "CLOCK_REALTIME.h"
+#endif
+
+#if defined(__unix__)
 #  include "DT_BLK.h"
 #  include "DT_CHR.h"
 #  include "DT_DIR.h"
