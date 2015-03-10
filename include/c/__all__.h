@@ -126,6 +126,13 @@
 
 #include "NULL.h"
 
+#if defined(__unix__)
+#  include "PROT_EXEC.h"
+#  include "PROT_NONE.h"
+#  include "PROT_READ.h"
+#  include "PROT_WRITE.h"
+#endif
+
 #include "PTRDIFF_MAX.h"
 #include "PTRDIFF_MIN.h"
 

@@ -76,11 +76,6 @@
 #include "POLLOUT.h"
 #include "POLLPRI.h"
 
-#include "PROT_EXEC.h"
-#include "PROT_NONE.h"
-#include "PROT_READ.h"
-#include "PROT_WRITE.h"
-
 #include "P_ALL.h"
 #include "P_PGID.h"
 #include "P_PID.h"
