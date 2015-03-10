@@ -1,6 +1,6 @@
 #ifndef __builtin_unreachable
 
-#include "feature/has_builtin_unreachable.h"
+#include "config/has_builtin_unreachable.h"
 
 #if !has_builtin_unreachable
 #  error

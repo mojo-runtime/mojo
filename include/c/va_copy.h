@@ -1,6 +1,6 @@
 #ifndef va_copy
 
-#include "feature/has_builtin_va_copy.h"
+#include "config/has_builtin_va_copy.h"
 
 #if has_builtin_va_copy
 #  define va_copy __builtin_va_copy

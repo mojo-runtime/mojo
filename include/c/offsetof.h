@@ -1,6 +1,6 @@
 #ifndef offsetof
 
-#include "feature/has_builtin_offsetof.h"
+#include "config/has_builtin_offsetof.h"
 
 #if has_builtin_offsetof
 #  define offsetof __builtin_offsetof

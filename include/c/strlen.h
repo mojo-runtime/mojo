@@ -1,7 +1,7 @@
 #ifndef c_strlen_h_
 #define c_strlen_h_
 
-#include "feature/has_builtin_strlen.h"
+#include "config/has_builtin_strlen.h"
 #include "size_t.h"
 
 #if has_builtin_strlen

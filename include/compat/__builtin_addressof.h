@@ -1,6 +1,6 @@
 #ifndef __builtin_addressof
 
-#include "feature/has_builtin_addressof.h"
+#include "config/has_builtin_addressof.h"
 
 #if !has_builtin_addressof
 #  if !defined(__cplusplus)

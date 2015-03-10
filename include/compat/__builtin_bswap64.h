@@ -1,6 +1,6 @@
 #ifndef __builtin_bswap64
 
-#include "feature/has_builtin_bswap64.h"
+#include "config/has_builtin_bswap64.h"
 
 #if !has_builtin_bswap64
 #  error

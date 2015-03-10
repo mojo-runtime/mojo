@@ -1,7 +1,6 @@
 #include "c/__all__.h"
 #include "compat/__all__.h"
 #include "config/__all__.h"
-#include "feature/__all__.h"
 
 #if defined(__ELF__)
 #include "elf/__all__.h"
