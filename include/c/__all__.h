@@ -78,6 +78,9 @@
 #  include "EINTR.h"
 #  include "EIO.h"
 #  include "EISDIR.h"
+#  if defined(__linux__)
+#    include "ELIBBAD.h"
+#  endif
 #  include "ELOOP.h"
 #  include "EMFILE.h"
 #  include "EMLINK.h"
