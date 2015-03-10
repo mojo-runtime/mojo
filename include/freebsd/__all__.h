@@ -2,26 +2,6 @@
 #include "EILSEQ.h"
 #include "ERANGE.h"
 
-#include "SIGABRT.h"
-#include "SIGFPE.h"
-#include "SIGILL.h"
-#include "SIGINT.h"
-#include "SIGSEGV.h"
-#include "SIGTERM.h"
-
-#include "SIG_DFL.h"
-#include "SIG_ERR.h"
-#include "SIG_IGN.h"
-
-#include "SYS_exit.h"
-#include "SYS_getegid.h"
-#include "SYS_geteuid.h"
-#include "SYS_getgid.h"
-#include "SYS_getpid.h"
-#include "SYS_getppid.h"
-#include "SYS_getuid.h"
-#include "SYS_write.h"
-
 #include "gid_t.h"
 #include "pid_t.h"
 #include "uid_t.h"
