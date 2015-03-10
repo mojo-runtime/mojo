@@ -63,6 +63,17 @@
 #include "EXIT_FAILURE.h"
 #include "EXIT_SUCCESS.h"
 
+#if defined(__unix__)
+#  include "F_DUPFD.h"
+#  include "F_GETFD.h"
+#  include "F_GETFL.h"
+#  include "F_GETLK.h"
+#  include "F_SETFD.h"
+#  include "F_SETFL.h"
+#  include "F_SETLK.h"
+#  include "F_SETLKW.h"
+#endif
+
 #include "INT8_C.h"
 #include "INT16_C.h"
 #include "INT32_C.h"

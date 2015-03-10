@@ -57,15 +57,6 @@
 #include "EWOULDBLOCK.h"
 #include "EXDEV.h"
 
-#include "F_DUPFD.h"
-#include "F_GETFD.h"
-#include "F_GETFL.h"
-#include "F_GETLK.h"
-#include "F_SETFD.h"
-#include "F_SETFL.h"
-#include "F_SETLK.h"
-#include "F_SETLKW.h"
-
 #include "MAP_ANONYMOUS.h"
 #include "MAP_DENYWRITE.h"
 #include "MAP_PRIVATE.h"
