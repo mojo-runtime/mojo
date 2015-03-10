@@ -150,12 +150,6 @@
 #include "SYS_waitid.h"
 #include "SYS_write.h"
 
-#include "WCONTINUED.h"
-#include "WEXITED.h"
-#include "WNOHANG.h"
-#include "WNOWAIT.h"
-#include "WSTOPPED.h"
-
 #include "blkcnt_t.h"
 #include "blksize_t.h"
 #include "cc_t.h"

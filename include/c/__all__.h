@@ -197,6 +197,15 @@
 #include "WINT_MAX.h"
 #include "WINT_MIN.h"
 
+#if defined(__unix__)
+#  include "WCONTINUED.h"
+#  include "WEXITED.h"
+#  include "WNOHANG.h"
+#  include "WNOWAIT.h"
+#  include "WSTOPPED.h"
+#  include "WUNTRACED.h"
+#endif
+
 #include "_Exit.h"
 #include "abs.h"
 #include "alignas.h"
