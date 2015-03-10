@@ -67,14 +67,6 @@
 #include "P_PGID.h"
 #include "P_PID.h"
 
-#include "SIGALRM.h"
-#include "SIGCHLD.h"
-#include "SIGHUP.h"
-#include "SIGKILL.h"
-#include "SIGPIPE.h"
-#include "SIGQUIT.h"
-#include "SIGTRAP.h"
-
 #include "SYS_chdir.h"
 #include "SYS_chmod.h"
 #include "SYS_chown.h"

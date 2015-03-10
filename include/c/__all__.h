@@ -160,11 +160,26 @@
 #include "RAND_MAX.h"
 
 #include "SIGABRT.h"
+#if defined(__unix__)
+#  include "SIGALRM.h"
+#  include "SIGCHLD.h"
+#endif
 #include "SIGFPE.h"
+#if defined(__unix__)
+#  include "SIGHUP.h"
+#endif
 #include "SIGILL.h"
 #include "SIGINT.h"
+#if defined(__unix__)
+#  include "SIGKILL.h"
+#  include "SIGPIPE.h"
+#  include "SIGQUIT.h"
+#endif
 #include "SIGSEGV.h"
 #include "SIGTERM.h"
+#if defined(__unix__)
+#  include "SIGTRAP.h"
+#endif
 
 #include "SIG_ATOMIC_MAX.h"
 #include "SIG_ATOMIC_MIN.h"
