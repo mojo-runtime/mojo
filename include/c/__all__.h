@@ -117,6 +117,13 @@
 
 #include "INT_MAX.h"
 
+#if defined(__unix__)
+#  include "MAP_ANONYMOUS.h"
+// MAP_DENYWRITE: linux, ignored
+#  include "MAP_PRIVATE.h"
+#  include "MAP_SHARED.h"
+#endif
+
 #include "NULL.h"
 
 #include "PTRDIFF_MAX.h"

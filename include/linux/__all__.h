@@ -57,11 +57,6 @@
 #include "EWOULDBLOCK.h"
 #include "EXDEV.h"
 
-#include "MAP_ANONYMOUS.h"
-#include "MAP_DENYWRITE.h"
-#include "MAP_PRIVATE.h"
-#include "MAP_SHARED.h"
-
 #include "NAME_MAX.h"
 
 #include "NCCS.h"
