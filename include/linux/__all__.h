@@ -1,13 +1,5 @@
 #include "CLOCK_REALTIME.h"
 
-#include "DT_BLK.h"
-#include "DT_CHR.h"
-#include "DT_DIR.h"
-#include "DT_FIFO.h"
-#include "DT_LNK.h"
-#include "DT_REG.h"
-#include "DT_SOCK.h"
-#include "DT_UNKNOWN.h"
 #include "E2BIG.h"
 #include "EACCES.h"
 #include "EAGAIN.h"
