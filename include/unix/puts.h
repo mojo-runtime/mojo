@@ -3,13 +3,13 @@
 
 #include "c/EOF.h"
 #include "c/STDOUT_FILENO.h"
+#include "c/SYS_write.h"
 #include "c/alloca.h"
 #include "c/memcpy.h"
 #include "c/strlen.h"
 #include "c/_c_nothrow.h"
 #include "c/_c_reinterpret_cast.h"
 
-#include "SYS_write.h"
 #include "_syscall_3.h"
 #include "_syscall_Result_is_error.h"
 

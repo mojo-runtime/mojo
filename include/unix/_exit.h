@@ -2,10 +2,10 @@
 #define unix_exit_h_
 
 #include "builtin/__builtin_unreachable.h"
+#include "c/SYS_exit.h"
 #include "c/_c_noreturn.h"
 #include "c/_c_nothrow.h"
 
-#include "SYS_exit.h"
 #include "_syscall_1.h"
 
 _c_noreturn

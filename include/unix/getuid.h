@@ -1,9 +1,9 @@
 #ifndef unix_getuid_h_
 #define unix_getuid_h_
 
+#include "c/SYS_getuid.h"
 #include "c/_c_nothrow.h"
 
-#include "SYS_getuid.h"
 #include "uid_t.h"
 #include "_syscall_0.h"
 #include "_syscall_Result_ok.h"

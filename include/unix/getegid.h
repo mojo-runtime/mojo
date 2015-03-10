@@ -1,9 +1,9 @@
 #ifndef unix_getegid_h_
 #define unix_getegid_h_
 
+#include "c/SYS_getegid.h"
 #include "c/_c_nothrow.h"
 
-#include "SYS_getegid.h"
 #include "gid_t.h"
 #include "_syscall_0.h"
 #include "_syscall_Result_ok.h"
