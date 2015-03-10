@@ -14,7 +14,7 @@
 #include "linux/ENOTDIR.h"
 #include "linux/EPERM.h"
 #include "linux/EROFS.h"
-#include "linux/SYS_unlink.h"
+#include "c/SYS_unlink.h"
 
 #include "linux/Result.hxx"
 

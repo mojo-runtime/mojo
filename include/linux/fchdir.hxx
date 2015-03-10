@@ -4,7 +4,7 @@
 #include "linux/_syscall_1.h"
 #include "linux/EACCES.h"
 #include "linux/EBADF.h"
-#include "linux/SYS_fchdir.h"
+#include "c/SYS_fchdir.h"
 
 #include "linux/Result.hxx"
 

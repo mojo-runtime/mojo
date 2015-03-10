@@ -4,7 +4,7 @@
 #include "linux/_syscall_2.h"
 #include "linux/EFAULT.h"
 #include "linux/EINVAL.h"
-#include "linux/SYS_clock_gettime.h"
+#include "c/SYS_clock_gettime.h"
 #include "linux/clockid_t.h"
 #include "linux/struct-timespec.h"
 

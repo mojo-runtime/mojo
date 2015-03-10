@@ -6,7 +6,7 @@
 #include "linux/EFAULT.h"
 #include "linux/EINVAL.h"
 #include "linux/ENOTTY.h"
-#include "linux/SYS_ioctl.h"
+#include "c/SYS_ioctl.h"
 
 #include "linux/Result.hxx"
 

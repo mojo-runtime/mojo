@@ -2,7 +2,7 @@
 #define linux_getpid_hxx_
 
 #include "linux/_syscall_0.h"
-#include "linux/SYS_getpid.h"
+#include "c/SYS_getpid.h"
 #include "linux/pid_t.h"
 
 namespace linux {

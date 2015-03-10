@@ -11,7 +11,7 @@
 #include "linux/ENOTDIR.h"
 #include "linux/EPERM.h"
 #include "linux/EROFS.h"
-#include "linux/SYS_chmod.h"
+#include "c/SYS_chmod.h"
 #include "linux/mode_t.h"
 #include "linux/_syscall_2.h"
 

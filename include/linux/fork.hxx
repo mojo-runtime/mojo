@@ -5,7 +5,7 @@
 #include "linux/EAGAIN.h"
 #include "linux/ENOMEM.h"
 #include "linux/ENOSYS.h"
-#include "linux/SYS_fork.h"
+#include "c/SYS_fork.h"
 #include "linux/pid_t.h"
 
 #include "linux/Result.hxx"

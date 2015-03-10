@@ -6,7 +6,7 @@
 #include "linux/EFAULT.h"
 #include "linux/ENOMEM.h"
 #include "linux/EOVERFLOW.h"
-#include "linux/SYS_fstat.h"
+#include "c/SYS_fstat.h"
 #include "linux/struct-stat.h"
 
 #include "linux/Result.hxx"

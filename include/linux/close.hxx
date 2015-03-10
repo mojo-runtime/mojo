@@ -5,7 +5,7 @@
 #include "linux/EBADF.h"
 #include "linux/EINTR.h"
 #include "linux/EIO.h"
-#include "linux/SYS_close.h"
+#include "c/SYS_close.h"
 
 #include "linux/Result.hxx"
 

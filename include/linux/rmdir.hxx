@@ -14,7 +14,7 @@
 #include "linux/ENOTEMPTY.h"
 #include "linux/EPERM.h"
 #include "linux/EROFS.h"
-#include "linux/SYS_rmdir.h"
+#include "c/SYS_rmdir.h"
 
 #include "linux/Result.hxx"
 

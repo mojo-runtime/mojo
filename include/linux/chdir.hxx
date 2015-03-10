@@ -9,7 +9,7 @@
 #include "linux/ENOENT.h"
 #include "linux/ENOMEM.h"
 #include "linux/ENOTDIR.h"
-#include "linux/SYS_chdir.h"
+#include "c/SYS_chdir.h"
 #include "linux/_syscall_1.h"
 
 #include "linux/Result.hxx"

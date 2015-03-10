@@ -6,7 +6,7 @@
 #include "linux/EINVAL.h"
 #include "linux/EMFILE.h"
 #include "linux/ENFILE.h"
-#include "linux/SYS_pipe2.h"
+#include "c/SYS_pipe2.h"
 
 #include "linux/Result.hxx"
 

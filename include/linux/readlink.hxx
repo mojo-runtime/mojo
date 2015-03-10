@@ -12,7 +12,7 @@
 #include "linux/ENOENT.h"
 #include "linux/ENOMEM.h"
 #include "linux/ENOTDIR.h"
-#include "linux/SYS_readlink.h"
+#include "c/SYS_readlink.h"
 #include "linux/_syscall_3.h"
 
 #include "linux/Result.hxx"

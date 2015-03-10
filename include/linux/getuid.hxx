@@ -2,7 +2,7 @@
 #define linux_getuid_hxx_
 
 #include "linux/_syscall_0.h"
-#include "linux/SYS_getuid.h"
+#include "c/SYS_getuid.h"
 #include "linux/uid_t.h"
 
 namespace linux {

@@ -26,7 +26,7 @@
 #include "linux/EROFS.h"
 #include "linux/ETXTBSY.h"
 #include "linux/EWOULDBLOCK.h"
-#include "linux/SYS_open.h"
+#include "c/SYS_open.h"
 
 #include "linux/Result.hxx"
 

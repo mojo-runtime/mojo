@@ -13,7 +13,7 @@
 #include "linux/EOVERFLOW.h"
 #include "linux/EPERM.h"
 #include "linux/ETXTBSY.h"
-#include "linux/SYS_mmap.h"
+#include "c/SYS_mmap.h"
 #include "linux/off_t.h"
 #include "linux/_syscall_6.h"
 

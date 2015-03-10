@@ -2,7 +2,7 @@
 #define linux_getegid_hxx_
 
 #include "linux/_syscall_0.h"
-#include "linux/SYS_getegid.h"
+#include "c/SYS_getegid.h"
 #include "linux/gid_t.h"
 
 namespace linux {

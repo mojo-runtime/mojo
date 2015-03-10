@@ -11,7 +11,7 @@
 #include "linux/ENOMEM.h"
 #include "linux/ENOTDIR.h"
 #include "linux/EOVERFLOW.h"
-#include "linux/SYS_fstatat.h"
+#include "c/SYS_fstatat.h"
 #include "linux/struct-stat.h"
 
 #include "linux/Result.hxx"

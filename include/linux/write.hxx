@@ -14,7 +14,7 @@
 #include "linux/EIO.h"
 #include "linux/ENOSPC.h"
 #include "linux/EPIPE.h"
-#include "linux/SYS_write.h"
+#include "c/SYS_write.h"
 #include "linux/_syscall_3.h"
 
 #include "linux/Result.hxx"

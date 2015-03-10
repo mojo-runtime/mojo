@@ -5,7 +5,7 @@
 #include "linux/EFAULT.h"
 #include "linux/EINVAL.h"
 #include "linux/EPERM.h"
-#include "linux/SYS_clock_settime.h"
+#include "c/SYS_clock_settime.h"
 #include "linux/clockid_t.h"
 #include "linux/struct-timespec.h"
 

@@ -11,7 +11,7 @@
 #include "linux/ENOTDIR.h"
 #include "linux/EPERM.h"
 #include "linux/EROFS.h"
-#include "linux/SYS_chown.h"
+#include "c/SYS_chown.h"
 #include "linux/gid_t.h"
 #include "linux/uid_t.h"
 

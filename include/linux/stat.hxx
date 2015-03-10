@@ -10,7 +10,7 @@
 #include "linux/ENOMEM.h"
 #include "linux/ENOTDIR.h"
 #include "linux/EOVERFLOW.h"
-#include "linux/SYS_stat.h"
+#include "c/SYS_stat.h"
 #include "linux/struct-stat.h"
 
 #include "linux/Result.hxx"

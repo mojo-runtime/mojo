@@ -15,7 +15,7 @@
 #include "linux/ENOTDIR.h"
 #include "linux/EPERM.h"
 #include "linux/EROFS.h"
-#include "linux/SYS_mkdir.h"
+#include "c/SYS_mkdir.h"
 #include "linux/mode_t.h"
 
 #include "linux/Result.hxx"

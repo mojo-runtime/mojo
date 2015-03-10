@@ -2,7 +2,7 @@
 #define linux_exit_hxx_
 
 #include "linux/_syscall_1.h"
-#include "linux/SYS_exit.h"
+#include "c/SYS_exit.h"
 
 namespace linux {
 

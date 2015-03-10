@@ -15,7 +15,7 @@
 #include "linux/ENOTDIR.h"
 #include "linux/EPERM.h"
 #include "linux/EROFS.h"
-#include "linux/SYS_symlink.h"
+#include "c/SYS_symlink.h"
 
 #include "linux/Result.hxx"
 

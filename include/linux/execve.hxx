@@ -19,7 +19,7 @@
 #include "linux/ENOTDIR.h"
 #include "linux/EPERM.h"
 #include "linux/ETXTBSY.h"
-#include "linux/SYS_execve.h"
+#include "c/SYS_execve.h"
 
 #include "linux/Result.hxx"
 

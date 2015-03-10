@@ -13,7 +13,7 @@
 #include "linux/EMFILE.h"
 #include "linux/ENOLCK.h"
 #include "linux/EPERM.h"
-#include "linux/SYS_fcntl.h"
+#include "c/SYS_fcntl.h"
 
 #include "linux/Result.hxx"
 

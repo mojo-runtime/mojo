@@ -5,7 +5,7 @@
 #include "linux/EINVAL.h"
 #include "linux/EPERM.h"
 #include "linux/ESRCH.h"
-#include "linux/SYS_kill.h"
+#include "c/SYS_kill.h"
 #include "linux/pid_t.h"
 
 #include "linux/Result.hxx"

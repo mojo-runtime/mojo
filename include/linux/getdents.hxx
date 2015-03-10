@@ -8,7 +8,7 @@
 #include "linux/EINVAL.h"
 #include "linux/ENOENT.h"
 #include "linux/ENOTDIR.h"
-#include "linux/SYS_getdents.h"
+#include "c/SYS_getdents.h"
 #include "linux/struct-linux_dirent.h"
 #include "linux/_syscall_3.h"
 
