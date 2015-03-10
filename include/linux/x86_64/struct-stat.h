@@ -1,17 +1,17 @@
 #ifndef _linux_x86_64_struct_stat_h_
 #define _linux_x86_64_struct_stat_h_
 
-#include "../struct-timespec.h"
-#include "blksize_t.h"
-#include "blkcnt_t.h"
-#include "dev_t.h"
-#include "gid_t.h"
-#include "ino_t.h"
-#include "mode_t.h"
-#include "nlink_t.h"
-#include "off_t.h"
-#include "time_t.h"
-#include "uid_t.h"
+#include "c/blksize_t.h"
+#include "c/blkcnt_t.h"
+#include "c/dev_t.h"
+#include "c/gid_t.h"
+#include "c/ino_t.h"
+#include "c/mode_t.h"
+#include "c/nlink_t.h"
+#include "c/off_t.h"
+#include "c/struct-timespec.h"
+#include "c/time_t.h"
+#include "c/uid_t.h"
 
 struct stat
 {

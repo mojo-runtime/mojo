@@ -1,10 +1,10 @@
 #ifndef _linux_x86_64_siginfo_t_h_
 #define _linux_x86_64_siginfo_t_h_
 
+#include "c/clock_t.h"
+#include "c/pid_t.h"
+#include "c/uid_t.h"
 #include "../sigval_t.h"
-#include "clock_t.h"
-#include "pid_t.h"
-#include "uid_t.h"
 
 typedef struct siginfo
 {

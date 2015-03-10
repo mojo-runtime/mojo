@@ -1,7 +1,7 @@
 #ifndef _linux_struct_rusage_h_
 #define _linux_struct_rusage_h_
 
-#include "struct-timeval.h"
+#include "c/struct-timeval.h"
 
 struct rusage
 {

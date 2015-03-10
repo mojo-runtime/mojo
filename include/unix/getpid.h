@@ -2,9 +2,9 @@
 #define unix_getpid_h_
 
 #include "c/SYS_getpid.h"
+#include "c/pid_t.h"
 #include "c/_c_nothrow.h"
 
-#include "pid_t.h"
 #include "_syscall_0.h"
 #include "_syscall_Result_ok.h"
 

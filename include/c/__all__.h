@@ -407,15 +407,35 @@
 #include "alignof.h"
 #include "alloca.h"
 #include "assert.h"
+
+#if defined(__unix__)
+#  include "blkcnt_t.h"
+#  include "blksize_t.h"
+#endif
+
 #include "bool.h"
+
+#if defined(__unix__)
+#  include "cc_t.h"
+#endif
+
 #include "char16_t.h"
 #include "char32_t.h"
+
+#if defined(__unix__)
+#  include "clock_t.h"
+#  include "clockid_t.h"
+#  include "dev_t.h"
+#endif
+
 #include "div_t.h"
 #include "errno_t.h"
 #include "false.h"
 
 #if defined(__unix__)
+#  include "gid_t.h"
 #  include "idtype_t.h"
+#  include "ino_t.h"
 #endif
 
 #include "int8_t.h"
@@ -437,30 +457,69 @@
 #include "memcmp.h"
 #include "memcpy.h"
 #include "memset.h"
+
+#if defined(__unix__)
+#  include "mode_t.h"
+#  include "nlink_t.h"
+#endif
+
 #include "noreturn.h"
+
+#if defined(__unix__)
+#  include "off_t.h"
+#endif
+
 #include "offsetof.h"
+
+#if defined(__unix__)
+#  include "pid_t.h"
+#endif
+
 #include "ptrdiff_t.h"
 #include "puts.h"
 #include "sighandler_t.h"
 #include "size_t.h"
+
+#if defined(__unix__)
+#  include "speed_t.h"
+#endif
+
 #include "ssize_t.h"
 #include "static_assert.h"
 #include "strcmp.h"
 #include "strlen.h"
+
+#if defined(__unix__)
+#  include "struct-termios.h"
+#  include "struct-timespec.h"
+#  include "struct-timeval.h"
+#  include "suseconds_t.h"
+#  include "tcflag_t.h"
+#endif
+
 #include "true.h"
+
+#if defined(__unix__)
+#  include "uid_t.h"
+#endif
+
 #include "uint8_t.h"
 #include "uint16_t.h"
 #include "uint32_t.h"
 #include "uint64_t.h"
+
 #include "uint_fast8_t.h"
 #include "uint_fast16_t.h"
 #include "uint_fast32_t.h"
 #include "uint_fast64_t.h"
+
 #include "uint_least8_t.h"
 #include "uint_least16_t.h"
 #include "uint_least32_t.h"
 #include "uint_least64_t.h"
+
 #include "uintmax_t.h"
 #include "uintptr_t.h"
+
 #include "wchar_t.h"
 #include "wint_t.h"
