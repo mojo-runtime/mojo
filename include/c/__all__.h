@@ -32,6 +32,15 @@
 #  include "AT_UID.h"
 #endif
 
+#if defined(__unix__)
+#  include "CLD_CONTINUED.h"
+#  include "CLD_DUMPED.h"
+#  include "CLD_EXITED.h"
+#  include "CLD_KILLED.h"
+#  include "CLD_STOPPED.h"
+#  include "CLD_TRAPPED.h"
+#endif
+
 #include "EDOM.h"
 #include "EILSEQ.h"
 #include "ERANGE.h"
