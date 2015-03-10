@@ -233,6 +233,8 @@
 #    include "SYS_clone.h"
 #  endif
 #  include "SYS_close.h"
+#  include "SYS_dup.h"
+#  include "SYS_dup2.h"
 #  if defined(__linux__)
 #    include "SYS_dup3.h"
 #    include "SYS_epoll_create1.h"
