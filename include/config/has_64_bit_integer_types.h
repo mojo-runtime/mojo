@@ -1,6 +1,6 @@
 #ifndef has_64_bit_integer_types
 
-#include "compat/__POINTER_WIDTH__.h"
+#include "builtin/__POINTER_WIDTH__.h"
 
 #if (__POINTER_WIDTH__ >= 64)
 #  define has_64_bit_integer_types 1
