@@ -57,8 +57,6 @@
 #include "EWOULDBLOCK.h"
 #include "EXDEV.h"
 
-#include "NCCS.h"
-
 #include "POLLERR.h"
 #include "POLLHUP.h"
 #include "POLLIN.h"

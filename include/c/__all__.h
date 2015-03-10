@@ -128,6 +128,10 @@
 #  include "NAME_MAX.h"
 #endif
 
+#if defined(__unix__)
+#  include "NCCS.h"
+#endif
+
 #include "NULL.h"
 
 #if defined(__unix__)
