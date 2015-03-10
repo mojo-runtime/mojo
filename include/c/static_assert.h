@@ -1,5 +1,5 @@
-#ifndef c_static_assert_h_
-#define c_static_assert_h_
+#ifndef _c_static_assert_h_
+#define _c_static_assert_h_
 
 #if !defined(__cplusplus)
 #  include "config/has_c_static_assert.h"

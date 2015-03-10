@@ -1,5 +1,5 @@
-#ifndef c_uintmax_t_h_
-#define c_uintmax_t_h_
+#ifndef _c_uintmax_t_h_
+#define _c_uintmax_t_h_
 
 typedef
 #ifdef __UINTMAX_TYPE__

@@ -1,5 +1,5 @@
-#ifndef c_idtype_t_h_
-#define c_idtype_t_h_
+#ifndef _c_idtype_t_h_
+#define _c_idtype_t_h_
 
 typedef enum
 {

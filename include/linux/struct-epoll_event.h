@@ -1,5 +1,5 @@
-#ifndef c_linux_struct_epoll_event_h_
-#define c_linux_struct_epoll_event_h_
+#ifndef _linux_struct_epoll_event_h_
+#define _linux_struct_epoll_event_h_
 
 #include "c/uint32_t.h"
 

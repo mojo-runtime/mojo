@@ -1,5 +1,5 @@
-#ifndef c_uint64_t_h_
-#define c_uint64_t_h_
+#ifndef _c_uint64_t_h_
+#define _c_uint64_t_h_
 
 typedef
 #ifdef __UINT64_TYPE__

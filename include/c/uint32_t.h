@@ -1,5 +1,5 @@
-#ifndef c_uint32_t_h_
-#define c_uint32_t_h_
+#ifndef _c_uint32_t_h_
+#define _c_uint32_t_h_
 
 typedef
 #ifdef __UINT32_TYPE__

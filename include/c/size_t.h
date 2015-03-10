@@ -1,5 +1,5 @@
-#ifndef c_size_t_h_
-#define c_size_t_h_
+#ifndef _c_size_t_h_
+#define _c_size_t_h_
 
 typedef
 #ifdef __SIZE_TYPE__

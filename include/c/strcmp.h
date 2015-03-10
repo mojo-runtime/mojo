@@ -1,5 +1,5 @@
-#ifndef c_strcmp_h_
-#define c_strcmp_h_
+#ifndef _c_strcmp_h_
+#define _c_strcmp_h_
 
 #include "config/has_builtin_strcmp.h"
 

@@ -1,5 +1,5 @@
-#ifndef c_auxv_t_h_
-#define c_auxv_t_h_
+#ifndef _elf_auxv_t_h_
+#define _elf_auxv_t_h_
 
 typedef struct
 {

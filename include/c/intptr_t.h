@@ -1,5 +1,5 @@
-#ifndef c_intptr_t_h_
-#define c_intptr_t_h_
+#ifndef _c_intptr_t_h_
+#define _c_intptr_t_h_
 
 typedef
 #ifdef __INTPTR_TYPE__

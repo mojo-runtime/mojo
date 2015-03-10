@@ -1,5 +1,5 @@
-#ifndef c_Exit_h_
-#define c_Exit_h_
+#ifndef _c_Exit_h_
+#define _c_Exit_h_
 
 #if defined(__unix__)
 #  include "unix/_exit.h"

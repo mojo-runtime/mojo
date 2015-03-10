@@ -1,5 +1,5 @@
-#ifndef c_linux_x86_64_struct_user_desc_h_
-#define c_linux_x86_64_struct_user_desc_h_
+#ifndef _linux_x86_64_struct_user_desc_h_
+#define _linux_x86_64_struct_user_desc_h_
 
 #include "c/uint32_t.h"
 

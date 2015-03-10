@@ -1,5 +1,5 @@
-#ifndef c_uint_least32_t_h_
-#define c_uint_least32_t_h_
+#ifndef _c_uint_least32_t_h_
+#define _c_uint_least32_t_h_
 
 typedef
 #ifdef __UINT_LEAST32_TYPE__

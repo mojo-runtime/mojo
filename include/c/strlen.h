@@ -1,5 +1,5 @@
-#ifndef c_strlen_h_
-#define c_strlen_h_
+#ifndef _c_strlen_h_
+#define _c_strlen_h_
 
 #include "config/has_builtin_strlen.h"
 #include "size_t.h"

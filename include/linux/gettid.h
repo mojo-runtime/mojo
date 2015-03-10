@@ -1,5 +1,5 @@
-#ifndef c_linux_gettid_h_
-#define c_linux_gettid_h_
+#ifndef _linux_gettid_h_
+#define _linux_gettid_h_
 
 #include "c/SYS_gettid.h"
 #include "c/_c_nothrow.h"

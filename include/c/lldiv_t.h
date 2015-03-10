@@ -1,5 +1,5 @@
-#ifndef c_lldiv_t_h_
-#define c_lldiv_t_h_
+#ifndef _c_lldiv_t_h_
+#define _c_lldiv_t_h_
 
 // Minimum (POSIX) definition
 

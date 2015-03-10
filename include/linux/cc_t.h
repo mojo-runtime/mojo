@@ -1,5 +1,5 @@
-#ifndef c_linux_cc_t_h_
-#define c_linux_cc_t_h_
+#ifndef _linux_cc_t_h_
+#define _linux_cc_t_h_
 
 typedef unsigned char cc_t;
 

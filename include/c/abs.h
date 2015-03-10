@@ -1,5 +1,5 @@
-#ifndef c_abs_h_
-#define c_abs_h_
+#ifndef _c_abs_h_
+#define _c_abs_h_
 
 static
 int

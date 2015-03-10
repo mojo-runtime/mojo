@@ -1,5 +1,5 @@
-#ifndef elf_main_h_
-#define elf_main_h_
+#ifndef _elf_main_h_
+#define _elf_main_h_
 
 #include "unix/_exit.h"
 

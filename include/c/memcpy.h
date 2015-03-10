@@ -1,5 +1,5 @@
-#ifndef c_memcpy_h_
-#define c_memcpy_h_
+#ifndef _c_memcpy_h_
+#define _c_memcpy_h_
 
 #include "config/has_builtin_memcpy.h"
 

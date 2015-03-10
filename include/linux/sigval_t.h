@@ -1,5 +1,5 @@
-#ifndef c_linux_sigval_t_h_
-#define c_linux_sigval_t_h_
+#ifndef _linux_sigval_t_h_
+#define _linux_sigval_t_h_
 
 typedef union
 {

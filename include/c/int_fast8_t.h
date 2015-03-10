@@ -1,5 +1,5 @@
-#ifndef c_int_fast8_t_h_
-#define c_int_fast8_t_h_
+#ifndef _c_int_fast8_t_h_
+#define _c_int_fast8_t_h_
 
 typedef
 #ifdef __INT_FAST8_TYPE__

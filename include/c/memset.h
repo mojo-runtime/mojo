@@ -1,5 +1,5 @@
-#ifndef c_memset_h_
-#define c_memset_h_
+#ifndef _c_memset_h_
+#define _c_memset_h_
 
 #include "config/has_builtin_memset.h"
 

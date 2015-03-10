@@ -1,5 +1,5 @@
-#ifndef c_noreturn_h_
-#define c_noreturn_h_
+#ifndef _c_noreturn_h_
+#define _c_noreturn_h_
 
 #if !defined(__cplusplus)
 #  include "config/has_c_noreturn.h"

@@ -1,5 +1,5 @@
-#ifndef elf_Arguments_h_
-#define elf_Arguments_h_
+#ifndef _elf_Arguments_h_
+#define _elf_Arguments_h_
 
 typedef struct
 {

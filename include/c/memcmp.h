@@ -1,5 +1,5 @@
-#ifndef c_memcmp_h_
-#define c_memcmp_h_
+#ifndef _c_memcmp_h_
+#define _c_memcmp_h_
 
 #include "config/has_builtin_memcmp.h"
 
