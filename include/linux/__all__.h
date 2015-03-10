@@ -1,7 +1,3 @@
-#include "P_ALL.h"
-#include "P_PGID.h"
-#include "P_PID.h"
-
 #include "blkcnt_t.h"
 #include "blksize_t.h"
 #include "cc_t.h"
@@ -12,7 +8,6 @@
 #include "gettid.h"
 #include "gid_t.h"
 #include "id_t.h"
-#include "idtype_t.h"
 #include "ino_t.h"
 #include "mode_t.h"
 #include "off_t.h"

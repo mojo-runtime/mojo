@@ -413,6 +413,11 @@
 #include "div_t.h"
 #include "errno_t.h"
 #include "false.h"
+
+#if defined(__unix__)
+#  include "idtype_t.h"
+#endif
+
 #include "int8_t.h"
 #include "int16_t.h"
 #include "int32_t.h"
