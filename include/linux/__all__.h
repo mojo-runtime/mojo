@@ -150,11 +150,6 @@
 #include "SYS_waitid.h"
 #include "SYS_write.h"
 
-#include "TCGETS.h"
-#include "TCSETS.h"
-#include "TCSETSF.h"
-#include "TCSETSW.h"
-
 #include "WCONTINUED.h"
 #include "WEXITED.h"
 #include "WNOHANG.h"

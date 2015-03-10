@@ -160,6 +160,13 @@
 #  include "STDOUT_FILENO.h"
 #endif
 
+#if defined(__unix__)
+#  include "TCGETS.h"
+#  include "TCSETS.h"
+#  include "TCSETS.h"
+#  include "TCSETSW.h"
+#endif
+
 #include "UINT8_C.h"
 #include "UINT16_C.h"
 #include "UINT32_C.h"
