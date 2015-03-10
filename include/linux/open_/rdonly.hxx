@@ -1,7 +1,7 @@
 #ifndef linux_open_rdonly_hxx_
 #define linux_open_rdonly_hxx_
 
-#include "linux/O_RDONLY.h"
+#include "c/O_RDONLY.h"
 
 #include "linux/open.hxx"
 

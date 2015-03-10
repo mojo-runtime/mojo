@@ -1,7 +1,7 @@
 #ifndef linux_open_wronly_hxx_
 #define linux_open_wronly_hxx_
 
-#include "linux/O_WRONLY.h"
+#include "c/O_WRONLY.h"
 
 #include "linux/open.hxx"
 
