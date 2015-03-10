@@ -8,7 +8,7 @@
 #include "c/EINVAL.h"
 #include "c/EIO.h"
 #include "c/EISDIR.h"
-#include "linux/ELIBBAD.h"
+#include "c/ELIBBAD.h"
 #include "c/ELOOP.h"
 #include "c/EMFILE.h"
 #include "c/ENAMETOOLONG.h"
