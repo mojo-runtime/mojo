@@ -12,7 +12,7 @@
                        ? _c_static_cast(void, 0)                        \
                        : __assert_fail(#x, __FILE__, __LINE__, __PRETTY_FUNCTION__))
 #  elif (RUNTIME == RUNTIME_FREEBSD)
-#    include "__external/freebsd/__assert.h"
+#    include "__external/bsd/__assert.h"
 #    define assert(x) ((x)                                              \
                        ? _c_static_cast(void, 0)                        \
                        : __assert(__PRETTY_FUNCTION__, __FILE__, __LINE__, #x))
