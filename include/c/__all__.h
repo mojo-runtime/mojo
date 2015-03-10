@@ -140,6 +140,12 @@
 
 #include "SIZE_MAX.h"
 
+#if defined(__unix__)
+#  include "STDERR_FILENO.h"
+#  include "STDIN_FILENO.h"
+#  include "STDOUT_FILENO.h"
+#endif
+
 #include "UINT8_C.h"
 #include "UINT16_C.h"
 #include "UINT32_C.h"
