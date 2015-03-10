@@ -60,6 +60,21 @@
 #include "EILSEQ.h"
 #include "ERANGE.h"
 
+#if defined(__linux__)
+#  include "EPOLLERR.h"
+#  include "EPOLLET.h"
+#  include "EPOLLHUP.h"
+#  include "EPOLLIN.h"
+#  include "EPOLLONESHOT.h"
+#  include "EPOLLOUT.h"
+#  include "EPOLLPRI.h"
+#  include "EPOLLWAKEUP.h"
+#  include "EPOLL_CLOEXEC.h"
+#  include "EPOLL_CTL_ADD.h"
+#  include "EPOLL_CTL_DEL.h"
+#  include "EPOLL_CTL_MOD.h"
+#endif
+
 #include "EXIT_FAILURE.h"
 #include "EXIT_SUCCESS.h"
 
