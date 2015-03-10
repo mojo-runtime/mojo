@@ -1,13 +1,13 @@
-#ifndef EILSEQ
+#ifndef EAGAIN
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
-#    define EILSEQ 84
+#    define EAGAIN 11
 #  else
 #    error
 #  endif
 #elif defined(__FreeBSD__)
-#  define EILSEQ 86
+#  define EAGAIN 35
 #else
 #  error
 #endif

@@ -1,13 +1,13 @@
-#ifndef EILSEQ
+#ifndef EDESTADDRREQ
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
-#    define EILSEQ 84
+#    define EDESTADDRREQ 89
 #  else
 #    error
 #  endif
 #elif defined(__FreeBSD__)
-#  define EILSEQ 86
+#  define EDESTADDRREQ 39
 #else
 #  error
 #endif

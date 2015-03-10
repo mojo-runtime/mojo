@@ -56,9 +56,58 @@
 #  include "DT_UNKNOWN.h"
 #endif
 
+#if defined(__unix__)
+#  include "E2BIG.h"
+#  include "EACCES.h"
+#  include "EAGAIN.h"
+#  include "EBADF.h"
+#  include "EBUSY.h"
+#  include "ECHILD.h"
+#  include "EDEADLK.h"
+#  include "EDESTADDRREQ.h"
+#endif
 #include "EDOM.h"
+#if defined(__unix__)
+#  include "EDQUOT.h"
+#  include "EEXIST.h"
+#  include "EFAULT.h"
+#  include "EFBIG.h"
+#endif
 #include "EILSEQ.h"
+#if defined(__unix__)
+#  include "EINTR.h"
+#  include "EIO.h"
+#  include "EISDIR.h"
+#  include "ELOOP.h"
+#  include "EMFILE.h"
+#  include "EMLINK.h"
+#  include "ENAMETOOLONG.h"
+#  include "ENFILE.h"
+#  include "ENODEV.h"
+#  include "ENOENT.h"
+#  include "ENOEXEC.h"
+#  include "ENOLCK.h"
+#  include "ENOMEM.h"
+#  include "ENOSPC.h"
+#  include "ENOSYS.h"
+#  include "ENOTBLK.h"
+#  include "ENOTDIR.h"
+#  include "ENOTEMPTY.h"
+#  include "ENOTTY.h"
+#  include "ENXIO.h"
+#  include "EOPNOTSUPP.h"
+#  include "EOVERFLOW.h"
+#  include "EPERM.h"
+#endif
 #include "ERANGE.h"
+#if defined(__unix__)
+#  include "EROFS.h"
+#  include "ESPIPE.h"
+#  include "ESRCH.h"
+#  include "ETXTBSY.h"
+#  include "EWOULDBLOCK.h"
+#  include "EXDEV.h"
+#endif
 
 #if defined(__linux__)
 #  include "EPOLLERR.h"

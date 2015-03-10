@@ -1,13 +1,13 @@
-#ifndef EILSEQ
+#ifndef EOPNOTSUPP
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
-#    define EILSEQ 84
+#    define EOPNOTSUPP 95
 #  else
 #    error
 #  endif
 #elif defined(__FreeBSD__)
-#  define EILSEQ 86
+#  define EOPNOTSUPP 45
 #else
 #  error
 #endif

@@ -1,7 +1,7 @@
-#ifndef EDOM
+#ifndef EBUSY
 
 #if defined(__linux__) || defined(__FreeBSD__)
-#  define EDOM 33
+#  define EBUSY 16
 #else
 #  error
 #endif

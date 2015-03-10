@@ -1,7 +1,7 @@
-#ifndef EDOM
+#ifndef ENOTDIR
 
 #if defined(__linux__) || defined(__FreeBSD__)
-#  define EDOM 33
+#  define ENOTDIR 20
 #else
 #  error
 #endif

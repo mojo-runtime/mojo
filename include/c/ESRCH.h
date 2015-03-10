@@ -1,7 +1,7 @@
-#ifndef EDOM
+#ifndef ESRCH
 
 #if defined(__linux__) || defined(__FreeBSD__)
-#  define EDOM 33
+#  define ESRCH 3
 #else
 #  error
 #endif

@@ -1,7 +1,7 @@
-#ifndef EDOM
+#ifndef EMLINK
 
 #if defined(__linux__) || defined(__FreeBSD__)
-#  define EDOM 33
+#  define EMLINK 31
 #else
 #  error
 #endif

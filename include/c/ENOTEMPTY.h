@@ -1,13 +1,13 @@
-#ifndef EILSEQ
+#ifndef ENOTEMPTY
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
-#    define EILSEQ 84
+#    define ENOTEMPTY 39
 #  else
 #    error
 #  endif
 #elif defined(__FreeBSD__)
-#  define EILSEQ 86
+#  define ENOTEMPTY 66
 #else
 #  error
 #endif

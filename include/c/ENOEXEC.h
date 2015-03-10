@@ -1,7 +1,7 @@
-#ifndef EDOM
+#ifndef ENOEXEC
 
 #if defined(__linux__) || defined(__FreeBSD__)
-#  define EDOM 33
+#  define ENOEXEC 8
 #else
 #  error
 #endif

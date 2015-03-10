@@ -1,7 +1,8 @@
-#ifndef EDOM
+#ifndef EWOULDBLOCK
 
 #if defined(__linux__) || defined(__FreeBSD__)
-#  define EDOM 33
+#  include "EAGAIN.h"
+#  define EWOULDBLOCK EAGAIN
 #else
 #  error
 #endif

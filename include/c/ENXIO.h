@@ -1,7 +1,7 @@
-#ifndef EDOM
+#ifndef ENXIO
 
 #if defined(__linux__) || defined(__FreeBSD__)
-#  define EDOM 33
+#  define ENXIO 6
 #else
 #  error
 #endif

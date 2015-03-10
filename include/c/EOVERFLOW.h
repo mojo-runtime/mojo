@@ -1,13 +1,13 @@
-#ifndef EILSEQ
+#ifndef EOVERFLOW
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
-#    define EILSEQ 84
+#    define EOVERFLOW 75
 #  else
 #    error
 #  endif
 #elif defined(__FreeBSD__)
-#  define EILSEQ 86
+#  define EOVERFLOW 84
 #else
 #  error
 #endif

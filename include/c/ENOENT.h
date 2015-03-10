@@ -1,7 +1,7 @@
-#ifndef EDOM
+#ifndef ENOENT
 
 #if defined(__linux__) || defined(__FreeBSD__)
-#  define EDOM 33
+#  define ENOENT 2
 #else
 #  error
 #endif

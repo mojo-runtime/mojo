@@ -1,7 +1,7 @@
-#ifndef EDOM
+#ifndef EINTR
 
 #if defined(__linux__) || defined(__FreeBSD__)
-#  define EDOM 33
+#  define EINTR 4
 #else
 #  error
 #endif

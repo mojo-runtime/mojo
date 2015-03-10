@@ -1,13 +1,13 @@
-#ifndef EILSEQ
+#ifndef ELOOP
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
-#    define EILSEQ 84
+#    define ELOOP 40
 #  else
 #    error
 #  endif
 #elif defined(__FreeBSD__)
-#  define EILSEQ 86
+#  define ELOOP 62
 #else
 #  error
 #endif

@@ -1,13 +1,13 @@
-#ifndef EILSEQ
+#ifndef ENOSYS
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
-#    define EILSEQ 84
+#    define ENOSYS 38
 #  else
 #    error
 #  endif
 #elif defined(__FreeBSD__)
-#  define EILSEQ 86
+#  define ENOSYS 78
 #else
 #  error
 #endif
