@@ -124,7 +124,15 @@
 #  include "MAP_SHARED.h"
 #endif
 
+#if defined(__unix__)
+#  include "NAME_MAX.h"
+#endif
+
 #include "NULL.h"
+
+#if defined(__unix__)
+#  include "PATH_MAX.h"
+#endif
 
 #if defined(__unix__)
 #  include "PROT_EXEC.h"

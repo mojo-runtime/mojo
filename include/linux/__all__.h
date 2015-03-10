@@ -57,8 +57,6 @@
 #include "EWOULDBLOCK.h"
 #include "EXDEV.h"
 
-#include "NAME_MAX.h"
-
 #include "NCCS.h"
 
 #include "O_CLOEXEC.h"
@@ -67,8 +65,6 @@
 #include "O_RDONLY.h"
 #include "O_RDWR.h"
 #include "O_WRONLY.h"
-
-#include "PATH_MAX.h"
 
 #include "POLLERR.h"
 #include "POLLHUP.h"
