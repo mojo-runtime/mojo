@@ -1,15 +1,15 @@
 #ifndef external_bsd_assert_h_
 #define external_bsd_assert_h_
 
-//#include "compat/_Nothrow.h"
-#include "compat/_Noreturn.h"
+#include "c/_c_noreturn.h"
+//#include "c/_c_nothrow.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-_Noreturn
-//_Nothrow
+_c_noreturn
+//_c_nothrow
 extern
 void
 __assert(const char* function, const char* file, unsigned int line, const char* expression);

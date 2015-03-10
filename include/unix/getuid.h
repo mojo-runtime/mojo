@@ -1,14 +1,14 @@
 #ifndef unix_getuid_h_
 #define unix_getuid_h_
 
-#include "compat/_Nothrow.h"
+#include "c/_c_nothrow.h"
 
 #include "SYS_getuid.h"
 #include "uid_t.h"
 #include "_syscall_0.h"
 #include "_syscall_Result_ok.h"
 
-_Nothrow
+_c_nothrow
 static
 uid_t
 getuid()

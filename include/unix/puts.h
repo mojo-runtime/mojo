@@ -5,15 +5,15 @@
 #include "c/alloca.h"
 #include "c/memcpy.h"
 #include "c/strlen.h"
-#include "compat/_Nothrow.h"
-#include "compat/_c_reinterpret_cast.h"
+#include "c/_c_nothrow.h"
+#include "c/_c_reinterpret_cast.h"
 
 #include "STDOUT_FILENO.h"
 #include "SYS_write.h"
 #include "_syscall_3.h"
 #include "_syscall_Result_is_error.h"
 
-_Nothrow
+_c_nothrow
 static
 int
 puts(const char* string)

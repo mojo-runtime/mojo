@@ -2,14 +2,14 @@
 #define unix_exit_h_
 
 #include "builtin/__builtin_unreachable.h"
-#include "compat/_Nothrow.h"
-#include "compat/_Noreturn.h"
+#include "c/_c_noreturn.h"
+#include "c/_c_nothrow.h"
 
 #include "SYS_exit.h"
 #include "_syscall_1.h"
 
-_Noreturn
-_Nothrow
+_c_noreturn
+_c_nothrow
 static
 void
 _exit(int status)

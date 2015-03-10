@@ -7,8 +7,8 @@
 #  error
 #endif
 
-_Noreturn
-_Nothrow
+_c_noreturn
+_c_nothrow
 static inline
 void
 _Exit(int exit_code)

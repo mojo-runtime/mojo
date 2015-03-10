@@ -4,7 +4,7 @@
 #  include "builtin/__builtin_assume.h"
 #  define assert __builtin_assume
 #else
-#  include "compat/_c_static_cast.h"
+#  include "c/_c_static_cast.h"
 #  include "config/RUNTIME.h"
 #  if (RUNTIME == RUNTIME_GLIBC)
 #    include "__external/glibc/__assert_fail.h"
