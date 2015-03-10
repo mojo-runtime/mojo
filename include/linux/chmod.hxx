@@ -12,7 +12,7 @@
 #include "c/EPERM.h"
 #include "c/EROFS.h"
 #include "c/SYS_chmod.h"
-#include "linux/mode_t.h"
+#include "c/mode_t.h"
 #include "linux/_syscall_2.h"
 
 #include "linux/Result.hxx"

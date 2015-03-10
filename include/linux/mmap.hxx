@@ -1,8 +1,6 @@
 #ifndef linux_mmap_hxx_
 #define linux_mmap_hxx_
 
-#include "c/size_t.h"
-
 #include "c/EACCES.h"
 #include "c/EAGAIN.h"
 #include "c/EBADF.h"
@@ -14,7 +12,8 @@
 #include "c/EPERM.h"
 #include "c/ETXTBSY.h"
 #include "c/SYS_mmap.h"
-#include "linux/off_t.h"
+#include "c/off_t.h"
+#include "c/size_t.h"
 #include "linux/_syscall_6.h"
 
 #include "linux/Result.hxx"

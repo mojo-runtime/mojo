@@ -3,7 +3,7 @@
 
 #include "linux/_syscall_0.h"
 #include "c/SYS_getuid.h"
-#include "linux/uid_t.h"
+#include "c/uid_t.h"
 
 namespace linux {
 

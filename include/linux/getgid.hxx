@@ -3,7 +3,7 @@
 
 #include "linux/_syscall_0.h"
 #include "c/SYS_getgid.h"
-#include "linux/gid_t.h"
+#include "c/gid_t.h"
 
 namespace linux {
 

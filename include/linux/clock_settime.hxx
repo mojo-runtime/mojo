@@ -6,8 +6,8 @@
 #include "c/EINVAL.h"
 #include "c/EPERM.h"
 #include "c/SYS_clock_settime.h"
-#include "linux/clockid_t.h"
-#include "linux/struct-timespec.h"
+#include "c/clockid_t.h"
+#include "c/struct-timespec.h"
 
 #include "linux/Result.hxx"
 

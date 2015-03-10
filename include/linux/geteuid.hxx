@@ -2,7 +2,7 @@
 #define linux_geteuid_hxx_
 
 #include "c/SYS_geteuid.h"
-#include "linux/uid_t.h"
+#include "c/uid_t.h"
 
 #include "linux/_syscall_0.h"
 

@@ -7,7 +7,7 @@
 #include "c/ENOMEM.h"
 #include "c/EPERM.h"
 #include "c/SYS_clone.h"
-#include "linux/pid_t.h"
+#include "c/pid_t.h"
 #include "linux/struct-pt_regs.h"
 
 #include "linux/Result.hxx"

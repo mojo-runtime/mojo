@@ -6,7 +6,7 @@
 #include "c/ENOMEM.h"
 #include "c/ENOSYS.h"
 #include "c/SYS_fork.h"
-#include "linux/pid_t.h"
+#include "c/pid_t.h"
 
 #include "linux/Result.hxx"
 

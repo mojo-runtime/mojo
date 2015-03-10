@@ -12,8 +12,8 @@
 #include "c/EPERM.h"
 #include "c/EROFS.h"
 #include "c/SYS_chown.h"
-#include "linux/gid_t.h"
-#include "linux/uid_t.h"
+#include "c/gid_t.h"
+#include "c/uid_t.h"
 
 #include "linux/Result.hxx"
 

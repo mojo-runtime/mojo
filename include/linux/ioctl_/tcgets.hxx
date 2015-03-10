@@ -2,7 +2,7 @@
 #define linux_ioctl_tcgets_hxx_
 
 #include "c/TCGETS.h"
-#include "linux/struct-termios.h"
+#include "c/struct-termios.h"
 
 #include "linux/ioctl.hxx"
 

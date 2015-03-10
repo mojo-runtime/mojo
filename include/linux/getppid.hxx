@@ -3,7 +3,7 @@
 
 #include "linux/_syscall_0.h"
 #include "c/SYS_getppid.h"
-#include "linux/pid_t.h"
+#include "c/pid_t.h"
 
 namespace linux {
 

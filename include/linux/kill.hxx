@@ -6,7 +6,7 @@
 #include "c/EPERM.h"
 #include "c/ESRCH.h"
 #include "c/SYS_kill.h"
-#include "linux/pid_t.h"
+#include "c/pid_t.h"
 
 #include "linux/Result.hxx"
 

@@ -2,7 +2,7 @@
 #define linux_ioctl_tcsets_hxx_
 
 #include "c/TCSETS.h"
-#include "linux/struct-termios.h"
+#include "c/struct-termios.h"
 
 #include "linux/ioctl.hxx"
 
