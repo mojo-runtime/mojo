@@ -57,12 +57,6 @@
 #include "EWOULDBLOCK.h"
 #include "EXDEV.h"
 
-#include "POLLERR.h"
-#include "POLLHUP.h"
-#include "POLLIN.h"
-#include "POLLOUT.h"
-#include "POLLPRI.h"
-
 #include "P_ALL.h"
 #include "P_PGID.h"
 #include "P_PID.h"

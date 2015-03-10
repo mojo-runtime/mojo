@@ -148,6 +148,14 @@
 #endif
 
 #if defined(__unix__)
+#  include "POLLERR.h"
+#  include "POLLHUP.h"
+#  include "POLLIN.h"
+#  include "POLLOUT.h"
+#  include "POLLPRI.h"
+#endif
+
+#if defined(__unix__)
 #  include "PROT_EXEC.h"
 #  include "PROT_NONE.h"
 #  include "PROT_READ.h"
