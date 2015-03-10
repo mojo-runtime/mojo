@@ -131,6 +131,15 @@
 #include "NULL.h"
 
 #if defined(__unix__)
+#  include "O_CLOEXEC.h"
+#  include "O_CREAT.h"
+#  include "O_DIRECTORY.h"
+#  include "O_RDONLY.h"
+#  include "O_RDWR.h"
+#  include "O_WRONLY.h"
+#endif
+
+#if defined(__unix__)
 #  include "PATH_MAX.h"
 #endif
 

@@ -59,13 +59,6 @@
 
 #include "NCCS.h"
 
-#include "O_CLOEXEC.h"
-#include "O_CREAT.h"
-#include "O_DIRECTORY.h"
-#include "O_RDONLY.h"
-#include "O_RDWR.h"
-#include "O_WRONLY.h"
-
 #include "POLLERR.h"
 #include "POLLHUP.h"
 #include "POLLIN.h"
