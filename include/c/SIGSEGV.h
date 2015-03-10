@@ -1,7 +1,9 @@
-#if defined(__linux__)
-#  include "linux/SIGSEGV.h"
-#elif defined(__FreeBSD__)
-#  include "freebsd/SIGSEGV.h"
+#ifndef SIGSEGV
+
+#if defined(__linux__) || defined(__FreeBSD__)
+#  define SIGSEGV 11
 #else
 #  error
+#endif
+
 #endif

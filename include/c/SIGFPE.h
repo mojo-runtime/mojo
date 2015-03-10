@@ -1,7 +1,9 @@
-#if defined(__linux__)
-#  include "linux/SIGFPE.h"
-#elif defined(__FreeBSD__)
-#  include "freebsd/SIGFPE.h"
+#ifndef SIGFPE
+
+#if defined(__linux__) || defined(__FreeBSD__)
+#  define SIGFPE 8
 #else
 #  error
+#endif
+
 #endif

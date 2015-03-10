@@ -1,7 +1,9 @@
-#if defined(__linux__)
-#  include "linux/SIGABRT.h"
-#elif defined(__FreeBSD__)
-#  include "freebsd/SIGABRT.h"
+#ifndef SIGABRT
+
+#if defined(__linux__) || defined(__FreeBSD__)
+#  define SIGABRT 6
 #else
 #  error
+#endif
+
 #endif

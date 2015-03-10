@@ -1,7 +1,9 @@
-#if defined(__linux__)
-#  include "linux/SIGILL.h"
-#elif defined(__FreeBSD__)
-#  include "freebsd/SIGILL.h"
+#ifndef SIGILL
+
+#if defined(__linux__) || defined(__FreeBSD__)
+#  define SIGILL 4
 #else
 #  error
+#endif
+
 #endif

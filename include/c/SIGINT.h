@@ -1,7 +1,9 @@
-#if defined(__linux__)
-#  include "linux/SIGINT.h"
-#elif defined(__FreeBSD__)
-#  include "freebsd/SIGINT.h"
+#ifndef SIGINT
+
+#if defined(__linux__) || defined(__FreeBSD__)
+#  define SIGINT 2
 #else
 #  error
+#endif
+
 #endif

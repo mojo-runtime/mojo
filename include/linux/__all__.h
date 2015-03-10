@@ -67,18 +67,12 @@
 #include "P_PGID.h"
 #include "P_PID.h"
 
-#include "SIGABRT.h"
 #include "SIGALRM.h"
 #include "SIGCHLD.h"
-#include "SIGFPE.h"
 #include "SIGHUP.h"
-#include "SIGILL.h"
-#include "SIGINT.h"
 #include "SIGKILL.h"
 #include "SIGPIPE.h"
 #include "SIGQUIT.h"
-#include "SIGSEGV.h"
-#include "SIGTERM.h"
 #include "SIGTRAP.h"
 
 #include "SYS_chdir.h"

@@ -1,7 +1,9 @@
-#if defined(__linux__)
-#  include "linux/SIGTERM.h"
-#elif defined(__FreeBSD__)
-#  include "freebsd/SIGTERM.h"
+#ifndef SIGTERM
+
+#if defined(__linux__) || defined(__FreeBSD__)
+#  define SIGTERM 15
 #else
 #  error
+#endif
+
 #endif
