@@ -3,11 +3,11 @@
 
 #include "c/size_t.h"
 
-#include "linux/EBADF.h"
-#include "linux/EFAULT.h"
-#include "linux/EINVAL.h"
-#include "linux/ENOENT.h"
-#include "linux/ENOTDIR.h"
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/ENOENT.h"
+#include "c/ENOTDIR.h"
 #include "c/SYS_getdents.h"
 #include "linux/struct-linux_dirent.h"
 #include "linux/_syscall_3.h"

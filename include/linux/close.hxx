@@ -2,9 +2,9 @@
 #define linux_close_hxx_
 
 #include "linux/_syscall_1.h"
-#include "linux/EBADF.h"
-#include "linux/EINTR.h"
-#include "linux/EIO.h"
+#include "c/EBADF.h"
+#include "c/EINTR.h"
+#include "c/EIO.h"
 #include "c/SYS_close.h"
 
 #include "linux/Result.hxx"

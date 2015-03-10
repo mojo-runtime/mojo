@@ -2,10 +2,10 @@
 #define linux_pipe2_hxx_
 
 #include "linux/_syscall_2.h"
-#include "linux/EFAULT.h"
-#include "linux/EINVAL.h"
-#include "linux/EMFILE.h"
-#include "linux/ENFILE.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/EMFILE.h"
+#include "c/ENFILE.h"
 #include "c/SYS_pipe2.h"
 
 #include "linux/Result.hxx"

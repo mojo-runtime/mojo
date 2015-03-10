@@ -3,7 +3,7 @@
 
 #include "c/size_t.h"
 
-#include "linux/EINVAL.h"
+#include "c/EINVAL.h"
 #include "c/SYS_munmap.h"
 #include "linux/_syscall_2.h"
 

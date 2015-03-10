@@ -3,13 +3,13 @@
 
 #include "c/size_t.h"
 
-#include "linux/EACCES.h"
-#include "linux/EFAULT.h"
-#include "linux/EINVAL.h"
-#include "linux/ENAMETOOLONG.h"
-#include "linux/ENOENT.h"
-#include "linux/ERANGE.h"
-#include "linux/SYS_getcwd.h"
+#include "c/EACCES.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ERANGE.h"
+#include "c/SYS_getcwd.h"
 #include "linux/_syscall_2.h"
 
 #include "linux/Result.hxx"

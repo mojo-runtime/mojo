@@ -2,10 +2,10 @@
 #define linux_tgkill_hxx_
 
 #include "linux/_syscall_3.h"
-#include "linux/EINVAL.h"
-#include "linux/EPERM.h"
-#include "linux/ESRCH.h"
-#include "linux/SYS_tgkill.h"
+#include "c/EINVAL.h"
+#include "c/EPERM.h"
+#include "c/ESRCH.h"
+#include "c/SYS_tgkill.h"
 
 #include "linux/Result.hxx"
 

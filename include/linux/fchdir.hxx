@@ -2,8 +2,8 @@
 #define linux_fchdir_hxx_
 
 #include "linux/_syscall_1.h"
-#include "linux/EACCES.h"
-#include "linux/EBADF.h"
+#include "c/EACCES.h"
+#include "c/EBADF.h"
 #include "c/SYS_fchdir.h"
 
 #include "linux/Result.hxx"

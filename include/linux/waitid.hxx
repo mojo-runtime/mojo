@@ -2,10 +2,10 @@
 #define linux_waitid_hxx_
 
 #include "linux/_syscall_5.h"
-#include "linux/ECHILD.h"
-#include "linux/EINTR.h"
-#include "linux/EINVAL.h"
-#include "linux/SYS_waitid.h"
+#include "c/ECHILD.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/SYS_waitid.h"
 #include "linux/id_t.h"
 #include "linux/idtype_t.h"
 #include "linux/pid_t.h"

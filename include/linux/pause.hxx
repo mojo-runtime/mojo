@@ -2,7 +2,7 @@
 #define linux_pause_hxx_
 
 #include "linux/_syscall_0.h"
-#include "linux/SYS_pause.h"
+#include "c/SYS_pause.h"
 
 namespace linux {
 

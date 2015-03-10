@@ -2,9 +2,9 @@
 #define linux_fork_hxx_
 
 #include "linux/_syscall_0.h"
-#include "linux/EAGAIN.h"
-#include "linux/ENOMEM.h"
-#include "linux/ENOSYS.h"
+#include "c/EAGAIN.h"
+#include "c/ENOMEM.h"
+#include "c/ENOSYS.h"
 #include "c/SYS_fork.h"
 #include "linux/pid_t.h"
 

@@ -1,14 +1,14 @@
 #ifndef linux_chdir_hxx_
 #define linux_chdir_hxx_
 
-#include "linux/EACCES.h"
-#include "linux/EFAULT.h"
-#include "linux/EIO.h"
-#include "linux/ELOOP.h"
-#include "linux/ENAMETOOLONG.h"
-#include "linux/ENOENT.h"
-#include "linux/ENOMEM.h"
-#include "linux/ENOTDIR.h"
+#include "c/EACCES.h"
+#include "c/EFAULT.h"
+#include "c/EIO.h"
+#include "c/ELOOP.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ENOMEM.h"
+#include "c/ENOTDIR.h"
 #include "c/SYS_chdir.h"
 #include "linux/_syscall_1.h"
 

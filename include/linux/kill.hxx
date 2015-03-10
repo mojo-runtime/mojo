@@ -2,9 +2,9 @@
 #define linux_kill_hxx_
 
 #include "linux/_syscall_2.h"
-#include "linux/EINVAL.h"
-#include "linux/EPERM.h"
-#include "linux/ESRCH.h"
+#include "c/EINVAL.h"
+#include "c/EPERM.h"
+#include "c/ESRCH.h"
 #include "c/SYS_kill.h"
 #include "linux/pid_t.h"
 

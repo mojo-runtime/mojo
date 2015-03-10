@@ -3,13 +3,13 @@
 
 #include "c/size_t.h"
 
-#include "linux/EAGAIN.h"
-#include "linux/EBADF.h"
-#include "linux/EFAULT.h"
-#include "linux/EINTR.h"
-#include "linux/EINVAL.h"
-#include "linux/EIO.h"
-#include "linux/EISDIR.h"
+#include "c/EAGAIN.h"
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/EIO.h"
+#include "c/EISDIR.h"
 #include "c/SYS_read.h"
 #include "linux/_syscall_3.h"
 

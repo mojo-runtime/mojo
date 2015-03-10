@@ -2,7 +2,7 @@
 #define linux_exit_group_hxx_
 
 #include "linux/_syscall_1.h"
-#include "linux/SYS_exit_group.h"
+#include "c/SYS_exit_group.h"
 
 namespace linux {
 

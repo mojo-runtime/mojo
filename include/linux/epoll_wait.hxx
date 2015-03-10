@@ -2,11 +2,11 @@
 #define linux_epoll_wait_hxx_
 
 #include "linux/_syscall_4.h"
-#include "linux/EBADF.h"
-#include "linux/EFAULT.h"
-#include "linux/EINTR.h"
-#include "linux/EINVAL.h"
-#include "linux/SYS_epoll_wait.h"
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/SYS_epoll_wait.h"
 #include "linux/struct-epoll_event.h"
 
 #include "linux/Result.hxx"

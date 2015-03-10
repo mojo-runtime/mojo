@@ -2,14 +2,14 @@
 #define linux_stat_hxx_
 
 #include "linux/_syscall_2.h"
-#include "linux/EACCES.h"
-#include "linux/EFAULT.h"
-#include "linux/ELOOP.h"
-#include "linux/ENAMETOOLONG.h"
-#include "linux/ENOENT.h"
-#include "linux/ENOMEM.h"
-#include "linux/ENOTDIR.h"
-#include "linux/EOVERFLOW.h"
+#include "c/EACCES.h"
+#include "c/EFAULT.h"
+#include "c/ELOOP.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ENOMEM.h"
+#include "c/ENOTDIR.h"
+#include "c/EOVERFLOW.h"
 #include "c/SYS_stat.h"
 #include "linux/struct-stat.h"
 

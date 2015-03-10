@@ -2,12 +2,12 @@
 #define linux_dup3_hxx_
 
 #include "linux/_syscall_3.h"
-#include "linux/EBADF.h"
-#include "linux/EBUSY.h"
-#include "linux/EINTR.h"
-#include "linux/EINVAL.h"
-#include "linux/EMFILE.h"
-#include "linux/SYS_dup3.h"
+#include "c/EBADF.h"
+#include "c/EBUSY.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/EMFILE.h"
+#include "c/SYS_dup3.h"
 
 #include "linux/Result.hxx"
 

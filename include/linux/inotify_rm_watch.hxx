@@ -2,9 +2,9 @@
 #define linux_inotify_rm_watch_hxx_
 
 #include "linux/_syscall_2.h"
-#include "linux/EBADF.h"
-#include "linux/EINVAL.h"
-#include "linux/SYS_inotify_rm_watch.h"
+#include "c/EBADF.h"
+#include "c/EINVAL.h"
+#include "c/SYS_inotify_rm_watch.h"
 
 #include "linux/Result.hxx"
 

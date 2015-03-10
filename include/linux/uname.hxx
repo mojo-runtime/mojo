@@ -2,8 +2,8 @@
 #define linux_uname_hxx_
 
 #include "linux/_syscall_1.h"
-#include "linux/EFAULT.h"
-#include "linux/SYS_uname.h"
+#include "c/EFAULT.h"
+#include "c/SYS_uname.h"
 #include "linux/struct-utsname.h"
 
 #include "linux/Result.hxx"

@@ -2,10 +2,10 @@
 #define linux_clock_nanosleep_hxx_
 
 #include "linux/_syscall_4.h"
-#include "linux/EFAULT.h"
-#include "linux/EINTR.h"
-#include "linux/EINVAL.h"
-#include "linux/SYS_clock_nanosleep.h"
+#include "c/EFAULT.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/SYS_clock_nanosleep.h"
 #include "linux/clockid_t.h"
 #include "linux/struct-timespec.h"
 

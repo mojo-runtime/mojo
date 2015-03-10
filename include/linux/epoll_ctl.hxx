@@ -2,14 +2,14 @@
 #define linux_epoll_ctl_hxx_
 
 #include "linux/_syscall_4.h"
-#include "linux/EBADF.h"
-#include "linux/EEXIST.h"
-#include "linux/EINVAL.h"
-#include "linux/ENOENT.h"
-#include "linux/ENOMEM.h"
-#include "linux/ENOSPC.h"
-#include "linux/EPERM.h"
-#include "linux/SYS_epoll_ctl.h"
+#include "c/EBADF.h"
+#include "c/EEXIST.h"
+#include "c/EINVAL.h"
+#include "c/ENOENT.h"
+#include "c/ENOMEM.h"
+#include "c/ENOSPC.h"
+#include "c/EPERM.h"
+#include "c/SYS_epoll_ctl.h"
 #include "linux/struct-epoll_event.h"
 
 #include "linux/Result.hxx"

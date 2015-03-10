@@ -2,10 +2,10 @@
 #define linux_set_thread_area_hxx_
 
 #include "linux/_syscall_1.h"
-#include "linux/EFAULT.h"
-#include "linux/EINVAL.h"
-#include "linux/ESRCH.h"
-#include "linux/SYS_set_thread_area.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/ESRCH.h"
+#include "c/SYS_set_thread_area.h"
 #include "linux/struct-user_desc.h"
 
 #include "linux/Result.hxx"

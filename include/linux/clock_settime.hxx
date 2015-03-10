@@ -2,9 +2,9 @@
 #define linux_clock_settime_hxx_
 
 #include "linux/_syscall_2.h"
-#include "linux/EFAULT.h"
-#include "linux/EINVAL.h"
-#include "linux/EPERM.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/EPERM.h"
 #include "c/SYS_clock_settime.h"
 #include "linux/clockid_t.h"
 #include "linux/struct-timespec.h"

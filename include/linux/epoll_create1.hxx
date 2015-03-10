@@ -2,11 +2,11 @@
 #define linux_epoll_create1_hxx_
 
 #include "linux/_syscall_1.h"
-#include "linux/EINVAL.h"
-#include "linux/EMFILE.h"
-#include "linux/ENFILE.h"
-#include "linux/ENOMEM.h"
-#include "linux/SYS_epoll_create1.h"
+#include "c/EINVAL.h"
+#include "c/EMFILE.h"
+#include "c/ENFILE.h"
+#include "c/ENOMEM.h"
+#include "c/SYS_epoll_create1.h"
 
 #include "linux/Result.hxx"
 

@@ -2,11 +2,11 @@
 #define linux_clone_hxx_
 
 #include "linux/_syscall_5.h"
-#include "linux/EAGAIN.h"
-#include "linux/EINVAL.h"
-#include "linux/ENOMEM.h"
-#include "linux/EPERM.h"
-#include "linux/SYS_clone.h"
+#include "c/EAGAIN.h"
+#include "c/EINVAL.h"
+#include "c/ENOMEM.h"
+#include "c/EPERM.h"
+#include "c/SYS_clone.h"
 #include "linux/pid_t.h"
 #include "linux/struct-pt_regs.h"
 

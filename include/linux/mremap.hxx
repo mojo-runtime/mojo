@@ -3,11 +3,11 @@
 
 #include "c/size_t.h"
 
-#include "linux/EAGAIN.h"
-#include "linux/EFAULT.h"
-#include "linux/EINVAL.h"
-#include "linux/ENOMEM.h"
-#include "linux/SYS_mremap.h"
+#include "c/EAGAIN.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/ENOMEM.h"
+#include "c/SYS_mremap.h"
 #include "linux/_syscall_4.h"
 #include "linux/_syscall_5.h"
 

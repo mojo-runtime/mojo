@@ -2,10 +2,10 @@
 #define linux_ioctl_hxx_
 
 #include "linux/_syscall_3.h"
-#include "linux/EBADF.h"
-#include "linux/EFAULT.h"
-#include "linux/EINVAL.h"
-#include "linux/ENOTTY.h"
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/ENOTTY.h"
 #include "c/SYS_ioctl.h"
 
 #include "linux/Result.hxx"

@@ -2,10 +2,10 @@
 #define linux_fstat_hxx_
 
 #include "linux/_syscall_2.h"
-#include "linux/EBADF.h"
-#include "linux/EFAULT.h"
-#include "linux/ENOMEM.h"
-#include "linux/EOVERFLOW.h"
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/ENOMEM.h"
+#include "c/EOVERFLOW.h"
 #include "c/SYS_fstat.h"
 #include "linux/struct-stat.h"
 
