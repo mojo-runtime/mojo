@@ -58,7 +58,11 @@
 #include "__UINT32_TYPE__.h"
 #include "__UINT64_TYPE__.h"
 
-#include "__builtin_addressof.h"
+#if has_builtin_addressof || !defined(__cplusplus)
+#  include "__builtin_addressof.h"
+#else
+#  warning "__builtin_addressof: not implemented"
+#endif
 #include "__builtin_assume.h"
 #include "__builtin_assume_aligned.h"
 #include "__builtin_bswap32.h"
