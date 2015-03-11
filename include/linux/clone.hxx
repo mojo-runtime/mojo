@@ -8,7 +8,7 @@
 #include "c/EPERM.h"
 #include "c/SYS_clone.h"
 #include "c/pid_t.h"
-#include "linux/struct-pt_regs.h"
+#include "c/struct-pt_regs.h"
 
 #include "linux/Result.hxx"
 
