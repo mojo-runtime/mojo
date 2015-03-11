@@ -6,7 +6,7 @@
 #include "c/ENOMEM.h"
 #include "c/EOVERFLOW.h"
 #include "c/SYS_fstat.h"
-#include "linux/struct-stat.h"
+#include "c/struct-stat.h"
 
 #include "Result.hxx"
 #include "__call-2.hxx"
