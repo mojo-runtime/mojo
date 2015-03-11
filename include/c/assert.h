@@ -1,7 +1,7 @@
 #ifndef assert
 
 #if defined(NDEBUG)
-#  include "builtin/__builtin_assume.h"
+#  include "compat/__builtin_assume.h"
 #  define assert __builtin_assume
 #else
 #  include "c/_c_static_cast.h"

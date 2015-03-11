@@ -1,7 +1,7 @@
 #ifndef _c_exit_h_
 #define _c_exit_h_
 
-#include "builtin/__builtin_unreachable.h"
+#include "compat/__builtin_unreachable.h"
 #include "c/_c_noreturn.h"
 #include "c/_c_nothrow.h"
 

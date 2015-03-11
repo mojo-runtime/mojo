@@ -43,3 +43,26 @@
 
 #include "_has_clang_minor.h"
 #include "_has_gnuc_minor.h"
+
+#include "__INT8_TYPE__.h"
+#include "__INT16_TYPE__.h"
+#include "__INT32_TYPE__.h"
+#include "__INT64_TYPE__.h"
+
+#include "__POINTER_WIDTH__.h"
+
+#include "__SIZE_TYPE__.h"
+
+#include "__UINT8_TYPE__.h"
+#include "__UINT16_TYPE__.h"
+#include "__UINT32_TYPE__.h"
+#include "__UINT64_TYPE__.h"
+
+#include "__builtin_addressof.h"
+#include "__builtin_assume.h"
+#include "__builtin_assume_aligned.h"
+#include "__builtin_bswap32.h"
+#include "__builtin_bswap64.h"
+#include "__builtin_constant_p.h"
+#include "__builtin_expect.h"
+#include "__builtin_unreachable.h"

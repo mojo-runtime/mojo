@@ -1,6 +1,6 @@
 #ifndef _c_nothrow
 
-#include "config/has_attribute_nothrow.h"
+#include "compat/has_attribute_nothrow.h"
 
 #if has_attribute_nothrow
 #  define _c_nothrow __attribute__((__nothrow__))
