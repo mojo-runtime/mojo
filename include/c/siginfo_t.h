@@ -1,10 +1,12 @@
-#ifndef _linux_x86_64_siginfo_t_h_
-#define _linux_x86_64_siginfo_t_h_
+#ifndef _c_siginfo_t_h_
+#define _c_siginfo_t_h_
 
-#include "c/clock_t.h"
-#include "c/pid_t.h"
-#include "c/uid_t.h"
-#include "c/union-sigval.h"
+#if defined(__linux__)
+#  if defined(__x86_64__)
+#    include "clock_t.h"
+#    include "pid_t.h"
+#    include "uid_t.h"
+#    include "union-sigval.h"
 
 typedef struct siginfo
 {
@@ -146,23 +148,31 @@ typedef struct siginfo
 }
 siginfo_t;
 
+#  else
+#    error
+#  endif // __x86_64__
 // TODO: is it possible to not use macros?
-#define si_pid       _sifields._kill._pid
-#define si_uid       _sifields._kill._uid
-#define si_timerid   _sifields._timer._tid
-#define si_overrun   _sifields._timer._overrun
-#define si_status    _sifields._sigchld._status
-#define si_utime     _sifields._sigchld._utime
-#define si_stime     _sifields._sigchld._stime
-#define si_value     _sifields._rt._sigval
-#define si_int       _sifields._rt._sigval.sival_int
-#define si_ptr       _sifields._rt._sigval.sival_ptr
-#define si_addr      _sifields._sigfault._addr
-#define si_addr_lsb  _sifields._sigfault._addr_lsb
-#define si_band      _sifields._sigpoll._band
-#define si_fd        _sifields._sigpoll._fd
-#define si_call_addr _sifields._sigsys._call_addr
-#define si_syscall   _sifields._sigsys._syscall
-#define si_arch      _sifields._sigsys._arch
+#  define si_pid       _sifields._kill._pid
+#  define si_uid       _sifields._kill._uid
+#  define si_timerid   _sifields._timer._tid
+#  define si_overrun   _sifields._timer._overrun
+#  define si_status    _sifields._sigchld._status
+#  define si_utime     _sifields._sigchld._utime
+#  define si_stime     _sifields._sigchld._stime
+#  define si_value     _sifields._rt._sigval
+#  define si_int       _sifields._rt._sigval.sival_int
+#  define si_ptr       _sifields._rt._sigval.sival_ptr
+#  define si_addr      _sifields._sigfault._addr
+#  define si_addr_lsb  _sifields._sigfault._addr_lsb
+#  define si_band      _sifields._sigpoll._band
+#  define si_fd        _sifields._sigpoll._fd
+#  define si_call_addr _sifields._sigsys._call_addr
+#  define si_syscall   _sifields._sigsys._syscall
+#  define si_arch      _sifields._sigsys._arch
+#elif defined(__FreeBSD__)
+#  error
+#else
+#  error
+#endif
 
 #endif
