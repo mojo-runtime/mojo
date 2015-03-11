@@ -49,6 +49,7 @@
 #include "x_reinterpret_cast.h"
 #include "x_static_cast.h"
 
+#include "_Bool.h"
 #include "_Noreturn.h"
 
 #include "_has_clang_minor.h"
