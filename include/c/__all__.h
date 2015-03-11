@@ -399,7 +399,6 @@
 #  include "WNOWAIT.h"
 #  include "WSTOPPED.h"
 #  include "WUNTRACED.h"
-#  include "_exit.h"
 #endif
 
 #include "abs.h"
