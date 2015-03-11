@@ -1,8 +1,8 @@
 #ifndef linux_Result_hxx_
 #define linux_Result_hxx_
 
-#include "builtin/__POINTER_WIDTH__.h"
 #include "c/assert.h"
+#include "compat/__POINTER_WIDTH__.h"
 
 #include "__Word.hxx"
 
