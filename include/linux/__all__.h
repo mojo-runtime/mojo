@@ -1,7 +1,6 @@
 #include "gettid.h"
 #include "siginfo_t.h"
 
-#include "struct-rusage.h"
 #include "struct-stat.h"
 #include "struct-utsname.h"
 

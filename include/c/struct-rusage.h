@@ -1,11 +1,14 @@
-#ifndef _linux_struct_rusage_h_
-#define _linux_struct_rusage_h_
+#ifndef _c_struct_rusage_h_
+#define _c_struct_rusage_h_
 
-#include "c/struct-timeval.h"
+#if defined(__linux__) || defined(__FreeBSD__)
+#  include "struct-timeval.h"
 
 struct rusage
 {
-    // LINUX/include/uapi/linux/resource.h
+    // linux: include/uapi/linux/resource.h
+    // freebsd: sys/sys/resource.h
+
     struct timeval ru_utime;
     struct timeval ru_stime;
     long           ru_maxrss;
@@ -23,5 +26,9 @@ struct rusage
     long           ru_nvcsw;
     long           ru_nivcsw;
 };
+
+#else
+#  error
+#endif
 
 #endif
