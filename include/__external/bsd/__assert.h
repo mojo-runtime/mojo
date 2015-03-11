@@ -1,5 +1,5 @@
-#ifndef _runtime_bsd_assert_h_
-#define _runtime_bsd_assert_h_
+#ifndef external_bsd_assert_h_
+#define external_bsd_assert_h_
 
 #include "c/_c_noreturn.h"
 //#include "c/_c_nothrow.h"

@@ -7,12 +7,12 @@
 #  include "c/_c_static_cast.h"
 #  include "config/RUNTIME.h"
 #  if (RUNTIME == RUNTIME_GLIBC)
-#    include "runtime/glibc/__assert_fail.h"
+#    include "__external/glibc/__assert_fail.h"
 #    define assert(x) ((x)                                              \
                        ? _c_static_cast(void, 0)                        \
                        : __assert_fail(#x, __FILE__, __LINE__, __PRETTY_FUNCTION__))
 #  elif (RUNTIME == RUNTIME_FREEBSD)
-#    include "runtime/bsd/__assert.h"
+#    include "__external/bsd/__assert.h"
 #    define assert(x) ((x)                                              \
                        ? _c_static_cast(void, 0)                        \
                        : __assert(__PRETTY_FUNCTION__, __FILE__, __LINE__, #x))
