@@ -10,7 +10,7 @@
 #include "c/ENOSPC.h"
 #include "c/EPERM.h"
 #include "c/SYS_epoll_ctl.h"
-#include "linux/struct-epoll_event.h"
+#include "c/struct-epoll_event.h"
 
 #include "linux/Result.hxx"
 
