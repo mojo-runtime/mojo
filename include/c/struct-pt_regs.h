@@ -1,6 +1,7 @@
-#ifndef _linux_x86_64_struct_pt_regs_h_
-#define _linux_x86_64_struct_pt_regs_h_
+#ifndef _c_struct_pt_regs_h_
+#define _c_struct_pt_regs_h_
 
+#if defined(__x86_64__)
 struct pt_regs
 {
     // Per: LINUX/arch/x86/include/uapi/asm/ptrace.h
@@ -26,5 +27,9 @@ struct pt_regs
     unsigned long rsp;
     unsigned long ss;
 };
+
+#else
+#  error
+#endif
 
 #endif

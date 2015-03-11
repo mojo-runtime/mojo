@@ -3,7 +3,6 @@
 #include "sigval_t.h"
 
 #include "struct-linux_dirent.h"
-#include "struct-pt_regs.h"
 #include "struct-rusage.h"
 #include "struct-stat.h"
 #include "struct-user_desc.h"
