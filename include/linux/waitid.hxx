@@ -9,7 +9,7 @@
 #include "c/id_t.h"
 #include "c/idtype_t.h"
 #include "c/pid_t.h"
-#include "linux/siginfo_t.h"
+#include "c/siginfo_t.h"
 #include "c/struct-rusage.h"
 
 #include "linux/Result.hxx"
