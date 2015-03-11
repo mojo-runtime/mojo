@@ -1,8 +1,9 @@
-#ifndef _elf_auxv_t_h_
-#define _elf_auxv_t_h_
+#ifndef _c_auxv_t_h_
+#define _c_auxv_t_h_
 
 typedef struct
 {
+#if defined(__ELF__)
     int
     a_type __attribute__((__mode__(__word__)));
 
@@ -18,6 +19,9 @@ typedef struct
         (*a_fnc)();
     }
     a_un;
+#else
+#  error
+#endif
 }
 auxv_t;
 

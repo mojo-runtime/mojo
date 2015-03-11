@@ -408,6 +408,10 @@
 #include "alloca.h"
 #include "assert.h"
 
+#if defined(__ELF__)
+#  include "auxv_t.h"
+#endif
+
 #if defined(__unix__)
 #  include "blkcnt_t.h"
 #  include "blksize_t.h"
