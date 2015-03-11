@@ -1,5 +1,5 @@
-#ifndef external_glibc_assert_fail_h_
-#define external_glibc_assert_fail_h_
+#ifndef _runtime_glibc_assert_fail_h_
+#define _runtime_glibc_assert_fail_h_
 
 #include "c/_c_noreturn.h"
 #include "c/_c_nothrow.h"
