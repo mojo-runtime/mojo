@@ -45,10 +45,11 @@
 #include "has_ieee754_double.h"
 #include "has_ieee754_float.h"
 
-#include "x_noreturn.h"
 #include "x_nothrow.h"
 #include "x_reinterpret_cast.h"
 #include "x_static_cast.h"
+
+#include "_Noreturn.h"
 
 #include "_has_clang_minor.h"
 #include "_has_gnuc_minor.h"

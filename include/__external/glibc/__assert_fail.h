@@ -1,14 +1,14 @@
 #ifndef external_glibc_assert_fail_h_
 #define external_glibc_assert_fail_h_
 
-#include "compat/x_noreturn.h"
 #include "compat/x_nothrow.h"
+#include "compat/_Noreturn.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-x_noreturn
+_Noreturn
 x_nothrow
 extern
 void

@@ -1,8 +1,8 @@
 #ifndef _c_exit_h_
 #define _c_exit_h_
 
-#include "compat/x_noreturn.h"
 #include "compat/x_nothrow.h"
+#include "compat/_Noreturn.h"
 #include "compat/__builtin_unreachable.h"
 
 #if defined(__unix__)
@@ -11,7 +11,7 @@
 #  error
 #endif
 
-x_noreturn
+_Noreturn
 x_nothrow
 static inline
 void
