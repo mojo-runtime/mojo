@@ -6,6 +6,8 @@
 #include "has_attribute_optimize.h"
 #include "has_attribute_optnone.h"
 #include "has_attribute_unavailable_with_message.h"
+#include "has_attribute_unused.h"
+#include "has_attribute_used.h"
 
 #include "has_builtin_addressof.h"
 #include "has_builtin_alloca.h"
@@ -45,7 +47,6 @@
 
 #include "x_noreturn.h"
 #include "x_nothrow.h"
-#include "x_optnone.h"
 #include "x_reinterpret_cast.h"
 #include "x_static_cast.h"
 
@@ -78,3 +79,7 @@
 #include "__builtin_constant_p.h"
 #include "__builtin_expect.h"
 #include "__builtin_unreachable.h"
+
+#include "__optnone__.h"
+#include "__unused__.h"
+#include "__used__.h"
