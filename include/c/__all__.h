@@ -439,6 +439,7 @@
 
 #if defined(__unix__)
 #  include "gid_t.h"
+#  include "id_t.h"
 #  include "idtype_t.h"
 #  include "ino_t.h"
 #endif
