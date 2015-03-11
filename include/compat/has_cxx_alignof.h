@@ -1,7 +1,7 @@
 #ifndef has_cxx_alignof
 
 #if defined(__clang__)
-// XXX: false negative
+// Workaround: __has_feature(cxx_alignof) → false negative (3.6.0)
 #  include "_has_clang_minor.h"
 #  define has_cxx_alignof _has_clang_minor(3, 3)
 #elif defined(__GNUC__)

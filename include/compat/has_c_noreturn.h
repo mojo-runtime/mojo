@@ -1,7 +1,7 @@
 #ifndef has_c_noreturn
 
 #if defined(__clang__)
-// XXX: __has_feature(c_noreturn) returns a false negative (3.6.0)
+// Workaround: __has_feature(c_noreturn) → false negative (3.6.0)
 #  include "_has_clang_minor.h"
 #  if _has_clang_minor(3, 6)
 #    define has_c_noreturn 1
