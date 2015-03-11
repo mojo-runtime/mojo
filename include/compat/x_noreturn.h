@@ -1,9 +1,9 @@
 #ifndef x_noreturn
 
 #if defined(__cplusplus)
-#  include "has_attribute_noreturn.h"
-#  if has_attribute_noreturn
-#    define x_noreturn __attribute__((__noreturn__))
+#  include "has_cpp_attribute_noreturn.h"
+#  if has_cpp_attribute_noreturn
+#    define x_noreturn [[noreturn]]
 #  else
 #    error
 #  endif
