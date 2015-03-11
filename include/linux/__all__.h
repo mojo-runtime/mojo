@@ -1,7 +1,6 @@
 #include "gettid.h"
 
 #include "struct-stat.h"
-#include "struct-utsname.h"
 
 #include "_syscall_0.h"
 #include "_syscall_1.h"

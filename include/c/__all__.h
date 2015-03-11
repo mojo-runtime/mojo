@@ -508,6 +508,7 @@
 #  include "struct-termios.h"
 #  include "struct-timespec.h"
 #  include "struct-timeval.h"
+#  include "struct-utsname.h"
 #  include "suseconds_t.h"
 #  include "tcflag_t.h"
 #endif
