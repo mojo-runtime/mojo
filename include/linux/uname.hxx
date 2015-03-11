@@ -1,12 +1,12 @@
 #ifndef linux_uname_hxx_
 #define linux_uname_hxx_
 
-#include "linux/_syscall_1.h"
 #include "c/EFAULT.h"
 #include "c/SYS_uname.h"
-#include "linux/struct-utsname.h"
+#include "c/struct-utsname.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-1.hxx"
 
 namespace linux {
 
@@ -20,7 +20,7 @@ uname(struct utsname* buf) noexcept
         EFAULT_ = EFAULT,
     };
 
-    return Result<void, Error>(_syscall_1(SYS_uname, buf));
+    return Result<void, Error>(__call(SYS_uname, buf));
 }
 
 } // namespace linux

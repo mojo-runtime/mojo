@@ -3,7 +3,7 @@
 
 #include "c/O_RDONLY.h"
 
-#include "linux/open.hxx"
+#include "../open.hxx"
 
 namespace linux {
 namespace open_ {

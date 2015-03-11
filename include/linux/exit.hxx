@@ -1,8 +1,9 @@
 #ifndef linux_exit_hxx_
 #define linux_exit_hxx_
 
-#include "linux/_syscall_1.h"
 #include "c/SYS_exit.h"
+
+#include "__call-1.hxx"
 
 namespace linux {
 
@@ -11,7 +12,7 @@ static inline
 void
 exit(int status) noexcept
 {
-    _syscall_1(SYS_exit, status);
+    __call(SYS_exit, status);
     __builtin_unreachable();
 }
 

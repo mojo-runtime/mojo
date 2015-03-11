@@ -1,8 +1,6 @@
 #ifndef linux_getcwd_hxx_
 #define linux_getcwd_hxx_
 
-#include "c/size_t.h"
-
 #include "c/EACCES.h"
 #include "c/EFAULT.h"
 #include "c/EINVAL.h"
@@ -10,9 +8,10 @@
 #include "c/ENOENT.h"
 #include "c/ERANGE.h"
 #include "c/SYS_getcwd.h"
-#include "linux/_syscall_2.h"
+#include "c/size_t.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-2.hxx"
 
 namespace linux {
 
@@ -49,7 +48,7 @@ getcwd(char* buf, size_t size) noexcept
     // "The kernel system call just returns the length of the buffer filled
     // (which includes the ending '\0' character)"
 
-    return Result<size_t, Error>(_syscall_2(SYS_getcwd, buf, size));
+    return Result<size_t, Error>(__call(SYS_getcwd, buf, size));
 }
 
 } // namespace linux

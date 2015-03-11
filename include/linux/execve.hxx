@@ -1,7 +1,6 @@
 #ifndef linux_execve_hxx_
 #define linux_execve_hxx_
 
-#include "linux/_syscall_3.h"
 #include "c/E2BIG.h"
 #include "c/EACCES.h"
 #include "c/EFAULT.h"
@@ -21,7 +20,8 @@
 #include "c/ETXTBSY.h"
 #include "c/SYS_execve.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-3.hxx"
 
 namespace linux {
 
@@ -101,7 +101,7 @@ execve(const char* filename, char* const argv[], char* const envp[]) noexcept
         ETXTBSY_ = ETXTBSY,
     };
 
-    return Result<void, Error>(_syscall_3(SYS_execve, filename, argv, envp));
+    return Result<void, Error>(__call(SYS_execve, filename, argv, envp));
 }
 
 } // namespace linux

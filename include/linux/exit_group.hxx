@@ -1,8 +1,9 @@
 #ifndef linux_exit_group_hxx_
 #define linux_exit_group_hxx_
 
-#include "linux/_syscall_1.h"
 #include "c/SYS_exit_group.h"
+
+#include "__call-1.hxx"
 
 namespace linux {
 
@@ -11,7 +12,7 @@ static inline
 void
 exit_group(int status) noexcept
 {
-    _syscall_1(SYS_exit_group, status);
+    __call(SYS_exit_group, status);
     __builtin_unreachable();
 }
 

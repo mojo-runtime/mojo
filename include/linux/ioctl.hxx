@@ -1,14 +1,14 @@
 #ifndef linux_ioctl_hxx_
 #define linux_ioctl_hxx_
 
-#include "linux/_syscall_3.h"
 #include "c/EBADF.h"
 #include "c/EFAULT.h"
 #include "c/EINVAL.h"
 #include "c/ENOTTY.h"
 #include "c/SYS_ioctl.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-3.hxx"
 
 namespace linux {
 
@@ -41,7 +41,7 @@ ioctl(int fd, int request, Arg arg) noexcept
         ENOTTY_ = ENOTTY,
     };
 
-    return Result<void, Error>(_syscall_3(SYS_ioctl, fd, request, arg));
+    return Result<void, Error>(__call(SYS_ioctl, fd, request, arg));
 }
 
 } // namespace linux

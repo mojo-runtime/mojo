@@ -1,17 +1,16 @@
 #ifndef linux_mremap_hxx_
 #define linux_mremap_hxx_
 
-#include "c/size_t.h"
-
 #include "c/EAGAIN.h"
 #include "c/EFAULT.h"
 #include "c/EINVAL.h"
 #include "c/ENOMEM.h"
 #include "c/SYS_mremap.h"
-#include "linux/_syscall_4.h"
-#include "linux/_syscall_5.h"
+#include "c/size_t.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-4.hxx"
+#include "__call-5.hxx"
 
 namespace linux {
 
@@ -49,7 +48,7 @@ mremap(void* old_address, size_t old_size, size_t new_size, int flags) noexcept
     };
 
     return Result<void, Error>(
-        _syscall_4(SYS_mremap, old_address, old_size, new_size, flags)
+        __call(SYS_mremap, old_address, old_size, new_size, flags)
     );
 }
 
@@ -58,7 +57,7 @@ auto
 mremap(void* old_address, size_t old_size, size_t new_size, int flags, void* new_address) noexcept
 {
     return decltype(mremap(old_address, old_size, new_size, flags))(
-        _syscall_5(SYS_mremap, old_address, old_size, new_size, flags, new_address)
+        __call(SYS_mremap, old_address, old_size, new_size, flags, new_address)
     );
 }
 

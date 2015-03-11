@@ -4,7 +4,7 @@
 #include "c/SYS_geteuid.h"
 #include "c/uid_t.h"
 
-#include "linux/_syscall_0.h"
+#include "__call-0.hxx"
 
 namespace linux {
 
@@ -12,7 +12,7 @@ static inline
 uid_t
 geteuid() noexcept
 {
-    return static_cast<uid_t>(_syscall_0(SYS_geteuid));
+    return static_cast<uid_t>(__call(SYS_geteuid));
 }
 
 } // namespace linux

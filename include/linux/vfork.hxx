@@ -3,7 +3,7 @@
 
 #include "c/SYS_vfork.h"
 
-#include "linux/fork.hxx"
+#include "fork.hxx"
 
 namespace linux {
 
@@ -11,7 +11,7 @@ static inline
 auto
 vfork() noexcept
 {
-    return decltype(fork())(_syscall_0(SYS_vfork)); // Same Result
+    return decltype(fork())(__call(SYS_vfork)); // Same Result
 }
 
 } // namespace linux

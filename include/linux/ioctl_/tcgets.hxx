@@ -4,7 +4,7 @@
 #include "c/TCGETS.h"
 #include "c/struct-termios.h"
 
-#include "linux/ioctl.hxx"
+#include "../ioctl.hxx"
 
 namespace linux {
 namespace ioctl_ {

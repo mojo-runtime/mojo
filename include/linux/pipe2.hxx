@@ -1,14 +1,14 @@
 #ifndef linux_pipe2_hxx_
 #define linux_pipe2_hxx_
 
-#include "linux/_syscall_2.h"
 #include "c/EFAULT.h"
 #include "c/EINVAL.h"
 #include "c/EMFILE.h"
 #include "c/ENFILE.h"
 #include "c/SYS_pipe2.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-2.hxx"
 
 namespace linux {
 
@@ -31,7 +31,7 @@ pipe2(int pipefd[2], int flags) noexcept
         ENFILE_ = ENFILE,
     };
 
-    return Result<void, Error>(_syscall_2(SYS_pipe2, pipefd, flags));
+    return Result<void, Error>(__call(SYS_pipe2, pipefd, flags));
 }
 
 static inline

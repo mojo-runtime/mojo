@@ -1,8 +1,6 @@
 #ifndef linux_readlink_hxx_
 #define linux_readlink_hxx_
 
-#include "c/size_t.h"
-
 #include "c/EACCES.h"
 #include "c/EFAULT.h"
 #include "c/EINVAL.h"
@@ -13,9 +11,10 @@
 #include "c/ENOMEM.h"
 #include "c/ENOTDIR.h"
 #include "c/SYS_readlink.h"
-#include "linux/_syscall_3.h"
+#include "c/size_t.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-3.hxx"
 
 namespace linux {
 
@@ -55,7 +54,7 @@ readlink(const char* pathname, char* buf, size_t bufsiz) noexcept
         ENOTDIR_ = ENOTDIR,
     };
 
-    return Result<size_t, Error>(_syscall_3(SYS_readlink, pathname, buf, bufsiz));
+    return Result<size_t, Error>(__call(SYS_readlink, pathname, buf, bufsiz));
 }
 
 } // namespace linux

@@ -1,7 +1,6 @@
 #ifndef linux_dup3_hxx_
 #define linux_dup3_hxx_
 
-#include "linux/_syscall_3.h"
 #include "c/EBADF.h"
 #include "c/EBUSY.h"
 #include "c/EINTR.h"
@@ -9,7 +8,8 @@
 #include "c/EMFILE.h"
 #include "c/SYS_dup3.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-3.hxx"
 
 namespace linux {
 
@@ -40,7 +40,7 @@ dup3(int oldfd, int newfd, int flags) noexcept
         EMFILE_ = EMFILE,
     };
 
-    return Result<int, Error>(_syscall_3(SYS_dup3, oldfd, newfd, flags));
+    return Result<int, Error>(__call(SYS_dup3, oldfd, newfd, flags));
 }
 
 } // namespace linux

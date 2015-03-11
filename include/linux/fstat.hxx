@@ -1,7 +1,6 @@
 #ifndef linux_fstat_hxx_
 #define linux_fstat_hxx_
 
-#include "linux/_syscall_2.h"
 #include "c/EBADF.h"
 #include "c/EFAULT.h"
 #include "c/ENOMEM.h"
@@ -9,7 +8,8 @@
 #include "c/SYS_fstat.h"
 #include "linux/struct-stat.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-2.hxx"
 
 namespace linux {
 
@@ -35,7 +35,7 @@ fstat(int fd, struct stat* buf) noexcept
         EOVERFLOW_ = EOVERFLOW,
     };
 
-    return Result<void, Error>(_syscall_2(SYS_fstat, fd, buf));
+    return Result<void, Error>(__call(SYS_fstat, fd, buf));
 }
 
 } // namespace linux

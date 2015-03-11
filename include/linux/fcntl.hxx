@@ -1,8 +1,6 @@
 #ifndef linux_fcntl_hxx_
 #define linux_fcntl_hxx_
 
-#include "linux/_syscall_2.h"
-#include "linux/_syscall_3.h"
 #include "c/EACCES.h"
 #include "c/EAGAIN.h"
 #include "c/EBADF.h"
@@ -15,7 +13,9 @@
 #include "c/EPERM.h"
 #include "c/SYS_fcntl.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-2.hxx"
+#include "__call-3.hxx"
 
 namespace linux {
 
@@ -77,7 +77,7 @@ fcntl(int fd, int cmd, Arg arg) noexcept
         EPERM_ = EPERM,
     };
 
-    return Result<Ok, Error>(_syscall_3(SYS_fcntl, fd, cmd, arg));
+    return Result<Ok, Error>(__call(SYS_fcntl, fd, cmd, arg));
 }
 
 template <typename Ok>
@@ -85,7 +85,7 @@ static inline
 auto
 fcntl(int fd, int cmd) noexcept
 {
-    return decltype(fcntl<Ok>(fd, cmd, 0))(_syscall_2(SYS_fcntl, fd, cmd));
+    return decltype(fcntl<Ok>(fd, cmd, 0))(__call(SYS_fcntl, fd, cmd));
 }
 
 } // namespace linux

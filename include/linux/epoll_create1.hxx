@@ -1,14 +1,14 @@
 #ifndef linux_epoll_create1_hxx_
 #define linux_epoll_create1_hxx_
 
-#include "linux/_syscall_1.h"
 #include "c/EINVAL.h"
 #include "c/EMFILE.h"
 #include "c/ENFILE.h"
 #include "c/ENOMEM.h"
 #include "c/SYS_epoll_create1.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-1.hxx"
 
 namespace linux {
 
@@ -32,7 +32,7 @@ epoll_create1(int flags) noexcept
         ENOMEM_ = ENOMEM,
     };
 
-    return Result<int, Error>(_syscall_1(SYS_epoll_create1, flags));
+    return Result<int, Error>(__call(SYS_epoll_create1, flags));
 }
 
 static inline

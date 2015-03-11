@@ -3,7 +3,7 @@
 
 #include "c/EPOLL_CTL_MOD.h"
 
-#include "linux/epoll_ctl.hxx"
+#include "../epoll_ctl.hxx"
 
 namespace linux {
 namespace epoll_ctl_ {

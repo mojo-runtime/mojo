@@ -1,14 +1,14 @@
 #ifndef linux_inotify_init1_hxx_
 #define linux_inotify_init1_hxx_
 
-#include "linux/_syscall_1.h"
 #include "c/EINVAL.h"
 #include "c/EMFILE.h"
 #include "c/ENFILE.h"
 #include "c/ENOMEM.h"
 #include "c/SYS_inotify_init1.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-1.hxx"
 
 namespace linux {
 
@@ -31,7 +31,7 @@ inotify_init1(int flags) noexcept
         ENOMEM_ = ENOMEM,
     };
 
-    return Result<int, Error>(_syscall_1(SYS_inotify_init1, flags));
+    return Result<int, Error>(__call(SYS_inotify_init1, flags));
 }
 
 static inline

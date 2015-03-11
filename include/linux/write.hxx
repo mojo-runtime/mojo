@@ -1,8 +1,6 @@
 #ifndef linux_write_hxx_
 #define linux_write_hxx_
 
-#include "c/size_t.h"
-
 #include "c/EAGAIN.h"
 #include "c/EBADF.h"
 #include "c/EDESTADDRREQ.h"
@@ -15,9 +13,10 @@
 #include "c/ENOSPC.h"
 #include "c/EPIPE.h"
 #include "c/SYS_write.h"
-#include "linux/_syscall_3.h"
+#include "c/size_t.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-3.hxx"
 
 namespace linux {
 
@@ -75,7 +74,7 @@ write(int fd, const void* buf, size_t count) noexcept
         //   XXX: totally ignoring this
     };
 
-    return Result<size_t, Error>(_syscall_3(SYS_write, fd, buf, count));
+    return Result<size_t, Error>(__call(SYS_write, fd, buf, count));
 }
 
 template <typename T, size_t n>
@@ -100,7 +99,7 @@ write(int fd, const T(& array)[n]) noexcept
     };
 
     // We can't use write(...)._with_error; see `read_::into`.
-    return Result<size_t, Error>(_syscall_3(SYS_write, fd, array, n * sizeof(T)));
+    return Result<size_t, Error>(__call(SYS_write, fd, array, n * sizeof(T)));
 }
 
 } // namespace linux

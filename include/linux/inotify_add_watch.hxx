@@ -1,8 +1,6 @@
 #ifndef linux_inotify_add_watch_hxx_
 #define linux_inotify_add_watch_hxx_
 
-#include "c/uint32_t.h"
-
 #include "c/EACCES.h"
 #include "c/EBADF.h"
 #include "c/EFAULT.h"
@@ -12,9 +10,10 @@
 #include "c/ENOMEM.h"
 #include "c/ENOSPC.h"
 #include "c/SYS_inotify_add_watch.h"
-#include "linux/_syscall_3.h"
+#include "c/uint32_t.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-3.hxx"
 
 namespace linux {
 
@@ -53,7 +52,7 @@ inotify_add_watch(int fd, const char* pathname, uint32_t mask) noexcept
         ENOSPC_ = ENOSPC,
     };
 
-    return Result<int, Error>(_syscall_3(SYS_inotify_add_watch, fd, pathname, mask));
+    return Result<int, Error>(__call(SYS_inotify_add_watch, fd, pathname, mask));
 }
 
 } // namespace linux

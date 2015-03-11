@@ -1,7 +1,6 @@
 #ifndef linux_clock_nanosleep_hxx_
 #define linux_clock_nanosleep_hxx_
 
-#include "linux/_syscall_4.h"
 #include "c/EFAULT.h"
 #include "c/EINTR.h"
 #include "c/EINVAL.h"
@@ -9,7 +8,8 @@
 #include "c/clockid_t.h"
 #include "c/struct-timespec.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-4.hxx"
 
 namespace linux {
 
@@ -33,7 +33,7 @@ clock_nanosleep(clockid_t clock_id, int flags, const struct timespec* request, s
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(_syscall_4(SYS_clock_nanosleep, clock_id, flags, request, remain));
+    return Result<void, Error>(__call(SYS_clock_nanosleep, clock_id, flags, request, remain));
 }
 
 } // namespace linux

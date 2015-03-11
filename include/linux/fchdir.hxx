@@ -1,12 +1,12 @@
 #ifndef linux_fchdir_hxx_
 #define linux_fchdir_hxx_
 
-#include "linux/_syscall_1.h"
 #include "c/EACCES.h"
 #include "c/EBADF.h"
 #include "c/SYS_fchdir.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-1.hxx"
 
 namespace linux {
 
@@ -27,7 +27,7 @@ fchdir(int fd) noexcept
         // ENOTDIR, I imagine?
     };
 
-    return Result<void, Error>(_syscall_1(SYS_fchdir, fd));
+    return Result<void, Error>(__call(SYS_fchdir, fd));
 }
 
 } // namespace linux

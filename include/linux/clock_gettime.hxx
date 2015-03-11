@@ -1,14 +1,14 @@
 #ifndef linux_clock_gettime_hxx_
 #define linux_clock_gettime_hxx_
 
-#include "linux/_syscall_2.h"
 #include "c/EFAULT.h"
 #include "c/EINVAL.h"
 #include "c/SYS_clock_gettime.h"
 #include "c/clockid_t.h"
 #include "c/struct-timespec.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-2.hxx"
 
 namespace linux {
 
@@ -25,7 +25,7 @@ clock_gettime(clockid_t clk_id, struct timespec* tp) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(_syscall_2(SYS_clock_gettime, clk_id, tp));
+    return Result<void, Error>(__call(SYS_clock_gettime, clk_id, tp));
 }
 
 } // namespace linux

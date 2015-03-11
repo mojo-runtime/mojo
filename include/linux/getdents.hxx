@@ -1,7 +1,6 @@
 #ifndef linux_getdents_hxx_
 #define linux_getdents_hxx_
 
-#include "c/size_t.h"
 
 #include "c/EBADF.h"
 #include "c/EFAULT.h"
@@ -9,10 +8,11 @@
 #include "c/ENOENT.h"
 #include "c/ENOTDIR.h"
 #include "c/SYS_getdents.h"
+#include "c/size_t.h"
 #include "c/struct-linux_dirent.h"
-#include "linux/_syscall_3.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-3.hxx"
 
 namespace linux {
 
@@ -40,7 +40,7 @@ getdents(/* unsigned */ int fd, struct linux_dirent* dirp, unsigned int count) n
 
     // On success, the number of bytes read is returned.
 
-    return Result<size_t, Error>(_syscall_3(SYS_getdents, fd, dirp, count));
+    return Result<size_t, Error>(__call(SYS_getdents, fd, dirp, count));
 }
 
 } // namespace linux

@@ -1,17 +1,16 @@
 #ifndef linux_Result_hxx_
 #define linux_Result_hxx_
 
-#include "linux/_syscall_Result_is_error.h"
-#include "linux/_syscall_Result_error.h"
-#include "linux/_syscall_Result_ok.h"
+#include "builtin/__POINTER_WIDTH__.h"
+#include "c/assert.h"
+
+#include "__Word.hxx"
 
 namespace linux {
 
 template <typename Ok, typename Error>
 struct Result
 {
-    typedef unsigned int __Word __attribute__((__mode__(__word__)));
-
     constexpr explicit
     Result(__Word word)
         : __word(word)
@@ -24,7 +23,11 @@ struct Result
     bool
     is_error() const noexcept
     {
-        return _syscall_Result_is_error(this->__word);
+#if (__POINTER_WIDTH__ == 64)
+        return this->__word > 0xFFFFFFFFFFFFF000UL;
+#else
+#  error
+#endif
     }
 
     constexpr
@@ -38,14 +41,16 @@ struct Result
     Error
     error() const noexcept
     {
-        return _syscall_Result_error(Error, this->__word);
+        assert(this->is_error());
+        return static_cast<Error>(-this->__word);
     }
 
     constexpr
     Ok
     ok() const noexcept
     {
-        return _syscall_Result_ok(Ok, this->__word);
+        assert(this->is_ok());
+        return static_cast<Ok>(this->__word);
     }
 
     //--------------------------------------------------------------------------------------------//

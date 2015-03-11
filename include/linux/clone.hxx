@@ -1,7 +1,6 @@
 #ifndef linux_clone_hxx_
 #define linux_clone_hxx_
 
-#include "linux/_syscall_5.h"
 #include "c/EAGAIN.h"
 #include "c/EINVAL.h"
 #include "c/ENOMEM.h"
@@ -10,7 +9,8 @@
 #include "c/pid_t.h"
 #include "c/struct-pt_regs.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-5.hxx"
 
 namespace linux {
 
@@ -59,7 +59,7 @@ clone(unsigned long flags, void* child_stack, void* ptid, void* ctid, struct pt_
         EPERM_ = EPERM,
     };
 
-    return Result<pid_t, Error>(_syscall_5(SYS_clone, flags, child_stack, ptid, ctid, regs));
+    return Result<pid_t, Error>(__call(SYS_clone, flags, child_stack, ptid, ctid, regs));
 }
 
 } // namespace linux

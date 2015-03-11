@@ -3,7 +3,7 @@
 
 #include "c/F_GETFL.h"
 
-#include "linux/fcntl.hxx"
+#include "../fcntl.hxx"
 
 namespace linux {
 namespace fcntl_ {

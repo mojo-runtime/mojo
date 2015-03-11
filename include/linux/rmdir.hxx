@@ -1,7 +1,6 @@
 #ifndef linux_rmdir_hxx_
 #define linux_rmdir_hxx_
 
-#include "linux/_syscall_1.h"
 #include "c/EACCES.h"
 #include "c/EBUSY.h"
 #include "c/EFAULT.h"
@@ -16,7 +15,8 @@
 #include "c/EROFS.h"
 #include "c/SYS_rmdir.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-1.hxx"
 
 namespace linux {
 
@@ -74,7 +74,7 @@ rmdir(const char* pathname) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(_syscall_1(SYS_rmdir, pathname));
+    return Result<void, Error>(__call(SYS_rmdir, pathname));
 }
 
 } // namespace linux

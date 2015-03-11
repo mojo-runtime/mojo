@@ -1,13 +1,13 @@
 #ifndef linux_munmap_hxx_
 #define linux_munmap_hxx_
 
-#include "c/size_t.h"
-
 #include "c/EINVAL.h"
 #include "c/SYS_munmap.h"
-#include "linux/_syscall_2.h"
+#include "c/size_t.h"
 
-#include "linux/Result.hxx"
+#include "Result.hxx"
+#include "__call-2.hxx"
+
 
 namespace linux {
 
@@ -21,7 +21,7 @@ open(void* addr, size_t length) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(_syscall_2(SYS_munmap, addr, length));
+    return Result<void, Error>(__call(SYS_munmap, addr, length));
 }
 
 } // namespace linux
