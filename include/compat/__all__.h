@@ -3,6 +3,8 @@
 #include "has_attribute_error.h"
 #include "has_attribute_noreturn.h"
 #include "has_attribute_nothrow.h"
+#include "has_attribute_optimize.h"
+#include "has_attribute_optnone.h"
 #include "has_attribute_unavailable_with_message.h"
 
 #include "has_builtin_addressof.h"
@@ -40,6 +42,12 @@
 
 #include "has_ieee754_double.h"
 #include "has_ieee754_float.h"
+
+#include "x_noreturn.h"
+#include "x_nothrow.h"
+#include "x_optnone.h"
+#include "x_reinterpret_cast.h"
+#include "x_static_cast.h"
 
 #include "_has_clang_minor.h"
 #include "_has_gnuc_minor.h"
