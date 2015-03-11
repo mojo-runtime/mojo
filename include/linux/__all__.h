@@ -2,7 +2,6 @@
 #include "siginfo_t.h"
 #include "sigval_t.h"
 
-#include "struct-linux_dirent.h"
 #include "struct-rusage.h"
 #include "struct-stat.h"
 #include "struct-utsname.h"

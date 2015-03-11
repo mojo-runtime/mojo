@@ -1,8 +1,9 @@
-#ifndef _linux_struct_linux_dirent_h_
-#define _linux_struct_linux_dirent_h_
+#ifndef _c_struct_linux_dirent_h_
+#define _c_struct_linux_dirent_h_
 
 struct linux_dirent
 {
+#if defined(__linux__)
     unsigned long
     d_ino;
 
@@ -25,6 +26,9 @@ struct linux_dirent
     char
     d_type;
     */
+#else
+#  error
+#endif
 };
 
 #endif

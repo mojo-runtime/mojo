@@ -497,6 +497,7 @@
 
 #if defined(__linux__)
 #  include "struct-epoll_event.h"
+#  include "struct-linux_dirent.h"
 #  include "struct-pt_regs.h"
 #endif
 
