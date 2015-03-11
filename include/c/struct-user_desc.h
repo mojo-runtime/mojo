@@ -1,7 +1,9 @@
-#ifndef _linux_x86_64_struct_user_desc_h_
-#define _linux_x86_64_struct_user_desc_h_
+#ifndef _c_struct_user_desc_h_
+#define _c_struct_user_desc_h_
 
-#include "c/uint32_t.h"
+#if defined(__linux__)
+#  if defined(__x86_64__)
+#    include "uint32_t.h"
 
 struct user_desc
 {
@@ -17,5 +19,12 @@ struct user_desc
     uint32_t lm:1;
     char __pad[3];
 };
+
+#  else
+#    error
+#  endif
+#else
+#  error
+#endif
 
 #endif

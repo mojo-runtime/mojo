@@ -5,7 +5,6 @@
 #include "struct-linux_dirent.h"
 #include "struct-rusage.h"
 #include "struct-stat.h"
-#include "struct-user_desc.h"
 #include "struct-utsname.h"
 
 #include "_syscall_0.h"
