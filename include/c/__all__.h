@@ -533,5 +533,9 @@
 #include "uintmax_t.h"
 #include "uintptr_t.h"
 
+#if defined(__unix__)
+#  include "union-sigval.h"
+#endif
+
 #include "wchar_t.h"
 #include "wint_t.h"

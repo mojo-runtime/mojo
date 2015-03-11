@@ -4,7 +4,7 @@
 #include "c/clock_t.h"
 #include "c/pid_t.h"
 #include "c/uid_t.h"
-#include "../sigval_t.h"
+#include "c/union-sigval.h"
 
 typedef struct siginfo
 {
@@ -63,7 +63,7 @@ typedef struct siginfo
             int
             _overrun;
 
-            sigval_t
+            union sigval
             _sigval;
         }
         _timer;
@@ -76,7 +76,7 @@ typedef struct siginfo
             uid_t
             _uid;
 
-            sigval_t
+            union sigval
             _sigval;
         }
         _rt;
