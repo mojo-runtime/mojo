@@ -505,6 +505,7 @@
 #endif
 
 #if defined(__unix__)
+#  include "struct-stat.h"
 #  include "struct-termios.h"
 #  include "struct-timespec.h"
 #  include "struct-timeval.h"
