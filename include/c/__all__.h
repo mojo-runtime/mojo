@@ -399,9 +399,9 @@
 #  include "WNOWAIT.h"
 #  include "WSTOPPED.h"
 #  include "WUNTRACED.h"
+#  include "_exit.h"
 #endif
 
-#include "_Exit.h"
 #include "abs.h"
 #include "alignas.h"
 #include "alignof.h"
@@ -482,7 +482,6 @@
 #endif
 
 #include "ptrdiff_t.h"
-#include "puts.h"
 #include "sighandler_t.h"
 #include "size_t.h"
 

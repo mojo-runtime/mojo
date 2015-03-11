@@ -1,7 +1,7 @@
 #ifndef _elf_main_h_
 #define _elf_main_h_
 
-#include "unix/_exit.h"
+#include "c/_exit.h"
 
 #include "_Arguments.h"
 
