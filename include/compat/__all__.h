@@ -83,5 +83,6 @@
 #include "__builtin_unreachable.h"
 
 #include "__optnone__.h"
+#include "__unavailable__.h"
 #include "__unused__.h"
 #include "__used__.h"
