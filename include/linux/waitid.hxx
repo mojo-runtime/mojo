@@ -6,7 +6,7 @@
 #include "c/EINTR.h"
 #include "c/EINVAL.h"
 #include "c/SYS_waitid.h"
-#include "linux/id_t.h"
+#include "c/id_t.h"
 #include "c/idtype_t.h"
 #include "c/pid_t.h"
 #include "linux/siginfo_t.h"
