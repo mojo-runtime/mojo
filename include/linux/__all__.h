@@ -1,10 +1,8 @@
-#include "epoll_data_t.h"
 #include "gettid.h"
 #include "id_t.h"
 #include "siginfo_t.h"
 #include "sigval_t.h"
 
-#include "struct-epoll_event.h"
 #include "struct-linux_dirent.h"
 #include "struct-pt_regs.h"
 #include "struct-rusage.h"

@@ -429,6 +429,11 @@
 #endif
 
 #include "div_t.h"
+
+#if defined(__linux__)
+#  include "epoll_data_t.h"
+#endif
+
 #include "errno_t.h"
 #include "false.h"
 
@@ -488,6 +493,10 @@
 #include "static_assert.h"
 #include "strcmp.h"
 #include "strlen.h"
+
+#if defined(__linux__)
+#  include "struct-epoll_event.h"
+#endif
 
 #if defined(__unix__)
 #  include "struct-termios.h"

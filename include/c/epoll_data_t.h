@@ -1,8 +1,9 @@
-#ifndef _linux_epoll_data_t_h_
-#define _linux_epoll_data_t_h_
+#ifndef _c_epoll_data_t_h_
+#define _c_epoll_data_t_h_
 
-#include "c/uint32_t.h"
-#include "c/uint64_t.h"
+#if defined(__linux__)
+#  include "uint32_t.h"
+#  include "uint64_t.h"
 
 // This union is not defined in the linux source,
 // which uses a uint64_t in its place.
@@ -22,5 +23,9 @@ typedef union
     u64;
 }
 epoll_data_t;
+
+#else
+#  error
+#endif
 
 #endif
