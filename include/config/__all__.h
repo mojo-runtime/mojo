@@ -1,5 +1,3 @@
-#include "RUNTIME.h"
-
 #include "has_64_bit_integer_types.h"
 
 #include "has_attribute_error.h"
