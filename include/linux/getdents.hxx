@@ -9,7 +9,7 @@
 #include "c/ENOENT.h"
 #include "c/ENOTDIR.h"
 #include "c/SYS_getdents.h"
-#include "linux/struct-linux_dirent.h"
+#include "c/struct-linux_dirent.h"
 #include "linux/_syscall_3.h"
 
 #include "linux/Result.hxx"

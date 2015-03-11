@@ -6,7 +6,7 @@
 #include "c/EINVAL.h"
 #include "c/ESRCH.h"
 #include "c/SYS_set_thread_area.h"
-#include "linux/struct-user_desc.h"
+#include "c/struct-user_desc.h"
 
 #include "linux/Result.hxx"
 
