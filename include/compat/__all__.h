@@ -1,6 +1,7 @@
 #include "has_64_bit_integer_types.h"
 
 #include "has_attribute_error.h"
+#include "has_attribute_mode.h"
 #include "has_attribute_noreturn.h"
 #include "has_attribute_nothrow.h"
 #include "has_attribute_optimize.h"
