@@ -1,9 +1,9 @@
-#ifndef _machine_Word_hxx_
-#define _machine_Word_hxx_
+#ifndef _architecture_Word_hxx_
+#define _architecture_Word_hxx_
 
 #include "compat/has_attribute_mode.h"
 
-namespace machine {
+namespace architecture {
 
 #if has_attribute_mode
 typedef unsigned int Word __attribute__((__mode__(__word__)));
@@ -11,6 +11,6 @@ typedef unsigned int Word __attribute__((__mode__(__word__)));
 #  error
 #endif
 
-} // namespace machine
+} // namespace architecture
 
 #endif

@@ -1,7 +1,7 @@
 #ifndef _elf_AuxiliaryVector_hxx_
 #define _elf_AuxiliaryVector_hxx_
 
-#include "machine/Word.hxx"
+#include "architecture/Word.hxx"
 
 namespace elf {
 
@@ -10,7 +10,7 @@ struct AuxiliaryVector
     AuxiliaryVector() = delete;
 
   private:
-    enum class Kind : machine::Word
+    enum class Kind : architecture::Word
     {
 #if defined(__x86_64__)
         null                            =  0, // AT_NULL
@@ -38,7 +38,7 @@ struct AuxiliaryVector
         Kind
         kind;
 
-        machine::Word
+        architecture::Word
         data;
     };
 

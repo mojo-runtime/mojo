@@ -4,7 +4,7 @@
 #include "c/assert.h"
 #include "compat/__POINTER_WIDTH__.h"
 
-#include "machine/Word.hxx"
+#include "architecture/Word.hxx"
 
 namespace linux {
 
@@ -12,7 +12,7 @@ template <typename Ok, typename Error>
 struct Result
 {
     constexpr explicit
-    Result(machine::Word word)
+    Result(architecture::Word word)
         : __word(word)
     {
     }
@@ -64,7 +64,7 @@ struct Result
     }
 
   private:
-    machine::Word
+    architecture::Word
     __word;
 };
 

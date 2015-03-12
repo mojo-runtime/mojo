@@ -1,8 +1,8 @@
 #ifndef _elf_InitialStack_hxx_
 #define _elf_InitialStack_hxx_
 
-#include "machine/Byte.hxx"
-#include "machine/Word.hxx"
+#include "architecture/Byte.hxx"
+#include "architecture/Word.hxx"
 
 namespace elf {
 
@@ -10,19 +10,19 @@ struct InitialStack
 {
     // The "structure" on top of the stack after process initialization.
 
-    machine::Word
+    architecture::Word
     argc() const
     {
         return this->__argument_count;
     }
 
-    machine::Byte**
+    architecture::Byte**
     argv()
     {
         return this->__argument_pointers;
     }
 
-    machine::Byte**
+    architecture::Byte**
     envp()
     {
         return this->argv() + this->argc() + 1;
@@ -34,12 +34,12 @@ struct InitialStack
 
     // Argument count
 
-    machine::Word
+    architecture::Word
     __argument_count;
 
     // Argument pointers
 
-    machine::Byte*
+    architecture::Byte*
     __argument_pointers[1]; // At least 1 - NULL terminated
 
     // Environment pointers …
