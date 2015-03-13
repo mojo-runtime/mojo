@@ -5,169 +5,169 @@
 
 // ...shall define the following macros:
 
-#include "../EXIT_FAILURE.h"
-#include "../EXIT_SUCCESS.h"
-#include "../NULL.h"
-#include "../RAND_MAX.h"
-#include "../MB_CUR_MAX.h"
+#include "c/EXIT_FAILURE.h"
+#include "c/EXIT_SUCCESS.h"
+#include "c/NULL.h"
+#include "c/RAND_MAX.h"
+#include "c/MB_CUR_MAX.h"
 
 // ...shall be defined through typedef:
 
-#include "../div_t.h"
-#include "../ldiv_t.h"
-#include "../lldiv_t.h"
-#include "../size_t.h"
-#include "../wchar_t.h"
+#include "c/div_t.h"
+#include "c/ldiv_t.h"
+#include "c/lldiv_t.h"
+#include "c/size_t.h"
+#include "c/wchar_t.h"
 
 // ...the following symbolic names and macros shall be defined as in <sys/wait.h>:
 
 #if 0 // XSI
-#  include "../WNOHANG.h"
-#  include "../WUNTRACED.h"
-#  include "../WEXITSTATUS.h"
-#  include "../WIFEXITED.h"
-#  include "../WIFSIGNALED.h"
-#  include "../WIFSTOPPED.h"
-#  include "../WSTOPSIG.h"
-#  include "../WTERMSIG.h"
+#  include "c/WNOHANG.h"
+#  include "c/WUNTRACED.h"
+#  include "c/WEXITSTATUS.h"
+#  include "c/WIFEXITED.h"
+#  include "c/WIFSIGNALED.h"
+#  include "c/WIFSTOPPED.h"
+#  include "c/WSTOPSIG.h"
+#  include "c/WTERMSIG.h"
 #endif
 
 // ...shall be declared as functions and may also be defined as macros.
 // Function prototypes shall be provided.
 
-#include "../_Exit.h"
+//#include "c/_Exit.h"
 
 #if 0 // XSI
-#  include "../a64l.h"
+#  include "c/a64l.h"
 #endif
 
-#include "../abort.h"
-#include "../abs.h"
-#include "../atexit.h"
-#include "../atof.h"
-#include "../atoi.h"
-#include "../aol.h"
-#include "../atoll.h"
-#include "../bsearch.h"
-#include "../calloc.h"
-#include "../div.h"
+#include "c/abort.h"
+#include "c/abs.h"
+#include "c/atexit.h"
+#include "c/atof.h"
+#include "c/atoi.h"
+#include "c/aol.h"
+#include "c/atoll.h"
+#include "c/bsearch.h"
+#include "c/calloc.h"
+#include "c/div.h"
 
 #if 0 // XSI
-#  include "../drand48.h"
-#  include "../ecvt.h"
-#  include "../erand48.h"
+#  include "c/drand48.h"
+#  include "c/ecvt.h"
+#  include "c/erand48.h"
 #endif
 
-#include "../exit.h"
+#include "c/exit.h"
 
 #if 0 // XSI
-#  include "../fcvt.h"
+#  include "c/fcvt.h"
 #endif
 
-#include "../free.h"
+#include "c/free.h"
 
 #if 0 // XSI
-#  include "../gcvt.h"
+#  include "c/gcvt.h"
 #endif
 
-#include "../getenv.h"
+#include "c/getenv.h"
 
 #if 0 // XSI
-#  include "../getsubopt.h"
-#  include "../grantpt.h"
-#  include "../initstate.h"
-#  include "../jrand48.h"
-#  include "../l64a.h"
+#  include "c/getsubopt.h"
+#  include "c/grantpt.h"
+#  include "c/initstate.h"
+#  include "c/jrand48.h"
+#  include "c/l64a.h"
 #endif
 
-#include "../labs.h"
+#include "c/labs.h"
 
 #if 0 // XSI
-#  include "../lcong48.h"
+#  include "c/lcong48.h"
 #endif
 
-#include "../ldiv.h"
-#include "../llabs.h"
-#include "../lldiv.h"
+#include "c/ldiv.h"
+#include "c/llabs.h"
+#include "c/lldiv.h"
 
 #if 0 // XSI
-#  include "../lrand48.h"
+#  include "c/lrand48.h"
 #endif
 
-#include "../malloc.h"
-#include "../mblen.h"
-#include "../mbstowcs.h"
-#include "../mbtowc.h"
+#include "c/malloc.h"
+#include "c/mblen.h"
+#include "c/mbstowcs.h"
+#include "c/mbtowc.h"
 
 #if 0 // XSI
-#  include "../mktemp.h"
-#  include "../mkstemp.h"
-#  include "../mrand48.h"
-#  include "../nrand48.h"
+#  include "c/mktemp.h"
+#  include "c/mkstemp.h"
+#  include "c/mrand48.h"
+#  include "c/nrand48.h"
 #endif
 
 #if 0 // ADV
-#  include "../posix_memalign.h"
+#  include "c/posix_memalign.h"
 #endif
 
 #if 0 // XSI
-#  include "../posix_openpt.h"
-#  include "../ptsname.h"
-#  include "../putenv.h"
+#  include "c/posix_openpt.h"
+#  include "c/ptsname.h"
+#  include "c/putenv.h"
 #endif
 
-#include "../qsort.h"
-#include "../rand.h"
+#include "c/qsort.h"
+#include "c/rand.h"
 
 #if 0 // TFS
-#  include "../rand_r"
+#  include "c/rand_r"
 #endif
 
 #if 0 // XSI
-#  include "../random.h"
+#  include "c/random.h"
 #endif
 
-#include "../realloc.h"
+#include "c/realloc.h"
 
 #if 0 // XSI
-#  include "../realpath.h"
-#  include "../seed48.h"
+#  include "c/realpath.h"
+#  include "c/seed48.h"
 #endif
 
 #if 0 // CX
-#  include "../setenv.h"
+#  include "c/setenv.h"
 #endif
 
 #if 0 // XSI
-#  include "../setkey.h"
-#  include "../setstate.h"
+#  include "c/setkey.h"
+#  include "c/setstate.h"
 #endif
 
-#include "../srand.h"
+#include "c/srand.h"
 
 #if 0 // XSI
-#  include "../srand48.h"
-#  include "../srandom.h"
+#  include "c/srand48.h"
+#  include "c/srandom.h"
 #endif
 
-#include "../strtod.h"
-#include "../strtof.h"
-#include "../strtol.h"
-#include "../strtold.h"
-#include "../strtoll.h"
-#include "../strtoul.h"
-#include "../strtoull.h"
-#include "../system.h"
+#include "c/strtod.h"
+#include "c/strtof.h"
+#include "c/strtol.h"
+#include "c/strtold.h"
+#include "c/strtoll.h"
+#include "c/strtoul.h"
+#include "c/strtoull.h"
+#include "c/system.h"
 
 #if 0 // XSI
-#  include "../unlockpt.h"
+#  include "c/unlockpt.h"
 #endif
 
 #if 0 // CX
-#  include "../unsetenv.h"
+#  include "c/unsetenv.h"
 #endif
 
-#include "../wcstombs.h"
-#include "../wctomb.h"
+#include "c/wcstombs.h"
+#include "c/wctomb.h"
 
 #endif
