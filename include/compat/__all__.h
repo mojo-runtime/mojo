@@ -1,6 +1,9 @@
 #include "alignas.h"
 #include "alignof.h"
+#include "bool.h"
+#include "false.h"
 #include "static_assert.h"
+#include "true.h"
 
 #include "_Noreturn.h"
 
