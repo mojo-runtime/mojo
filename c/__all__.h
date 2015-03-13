@@ -1,6 +1,8 @@
 #include "compat/__all__.h"
 #include "std/__all__.h"
 
+#include "__Bool.h"
+
 #include "__S8.h"
 #include "__S16.h"
 #include "__S32.h"
