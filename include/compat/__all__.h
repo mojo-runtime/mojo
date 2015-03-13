@@ -2,7 +2,6 @@
 #include "alignof.h"
 #include "static_assert.h"
 
-#include "has_64_bit_integer_types.h"
 #include "has_ieee754_double.h"
 #include "has_ieee754_float.h"
 
