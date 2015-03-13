@@ -10,7 +10,7 @@
 #include "c/struct-pt_regs.h"
 
 #include "Result.hxx"
-#include "__call-5.hxx"
+#include "abi/syscall-5.hxx"
 
 namespace linux {
 
@@ -59,7 +59,7 @@ clone(unsigned long flags, void* child_stack, void* ptid, void* ctid, struct pt_
         EPERM_ = EPERM,
     };
 
-    return Result<pid_t, Error>(__call(SYS_clone, flags, child_stack, ptid, ctid, regs));
+    return Result<pid_t, Error>(abi::syscall(SYS_clone, flags, child_stack, ptid, ctid, regs));
 }
 
 }

@@ -8,7 +8,7 @@
 #include "c/struct-timespec.h"
 
 #include "Result.hxx"
-#include "__call-2.hxx"
+#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -25,7 +25,7 @@ clock_getres(clockid_t clk_id, const struct timespec* tp) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(__call(SYS_clock_getres, clk_id, tp));
+    return Result<void, Error>(abi::syscall(SYS_clock_getres, clk_id, tp));
 }
 
 }

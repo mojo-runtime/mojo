@@ -8,7 +8,7 @@
 #include "c/SYS_pipe2.h"
 
 #include "Result.hxx"
-#include "__call-2.hxx"
+#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -31,7 +31,7 @@ pipe2(int pipefd[2], int flags) noexcept
         ENFILE_ = ENFILE,
     };
 
-    return Result<void, Error>(__call(SYS_pipe2, pipefd, flags));
+    return Result<void, Error>(abi::syscall(SYS_pipe2, pipefd, flags));
 }
 
 static inline

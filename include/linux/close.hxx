@@ -7,7 +7,7 @@
 #include "c/SYS_close.h"
 
 #include "Result.hxx"
-#include "__call-1.hxx"
+#include "abi/syscall-1.hxx"
 
 namespace linux {
 
@@ -27,7 +27,7 @@ close(int fd) noexcept
         EIO_ = EIO,
     };
 
-    return Result<void, Error>(__call(SYS_close, fd));
+    return Result<void, Error>(abi::syscall(SYS_close, fd));
 }
 
 }

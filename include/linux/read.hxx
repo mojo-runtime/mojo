@@ -12,7 +12,7 @@
 #include "c/size_t.h"
 
 #include "Result.hxx"
-#include "__call-3.hxx"
+#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -55,7 +55,7 @@ read(int fd, void* buf, size_t count) noexcept
         //   XXX: totally ignoring this
     };
 
-    return Result<size_t, Error>(__call(SYS_read, fd, buf, count));
+    return Result<size_t, Error>(abi::syscall(SYS_read, fd, buf, count));
 }
 
 template <typename T, size_t n>

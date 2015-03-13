@@ -4,7 +4,7 @@
 #include "c/MAP_ANONYMOUS.h"
 
 #include "../mmap.hxx"
-#include "../__call-4.hxx"
+#include "abi/syscall-4.hxx"
 
 namespace linux { namespace mmap_ {
 
@@ -30,7 +30,7 @@ anonymous(void* addr, size_t length, int prot, int flags) noexcept
     // however, some emplementations require `fd` to be -1 if MAP_ANONYMOUS is specified,
     // and portable applications should ensure with.
 
-    return Result<void*, Error>(__call(SYS_mmap, addr, length, prot, flags | MAP_ANONYMOUS));
+    return Result<void*, Error>(abi::syscall(SYS_mmap, addr, length, prot, flags | MAP_ANONYMOUS));
 }
 
 }}

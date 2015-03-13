@@ -6,7 +6,7 @@
 #include "c/struct-utsname.h"
 
 #include "Result.hxx"
-#include "__call-1.hxx"
+#include "abi/syscall-1.hxx"
 
 namespace linux {
 
@@ -20,7 +20,7 @@ uname(struct utsname* buf) noexcept
         EFAULT_ = EFAULT,
     };
 
-    return Result<void, Error>(__call(SYS_uname, buf));
+    return Result<void, Error>(abi::syscall(SYS_uname, buf));
 }
 
 }

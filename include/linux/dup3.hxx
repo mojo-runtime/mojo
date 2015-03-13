@@ -9,7 +9,7 @@
 #include "c/SYS_dup3.h"
 
 #include "Result.hxx"
-#include "__call-3.hxx"
+#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -40,7 +40,7 @@ dup3(int oldfd, int newfd, int flags) noexcept
         EMFILE_ = EMFILE,
     };
 
-    return Result<int, Error>(__call(SYS_dup3, oldfd, newfd, flags));
+    return Result<int, Error>(abi::syscall(SYS_dup3, oldfd, newfd, flags));
 }
 
 }

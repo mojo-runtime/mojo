@@ -4,7 +4,7 @@
 #include "c/EPOLL_CTL_DEL.h"
 
 #include "../epoll_ctl.hxx"
-#include "../__call-3.hxx"
+#include "abi/syscall-3.hxx"
 
 namespace linux { namespace epoll_ctl_ {
 
@@ -23,7 +23,7 @@ del(int epfd, int fd /*, struct epoll_event* event */) noexcept
         EPERM_ = EPERM,
     };
 
-    return Result<void, Error>(__call(SYS_epoll_ctl, epfd, EPOLL_CTL_DEL, fd));
+    return Result<void, Error>(abi::syscall(SYS_epoll_ctl, epfd, EPOLL_CTL_DEL, fd));
 }
 
 }}

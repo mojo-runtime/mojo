@@ -1,16 +1,16 @@
-#ifndef _linux_x86_64_call_2_hxx_
-#define _linux_x86_64_call_2_hxx_
+#ifndef _abi_x86_64_linux_syscall_2_hxx_
+#define _abi_x86_64_linux_syscall_2_hxx_
 
-#include "__Word.hxx"
+#include "../../Word.hxx"
 
-namespace linux { inline namespace _x86_64_ {
+namespace abi { inline namespace _x86_64_ { inline namespace _linux_ {
 
 template <typename A1, typename A2>
 static inline
-__Word
-__call(__Word number, A1 a1, A2 a2) noexcept
+Word
+syscall(Word number, A1 a1, A2 a2) noexcept
 {
-    __Word
+    Word
     output;
 
     register A1 r1 asm ("rdi") = a1;
@@ -26,6 +26,6 @@ __call(__Word number, A1 a1, A2 a2) noexcept
     return output;
 }
 
-}}
+}}}
 
 #endif

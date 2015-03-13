@@ -21,7 +21,7 @@
 #include "c/SYS_execve.h"
 
 #include "Result.hxx"
-#include "__call-3.hxx"
+#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -101,7 +101,7 @@ execve(const char* filename, char* const argv[], char* const envp[]) noexcept
         ETXTBSY_ = ETXTBSY,
     };
 
-    return Result<void, Error>(__call(SYS_execve, filename, argv, envp));
+    return Result<void, Error>(abi::syscall(SYS_execve, filename, argv, envp));
 }
 
 }

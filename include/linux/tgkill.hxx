@@ -7,7 +7,7 @@
 #include "c/SYS_tgkill.h"
 
 #include "Result.hxx"
-#include "__call-3.hxx"
+#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -27,7 +27,7 @@ tgkill(int tgid, int tid, int sig) noexcept
         ESRCH_ = ESRCH,
     };
 
-    return Result<void, Error>(__call(SYS_tgkill, tgid, tid, sig));
+    return Result<void, Error>(abi::syscall(SYS_tgkill, tgid, tid, sig));
 }
 
 }

@@ -11,7 +11,7 @@
 #include "c/size_t.h"
 
 #include "Result.hxx"
-#include "__call-2.hxx"
+#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -48,7 +48,7 @@ getcwd(char* buf, size_t size) noexcept
     // "The kernel system call just returns the length of the buffer filled
     // (which includes the ending '\0' character)"
 
-    return Result<size_t, Error>(__call(SYS_getcwd, buf, size));
+    return Result<size_t, Error>(abi::syscall(SYS_getcwd, buf, size));
 }
 
 }

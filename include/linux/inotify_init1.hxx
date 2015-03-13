@@ -8,7 +8,7 @@
 #include "c/SYS_inotify_init1.h"
 
 #include "Result.hxx"
-#include "__call-1.hxx"
+#include "abi/syscall-1.hxx"
 
 namespace linux {
 
@@ -31,7 +31,7 @@ inotify_init1(int flags) noexcept
         ENOMEM_ = ENOMEM,
     };
 
-    return Result<int, Error>(__call(SYS_inotify_init1, flags));
+    return Result<int, Error>(abi::syscall(SYS_inotify_init1, flags));
 }
 
 static inline

@@ -12,7 +12,7 @@
 #include "c/struct-epoll_event.h"
 
 #include "Result.hxx"
-#include "__call-4.hxx"
+#include "abi/syscall-4.hxx"
 
 namespace linux {
 
@@ -52,7 +52,7 @@ epoll_ctl(int epfd, int op, int fd, struct epoll_event* event) noexcept
         EPERM_ = EPERM,
     };
 
-    return Result<void, Error>(__call(SYS_epoll_ctl, epfd, op, fd, event));
+    return Result<void, Error>(abi::syscall(SYS_epoll_ctl, epfd, op, fd, event));
 }
 
 }

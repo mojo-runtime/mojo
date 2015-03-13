@@ -9,7 +9,7 @@
 #include "c/struct-epoll_event.h"
 
 #include "Result.hxx"
-#include "__call-4.hxx"
+#include "abi/syscall-4.hxx"
 
 namespace linux {
 
@@ -41,7 +41,7 @@ epoll_wait(int epfd, struct epoll_event* events, int maxevents, int timeout) noe
 
     // ... unsigned, I guess?
 
-    return Result<unsigned, Error>(__call(SYS_epoll_wait, epfd, events, maxevents, timeout));
+    return Result<unsigned, Error>(abi::syscall(SYS_epoll_wait, epfd, events, maxevents, timeout));
 }
 
 }

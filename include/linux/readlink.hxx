@@ -14,7 +14,7 @@
 #include "c/size_t.h"
 
 #include "Result.hxx"
-#include "__call-3.hxx"
+#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -54,7 +54,7 @@ readlink(const char* pathname, char* buf, size_t bufsiz) noexcept
         ENOTDIR_ = ENOTDIR,
     };
 
-    return Result<size_t, Error>(__call(SYS_readlink, pathname, buf, bufsiz));
+    return Result<size_t, Error>(abi::syscall(SYS_readlink, pathname, buf, bufsiz));
 }
 
 }

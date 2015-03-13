@@ -12,7 +12,7 @@
 #include "c/SYS_chdir.h"
 
 #include "Result.hxx"
-#include "__call-1.hxx"
+#include "abi/syscall-1.hxx"
 
 namespace linux {
 
@@ -49,7 +49,7 @@ chdir(const char* path) noexcept
         ENOTDIR_ = ENOTDIR,
     };
 
-    return Result<void, Error>(__call(SYS_chdir, path));
+    return Result<void, Error>(abi::syscall(SYS_chdir, path));
 }
 
 }

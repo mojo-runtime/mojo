@@ -8,7 +8,7 @@
 #include "c/SYS_ioctl.h"
 
 #include "Result.hxx"
-#include "__call-3.hxx"
+#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -41,7 +41,7 @@ ioctl(int fd, int request, Arg arg) noexcept
         ENOTTY_ = ENOTTY,
     };
 
-    return Result<void, Error>(__call(SYS_ioctl, fd, request, arg));
+    return Result<void, Error>(abi::syscall(SYS_ioctl, fd, request, arg));
 }
 
 }

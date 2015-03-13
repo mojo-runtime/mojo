@@ -6,7 +6,7 @@
 #include "c/SYS_inotify_rm_watch.h"
 
 #include "Result.hxx"
-#include "__call-2.hxx"
+#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -25,7 +25,7 @@ inotify_rm_watch(int fd, int wd) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(__call(SYS_inotify_rm_watch, fd, wd));
+    return Result<void, Error>(abi::syscall(SYS_inotify_rm_watch, fd, wd));
 }
 
 }

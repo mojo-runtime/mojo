@@ -4,7 +4,7 @@
 #include "c/SYS_getegid.h"
 #include "c/gid_t.h"
 
-#include "__call-0.hxx"
+#include "abi/syscall-0.hxx"
 
 namespace linux {
 
@@ -12,7 +12,7 @@ static inline
 gid_t
 getegid() noexcept
 {
-    return static_cast<gid_t>(__call(SYS_getegid));
+    return static_cast<gid_t>(abi::syscall(SYS_getegid));
 }
 
 }

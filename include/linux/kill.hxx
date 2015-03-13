@@ -8,7 +8,7 @@
 #include "c/pid_t.h"
 
 #include "Result.hxx"
-#include "__call-2.hxx"
+#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -29,7 +29,7 @@ kill(pid_t pid, int sig) noexcept
         ESRCH_ = ESRCH,
     };
 
-    return Result<void, Error>(__call(SYS_kill, pid, sig));
+    return Result<void, Error>(abi::syscall(SYS_kill, pid, sig));
 }
 
 }

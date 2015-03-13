@@ -3,7 +3,7 @@
 
 #include "c/SYS_exit.h"
 
-#include "__call-1.hxx"
+#include "abi/syscall-1.hxx"
 
 namespace linux {
 
@@ -12,7 +12,7 @@ static inline
 void
 exit(int status) noexcept
 {
-    __call(SYS_exit, status);
+    abi::syscall(SYS_exit, status);
     __builtin_unreachable();
 }
 
