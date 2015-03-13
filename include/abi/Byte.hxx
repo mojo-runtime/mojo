@@ -1,11 +1,11 @@
 #ifndef _abi_Byte_hxx_
 #define _abi_Byte_hxx_
 
-#include "compat/has_attribute_mode.h"
+#include "compat/__has_attribute.h"
 
 namespace abi {
 
-#if has_attribute_mode
+#if __has_attribute(mode)
 typedef unsigned int Byte __attribute__((__mode__(__byte__)));
 #else
 #  error
