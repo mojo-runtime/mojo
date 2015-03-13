@@ -243,8 +243,6 @@
 #include "PTRDIFF_MAX.h"
 #include "PTRDIFF_MIN.h"
 
-#include "RAND_MAX.h"
-
 #include "SCHAR_MAX.h"
 #include "SCHAR_MIN.h"
 
