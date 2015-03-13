@@ -1,5 +1,5 @@
-#ifndef std_remove_reference_hxx_
-#define std_remove_reference_hxx_
+#ifndef _std_remove_reference_hxx_
+#define _std_remove_reference_hxx_
 
 namespace std {
 
