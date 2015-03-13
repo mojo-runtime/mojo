@@ -7,10 +7,6 @@
 
 #include "_Noreturn.h"
 
-#include "__has_attribute.h"
-#include "__has_builtin.h"
-#include "__has_feature.h"
-
 #include "__POINTER_WIDTH__.h"
 
 #if __has_builtin(__builtin_addressof) || !defined(__cplusplus)
