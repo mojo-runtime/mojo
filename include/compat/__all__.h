@@ -46,7 +46,6 @@
 #include "has_ieee754_double.h"
 #include "has_ieee754_float.h"
 
-#include "x_nothrow.h"
 #include "x_reinterpret_cast.h"
 #include "x_static_cast.h"
 
