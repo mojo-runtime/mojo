@@ -1,10 +1,10 @@
 #ifndef _linux_Result_hxx_
 #define _linux_Result_hxx_
 
-#include "c/assert.h"
 #include "compat/__POINTER_WIDTH__.h"
 
 #include "abi/Word.hxx"
+#include "std/assert!.hxx"
 
 namespace linux {
 
