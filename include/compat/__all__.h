@@ -8,8 +8,7 @@
 
 #include "_Noreturn.h"
 
-#include "_has_clang_minor.h"
-
+#include "__has_attribute.h"
 #include "__has_builtin.h"
 #include "__has_feature.h"
 
