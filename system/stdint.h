@@ -211,13 +211,11 @@
 #include "c/INT16_C.h"
 #include "c/INT32_C.h"
 #include "c/INT64_C.h"
-#endif
 
 #include "c/UINT8_C.h"
 #include "c/UINT16_C.h"
 #include "c/UINT32_C.h"
 #include "c/UINT64_C.h"
-#endif
 
 //------------------------------------------------------------------------------------------------//
 // * Macros for greatest-width integer constant expressions
