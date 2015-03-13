@@ -9,8 +9,8 @@
 #    error - not sure when they added support
 #  endif
 #elif defined(__GNUC__)
-#  include "_has_gnuc_minor.h"
-#  define has_c_noreturn _has_gnuc_minor(4, 7)
+#  include "_gnuc/has_version!.h"
+#  define has_c_noreturn _gnuc_has_version(4, 7)
 #else
 #  error
 #endif

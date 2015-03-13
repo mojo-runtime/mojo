@@ -1,8 +1,8 @@
 #ifndef __builtin_assume_aligned
 
-#include "has_builtin_assume_aligned.h"
+#include "__has_builtin.h"
 
-#if !has_builtin_assume_aligned
+#if !__has_builtin(__builtin_assume_aligned)
 #  define __builtin_assume_aligned(x, ...) (x)
 #endif
 

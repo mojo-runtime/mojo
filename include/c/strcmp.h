@@ -1,9 +1,9 @@
 #ifndef _c_strcmp_h_
 #define _c_strcmp_h_
 
-#include "compat/has_builtin_strcmp.h"
+#include "compat/__has_builtin.h"
 
-#if has_builtin_strcmp
+#if __has_builtin(__builtin_strcmp)
 #  define strcmp __builtin_strcmp
 #else
 #  error

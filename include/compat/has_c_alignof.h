@@ -5,8 +5,8 @@
 #  include "_has_clang_minor.h"
 #  define has_c_alignof _has_clang_minor(3, 3)
 #elif defined(__GNUC__)
-#  include "_has_gnuc_minor.h"
-#  define has_c_alignof _has_gnuc_minor(4, 7)
+#  include "_gnuc/has_version!.h"
+#  define has_c_alignof _gnuc_has_version(4, 7)
 #else
 #  error
 #endif

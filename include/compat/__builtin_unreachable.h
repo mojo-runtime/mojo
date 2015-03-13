@@ -1,8 +1,8 @@
 #ifndef __builtin_unreachable
 
-#include "has_builtin_unreachable.h"
+#include "__has_builtin.h"
 
-#if !has_builtin_unreachable
+#if !__has_builtin(__builtin_unreachable)
 #  error
 #endif
 

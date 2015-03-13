@@ -1,8 +1,8 @@
 #ifndef __builtin_assume
 
-#include "has_builtin_assume.h"
+#include "__has_builtin.h"
 
-#if !has_builtin_assume
+#if !__has_builtin(__builtin_assume)
 #  define __builtin_assume(x)
 #endif
 

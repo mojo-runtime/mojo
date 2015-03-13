@@ -10,27 +10,6 @@
 #include "has_attribute_unused.h"
 #include "has_attribute_used.h"
 
-#include "has_builtin_addressof.h"
-#include "has_builtin_alloca.h"
-#include "has_builtin_assume.h"
-#include "has_builtin_assume_aligned.h"
-#include "has_builtin_bswap32.h"
-#include "has_builtin_bswap64.h"
-#include "has_builtin_constant_p.h"
-#include "has_builtin_expect.h"
-#include "has_builtin_memcmp.h"
-#include "has_builtin_memcpy.h"
-#include "has_builtin_memset.h"
-#include "has_builtin_offsetof.h"
-#include "has_builtin_strcmp.h"
-#include "has_builtin_strlen.h"
-#include "has_builtin_unreachable.h"
-#include "has_builtin_va_arg.h"
-#include "has_builtin_va_copy.h"
-#include "has_builtin_va_end.h"
-#include "has_builtin_va_list.h"
-#include "has_builtin_va_start.h"
-
 #include "has_c_alignas.h"
 #include "has_c_alignof.h"
 #include "has_c_boolean_type.h"
@@ -50,7 +29,8 @@
 #include "_Noreturn.h"
 
 #include "_has_clang_minor.h"
-#include "_has_gnuc_minor.h"
+
+#include "__has_builtin.h"
 
 #include "__INT8_TYPE__.h"
 #include "__INT16_TYPE__.h"
@@ -66,7 +46,7 @@
 #include "__UINT32_TYPE__.h"
 #include "__UINT64_TYPE__.h"
 
-#if has_builtin_addressof || !defined(__cplusplus)
+#if __has_builtin(__builtin_addressof) || !defined(__cplusplus)
 #  include "__builtin_addressof.h"
 #else
 #  warning "__builtin_addressof: not implemented"

@@ -1,8 +1,8 @@
 #ifndef __builtin_constant_p
 
-#include "has_builtin_constant_p.h"
+#include "__has_builtin.h"
 
-#if !has_builtin_constant_p
+#if !__has_builtin(__builtin_constant_p)
 #  error
 #endif
 

@@ -1,11 +1,7 @@
 #ifndef offsetof
 
-#include "compat/has_builtin_offsetof.h"
+#include "compat/__builtin_offsetof.h"
 
-#if has_builtin_offsetof
-#  define offsetof __builtin_offsetof
-#else
-#  error
-#endif
+#define offsetof __builtin_offsetof
 
 #endif

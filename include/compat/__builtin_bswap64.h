@@ -1,8 +1,8 @@
 #ifndef __builtin_bswap64
 
-#include "has_builtin_bswap64.h"
+#include "__has_builtin.h"
 
-#if !has_builtin_bswap64
+#if !__has_builtin(__builtin_bswap64)
 #  error
 #endif
 

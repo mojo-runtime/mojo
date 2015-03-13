@@ -1,8 +1,8 @@
 #ifndef alloca
 
-#include "compat/has_builtin_alloca.h"
+#include "compat/__has_builtin.h"
 
-#if has_builtin_alloca
+#if __has_builtin(__builtin_alloca)
 #  define alloca __builtin_alloca
 #else
 #  error

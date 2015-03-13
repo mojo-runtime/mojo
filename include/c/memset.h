@@ -1,9 +1,9 @@
 #ifndef _c_memset_h_
 #define _c_memset_h_
 
-#include "compat/has_builtin_memset.h"
+#include "compat/__has_builtin.h"
 
-#if has_builtin_memset
+#if __has_builtin(__builtin_memset)
 #  define memset __builtin_memset
 #else
 #  error

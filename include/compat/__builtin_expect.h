@@ -1,8 +1,8 @@
 #ifndef __builtin_expect
 
-#include "has_builtin_expect.h"
+#include "__has_builtin.h"
 
-#if !has_builtin_expect
+#if !__has_builtin(__builtin_expect)
 #  define __builtin_expect(x, y)
 #endif
 

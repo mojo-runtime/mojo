@@ -1,8 +1,8 @@
 #ifndef __builtin_addressof
 
-#include "has_builtin_addressof.h"
+#include "__has_builtin.h"
 
-#if !has_builtin_addressof
+#if !__has_builtin(__builtin_addressof)
 #  if !defined(__cplusplus)
 #    define __builtin_addressof(x) (&(x))
 #  else
