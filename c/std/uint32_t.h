@@ -1,8 +1,8 @@
 #ifndef _c_uint32_t_h_
 #define _c_uint32_t_h_
 
-#include "compat/__UINT32_TYPE__.h"
+#include "../__U32.h"
 
-typedef __UINT32_TYPE__ uint32_t;
+typedef __U32 uint32_t;
 
 #endif

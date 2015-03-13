@@ -1,8 +1,8 @@
 #ifndef _c_int64_t_h_
 #define _c_int64_t_h_
 
-#include "compat/__INT64_TYPE__.h"
+#include "../__S64.h"
 
-typedef __INT64_TYPE__ int64_t;
+typedef __S64 int64_t;
 
 #endif

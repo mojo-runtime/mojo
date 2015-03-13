@@ -1,8 +1,8 @@
 #ifndef _c_size_t_h_
 #define _c_size_t_h_
 
-#include "compat/__SIZE_TYPE__.h"
+#include "../__Word.h"
 
-typedef __SIZE_TYPE__ size_t;
+typedef __Word size_t;
 
 #endif

@@ -11,19 +11,7 @@
 #include "__has_builtin.h"
 #include "__has_feature.h"
 
-#include "__INT8_TYPE__.h"
-#include "__INT16_TYPE__.h"
-#include "__INT32_TYPE__.h"
-#include "__INT64_TYPE__.h"
-
 #include "__POINTER_WIDTH__.h"
-
-#include "__SIZE_TYPE__.h"
-
-#include "__UINT8_TYPE__.h"
-#include "__UINT16_TYPE__.h"
-#include "__UINT32_TYPE__.h"
-#include "__UINT64_TYPE__.h"
 
 #if __has_builtin(__builtin_addressof) || !defined(__cplusplus)
 #  include "__builtin_addressof.h"

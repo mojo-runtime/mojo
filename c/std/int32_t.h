@@ -1,8 +1,8 @@
 #ifndef _c_int32_t_h_
 #define _c_int32_t_h_
 
-#include "compat/__INT32_TYPE__.h"
+#include "../__S32.h"
 
-typedef __INT32_TYPE__ int32_t;
+typedef __S32 int32_t;
 
 #endif
