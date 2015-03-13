@@ -11,7 +11,7 @@ struct enable_if
 template <typename T>
 struct enable_if<true, T>
 {
-    typedef T type;
+    using type = T;
 };
 
 } // namespace std

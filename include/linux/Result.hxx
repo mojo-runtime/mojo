@@ -1,10 +1,9 @@
 #ifndef _linux_Result_hxx_
 #define _linux_Result_hxx_
 
-#include "compat/__POINTER_WIDTH__.h"
-
 #include "abi/Word.hxx"
 #include "std/assert!.hxx"
+#include "std/enable_if_t.hxx"
 
 namespace linux {
 
@@ -20,14 +19,10 @@ struct Result
     //--------------------------------------------------------------------------------------------//
 
     constexpr
-    bool
+    std::enable_if_t<sizeof(abi::Word)==8, bool>
     is_error() const noexcept
     {
-#if (__POINTER_WIDTH__ == 64)
         return this->__word > 0xFFFFFFFFFFFFF000UL;
-#else
-#  error
-#endif
     }
 
     constexpr
