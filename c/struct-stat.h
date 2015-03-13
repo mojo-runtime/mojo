@@ -29,7 +29,7 @@
 #  include "off_t.h"
 #  include "struct-timespec.h"
 #  include "uid_t.h"
-#  include "_c_static_cast.h"
+#  include "__static_cast.h"
 #else
 #  error
 #endif
@@ -143,8 +143,8 @@ struct stat
     st_birthtim;
 
     // Padding hacks
-    unsigned int :(8 / 2) * (16 - _c_static_cast(int, sizeof(struct timespec)));
-    unsigned int :(8 / 2) * (16 - _c_static_cast(int, sizeof(struct timespec)));
+    unsigned int :(8 / 2) * (16 - __static_cast(int, sizeof(struct timespec)));
+    unsigned int :(8 / 2) * (16 - __static_cast(int, sizeof(struct timespec)));
 #else
 #  error
 #endif
