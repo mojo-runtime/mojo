@@ -2,9 +2,6 @@
 #include "alignof.h"
 #include "static_assert.h"
 
-#include "has_ieee754_double.h"
-#include "has_ieee754_float.h"
-
 #include "_Noreturn.h"
 
 #include "__has_attribute.h"
