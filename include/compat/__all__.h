@@ -1,15 +1,5 @@
 #include "has_64_bit_integer_types.h"
 
-#include "has_attribute_error.h"
-#include "has_attribute_mode.h"
-#include "has_attribute_noreturn.h"
-#include "has_attribute_nothrow.h"
-#include "has_attribute_optimize.h"
-#include "has_attribute_optnone.h"
-#include "has_attribute_unavailable_with_message.h"
-#include "has_attribute_unused.h"
-#include "has_attribute_used.h"
-
 #include "has_c_alignas.h"
 #include "has_c_alignof.h"
 #include "has_c_boolean_type.h"

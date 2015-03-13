@@ -1,8 +1,8 @@
 #ifndef __used__
 
-#include "has_attribute_used.h"
+#include "__has_attribute.h"
 
-#if !has_attribute_used
+#if !__has_attribute(used)
 #  error
 #endif
 

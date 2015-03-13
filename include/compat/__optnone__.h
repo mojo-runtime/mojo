@@ -1,9 +1,9 @@
 #ifndef __optnone__
 
-#include "has_attribute_optnone.h"
+#include "__has_attribute.h"
 
-#if !has_attribute_optnone
-#  if has_attribute_optimize
+#if !__has_attribute(optnone)
+#  if __has_attribute(optimize)
 #    define __optnone__ __optimize__(0)
 #  else
 #    error

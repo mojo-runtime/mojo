@@ -1,10 +1,9 @@
 #ifndef __unavailable__
 
-#include "has_attribute_unavailable_with_message.h"
+#include "__has_attribute.h"
 
-#if !has_attribute_unavailable_with_message
-#  include "has_attribute_error.h"
-#  if has_attribute_error
+#if !__has_attribute(unavailable)
+#  if __has_attribute(error)
 #    define __unavailable__(message) __error__(message)
 #  else
 #    error

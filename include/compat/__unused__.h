@@ -1,8 +1,8 @@
 #ifndef __unused__
 
-#include "has_attribute_unused.h"
+#include "__has_attribute.h"
 
-#if !has_attribute_unused
+#if !__has_attribute(unused)
 #  error
 #endif
 
