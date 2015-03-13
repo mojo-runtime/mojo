@@ -1,10 +1,10 @@
-#ifndef INT64_MIN
+#ifndef INT_MIN
 
 #include "../__SIGNED_INTEGER_REPRESENTATION.h"
 
 #if __SIGNED_INTEGER_REPRESENTATION == __SIGNED_INTEGER_REPRESENTATION_TWOS_COMPLEMENT
-#  include "INT64_MAX.h"
-#  define INT64_MIN (-INT64_MAX - 1)
+#  include "INT_MAX.h"
+#  define INT_MIN (-INT_MAX - 1)
 #else
 #  error
 #endif

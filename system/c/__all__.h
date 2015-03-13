@@ -1,3 +1,4 @@
+#include <limits.h>
 #include <stdalign.h>
 #include <stdarg.h>
 #include <stdbool.h>

@@ -32,6 +32,10 @@
 #  include "AT_UID.h"
 #endif
 
+#include "CHAR_BIT.h"
+#include "CHAR_MAX.h"
+#include "CHAR_MIN.h"
+
 #if defined(__unix__)
 #  include "CLD_CONTINUED.h"
 #  include "CLD_DUMPED.h"
@@ -183,6 +187,13 @@
 #include "INT_LEAST64_MIN.h"
 
 #include "INT_MAX.h"
+#include "INT_MIN.h"
+
+#include "LLONG_MAX.h"
+#include "LLONG_MIN.h"
+
+#include "LONG_MAX.h"
+#include "LONG_MIN.h"
 
 #if defined(__unix__)
 #  include "MAP_ANONYMOUS.h"
@@ -233,6 +244,12 @@
 #include "PTRDIFF_MIN.h"
 
 #include "RAND_MAX.h"
+
+#include "SCHAR_MAX.h"
+#include "SCHAR_MIN.h"
+
+#include "SHRT_MAX.h"
+#include "SHRT_MIN.h"
 
 #include "SIGABRT.h"
 #if defined(__unix__)
@@ -361,6 +378,8 @@
 #  include "TCSETS.h"
 #  include "TCSETSW.h"
 #endif
+
+#include "UCHAR_MAX.h"
 
 #include "UINT8_C.h"
 #include "UINT16_C.h"
