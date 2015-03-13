@@ -2,6 +2,7 @@
 #ifndef __cstddef_
 #define __cstddef_
 
+#include "std/extent.hxx"
 #include "std/is_array.hxx"
 #include "std/is_same.hxx"
 
