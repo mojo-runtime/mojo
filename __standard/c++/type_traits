@@ -5,6 +5,7 @@
 #include "std/extent.hxx"
 #include "std/is_array.hxx"
 #include "std/is_same.hxx"
+#include "std/remove_extent.hxx"
 
 #warning todo
 
