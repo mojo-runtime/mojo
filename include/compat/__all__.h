@@ -1,26 +1,17 @@
+#include "alignas.h"
+#include "alignof.h"
+#include "static_assert.h"
+
 #include "has_64_bit_integer_types.h"
-
-#include "has_c_alignas.h"
-#include "has_c_alignof.h"
-#include "has_c_boolean_type.h"
-#include "has_c_noreturn.h"
-#include "has_c_static_assert.h"
-
-#include "has_cxx_alignas.h"
-#include "has_cxx_alignof.h"
-#include "has_cxx_exceptions.h"
-#include "has_cxx_rtti.h"
-#include "has_cxx_static_assert.h"
-
 #include "has_ieee754_double.h"
 #include "has_ieee754_float.h"
 
-#include "_Bool.h"
 #include "_Noreturn.h"
 
 #include "_has_clang_minor.h"
 
 #include "__has_builtin.h"
+#include "__has_feature.h"
 
 #include "__INT8_TYPE__.h"
 #include "__INT16_TYPE__.h"

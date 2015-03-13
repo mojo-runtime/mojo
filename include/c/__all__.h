@@ -402,8 +402,6 @@
 #endif
 
 #include "abs.h"
-#include "alignas.h"
-#include "alignof.h"
 #include "alloca.h"
 
 #if defined(__ELF__)
@@ -414,8 +412,6 @@
 #  include "blkcnt_t.h"
 #  include "blksize_t.h"
 #endif
-
-#include "bool.h"
 
 #if defined(__unix__)
 #  include "cc_t.h"
@@ -437,7 +433,6 @@
 #endif
 
 #include "errno_t.h"
-#include "false.h"
 
 #if defined(__unix__)
 #  include "gid_t.h"
@@ -492,7 +487,6 @@
 #endif
 
 #include "ssize_t.h"
-#include "static_assert.h"
 #include "strcmp.h"
 #include "strlen.h"
 
@@ -511,8 +505,6 @@
 #  include "suseconds_t.h"
 #  include "tcflag_t.h"
 #endif
-
-#include "true.h"
 
 #if defined(__unix__)
 #  include "uid_t.h"
