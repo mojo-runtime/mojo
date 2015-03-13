@@ -7,8 +7,6 @@
 
 #include "_Noreturn.h"
 
-#include "__POINTER_WIDTH__.h"
-
 #if __has_builtin(__builtin_addressof) || !defined(__cplusplus)
 #  include "__builtin_addressof.h"
 #else

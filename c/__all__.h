@@ -1,3 +1,4 @@
+#include "compat/__all__.h"
 #include "std/__all__.h"
 
 #include "__S8.h"
