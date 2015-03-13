@@ -1,7 +1,9 @@
 #ifndef INTMAX_MAX
-#  ifdef __INTMAX_MAX__
-#    define INTMAX_MAX __INTMAX_MAX__
-#  else
-#    error
-#  endif
+
+#if defined(__INTMAX_MAX__)
+#  define INTMAX_MAX __INTMAX_MAX__
+#else
+#  error
+#endif
+
 #endif

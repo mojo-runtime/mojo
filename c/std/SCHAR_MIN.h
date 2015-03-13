@@ -1,3 +1,12 @@
 #ifndef SCHAR_MIN
-#define SCHAR_MIN (-128)
+
+#include "../__SIGNED_INTEGER_REPRESENTATION.h"
+
+#if __SIGNED_INTEGER_REPRESENTATION == __SIGNED_INTEGER_REPRESENTATION_TWOS_COMPLEMENT
+#  include "SCHAR_MAX.h"
+#  define SCHAR_MIN (-SCHAR_MAX - 1)
+#else
+#  error
+#endif
+
 #endif

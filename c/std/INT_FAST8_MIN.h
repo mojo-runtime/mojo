@@ -1,3 +1,12 @@
 #ifndef INT_FAST8_MIN
-#define INT_FAST8_MIN (-128)
+
+#include "../__SIGNED_INTEGER_REPRESENTATION.h"
+
+#if __SIGNED_INTEGER_REPRESENTATION == __SIGNED_INTEGER_REPRESENTATION_TWOS_COMPLEMENT
+#  include "INT_FAST8_MAX.h"
+#  define INT_FAST8_MIN (-INT_FAST8_MAX - 1)
+#else
+#  error
+#endif
+
 #endif

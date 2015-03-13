@@ -1,7 +1,9 @@
-#ifdef UINT_FAST32_MAX
-#  ifdef __UINT_FAST32_MAX__
-#    define UINT_FAST32_MAX __UINT_FAST32_MAX__
-#  else
-#    error
-#  endif
+#ifndef UINT_FAST32_MAX
+
+#if defined(__UINT_FAST32_MAX__)
+#  define UINT_FAST32_MAX __UINT_FAST32_MAX__
+#else
+#  error
+#endif
+
 #endif

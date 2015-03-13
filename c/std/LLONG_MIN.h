@@ -1,4 +1,12 @@
 #ifndef LLONG_MIN
+
+#include "../__SIGNED_INTEGER_REPRESENTATION.h"
+
+#if __SIGNED_INTEGER_REPRESENTATION == __SIGNED_INTEGER_REPRESENTATION_TWOS_COMPLEMENT
 #  include "LLONG_MAX.h"
 #  define LLONG_MIN (-LLONG_MAX - 1LL)
+#else
+#  error
+#endif
+
 #endif

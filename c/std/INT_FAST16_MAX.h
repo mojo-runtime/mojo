@@ -1,7 +1,9 @@
-#ifdef INT_FAST16_MAX
-#  ifdef __INT_FAST16_MAX__
-#    define INT_FAST16_MAX __INT_FAST16_MAX__
-#  else
-#    error
-#  endif
+#ifndef INT_FAST16_MAX
+
+#if defined(__INT_FAST16_MAX__)
+#  define INT_FAST16_MAX __INT_FAST16_MAX__
+#else
+#  error
+#endif
+
 #endif
