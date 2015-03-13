@@ -1,2 +1,9 @@
 // -*- C++ -*-
-#error not implemented
+#ifndef __cstddef_
+#define __cstddef_
+
+#include "std/size_t.hxx"
+
+#warning todo
+
+#endif

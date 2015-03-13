@@ -1,2 +1,7 @@
 // -*- C++ -*-
-#error not implemented
+#ifndef __memory_
+#define __memory_
+
+#warning todo
+
+#endif

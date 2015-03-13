@@ -1,2 +1,7 @@
 // -*- C++ -*-
-#error not implemented
+#ifndef __cstdlib_
+#define __cstdlib_
+
+#warning todo
+
+#endif

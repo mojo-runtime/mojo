@@ -1,2 +1,9 @@
 // -*- C++ -*-
-#error not implemented
+#ifndef __cstddef_
+#define __cstddef_
+
+#include "is_same.hxx"
+
+#warning todo
+
+#endif
