@@ -10,7 +10,7 @@ struct Environment
   private:
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-private-field"
-    architecture::Byte*
+    abi::Byte*
     __pointers[1]; // At least
 #pragma clang diagnostic pop
 };

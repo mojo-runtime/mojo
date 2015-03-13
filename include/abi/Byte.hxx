@@ -1,9 +1,9 @@
-#ifndef _architecture_Byte_hxx_
-#define _architecture_Byte_hxx_
+#ifndef _abi_Byte_hxx_
+#define _abi_Byte_hxx_
 
 #include "compat/has_attribute_mode.h"
 
-namespace architecture {
+namespace abi {
 
 #if has_attribute_mode
 typedef unsigned int Byte __attribute__((__mode__(__byte__)));
@@ -11,6 +11,6 @@ typedef unsigned int Byte __attribute__((__mode__(__byte__)));
 #  error
 #endif
 
-} // namespace architecture
+} // namespace abi
 
 #endif

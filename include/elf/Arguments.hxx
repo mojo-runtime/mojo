@@ -1,8 +1,8 @@
 #ifndef _elf_Arguments_hxx_
 #define _elf_Arguments_hxx_
 
-#include "architecture/Byte.hxx"
-#include "architecture/Word.hxx"
+#include "abi/Byte.hxx"
+#include "abi/Word.hxx"
 
 namespace elf {
 
@@ -13,10 +13,10 @@ struct Arguments
   private:
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-private-field"
-    architecture::Word
+    abi::Word
     __count;
 
-    architecture::Byte*
+    abi::Byte*
     __pointers[1]; // At least
 #pragma clang diagnostic pop
 };
