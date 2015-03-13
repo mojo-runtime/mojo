@@ -7,6 +7,7 @@
 #define _gnuc_has_feature_c_static_assert   _gnuc_has_version(4, 6)
 #define _gnuc_has_feature_cxx_alignas       _gnuc_has_version(4, 8)
 #define _gnuc_has_feature_cxx_alignof       _gnuc_has_version(4, 8)
+#define _gnuc_has_feature_cxx_attributes    _gnuc_has_version(4, 8)
 #define _gnuc_has_feature_cxx_nullptr       _gnuc_has_version(4, 6)
 #define _gnuc_has_feature_cxx_static_assert _gnuc_has_version(4, 3)
 
