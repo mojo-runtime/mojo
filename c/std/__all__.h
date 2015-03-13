@@ -419,7 +419,6 @@
 #endif
 
 #include "abs.h"
-#include "alloca.h"
 
 #if defined(__ELF__)
 #  include "auxv_t.h"
