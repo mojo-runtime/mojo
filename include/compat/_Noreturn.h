@@ -1,8 +1,8 @@
 #ifndef _Noreturn
 
 #if defined(__cplusplus)
-#  include "has_cpp_attribute_noreturn.h"
-#  if has_cpp_attribute_noreturn
+#  include "__has_cpp_attribute.h"
+#  if __has_cpp_attribute(noreturn)
 #    pragma clang diagnostic push
 #    pragma clang diagnostic ignored "-Wreserved-id-macro"
 #    define _Noreturn [[noreturn]]
@@ -11,8 +11,8 @@
 #    error
 #  endif
 #else
-#  include "has_c_noreturn.h"
-#  if !has_c_noreturn
+#  include "__has_feature.h"
+#  if !__has_feature(c_noreturn)
 #    error
 #  endif
 #endif
