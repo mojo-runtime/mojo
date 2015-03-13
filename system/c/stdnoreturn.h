@@ -1,12 +1,13 @@
-#ifndef noreturn
+#ifndef __stdnoreturn_h_
+#define __stdnoreturn_h_
 
-#include "compat/__has_feature.h"
+#include "__has_feature.h"
 
 #if defined(__cplusplus)
 #  if __has_feature(cxx_attributes)
 //   Defining `noreturn` breaks `[[noreturn]]`, of course.
 //  In this case the standard says we're free to be a no-op, I think;
-//   Who knows, who cares, I'm not buying it.
+//  Who knows, who cares, I'm not buying it.
 #  else
 #    error
 #  endif
