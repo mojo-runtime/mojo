@@ -405,7 +405,6 @@
 #include "alignas.h"
 #include "alignof.h"
 #include "alloca.h"
-#include "assert.h"
 
 #if defined(__ELF__)
 #  include "auxv_t.h"
