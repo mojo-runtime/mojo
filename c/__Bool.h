@@ -1,4 +1,8 @@
-#ifndef __Bool
+#ifndef ___Bool_h_
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-id-macro"
+#define ___Bool_h_
+#pragma clang diagnostic pop
 
 #if defined(__cplusplus)
 typedef bool __Bool;
@@ -11,10 +15,5 @@ typedef _Bool __Bool;
 #else
 #  error
 #endif
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wreserved-id-macro"
-#define __Bool __Bool
-#pragma clang diagnostic pop
 
 #endif
