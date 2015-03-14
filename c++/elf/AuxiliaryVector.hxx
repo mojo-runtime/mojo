@@ -1,6 +1,6 @@
 #pragma once
 
-#include "abi/Word.hxx"
+#include "__Word.h"
 
 namespace elf {
 
@@ -9,7 +9,7 @@ struct AuxiliaryVector
     AuxiliaryVector() = delete;
 
   private:
-    enum class Kind : abi::Word
+    enum class Kind : __Word
     {
 #if defined(__x86_64__)
         null                            =  0, // AT_NULL
@@ -26,7 +26,7 @@ struct AuxiliaryVector
         user_id                         = 11, // AT_UID
         effective_user_id               = 12, // AT_EUID
         group_id                        = 13, // AT_GID
-        effective_group_id              = 14, // AT_EGID
+        effective_group_id              = 14  // AT_EGID
 #else
 #  error
 #endif
@@ -37,7 +37,7 @@ struct AuxiliaryVector
         Kind
         kind;
 
-        abi::Word
+        __Word
         data;
     };
 

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "abi/Byte.hxx"
-#include "abi/Word.hxx"
+#include "__Byte.h"
+#include "__Word.h"
 
 namespace elf {
 
@@ -9,19 +9,19 @@ struct InitialStack
 {
     // The "structure" on top of the stack after process initialization.
 
-    abi::Word
+    __Word
     argc() const
     {
         return this->__argument_count;
     }
 
-    abi::Byte**
+    __Byte**
     argv()
     {
         return this->__argument_pointers;
     }
 
-    abi::Byte**
+    __Byte**
     envp()
     {
         return this->argv() + this->argc() + 1;
@@ -33,12 +33,12 @@ struct InitialStack
 
     // Argument count
 
-    abi::Word
+    __Word
     __argument_count;
 
     // Argument pointers
 
-    abi::Byte*
+    __Byte*
     __argument_pointers[1]; // At least 1 - NULL terminated
 
     // Environment pointers …

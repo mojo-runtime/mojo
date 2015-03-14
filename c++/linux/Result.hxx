@@ -1,6 +1,7 @@
 #pragma once
 
-#include "abi/Word.hxx"
+#include "__Word.h"
+
 #include "std/assert!.hxx"
 #include "std/enable_if_t.hxx"
 
@@ -10,7 +11,7 @@ template <typename Ok, typename Error>
 struct Result
 {
     constexpr explicit
-    Result(abi::Word word)
+    Result(__Word word)
         : __word(word)
     {
     }
@@ -18,7 +19,7 @@ struct Result
     //--------------------------------------------------------------------------------------------//
 
     constexpr
-    std::enable_if_t<sizeof(abi::Word)==8, bool>
+    std::enable_if_t<sizeof(__Word)==8, bool>
     is_error() const noexcept
     {
         return this->__word > 0xFFFFFFFFFFFFF000UL;
@@ -58,7 +59,7 @@ struct Result
     }
 
   private:
-    abi::Word
+    __Word
     __word;
 };
 

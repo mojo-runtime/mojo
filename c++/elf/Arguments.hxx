@@ -1,7 +1,7 @@
 #pragma once
 
-#include "abi/Byte.hxx"
-#include "abi/Word.hxx"
+#include "__Byte.h"
+#include "__Word.h"
 
 namespace elf {
 
@@ -12,10 +12,10 @@ struct Arguments
   private:
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-private-field"
-    abi::Word
+    __Word
     __count;
 
-    abi::Byte*
+    __Byte*
     __pointers[1]; // At least
 #pragma clang diagnostic pop
 };
