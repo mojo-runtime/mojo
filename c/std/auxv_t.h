@@ -1,10 +1,11 @@
 #pragma once
 
+#include "../__Word.h"
+
 typedef struct
 {
-#if defined(__ELF__)
-    int
-    a_type __attribute__((__mode__(__word__)));
+    __Word
+    a_type;
 
     union
     {
@@ -18,8 +19,5 @@ typedef struct
         (*a_fnc)();
     }
     a_un;
-#else
-#  error
-#endif
 }
 auxv_t;
