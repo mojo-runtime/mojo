@@ -31,7 +31,6 @@
 #include "getegid.hxx"
 #include "geteuid.hxx"
 #include "getgid.hxx"
-#include "getpid.hxx"
 #include "getppid.hxx"
 #include "gettid.hxx"
 #include "getuid.hxx"

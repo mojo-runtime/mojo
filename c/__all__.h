@@ -407,6 +407,7 @@
 #endif
 #include "errno_t.h"
 #if defined(__unix__)
+#  include "getpid.h"
 #  include "gid_t.h"
 #  include "id_t.h"
 #  include "idtype_t.h"
