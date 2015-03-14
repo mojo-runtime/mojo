@@ -1,5 +1,4 @@
-#ifndef _c_siginfo_t_h_
-#define _c_siginfo_t_h_
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
@@ -173,6 +172,4 @@ siginfo_t;
 #  error
 #else
 #  error
-#endif
-
 #endif

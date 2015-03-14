@@ -1,5 +1,4 @@
-#ifndef _c_wchar_t_h_
-#define _c_wchar_t_h_
+#pragma once
 
 #ifndef __cplusplus
 
@@ -12,5 +11,3 @@ __WCHAR_TYPE__
 wchar_t;
 
 #endif // __cplusplus
-
-#endif

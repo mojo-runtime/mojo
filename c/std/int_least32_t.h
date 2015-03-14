@@ -1,5 +1,4 @@
-#ifndef _c_int_least32_t_h_
-#define _c_int_least32_t_h_
+#pragma once
 
 typedef
 #ifdef __INT_LEAST32_TYPE__
@@ -8,5 +7,3 @@ __INT_LEAST32_TYPE__
 #  error
 #endif
 int_least32_t;
-
-#endif

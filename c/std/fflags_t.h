@@ -1,5 +1,4 @@
-#ifndef _c_fflags_t_h_
-#define _c_fflags_t_h_
+#pragma once
 
 #if defined(__FreeBSD__)
 #  include "uint32_t.h"
@@ -7,6 +6,4 @@
    typedef uint32_t fflags_t;
 #else
 #  error
-#endif
-
 #endif

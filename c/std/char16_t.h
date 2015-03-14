@@ -1,5 +1,4 @@
-#ifndef _c_char16_t_h_
-#define _c_char16_t_h_
+#pragma once
 
 #ifdef __cplusplus
 // Assuming C++11
@@ -11,6 +10,4 @@ __CHAR16_TYPE__
 #    error
 #  endif
 char16_t;
-#endif
-
 #endif

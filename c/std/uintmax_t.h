@@ -1,5 +1,4 @@
-#ifndef _c_uintmax_t_h_
-#define _c_uintmax_t_h_
+#pragma once
 
 typedef
 #ifdef __UINTMAX_TYPE__
@@ -8,5 +7,3 @@ __UINTMAX_TYPE__
 #  error
 #endif
 uintmax_t;
-
-#endif

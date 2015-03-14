@@ -1,5 +1,4 @@
-#ifndef _c_idtype_t_h_
-#define _c_idtype_t_h_
+#pragma once
 
 typedef enum
 {
@@ -37,5 +36,3 @@ typedef enum
 #endif
 }
 idtype_t;
-
-#endif

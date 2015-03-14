@@ -1,5 +1,4 @@
-#ifndef _c_union_sigval_t_h_
-#define _c_union_sigval_t_h_
+#pragma once
 
 #if defined(__linux__) || defined(__FreeBSD__)
 union sigval
@@ -22,6 +21,4 @@ union sigval
 
 #else
 #  error
-#endif
-
 #endif

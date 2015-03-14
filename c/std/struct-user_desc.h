@@ -1,5 +1,4 @@
-#ifndef _c_struct_user_desc_h_
-#define _c_struct_user_desc_h_
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
@@ -25,6 +24,4 @@ struct user_desc
 #  endif
 #else
 #  error
-#endif
-
 #endif

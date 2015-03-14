@@ -1,5 +1,4 @@
-#ifndef _c_uintptr_t_h_
-#define _c_uintptr_t_h_
+#pragma once
 
 typedef
 #ifdef __UINTPTR_TYPE__
@@ -8,5 +7,3 @@ __UINTPTR_TYPE__
 #  error
 #endif
 uintptr_t;
-
-#endif

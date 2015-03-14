@@ -1,5 +1,4 @@
-#ifndef _c_struct_linux_dirent_h_
-#define _c_struct_linux_dirent_h_
+#pragma once
 
 struct linux_dirent
 {
@@ -30,5 +29,3 @@ struct linux_dirent
 #  error
 #endif
 };
-
-#endif

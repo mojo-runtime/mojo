@@ -1,5 +1,4 @@
-#ifndef _c_struct_termios_h_
-#define _c_struct_termios_h_
+#pragma once
 
 #if defined(__linux__)
 #  include "NCCS.h"
@@ -44,5 +43,3 @@ struct termios
     c_ospeed;
 #endif
 };
-
-#endif

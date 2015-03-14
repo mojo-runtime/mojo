@@ -1,5 +1,4 @@
-#ifndef _c_blkcnt_t_h_
-#define _c_blkcnt_t_h_
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
@@ -15,6 +14,4 @@
    typedef int64_t blkcnt_t;
 #else
 #  error
-#endif
-
 #endif

@@ -1,8 +1,5 @@
-#ifndef _c_size_t_h_
-#define _c_size_t_h_
+#pragma once
 
 #include "../__Word.h"
 
 typedef __Word size_t;
-
-#endif

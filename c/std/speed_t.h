@@ -1,5 +1,4 @@
-#ifndef _c_speed_t_h_
-#define _c_speed_t_h_
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
@@ -19,6 +18,4 @@
 #  endif
 #else
 #  error
-#endif
-
 #endif

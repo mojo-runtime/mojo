@@ -1,5 +1,4 @@
-#ifndef _c_auxv_t_h_
-#define _c_auxv_t_h_
+#pragma once
 
 typedef struct
 {
@@ -24,6 +23,3 @@ typedef struct
 #endif
 }
 auxv_t;
-
-#endif
-

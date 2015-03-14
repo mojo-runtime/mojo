@@ -1,5 +1,4 @@
-#ifndef _c_blksize_t_h_
-#define _c_blksize_t_h_
+#pragma once
 
 #if defined(__linux__)
 // Note that the kernel does not define this; we have to inspect `stat::st_blksize`.
@@ -16,6 +15,4 @@
    typedef int32_t blksize_t;
 #else
 #  error
-#endif
-
 #endif

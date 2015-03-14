@@ -1,5 +1,4 @@
-#ifndef _c_struct_stat_h_
-#define _c_struct_stat_h_
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
@@ -149,5 +148,3 @@ struct stat
 #  error
 #endif
 };
-
-#endif

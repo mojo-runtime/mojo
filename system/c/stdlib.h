@@ -1,5 +1,4 @@
-#ifndef _stdlib_h_
-#define _stdlib_h_
+#pragma once
 
 // Per: http://pubs.opengroup.org/onlinepubs/009695399/basedefs/stdlib.h.html
 
@@ -169,5 +168,3 @@
 
 #include "../c/wcstombs.h"
 #include "../c/wctomb.h"
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _c_struct_pt_regs_h_
-#define _c_struct_pt_regs_h_
+#pragma once
 
 #if defined(__x86_64__)
 struct pt_regs
@@ -30,6 +29,4 @@ struct pt_regs
 
 #else
 #  error
-#endif
-
 #endif

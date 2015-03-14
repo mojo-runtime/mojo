@@ -1,5 +1,4 @@
-#ifndef _c_struct_rusage_h_
-#define _c_struct_rusage_h_
+#pragma once
 
 #if defined(__linux__) || defined(__FreeBSD__)
 #  include "struct-timeval.h"
@@ -29,6 +28,4 @@ struct rusage
 
 #else
 #  error
-#endif
-
 #endif

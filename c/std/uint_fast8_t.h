@@ -1,5 +1,4 @@
-#ifndef _c_uint_fast8_t_h_
-#define _c_uint_fast8_t_h_
+#pragma once
 
 typedef
 #ifdef __UINT_FAST8_TYPE__
@@ -8,5 +7,3 @@ __UINT_FAST8_TYPE__
 #  error
 #endif
 uint_fast8_t;
-
-#endif

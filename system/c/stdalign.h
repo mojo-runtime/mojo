@@ -1,5 +1,4 @@
-#ifndef __stdalign_h_
-#define __stdalign_h_
+#pragma once
 
 #if !defined(__cplusplus)
 #  include "../__alignas.h"
@@ -10,5 +9,3 @@
 
 #define __alignas_is_defined 1
 #define __alignof_is_defined 1
-
-#endif

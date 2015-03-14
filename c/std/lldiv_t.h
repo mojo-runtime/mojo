@@ -1,5 +1,4 @@
-#ifndef _c_lldiv_t_h_
-#define _c_lldiv_t_h_
+#pragma once
 
 // Minimum (POSIX) definition
 
@@ -15,6 +14,3 @@ typedef struct
 #pragma clang diagnostic pop
 }
 lldiv_t;
-
-
-#endif

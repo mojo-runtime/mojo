@@ -1,5 +1,4 @@
-#ifndef __stdint_h_
-#define __stdint_h_
+#pragma once
 
 // Structure and comments follow:
 // http://pubs.opengroup.org/onlinepubs/009695399/basedefs/stdint.h.html
@@ -222,7 +221,3 @@
 
 #include "std/INTMAX_C.h"
 #include "std/UINTMAX_C.h"
-
-//------------------------------------------------------------------------------------------------//
-
-#endif

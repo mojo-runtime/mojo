@@ -1,5 +1,4 @@
-#ifndef _c_wint_t_h_
-#define _c_wint_t_h_
+#pragma once
 
 typedef
 #ifdef __WINT_TYPE__
@@ -8,5 +7,3 @@ __WINT_TYPE__
 #  error
 #endif
 wint_t;
-
-#endif

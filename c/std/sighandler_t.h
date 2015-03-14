@@ -1,6 +1,3 @@
-#ifndef _c_sighandler_t_h_
-#define _c_sighandler_t_h_
+#pragma once
 
 typedef void (*sighandler_t)(int);
-
-#endif

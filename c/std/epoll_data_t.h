@@ -1,5 +1,4 @@
-#ifndef _c_epoll_data_t_h_
-#define _c_epoll_data_t_h_
+#pragma once
 
 #if defined(__linux__)
 #  include "uint32_t.h"
@@ -26,6 +25,4 @@ epoll_data_t;
 
 #else
 #  error
-#endif
-
 #endif

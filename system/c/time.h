@@ -1,5 +1,4 @@
-#ifndef _time_h_
-#define _time_h_
+#pragma once
 
 // Per: http://pubs.opengroup.org/onlinepubs/009695399/basedefs/time.h.html
 
@@ -129,5 +128,3 @@
 #endif
 
 #include "../c/tzname.h"
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _c_struct_utsname_h_
-#define _c_struct_utsname_h_
+#pragma once
 
 struct utsname
 {
@@ -18,5 +17,3 @@ struct utsname
     char domainname[N];
 #undef N
 };
-
-#endif

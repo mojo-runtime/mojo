@@ -1,5 +1,4 @@
-#ifndef _c_ptrdiff_t_h_
-#define _c_ptrdiff_t_h_
+#pragma once
 
 typedef
 #ifdef __PTRDIFF_TYPE__
@@ -8,5 +7,3 @@ __PTRDIFF_TYPE__
 #  error
 #endif
 ptrdiff_t;
-
-#endif

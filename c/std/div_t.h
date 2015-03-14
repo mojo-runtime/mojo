@@ -1,5 +1,4 @@
-#ifndef _c_div_t_h_
-#define _c_div_t_h_
+#pragma once
 
 // Minimum (POSIX) definition
 
@@ -12,5 +11,3 @@ typedef struct
     rem;
 }
 div_t;
-
-#endif

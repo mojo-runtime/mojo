@@ -1,5 +1,4 @@
-#ifndef _stddef_h_
-#define _stddef_h_
+#pragma once
 
 // See: http://flash-gordon.me.uk/ansi.c.txt,
 // "4.1.5 Common definitions <stddef.h>"
@@ -16,7 +15,3 @@
 
 #include "../c/NULL.h"
 #include "../c/offsetof.h"
-
-//------------------------------------------------------------------------------------------------//
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef __stdarg_h_
-#define __stdarg_h_
+#pragma once
 
 // Per: http://pubs.opengroup.org/onlinepubs/009695399/basedefs/stdarg.h.html
 
@@ -28,6 +27,3 @@
 // it invalidates ap for use (unless va_start() or va_copy() is invoked again).
 
 #include "std/va_end.h"
-
-#endif
-

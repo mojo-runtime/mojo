@@ -1,5 +1,4 @@
-#ifndef _c_noreturn_h_
-#define _c_noreturn_h_
+#pragma once
 
 #if !defined(__cplusplus)
 #  include "compat/has_c_noreturn.h"
@@ -8,6 +7,4 @@
 #  else
 #    error
 #  endif
-#endif
-
 #endif

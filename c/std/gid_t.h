@@ -1,5 +1,4 @@
-#ifndef _c_gid_t_h_
-#define _c_gid_t_h_
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
@@ -15,6 +14,4 @@
    typedef uint32_t gid_t;
 #else
 #  error
-#endif
-
 #endif

@@ -1,5 +1,4 @@
-#ifndef _c_struct_epoll_event_h_
-#define _c_struct_epoll_event_h_
+#pragma once
 
 #if defined(__linux__)
 #  include "epoll_data_t.h"
@@ -16,6 +15,4 @@ struct epoll_event
 
 #else
 #  error
-#endif
-
 #endif

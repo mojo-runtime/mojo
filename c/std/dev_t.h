@@ -1,5 +1,4 @@
-#ifndef _c_dev_t_h_
-#define _c_dev_t_h_
+#pragma once
 
 #if defined(__linux__)
 #  include "uint32_t.h"
@@ -11,6 +10,4 @@
    typedef uint32_t dev_t;
 #else
 #  error
-#endif
-
 #endif

@@ -1,5 +1,4 @@
-#ifndef _limits_h_
-#define _limits_h_
+#pragma once
 
 // http://en.cppreference.com/w/c/types/limits
 
@@ -28,5 +27,3 @@
 #include "std/UINT_MAX.h"
 #include "std/ULONG_MAX.h"
 #include "std/ULLONG_MAX.h"
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _c_struct_timeval_h_
-#define _c_struct_timeval_h_
+#pragma once
 
 #if defined(__linux__) || defined(__FreeBSD__)
 #  include "time_t.h"
@@ -16,6 +15,4 @@ struct timeval
 
 #else
 #  error
-#endif
-
 #endif

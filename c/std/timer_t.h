@@ -1,5 +1,4 @@
-#ifndef _c_timer_t_h_
-#define _c_timer_t_h_
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
@@ -11,6 +10,4 @@
 #  endif
 #else
 #  error
-#endif
-
 #endif
