@@ -9,9 +9,9 @@
 #include "EISDIR.h"
 #include "SYS_read.h"
 #include "size_t.h"
+#include "__syscall3.h"
 
 #include "Result.hxx"
-#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -54,7 +54,7 @@ read(int fd, void* buf, size_t count) noexcept
         //   XXX: totally ignoring this
     };
 
-    return Result<size_t, Error>(abi::syscall(SYS_read, fd, buf, count));
+    return Result<size_t, Error>(__syscall3(SYS_read, fd, buf, count));
 }
 
 template <typename T, size_t n>
@@ -78,7 +78,7 @@ read(int fd, T(& array)[n]) noexcept
     // return read(fd, array, n * sizeof(T))._with_error<Error>();
     // return read(fd, array, n * sizeof(T)).template _with_error<Error>();
 
-    return Result<size_t, Error>(_syscall_3(SYS_read, fd, array, n * sizeof(T)));
+    return Result<size_t, Error>(_syscall3(SYS_read, fd, array, n * sizeof(T)));
 }
 
 }

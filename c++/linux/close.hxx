@@ -4,9 +4,9 @@
 #include "EINTR.h"
 #include "EIO.h"
 #include "SYS_close.h"
+#include "__syscall1.h"
 
 #include "Result.hxx"
-#include "abi/syscall-1.hxx"
 
 namespace linux {
 
@@ -26,7 +26,7 @@ close(int fd) noexcept
         EIO_ = EIO,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_close, fd));
+    return Result<void, Error>(__syscall1(SYS_close, fd));
 }
 
 }

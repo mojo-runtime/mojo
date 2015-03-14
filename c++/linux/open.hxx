@@ -25,9 +25,9 @@
 #include "ETXTBSY.h"
 #include "EWOULDBLOCK.h"
 #include "SYS_open.h"
+#include "__syscall2.h"
 
 #include "Result.hxx"
-#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -148,7 +148,7 @@ open(const char* pathname, int flags) noexcept
         EWOULDBLOCK_ = EWOULDBLOCK,
     };
 
-    return Result<int, Error>(abi::syscall(SYS_open, pathname, flags));
+    return Result<int, Error>(__syscall2(SYS_open, pathname, flags));
 }
 
 }

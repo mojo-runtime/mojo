@@ -9,9 +9,9 @@
 #include "pid_t.h"
 #include "siginfo_t.h"
 #include "struct-rusage.h"
+#include "__syscall5.h"
 
 #include "Result.hxx"
-#include "abi/syscall-5.hxx"
 
 namespace linux {
 
@@ -34,7 +34,7 @@ waitid(idtype_t idtype, id_t id, siginfo_t* infop, int options, struct rusage* u
     };
 
     return Result<pid_t, Error>(
-        abi::syscall(SYS_getdents, idtype, id, infop, options, usage)
+        __syscall5(SYS_getdents, idtype, id, infop, options, usage)
     );
 }
 

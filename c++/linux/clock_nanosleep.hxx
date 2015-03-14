@@ -6,9 +6,9 @@
 #include "SYS_clock_nanosleep.h"
 #include "clockid_t.h"
 #include "struct-timespec.h"
+#include "__syscall4.h"
 
 #include "Result.hxx"
-#include "abi/syscall-4.hxx"
 
 namespace linux {
 
@@ -32,7 +32,7 @@ clock_nanosleep(clockid_t clock_id, int flags, const struct timespec* request, s
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_clock_nanosleep, clock_id, flags, request, remain));
+    return Result<void, Error>(__syscall4(SYS_clock_nanosleep, clock_id, flags, request, remain));
 }
 
 }

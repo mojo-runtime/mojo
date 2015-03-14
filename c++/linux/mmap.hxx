@@ -13,9 +13,9 @@
 #include "SYS_mmap.h"
 #include "off_t.h"
 #include "size_t.h"
+#include "__syscall6.h"
 
 #include "Result.hxx"
-#include "abi/syscall-6.hxx"
 
 namespace linux {
 
@@ -75,7 +75,7 @@ mmap(void* addr, size_t length, int prot, int flags, int fd, off_t offset) noexc
         ETXTBSY_ = ETXTBSY
     };
 
-    return Result<void*, Error>(abi::syscall(SYS_mmap, addr, length, prot, flags, fd, offset));
+    return Result<void*, Error>(__syscall6(SYS_mmap, addr, length, prot, flags, fd, offset));
 }
 
 }

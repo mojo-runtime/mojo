@@ -10,9 +10,9 @@
 #include "ENOSPC.h"
 #include "SYS_inotify_add_watch.h"
 #include "uint32_t.h"
+#include "__syscall3.h"
 
 #include "Result.hxx"
-#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -51,7 +51,7 @@ inotify_add_watch(int fd, const char* pathname, uint32_t mask) noexcept
         ENOSPC_ = ENOSPC,
     };
 
-    return Result<int, Error>(abi::syscall(SYS_inotify_add_watch, fd, pathname, mask));
+    return Result<int, Error>(__syscall3(SYS_inotify_add_watch, fd, pathname, mask));
 }
 
 }

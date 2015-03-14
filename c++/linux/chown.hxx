@@ -12,9 +12,9 @@
 #include "SYS_chown.h"
 #include "gid_t.h"
 #include "uid_t.h"
+#include "__syscall3.h"
 
 #include "Result.hxx"
-#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -52,7 +52,7 @@ chown(const char* pathname, uid_t owner, gid_t group) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_chown, pathname, owner, group));
+    return Result<void, Error>(__syscall3(SYS_chown, pathname, owner, group));
 }
 
 }

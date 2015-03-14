@@ -10,7 +10,7 @@ static inline
 auto
 vfork() noexcept
 {
-    return decltype(fork())(abi::syscall(SYS_vfork)); // Same Result
+    return decltype(fork())(__syscall0(SYS_vfork)); // Same Result
 }
 
 }

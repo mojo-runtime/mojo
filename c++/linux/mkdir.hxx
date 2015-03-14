@@ -15,9 +15,9 @@
 #include "EROFS.h"
 #include "SYS_mkdir.h"
 #include "mode_t.h"
+#include "__syscall2.h"
 
 #include "Result.hxx"
-#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -72,7 +72,7 @@ mkdir(const char* pathname, mode_t mode) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_mkdir, pathname, mode));
+    return Result<void, Error>(__syscall2(SYS_mkdir, pathname, mode));
 }
 
 }

@@ -2,8 +2,7 @@
 
 #include "SYS_gettid.h"
 #include "pid_t.h"
-
-#include "abi/syscall-0.hxx"
+#include "__syscall0.h"
 
 namespace linux {
 
@@ -11,7 +10,7 @@ static inline
 pid_t
 gettid() noexcept
 {
-    return static_cast<pid_t>(abi::syscall(SYS_gettid));
+    return static_cast<pid_t>(__syscall0(SYS_gettid));
 }
 
 }

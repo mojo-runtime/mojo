@@ -9,9 +9,9 @@
 #include "ENOMEM.h"
 #include "ENOTDIR.h"
 #include "SYS_chdir.h"
+#include "__syscall1.h"
 
 #include "Result.hxx"
-#include "abi/syscall-1.hxx"
 
 namespace linux {
 
@@ -48,7 +48,7 @@ chdir(const char* path) noexcept
         ENOTDIR_ = ENOTDIR,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_chdir, path));
+    return Result<void, Error>(__syscall1(SYS_chdir, path));
 }
 
 }

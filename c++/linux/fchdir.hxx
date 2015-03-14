@@ -3,9 +3,9 @@
 #include "EACCES.h"
 #include "EBADF.h"
 #include "SYS_fchdir.h"
+#include "__syscall1.h"
 
 #include "Result.hxx"
-#include "abi/syscall-1.hxx"
 
 namespace linux {
 
@@ -26,7 +26,7 @@ fchdir(int fd) noexcept
         // ENOTDIR, I imagine?
     };
 
-    return Result<void, Error>(abi::syscall(SYS_fchdir, fd));
+    return Result<void, Error>(__syscall1(SYS_fchdir, fd));
 }
 
 }

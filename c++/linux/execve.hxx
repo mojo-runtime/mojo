@@ -18,9 +18,9 @@
 #include "EPERM.h"
 #include "ETXTBSY.h"
 #include "SYS_execve.h"
+#include "__syscall3.h"
 
 #include "Result.hxx"
-#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -100,7 +100,7 @@ execve(const char* filename, char* const argv[], char* const envp[]) noexcept
         ETXTBSY_ = ETXTBSY,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_execve, filename, argv, envp));
+    return Result<void, Error>(__syscall3(SYS_execve, filename, argv, envp));
 }
 
 }

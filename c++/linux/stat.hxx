@@ -10,9 +10,9 @@
 #include "EOVERFLOW.h"
 #include "SYS_stat.h"
 #include "struct-stat.h"
+#include "__syscall2.h"
 
 #include "Result.hxx"
-#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -55,7 +55,7 @@ stat(const char* pathname, struct stat* buf) noexcept
         EOVERFLOW_ = EOVERFLOW,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_stat, pathname, buf));
+    return Result<void, Error>(__syscall2(SYS_stat, pathname, buf));
 }
 
 static inline
@@ -74,7 +74,7 @@ stat(const char* pathname, struct stat& buf) noexcept
         EOVERFLOW_    = EOVERFLOW,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_stat, pathname, &buf));
+    return Result<void, Error>(__syscall2(SYS_stat, pathname, &buf));
 }
 
 }

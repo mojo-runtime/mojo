@@ -5,9 +5,9 @@
 #include "SYS_clock_gettime.h"
 #include "clockid_t.h"
 #include "struct-timespec.h"
+#include "__syscall2.h"
 
 #include "Result.hxx"
-#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -24,7 +24,7 @@ clock_gettime(clockid_t clk_id, struct timespec* tp) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_clock_gettime, clk_id, tp));
+    return Result<void, Error>(__syscall2(SYS_clock_gettime, clk_id, tp));
 }
 
 }

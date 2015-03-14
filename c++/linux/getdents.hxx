@@ -8,9 +8,9 @@
 #include "SYS_getdents.h"
 #include "size_t.h"
 #include "struct-linux_dirent.h"
+#include "__syscall3.h"
 
 #include "Result.hxx"
-#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -38,7 +38,7 @@ getdents(/* unsigned */ int fd, struct linux_dirent* dirp, unsigned int count) n
 
     // On success, the number of bytes read is returned.
 
-    return Result<size_t, Error>(abi::syscall(SYS_getdents, fd, dirp, count));
+    return Result<size_t, Error>(__syscall3(SYS_getdents, fd, dirp, count));
 }
 
 }

@@ -6,9 +6,9 @@
 #include "EOVERFLOW.h"
 #include "SYS_fstat.h"
 #include "struct-stat.h"
+#include "__syscall2.h"
 
 #include "Result.hxx"
-#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -34,7 +34,7 @@ fstat(int fd, struct stat* buf) noexcept
         EOVERFLOW_ = EOVERFLOW,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_fstat, fd, buf));
+    return Result<void, Error>(__syscall2(SYS_fstat, fd, buf));
 }
 
 }

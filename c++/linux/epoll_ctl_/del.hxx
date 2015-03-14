@@ -1,9 +1,9 @@
 #pragma once
 
 #include "EPOLL_CTL_DEL.h"
+#include "__syscall3.h"
 
 #include "../epoll_ctl.hxx"
-#include "abi/syscall-3.hxx"
 
 namespace linux { namespace epoll_ctl_ {
 
@@ -22,7 +22,7 @@ del(int epfd, int fd /*, struct epoll_event* event */) noexcept
         EPERM_ = EPERM,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_epoll_ctl, epfd, EPOLL_CTL_DEL, fd));
+    return Result<void, Error>(__syscall3(SYS_epoll_ctl, epfd, EPOLL_CTL_DEL, fd));
 }
 
 }}

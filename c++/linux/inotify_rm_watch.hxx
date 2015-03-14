@@ -3,9 +3,9 @@
 #include "EBADF.h"
 #include "EINVAL.h"
 #include "SYS_inotify_rm_watch.h"
+#include "__syscall2.h"
 
 #include "Result.hxx"
-#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -24,7 +24,7 @@ inotify_rm_watch(int fd, int wd) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_inotify_rm_watch, fd, wd));
+    return Result<void, Error>(__syscall2(SYS_inotify_rm_watch, fd, wd));
 }
 
 }

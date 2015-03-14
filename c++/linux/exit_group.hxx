@@ -1,8 +1,7 @@
 #pragma once
 
 #include "SYS_exit_group.h"
-
-#include "abi/syscall-1.hxx"
+#include "__syscall1.h"
 
 namespace linux {
 
@@ -11,7 +10,7 @@ static inline
 void
 exit_group(int status) noexcept
 {
-    abi::syscall(SYS_exit_group, status);
+    __syscall1(SYS_exit_group, status);
     __builtin_unreachable();
 }
 

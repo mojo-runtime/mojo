@@ -6,10 +6,10 @@
 #include "ENOMEM.h"
 #include "SYS_mremap.h"
 #include "size_t.h"
+#include "__syscall4.h"
+#include "__syscall5.h"
 
 #include "Result.hxx"
-#include "abi/syscall-4.hxx"
-#include "abi/syscall-5.hxx"
 
 namespace linux {
 
@@ -47,7 +47,7 @@ mremap(void* old_address, size_t old_size, size_t new_size, int flags) noexcept
     };
 
     return Result<void, Error>(
-        abi::syscall(SYS_mremap, old_address, old_size, new_size, flags)
+        __syscall4(SYS_mremap, old_address, old_size, new_size, flags)
     );
 }
 
@@ -56,7 +56,7 @@ auto
 mremap(void* old_address, size_t old_size, size_t new_size, int flags, void* new_address) noexcept
 {
     return decltype(mremap(old_address, old_size, new_size, flags))(
-        abi::syscall(SYS_mremap, old_address, old_size, new_size, flags, new_address)
+        __syscall5(SYS_mremap, old_address, old_size, new_size, flags, new_address)
     );
 }
 

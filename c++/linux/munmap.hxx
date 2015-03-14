@@ -3,9 +3,9 @@
 #include "EINVAL.h"
 #include "SYS_munmap.h"
 #include "size_t.h"
+#include "__syscall2.h"
 
 #include "Result.hxx"
-#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -19,7 +19,7 @@ open(void* addr, size_t length) noexcept
         EINVAL_ = EINVAL,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_munmap, addr, length));
+    return Result<void, Error>(__syscall2(SYS_munmap, addr, length));
 }
 
 }

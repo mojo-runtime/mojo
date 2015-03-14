@@ -12,9 +12,9 @@
 #include "EROFS.h"
 #include "SYS_chmod.h"
 #include "mode_t.h"
+#include "__syscall2.h"
 
 #include "Result.hxx"
-#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -56,7 +56,7 @@ chmod(const char* pathname, mode_t mode) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_chmod, pathname, mode));
+    return Result<void, Error>(__syscall2(SYS_chmod, pathname, mode));
 }
 
 }

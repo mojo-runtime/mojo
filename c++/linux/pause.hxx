@@ -1,8 +1,7 @@
 #pragma once
 
 #include "SYS_pause.h"
-
-#include "abi/syscall-0.hxx"
+#include "__syscall0.h"
 
 namespace linux {
 
@@ -10,7 +9,7 @@ static inline
 void
 pause() noexcept
 {
-    abi::syscall(SYS_pause);
+    __syscall0(SYS_pause);
 }
 
 }

@@ -13,9 +13,9 @@
 #include "EPERM.h"
 #include "EROFS.h"
 #include "SYS_unlink.h"
+#include "__syscall1.h"
 
 #include "Result.hxx"
-#include "abi/syscall-1.hxx"
 
 namespace linux {
 
@@ -75,7 +75,7 @@ unlink(const char* pathname) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_unlink, pathname));
+    return Result<void, Error>(__syscall1(SYS_unlink, pathname));
 }
 
 }

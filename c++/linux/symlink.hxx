@@ -14,9 +14,9 @@
 #include "EPERM.h"
 #include "EROFS.h"
 #include "SYS_symlink.h"
+#include "__syscall2.h"
 
 #include "Result.hxx"
-#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -72,7 +72,7 @@ symlink(const char* target, const char* linkpath) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_symlink, target, linkpath));
+    return Result<void, Error>(__syscall2(SYS_symlink, target, linkpath));
 }
 
 }

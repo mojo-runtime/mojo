@@ -11,9 +11,9 @@
 #include "EOVERFLOW.h"
 #include "SYS_fstatat.h"
 #include "struct-stat.h"
+#include "__syscall4.h"
 
 #include "Result.hxx"
-#include "abi/syscall-4.hxx"
 
 namespace linux {
 
@@ -64,7 +64,7 @@ fstatat(int dirfd, const char* pathname, struct stat* buf, int flags) noexcept
         EOVERFLOW_ = EOVERFLOW,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_fstatat, dirfd, pathname, buf, flags));
+    return Result<void, Error>(__syscall4(SYS_fstatat, dirfd, pathname, buf, flags));
 }
 
 static inline

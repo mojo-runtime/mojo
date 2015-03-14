@@ -3,9 +3,9 @@
 #include "EFAULT.h"
 #include "SYS_uname.h"
 #include "struct-utsname.h"
+#include "__syscall1.h"
 
 #include "Result.hxx"
-#include "abi/syscall-1.hxx"
 
 namespace linux {
 
@@ -19,7 +19,7 @@ uname(struct utsname* buf) noexcept
         EFAULT_ = EFAULT,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_uname, buf));
+    return Result<void, Error>(__syscall1(SYS_uname, buf));
 }
 
 }

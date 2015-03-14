@@ -13,9 +13,9 @@
 #include "EPIPE.h"
 #include "SYS_write.h"
 #include "size_t.h"
+#include "__syscall3.h"
 
 #include "Result.hxx"
-#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -73,7 +73,7 @@ write(int fd, const void* buf, size_t count) noexcept
         //   XXX: totally ignoring this
     };
 
-    return Result<size_t, Error>(abi::syscall(SYS_write, fd, buf, count));
+    return Result<size_t, Error>(__syscall3(SYS_write, fd, buf, count));
 }
 
 template <typename T, size_t n>
@@ -98,7 +98,7 @@ write(int fd, const T(& array)[n]) noexcept
     };
 
     // We can't use write(...)._with_error; see `read_::into`.
-    return Result<size_t, Error>(abi::syscall(SYS_write, fd, array, n * sizeof(T)));
+    return Result<size_t, Error>(__syscall3(SYS_write, fd, array, n * sizeof(T)));
 }
 
 }

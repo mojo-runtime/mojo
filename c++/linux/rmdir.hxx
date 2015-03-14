@@ -13,9 +13,9 @@
 #include "EPERM.h"
 #include "EROFS.h"
 #include "SYS_rmdir.h"
+#include "__syscall1.h"
 
 #include "Result.hxx"
-#include "abi/syscall-1.hxx"
 
 namespace linux {
 
@@ -73,7 +73,7 @@ rmdir(const char* pathname) noexcept
         EROFS_ = EROFS,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_rmdir, pathname));
+    return Result<void, Error>(__syscall1(SYS_rmdir, pathname));
 }
 
 }

@@ -8,9 +8,9 @@
 #include "ERANGE.h"
 #include "SYS_getcwd.h"
 #include "size_t.h"
+#include "__syscall2.h"
 
 #include "Result.hxx"
-#include "abi/syscall-2.hxx"
 
 namespace linux {
 
@@ -47,7 +47,7 @@ getcwd(char* buf, size_t size) noexcept
     // "The kernel system call just returns the length of the buffer filled
     // (which includes the ending '\0' character)"
 
-    return Result<size_t, Error>(abi::syscall(SYS_getcwd, buf, size));
+    return Result<size_t, Error>(__syscall2(SYS_getcwd, buf, size));
 }
 
 }

@@ -6,9 +6,9 @@
 #include "EINVAL.h"
 #include "EMFILE.h"
 #include "SYS_dup3.h"
+#include "__syscall3.h"
 
 #include "Result.hxx"
-#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -39,7 +39,7 @@ dup3(int oldfd, int newfd, int flags) noexcept
         EMFILE_ = EMFILE,
     };
 
-    return Result<int, Error>(abi::syscall(SYS_dup3, oldfd, newfd, flags));
+    return Result<int, Error>(__syscall3(SYS_dup3, oldfd, newfd, flags));
 }
 
 }

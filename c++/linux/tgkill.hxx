@@ -4,9 +4,9 @@
 #include "EPERM.h"
 #include "ESRCH.h"
 #include "SYS_tgkill.h"
+#include "__syscall3.h"
 
 #include "Result.hxx"
-#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -26,7 +26,7 @@ tgkill(int tgid, int tid, int sig) noexcept
         ESRCH_ = ESRCH,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_tgkill, tgid, tid, sig));
+    return Result<void, Error>(__syscall3(SYS_tgkill, tgid, tid, sig));
 }
 
 }

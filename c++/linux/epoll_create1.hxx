@@ -5,9 +5,9 @@
 #include "ENFILE.h"
 #include "ENOMEM.h"
 #include "SYS_epoll_create1.h"
+#include "__syscall1.h"
 
 #include "Result.hxx"
-#include "abi/syscall-1.hxx"
 
 namespace linux {
 
@@ -31,7 +31,7 @@ epoll_create1(int flags) noexcept
         ENOMEM_ = ENOMEM,
     };
 
-    return Result<int, Error>(abi::syscall(SYS_epoll_create1, flags));
+    return Result<int, Error>(__syscall1(SYS_epoll_create1, flags));
 }
 
 static inline

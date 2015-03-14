@@ -5,9 +5,9 @@
 #include "EINVAL.h"
 #include "ENOTTY.h"
 #include "SYS_ioctl.h"
+#include "__syscall3.h"
 
 #include "Result.hxx"
-#include "abi/syscall-3.hxx"
 
 namespace linux {
 
@@ -40,7 +40,7 @@ ioctl(int fd, int request, Arg arg) noexcept
         ENOTTY_ = ENOTTY,
     };
 
-    return Result<void, Error>(abi::syscall(SYS_ioctl, fd, request, arg));
+    return Result<void, Error>(__syscall3(SYS_ioctl, fd, request, arg));
 }
 
 }
