@@ -482,6 +482,7 @@
 #endif
 #include "wchar_t.h"
 #include "wint_t.h"
+#include "_exit.h"
 #include "__Bool.h"
 #include "__Byte.h"
 #include "__S8.h"
@@ -509,6 +510,7 @@
 #include "__static_assert.h"
 #include "__strcmp.h"
 #include "__strlen.h"
+#include "__syscall1.h"
 #include "__unavailable.h"
 #include "__unreachable.h"
 #include "__unused.h"
