@@ -406,6 +406,9 @@
 #  include "epoll_data_t.h"
 #endif
 #include "errno_t.h"
+#if defined(__linux__)
+#  include "exit_group.h"
+#endif
 #if defined(__unix__)
 #  include "getpid.h"
 #  include "getegid.h"
