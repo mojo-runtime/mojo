@@ -1,5 +1,4 @@
-#ifndef _linux_clock_nanosleep_hxx_
-#define _linux_clock_nanosleep_hxx_
+#pragma once
 
 #include "c/EFAULT.h"
 #include "c/EINTR.h"
@@ -37,5 +36,3 @@ clock_nanosleep(clockid_t clock_id, int flags, const struct timespec* request, s
 }
 
 }
-
-#endif

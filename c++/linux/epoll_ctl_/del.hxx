@@ -1,5 +1,4 @@
-#ifndef _linux_epoll_ctl_del_hxx_
-#define _linux_epoll_ctl_del_hxx_
+#pragma once
 
 #include "c/EPOLL_CTL_DEL.h"
 
@@ -27,5 +26,3 @@ del(int epfd, int fd /*, struct epoll_event* event */) noexcept
 }
 
 }}
-
-#endif

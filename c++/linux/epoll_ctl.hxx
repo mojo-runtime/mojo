@@ -1,5 +1,4 @@
-#ifndef _linux_epoll_ctl_hxx_
-#define _linux_epoll_ctl_hxx_
+#pragma once
 
 #include "c/EBADF.h"
 #include "c/EEXIST.h"
@@ -56,5 +55,3 @@ epoll_ctl(int epfd, int op, int fd, struct epoll_event* event) noexcept
 }
 
 }
-
-#endif

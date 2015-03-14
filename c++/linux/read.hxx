@@ -1,5 +1,4 @@
-#ifndef _linux_read_hxx_
-#define _linux_read_hxx_
+#pragma once
 
 #include "c/EAGAIN.h"
 #include "c/EBADF.h"
@@ -83,5 +82,3 @@ read(int fd, T(& array)[n]) noexcept
 }
 
 }
-
-#endif

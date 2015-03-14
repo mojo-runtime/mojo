@@ -1,5 +1,4 @@
-#ifndef _std_size_t_hxx_
-#define _std_size_t_hxx_
+#pragma once
 
 namespace std {
 
@@ -10,5 +9,3 @@ typedef __SIZE_TYPE__ size_t;
 #endif
 
 } // namespace std
-
-#endif

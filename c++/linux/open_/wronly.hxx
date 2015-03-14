@@ -1,5 +1,4 @@
-#ifndef _linux_open_wronly_hxx_
-#define _linux_open_wronly_hxx_
+#pragma once
 
 #include "c/O_WRONLY.h"
 
@@ -43,5 +42,3 @@ wronly(const char* pathname) noexcept
 }
 
 }}
-
-#endif

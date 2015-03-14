@@ -1,5 +1,4 @@
-#ifndef _runtime_glibc_assertion_error_hxx_
-#define _runtime_glibc_assertion_error_hxx_
+#pragma once
 
 namespace runtime { inline namespace _glibc_ {
 
@@ -18,5 +17,3 @@ assertion_error(const char* expression, const char* file, const char* function, 
 }
 
 }}
-
-#endif

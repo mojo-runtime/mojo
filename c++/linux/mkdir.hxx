@@ -1,5 +1,4 @@
-#ifndef _linux_mkdir_hxx_
-#define _linux_mkdir_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EDQUOT.h"
@@ -77,5 +76,3 @@ mkdir(const char* pathname, mode_t mode) noexcept
 }
 
 }
-
-#endif

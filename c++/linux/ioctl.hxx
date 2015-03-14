@@ -1,5 +1,4 @@
-#ifndef _linux_ioctl_hxx_
-#define _linux_ioctl_hxx_
+#pragma once
 
 #include "c/EBADF.h"
 #include "c/EFAULT.h"
@@ -45,5 +44,3 @@ ioctl(int fd, int request, Arg arg) noexcept
 }
 
 }
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _linux_chdir_hxx_
-#define _linux_chdir_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EFAULT.h"
@@ -53,5 +52,3 @@ chdir(const char* path) noexcept
 }
 
 }
-
-#endif

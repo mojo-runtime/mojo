@@ -1,5 +1,4 @@
-#ifndef _linux_getdents_hxx_
-#define _linux_getdents_hxx_
+#pragma once
 
 #include "c/EBADF.h"
 #include "c/EFAULT.h"
@@ -43,5 +42,3 @@ getdents(/* unsigned */ int fd, struct linux_dirent* dirp, unsigned int count) n
 }
 
 }
-
-#endif

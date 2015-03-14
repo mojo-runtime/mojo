@@ -1,5 +1,4 @@
-#ifndef _linux_epoll_create1_hxx_
-#define _linux_epoll_create1_hxx_
+#pragma once
 
 #include "c/EINVAL.h"
 #include "c/EMFILE.h"
@@ -51,5 +50,3 @@ epoll_create1() noexcept
 }
 
 }
-
-#endif

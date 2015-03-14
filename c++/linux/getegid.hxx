@@ -1,5 +1,4 @@
-#ifndef _linux_getegid_hxx_
-#define _linux_getegid_hxx_
+#pragma once
 
 #include "c/SYS_getegid.h"
 #include "c/gid_t.h"
@@ -16,5 +15,3 @@ getegid() noexcept
 }
 
 }
-
-#endif

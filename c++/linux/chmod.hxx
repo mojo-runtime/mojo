@@ -1,5 +1,4 @@
-#ifndef _linux_chmod_hxx_
-#define _linux_chmod_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EFAULT.h"
@@ -61,5 +60,3 @@ chmod(const char* pathname, mode_t mode) noexcept
 }
 
 }
-
-#endif

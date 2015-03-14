@@ -1,5 +1,4 @@
-#ifndef _linux_pause_hxx_
-#define _linux_pause_hxx_
+#pragma once
 
 #include "c/SYS_pause.h"
 
@@ -15,5 +14,3 @@ pause() noexcept
 }
 
 }
-
-#endif

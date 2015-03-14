@@ -1,5 +1,4 @@
-#ifndef _linux_inotify_rm_watch_hxx_
-#define _linux_inotify_rm_watch_hxx_
+#pragma once
 
 #include "c/EBADF.h"
 #include "c/EINVAL.h"
@@ -29,5 +28,3 @@ inotify_rm_watch(int fd, int wd) noexcept
 }
 
 }
-
-#endif

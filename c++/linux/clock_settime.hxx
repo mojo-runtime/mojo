@@ -1,5 +1,4 @@
-#ifndef _linux_clock_settime_hxx_
-#define _linux_clock_settime_hxx_
+#pragma once
 
 #include "c/EFAULT.h"
 #include "c/EINVAL.h"
@@ -33,5 +32,3 @@ clock_settime(clockid_t clk_id, const struct timespec* tp) noexcept
 }
 
 }
-
-#endif

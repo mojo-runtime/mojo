@@ -1,5 +1,4 @@
-#ifndef _linux_exit_group_hxx_
-#define _linux_exit_group_hxx_
+#pragma once
 
 #include "c/SYS_exit_group.h"
 
@@ -17,5 +16,3 @@ exit_group(int status) noexcept
 }
 
 }
-
-#endif

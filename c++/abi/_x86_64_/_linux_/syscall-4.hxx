@@ -1,5 +1,4 @@
-#ifndef _abi_x86_64_linux_syscall_4_hxx_
-#define _abi_x86_64_linux_syscall_4_hxx_
+#pragma once
 
 #include "../../Word.hxx"
 
@@ -29,5 +28,3 @@ syscall(Word number, A1 a1, A2 a2, A3 a3, A4 a4) noexcept
 }
 
 }}}
-
-#endif

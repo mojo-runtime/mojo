@@ -1,5 +1,4 @@
-#ifndef _elf_Environment_hxx_
-#define _elf_Environment_hxx_
+#pragma once
 
 namespace elf {
 
@@ -16,6 +15,3 @@ struct Environment
 };
 
 }
-
-#endif
-

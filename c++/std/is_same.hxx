@@ -1,5 +1,4 @@
-#ifndef _std_is_same_hxx_
-#define _std_is_same_hxx_
+#pragma once
 
 namespace std {
 
@@ -20,5 +19,3 @@ struct is_same<X, X>
 };
 
 } // namespace std
-
-#endif

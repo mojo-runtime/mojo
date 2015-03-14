@@ -1,5 +1,4 @@
-#ifndef _linux_unlink_hxx_
-#define _linux_unlink_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EBUSY.h"
@@ -80,5 +79,3 @@ unlink(const char* pathname) noexcept
 }
 
 }
-
-#endif

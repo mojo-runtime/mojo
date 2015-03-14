@@ -1,5 +1,4 @@
-#ifndef _linux_close_hxx_
-#define _linux_close_hxx_
+#pragma once
 
 #include "c/EBADF.h"
 #include "c/EINTR.h"
@@ -31,5 +30,3 @@ close(int fd) noexcept
 }
 
 }
-
-#endif

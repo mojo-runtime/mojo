@@ -1,5 +1,4 @@
-#ifndef _linux_execve_hxx_
-#define _linux_execve_hxx_
+#pragma once
 
 #include "c/E2BIG.h"
 #include "c/EACCES.h"
@@ -105,5 +104,3 @@ execve(const char* filename, char* const argv[], char* const envp[]) noexcept
 }
 
 }
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _linux_write_hxx_
-#define _linux_write_hxx_
+#pragma once
 
 #include "c/EAGAIN.h"
 #include "c/EBADF.h"
@@ -103,5 +102,3 @@ write(int fd, const T(& array)[n]) noexcept
 }
 
 }
-
-#endif

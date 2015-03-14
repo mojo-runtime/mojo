@@ -1,5 +1,4 @@
-#ifndef _std_forward_hxx_
-#define _std_forward_hxx_
+#pragma once
 
 #include "remove_reference_t.hxx"
 
@@ -22,5 +21,3 @@ forward(remove_reference_t<X>&& x) noexcept
 }
 
 } // namespace std
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _os_exit_hxx_
-#define _os_exit_hxx_
+#pragma once
 
 // Roll this special case by hand.
 
@@ -22,5 +21,3 @@ _exit(int status) noexcept
 }
 
 } // namespace os
-
-#endif

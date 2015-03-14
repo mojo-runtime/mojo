@@ -1,5 +1,4 @@
-#ifndef _linux_fcntl_getfl_hxx_
-#define _linux_fcntl_getfl_hxx_
+#pragma once
 
 #include "c/F_GETFL.h"
 
@@ -30,5 +29,3 @@ getfl(int fd) noexcept
 }
 
 }}
-
-#endif

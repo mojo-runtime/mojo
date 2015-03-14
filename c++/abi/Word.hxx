@@ -1,5 +1,4 @@
-#ifndef _abi_Word_hxx_
-#define _abi_Word_hxx_
+#pragma once
 
 #include "compat/__has_attribute.h"
 
@@ -12,5 +11,3 @@ typedef unsigned int Word __attribute__((__mode__(__word__)));
 #endif
 
 } // namespace abi
-
-#endif

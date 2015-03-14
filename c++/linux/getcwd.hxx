@@ -1,5 +1,4 @@
-#ifndef _linux_getcwd_hxx_
-#define _linux_getcwd_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EFAULT.h"
@@ -52,5 +51,3 @@ getcwd(char* buf, size_t size) noexcept
 }
 
 }
-
-#endif

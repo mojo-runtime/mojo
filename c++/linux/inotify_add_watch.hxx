@@ -1,5 +1,4 @@
-#ifndef _linux_inotify_add_watch_hxx_
-#define _linux_inotify_add_watch_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EBADF.h"
@@ -56,5 +55,3 @@ inotify_add_watch(int fd, const char* pathname, uint32_t mask) noexcept
 }
 
 }
-
-#endif

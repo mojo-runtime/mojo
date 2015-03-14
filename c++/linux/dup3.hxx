@@ -1,5 +1,4 @@
-#ifndef _linux_dup3_hxx_
-#define _linux_dup3_hxx_
+#pragma once
 
 #include "c/EBADF.h"
 #include "c/EBUSY.h"
@@ -44,5 +43,3 @@ dup3(int oldfd, int newfd, int flags) noexcept
 }
 
 }
-
-#endif

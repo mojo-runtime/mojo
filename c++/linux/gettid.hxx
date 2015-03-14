@@ -1,5 +1,4 @@
-#ifndef _linux_gettid_hxx_
-#define _linux_gettid_hxx_
+#pragma once
 
 #include "c/SYS_gettid.h"
 #include "c/pid_t.h"
@@ -16,5 +15,3 @@ gettid() noexcept
 }
 
 }
-
-#endif

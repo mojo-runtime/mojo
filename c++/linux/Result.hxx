@@ -1,5 +1,4 @@
-#ifndef _linux_Result_hxx_
-#define _linux_Result_hxx_
+#pragma once
 
 #include "abi/Word.hxx"
 #include "std/assert!.hxx"
@@ -64,5 +63,3 @@ struct Result
 };
 
 }
-
-#endif

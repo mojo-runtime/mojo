@@ -1,5 +1,4 @@
-#ifndef _linux_mmap_anonymous_hxx_
-#define _linux_mmap_anonymous_hxx_
+#pragma once
 
 #include "c/MAP_ANONYMOUS.h"
 
@@ -34,5 +33,3 @@ anonymous(void* addr, size_t length, int prot, int flags) noexcept
 }
 
 }}
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _linux_fork_hxx_
-#define _linux_fork_hxx_
+#pragma once
 
 #include "c/EAGAIN.h"
 #include "c/ENOMEM.h"
@@ -39,5 +38,3 @@ fork() noexcept
 }
 
 }
-
-#endif

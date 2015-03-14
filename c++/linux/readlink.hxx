@@ -1,5 +1,4 @@
-#ifndef _linux_readlink_hxx_
-#define _linux_readlink_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EFAULT.h"
@@ -59,4 +58,3 @@ readlink(const char* pathname, char* buf, size_t bufsiz) noexcept
 
 }
 
-#endif

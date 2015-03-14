@@ -1,5 +1,4 @@
-#ifndef _std_unique_ptr_hxx_
-#define _std_unique_ptr_hxx_
+#pragma once
 
 #include "default_delete.hxx"
 
@@ -12,5 +11,3 @@ template <typename T, typename Deleter>
 struct unique_ptr<T[], Deleter>;
 
 } // namespace std
-
-#endif

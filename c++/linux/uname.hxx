@@ -1,5 +1,4 @@
-#ifndef _linux_uname_hxx_
-#define _linux_uname_hxx_
+#pragma once
 
 #include "c/EFAULT.h"
 #include "c/SYS_uname.h"
@@ -24,5 +23,3 @@ uname(struct utsname* buf) noexcept
 }
 
 }
-
-#endif

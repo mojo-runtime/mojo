@@ -1,5 +1,4 @@
-#ifndef _linux_inotify_init1_hxx_
-#define _linux_inotify_init1_hxx_
+#pragma once
 
 #include "c/EINVAL.h"
 #include "c/EMFILE.h"
@@ -50,5 +49,3 @@ inotify_init1() noexcept
 }
 
 }
-
-#endif

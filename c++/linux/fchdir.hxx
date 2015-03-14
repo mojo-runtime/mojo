@@ -1,5 +1,4 @@
-#ifndef _linux_fchdir_hxx_
-#define _linux_fchdir_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EBADF.h"
@@ -31,5 +30,3 @@ fchdir(int fd) noexcept
 }
 
 }
-
-#endif

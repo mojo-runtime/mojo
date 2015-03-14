@@ -1,5 +1,4 @@
-#ifndef _linux_mmap_hxx_
-#define _linux_mmap_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EAGAIN.h"
@@ -80,5 +79,3 @@ mmap(void* addr, size_t length, int prot, int flags, int fd, off_t offset) noexc
 }
 
 }
-
-#endif

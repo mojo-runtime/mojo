@@ -1,5 +1,4 @@
-#ifndef _linux_fcntl_hxx_
-#define _linux_fcntl_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EAGAIN.h"
@@ -89,5 +88,3 @@ fcntl(int fd, int cmd) noexcept
 }
 
 }
-
-#endif

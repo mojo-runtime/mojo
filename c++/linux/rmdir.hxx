@@ -1,5 +1,4 @@
-#ifndef _linux_rmdir_hxx_
-#define _linux_rmdir_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EBUSY.h"
@@ -78,5 +77,3 @@ rmdir(const char* pathname) noexcept
 }
 
 }
-
-#endif

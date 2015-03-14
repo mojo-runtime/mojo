@@ -1,5 +1,4 @@
-#ifndef _linux_munmap_hxx_
-#define _linux_munmap_hxx_
+#pragma once
 
 #include "c/EINVAL.h"
 #include "c/SYS_munmap.h"
@@ -24,5 +23,3 @@ open(void* addr, size_t length) noexcept
 }
 
 }
-
-#endif

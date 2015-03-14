@@ -1,5 +1,4 @@
-#ifndef _linux_exit_hxx_
-#define _linux_exit_hxx_
+#pragma once
 
 #include "c/SYS_exit.h"
 
@@ -17,5 +16,3 @@ exit(int status) noexcept
 }
 
 }
-
-#endif

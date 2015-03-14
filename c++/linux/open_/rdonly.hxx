@@ -1,5 +1,4 @@
-#ifndef _linux_open_rdonly_hxx_
-#define _linux_open_rdonly_hxx_
+#pragma once
 
 #include "c/O_RDONLY.h"
 
@@ -43,5 +42,3 @@ rdonly(const char* pathname) noexcept
 }
 
 }}
-
-#endif

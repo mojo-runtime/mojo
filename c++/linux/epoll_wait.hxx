@@ -1,5 +1,4 @@
-#ifndef _linux_epoll_wait_hxx_
-#define _linux_epoll_wait_hxx_
+#pragma once
 
 #include "c/EBADF.h"
 #include "c/EFAULT.h"
@@ -45,5 +44,3 @@ epoll_wait(int epfd, struct epoll_event* events, int maxevents, int timeout) noe
 }
 
 }
-
-#endif

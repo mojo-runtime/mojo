@@ -1,5 +1,4 @@
-#ifndef _linux_chown_hxx_
-#define _linux_chown_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EFAULT.h"
@@ -57,5 +56,3 @@ chown(const char* pathname, uid_t owner, gid_t group) noexcept
 }
 
 }
-
-#endif

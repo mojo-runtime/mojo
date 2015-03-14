@@ -1,5 +1,4 @@
-#ifndef _std_unary_function_hxx_
-#define _std_unary_function_hxx_
+#pragma once
 
 namespace std {
 
@@ -8,5 +7,3 @@ template <typename ArgumentType, typename ResultType>
 struct unary_function;
 
 } // namespace std
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _linux_clock_gettime_hxx_
-#define _linux_clock_gettime_hxx_
+#pragma once
 
 #include "c/EFAULT.h"
 #include "c/EINVAL.h"
@@ -29,5 +28,3 @@ clock_gettime(clockid_t clk_id, struct timespec* tp) noexcept
 }
 
 }
-
-#endif

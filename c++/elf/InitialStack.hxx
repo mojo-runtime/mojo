@@ -1,5 +1,4 @@
-#ifndef _elf_InitialStack_hxx_
-#define _elf_InitialStack_hxx_
+#pragma once
 
 #include "abi/Byte.hxx"
 #include "abi/Word.hxx"
@@ -52,5 +51,3 @@ struct InitialStack
 };
 
 }
-
-#endif

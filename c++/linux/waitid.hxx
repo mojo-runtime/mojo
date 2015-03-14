@@ -1,5 +1,4 @@
-#ifndef _linux_waitid_hxx_
-#define _linux_waitid_hxx_
+#pragma once
 
 #include "c/ECHILD.h"
 #include "c/EINTR.h"
@@ -40,5 +39,3 @@ waitid(idtype_t idtype, id_t id, siginfo_t* infop, int options, struct rusage* u
 }
 
 }
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _linux_tgkill_hxx_
-#define _linux_tgkill_hxx_
+#pragma once
 
 #include "c/EINVAL.h"
 #include "c/EPERM.h"
@@ -31,5 +30,3 @@ tgkill(int tgid, int tid, int sig) noexcept
 }
 
 }
-
-#endif

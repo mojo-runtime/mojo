@@ -1,5 +1,4 @@
-#ifndef _linux_vfork_hxx_
-#define _linux_vfork_hxx_
+#pragma once
 
 #include "c/SYS_vfork.h"
 
@@ -15,5 +14,3 @@ vfork() noexcept
 }
 
 }
-
-#endif

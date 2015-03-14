@@ -1,5 +1,4 @@
-#ifndef _linux_fstatat_hxx_
-#define _linux_fstatat_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EBADF.h"
@@ -90,5 +89,3 @@ fstatat(int dirfd, const char* pathname, struct stat* buf) noexcept
 }
 
 }
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _linux_clone_hxx_
-#define _linux_clone_hxx_
+#pragma once
 
 #include "c/EAGAIN.h"
 #include "c/EINVAL.h"
@@ -63,5 +62,3 @@ clone(unsigned long flags, void* child_stack, void* ptid, void* ctid, struct pt_
 }
 
 }
-
-#endif

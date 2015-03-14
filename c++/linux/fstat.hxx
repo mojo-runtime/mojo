@@ -1,5 +1,4 @@
-#ifndef _linux_fstat_hxx_
-#define _linux_fstat_hxx_
+#pragma once
 
 #include "c/EBADF.h"
 #include "c/EFAULT.h"
@@ -39,5 +38,3 @@ fstat(int fd, struct stat* buf) noexcept
 }
 
 }
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _linux_ioctl_tcgets_hxx_
-#define _linux_ioctl_tcgets_hxx_
+#pragma once
 
 #include "c/TCGETS.h"
 #include "c/struct-termios.h"
@@ -25,5 +24,3 @@ tcgets(int fd, struct termios* buffer) noexcept
 }
 
 }}
-
-#endif

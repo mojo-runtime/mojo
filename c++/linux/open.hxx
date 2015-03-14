@@ -1,5 +1,4 @@
-#ifndef _linux_open_hxx_
-#define _linux_open_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EDQUOT.h"
@@ -154,4 +153,3 @@ open(const char* pathname, int flags) noexcept
 
 }
 
-#endif

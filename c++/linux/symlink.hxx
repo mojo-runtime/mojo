@@ -1,5 +1,4 @@
-#ifndef _linux_symlink_hxx_
-#define _linux_symlink_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EDQUOT.h"
@@ -77,5 +76,3 @@ symlink(const char* target, const char* linkpath) noexcept
 }
 
 }
-
-#endif

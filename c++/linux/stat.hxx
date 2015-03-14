@@ -1,5 +1,4 @@
-#ifndef _linux_stat_hxx_
-#define _linux_stat_hxx_
+#pragma once
 
 #include "c/EACCES.h"
 #include "c/EFAULT.h"
@@ -79,5 +78,3 @@ stat(const char* pathname, struct stat& buf) noexcept
 }
 
 }
-
-#endif

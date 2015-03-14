@@ -1,5 +1,4 @@
-#ifndef _linux_kill_hxx_
-#define _linux_kill_hxx_
+#pragma once
 
 #include "c/EINVAL.h"
 #include "c/EPERM.h"
@@ -33,5 +32,3 @@ kill(pid_t pid, int sig) noexcept
 }
 
 }
-
-#endif

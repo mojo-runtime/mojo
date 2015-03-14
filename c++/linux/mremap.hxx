@@ -1,5 +1,4 @@
-#ifndef _linux_mremap_hxx_
-#define _linux_mremap_hxx_
+#pragma once
 
 #include "c/EAGAIN.h"
 #include "c/EFAULT.h"
@@ -62,5 +61,3 @@ mremap(void* old_address, size_t old_size, size_t new_size, int flags, void* new
 }
 
 }
-
-#endif

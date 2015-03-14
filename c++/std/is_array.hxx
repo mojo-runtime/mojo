@@ -1,5 +1,4 @@
-#ifndef _std_is_array_hxx_
-#define _std_is_array_hxx_
+#pragma once
 
 #include "size_t.hxx"
 
@@ -22,5 +21,3 @@ struct is_array<T[n]>
 };
 
 } // namespace std
-
-#endif

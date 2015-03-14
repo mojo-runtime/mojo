@@ -1,5 +1,4 @@
-#ifndef _runtime_bsd_assertion_error_hxx_
-#define _runtime_bsd_assertion_error_hxx_
+#pragma once
 
 namespace runtime { inline namespace _bsd_ {
 
@@ -19,5 +18,3 @@ assertion_error(const char* expression, const char* file, const char* function, 
 }
 
 }}
-
-#endif

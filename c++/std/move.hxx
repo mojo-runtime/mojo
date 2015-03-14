@@ -1,5 +1,4 @@
-#ifndef _std_move_hxx_
-#define _std_move_hxx_
+#pragma once
 
 #include "remove_reference_t.hxx"
 
@@ -14,5 +13,3 @@ move(X&& x) noexcept
 }
 
 } // namespace std
-
-#endif

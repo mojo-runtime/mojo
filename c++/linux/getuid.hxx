@@ -1,5 +1,4 @@
-#ifndef _linux_getuid_hxx_
-#define _linux_getuid_hxx_
+#pragma once
 
 #include "c/SYS_getuid.h"
 #include "c/uid_t.h"
@@ -16,5 +15,3 @@ getuid() noexcept
 }
 
 }
-
-#endif

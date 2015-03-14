@@ -1,5 +1,4 @@
-#ifndef _elf_AuxiliaryVector_hxx_
-#define _elf_AuxiliaryVector_hxx_
+#pragma once
 
 #include "abi/Word.hxx"
 
@@ -50,6 +49,3 @@ struct AuxiliaryVector
 };
 
 }
-
-#endif
-

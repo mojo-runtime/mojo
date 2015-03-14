@@ -1,5 +1,4 @@
-#ifndef _std_iterator_traits_hxx_
-#define _std_iterator_traits_hxx_
+#pragma once
 
 namespace std {
 
@@ -14,5 +13,3 @@ template <typename T>
 struct iterator_traits<const T*>;
 
 } // namespace std
-
-#endif

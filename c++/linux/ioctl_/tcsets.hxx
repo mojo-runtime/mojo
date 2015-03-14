@@ -1,5 +1,4 @@
-#ifndef _linux_ioctl_tcsets_hxx_
-#define _linux_ioctl_tcsets_hxx_
+#pragma once
 
 #include "c/TCSETS.h"
 #include "c/struct-termios.h"
@@ -25,5 +24,3 @@ tcsets(int fd, const struct termios* buffer) noexcept
 }
 
 }}
-
-#endif

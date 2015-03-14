@@ -1,5 +1,4 @@
-#ifndef _std_remove_extent_hxx_
-#define _std_remove_extent_hxx_
+#pragma once
 
 #include "size_t.hxx"
 
@@ -24,5 +23,3 @@ struct remove_extent<T[n]>
 };
 
 } // namespace std
-
-#endif

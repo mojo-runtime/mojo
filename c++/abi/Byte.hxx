@@ -1,5 +1,4 @@
-#ifndef _abi_Byte_hxx_
-#define _abi_Byte_hxx_
+#pragma once
 
 #include "compat/__has_attribute.h"
 
@@ -12,5 +11,3 @@ typedef unsigned int Byte __attribute__((__mode__(__byte__)));
 #endif
 
 } // namespace abi
-
-#endif

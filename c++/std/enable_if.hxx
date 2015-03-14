@@ -1,5 +1,4 @@
-#ifndef _std_enable_if_hxx_
-#define _std_enable_if_hxx_
+#pragma once
 
 namespace std {
 
@@ -15,5 +14,3 @@ struct enable_if<true, T>
 };
 
 } // namespace std
-
-#endif

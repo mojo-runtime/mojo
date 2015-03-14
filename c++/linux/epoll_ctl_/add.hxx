@@ -1,5 +1,4 @@
-#ifndef _linux_epoll_ctl_add_hxx_
-#define _linux_epoll_ctl_add_hxx_
+#pragma once
 
 #include "c/EPOLL_CTL_ADD.h"
 
@@ -26,5 +25,3 @@ add(int epfd, int fd, struct epoll_event* event) noexcept
 }
 
 }}
-
-#endif

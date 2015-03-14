@@ -1,5 +1,4 @@
-#ifndef _linux_pipe2_hxx_
-#define _linux_pipe2_hxx_
+#pragma once
 
 #include "c/EFAULT.h"
 #include "c/EINVAL.h"
@@ -50,5 +49,3 @@ pipe2(int pipefd[2]) noexcept
 }
 
 }
-
-#endif

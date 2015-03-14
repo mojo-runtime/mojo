@@ -1,5 +1,4 @@
-#ifndef _linux_set_thread_area_hxx_
-#define _linux_set_thread_area_hxx_
+#pragma once
 
 #include "c/EFAULT.h"
 #include "c/EINVAL.h"
@@ -32,5 +31,3 @@ set_thread_area(struct user_desc* u_info) noexcept
 }
 
 }
-
-#endif
