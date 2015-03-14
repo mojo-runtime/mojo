@@ -1,13 +1,13 @@
 #ifndef __syscall4
 
+#pragma clang diagnostic ignored "-Wgnu-statement-expression"
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if defined(__linux__) && defined(__x86_64__)
 #  include "__Word.h"
 #  define __syscall4(n, a1, a2, a3, a4)                                 \
-  _Pragma("clang diagnostic push")                                      \
-  _Pragma("clang diagnostic ignored \"-Wgnu-statement-expression\"")    \
     ({                                                                  \
         __Word                                                          \
         result;                                                         \
@@ -25,8 +25,7 @@
         );                                                              \
                                                                         \
         result;                                                         \
-    })                                                                  \
-  _Pragma("clang diagnostic pop")
+    })
 #else
 #  error
 #endif
