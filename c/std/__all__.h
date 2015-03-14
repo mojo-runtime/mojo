@@ -473,9 +473,6 @@
 #include "intptr_t.h"
 #include "ldiv_t.h"
 #include "lldiv_t.h"
-#include "memcmp.h"
-#include "memcpy.h"
-#include "memset.h"
 
 #if defined(__unix__)
 #  include "mode_t.h"
@@ -503,8 +500,6 @@
 #endif
 
 #include "ssize_t.h"
-#include "strcmp.h"
-#include "strlen.h"
 
 #if defined(__linux__)
 #  include "struct-epoll_event.h"
