@@ -1,4 +1,4 @@
-#ifndef UINTMAX_C
+#pragma once
 
 #if defined(__UINTMAX_C)
 #  define UINTMAX_C(x) __UINTMAX_C(x)
@@ -6,6 +6,4 @@
 #  define UINTMAX_C(x) x ## __UINTMAX_C_SUFFIX__
 #else
 #  error
-#endif
-
 #endif

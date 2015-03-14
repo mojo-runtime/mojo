@@ -1,3 +1,3 @@
-#ifndef EXIT_FAILURE
+#pragma once
+
 #define EXIT_FAILURE 1
-#endif

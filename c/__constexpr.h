@@ -1,4 +1,4 @@
-#ifndef __constexpr // C++14's "relaxed" constexpr
+#pragma once // C++14's "relaxed" constexpr
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
@@ -28,5 +28,3 @@
 #endif
 
 #pragma clang diagnostic pop
-
-#endif

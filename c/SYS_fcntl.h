@@ -1,4 +1,4 @@
-#ifndef SYS_fcntl
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
@@ -10,6 +10,4 @@
 #  define SYS_fcntl 92
 #else
 #  error
-#endif
-
 #endif

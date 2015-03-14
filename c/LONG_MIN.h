@@ -1,4 +1,4 @@
-#ifndef LONG_MIN
+#pragma once
 
 #include "__SIGNED_INTEGER_REPRESENTATION.h"
 
@@ -7,6 +7,4 @@
 #  define LONG_MIN (-LONG_MAX - 1L)
 #else
 #  error
-#endif
-
 #endif

@@ -1,4 +1,4 @@
-#ifndef SYS_readlink
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
@@ -10,6 +10,4 @@
 #  define SYS_readlink 58
 #else
 #  error
-#endif
-
 #endif

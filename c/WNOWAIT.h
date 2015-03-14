@@ -1,4 +1,4 @@
-#ifndef WNOWAIT
+#pragma once
 
 #if defined(__linux__)
 #  define WNOWAIT 0x1000000
@@ -6,6 +6,4 @@
 #  define WNOWAIT 0x8
 #else
 #  error
-#endif
-
 #endif

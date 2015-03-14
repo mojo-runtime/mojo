@@ -1,4 +1,4 @@
-#ifndef EDQUOT
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
@@ -10,6 +10,4 @@
 #  define EDQUOT 69
 #else
 #  error
-#endif
-
 #endif

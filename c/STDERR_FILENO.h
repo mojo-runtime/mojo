@@ -1,3 +1,3 @@
-#ifndef STDERR_FILENO
+#pragma once
+
 #define STDERR_FILENO 2
-#endif

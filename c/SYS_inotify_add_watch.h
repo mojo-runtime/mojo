@@ -1,4 +1,4 @@
-#ifndef SYS_inotify_add_watch
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
@@ -10,4 +10,3 @@
 #  error
 #endif
 
-#endif

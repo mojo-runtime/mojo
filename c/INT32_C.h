@@ -1,4 +1,4 @@
-#ifndef INT32_C
+#pragma once
 
 #if defined(__INT32_C)
 #  define INT32_C(x) __INT32_C(x)
@@ -6,6 +6,4 @@
 #  define INT32_C(x) x ## __INT32_C_SUFFIX__
 #else
 #  error
-#endif
-
 #endif

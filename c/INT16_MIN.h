@@ -1,4 +1,4 @@
-#ifndef INT16_MIN
+#pragma once
 
 #include "__SIGNED_INTEGER_REPRESENTATION.h"
 
@@ -7,6 +7,4 @@
 #  define INT16_MIN (-INT16_MAX - 1)
 #else
 #  error
-#endif
-
 #endif

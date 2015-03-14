@@ -1,4 +1,4 @@
-#ifndef INT64_C
+#pragma once
 
 #if defined(__INT64_C)
 #  define INT64_C(x) __INT64_C(x)
@@ -8,4 +8,3 @@
 #  error
 #endif
 
-#endif

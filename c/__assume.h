@@ -1,4 +1,4 @@
-#ifndef __assume
+#pragma once
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
@@ -11,6 +11,4 @@
 
 #if !defined(__assume)
 #  define __assume(x)
-#endif
-
 #endif

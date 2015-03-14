@@ -1,4 +1,4 @@
-#ifndef ENOSYS
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
@@ -10,6 +10,4 @@
 #  define ENOSYS 78
 #else
 #  error
-#endif
-
 #endif

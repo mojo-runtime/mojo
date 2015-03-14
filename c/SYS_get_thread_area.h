@@ -1,4 +1,4 @@
-#ifndef SYS_get_thread_area
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
@@ -8,6 +8,4 @@
 #  endif
 #else
 #  error
-#endif
-
 #endif

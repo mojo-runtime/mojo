@@ -1,4 +1,4 @@
-#ifndef WINT_MIN
+#pragma once
 
 #if defined(__WINT_MIN__)
 #  define WINT_MIN __WINT_MIN__
@@ -6,6 +6,4 @@
 #  define WINT_MIN (0u)
 #else
 #  error
-#endif
-
 #endif

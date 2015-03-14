@@ -1,3 +1,3 @@
-#ifndef NULL
+#pragma once
+
 #define NULL 0
-#endif

@@ -1,4 +1,4 @@
-#ifndef F_SETLK
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
@@ -10,6 +10,4 @@
 #  define F_SETLK 12
 #else
 #  error
-#endif
-
 #endif

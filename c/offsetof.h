@@ -1,4 +1,4 @@
-#ifndef offsetof
+#pragma once
 
 #if defined(__has_builtin)
 #  if __has_builtin(__builtin_offsetof)
@@ -12,6 +12,4 @@
 #  define offsetof __builtin_offsetof
 #else
 #  error
-#endif
-
 #endif

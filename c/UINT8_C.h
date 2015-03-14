@@ -1,4 +1,4 @@
-#ifndef UINT8_C
+#pragma once
 
 #if defined(__UINT8_C)
 #  define UINT8_C(x) __UINT8_C(x)
@@ -6,6 +6,4 @@
 #  define UINT8_C(x) x ## __UINT8_C_SUFFIX__
 #else
 #  error
-#endif
-
 #endif

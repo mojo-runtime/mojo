@@ -1,4 +1,4 @@
-#ifndef PATH_MAX
+#pragma once
 
 #if defined(__linux__)
 #  define PATH_MAX 4096
@@ -6,6 +6,4 @@
 #  define PATH_MAX 1024
 #else
 #  error
-#endif
-
 #endif

@@ -1,4 +1,4 @@
-#ifndef SYS_stat
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
@@ -10,6 +10,4 @@
 #  define SYS_stat 188
 #else
 #  error
-#endif
-
 #endif

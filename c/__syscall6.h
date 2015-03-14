@@ -1,4 +1,4 @@
-#ifndef __syscall6
+#pragma once
 
 #pragma clang diagnostic ignored "-Wgnu-statement-expression" // FIXME
 
@@ -34,4 +34,3 @@
 
 #pragma clang diagnostic pop
 
-#endif

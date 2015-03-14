@@ -1,4 +1,4 @@
-#ifndef SCHAR_MIN
+#pragma once
 
 #include "__SIGNED_INTEGER_REPRESENTATION.h"
 
@@ -7,6 +7,4 @@
 #  define SCHAR_MIN (-SCHAR_MAX - 1)
 #else
 #  error
-#endif
-
 #endif

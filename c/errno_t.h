@@ -1,6 +1,3 @@
-#ifndef errno_t_h_
-#define errno_t_h_
+#pragma once
 
 typedef int errno_t;
-
-#endif

@@ -1,4 +1,4 @@
-#ifndef EHOSTUNREACH
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
@@ -8,6 +8,4 @@
 #  endif
 #else
 #  error
-#endif
-
 #endif

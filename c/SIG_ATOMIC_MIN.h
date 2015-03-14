@@ -1,4 +1,4 @@
-#ifndef SIG_ATOMIC_MIN
+#pragma once
 
 #if defined(__SIG_ATOMIC_MIN__)
 #  define SIG_ATOMIC_MIN __SIG_ATOMIC_MIN__
@@ -9,6 +9,4 @@
 #  else
 #    error
 #  endif
-#endif
-
 #endif

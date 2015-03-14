@@ -1,4 +1,4 @@
-#ifndef WCHAR_MIN
+#pragma once
 
 #if defined(__WCHAR_MIN__)
 #  define WCHAR_MIN __WCHAR_MIN__
@@ -9,6 +9,4 @@
 #  else
 #    error
 #  endif
-#endif
-
 #endif

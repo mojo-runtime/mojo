@@ -1,13 +1,9 @@
 #pragma once
 
-#ifndef __cplusplus
-
-typedef
-#ifdef __WCHAR_TYPE__
-__WCHAR_TYPE__
-#else
-#  error
+#if !defined(__cplusplus)
+#  if defined(__WCHAR_TYPE__)
+typedef __WCHAR_TYPE__ wchar_t;
+#  else
+#    error
+#  endif
 #endif
-wchar_t;
-
-#endif // __cplusplus

@@ -1,3 +1,3 @@
-#ifndef STDIN_FILENO
+#pragma once
+
 #define STDIN_FILENO 0
-#endif

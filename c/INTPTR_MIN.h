@@ -1,4 +1,4 @@
-#ifndef INTPTR_MIN
+#pragma once
 
 #include "INTPTR_MAX.h"
 #include "INT64_MAX.h"
@@ -14,6 +14,4 @@
 #  else
 #    error
 #  endif
-#endif
-
 #endif

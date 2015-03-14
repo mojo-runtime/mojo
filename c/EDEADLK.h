@@ -1,4 +1,4 @@
-#ifndef EDEADLK
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
@@ -10,6 +10,4 @@
 #  define EDEADLK 11
 #else
 #  error
-#endif
-
 #endif

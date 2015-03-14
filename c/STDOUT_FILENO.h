@@ -1,3 +1,3 @@
-#ifndef STDOUT_FILENO
+#pragma once
+
 #define STDOUT_FILENO 1
-#endif

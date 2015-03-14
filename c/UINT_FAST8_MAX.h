@@ -1,4 +1,4 @@
-#ifndef UINT_FAST8_MAX
+#pragma once
 
 #if defined(__UINT_FAST8_MAX__)
 #  define UINT_FAST8_MAX __UINT_FAST8_MAX__
@@ -6,4 +6,3 @@
 #  error
 #endif
 
-#endif

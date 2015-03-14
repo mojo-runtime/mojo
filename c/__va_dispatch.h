@@ -1,4 +1,4 @@
-#ifndef __va_dispatch
+#pragma once
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
@@ -11,5 +11,3 @@
 #define __va_dispatch__(f_, n) f_ ## n
 
 #pragma clang diagnostic pop
-
-#endif

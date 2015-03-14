@@ -1,4 +1,4 @@
-#ifndef MAP_ANONYMOUS
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
@@ -10,6 +10,4 @@
 #  define MAP_ANONYMOUS 0x1000
 #else
 #  error
-#endif
-
 #endif

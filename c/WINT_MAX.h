@@ -1,4 +1,4 @@
-#ifndef WINT_MAX
+#pragma once
 
 #if defined(__WINT_MAX__)
 #  define WINT_MAX __WINT_MAX__
@@ -8,6 +8,4 @@
 #  else
 #    error
 #  endif
-#endif
-
 #endif

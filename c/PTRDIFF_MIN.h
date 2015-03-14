@@ -1,4 +1,4 @@
-#ifndef PTRDIFF_MIN
+#pragma once
 
 #if defined(__SIZEOF_PTRDIFF_T__)
 #  if __SIZEOF_PTRDIFF_T__ == 8
@@ -12,6 +12,4 @@
 #  endif
 #else
 #  error
-#endif
-
 #endif

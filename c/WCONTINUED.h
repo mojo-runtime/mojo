@@ -1,4 +1,4 @@
-#ifndef WCONTINUED
+#pragma once
 
 #if defined(__linux__)
 #  define WCONTINUED 0x8
@@ -6,6 +6,4 @@
 #  define WCONTINUED 0x4
 #else
 #  error
-#endif
-
 #endif

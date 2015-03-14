@@ -1,4 +1,4 @@
-#ifndef CHAR_MIN
+#pragma once
 
 #if defined(__GNUC__)
 #  if defined(__CHAR_UNSIGNED__)
@@ -10,6 +10,4 @@
 #  endif
 #else
 #  error
-#endif
-
 #endif

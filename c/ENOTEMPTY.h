@@ -1,4 +1,4 @@
-#ifndef ENOTEMPTY
+#pragma once
 
 #if defined(__linux__)
 #  if defined(__x86_64__) // generic
@@ -10,6 +10,4 @@
 #  define ENOTEMPTY 66
 #else
 #  error
-#endif
-
 #endif

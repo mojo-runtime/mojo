@@ -1,4 +1,4 @@
-#ifndef UCHAR_MAX
+#pragma once
 
 #include "CHAR_BIT.h"
 
@@ -6,6 +6,4 @@
 #  define UCHAR_MAX 255
 #else
 #  error
-#endif
-
 #endif

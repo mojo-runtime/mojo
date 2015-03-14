@@ -1,4 +1,4 @@
-#ifndef INT16_C
+#pragma once
 
 #if defined(__INT16_C)
 #  define INT16_C(x) __INT16_C(x)
@@ -6,6 +6,4 @@
 #  define INT16_C(x) x ## __INT16_C_SUFFIX__
 #else
 #  error
-#endif
-
 #endif

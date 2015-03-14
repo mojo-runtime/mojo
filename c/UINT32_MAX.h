@@ -1,4 +1,4 @@
-#ifndef UINT32_MAX
+#pragma once
 
 #if defined(__UINT32_MAX__)
 #  define UINT32_MAX __UINT32_MAX__
@@ -6,4 +6,3 @@
 #  error
 #endif
 
-#endif

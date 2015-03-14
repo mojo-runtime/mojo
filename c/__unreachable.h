@@ -1,4 +1,4 @@
-#ifndef __unreachable
+#pragma once
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
@@ -17,4 +17,3 @@
 
 #pragma clang diagnostic pop
 
-#endif
