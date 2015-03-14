@@ -408,6 +408,14 @@
 #include "errno_t.h"
 #if defined(__unix__)
 #  include "getpid.h"
+#  include "getegid.h"
+#  include "geteuid.h"
+#  include "getgid.h"
+#  include "getppid.h"
+#  if defined(__linux__)
+#    include "gettid.h"
+#  endif
+#  include "getuid.h"
 #  include "gid_t.h"
 #  include "id_t.h"
 #  include "idtype_t.h"
