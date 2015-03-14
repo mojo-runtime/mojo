@@ -8,7 +8,7 @@
 #    define __expect __builtin_expect
 #  endif
 #elif defined(__GNUC__)
-#  if (__GNUC__ >= #)
+#  if (__GNUC__ >= 3)
 #    define __expect __builtin_expect
 #  endif
 #else
