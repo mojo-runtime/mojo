@@ -1,3 +1,7 @@
+#if defined(__elf__)
+#  include "elf/__all__.h"
+#endif
+
 #include "std/__all__.h"
 
 #include "__Bool.h"
