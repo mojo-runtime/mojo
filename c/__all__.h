@@ -386,6 +386,7 @@
 #  include "WUNTRACED.h"
 #endif
 #include "abs.h"
+#include "assert.h"
 #if defined(__unix__)
 #  include "blkcnt_t.h"
 #  include "blksize_t.h"

@@ -1,8 +1,8 @@
 #pragma once
 
+#include "assert.h"
 #include "__Word.h"
 
-#include "std/assert!.hxx"
 #include "std/enable_if_t.hxx"
 
 namespace linux {
