@@ -452,6 +452,7 @@
 #if defined(__unix__)
 #  include "pid_t.h"
 #endif
+#include "puts.h"
 #include "ptrdiff_t.h"
 #include "sighandler_t.h"
 #include "size_t.h"
