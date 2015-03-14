@@ -496,8 +496,8 @@
 #endif
 #include "wchar_t.h"
 #include "wint_t.h"
+#include "_Bool.h"
 #include "_exit.h"
-#include "__Bool.h"
 #include "__Byte.h"
 #include "__S8.h"
 #include "__S16.h"

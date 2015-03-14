@@ -1,11 +1,9 @@
 #pragma once
 
 #if defined(__cplusplus)
-typedef bool __Bool;
+typedef bool _Bool;
 #elif defined(__GNUC__)
-#  if (__GNUC__ >= 3)
-typedef _Bool __Bool;
-#  else
+#  if (__GNUC__ < 3)
 #    error
 #  endif
 #else
