@@ -23,6 +23,7 @@
 #include "__memcpy.h"
 #include "__memset.h"
 #include "__noreturn.h"
+#include "__nullptr.h"
 #include "__optnone.h"
 #include "__static_assert.h"
 #include "__strcmp.h"
