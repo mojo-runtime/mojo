@@ -18,6 +18,7 @@
 #include "__alignas.h"
 #include "__alignof.h"
 #include "__assume.h"
+#include "__constexpr.h"
 #include "__expect.h"
 #include "__memcmp.h"
 #include "__memcpy.h"
