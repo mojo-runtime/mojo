@@ -1,10 +1,10 @@
 #pragma once
 
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/EMFILE.h"
-#include "c/ENFILE.h"
-#include "c/SYS_pipe2.h"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "EMFILE.h"
+#include "ENFILE.h"
+#include "SYS_pipe2.h"
 
 #include "Result.hxx"
 #include "abi/syscall-2.hxx"

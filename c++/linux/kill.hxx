@@ -1,10 +1,10 @@
 #pragma once
 
-#include "c/EINVAL.h"
-#include "c/EPERM.h"
-#include "c/ESRCH.h"
-#include "c/SYS_kill.h"
-#include "c/pid_t.h"
+#include "EINVAL.h"
+#include "EPERM.h"
+#include "ESRCH.h"
+#include "SYS_kill.h"
+#include "pid_t.h"
 
 #include "Result.hxx"
 #include "abi/syscall-2.hxx"

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "c/SYS_getuid.h"
-#include "c/uid_t.h"
+#include "SYS_getuid.h"
+#include "uid_t.h"
 
 #include "abi/syscall-0.hxx"
 

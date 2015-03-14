@@ -1,8 +1,8 @@
 #pragma once
 
-#include "c/EINVAL.h"
-#include "c/SYS_munmap.h"
-#include "c/size_t.h"
+#include "EINVAL.h"
+#include "SYS_munmap.h"
+#include "size_t.h"
 
 #include "Result.hxx"
 #include "abi/syscall-2.hxx"

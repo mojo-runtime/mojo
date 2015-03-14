@@ -1,13 +1,13 @@
 #pragma once
 
-#include "c/EACCES.h"
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
-#include "c/ERANGE.h"
-#include "c/SYS_getcwd.h"
-#include "c/size_t.h"
+#include "EACCES.h"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "ENAMETOOLONG.h"
+#include "ENOENT.h"
+#include "ERANGE.h"
+#include "SYS_getcwd.h"
+#include "size_t.h"
 
 #include "Result.hxx"
 #include "abi/syscall-2.hxx"

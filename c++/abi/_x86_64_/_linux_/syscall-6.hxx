@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../Word.hxx"
+#include "__Word.h"
 
 namespace abi { inline namespace _x86_64_ { inline namespace _linux_ {
 
 template <typename A1, typename A2, typename A3, typename A4, typename A5, typename A6>
 static inline
-Word
-syscall(Word number, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6) noexcept
+__Word
+syscall(__Word number, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6) noexcept
 {
-    Word
+    __Word
     output;
 
     register A1 r1 asm ("rdi") = a1;

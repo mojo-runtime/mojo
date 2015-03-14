@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/SYS_exit.h"
+#include "SYS_exit.h"
 
 #include "abi/syscall-1.hxx"
 

@@ -2,28 +2,28 @@
 
 // http://en.cppreference.com/w/c/types/limits
 
-#include "std/CHAR_BIT.h"
-#include "std/MB_LEN_MAX.h"
-#include "std/CHAR_MIN.h"
-#include "std/CHAR_MAX.h"
+#include "CHAR_BIT.h"
+#include "MB_LEN_MAX.h"
+#include "CHAR_MIN.h"
+#include "CHAR_MAX.h"
 
 // C99
-#include "std/SCHAR_MIN.h"
-#include "std/SHRT_MIN.h"
-#include "std/INT_MIN.h"
-#include "std/LONG_MIN.h"
-#include "std/LLONG_MIN.h"
+#include "SCHAR_MIN.h"
+#include "SHRT_MIN.h"
+#include "INT_MIN.h"
+#include "LONG_MIN.h"
+#include "LLONG_MIN.h"
 
 // C99
-#include "std/SCHAR_MAX.h"
-#include "std/SHRT_MAX.h"
-#include "std/INT_MAX.h"
-#include "std/LONG_MAX.h"
-#include "std/LLONG_MAX.h"
+#include "SCHAR_MAX.h"
+#include "SHRT_MAX.h"
+#include "INT_MAX.h"
+#include "LONG_MAX.h"
+#include "LLONG_MAX.h"
 
 // C99
-#include "std/UCHAR_MAX.h"
-#include "std/USHRT_MAX.h"
-#include "std/UINT_MAX.h"
-#include "std/ULONG_MAX.h"
-#include "std/ULLONG_MAX.h"
+#include "UCHAR_MAX.h"
+#include "USHRT_MAX.h"
+#include "UINT_MAX.h"
+#include "ULONG_MAX.h"
+#include "ULLONG_MAX.h"

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/O_WRONLY.h"
+#include "O_WRONLY.h"
 
 #include "../open.hxx"
 

@@ -1,10 +1,10 @@
 #pragma once
 
-#include "c/EBADF.h"
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/ENOTTY.h"
-#include "c/SYS_ioctl.h"
+#include "EBADF.h"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "ENOTTY.h"
+#include "SYS_ioctl.h"
 
 #include "Result.hxx"
 #include "abi/syscall-3.hxx"

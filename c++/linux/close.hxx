@@ -1,9 +1,9 @@
 #pragma once
 
-#include "c/EBADF.h"
-#include "c/EINTR.h"
-#include "c/EIO.h"
-#include "c/SYS_close.h"
+#include "EBADF.h"
+#include "EINTR.h"
+#include "EIO.h"
+#include "SYS_close.h"
 
 #include "Result.hxx"
 #include "abi/syscall-1.hxx"

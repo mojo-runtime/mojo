@@ -1,11 +1,11 @@
 #pragma once
 
-#include "c/EAGAIN.h"
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/ENOMEM.h"
-#include "c/SYS_mremap.h"
-#include "c/size_t.h"
+#include "EAGAIN.h"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "ENOMEM.h"
+#include "SYS_mremap.h"
+#include "size_t.h"
 
 #include "Result.hxx"
 #include "abi/syscall-4.hxx"
@@ -23,7 +23,7 @@ mremap(void* old_address, size_t old_size, size_t new_size, int flags) noexcept
         // this was not possible without exceeding the RLIMIT_MEMLOCK resource limit.
         EAGAIN_ = EAGAIN,
 
-        // "c/Segmentation fault." Some address in the range old_address to old_address+old_size
+        // "Segmentation fault." Some address in the range old_address to old_address+old_size
         // is an invalid virtual memory address for this process. You can also get EFAULT
         // even if there exist mappings that cover the whole address space requested,
         // but those mappings are of different types.

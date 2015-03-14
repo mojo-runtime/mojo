@@ -1,10 +1,10 @@
 #pragma once
 
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/SYS_clock_getres.h"
-#include "c/clockid_t.h"
-#include "c/struct-timespec.h"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "SYS_clock_getres.h"
+#include "clockid_t.h"
+#include "struct-timespec.h"
 
 #include "Result.hxx"
 #include "abi/syscall-2.hxx"

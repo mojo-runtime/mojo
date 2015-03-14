@@ -1,10 +1,10 @@
 #pragma once
 
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/ESRCH.h"
-#include "c/SYS_set_thread_area.h"
-#include "c/struct-user_desc.h"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "ESRCH.h"
+#include "SYS_set_thread_area.h"
+#include "struct-user_desc.h"
 
 #include "Result.hxx"
 #include "abi/syscall-1.hxx"

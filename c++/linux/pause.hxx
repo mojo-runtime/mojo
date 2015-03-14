@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/SYS_pause.h"
+#include "SYS_pause.h"
 
 #include "abi/syscall-0.hxx"
 

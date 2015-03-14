@@ -1,8 +1,8 @@
 #pragma once
 
-#include "c/EFAULT.h"
-#include "c/SYS_uname.h"
-#include "c/struct-utsname.h"
+#include "EFAULT.h"
+#include "SYS_uname.h"
+#include "struct-utsname.h"
 
 #include "Result.hxx"
 #include "abi/syscall-1.hxx"

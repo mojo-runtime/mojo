@@ -1,8 +1,8 @@
 #pragma once
 
-#include "c/EACCES.h"
-#include "c/EBADF.h"
-#include "c/SYS_fchdir.h"
+#include "EACCES.h"
+#include "EBADF.h"
+#include "SYS_fchdir.h"
 
 #include "Result.hxx"
 #include "abi/syscall-1.hxx"

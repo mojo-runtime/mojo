@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../__Word.h"
+#include "__Word.h"
 
 typedef struct
 {

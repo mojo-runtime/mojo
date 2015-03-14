@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/EPOLL_CTL_DEL.h"
+#include "EPOLL_CTL_DEL.h"
 
 #include "../epoll_ctl.hxx"
 #include "abi/syscall-3.hxx"

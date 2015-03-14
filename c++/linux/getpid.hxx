@@ -1,7 +1,7 @@
 #pragma once
 
-#include "c/SYS_getpid.h"
-#include "c/pid_t.h"
+#include "SYS_getpid.h"
+#include "pid_t.h"
 
 #include "abi/syscall-0.hxx"
 

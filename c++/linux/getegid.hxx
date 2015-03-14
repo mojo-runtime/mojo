@@ -1,7 +1,7 @@
 #pragma once
 
-#include "c/SYS_getegid.h"
-#include "c/gid_t.h"
+#include "SYS_getegid.h"
+#include "gid_t.h"
 
 #include "abi/syscall-0.hxx"
 

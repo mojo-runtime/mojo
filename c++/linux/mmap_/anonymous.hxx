@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/MAP_ANONYMOUS.h"
+#include "MAP_ANONYMOUS.h"
 
 #include "../mmap.hxx"
 #include "abi/syscall-4.hxx"

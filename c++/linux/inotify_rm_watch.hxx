@@ -1,8 +1,8 @@
 #pragma once
 
-#include "c/EBADF.h"
-#include "c/EINVAL.h"
-#include "c/SYS_inotify_rm_watch.h"
+#include "EBADF.h"
+#include "EINVAL.h"
+#include "SYS_inotify_rm_watch.h"
 
 #include "Result.hxx"
 #include "abi/syscall-2.hxx"

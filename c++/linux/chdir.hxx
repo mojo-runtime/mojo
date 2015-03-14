@@ -1,14 +1,14 @@
 #pragma once
 
-#include "c/EACCES.h"
-#include "c/EFAULT.h"
-#include "c/EIO.h"
-#include "c/ELOOP.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOTDIR.h"
-#include "c/SYS_chdir.h"
+#include "EACCES.h"
+#include "EFAULT.h"
+#include "EIO.h"
+#include "ELOOP.h"
+#include "ENAMETOOLONG.h"
+#include "ENOENT.h"
+#include "ENOMEM.h"
+#include "ENOTDIR.h"
+#include "SYS_chdir.h"
 
 #include "Result.hxx"
 #include "abi/syscall-1.hxx"

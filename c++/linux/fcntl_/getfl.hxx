@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/F_GETFL.h"
+#include "F_GETFL.h"
 
 #include "../fcntl.hxx"
 

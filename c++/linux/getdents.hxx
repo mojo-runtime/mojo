@@ -1,13 +1,13 @@
 #pragma once
 
-#include "c/EBADF.h"
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/ENOENT.h"
-#include "c/ENOTDIR.h"
-#include "c/SYS_getdents.h"
-#include "c/size_t.h"
-#include "c/struct-linux_dirent.h"
+#include "EBADF.h"
+#include "EFAULT.h"
+#include "EINVAL.h"
+#include "ENOENT.h"
+#include "ENOTDIR.h"
+#include "SYS_getdents.h"
+#include "size_t.h"
+#include "struct-linux_dirent.h"
 
 #include "Result.hxx"
 #include "abi/syscall-3.hxx"

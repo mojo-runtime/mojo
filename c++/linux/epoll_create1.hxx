@@ -1,10 +1,10 @@
 #pragma once
 
-#include "c/EINVAL.h"
-#include "c/EMFILE.h"
-#include "c/ENFILE.h"
-#include "c/ENOMEM.h"
-#include "c/SYS_epoll_create1.h"
+#include "EINVAL.h"
+#include "EMFILE.h"
+#include "ENFILE.h"
+#include "ENOMEM.h"
+#include "SYS_epoll_create1.h"
 
 #include "Result.hxx"
 #include "abi/syscall-1.hxx"

@@ -1,10 +1,10 @@
 #pragma once
 
-#include "c/EAGAIN.h"
-#include "c/ENOMEM.h"
-#include "c/ENOSYS.h"
-#include "c/SYS_fork.h"
-#include "c/pid_t.h"
+#include "EAGAIN.h"
+#include "ENOMEM.h"
+#include "ENOSYS.h"
+#include "SYS_fork.h"
+#include "pid_t.h"
 
 #include "Result.hxx"
 #include "abi/syscall-0.hxx"

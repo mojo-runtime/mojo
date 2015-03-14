@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../Word.hxx"
+#include "__Word.h"
 
 namespace abi { inline namespace _x86_64_ { inline namespace _linux_ {
 
 static inline
-Word
-syscall(Word number) noexcept
+__Word
+syscall(__Word number) noexcept
 {
-    Word
+    __Word
     output;
 
     asm volatile (

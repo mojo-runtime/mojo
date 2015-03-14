@@ -1,7 +1,7 @@
 #pragma once
 
-#include "c/TCSETS.h"
-#include "c/struct-termios.h"
+#include "TCSETS.h"
+#include "struct-termios.h"
 
 #include "../ioctl.hxx"
 
