@@ -20,6 +20,7 @@
 #include "__auto_return.h"
 #include "__constexpr.h"
 #include "__expect.h"
+#include "__long_long.h"
 #include "__noreturn.h"
 #include "__nothrow.h"
 #include "__nullptr.h"

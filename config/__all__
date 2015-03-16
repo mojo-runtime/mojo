@@ -26,6 +26,7 @@
 #include "__has_c_static_assert.h"
 #include "__has_clang.h"
 #include "__has_cpp_attribute_noreturn.h"
+#include "__has_cxx11.h"
 #include "__has_cxx_alignas.h"
 #include "__has_cxx_alignof.h"
 #include "__has_cxx_nullptr.h"

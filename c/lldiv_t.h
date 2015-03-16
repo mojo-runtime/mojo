@@ -1,16 +1,16 @@
 #pragma once
 
+#include "compat/__long_long.h"
+
 // Minimum (POSIX) definition
 
 typedef struct
 {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wc++98-compat-pedantic" // long long
+    //__long_long
     long long
     quot;
 
-    long long
+    __long_long
     rem;
-#pragma clang diagnostic pop
 }
 lldiv_t;
