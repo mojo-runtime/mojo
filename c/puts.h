@@ -4,11 +4,11 @@
 #  include "EOF.h"
 #  include "STDOUT_FILENO.h"
 #  include "SYS_write.h"
-#  include "__alloca.h"
+#  include "alloca.h"
+#  include "memcpy.h"
+#  include "strlen.h"
 #  include "__nothrow.h"
-#  include "__memcpy.h"
 #  include "__reinterpret_cast.h"
-#  include "__strlen.h"
 #  include "__syscall3.h"
 #  include "__Result_is_error.h"
 
@@ -18,15 +18,15 @@ int
 puts(const char* string)
 {
     __Word
-    string_length = __strlen(string);
+    string_length = strlen(string);
 
     __Word
     length = string_length + 1;
 
     void*
-    data = __alloca(length);
+    data = alloca(length);
 
-    __memcpy(data, string, string_length);
+    memcpy(data, string, string_length);
 
     __reinterpret_cast(char*, data)[string_length] = '\n';
 
