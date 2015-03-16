@@ -23,6 +23,7 @@
 #include "__has_c99.h"
 #include "__has_c_alignas.h"
 #include "__has_c_alignof.h"
+#include "__has_c_noreturn.h"
 #include "__has_c_static_assert.h"
 #include "__has_clang.h"
 #include "__has_cpp_attribute_noreturn.h"
