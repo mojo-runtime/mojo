@@ -1,10 +1,10 @@
 #pragma once
 
+#include "compat/__noreturn.h"
+#include "compat/__nothrow.h"
+#include "compat/__unreachable.h"
 #include "SYS_exit.h"
-#include "__noreturn.h"
-#include "__nothrow.h"
 #include "__syscall1.h"
-#include "__unreachable.h"
 
 __noreturn
 __nothrow

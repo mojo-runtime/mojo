@@ -1,6 +1,6 @@
 #pragma once
 
-#include "__nothrow.h"
+#include "compat/__nothrow.h"
 
 __nothrow
 static inline

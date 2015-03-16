@@ -6,7 +6,7 @@
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if defined(__linux__) && defined(__x86_64__)
-#  include "__Word.h"
+#  include "compat/__Word.h"
 #  define __syscall3(n, a1, a2, a3)                                     \
     ({                                                                  \
         __Word                                                          \

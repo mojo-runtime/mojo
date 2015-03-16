@@ -1,7 +1,7 @@
 #pragma once
 
+#include "compat/__Word.h"
 #include "assert.h"
-#include "__Word.h"
 
 #include "std/enable_if_t.hxx"
 

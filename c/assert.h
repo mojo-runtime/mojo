@@ -1,14 +1,14 @@
 #pragma once
 
 #if defined(NDEBUG)
-#  include "__assume.h"
+#  include "compat/__assume.h"
 #  define assert(x) __assume(x)
 #else
+#  include "compat/__noreturn.h"
+#  include "compat/__nothrow.h"
+#  include "compat/__static_cast.h"
 #  include "EXIT_FAILURE.h"
 #  include "_exit.h"
-#  include "__noreturn.h"
-#  include "__nothrow.h"
-#  include "__static_cast.h"
 #  define assert(x) ((x)                                                \
                      ? __static_cast(void, 0)                           \
                      : __assertion_error(#x, __FILE__, __LINE__, __PRETTY_FUNCTION__))

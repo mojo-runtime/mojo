@@ -1,10 +1,10 @@
 #pragma once
 
 #if defined(__linux__)
+#  include "compat/__nothrow.h"
 #  include "SYS_gettid.h"
 #  include "pid_t.h"
 #  include "__Result_ok.h"
-#  include "__nothrow.h"
 #  include "__syscall0.h"
 
 __nothrow

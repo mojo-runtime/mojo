@@ -1,8 +1,8 @@
 #pragma once
 
 #if !defined(__cplusplus)
-#  include "../__alignas.h"
-#  include "../__alignof.h"
+#  include "compat/__alignas.h"
+#  include "compat/__alignof.h"
 #  define alignas __alignas
 #  define alignof __alignof
 #endif

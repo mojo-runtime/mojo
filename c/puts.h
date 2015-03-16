@@ -1,14 +1,14 @@
 #pragma once
 
 #if defined(__unix__)
+#  include "compat/__nothrow.h"
+#  include "compat/__reinterpret_cast.h"
 #  include "EOF.h"
 #  include "STDOUT_FILENO.h"
 #  include "SYS_write.h"
 #  include "alloca.h"
 #  include "memcpy.h"
 #  include "strlen.h"
-#  include "__nothrow.h"
-#  include "__reinterpret_cast.h"
 #  include "__syscall3.h"
 #  include "__Result_is_error.h"
 

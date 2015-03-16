@@ -1,10 +1,10 @@
 #pragma once
 
 #if defined(__unix__)
+#  include "compat/__nothrow.h"
 #  include "SYS_getuid.h"
 #  include "uid_t.h"
 #  include "__Result_ok.h"
-#  include "__nothrow.h"
 #  include "__syscall0.h"
 
 __nothrow

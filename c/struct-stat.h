@@ -17,6 +17,7 @@
 #    error
 #  endif
 #elif defined(__FreeBSD__)
+#  include "compat/__static_cast.h"
 #  include "blkcnt_t.h"
 #  include "blksize_t.h"
 #  include "fflags_t.h"
@@ -28,7 +29,6 @@
 #  include "off_t.h"
 #  include "struct-timespec.h"
 #  include "uid_t.h"
-#  include "__static_cast.h"
 #else
 #  error
 #endif

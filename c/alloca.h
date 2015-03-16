@@ -1,7 +1,7 @@
 #pragma once
 
+#include "compat/__nothrow.h"
 #include "size_t.h"
-#include "__nothrow.h"
 
 __nothrow
 static inline

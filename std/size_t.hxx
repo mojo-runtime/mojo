@@ -1,6 +1,6 @@
 #pragma once
 
-#include "__Word.h"
+#include "compat/__Word.h"
 
 namespace std {
 

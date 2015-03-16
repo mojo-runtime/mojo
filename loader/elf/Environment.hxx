@@ -1,5 +1,7 @@
 #pragma once
 
+#include "compat/__Byte.h"
+
 namespace elf {
 
 struct Environment
