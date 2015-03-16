@@ -2,6 +2,7 @@
 
 #include "__has_attribute_const.h"
 #include "__has_attribute_error.h"
+#include "__has_attribute_mode.h"
 #include "__has_attribute_noreturn.h"
 #include "__has_attribute_nothrow.h"
 #include "__has_attribute_optimize.h"

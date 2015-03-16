@@ -1,7 +1,9 @@
 #pragma once
 
-#if defined(__SIZE_TYPE__)
-typedef __SIZE_TYPE__ __Word;
+#include "config/__has_attribute_mode.h"
+
+#if __has_attribute_mode
+typedef unsigned int __Word __attribute__((__mode__(__word__)));
 #else
 #  error
 #endif
