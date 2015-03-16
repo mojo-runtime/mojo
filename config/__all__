@@ -30,6 +30,7 @@
 #include "__has_cxx_alignof.h"
 #include "__has_cxx_nullptr.h"
 #include "__has_cxx_relaxed_constexpr.h"
+#include "__has_cxx_return_type_deduction.h"
 #include "__has_cxx_static_assert.h"
 #include "__has_cxx_static_assert_without_message.h"
 #include "__has_gnuc.h"

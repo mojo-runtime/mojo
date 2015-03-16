@@ -17,6 +17,7 @@
 #include "__alignas.h"
 #include "__alignof.h"
 #include "__assume.h"
+#include "__auto_return.h"
 #include "__constexpr.h"
 #include "__expect.h"
 #include "__noreturn.h"
