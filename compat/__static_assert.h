@@ -24,7 +24,7 @@
 #  endif
 #  if defined(__static_assert_2)
 #    include "macro/__va_dispatch.h"
-#    define __static_assert(...) __va_dispatch(__static_assert, __VA_ARGS__)
+#    define __static_assert(...) __va_dispatch(__static_assert_, __VA_ARGS__)
 #    define __static_assert_1(x) __static_assert_2(x, "")
 #  endif
 #endif
