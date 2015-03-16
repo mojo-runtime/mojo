@@ -17,10 +17,10 @@ static inline
 int
 puts(const char* string)
 {
-    __Word
+    size_t
     string_length = strlen(string);
 
-    __Word
+    size_t
     length = string_length + 1;
 
     void*

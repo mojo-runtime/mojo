@@ -1,9 +1,9 @@
 #pragma once
 
-#include "compat/__Word.h"
+#include "compat/__Size.h"
 
 namespace std {
 
-typedef __Word size_t;
+typedef __Size size_t;
 
 } // namespace std

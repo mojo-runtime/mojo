@@ -1,5 +1,5 @@
 #pragma once
 
-#include "compat/__Word.h"
+#include "compat/__Size.h"
 
-typedef __Word size_t;
+typedef __Size size_t;
