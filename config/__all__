@@ -19,6 +19,7 @@
 #include "__has_builtin_strcmp.h"
 #include "__has_builtin_strlen.h"
 #include "__has_builtin_unreachable.h"
+#include "__has_c99.h"
 #include "__has_c_alignas.h"
 #include "__has_c_alignof.h"
 #include "__has_c_static_assert.h"

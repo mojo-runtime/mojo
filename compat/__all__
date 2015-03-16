@@ -2,6 +2,7 @@
 
 #include "__system/__all__"
 
+#include "__Bool.h"
 #include "__Byte.h"
 #include "__S8.h"
 #include "__S16.h"

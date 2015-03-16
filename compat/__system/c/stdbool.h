@@ -1,7 +1,8 @@
 #pragma once
 
 #if !defined(__cplusplus)
-#  define bool _Bool
+#  include "compat/__Bool.h"
+#  define bool __Bool
 #  define false 0
 #  define true 1
 #endif
