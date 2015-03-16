@@ -1,8 +1,8 @@
 #pragma once
 
-#include "__SIGNED_INTEGER_REPRESENTATION.h"
+#include "config/__signed_integer.h"
 
-#if __SIGNED_INTEGER_REPRESENTATION == __SIGNED_INTEGER_REPRESENTATION_TWOS_COMPLEMENT
+#if __signed_integer == __signed_integer__twos_complement
 #  include "LLONG_MAX.h"
 #  define LLONG_MIN (-LLONG_MAX - 1LL)
 #else

@@ -33,3 +33,4 @@
 #include "__has_cxx_static_assert.h"
 #include "__has_cxx_static_assert_without_message.h"
 #include "__has_gnuc.h"
+#include "__signed_integer.h"

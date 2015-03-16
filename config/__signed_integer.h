@@ -3,10 +3,10 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
-#define __SIGNED_INTEGER_REPRESENTATION_TWOS_COMPLEMENT 2
+#define __signed_integer__twos_complement 2
 
 #if defined(__LP64__)
-#  define __SIGNED_INTEGER_REPRESENTATION __SIGNED_INTEGER_REPRESENTATION_TWOS_COMPLEMENT
+#  define __signed_integer __signed_integer__twos_complement
 #else
 #  error
 #endif
