@@ -3,6 +3,8 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
+//--------------------------------------------------------------------------------------------------
+
 #if defined(__cplusplus)
 // No C++1z feature tests yet
 #  if defined(__clang__)
@@ -50,5 +52,7 @@
 #    error
 #  endif
 #endif
+
+//--------------------------------------------------------------------------------------------------
 
 #pragma clang diagnostic pop
