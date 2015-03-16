@@ -1,0 +1,21 @@
+// -*- C -*-
+
+#if defined(__cplusplus)
+#  include "binary_function.hxx"
+#  include "default_delete.hxx"
+#  include "enable_if.hxx"
+#  include "enable_if_t.hxx"
+#  include "extent.hxx"
+#  include "forward.hxx"
+#  include "is_array.hxx"
+#  include "is_same.hxx"
+#  include "iterator_traits.hxx"
+#  include "less.hxx"
+#  include "move.hxx"
+#  include "remove_extent.hxx"
+#  include "remove_reference.hxx"
+#  include "remove_reference_t.hxx"
+#  include "size_t.hxx"
+#  include "unary_function.hxx"
+#  include "unique_ptr.hxx"
+#endif

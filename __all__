@@ -1,0 +1,7 @@
+// -*- C -*-
+
+#include "c/__all__"
+#include "compat/__all__"
+#include "loader/__all__"
+#include "os/__all__"
+#include "std/__all__"
