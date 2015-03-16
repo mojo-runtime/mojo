@@ -1,6 +1,6 @@
 #pragma once
 
-#include "__va_count.h"
+#include "compat/__va_count.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"

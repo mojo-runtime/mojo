@@ -30,3 +30,4 @@
 #include "__unreachable.h"
 #include "__unused.h"
 #include "__used.h"
+#include "__va_count.h"
