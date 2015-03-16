@@ -17,8 +17,6 @@
 #include "__assume.h"
 #include "__constexpr.h"
 #include "__expect.h"
-#include "__has_clang.h"
-#include "__has_gnuc.h"
 #include "__noreturn.h"
 #include "__nothrow.h"
 #include "__nullptr.h"

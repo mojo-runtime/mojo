@@ -1,5 +1,6 @@
 #pragma once
 
+#include "config/__has_builtin_alloca.h"
 #include "compat/__nothrow.h"
 #include "size_t.h"
 
@@ -8,13 +9,7 @@ static inline
 void*
 alloca(size_t size)
 {
-#if defined(__has_builtin)
-#  if __has_builtin(__builtin_alloca)
-    return __builtin_alloca(size);
-#  else
-#    error
-#  endif
-#elif defined(__GNUC__) // Version?
+#if __has_builtin_alloca
     return __builtin_alloca(size);
 #else
 #  error
