@@ -1,5 +1,0 @@
-// -*- C -*-
-
-#if defined(__linux__)
-#  include "linux/__all__"
-#endif

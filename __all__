@@ -3,7 +3,11 @@
 #include "c/__all__"
 #include "compat/__all__"
 #include "config/__all__"
-#include "loader/__all__"
+#if defined(__ELF__)
+#  include "elf/__all__"
+#endif
+#if defined(__linux__)
+#  include "linux/__all__"
+#endif
 #include "macro/__all__"
-#include "os/__all__"
 #include "std/__all__"
