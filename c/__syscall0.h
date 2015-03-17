@@ -12,7 +12,7 @@
         __Word                                                          \
         result;                                                         \
                                                                         \
-        asm volatile (                                                  \
+        __asm__ volatile (                                              \
             "syscall"                                                   \
             : "=a" (result)                                             \
             : "0" (n)                                                   \
