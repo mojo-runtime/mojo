@@ -448,7 +448,6 @@
 #  include "mode_t.h"
 #  include "nlink_t.h"
 #endif
-#include "noreturn.h"
 #if defined(__unix__)
 #  include "off_t.h"
 #endif
