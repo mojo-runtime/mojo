@@ -11,8 +11,12 @@ static inline
 void
 _exit(int status)
 {
-#if defined(__linux__) && defined(__x86_64__)
+#if defined(__x86_64__)
+#  if defined(__linux__) || defined(__FreeBSD__)
     __asm__ __volatile__ ("syscall" :: "a" (SYS_exit), "D" (status));
+#  else
+#    error
+#  endif
 #else
 #  error
 #endif

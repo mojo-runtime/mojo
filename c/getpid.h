@@ -15,8 +15,12 @@ getpid()
     pid_t
     result;
 
-#if defined(__linux__) && defined(__x86_64__)
+#if defined(__x86_64__)
+#  if defined(__linux__) || defined(__FreeBSD__)
     __asm__ ("syscall" : "=a" (result) : "0" (SYS_getpid) : "rcx", "r11");
+#  else
+#    error
+#  endif
 #else
 #  error
 #endif

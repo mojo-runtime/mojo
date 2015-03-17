@@ -455,7 +455,9 @@
 #if defined(__unix__)
 #  include "pid_t.h"
 #endif
-#include "puts.h"
+#if defined(__linux__) // TEMP
+#  include "puts.h"
+#endif
 #include "ptrdiff_t.h"
 #include "sighandler_t.h"
 #include "size_t.h"
@@ -504,10 +506,3 @@
 #include "_exit.h"
 #include "__PAGE_SHIFT.h"
 #include "__PAGE_SIZE.h"
-#include "__syscall0.h"
-#include "__syscall1.h"
-#include "__syscall2.h"
-#include "__syscall3.h"
-#include "__syscall4.h"
-#include "__syscall5.h"
-#include "__syscall6.h"
