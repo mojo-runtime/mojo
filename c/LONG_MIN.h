@@ -1,8 +1,8 @@
 #pragma once
 
-#include "config/__signed_integer.h"
+#include "abi/__SIGNED_INTEGER_KIND.h"
 
-#if __signed_integer == __signed_integer__twos_complement
+#if __SIGNED_INTEGER_KIND == __SIGNED_INTEGER_KIND__TWOS_COMPLEMENT
 #  include "LONG_MAX.h"
 #  define LONG_MIN (-LONG_MAX - 1L)
 #else

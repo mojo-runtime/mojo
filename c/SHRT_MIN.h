@@ -1,8 +1,8 @@
 #pragma once
 
-#include "config/__signed_integer.h"
+#include "abi/__SIGNED_INTEGER_KIND.h"
 
-#if __signed_integer == __signed_integer__twos_complement
+#if __SIGNED_INTEGER_KIND == __SIGNED_INTEGER_KIND__TWOS_COMPLEMENT
 #  include "SHRT_MAX.h"
 #  define SHRT_MIN (-INT_MAX - 1)
 #else

@@ -1,8 +1,8 @@
 // -*- C -*-
 
+#include "abi/__all__"
 #include "c/__all__"
 #include "compat/__all__"
-#include "config/__all__"
 #if defined(__ELF__)
 #  include "elf/__all__"
 #endif
