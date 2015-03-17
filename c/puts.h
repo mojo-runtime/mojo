@@ -1,7 +1,7 @@
 #pragma once
 
 #if defined(__unix__)
-#  include "compat/__nothrow.h"
+#  include "compat/__noexcept.h"
 #  include "compat/__reinterpret_cast.h"
 #  include "EOF.h"
 #  include "STDOUT_FILENO.h"
@@ -12,10 +12,9 @@
 #  include "__syscall3.h"
 #  include "__Result_is_error.h"
 
-__nothrow
 static inline
 int
-puts(const char* string)
+puts(const char* string) __noexcept
 {
     size_t
     string_length = strlen(string);

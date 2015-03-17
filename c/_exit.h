@@ -1,16 +1,15 @@
 #pragma once
 
-#include "compat/__noreturn.h"
-#include "compat/__nothrow.h"
 #include "compat/__builtin_unreachable.h"
+#include "compat/__noexcept.h"
+#include "compat/__noreturn.h"
 #include "SYS_exit.h"
 #include "__syscall1.h"
 
 __noreturn
-__nothrow
 static inline
 void
-_exit(int status)
+_exit(int status) __noexcept
 {
     __syscall1(SYS_exit, status);
     __builtin_unreachable();

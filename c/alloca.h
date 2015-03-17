@@ -1,13 +1,12 @@
 #pragma once
 
 #include "compat/__has_builtin.h"
-#include "compat/__nothrow.h"
+#include "compat/__noexcept.h"
 #include "size_t.h"
 
-__nothrow
 static inline
 void*
-alloca(size_t size)
+alloca(size_t size) __noexcept
 {
 #if __has_builtin(__builtin_alloca)
     return __builtin_alloca(size);
