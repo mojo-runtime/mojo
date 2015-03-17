@@ -387,7 +387,6 @@
 #endif
 #include "abs.h"
 #include "alloca.h"
-#include "assert.h"
 #if defined(__unix__)
 #  include "blkcnt_t.h"
 #  include "blksize_t.h"
@@ -407,18 +406,7 @@
 #  include "epoll_data_t.h"
 #endif
 #include "errno_t.h"
-#if defined(__linux__)
-#  include "exit_group.h"
-#endif
 #if defined(__unix__)
-#  include "getpid.h"
-#  include "getegid.h"
-#  include "geteuid.h"
-#  include "getgid.h"
-#  include "getppid.h"
-#  if defined(__linux__)
-#    include "gettid.h"
-#  endif
 #  include "getuid.h"
 #  include "gid_t.h"
 #  include "id_t.h"
@@ -454,9 +442,6 @@
 #include "offsetof.h"
 #if defined(__unix__)
 #  include "pid_t.h"
-#endif
-#if defined(__linux__) // TEMP
-#  include "puts.h"
 #endif
 #include "ptrdiff_t.h"
 #include "sighandler_t.h"
@@ -503,6 +488,5 @@
 #endif
 #include "wchar_t.h"
 #include "wint_t.h"
-#include "_exit.h"
 #include "__PAGE_SHIFT.h"
 #include "__PAGE_SIZE.h"
