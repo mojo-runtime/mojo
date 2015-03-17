@@ -1,3 +1,3 @@
 #if defined(__cplusplus)
-#  include "NUMBER.hxx"
+#  include "number.hxx"
 #endif
