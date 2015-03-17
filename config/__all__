@@ -30,6 +30,7 @@
 #include "__has_cxx11.h"
 #include "__has_cxx_alignas.h"
 #include "__has_cxx_alignof.h"
+#include "__has_cxx_decltype.h"
 #include "__has_cxx_nullptr.h"
 #include "__has_cxx_relaxed_constexpr.h"
 #include "__has_cxx_return_type_deduction.h"

@@ -28,6 +28,7 @@
 #include "__reinterpret_cast.h"
 #include "__static_assert.h"
 #include "__static_cast.h"
+#include "__typeof.h"
 #include "__unavailable.h"
 #include "__unreachable.h"
 #include "__unused.h"
