@@ -11,6 +11,7 @@
 #  define __has_feature_cxx_alignas()               __has_gnuc(4, 7)
 #  define __has_feature_cxx_alignof()               __has_gnuc(4, 7)
 #  define __has_feature_cxx_decltype()              __has_gnuc(4, 3)
+#  define __has_feature_cxx_noexcept()              __has_gnuc(4, 6)
 #  define __has_feature_cxx_nullptr()               __has_gnuc(4, 6)
 #  define __has_feature_cxx_relaxed_constexpr()     __has_gnuc(5, 0)
 #  define __has_feature_cxx_return_type_deduction() __has_gnuc(4, 9)

@@ -13,7 +13,7 @@
 #  define __has_builtin___builtin_offsetof()    1 // Version?
 #  define __has_builtin___builtin_strcmp()      1 // Version?
 #  define __has_builtin___builtin_strlen()      1 // Version?
-#  define __has_builtin___builtin_unreachable() // Version?
+#  define __has_builtin___builtin_unreachable() 1 // Version?
 #endif
 
 #if !defined(__has_builtin)
