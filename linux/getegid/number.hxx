@@ -8,7 +8,7 @@ static
 const __Number
 number =
 #if defined(__x86_64__)
- 60
+ 108
 #else
 #  error
 #endif
