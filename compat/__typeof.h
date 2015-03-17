@@ -4,8 +4,8 @@
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if !defined(__typeof) && defined(__cplusplus)
-#  include "config/__has_cxx_decltype.h"
-#  if __has_cxx_decltype
+#  include "__has_feature.h"
+#  if __has_feature(cxx_decltype)
 #    define __typeof(x) decltype(x)
 #  endif
 #endif

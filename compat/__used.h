@@ -1,13 +1,12 @@
 #pragma once
 
+#include "__has_attribute.h"
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
-#if !defined(__used)
-#  include "config/__has_attribute_used.h"
-#  if __has_attribute_used
-#    define __used __attribute__((__used__))
-#  endif
+#if !defined(__used) && __has_attribute(used)
+#  define __used __attribute__((__used__))
 #endif
 
 #if !defined(__used)

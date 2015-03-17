@@ -1,6 +1,6 @@
 #pragma once
 
-#include "config/__has_builtin_memset.h"
+#include "compat/__has_builtin.h"
 #include "compat/__nothrow.h"
 #include "size_t.h"
 
@@ -9,7 +9,7 @@ static inline
 void*
 memset(void* s, int c, size_t n)
 {
-#if __has_builtin_memset
+#if __has_builtin(__builtin_memset)
     return __builtin_memset(s, c, n);
 #else
 #  error

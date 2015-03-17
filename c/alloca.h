@@ -1,6 +1,6 @@
 #pragma once
 
-#include "config/__has_builtin_alloca.h"
+#include "compat/__has_builtin.h"
 #include "compat/__nothrow.h"
 #include "size_t.h"
 
@@ -9,7 +9,7 @@ static inline
 void*
 alloca(size_t size)
 {
-#if __has_builtin_alloca
+#if __has_builtin(__builtin_alloca)
     return __builtin_alloca(size);
 #else
 #  error

@@ -8,8 +8,8 @@
 #endif
 
 #if !defined(__Bool)
-#  include "config/__has_c99.h"
-#  if __has_c99
+#  include "__has_c.h"
+#  if __has_c(99)
 #    define __Bool _Bool
 #  endif
 #endif

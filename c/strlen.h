@@ -1,6 +1,6 @@
 #pragma once
 
-#include "config/__has_builtin_strlen.h"
+#include "compat/__has_builtin.h"
 #include "compat/__nothrow.h"
 #include "size_t.h"
 
@@ -9,7 +9,7 @@ static inline
 size_t
 strlen(const char* s)
 {
-#if __has_builtin_strlen
+#if __has_builtin(__builtin_strlen)
     return __builtin_strlen(s);
 #else
 #  error

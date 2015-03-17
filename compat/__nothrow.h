@@ -4,8 +4,8 @@
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if !defined(__nothrow)
-#  include "config/__has_attribute_nothrow.h"
-#  if __has_attribute_nothrow
+#  include "__has_attribute.h"
+#  if __has_attribute(nothrow)
 #    define __nothrow __attribute__((__nothrow__))
 #  endif
 #endif

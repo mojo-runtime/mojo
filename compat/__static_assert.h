@@ -3,22 +3,29 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
-#if !defined(__static_assert)
-#  include "config/__has_cxx_static_assert_without_message.h"
-#  if __has_cxx_static_assert_without_message
-#    define __static_assert(...) static_assert(__VA_ARGS__)
+// XXX: No C++1z feature tests yet
+#if !defined(__static_assert) && defined(__cplusplus)
+#  if defined(__clang__)
+#    include "__has_clang.h"
+#    if __has_clang(3, 5)
+#      define __static_assert(...) static_assert(__VA_ARGS__)
+#    endif
+#  elif defined(__GNUC__)
+#    include "__has_gnuc.h"
+#    if __has_gnuc(5, 0)
+#      define __static_assert(...) static_assert(__VA_ARGS__)
+#    endif
 #  endif
 #endif
 
 #if !defined(__static_assert)
+#  include "__has_feature.h"
 #  if defined(__cplusplus)
-#    include "config/__has_cxx_static_assert.h"
-#    if __has_cxx_static_assert
+#    if __has_feature(cxx_static_assert)
 #      define __static_assert_2 static_assert
 #    endif
 #  else
-#    include "config/__has_c_static_assert.h"
-#    if __has_c_static_assert
+#    if __has_feature(c_static_assert)
 #      define __static_assert_2 _Static_assert
 #    endif
 #  endif

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "config/__has_builtin_offsetof.h"
+// Note that `__has_builtin(__builtin_offsetof)` does not seem to apply.
 
-#if __has_builtin_offsetof
+#if defined(__GNUC__)
 #  define offsetof(T, member) __builtin_offsetof(T, member)
 #else
 #  error
