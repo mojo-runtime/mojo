@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #if defined(__cplusplus)
 #  include "Arguments.hxx"
 #  include "AuxiliaryVector.hxx"

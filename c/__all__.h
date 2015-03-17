@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #if defined(__elf__)
 #  include "AT_BASE.h"
 #  if defined(__linux__)

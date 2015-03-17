@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #if defined(__cplusplus)
 #  include "add.hxx"
 #  include "del.hxx"

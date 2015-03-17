@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #if defined(__cplusplus)
 #  include "binary_function.hxx"
 #  include "default_delete.hxx"

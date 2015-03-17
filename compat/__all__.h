@@ -1,6 +1,4 @@
-// -*- C -*-
-
-#include "__system/__all__"
+#include "__system/__all__.h"
 
 #include "__Bool.h"
 #include "__Byte.h"

@@ -1,6 +1,4 @@
-// -*- C -*-
-
-// Avoiding "__all__" in -isystem paths
+// Avoiding "__all__.h" in -isystem paths
 
 #include "c/limits.h"
 #include "c/stdalign.h"

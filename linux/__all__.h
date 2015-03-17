@@ -1,10 +1,8 @@
-// -*- C -*-
-
-#include "epoll_ctl_/__all__"
-#include "fcntl_/__all__"
-#include "ioctl_/__all__"
-#include "mmap_/__all__"
-#include "open_/__all__"
+#include "epoll_ctl_/__all__.h"
+#include "fcntl_/__all__.h"
+#include "ioctl_/__all__.h"
+#include "mmap_/__all__.h"
+#include "open_/__all__.h"
 
 #if defined(__cplusplus)
 #  include "chdir.hxx"
