@@ -266,89 +266,6 @@
 #  include "STDOUT_FILENO.h"
 #endif
 #if defined(__unix__)
-#  include "SYS_chdir.h"
-#  include "SYS_chmod.h"
-#  include "SYS_chown.h"
-#  include "SYS_clock_getres.h"
-#  include "SYS_clock_gettime.h"
-#  if defined(__linux__)
-#    include "SYS_clock_nanosleep.h"
-#  endif
-#  include "SYS_clock_settime.h"
-#  if defined(__linux__)
-#    include "SYS_clone.h"
-#  endif
-#  include "SYS_close.h"
-#  include "SYS_dup.h"
-#  include "SYS_dup2.h"
-#  if defined(__linux__)
-#    include "SYS_dup3.h"
-#    include "SYS_epoll_create1.h"
-#    include "SYS_epoll_ctl.h"
-#    include "SYS_epoll_wait.h"
-#  endif
-#  include "SYS_execve.h"
-#  include "SYS_exit.h"
-#  if defined(__linux__)
-#    include "SYS_exit_group.h"
-#  endif
-#  include "SYS_fchdir.h"
-#  include "SYS_fcntl.h"
-#  include "SYS_fork.h"
-#  include "SYS_fstat.h"
-#  include "SYS_fstatat.h"
-#  if defined(__linux__)
-#    include "SYS_get_thread_area.h"
-#    include "SYS_getcwd.h"
-#  endif
-#  include "SYS_getdents.h"
-#  include "SYS_getegid.h"
-#  include "SYS_geteuid.h"
-#  include "SYS_getgid.h"
-#  include "SYS_getpid.h"
-#  include "SYS_getppid.h"
-#  if defined(__linux__)
-#    include "SYS_gettid.h"
-#  endif
-#  include "SYS_getuid.h"
-#  if defined(__linux__)
-#    include "SYS_inotify_add_watch.h"
-#    include "SYS_inotify_init1.h"
-#    include "SYS_inotify_rm_watch.h"
-#  endif
-#  include "SYS_ioctl.h"
-#  include "SYS_kill.h"
-#  include "SYS_mkdir.h"
-#  include "SYS_mmap.h"
-#  if defined(__linux__)
-#    include "SYS_mremap.h"
-#  endif
-#  include "SYS_munmap.h"
-#  include "SYS_open.h"
-#  if defined(__linux__)
-#    include "SYS_pause.h"
-#  endif
-#  include "SYS_pipe2.h"
-#  include "SYS_read.h"
-#  include "SYS_readlink.h"
-#  include "SYS_rmdir.h"
-#  if defined(__linux__)
-#    include "SYS_set_thread_area.h"
-#  endif
-#  include "SYS_stat.h"
-#  include "SYS_symlink.h"
-#  if defined(__linux__)
-#    include "SYS_tgkill.h"
-#    include "SYS_uname.h"
-#  endif
-#  include "SYS_unlink.h"
-#  include "SYS_vfork.h"
-#  if defined(__linux__)
-#    include "SYS_waitid.h"
-#  endif
-#  include "SYS_write.h"
-#endif
-#if defined(__unix__)
 #  include "TCGETS.h"
 #  include "TCSETS.h"
 #  include "TCSETS.h"
@@ -407,7 +324,6 @@
 #endif
 #include "errno_t.h"
 #if defined(__unix__)
-#  include "getuid.h"
 #  include "gid_t.h"
 #  include "id_t.h"
 #  include "idtype_t.h"

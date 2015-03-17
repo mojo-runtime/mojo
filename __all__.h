@@ -7,5 +7,6 @@
 #  include "linux/__all__.h"
 #endif
 #include "macro/__all__.h"
+#include "os/__all__.h"
 #include "std/__all__.h"
 #include "__system/__all__.h"
