@@ -6,6 +6,8 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  define ETIMEDOUT 60
 #else
 #  error
 #endif

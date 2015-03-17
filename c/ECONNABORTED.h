@@ -6,6 +6,8 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  define ECONNABORTED 53
 #else
 #  error
 #endif

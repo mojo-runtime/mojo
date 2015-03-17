@@ -6,6 +6,8 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  define ECONNREFUSED 61
 #else
 #  error
 #endif

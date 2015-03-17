@@ -6,6 +6,8 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  define ENOTRECOVERABLE 95
 #else
 #  error
 #endif

@@ -6,6 +6,8 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  define ECONNRESET 54
 #else
 #  error
 #endif

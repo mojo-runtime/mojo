@@ -6,6 +6,8 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  define ENOTSOCK 38
 #else
 #  error
 #endif

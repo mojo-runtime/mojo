@@ -6,6 +6,8 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  define EPROTOTYPE 41
 #else
 #  error
 #endif

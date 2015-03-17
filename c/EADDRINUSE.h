@@ -6,6 +6,8 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  define EADDRINUSE 48
 #else
 #  error
 #endif

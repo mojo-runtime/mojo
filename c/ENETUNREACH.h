@@ -6,6 +6,8 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  define ENETUNREACH 51
 #else
 #  error
 #endif

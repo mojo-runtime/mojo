@@ -6,6 +6,8 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  define EOWNERDEAD 96
 #else
 #  error
 #endif

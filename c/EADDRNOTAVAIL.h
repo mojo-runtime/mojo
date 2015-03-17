@@ -6,6 +6,8 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  define EADDRNOTAVAIL 49
 #else
 #  error
 #endif

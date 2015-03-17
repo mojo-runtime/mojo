@@ -6,6 +6,8 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  define EPROTONOSUPPORT 43
 #else
 #  error
 #endif

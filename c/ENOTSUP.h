@@ -6,6 +6,9 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  include "EOPNOTSUPP.h"
+#  define ENOTSUP EOPNOTSUPP
 #else
 #  error
 #endif

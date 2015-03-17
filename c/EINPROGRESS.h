@@ -6,6 +6,8 @@
 #  else
 #    error
 #  endif
+#elif defined(__FreeBSD__)
+#  define EINPROGRESS 36
 #else
 #  error
 #endif
