@@ -1,16 +1,27 @@
 #pragma once
 
-#include "compat/__builtin_unreachable.h"
-#include "compat/__noexcept.h"
-#include "compat/__noreturn.h"
-#include "SYS_exit.h"
-#include "__syscall1.h"
+//--------------------------------------------------------------------------------------------------
 
-__noreturn
+#if defined(__unix__)
+
+#include "SYS_exit.h"
+
+__attribute__((__noreturn__, __nothrow__))
 static inline
 void
-_exit(int status) __noexcept
+_exit(int status)
 {
-    __syscall1(SYS_exit, status);
+#if defined(__linux__) && defined(__x86_64__)
+    __asm__ __volatile__ ("syscall" :: "a" (SYS_exit), "D" (status));
+#else
+#  error
+#endif
+
     __builtin_unreachable();
 }
+
+//--------------------------------------------------------------------------------------------------
+
+#else
+#  error
+#endif

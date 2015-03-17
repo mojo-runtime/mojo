@@ -1,18 +1,30 @@
 #pragma once
 
-#if defined(__linux__)
-#  include "compat/__noexcept.h"
-#  include "SYS_gettid.h"
-#  include "pid_t.h"
-#  include "__Result_ok.h"
-#  include "__syscall0.h"
+//--------------------------------------------------------------------------------------------------
 
+#if defined(__linux__)
+
+#include "SYS_gettid.h"
+#include "pid_t.h"
+
+__attribute__((__nothrow__))
 static inline
 pid_t
-gettid() __noexcept
+gettid()
 {
-    return __Result_ok(pid_t, __syscall0(SYS_gettid));
+    pid_t
+    result;
+
+#if defined(__linux__) && defined(__x86_64__)
+    __asm__ ("syscall" : "=a" (result) : "0" (SYS_gettid) : "rcx", "r11");
+#else
+#  error
+#endif
+
+    return result;
 }
+
+//--------------------------------------------------------------------------------------------------
 
 #else
 #  error
