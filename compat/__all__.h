@@ -1,5 +1,3 @@
-#include "__system/__all__.h"
-
 #include "__Bool.h"
 #include "__Byte.h"
 #include "__INT8_TYPE__.h"
