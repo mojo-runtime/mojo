@@ -2,7 +2,6 @@
 
 #if defined(__unix__)
 #  include "compat/__noexcept.h"
-#  include "compat/__reinterpret_cast.h"
 #  include "EOF.h"
 #  include "STDOUT_FILENO.h"
 #  include "SYS_write.h"
@@ -27,7 +26,10 @@ puts(const char* string) __noexcept
 
     memcpy(data, string, string_length);
 
-    __reinterpret_cast(char*, data)[string_length] = '\n';
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wold-style-cast"
+    ((char*)data)[string_length] = '\n';
+#pragma clang diagnostic pop
 
     return __Result_is_error(
         __syscall3(

@@ -17,7 +17,6 @@
 #    error
 #  endif
 #elif defined(__FreeBSD__)
-#  include "compat/__static_cast.h"
 #  include "blkcnt_t.h"
 #  include "blksize_t.h"
 #  include "fflags_t.h"
@@ -142,8 +141,12 @@ struct stat
     st_birthtim;
 
     // Padding hacks
-    unsigned int :(8 / 2) * (16 - __static_cast(int, sizeof(struct timespec)));
-    unsigned int :(8 / 2) * (16 - __static_cast(int, sizeof(struct timespec)));
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wold-style-cast"
+    unsigned int :(8 / 2) * (16 - ((int)sizeof(struct timespec)));
+    unsigned int :(8 / 2) * (16 - ((int)sizeof(struct timespec)));
+#pragma clang diagnostic pop
+
 #else
 #  error
 #endif

@@ -6,11 +6,13 @@
 #else
 #  include "compat/__noexcept.h"
 #  include "compat/__noreturn.h"
-#  include "compat/__static_cast.h"
 #  include "EXIT_FAILURE.h"
 #  include "_exit.h"
-#  define assert(x) ((x)                                                \
-                     ? __static_cast(void, 0)                           \
+#  define assert(x) ((x) ?                                              \
+                     _Pragma("clang diagnostic push")                   \
+                     _Pragma("clang diagnostic ignored \"-Wold-style-cast\"") \
+                     ((void)0)                                          \
+                     _Pragma("clang diagnostic pop")                    \
                      : __assertion_error(#x, __FILE__, __LINE__, __PRETTY_FUNCTION__))
 
 
