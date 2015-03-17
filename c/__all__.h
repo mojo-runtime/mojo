@@ -404,5 +404,3 @@
 #endif
 #include "wchar_t.h"
 #include "wint_t.h"
-#include "__PAGE_SHIFT.h"
-#include "__PAGE_SIZE.h"
