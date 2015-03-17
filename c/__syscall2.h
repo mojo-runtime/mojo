@@ -1,7 +1,7 @@
 #pragma once
 
 #include "compat/__Word.h"
-#include "compat/__typeof.h"
+#include "compat/__typeof__.h"
 
 #pragma clang diagnostic ignored "-Wgnu-statement-expression" // FIXME
 
@@ -14,8 +14,8 @@
         __Word                                                          \
         result;                                                         \
                                                                         \
-        register __typeof(a1) r1 __asm__ ("rdi") = a1;                  \
-        register __typeof(a2) r2 __asm__ ("rsi") = a2;                  \
+        register __typeof__(a1) r1 __asm__ ("rdi") = a1;                \
+        register __typeof__(a2) r2 __asm__ ("rsi") = a2;                \
                                                                         \
         __asm__ volatile (                                              \
             "syscall"                                                   \

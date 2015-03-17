@@ -1,5 +1,5 @@
 #pragma once
 
-#include "compat/__S8.h"
+#include "compat/__INT8_TYPE__.h"
 
-typedef __S8 int8_t;
+typedef __INT8_TYPE__ int8_t;

@@ -1,5 +1,5 @@
 #pragma once
 
-#include "compat/__S64.h"
+#include "compat/__INT64_TYPE__.h"
 
-typedef __S64 int64_t;
+typedef __INT64_TYPE__ int64_t;

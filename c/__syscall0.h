@@ -1,12 +1,13 @@
 #pragma once
 
+#include "compat/__Word.h"
+
 #pragma clang diagnostic ignored "-Wgnu-statement-expression" // FIXME
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if defined(__linux__) && defined(__x86_64__)
-#  include "compat/__Word.h"
 #  define __syscall0(n)                                                 \
     ({                                                                  \
         __Word                                                          \

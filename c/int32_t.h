@@ -1,5 +1,5 @@
 #pragma once
 
-#include "compat/__S32.h"
+#include "compat/__INT32_TYPE__.h"
 
-typedef __S32 int32_t;
+typedef __INT32_TYPE__ int32_t;

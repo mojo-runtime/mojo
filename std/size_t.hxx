@@ -1,9 +1,9 @@
 #pragma once
 
-#include "compat/__Size.h"
+#include "compat/__SIZE_TYPE__.h"
 
 namespace std {
 
-typedef __Size size_t;
+typedef __SIZE_TYPE__ size_t;
 
 } // namespace std

@@ -1,5 +1,5 @@
 #pragma once
 
-#include "compat/__U32.h"
+#include "compat/__UINT32_TYPE__.h"
 
-typedef __U32 uint32_t;
+typedef __UINT32_TYPE__ uint32_t;

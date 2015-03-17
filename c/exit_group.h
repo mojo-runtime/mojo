@@ -3,7 +3,7 @@
 #if defined(__linux__)
 #  include "compat/__noreturn.h"
 #  include "compat/__nothrow.h"
-#  include "compat/__unreachable.h"
+#  include "compat/__builtin_unreachable.h"
 #  include "SYS_exit_group.h"
 #  include "__syscall1.h"
 
@@ -14,7 +14,7 @@ void
 exit_group(int status)
 {
     __syscall1(SYS_exit_group, status);
-    __unreachable();
+    __builtin_unreachable();
 }
 
 #else

@@ -1,5 +1,5 @@
 #pragma once
 
-#include "compat/__S16.h"
+#include "compat/__INT16_TYPE__.h"
 
-typedef __S16 int16_t;
+typedef __INT16_TYPE__ int16_t;
