@@ -503,6 +503,8 @@
 #include "wchar_t.h"
 #include "wint_t.h"
 #include "_exit.h"
+#include "__PAGE_SHIFT.h"
+#include "__PAGE_SIZE.h"
 #include "__syscall0.h"
 #include "__syscall1.h"
 #include "__syscall2.h"
