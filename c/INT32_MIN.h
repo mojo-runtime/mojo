@@ -1,6 +1,6 @@
 #pragma once
 
-#include "abi/__SIGNED_INTEGER_KIND.h"
+#include "__SIGNED_INTEGER_KIND.h"
 
 #if __SIGNED_INTEGER_KIND == __SIGNED_INTEGER_KIND__TWOS_COMPLEMENT
 #  include "INT32_MAX.h"
