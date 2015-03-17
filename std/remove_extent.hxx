@@ -22,4 +22,4 @@ struct remove_extent<T[n]>
     using type = T;
 };
 
-} // namespace std
+}

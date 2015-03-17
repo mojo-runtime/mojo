@@ -12,4 +12,4 @@ struct iterator_traits<T*>;
 template <typename T>
 struct iterator_traits<const T*>;
 
-} // namespace std
+}

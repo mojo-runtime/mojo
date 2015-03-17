@@ -18,4 +18,4 @@ struct is_same<X, X>
     value = true;
 };
 
-} // namespace std
+}

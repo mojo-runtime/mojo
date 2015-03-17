@@ -12,4 +12,4 @@ move(X&& x) noexcept
     return static_cast<remove_reference_t<X>&&>(x);
 }
 
-} // namespace std
+}

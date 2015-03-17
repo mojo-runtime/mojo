@@ -44,4 +44,4 @@ struct extent<T[i], n>
     value = std::extent<T, n-1>::value;
 };
 
-} // namespace std
+}

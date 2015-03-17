@@ -20,4 +20,4 @@ struct is_array<T[n]>
     value = true;
 };
 
-} // namespace std
+}

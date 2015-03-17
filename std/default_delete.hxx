@@ -8,4 +8,4 @@ struct default_delete;
 template <typename T>
 struct default_delete<T[]>;
 
-} // namespace std
+}

@@ -6,4 +6,4 @@ namespace std {
 template <typename ArgumentType, typename ResultType>
 struct unary_function;
 
-} // namespace std
+}
