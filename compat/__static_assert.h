@@ -6,7 +6,7 @@
 #if !defined(__static_assert)
 #  include "config/__has_cxx_static_assert_without_message.h"
 #  if __has_cxx_static_assert_without_message
-#    define __static_assert static_assert
+#    define __static_assert(...) static_assert(__VA_ARGS__)
 #  endif
 #endif
 

@@ -6,7 +6,7 @@
 #if !defined(__expect)
 #  include "config/__has_builtin_expect.h"
 #  if __has_builtin_expect
-#    define __expect __builtin_expect
+#    define __expect(x, y) __builtin_expect(x, y)
 #  endif
 #endif
 

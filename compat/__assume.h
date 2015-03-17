@@ -6,7 +6,7 @@
 #if !defined(__assume)
 #  include "config/__has_builtin_assume.h"
 #  if __has_builtin_assume
-#    define __assume __builtin_assume
+#    define __assume(x) __builtin_assume(x)
 #  endif
 #endif
 

@@ -6,7 +6,7 @@
 #if !defined(__unreachable)
 #  include "config/__has_builtin_unreachable.h"
 #  if __has_builtin_unreachable
-#    define __unreachable __builtin_unreachable
+#    define __unreachable() __builtin_unreachable()
 #  endif
 #endif
 
