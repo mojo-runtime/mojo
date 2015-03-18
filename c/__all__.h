@@ -322,7 +322,6 @@
 #if defined(__linux__)
 #  include "epoll_data_t.h"
 #endif
-#include "errno_t.h"
 #if defined(__unix__)
 #  include "gid_t.h"
 #  include "id_t.h"
