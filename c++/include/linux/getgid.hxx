@@ -1,17 +1,17 @@
 #pragma once
 
-#include "c/pid_t.h"
+#include "gid_t.h"
 
 #include "__call.hxx"
 
 namespace linux {
 
 static inline
-pid_t
-gettid() noexcept
+gid_t
+getgid() noexcept
 {
 #if defined(__x86_64__)
-    return __call<186>().ok<pid_t>();
+    return __call<104>().ok<gid_t>();
 #else
 #  error
 #endif

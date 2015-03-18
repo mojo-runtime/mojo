@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/pid_t.h"
+#include "pid_t.h"
 
 #include "__call.hxx"
 

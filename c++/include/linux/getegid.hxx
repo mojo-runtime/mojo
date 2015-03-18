@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/uid_t.h"
+#include "gid_t.h"
 
 #include "__call.hxx"
 
@@ -8,10 +8,10 @@ namespace linux {
 
 static inline
 gid_t
-geteuid() noexcept
+getegid() noexcept
 {
 #if defined(__x86_64__)
-    return __call<107>().ok<uid_t>();
+    return __call<108>().ok<gid_t>();
 #else
 #  error
 #endif
