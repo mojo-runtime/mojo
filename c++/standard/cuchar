@@ -1,2 +1,19 @@
 // -*- C++ -*-
-#error not implemented
+
+#pragma once
+
+//--------------------------------------------------------------------------------------------------
+// Macros
+
+#define __STDC_UTF_16__ 1
+#define __STDC_UTF_32__ 1
+
+//--------------------------------------------------------------------------------------------------
+// Functions
+
+#error todo
+
+#include <std::mbrtoc16>
+#include <std::c16rtomb>
+#include <std::mbrtoc32>
+#include <std::c32rtomb>
