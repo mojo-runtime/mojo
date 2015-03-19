@@ -7,7 +7,7 @@
 #    include <clock_t>
 #    include <pid_t>
 #    include <uid_t>
-#    include <union-sigval>
+#    include <union sigval>
 
 typedef struct siginfo
 {

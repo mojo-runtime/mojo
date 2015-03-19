@@ -12,7 +12,7 @@
 #    include <mode_t>
 #    include <nlink_t>
 #    include <off_t>
-#    include <struct-timespec>
+#    include <struct timespec>
 #    include <time_t>
 #    include <uid_t>
 #  else
@@ -28,7 +28,7 @@
 #  include <mode_t>
 #  include <nlink_t>
 #  include <off_t>
-#  include <struct-timespec>
+#  include <struct timespec>
 #  include <uid_t>
 #else
 #  error
