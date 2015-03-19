@@ -1,9 +1,17 @@
 // -*- C++ -*-
-#ifndef __cstddef_
-#define __cstddef_
 
-#include "std/size_t.hxx"
+#pragma once
 
-#warning todo
+//--------------------------------------------------------------------------------------------------
+// Macros
 
-#endif
+#include <NULL>
+#include <offsetof>
+
+//--------------------------------------------------------------------------------------------------
+// Types
+
+#include <std::size_t>
+#include <std::ptrdiff_t>
+#include <std::nullptr_t>
+#include <std::max_align_t>
