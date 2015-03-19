@@ -2,10 +2,12 @@
 
 #pragma once
 
-#include "compat/__SIZE_TYPE__.h"
-
 namespace std {
 
+#if defined(__SIZE_TYPE__)
 typedef __SIZE_TYPE__ size_t;
+#else
+#  error
+#endif
 
 }
