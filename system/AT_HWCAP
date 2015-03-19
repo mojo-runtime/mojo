@@ -1,7 +1,9 @@
+// -*- C -*-
+
 #pragma once
 
 #if defined(__linux__)
-#  define AT_BASE_PLATFORM 24
+#  define AT_HWCAP 16
 #else
 #  error
 #endif

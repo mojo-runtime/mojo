@@ -1,11 +1,12 @@
-#pragma once
+// -*- C -*-
 
-#include "compat/__Word.h"
+#pragma once
 
 typedef struct
 {
-    __Word
-    a_type;
+    int
+    a_type
+    __attribute__((__mode__(__word__)));
 
     union
     {
