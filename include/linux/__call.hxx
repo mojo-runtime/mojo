@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Result.hxx"
-#include "__Number.hxx"
+#include "__Word.hxx"
 
 namespace linux {
 
@@ -9,7 +9,7 @@ namespace linux {
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Number n>
+template <__Word n>
 static inline
 Result
 __call() noexcept
@@ -29,7 +29,7 @@ __call() noexcept
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Number n, typename A1>
+template <__Word n, typename A1>
 static inline
 Result
 __call(A1 a1) noexcept
@@ -51,7 +51,7 @@ __call(A1 a1) noexcept
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Number n, typename A1, typename A2>
+template <__Word n, typename A1, typename A2>
 static inline
 Result
 __call(A1 a1, A2 a2) noexcept
@@ -74,7 +74,7 @@ __call(A1 a1, A2 a2) noexcept
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Number n, typename A1, typename A2, typename A3>
+template <__Word n, typename A1, typename A2, typename A3>
 static inline
 Result
 __call(A1 a1, A2 a2, A3 a3) noexcept
@@ -98,7 +98,7 @@ __call(A1 a1, A2 a2, A3 a3) noexcept
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Number n, typename A1, typename A2, typename A3, typename A4>
+template <__Word n, typename A1, typename A2, typename A3, typename A4>
 static inline
 Result
 __call(A1 a1, A2 a2, A3 a3, A4 a4) noexcept
@@ -123,7 +123,7 @@ __call(A1 a1, A2 a2, A3 a3, A4 a4) noexcept
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Number n, typename A1, typename A2, typename A3, typename A4, typename A5>
+template <__Word n, typename A1, typename A2, typename A3, typename A4, typename A5>
 static inline
 Result
 __call(A1 a1, A2 a2, A3 a3, A4 a4, A5 a5) noexcept
@@ -149,7 +149,7 @@ __call(A1 a1, A2 a2, A3 a3, A4 a4, A5 a5) noexcept
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Number n, typename A1, typename A2, typename A3, typename A4, typename A5, typename A6>
+template <__Word n, typename A1, typename A2, typename A3, typename A4, typename A5, typename A6>
 static inline
 Result
 __call(A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6) noexcept

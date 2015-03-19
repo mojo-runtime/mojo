@@ -1,5 +1,6 @@
 #pragma once
 
+#include <SYS_exit>
 #include "__call.hxx"
 
 namespace linux {
@@ -9,11 +10,7 @@ static inline
 void
 exit(int status) noexcept
 {
-#if defined(__x86_64__)
-    __call<60>(status);
-#else
-#  error
-#endif
+    __call<SYS_exit>(status);
     __builtin_unreachable();
 };
 

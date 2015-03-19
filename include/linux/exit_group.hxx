@@ -1,5 +1,6 @@
 #pragma once
 
+#include <SYS_exit_group>
 #include "__call.hxx"
 
 namespace linux {
@@ -9,11 +10,7 @@ static inline
 void
 exit_group(int status) noexcept
 {
-#if defined(__x86_64__)
-    __call<231>(status);
-#else
-#  error
-#endif
+    __call<SYS_exit_group>(status);
     __builtin_unreachable();
 };
 

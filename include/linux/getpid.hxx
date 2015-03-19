@@ -1,7 +1,7 @@
 #pragma once
 
+#include <SYS_getpid>
 #include <pid_t>
-
 #include "__call.hxx"
 
 namespace linux {
@@ -10,11 +10,7 @@ static inline
 pid_t
 getpid() noexcept
 {
-#if defined(__x86_64__)
-    return __call<121>().ok<pid_t>();
-#else
-#  error
-#endif
+    return __call<SYS_getpid>().ok<pid_t>();
 }
 
 }
