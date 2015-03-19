@@ -1,8 +1,8 @@
 #pragma once
 
-#include "EFAULT.h"
-#include "EINVAL.h"
-#include "ESRCH.h"
+#include <EFAULT>
+#include <EINVAL>
+#include <ESRCH>
 
 namespace linux::set_thread_area {
 

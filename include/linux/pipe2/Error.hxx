@@ -1,9 +1,9 @@
 #pragma once
 
-#include "EFAULT.h"
-#include "EINVAL.h"
-#include "EMFILE.h"
-#include "ENFILE.h"
+#include <EFAULT>
+#include <EINVAL>
+#include <EMFILE>
+#include <ENFILE>
 
 namespace linux::pipe2 {
 

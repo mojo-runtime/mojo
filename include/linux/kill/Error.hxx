@@ -1,8 +1,8 @@
 #pragma once
 
-#include "EINVAL.h"
-#include "EPERM.h"
-#include "ESRCH.h"
+#include <EINVAL>
+#include <EPERM>
+#include <ESRCH>
 
 namespace linux::kill {
 

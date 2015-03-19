@@ -1,6 +1,6 @@
 #pragma once
 
-#include "gid_t.h"
+#include <gid_t>
 
 #include "__call.hxx"
 

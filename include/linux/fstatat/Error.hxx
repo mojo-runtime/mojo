@@ -1,14 +1,14 @@
 #pragma once
 
-#include "EACCES.h"
-#include "EBADF.h"
-#include "EFAULT.h"
-#include "EINVAL.h"
-#include "ELOOP.h"
-#include "ENAMETOOLONG.h"
-#include "ENOMEM.h"
-#include "ENOTDIR.h"
-#include "EOVERFLOW.h"
+#include <EACCES>
+#include <EBADF>
+#include <EFAULT>
+#include <EINVAL>
+#include <ELOOP>
+#include <ENAMETOOLONG>
+#include <ENOMEM>
+#include <ENOTDIR>
+#include <EOVERFLOW>
 
 namespace linux::fstatat {
 

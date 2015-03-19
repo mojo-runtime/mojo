@@ -1,7 +1,7 @@
 #pragma once
 
-#include "EFAULT.h"
-#include "EINVAL.h"
+#include <EFAULT>
+#include <EINVAL>
 
 namespace linux::clock_getres {
 

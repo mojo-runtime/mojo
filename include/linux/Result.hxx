@@ -1,6 +1,6 @@
 #pragma once
 
-#include "compat/__Word.h"
+#include "__Word.hxx"
 
 namespace linux {
 

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "EFAULT.h"
-#include "EINTR.h"
-#include "EINVAL.h"
+#include <EFAULT>
+#include <EINTR>
+#include <EINVAL>
 
 namespace linux::clock_nanosleep {
 

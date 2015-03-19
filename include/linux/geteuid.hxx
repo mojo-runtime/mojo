@@ -1,6 +1,6 @@
 #pragma once
 
-#include "uid_t.h"
+#include <uid_t>
 
 #include "__call.hxx"
 

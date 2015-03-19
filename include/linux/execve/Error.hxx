@@ -1,22 +1,22 @@
 #pragma once
 
-#include "E2BIG.h"
-#include "EACCES.h"
-#include "EFAULT.h"
-#include "EINVAL.h"
-#include "EIO.h"
-#include "EISDIR.h"
-#include "ELIBBAD.h"
-#include "ELOOP.h"
-#include "EMFILE.h"
-#include "ENAMETOOLONG.h"
-#include "ENFILE.h"
-#include "ENOENT.h"
-#include "ENOEXEC.h"
-#include "ENOMEM.h"
-#include "ENOTDIR.h"
-#include "EPERM.h"
-#include "ETXTBSY.h"
+#include <E2BIG>
+#include <EACCES>
+#include <EFAULT>
+#include <EINVAL>
+#include <EIO>
+#include <EISDIR>
+#include <ELIBBAD>
+#include <ELOOP>
+#include <EMFILE>
+#include <ENAMETOOLONG>
+#include <ENFILE>
+#include <ENOENT>
+#include <ENOEXEC>
+#include <ENOMEM>
+#include <ENOTDIR>
+#include <EPERM>
+#include <ETXTBSY>
 
 namespace linux::execve {
 

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "EBADF.h"
-#include "EFAULT.h"
-#include "EINVAL.h"
-#include "ENOTTY.h"
+#include <EBADF>
+#include <EFAULT>
+#include <EINVAL>
+#include <ENOTTY>
 
 namespace linux::ioctl {
 

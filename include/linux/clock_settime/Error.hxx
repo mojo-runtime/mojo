@@ -1,8 +1,8 @@
 #pragma once
 
-#include "EFAULT.h"
-#include "EINVAL.h"
-#include "EPERM.h"
+#include <EFAULT>
+#include <EINVAL>
+#include <EPERM>
 
 namespace linux::clock_settime {
 

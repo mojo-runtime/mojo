@@ -1,11 +1,11 @@
 #pragma once
 
-#include "EACCES.h"
-#include "EFAULT.h"
-#include "EINVAL.h"
-#include "ENAMETOOLONG.h"
-#include "ENOENT.h"
-#include "ERANGE.h"
+#include <EACCES>
+#include <EFAULT>
+#include <EINVAL>
+#include <ENAMETOOLONG>
+#include <ENOENT>
+#include <ERANGE>
 
 namespace linux::getcwd {
 

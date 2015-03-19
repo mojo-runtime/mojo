@@ -1,12 +1,12 @@
 #pragma once
 
-#include "EAGAIN.h"
-#include "EBADF.h"
-#include "EFAULT.h"
-#include "EINTR.h"
-#include "EINVAL.h"
-#include "EIO.h"
-#include "EISDIR.h"
+#include <EAGAIN>
+#include <EBADF>
+#include <EFAULT>
+#include <EINTR>
+#include <EINVAL>
+#include <EIO>
+#include <EISDIR>
 
 namespace linux::read {
 

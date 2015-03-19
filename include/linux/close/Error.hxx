@@ -1,8 +1,8 @@
 #pragma once
 
-#include "EBADF.h"
-#include "EINTR.h"
-#include "EIO.h"
+#include <EBADF>
+#include <EINTR>
+#include <EIO>
 
 namespace linux::close {
 

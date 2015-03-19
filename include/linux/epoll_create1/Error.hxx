@@ -1,9 +1,9 @@
 #pragma once
 
-#include "EINVAL.h"
-#include "EMFILE.h"
-#include "ENFILE.h"
-#include "ENOMEM.h"
+#include <EINVAL>
+#include <EMFILE>
+#include <ENFILE>
+#include <ENOMEM>
 
 namespace linux::epoll_create1 {
 

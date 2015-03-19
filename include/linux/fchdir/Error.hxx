@@ -1,7 +1,7 @@
 #pragma once
 
-#include "EACCES.h"
-#include "EBADF.h"
+#include <EACCES>
+#include <EBADF>
 
 namespace linux::fchdir {
 
