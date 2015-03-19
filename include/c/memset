@@ -2,14 +2,19 @@
 
 #pragma once
 
-#include "compat/__has_builtin.h"
-#include "size_t.h"
+#include <size_t>
 
 static inline
 void*
 memset(void* s, int c, size_t n)
 {
-#if __has_builtin(__builtin_memset)
+#if defined(__has_builtin)
+#  if __has_builtin(__builtin_memset)
+    return __builtin_memset(s, c, n);
+#  else
+#    error
+#  endif
+#elif defined(__GNUC__)
     return __builtin_memset(s, c, n);
 #else
 #  error
