@@ -2,8 +2,8 @@
 
 #pragma once
 
+#include <size_t>
 #include "compat/__has_builtin.h"
-#include "size_t.h"
 
 static inline
 void*

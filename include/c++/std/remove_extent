@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "size_t.hxx"
+#include <std/size_t>
 
 namespace std {
 

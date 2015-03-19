@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "remove_reference.hxx"
+#include <std/remove_reference>
 
 namespace std {
 

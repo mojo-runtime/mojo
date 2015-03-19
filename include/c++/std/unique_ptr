@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "default_delete.hxx"
+#include <std/default_delete>
 
 namespace std {
 
