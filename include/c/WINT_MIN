@@ -9,7 +9,7 @@
 #    define WINT_MIN (0u)
 #  elif defined(__SIZEOF_WINT_T__)
 #    if __SIZEOF_WINT_T__ == 4
-#      include "INT32_MIN.h"
+#      include <INT32_MIN>
 #      define WINT_MIN INT32_MIN
 #    else
 #      error

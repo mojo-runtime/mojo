@@ -2,16 +2,16 @@
 
 #pragma once
 
-#include "INTPTR_MAX.h"
-#include "INT64_MAX.h"
+#include <INTPTR_MAX>
+#include <INT64_MAX>
 
 #if INTPTR_MAX == INT64_MAX
-#  include "INT64_MIN.h"
+#  include <INT64_MIN>
 #  define INTPTR_MIN INT64_MIN
 #else
-#  include "INT32_MAX.h"
+#  include <INT32_MAX>
 #  if INTPTR_MAX == INT32_MAX
-#    include "INT32_MIN.h"
+#    include <INT32_MIN>
 #    define INTPTR_MIN INT32_MIN
 #  else
 #    error

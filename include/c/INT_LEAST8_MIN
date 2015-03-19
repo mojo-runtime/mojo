@@ -3,7 +3,7 @@
 #pragma once
 
 #if defined(__LP64__)
-#  include "INT_LEAST8_MAX.h"
+#  include <INT_LEAST8_MAX>
 #  define INT_LEAST8_MIN (-INT_LEAST8_MAX - 1)
 #else
 #  error

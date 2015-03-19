@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CHAR_BIT.h"
+#include <CHAR_BIT>
 
 #if CHAR_BIT == 8
 #  define UCHAR_MAX 255

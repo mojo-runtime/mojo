@@ -3,7 +3,7 @@
 #pragma once
 
 #if defined(__LP64__)
-#  include "SHRT_MAX.h"
+#  include <SHRT_MAX>
 #  define SHRT_MIN (-INT_MAX - 1)
 #else
 #  error
