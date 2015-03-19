@@ -1,2 +1,5 @@
 // -*- C++ -*-
-#error not implemented
+
+#pragma once
+
+#define __alignas_is_defined 1
