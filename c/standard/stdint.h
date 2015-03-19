@@ -7,53 +7,53 @@
 // Integer Types
 // * Exact-width integer types
 
-#include "int8_t.h"
-#include "int16_t.h"
-#include "int32_t.h"
-#include "int64_t.h"
+#include <int8_t>
+#include <int16_t>
+#include <int32_t>
+#include <int64_t>
 
-#include "uint8_t.h"
-#include "uint16_t.h"
-#include "uint32_t.h"
-#include "uint64_t.h"
+#include <uint8_t>
+#include <uint16_t>
+#include <uint32_t>
+#include <uint64_t>
 
 //------------------------------------------------------------------------------------------------//
 // * Minimum-width integer types
 
-#include "int_least8_t.h"
-#include "int_least16_t.h"
-#include "int_least32_t.h"
-#include "int_least64_t.h"
+#include <int_least8_t>
+#include <int_least16_t>
+#include <int_least32_t>
+#include <int_least64_t>
 
-#include "uint_least8_t.h"
-#include "uint_least16_t.h"
-#include "uint_least32_t.h"
-#include "uint_least64_t.h"
+#include <uint_least8_t>
+#include <uint_least16_t>
+#include <uint_least32_t>
+#include <uint_least64_t>
 
 //------------------------------------------------------------------------------------------------//
 // * Fastest minimum-width integer types
 
-#include "int_fast8_t.h"
-#include "int_fast16_t.h"
-#include "int_fast32_t.h"
-#include "int_fast64_t.h"
+#include <int_fast8_t>
+#include <int_fast16_t>
+#include <int_fast32_t>
+#include <int_fast64_t>
 
-#include "uint_fast8_t.h"
-#include "uint_fast16_t.h"
-#include "uint_fast32_t.h"
-#include "uint_fast64_t.h"
+#include <uint_fast8_t>
+#include <uint_fast16_t>
+#include <uint_fast32_t>
+#include <uint_fast64_t>
 
 //------------------------------------------------------------------------------------------------//
 // * Integer types capable of holding object pointers
 
-#include "intptr_t.h"
-#include "uintptr_t.h"
+#include <intptr_t>
+#include <uintptr_t>
 
 //------------------------------------------------------------------------------------------------//
 // * Greatest-width integer types
 
-#include "intmax_t.h"
-#include "uintmax_t.h"
+#include <intmax_t>
+#include <uintmax_t>
 
 //------------------------------------------------------------------------------------------------//
 // Limits of Specified-Width Integer Types
@@ -69,155 +69,155 @@
 // * Limits of exact-width integer types
 //  - Minimum values of exact-width signed integer types:
 
-#include "INT8_MAX.h"
-#include "INT16_MAX.h"
-#include "INT32_MAX.h"
-#include "INT64_MAX.h"
+#include <INT8_MAX>
+#include <INT16_MAX>
+#include <INT32_MAX>
+#include <INT64_MAX>
 
 //------------------------------------------------------------------------------------------------//
 //  - Maximum values of exact-width signed integer types:
 
-#include "INT8_MIN.h"
-#include "INT16_MIN.h"
-#include "INT32_MIN.h"
-#include "INT64_MIN.h"
+#include <INT8_MIN>
+#include <INT16_MIN>
+#include <INT32_MIN>
+#include <INT64_MIN>
 
 //------------------------------------------------------------------------------------------------//
 //  - Maximum values of exact-width unsigned integer types:
 
-#include "UINT8_MAX.h"
-#include "UINT16_MAX.h"
-#include "UINT32_MAX.h"
-#include "UINT64_MAX.h"
+#include <UINT8_MAX>
+#include <UINT16_MAX>
+#include <UINT32_MAX>
+#include <UINT64_MAX>
 
 //------------------------------------------------------------------------------------------------//
 // * Limits of minimum-width integer types
 //  - Minimum values of minimum-width signed integer types:
 
-#include "INT_LEAST8_MIN.h"
-#include "INT_LEAST16_MIN.h"
-#include "INT_LEAST32_MIN.h"
-#include "INT_LEAST64_MIN.h"
+#include <INT_LEAST8_MIN>
+#include <INT_LEAST16_MIN>
+#include <INT_LEAST32_MIN>
+#include <INT_LEAST64_MIN>
 
 //------------------------------------------------------------------------------------------------//
 //  - Maximum values of minimum-width signed integer types:
 
-#include "INT_LEAST8_MAX.h"
-#include "INT_LEAST16_MAX.h"
-#include "INT_LEAST32_MAX.h"
-#include "INT_LEAST64_MAX.h"
+#include <INT_LEAST8_MAX>
+#include <INT_LEAST16_MAX>
+#include <INT_LEAST32_MAX>
+#include <INT_LEAST64_MAX>
 
 //------------------------------------------------------------------------------------------------//
 //  - Maximum values of minimum-width unsigned integer types:
 
-#include "UINT_LEAST8_MAX.h"
-#include "UINT_LEAST16_MAX.h"
-#include "UINT_LEAST32_MAX.h"
-#include "UINT_LEAST64_MAX.h"
+#include <UINT_LEAST8_MAX>
+#include <UINT_LEAST16_MAX>
+#include <UINT_LEAST32_MAX>
+#include <UINT_LEAST64_MAX>
 
 //------------------------------------------------------------------------------------------------//
 // * Limits of fastest minimum-width integer types
 //  - Minimum values of fastest minimum-width signed integer types:
 
-#include "INT_FAST8_MIN.h"
-#include "INT_FAST16_MIN.h"
-#include "INT_FAST32_MIN.h"
-#include "INT_FAST64_MIN.h"
+#include <INT_FAST8_MIN>
+#include <INT_FAST16_MIN>
+#include <INT_FAST32_MIN>
+#include <INT_FAST64_MIN>
 
 //------------------------------------------------------------------------------------------------//
 //  - Maximum values of fastest minimum-width signed integer types:
 
-#include "INT_FAST8_MAX.h"
-#include "INT_FAST16_MAX.h"
-#include "INT_FAST32_MAX.h"
-#include "INT_FAST64_MAX.h"
+#include <INT_FAST8_MAX>
+#include <INT_FAST16_MAX>
+#include <INT_FAST32_MAX>
+#include <INT_FAST64_MAX>
 
 //------------------------------------------------------------------------------------------------//
 //  - Maximum values of fastest minimum-width unsigned integer types:
 
-#include "UINT_FAST8_MAX.h"
-#include "UINT_FAST16_MAX.h"
-#include "UINT_FAST32_MAX.h"
-#include "UINT_FAST64_MAX.h"
+#include <UINT_FAST8_MAX>
+#include <UINT_FAST16_MAX>
+#include <UINT_FAST32_MAX>
+#include <UINT_FAST64_MAX>
 
 //------------------------------------------------------------------------------------------------//
 // * Limits of integer types capable of holding object pointers
 //  - Minimum value of pointer-holding signed integer type:
 
-#include "INTPTR_MIN.h"
+#include <INTPTR_MIN>
 
 //------------------------------------------------------------------------------------------------//
 //  - Maximum value of pointer-holding signed integer type:
 
-#include "INTPTR_MAX.h"
+#include <INTPTR_MAX>
 
 //------------------------------------------------------------------------------------------------//
 //  - Maximum value of pointer-holding unsigned integer type:
 
-#include "UINTPTR_MAX.h"
+#include <UINTPTR_MAX>
 
 //------------------------------------------------------------------------------------------------//
 // * Limits of greatest-width integer types
 //  - Minimum value of greatest-width signed integer type:
 
-#include "INTMAX_MIN.h"
+#include <INTMAX_MIN>
 
 //------------------------------------------------------------------------------------------------//
 //  - Maximum value of greatest-width signed integer type:
 
-#include "INTMAX_MAX.h"
+#include <INTMAX_MAX>
 
 //------------------------------------------------------------------------------------------------//
 //  - Maximum value of greatest-width unsigned integer type:
 
-#include "UINTMAX_MAX.h"
+#include <UINTMAX_MAX>
 
 //------------------------------------------------------------------------------------------------//
 // Limits of Other Integer Types
 // * Limits of ptrdiff_t:
 
-#include "PTRDIFF_MIN.h"
-#include "PTRDIFF_MAX.h"
+#include <PTRDIFF_MIN>
+#include <PTRDIFF_MAX>
 
 //------------------------------------------------------------------------------------------------//
 // * Limits of sig_atomic_t:
 
-#include "SIG_ATOMIC_MIN.h"
-#include "SIG_ATOMIC_MAX.h"
+#include <SIG_ATOMIC_MIN>
+#include <SIG_ATOMIC_MAX>
 
 //------------------------------------------------------------------------------------------------//
 // * Limit of size_t:
 
-#include "SIZE_MAX.h"
+#include <SIZE_MAX>
 
 //------------------------------------------------------------------------------------------------//
 // * Limits of wchar_t:
 
-#include "WCHAR_MIN.h"
-#include "WCHAR_MAX.h"
+#include <WCHAR_MIN>
+#include <WCHAR_MAX>
 
 //------------------------------------------------------------------------------------------------//
 // * Limits of wint_t:
 
-#include "WINT_MIN.h"
-#include "WINT_MAX.h"
+#include <WINT_MIN>
+#include <WINT_MAX>
 
 //------------------------------------------------------------------------------------------------//
 // Macros for Integer Constant Expressions
 // * Macros for minimum-width integer constant expressions
 
-#include "INT8_C.h"
-#include "INT16_C.h"
-#include "INT32_C.h"
-#include "INT64_C.h"
+#include <INT8_C>
+#include <INT16_C>
+#include <INT32_C>
+#include <INT64_C>
 
-#include "UINT8_C.h"
-#include "UINT16_C.h"
-#include "UINT32_C.h"
-#include "UINT64_C.h"
+#include <UINT8_C>
+#include <UINT16_C>
+#include <UINT32_C>
+#include <UINT64_C>
 
 //------------------------------------------------------------------------------------------------//
 // * Macros for greatest-width integer constant expressions
 
-#include "INTMAX_C.h"
-#include "UINTMAX_C.h"
+#include <INTMAX_C>
+#include <UINTMAX_C>

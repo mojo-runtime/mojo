@@ -6,12 +6,12 @@
 //------------------------------------------------------------------------------------------------//
 // "The types are..."
 
-#include "../c/ptrdiff_t.h"
-#include "../c/size_t.h"
-#include "../c/wchar_t.h"
+#include <ptrdiff_t>
+#include <size_t>
+#include <wchar_t>
 
 //------------------------------------------------------------------------------------------------//
 // "The macros are..."
 
-#include "../c/NULL.h"
-#include "../c/offsetof.h"
+#include <NULL>
+#include <offsetof>

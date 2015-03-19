@@ -1,8 +1,15 @@
 #pragma once
 
 #if !defined(__cplusplus)
-#  include "compat/__Bool.h"
-#  define bool __Bool
+#  if defined(__STDC_VERSION__)
+#    if ((__STDC_VERSION__) >= 199901L)
+#      define bool _Bool
+#    else
+#      error
+#    endif
+#  else
+#    error
+#  endif
 #  define false 0
 #  define true 1
 #endif
