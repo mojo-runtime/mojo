@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include <std/default_delete>
+#include <std::default_delete>
 
 namespace std {
 

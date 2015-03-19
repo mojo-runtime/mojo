@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include <std/remove_reference>
+#include <std::remove_reference>
 
 namespace std {
 

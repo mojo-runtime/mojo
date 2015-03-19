@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include <std/remove_reference_t>
+#include <std::remove_reference_t>
 
 namespace std {
 
