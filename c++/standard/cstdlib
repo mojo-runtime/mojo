@@ -1,7 +1,74 @@
 // -*- C++ -*-
-#ifndef __cstdlib_
-#define __cstdlib_
 
-#warning todo
+#pragma once
 
-#endif
+//--------------------------------------------------------------------------------------------------
+// Macro constants
+
+#include <EXIT_SUCCESS>
+#include <EXIT_FAILURE>
+#include <MB_CUR_MAX>
+#include <NULL>
+#include <RAND_MAX>
+
+//--------------------------------------------------------------------------------------------------
+// Types
+
+#include <std::div_t>
+#include <std::ldiv_t>
+#include <std::lldiv_t>
+#include <std::lldiv_t>
+#include <std::size_t>
+
+//--------------------------------------------------------------------------------------------------
+// Functions
+
+#error todo
+
+// Process control
+#include <std::abort>
+#include <std::exit>
+#include <std::quick_exit>
+#include <std::_Exit>
+#include <std::atexit>
+#include <std::at_quick_exit>
+#include <std::system>
+#include <std::getenv>
+
+// Memory management
+#include <std::malloc>
+#include <std::calloc>
+#include <std::realloc>
+#include <std::free>
+
+// Numeric string conversion
+#include <std::atof>
+#include <std::atoi>
+#include <std::atol>
+#include <std::atoll>
+#include <std::strtol>
+#include <std::strtoll>
+#include <std::strtoul>
+#include <std::strtoull>
+#include <std::strtof>
+#include <std::strtod>
+#include <std::strtold>
+
+// Wide string manipulation
+#include <std::mblen>
+#include <std::mbtowc>
+#include <std::wctomb>
+#include <std::mbstowcs>
+#include <std::wcstombs>
+
+// Miscellaneous algorithms and math
+#include <std::rand>
+#include <std::srand>
+#include <std::qsort>
+#include <std::bsearch>
+#include <std::abs>
+#include <std::labs>
+#include <std::llabs>
+#include <std::div>
+#include <std::ldiv>
+#include <std::lldiv>
