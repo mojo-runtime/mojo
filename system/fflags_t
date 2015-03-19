@@ -1,7 +1,9 @@
+// -*- C -*-
+
 #pragma once
 
 #if defined(__FreeBSD__)
-#  include "uint32_t.h"
+#  include <uint32_t>
 // @see sys/sys/_types.h
    typedef uint32_t fflags_t;
 #else
