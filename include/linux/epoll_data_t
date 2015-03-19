@@ -3,8 +3,8 @@
 #pragma once
 
 #if defined(__linux__)
-#  include "uint32_t.h"
-#  include "uint64_t.h"
+#  include <uint32_t>
+#  include <uint64_t>
 
 // This union is not defined in the linux source,
 // which uses a uint64_t in its place.
