@@ -3,8 +3,8 @@
 #pragma once
 
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "time_t.h"
-#  include "suseconds_t.h"
+#  include <time_t>
+#  include <suseconds_t>
 
 struct timeval
 {

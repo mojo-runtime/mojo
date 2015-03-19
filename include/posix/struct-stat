@@ -4,32 +4,32 @@
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
-#    include "blksize_t.h"
-#    include "blkcnt_t.h"
-#    include "dev_t.h"
-#    include "gid_t.h"
-#    include "ino_t.h"
-#    include "mode_t.h"
-#    include "nlink_t.h"
-#    include "off_t.h"
-#    include "struct-timespec.h"
-#    include "time_t.h"
-#    include "uid_t.h"
+#    include <blksize_t>
+#    include <blkcnt_t>
+#    include <dev_t>
+#    include <gid_t>
+#    include <ino_t>
+#    include <mode_t>
+#    include <nlink_t>
+#    include <off_t>
+#    include <struct-timespec>
+#    include <time_t>
+#    include <uid_t>
 #  else
 #    error
 #  endif
 #elif defined(__FreeBSD__)
-#  include "blkcnt_t.h"
-#  include "blksize_t.h"
-#  include "fflags_t.h"
-#  include "dev_t.h"
-#  include "ino_t.h"
-#  include "gid_t.h"
-#  include "mode_t.h"
-#  include "nlink_t.h"
-#  include "off_t.h"
-#  include "struct-timespec.h"
-#  include "uid_t.h"
+#  include <blkcnt_t>
+#  include <blksize_t>
+#  include <fflags_t>
+#  include <dev_t>
+#  include <ino_t>
+#  include <gid_t>
+#  include <mode_t>
+#  include <nlink_t>
+#  include <off_t>
+#  include <struct-timespec>
+#  include <uid_t>
 #else
 #  error
 #endif

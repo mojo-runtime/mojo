@@ -3,7 +3,7 @@
 #pragma once
 
 #if defined(__linux__)
-#  include "POLLOUT.h"
+#  include <POLLOUT>
 #  define EPOLLOUT POLLOUT
 #else
 #  error

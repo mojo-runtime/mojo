@@ -3,7 +3,7 @@
 #pragma once
 
 #if defined(__linux__)
-#  include "POLLIN.h"
+#  include <POLLIN>
 #  define EPOLLIN POLLIN
 #else
 #  error

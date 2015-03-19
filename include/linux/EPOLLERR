@@ -3,7 +3,7 @@
 #pragma once
 
 #if defined(__linux__)
-#  include "POLLERR.h"
+#  include <POLLERR>
 #  define EPOLLERR POLLERR
 #else
 #  error

@@ -4,10 +4,10 @@
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
-#    include "clock_t.h"
-#    include "pid_t.h"
-#    include "uid_t.h"
-#    include "union-sigval.h"
+#    include <clock_t>
+#    include <pid_t>
+#    include <uid_t>
+#    include <union-sigval>
 
 typedef struct siginfo
 {

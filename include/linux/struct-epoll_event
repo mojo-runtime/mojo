@@ -3,7 +3,7 @@
 #pragma once
 
 #if defined(__linux__)
-#  include "epoll_data_t.h"
+#  include <epoll_data_t>
 #  include <uint32_t>
 
 struct epoll_event

@@ -3,7 +3,7 @@
 #pragma once
 
 #if defined(__linux__)
-#  include "POLLPRI.h"
+#  include <POLLPRI>
 #  define EPOLLPRI POLLPRI
 #else
 #  error

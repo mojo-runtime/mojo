@@ -3,14 +3,14 @@
 #pragma once
 
 #if defined(__linux__)
-#  include "NCCS.h"
-#  include "cc_t.h"
-#  include "tcflag_t.h"
+#  include <NCCS>
+#  include <cc_t>
+#  include <tcflag_t>
 #elif defined(__FreeBSD__)
-#  include "NCCS.h"
-#  include "cc_t.h"
-#  include "speed_t.h"
-#  include "tcflag_t.h"
+#  include <NCCS>
+#  include <cc_t>
+#  include <speed_t>
+#  include <tcflag_t>
 #else
 #  error
 #endif
