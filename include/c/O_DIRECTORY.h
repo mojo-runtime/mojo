@@ -3,8 +3,10 @@
 #pragma once
 
 #if defined(__linux__)
-#  if defined(__x86_64__) // generic (0200000)
-#    define O_DIRECTORY 0x10000
+#  if defined(__arm__)
+#    define O_DIRECTORY 040000
+#  elif defined(__x86_64__) // generic
+#    define O_DIRECTORY 0200000
 #  else
 #    error
 #  endif
