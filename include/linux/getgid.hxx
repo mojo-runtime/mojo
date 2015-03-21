@@ -10,7 +10,7 @@ static inline
 gid_t
 getgid() noexcept
 {
-    return __call<SYS_getgid>().ok<gid_t>();
+    return static_cast<gid_t>(__call<SYS_getgid>());
 }
 
 }

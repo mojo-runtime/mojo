@@ -10,7 +10,7 @@ static inline
 uid_t
 getuid() noexcept
 {
-    return __call<SYS_getuid>().ok<uid_t>();
+    return static_cast<uid_t>(__call<SYS_getuid>());
 }
 
 }

@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Result.hxx"
 #include "__Word.hxx"
 
 namespace linux {
@@ -11,7 +10,7 @@ namespace linux {
 
 template <__Word n>
 static inline
-Result
+__Word
 __call() noexcept
 {
     __Word
@@ -24,14 +23,14 @@ __call() noexcept
         : "rcx", "r11"
     );
 
-    return Result(output);
+    return output;
 }
 
 //--------------------------------------------------------------------------------------------------
 
 template <__Word n, typename A1>
 static inline
-Result
+__Word
 __call(A1 a1) noexcept
 {
     __Word
@@ -46,14 +45,14 @@ __call(A1 a1) noexcept
         : "rcx", "r11"
     );
 
-    return Result(output);
+    return output;
 }
 
 //--------------------------------------------------------------------------------------------------
 
 template <__Word n, typename A1, typename A2>
 static inline
-Result
+__Word
 __call(A1 a1, A2 a2) noexcept
 {
     __Word
@@ -69,14 +68,14 @@ __call(A1 a1, A2 a2) noexcept
         : "rcx", "r11"
     );
 
-    return Result(output);
+    return output;
 }
 
 //--------------------------------------------------------------------------------------------------
 
 template <__Word n, typename A1, typename A2, typename A3>
 static inline
-Result
+__Word
 __call(A1 a1, A2 a2, A3 a3) noexcept
 {
     __Word
@@ -93,14 +92,14 @@ __call(A1 a1, A2 a2, A3 a3) noexcept
         : "rcx", "r11"
     );
 
-    return Result(output);
+    return output;
 }
 
 //--------------------------------------------------------------------------------------------------
 
 template <__Word n, typename A1, typename A2, typename A3, typename A4>
 static inline
-Result
+__Word
 __call(A1 a1, A2 a2, A3 a3, A4 a4) noexcept
 {
     __Word
@@ -118,14 +117,14 @@ __call(A1 a1, A2 a2, A3 a3, A4 a4) noexcept
         : "rcx", "r11"
     );
 
-    return Result(output);
+    return output;
 }
 
 //--------------------------------------------------------------------------------------------------
 
 template <__Word n, typename A1, typename A2, typename A3, typename A4, typename A5>
 static inline
-Result
+__Word
 __call(A1 a1, A2 a2, A3 a3, A4 a4, A5 a5) noexcept
 {
     __Word
@@ -144,14 +143,14 @@ __call(A1 a1, A2 a2, A3 a3, A4 a4, A5 a5) noexcept
         : "rcx", "r11"
     );
 
-    return Result(output);
+    return output;
 }
 
 //--------------------------------------------------------------------------------------------------
 
 template <__Word n, typename A1, typename A2, typename A3, typename A4, typename A5, typename A6>
 static inline
-Result
+__Word
 __call(A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6) noexcept
 {
     __Word
@@ -171,7 +170,7 @@ __call(A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6) noexcept
         : "rcx", "r11"
     );
 
-    return Result(output);
+    return output;
 }
 
 //--------------------------------------------------------------------------------------------------
