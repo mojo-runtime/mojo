@@ -13,7 +13,6 @@
 #include "epoll_ctl.hxx"
 #include "epoll_wait.hxx"
 #include "execve.hxx"
-#include "exit.hxx"
 #include "exit_group.hxx"
 #include "fchdir.hxx"
 #include "fcntl.hxx"
