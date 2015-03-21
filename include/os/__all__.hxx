@@ -1,4 +1,7 @@
 #include "exit.hxx"
+#if defined(__linux__)
+#  include "exit_group.hxx"
+#endif
 #if defined(__linux__) || defined(__FreeBSD__)
 #  include "getegid.hxx"
 #  include "geteuid.hxx"
