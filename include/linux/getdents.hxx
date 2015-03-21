@@ -1,10 +1,10 @@
 #pragma once
 
-#include <EBADF>
-#include <EFAULT>
-#include <EINVAL>
-#include <ENOENT>
-#include <ENOTDIR>
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/ENOENT.h"
+#include "c/ENOTDIR.h"
 
 namespace linux::getdents {
 

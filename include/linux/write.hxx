@@ -1,16 +1,16 @@
 #pragma once
 
-#include <EAGAIN>
-#include <EBADF>
-#include <EDESTADDRREQ>
-#include <EDQUOT>
-#include <EFAULT>
-#include <EFBIG>
-#include <EINTR>
-#include <EINVAL>
-#include <EIO>
-#include <ENOSPC>
-#include <EPIPE>
+#include "c/EAGAIN.h"
+#include "c/EBADF.h"
+#include "c/EDESTADDRREQ.h"
+#include "c/EDQUOT.h"
+#include "c/EFAULT.h"
+#include "c/EFBIG.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/EIO.h"
+#include "c/ENOSPC.h"
+#include "c/EPIPE.h"
 
 namespace linux::write {
 

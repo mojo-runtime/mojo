@@ -1,15 +1,15 @@
 #pragma once
 
-#include <EACCES>
-#include <EAGAIN>
-#include <EBADF>
-#include <EINVAL>
-#include <ENFILE>
-#include <ENODEV>
-#include <ENOMEM>
-#include <EOVERFLOW>
-#include <EPERM>
-#include <ETXTBSY>
+#include "c/EACCES.h"
+#include "c/EAGAIN.h"
+#include "c/EBADF.h"
+#include "c/EINVAL.h"
+#include "c/ENFILE.h"
+#include "c/ENODEV.h"
+#include "c/ENOMEM.h"
+#include "c/EOVERFLOW.h"
+#include "c/EPERM.h"
+#include "c/ETXTBSY.h"
 
 namespace linux::mmap {
 

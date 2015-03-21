@@ -1,12 +1,12 @@
 #pragma once
 
-#include <EBADF>
-#include <EEXIST>
-#include <EINVAL>
-#include <ENOENT>
-#include <ENOMEM>
-#include <ENOSPC>
-#include <EPERM>
+#include "c/EBADF.h"
+#include "c/EEXIST.h"
+#include "c/EINVAL.h"
+#include "c/ENOENT.h"
+#include "c/ENOMEM.h"
+#include "c/ENOSPC.h"
+#include "c/EPERM.h"
 
 namespace linux::epoll_ctl {
 

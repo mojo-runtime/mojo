@@ -1,7 +1,7 @@
 #pragma once
 
-#include <EBADF>
-#include <EINVAL>
+#include "c/EBADF.h"
+#include "c/EINVAL.h"
 
 namespace linux::inotify_rm_watch {
 

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <SYS_getuid>
-#include <uid_t>
+#include "c/SYS_getuid.h"
+#include "c/uid_t.h"
 #include "__call.hxx"
 
 namespace linux {

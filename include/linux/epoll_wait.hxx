@@ -1,9 +1,9 @@
 #pragma once
 
-#include <EBADF>
-#include <EFAULT>
-#include <EINTR>
-#include <EINVAL>
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
 
 namespace linux::epoll_wait {
 

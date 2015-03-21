@@ -1,13 +1,13 @@
 #pragma once
 
-#include <EACCES>
-#include <EBADF>
-#include <EFAULT>
-#include <EINVAL>
-#include <ENAMETOOLONG>
-#include <ENOENT>
-#include <ENOMEM>
-#include <ENOSPC>
+#include "c/EACCES.h"
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ENOMEM.h"
+#include "c/ENOSPC.h"
 
 namespace linux::inotify_add_watch {
 

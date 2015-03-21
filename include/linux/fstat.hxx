@@ -1,9 +1,9 @@
 #pragma once
 
-#include <EBADF>
-#include <EFAULT>
-#include <ENOMEM>
-#include <EOVERFLOW>
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/ENOMEM.h"
+#include "c/EOVERFLOW.h"
 
 namespace linux::fstat {
 

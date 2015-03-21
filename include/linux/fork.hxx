@@ -1,8 +1,8 @@
 #pragma once
 
-#include <EAGAIN>
-#include <ENOMEM>
-#include <ENOSYS>
+#include "c/EAGAIN.h"
+#include "c/ENOMEM.h"
+#include "c/ENOSYS.h"
 
 namespace linux::fork {
 

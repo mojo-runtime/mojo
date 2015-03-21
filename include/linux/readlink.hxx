@@ -1,14 +1,14 @@
 #pragma once
 
-#include <EACCES>
-#include <EFAULT>
-#include <EINVAL>
-#include <EIO>
-#include <ELOOP>
-#include <ENAMETOOLONG>
-#include <ENOENT>
-#include <ENOMEM>
-#include <ENOTDIR>
+#include "c/EACCES.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/EIO.h"
+#include "c/ELOOP.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ENOMEM.h"
+#include "c/ENOTDIR.h"
 
 namespace linux::readlink {
 

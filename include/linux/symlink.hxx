@@ -1,18 +1,18 @@
 #pragma once
 
-#include <EACCES>
-#include <EDQUOT>
-#include <EEXIST>
-#include <EFAULT>
-#include <EIO>
-#include <ELOOP>
-#include <ENAMETOOLONG>
-#include <ENOENT>
-#include <ENOMEM>
-#include <ENOSPC>
-#include <ENOTDIR>
-#include <EPERM>
-#include <EROFS>
+#include "c/EACCES.h"
+#include "c/EDQUOT.h"
+#include "c/EEXIST.h"
+#include "c/EFAULT.h"
+#include "c/EIO.h"
+#include "c/ELOOP.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ENOMEM.h"
+#include "c/ENOSPC.h"
+#include "c/ENOTDIR.h"
+#include "c/EPERM.h"
+#include "c/EROFS.h"
 
 namespace linux::symlink {
 

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <EFAULT>
-#include <EINVAL>
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
 
 namespace linux::get_thread_area {
 

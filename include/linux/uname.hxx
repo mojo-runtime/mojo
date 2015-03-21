@@ -1,6 +1,6 @@
 #pragma once
 
-#include <EFAULT>
+#include "c/EFAULT.h"
 
 namespace linux::uname {
 

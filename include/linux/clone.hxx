@@ -1,9 +1,9 @@
 #pragma once
 
-#include <EAGAIN>
-#include <EINVAL>
-#include <ENOMEM>
-#include <EPERM>
+#include "c/EAGAIN.h"
+#include "c/EINVAL.h"
+#include "c/ENOMEM.h"
+#include "c/EPERM.h"
 
 namespace linux::clone {
 

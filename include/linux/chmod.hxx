@@ -1,15 +1,15 @@
 #pragma once
 
-#include <EACCES>
-#include <EFAULT>
-#include <EIO>
-#include <ELOOP>
-#include <ENAMETOOLONG>
-#include <ENOENT>
-#include <ENOMEM>
-#include <ENOTDIR>
-#include <EPERM>
-#include <EROFS>
+#include "c/EACCES.h"
+#include "c/EFAULT.h"
+#include "c/EIO.h"
+#include "c/ELOOP.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ENOMEM.h"
+#include "c/ENOTDIR.h"
+#include "c/EPERM.h"
+#include "c/EROFS.h"
 
 namespace linux::chmod {
 

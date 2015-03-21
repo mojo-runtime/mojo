@@ -1,15 +1,15 @@
 #pragma once
 
-#include <EACCES>
-#include <EAGAIN>
-#include <EBADF>
-#include <EDEADLK>
-#include <EFAULT>
-#include <EINTR>
-#include <EINVAL>
-#include <EMFILE>
-#include <ENOLCK>
-#include <EPERM>
+#include "c/EACCES.h"
+#include "c/EAGAIN.h"
+#include "c/EBADF.h"
+#include "c/EDEADLK.h"
+#include "c/EFAULT.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/EMFILE.h"
+#include "c/ENOLCK.h"
+#include "c/EPERM.h"
 
 namespace linux::fcntl {
 

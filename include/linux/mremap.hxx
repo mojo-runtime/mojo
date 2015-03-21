@@ -1,9 +1,9 @@
 #pragma once
 
-#include <EAGAIN>
-#include <EFAULT>
-#include <EINVAL>
-#include <ENOMEM>
+#include "c/EAGAIN.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/ENOMEM.h"
 
 namespace linux::mremap {
 

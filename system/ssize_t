@@ -1,7 +1,0 @@
-// -*- C -*-
-
-#pragma once
-
-#include <ptrdiff_t>
-
-typedef ptrdiff_t ssize_t;

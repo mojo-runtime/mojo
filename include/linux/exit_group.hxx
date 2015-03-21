@@ -1,6 +1,6 @@
 #pragma once
 
-#include <SYS_exit_group>
+#include "c/SYS_exit_group.h"
 #include "__call.hxx"
 
 namespace linux {

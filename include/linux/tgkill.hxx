@@ -1,8 +1,8 @@
 #pragma once
 
-#include <EINVAL>
-#include <EPERM>
-#include <ESRCH>
+#include "c/EINVAL.h"
+#include "c/EPERM.h"
+#include "c/ESRCH.h"
 
 namespace linux::tgkill {
 

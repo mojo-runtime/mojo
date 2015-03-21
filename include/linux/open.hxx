@@ -1,28 +1,28 @@
 #pragma once
 
-#include <EACCES>
-#include <EDQUOT>
-#include <EEXIST>
-#include <EFAULT>
-#include <EINTR>
-#include <EINVAL>
-#include <EISDIR>
-#include <ELOOP>
-#include <EMFILE>
-#include <ENAMETOOLONG>
-#include <ENFILE>
-#include <ENODEV>
-#include <ENOENT>
-#include <ENOMEM>
-#include <ENOSPC>
-#include <ENOTDIR>
-#include <ENXIO>
-#include <EOPNOTSUPP>
-#include <EOVERFLOW>
-#include <EPERM>
-#include <EROFS>
-#include <ETXTBSY>
-#include <EWOULDBLOCK>
+#include "c/EACCES.h"
+#include "c/EDQUOT.h"
+#include "c/EEXIST.h"
+#include "c/EFAULT.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/EISDIR.h"
+#include "c/ELOOP.h"
+#include "c/EMFILE.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENFILE.h"
+#include "c/ENODEV.h"
+#include "c/ENOENT.h"
+#include "c/ENOMEM.h"
+#include "c/ENOSPC.h"
+#include "c/ENOTDIR.h"
+#include "c/ENXIO.h"
+#include "c/EOPNOTSUPP.h"
+#include "c/EOVERFLOW.h"
+#include "c/EPERM.h"
+#include "c/EROFS.h"
+#include "c/ETXTBSY.h"
+#include "c/EWOULDBLOCK.h"
 
 namespace linux::open {
 

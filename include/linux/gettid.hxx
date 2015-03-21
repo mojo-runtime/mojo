@@ -1,7 +1,7 @@
 #pragma once
 
-#include <SYS_gettid>
-#include <pid_t>
+#include "c/SYS_gettid.h"
+#include "c/pid_t.h"
 #include "__call.hxx"
 
 namespace linux {

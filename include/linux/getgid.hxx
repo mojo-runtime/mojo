@@ -1,7 +1,7 @@
 #pragma once
 
-#include <SYS_getgid>
-#include <gid_t>
+#include "c/SYS_getgid.h"
+#include "c/gid_t.h"
 #include "__call.hxx"
 
 namespace linux {

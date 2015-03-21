@@ -1,17 +1,17 @@
 #pragma once
 
-#include <EACCES>
-#include <EBUSY>
-#include <EFAULT>
-#include <EINVAL>
-#include <ELOOP>
-#include <ENAMETOOLONG>
-#include <ENOENT>
-#include <ENOMEM>
-#include <ENOTDIR>
-#include <ENOTEMPTY>
-#include <EPERM>
-#include <EROFS>
+#include "c/EACCES.h"
+#include "c/EBUSY.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/ELOOP.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ENOMEM.h"
+#include "c/ENOTDIR.h"
+#include "c/ENOTEMPTY.h"
+#include "c/EPERM.h"
+#include "c/EROFS.h"
 
 namespace linux::rmdir {
 

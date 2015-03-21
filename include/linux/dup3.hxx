@@ -1,10 +1,10 @@
 #pragma once
 
-#include <EBADF>
-#include <EBUSY>
-#include <EINTR>
-#include <EINVAL>
-#include <EMFILE>
+#include "c/EBADF.h"
+#include "c/EBUSY.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/EMFILE.h"
 
 namespace linux::dup3 {
 

@@ -1,8 +1,8 @@
 #pragma once
 
-#include <ECHILD>
-#include <EINTR>
-#include <EINVAL>
+#include "c/ECHILD.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
 
 namespace linux::waitid {
 
