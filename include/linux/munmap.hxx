@@ -1,14 +1,25 @@
 #pragma once
 
 #include "c/EINVAL.h"
+#include "c/SYS_munmap.h"
+#include "c/size_t.h"
 
-namespace linux::munmap {
+#include "Result.hxx"
 
-enum Error
+namespace linux {
+
+static inline
+auto
+munmap(void* addr, size_t length) noexcept
 {
+    enum Error
+    {
 #define _(name) _##name = name
-    _(EINVAL),
+        _(EINVAL),
 #undef _
-};
+    };
+
+    return Result<void, Error>(SYS_munmap, addr, length);
+}
 
 }

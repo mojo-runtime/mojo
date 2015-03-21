@@ -10,23 +10,33 @@
 #include "c/ENOTDIR.h"
 #include "c/EPERM.h"
 #include "c/EROFS.h"
+#include "c/SYS_chmod.h"
 
-namespace linux::chmod {
+#include "Result.hxx"
 
-enum Error
+namespace linux {
+
+static inline
+auto
+chmod(const char* pathname, mode_t mode) noexcept
 {
+    enum Error
+    {
 #define _(name) _##name = name
-    _(EACCES),
-    _(EFAULT),
-    _(EIO),
-    _(ELOOP),
-    _(ENAMETOOLONG),
-    _(ENOENT),
-    _(ENOMEM),
-    _(ENOTDIR),
-    _(EPERM),
-    _(EROFS),
+        _(EACCES),
+        _(EFAULT),
+        _(EIO),
+        _(ELOOP),
+        _(ENAMETOOLONG),
+        _(ENOENT),
+        _(ENOMEM),
+        _(ENOTDIR),
+        _(EPERM),
+        _(EROFS),
 #undef _
-};
+    };
+
+    return Result<void, Error>(SYS_chmod, pathname, mode);
+}
 
 }

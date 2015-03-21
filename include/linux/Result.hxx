@@ -1,14 +1,15 @@
 #pragma once
 
-#include "__Word.hxx"
+#include "__call.hxx"
 
 namespace linux {
 
+template <typename Ok, typename Error>
 struct Result
 {
-    explicit
-    Result(__Word word)
-        : __word(word)
+    template <typename... Args>
+    Result(Args&&... args)
+        : __word(__call(args...))
     {
     }
 
@@ -28,14 +29,12 @@ struct Result
 
     //----------------------------------------------------------------------------------------------
 
-    template <typename Error>
     Error
     error() const noexcept
     {
         return static_cast<Error>(-this->__word);
     }
 
-    template <typename Ok>
     Ok
     ok() const noexcept
     {

@@ -12,25 +12,35 @@
 #include "c/ENOTEMPTY.h"
 #include "c/EPERM.h"
 #include "c/EROFS.h"
+#include "c/SYS_rmdir.h"
 
-namespace linux::rmdir {
+#include "Result.hxx"
 
-enum Error
+namespace linux {
+
+static inline
+auto
+rmdir(const char* pathname) noexcept
 {
+    enum Error
+    {
 #define _(name) _##name = name
-    _(EACCES),
-    _(EBUSY),
-    _(EFAULT),
-    _(EINVAL),
-    _(ELOOP),
-    _(ENAMETOOLONG),
-    _(ENOENT),
-    _(ENOMEM),
-    _(ENOTDIR),
-    _(ENOTEMPTY),
-    _(EPERM),
-    _(EROFS),
+        _(EACCES),
+        _(EBUSY),
+        _(EFAULT),
+        _(EINVAL),
+        _(ELOOP),
+        _(ENAMETOOLONG),
+        _(ENOENT),
+        _(ENOMEM),
+        _(ENOTDIR),
+        _(ENOTEMPTY),
+        _(EPERM),
+        _(EROFS),
 #undef _
-};
+    };
+
+    return Result<void, Error>(SYS_rmdir, pathname);
+}
 
 }

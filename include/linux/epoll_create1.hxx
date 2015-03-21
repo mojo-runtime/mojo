@@ -4,17 +4,25 @@
 #include "c/EMFILE.h"
 #include "c/ENFILE.h"
 #include "c/ENOMEM.h"
+#include "c/SYS_epoll_create1.h"
 
-namespace linux::epoll_create1 {
+namespace linux {
 
-enum Error
+static inline
+auto
+epoll_create1(int flags) noexcept
 {
+    enum Error
+    {
 #define _(name) _##name = name
-    _(EINVAL),
-    _(EMFILE),
-    _(ENFILE),
-    _(ENOMEM),
+        _(EINVAL),
+        _(EMFILE),
+        _(ENFILE),
+        _(ENOMEM),
 #undef _
-};
+    };
+
+    return Result<int, Error>(SYS_epoll_create1, flags);
+}
 
 }

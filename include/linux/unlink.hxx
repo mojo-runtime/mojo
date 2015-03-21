@@ -12,25 +12,35 @@
 #include "c/ENOTDIR.h"
 #include "c/EPERM.h"
 #include "c/EROFS.h"
+#include "c/SYS_unlink.h"
 
-namespace linux::unlink {
+#include "Result.hxx"
 
-enum Error
+namespace linux {
+
+static inline
+auto
+unlink(const char* pathname) noexcept
 {
+    enum Error
+    {
 #define _(name) _##name = name
-    _(EACCES),
-    _(EBUSY),
-    _(EFAULT),
-    _(EIO),
-    _(EISDIR),
-    _(ELOOP),
-    _(ENAMETOOLONG),
-    _(ENOENT),
-    _(ENOMEM),
-    _(ENOTDIR),
-    _(EPERM),
-    _(EROFS),
+        _(EACCES),
+        _(EBUSY),
+        _(EFAULT),
+        _(EIO),
+        _(EISDIR),
+        _(ELOOP),
+        _(ENAMETOOLONG),
+        _(ENOENT),
+        _(ENOMEM),
+        _(ENOTDIR),
+        _(EPERM),
+        _(EROFS),
 #undef _
 };
+
+    return Result<void, Error>(SYS_unlink, pathname);
+}
 
 }

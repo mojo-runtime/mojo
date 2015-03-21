@@ -10,23 +10,34 @@
 #include "c/EMFILE.h"
 #include "c/ENOLCK.h"
 #include "c/EPERM.h"
+#include "c/SYS_fcntl.h"
 
-namespace linux::fcntl {
+#include "Result.hxx"
 
-enum Error
+namespace linux {
+
+template <typename Arg>
+static inline
+auto
+fcntl(int fd, int cmd, Arg arg) noexcept
 {
+    enum Error
+    {
 #define _(name) _##name = name
-    _(EACCES),
-    _(EAGAIN),
-    _(EBADF),
-    _(EDEADLK),
-    _(EFAULT),
-    _(EINTR),
-    _(EINVAL),
-    _(EMFILE),
-    _(ENOLCK),
-    _(EPERM),
+        _(EACCES),
+        _(EAGAIN),
+        _(EBADF),
+        _(EDEADLK),
+        _(EFAULT),
+        _(EINTR),
+        _(EINVAL),
+        _(EMFILE),
+        _(ENOLCK),
+        _(EPERM),
 #undef _
-};
+    };
+
+    return Result<void, Error>(SYS_fcntl, fd, cmd, arg);
+}
 
 }

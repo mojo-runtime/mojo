@@ -1,14 +1,25 @@
 #pragma once
 
 #include "c/EFAULT.h"
+#include "c/SYS_uname.h"
+#include "c/struct utsname.h"
 
-namespace linux::uname {
+#include "Result.hxx"
 
-enum Error
+namespace linux {
+
+static inline
+auto
+uname(struct utsname* buf) noexcept
 {
+    enum Error
+    {
 #define _(name) _##name = name
-    _(EFAULT),
+        _(EFAULT),
 #undef _
-};
+    };
+
+    return Result<void, Error>(SYS_uname, buf);
+}
 
 }

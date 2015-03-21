@@ -23,35 +23,46 @@
 #include "c/EROFS.h"
 #include "c/ETXTBSY.h"
 #include "c/EWOULDBLOCK.h"
+#include "c/SYS_open.h"
+#include "c/mode_t.h"
 
-namespace linux::open {
+#include "Result.hxx"
 
-enum Error
+namespace linux {
+
+static inline
+auto
+open(const char* pathname, int flags) noexcept
 {
+    enum Error
+    {
 #define _(name) _##name = name
-    _(EACCES),
-    _(EDQUOT),
-    _(EEXIST),
-    _(EFAULT),
-    _(EINTR),
-    _(EINVAL),
-    _(EISDIR),
-    _(ELOOP),
-    _(EMFILE),
-    _(ENAMETOOLONG),
-    _(ENFILE),
-    _(ENODEV),
-    _(ENOENT),
-    _(ENOSPC),
-    _(ENOTDIR),
-    _(ENXIO),
-    _(EOPNOTSUPP),
-    _(EOVERFLOW),
-    _(EPERM),
-    _(EROFS),
-    _(ETXTBSY),
-    _(EWOULDBLOCK),
+        _(EACCES),
+        _(EDQUOT),
+        _(EEXIST),
+        _(EFAULT),
+        _(EINTR),
+        _(EINVAL),
+        _(EISDIR),
+        _(ELOOP),
+        _(EMFILE),
+        _(ENAMETOOLONG),
+        _(ENFILE),
+        _(ENODEV),
+        _(ENOENT),
+        _(ENOSPC),
+        _(ENOTDIR),
+        _(ENXIO),
+        _(EOPNOTSUPP),
+        _(EOVERFLOW),
+        _(EPERM),
+        _(EROFS),
+        _(ETXTBSY),
+        _(EWOULDBLOCK),
 #undef _
-};
+    };
+
+    return Result<int, Error>(SYS_open, pathname, flags);
+}
 
 }

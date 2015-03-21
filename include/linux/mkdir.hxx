@@ -13,26 +13,37 @@
 #include "c/ENOTDIR.h"
 #include "c/EPERM.h"
 #include "c/EROFS.h"
+#include "c/SYS_mkdir.h"
+#include "c/mode_t.h"
 
-namespace linux::mkdir {
+#include "Result.hxx"
 
-enum Error
+namespace linux {
+
+static inline
+auto
+mkdir(const char* pathname, mode_t mode) noexcept
 {
+    enum Error
+    {
 #define _(name) _##name = name
-    _(EACCES),
-    _(EDQUOT),
-    _(EEXIST),
-    _(EFAULT),
-    _(ELOOP),
-    _(EMLINK),
-    _(ENAMETOOLONG),
-    _(ENOENT),
-    _(ENOMEM),
-    _(ENOSPC),
-    _(ENOTDIR),
-    _(EPERM),
-    _(EROFS),
+        _(EACCES),
+        _(EDQUOT),
+        _(EEXIST),
+        _(EFAULT),
+        _(ELOOP),
+        _(EMLINK),
+        _(ENAMETOOLONG),
+        _(ENOENT),
+        _(ENOMEM),
+        _(ENOSPC),
+        _(ENOTDIR),
+        _(EPERM),
+        _(EROFS),
 #undef _
-};
+    };
+
+    return Result<void, Error>(SYS_mkdir, pathname, mode);
+}
 
 }
