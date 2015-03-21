@@ -250,7 +250,9 @@
 #include "SYS_chown.h"
 #include "SYS_clock_getres.h"
 #include "SYS_clock_gettime.h"
-#include "SYS_clock_nanosleep.h"
+#if defined(__linux__)
+#  include "SYS_clock_nanosleep.h"
+#endif
 #include "SYS_clock_settime.h"
 #if defined(__linux__)
 #  include "SYS_clone.h"
