@@ -4,12 +4,10 @@
 
 #if defined(__linux__)
 #  if defined(__x86_64__)
-#    define SYS_
+#    define SYS_clock_nanosleep 230
 #  else
 #    error
 #  endif
-#elif defined(__FreeBSD__)
-#  define SYS_
 #else
 #  error
 #endif
