@@ -10,7 +10,7 @@ static inline
 pid_t
 getpgid() noexcept
 {
-    return static_cast<pid_t>(__call<SYS_getpgid>());
+    return static_cast<pid_t>(__call(SYS_getpgid));
 }
 
 }

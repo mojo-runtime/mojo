@@ -10,7 +10,7 @@ static inline
 void
 exit_group(int status) noexcept
 {
-    __call<SYS_exit_group>(status);
+    __call(SYS_exit_group, status);
     __builtin_unreachable();
 };
 

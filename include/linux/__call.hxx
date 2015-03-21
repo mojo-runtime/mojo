@@ -8,10 +8,9 @@ namespace linux {
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Word n>
 static inline
 __Word
-__call() noexcept
+__call(int n) noexcept
 {
     __Word
     output;
@@ -28,10 +27,10 @@ __call() noexcept
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Word n, typename A1>
+template <typename A1>
 static inline
 __Word
-__call(A1 a1) noexcept
+__call(int n, A1 a1) noexcept
 {
     __Word
     output;
@@ -50,10 +49,10 @@ __call(A1 a1) noexcept
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Word n, typename A1, typename A2>
+template <typename A1, typename A2>
 static inline
 __Word
-__call(A1 a1, A2 a2) noexcept
+__call(int n, A1 a1, A2 a2) noexcept
 {
     __Word
     output;
@@ -73,10 +72,10 @@ __call(A1 a1, A2 a2) noexcept
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Word n, typename A1, typename A2, typename A3>
+template <typename A1, typename A2, typename A3>
 static inline
 __Word
-__call(A1 a1, A2 a2, A3 a3) noexcept
+__call(int n, A1 a1, A2 a2, A3 a3) noexcept
 {
     __Word
     output;
@@ -97,10 +96,10 @@ __call(A1 a1, A2 a2, A3 a3) noexcept
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Word n, typename A1, typename A2, typename A3, typename A4>
+template <typename A1, typename A2, typename A3, typename A4>
 static inline
 __Word
-__call(A1 a1, A2 a2, A3 a3, A4 a4) noexcept
+__call(int n, A1 a1, A2 a2, A3 a3, A4 a4) noexcept
 {
     __Word
     output;
@@ -122,10 +121,10 @@ __call(A1 a1, A2 a2, A3 a3, A4 a4) noexcept
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Word n, typename A1, typename A2, typename A3, typename A4, typename A5>
+template <typename A1, typename A2, typename A3, typename A4, typename A5>
 static inline
 __Word
-__call(A1 a1, A2 a2, A3 a3, A4 a4, A5 a5) noexcept
+__call(int n, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5) noexcept
 {
     __Word
     output;
@@ -148,10 +147,10 @@ __call(A1 a1, A2 a2, A3 a3, A4 a4, A5 a5) noexcept
 
 //--------------------------------------------------------------------------------------------------
 
-template <__Word n, typename A1, typename A2, typename A3, typename A4, typename A5, typename A6>
+template <typename A1, typename A2, typename A3, typename A4, typename A5, typename A6>
 static inline
 __Word
-__call(A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6) noexcept
+__call(int n, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6) noexcept
 {
     __Word
     output;
