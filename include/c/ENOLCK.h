@@ -3,7 +3,7 @@
 #pragma once
 
 #if defined(__linux__)
-#  if defined(__x86_64__) // generic
+#  if defined(__arm__) || defined(__x86_64__) // generic
 #    define ENOLCK 37
 #  else
 #    error

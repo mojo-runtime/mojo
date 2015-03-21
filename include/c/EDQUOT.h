@@ -3,7 +3,7 @@
 #pragma once
 
 #if defined(__linux__)
-#  if defined(__x86_64__) // generic
+#  if defined(__arm__) || defined(__x86_64__) // generic
 #    define EDQUOT 122
 #  else
 #    error
