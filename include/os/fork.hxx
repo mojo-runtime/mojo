@@ -1,15 +1,6 @@
 #pragma once
 
-//--------------------------------------------------------------------------------------------------
-
-#if defined(__linux__)
-
-#include "c/EAGAIN.h"
-#include "c/ENOMEM.h"
-#include "c/ENOSYS.h"
-#include "c/SYS_fork.h"
 #include "c/pid_t.h"
-
 #include "Result.hxx"
 
 namespace os {
@@ -18,22 +9,27 @@ static inline
 auto
 fork() noexcept
 {
+#if defined(__linux__)
+#  include "c/EAGAIN.h"
+#  include "c/ENOMEM.h"
+#  include "c/ENOSYS.h"
+#  define _(name) _##name = name
+
     enum Error
     {
-#define _(name) _##name = name
         _(EAGAIN),
         _(ENOMEM),
         _(ENOSYS),
-#undef _
     };
 
+#  undef _
+#  include "c/SYS_fork.h"
+
     return Result<pid_t, Error>(SYS_fork);
-}
-
-}
-
-//--------------------------------------------------------------------------------------------------
 
 #else
 #  error
 #endif
+}
+
+}

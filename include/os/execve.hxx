@@ -1,28 +1,5 @@
 #pragma once
 
-//--------------------------------------------------------------------------------------------------
-
-#if defined(__linux__)
-
-#include "c/E2BIG.h"
-#include "c/EACCES.h"
-#include "c/EFAULT.h"
-#include "c/EINVAL.h"
-#include "c/EIO.h"
-#include "c/EISDIR.h"
-#include "c/ELIBBAD.h"
-#include "c/ELOOP.h"
-#include "c/EMFILE.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENFILE.h"
-#include "c/ENOENT.h"
-#include "c/ENOEXEC.h"
-#include "c/ENOMEM.h"
-#include "c/ENOTDIR.h"
-#include "c/EPERM.h"
-#include "c/ETXTBSY.h"
-#include "c/SYS_execve.h"
-
 #include "Result.hxx"
 
 namespace os {
@@ -33,9 +10,28 @@ execve(const char* filename,
        char *const argv[],
        char *const envp[]) noexcept
 {
+#if defined(__linux__)
+#  include "c/E2BIG.h"
+#  include "c/EACCES.h"
+#  include "c/EFAULT.h"
+#  include "c/EINVAL.h"
+#  include "c/EIO.h"
+#  include "c/EISDIR.h"
+#  include "c/ELIBBAD.h"
+#  include "c/ELOOP.h"
+#  include "c/EMFILE.h"
+#  include "c/ENAMETOOLONG.h"
+#  include "c/ENFILE.h"
+#  include "c/ENOENT.h"
+#  include "c/ENOEXEC.h"
+#  include "c/ENOMEM.h"
+#  include "c/ENOTDIR.h"
+#  include "c/EPERM.h"
+#  include "c/ETXTBSY.h"
+#  define _(name) _##name = name
+
     enum Error
     {
-#define _(name) _##name = name
         _(E2BIG),
         _(EACCES),
         _(EFAULT),
@@ -53,16 +49,17 @@ execve(const char* filename,
         _(ENOTDIR),
         _(EPERM),
         _(ETXTBSY),
-#undef _
     };
 
+#  undef _
+#  include "c/SYS_execve.h"
+
     return Result<void, Error>(SYS_execve, filename, argv, envp).error();
-}
-
-}
-
-//--------------------------------------------------------------------------------------------------
 
 #else
 #  error
 #endif
+}
+
+}
+

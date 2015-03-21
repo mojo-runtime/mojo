@@ -1,19 +1,5 @@
 #pragma once
 
-//--------------------------------------------------------------------------------------------------
-
-#if defined(__linux__)
-
-#include "c/EACCES.h"
-#include "c/EFAULT.h"
-#include "c/EIO.h"
-#include "c/ELOOP.h"
-#include "c/ENAMETOOLONG.h"
-#include "c/ENOENT.h"
-#include "c/ENOMEM.h"
-#include "c/ENOTDIR.h"
-#include "c/SYS_chdir.h"
-
 #include "Result.hxx"
 
 namespace os {
@@ -22,9 +8,19 @@ static inline
 auto
 chdir(const char* path) noexcept
 {
+#if defined(__linux__)
+#  include "c/EACCES.h"
+#  include "c/EFAULT.h"
+#  include "c/EIO.h"
+#  include "c/ELOOP.h"
+#  include "c/ENAMETOOLONG.h"
+#  include "c/ENOENT.h"
+#  include "c/ENOMEM.h"
+#  include "c/ENOTDIR.h"
+#  define _(name) _##name = name
+
     enum Error
     {
-#define _(name) _##name = name
         _(EACCES),
         _(EFAULT),
         _(EIO),
@@ -33,16 +29,16 @@ chdir(const char* path) noexcept
         _(ENOENT),
         _(ENOMEM),
         _(ENOTDIR),
-#undef _
     };
 
+#  undef _
+#  include "c/SYS_chdir.h"
+
     return Result<void, Error>(SYS_chdir, path);
-}
-
-}
-
-//--------------------------------------------------------------------------------------------------
 
 #else
 #  error
 #endif
+}
+
+}

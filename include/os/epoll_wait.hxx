@@ -1,16 +1,6 @@
 #pragma once
 
-//--------------------------------------------------------------------------------------------------
-
-#if defined(__linux__)
-
-#include "c/EBADF.h"
-#include "c/EFAULT.h"
-#include "c/EINTR.h"
-#include "c/EINVAL.h"
-#include "c/SYS_epoll_wait.h"
 #include "c/struct epoll_event.h"
-
 #include "Result.hxx"
 
 namespace os {
@@ -22,23 +12,29 @@ epoll_wait(int epfd,
            int maxevents,
            int timeout) noexcept
 {
+#if defined(__linux__)
+#  include "c/EBADF.h"
+#  include "c/EFAULT.h"
+#  include "c/EINTR.h"
+#  include "c/EINVAL.h"
+#  define _(name) _##name = name
+
     enum Error
     {
-#define _(name) _##name = name
         _(EBADF),
         _(EFAULT),
         _(EINTR),
         _(EINVAL),
-#undef _
     };
 
+#  undef _
+#  include "c/SYS_epoll_wait.h"
+
     return Result<int, Error>(SYS_epoll_wait, epfd, events, maxevents, timeout);
-}
-
-}
-
-//--------------------------------------------------------------------------------------------------
 
 #else
 #  error
 #endif
+}
+
+}
