@@ -1,6 +1,6 @@
 #pragma once
 
-#if defined(__linux__)
+#if defined(__linux__) || defined(__FreeBSD__)
 #  include "c/SYS_getgid.h"
 #  include "c/gid_t.h"
 #  include "__call_always_ok.hxx"
