@@ -4,8 +4,7 @@
 
 #if defined(__GNUC__)
 #  if defined(__CHAR_UNSIGNED__)
-#    include "UCHAR_MIN.h"
-#    define CHAR_MIN UCHAR_MIN
+#    define CHAR_MIN 0
 #  else
 #    include "SCHAR_MIN.h"
 #    define CHAR_MIN SCHAR_MIN
