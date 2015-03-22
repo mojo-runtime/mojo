@@ -1,3 +1,5 @@
+#if defined(__cplusplus)
+
 #if defined(__linux__)
 #  include "chdir.hxx"
 #  include "chmod.hxx"
@@ -64,3 +66,5 @@
 #  include "waitid.hxx"
 #  include "write.hxx"
 #endif
+
+#endif // __cplusplus

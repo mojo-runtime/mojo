@@ -1,3 +1,4 @@
+#if defined(__cplusplus)
 #include "div_t.hxx"
 #include "enable_if.hxx"
 #include "enable_if_t.hxx"
@@ -42,3 +43,4 @@
 #include "uintmax_t.hxx"
 #include "uintptr_t.hxx"
 #include "va_list.hxx"
+#endif // __cplusplus
