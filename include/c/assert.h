@@ -1,8 +1,14 @@
 #pragma once
 
 #if defined(NDEBUG)
-#  include "assume!.h"
-#  define assert(x, ...) assume(x)
+#  if defined(__has_builtin)
+#    if __has_builtin(__builtin_assume)
+#      define assert(x, ...) __builtin_assume(x)
+#    endif
+#  endif
+#  if !defined(assert)
+#    define assert(...)
+#  endif
 #else
 #  include "c/EXIT_FAILURE.h"
 #  include "c/_Exit.h"

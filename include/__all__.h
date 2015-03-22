@@ -5,5 +5,3 @@
 
 #include "Byte.h"
 #include "Word.h"
-
-#include "assume!.h"
