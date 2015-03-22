@@ -1,6 +1,6 @@
 #pragma once
 
-#include "builtin/Word.h"
+#include "Word.h"
 
 namespace os { inline namespace _linux_ { inline namespace _x86_64_ {
 
