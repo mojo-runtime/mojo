@@ -38,7 +38,7 @@ fstatat(int dirfd,
     };
 
 #  undef _
-#  include "c/SYS_fstat.h"
+#  include "c/SYS_fstatat.h"
 
     return Result<void, Error>(SYS_fstatat, dirfd, pathname, buf, flags);
 
