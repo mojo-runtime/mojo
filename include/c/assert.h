@@ -10,8 +10,7 @@
 #    define assert(...)
 #  endif
 #else
-#  include "c/EXIT_FAILURE.h"
-#  include "c/_Exit.h"
+#  include "__assertion_error.h"
 #  include "__va_dispatch!.h"
 #  define assert(...) __va_dispatch(assert_, __VA_ARGS__)
 #  if defined(__cplusplus)
@@ -21,17 +20,4 @@
 #  else
 #    error
 #  endif
-
-__attribute__((__noreturn__, __nothrow__))
-static inline
-void
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wunused-parameter"
-__assertion_error(const char* x, const char* file, const char* function, unsigned line, const char* message)
-#pragma clang diagnostic pop
-{
-    // TODO
-    _Exit(EXIT_FAILURE);
-}
-
 #endif
