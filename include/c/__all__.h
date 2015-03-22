@@ -462,3 +462,4 @@
 #include "va_start.h"
 #include "wchar_t.h"
 #include "wint_t.h"
+#include "_Exit.h"
