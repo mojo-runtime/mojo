@@ -370,6 +370,7 @@
 #include "WUNTRACED.h"
 #include "abs.h"
 #include "alloca.h"
+#include "assert.h"
 #include "auxv_t.h"
 #include "blkcnt_t.h"
 #include "blksize_t.h"
