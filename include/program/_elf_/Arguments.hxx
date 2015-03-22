@@ -1,15 +1,18 @@
 #pragma once
 
+#include "Byte.h"
+#include "Word.h"
+
 namespace program { inline namespace _elf_ {
 
 struct Arguments
 {
     //----------------------------------------------------------------------------------------------
 
-    unsigned int
-    __argc __attribute__((__mode__(__word__)));
+    Word
+    __argc;
 
-    char*
+    Byte*
     __argv[1]; // At least 1 - NULL terminated
 };
 
