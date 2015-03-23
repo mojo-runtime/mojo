@@ -2,19 +2,22 @@
 
 #include "size_t.h"
 
-static inline
+static
+#if defined(__cplusplus)
+constexpr
+#else
+inline
+#endif
 size_t
 strlen(const char* s)
 {
-#if defined(__has_builtin)
-#  if __has_builtin(__builtin_strlen)
-    return __builtin_strlen(s);
-#  else
-#    error
-#  endif
-#elif defined(__GNUC__) // Version?
-    return __builtin_strlen(s);
-#else
-#  error
-#endif
+    size_t
+    result = 0;
+
+    while (*s != 0) {
+        ++result;
+        ++s;
+    }
+
+    return result;
 }
