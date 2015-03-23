@@ -1,17 +1,16 @@
 #pragma once
 
 #if defined(__linux__)
-#  if defined(__x86_64__)
-#    include "uint64_t.h"
-//   @see include/uapi/asm-generic/posix_types.h
-     typedef /* __kernel_ulong_t */ uint64_t ino_t;
+#  if defined(__alpha__) || defined(__s390x__)
+typedef unsigned int ino_t;
+#  elif defined(__i386__)
+typedef /* __kernel_ulong_t */ unsigned long long ino_t;
 #  else
-#    error
+typedef /* __kernel_ulong_t */ unsigned long ino_t;
 #  endif
 #elif defined(__FreeBSD__)
 #  include "uint32_t.h"
-// @see sys/sys/_types.h
-   typedef uint32_t ino_t;
+typedef uint32_t ino_t;
 #else
 #  error
 #endif

@@ -1,17 +1,10 @@
 #pragma once
 
 #if defined(__linux__)
-#  if defined(__x86_64__)
-#    include "uint32_t.h"
-//   @see include/uapi/asm-generic/posix_types.h
-     typedef /* unsigned int */ uint32_t gid_t;
-#  else
-#    error
-#  endif
+typedef /* __kernel_gid32 */ unsigned int gid_t;
 #elif defined(__FreeBSD__)
 #  include "uint32_t.h"
-// @see sys/sys/_types.h
-   typedef uint32_t gid_t;
+typedef uint32_t gid_t;
 #else
 #  error
 #endif
