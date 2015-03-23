@@ -1,9 +1,9 @@
 #pragma once
 
-#if defined(__x86_64__)
 struct pt_regs
 {
-    // Per: LINUX/arch/x86/include/uapi/asm/ptrace.h
+#if defined(__x86_64__)
+    // arch/x86/include/uapi/asm/ptrace.h
     unsigned long r15;
     unsigned long r14;
     unsigned long r13;
@@ -25,8 +25,10 @@ struct pt_regs
     unsigned long eflags;
     unsigned long rsp;
     unsigned long ss;
-};
-
+#elif defined(__arm__)
+    // arch/arm/include/uapi/asm/ptrac.h
+    long uregs[18];
 #else
 #  error
 #endif
+};
