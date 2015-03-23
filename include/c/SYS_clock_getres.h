@@ -5,6 +5,8 @@
 #if defined(__linux__)
 #  if defined(__x86_64__)
 #    define SYS_clock_getres 229
+#  elif defined(__arm__)
+#    define SYS_clock_getres 264
 #  else
 #    error
 #  endif

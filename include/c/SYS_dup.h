@@ -5,6 +5,8 @@
 #if defined(__linux__)
 #  if defined(__x86_64__)
 #    define SYS_dup 32
+#  elif defined(__arm__)
+#    define SYS_dup 41
 #  else
 #    error
 #  endif

@@ -53,6 +53,18 @@ tests := $(tests) $(output)
 
 ####################################################################################################
 
+input  := include-all.cxx
+target := armv5-none-linux-elf
+output := $(BUILD)/$(input).$(target).asm
+
+$(output): $(TEST)/$(input) | $(BUILD)
+	$(CXX) -o $@ -target $(target) -mfloat-abi=hard -S $<
+
+# FIXME
+# tests := $(tests) $(output)
+
+####################################################################################################
+
 .PHONY: clean
 clean:
 	rm -rf $(BUILD)

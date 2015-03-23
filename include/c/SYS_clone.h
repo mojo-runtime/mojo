@@ -5,6 +5,8 @@
 #if defined(__linux__)
 #  if defined(__x86_64__)
 #    define SYS_clone 56
+#  elif defined(__arm__)
+#    define SYS_clone 120
 #  else
 #    error
 #  endif
