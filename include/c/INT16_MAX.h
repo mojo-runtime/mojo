@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #pragma once
 
 #ifdef __INT16_MAX__

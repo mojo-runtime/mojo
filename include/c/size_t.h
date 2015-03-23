@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #pragma once
 
 #if defined(__SIZE_TYPE__)

@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #pragma once
 
 #if defined(__UINT32_C)

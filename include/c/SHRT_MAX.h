@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #pragma once
 
 #if defined(__SHRT_MAX__)

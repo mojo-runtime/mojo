@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #pragma once
 
 #if defined(__x86_64__)

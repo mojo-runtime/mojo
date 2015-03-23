@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #pragma once
 
 // Note that `__has_builtin(__builtin_offsetof)` does not seem to apply.

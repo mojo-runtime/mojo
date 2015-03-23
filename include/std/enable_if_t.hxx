@@ -1,5 +1,3 @@
-// -*- C++ -*-
-
 #pragma once
 
 #include "std/enable_if.hxx"

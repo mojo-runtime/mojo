@@ -1,5 +1,3 @@
-// -*- C++ -*-
-
 #pragma once
 
 #include "std/remove_reference_t.hxx"

@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #pragma once
 
 struct linux_dirent

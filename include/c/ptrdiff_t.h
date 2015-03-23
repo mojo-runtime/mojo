@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #pragma once
 
 typedef

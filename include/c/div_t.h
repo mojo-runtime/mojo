@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #pragma once
 
 // Minimum (POSIX) definition

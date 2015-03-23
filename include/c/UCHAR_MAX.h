@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #pragma once
 
 #include "CHAR_BIT.h"

@@ -1,5 +1,3 @@
-// -*- C -*-
-
 #pragma once
 
 #include "ptrdiff_t.h"
