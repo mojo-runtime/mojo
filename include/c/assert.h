@@ -34,13 +34,10 @@
 
 #if defined(__unix__)
 #  include "STDERR_FILENO.h"
+#  include "SYS_write.h"
 #  include "strlen.h"
-#  if defined(__cplusplus)
-#    include "os/write.hxx"
-#    define __write(string) ::os::write(STDERR_FILENO, string, strlen(string))
-#  else
-#    error
-#  endif
+#  include "__syscall_3_no_error.h"
+#  define __write(string) __syscall_3_no_error(size_t, SYS_write, STDERR_FILENO, string, strlen(string))
 #else
 #  error
 #endif
