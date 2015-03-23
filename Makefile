@@ -36,7 +36,7 @@ target := x86_64-freebsd
 output := $(BUILD)/$(input).$(target).asm
 
 $(output): $(TEST)/$(input) | $(BUILD)
-	$(CXX) -o $@ -target $(target) -S $<
+	$(CXX) -target x86_64-freebsd -o $@ -S $<
 
 tests := $(tests) $(output)
 
@@ -47,7 +47,7 @@ target := x86_64-linux
 output := $(BUILD)/$(input).$(target).asm
 
 $(output): $(TEST)/$(input) | $(BUILD)
-	$(CXX) -o $@ -target $(target) -S $<
+	$(CXX) -target x86_64-linux -o $@ -S $<
 
 tests := $(tests) $(output)
 
@@ -58,7 +58,7 @@ target := armv5-none-linux-elf
 output := $(BUILD)/$(input).$(target).asm
 
 $(output): $(TEST)/$(input) | $(BUILD)
-	$(CXX) -o $@ -target $(target) -mfloat-abi=hard -S $<
+	$(CXX) -target armv5-none-linux-elf -mfloat-abi=hard -o $@ -S $<
 
 # FIXME
 # tests := $(tests) $(output)
