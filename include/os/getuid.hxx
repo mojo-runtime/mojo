@@ -3,7 +3,7 @@
 #if defined(__linux__) || defined(__FreeBSD__)
 #  include "c/SYS_getuid.h"
 #  include "c/uid_t.h"
-#  include "__call_always_ok.hxx"
+#  include "c/__syscall_0_no_error.h"
 
 namespace os {
 
@@ -11,7 +11,7 @@ static inline
 uid_t
 getuid() noexcept
 {
-    return __call_always_ok<uid_t>(SYS_getuid);
+    return __syscall_0_no_error(uid_t, SYS_getuid);
 }
 
 }
