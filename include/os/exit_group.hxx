@@ -8,15 +8,12 @@ void
 exit_group(int status) noexcept
 {
 #if defined(__linux__)
-#  if defined(__x86_64__)
-    asm volatile ("syscall" :: "a" (231), "D" (status));
-#  else
-#    error
-#  endif
+#  include "c/SYS_exit_group.h"
+#  include "c/__syscall_1_no_return.h"
+    __syscall_1_no_return(SYS_exit_group, status);
 #else
 #  error
 #endif
-    __builtin_unreachable();
 };
 
 }

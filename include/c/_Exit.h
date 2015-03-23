@@ -5,19 +5,10 @@ static inline
 void
 _Exit(int status)
 {
-    // Special case this one.
-#if defined(__linux__)
-#  if defined(__x86_64__)
-    asm volatile ("syscall" :: "a" (60), "D" (status));
-#  else
-#    error
-#  endif
-#elif defined(__FreeBSD__)
-#  if defined(__x86_64__)
-    asm volatile ("syscall" :: "a" (1), "D" (status));
-#  else
-#    error
-#  endif
+#if defined(__unix__)
+#  include "SYS_exit.h"
+#  include "__syscall_1_no_return.h"
+    __syscall_1_no_return(SYS_exit, status);
 #else
 #  error
 #endif
