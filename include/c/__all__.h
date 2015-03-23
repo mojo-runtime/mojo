@@ -198,7 +198,6 @@
 #include "MB_CUR_MAX.h"
 #include "MB_LEN_MAX.h"
 #include "NAME_MAX.h"
-#include "NCCS.h"
 #include "NULL.h"
 #include "O_CLOEXEC.h"
 #include "O_CREAT.h"
@@ -374,7 +373,6 @@
 #include "auxv_t.h"
 #include "blkcnt_t.h"
 #include "blksize_t.h"
-#include "cc_t.h"
 #include "char16_t.h"
 #include "char32_t.h"
 #include "clock_t.h"
@@ -420,7 +418,6 @@
 #  include "siginfo_t.h"
 #endif
 #include "size_t.h"
-#include "speed_t.h"
 #include "ssize_t.h"
 #include "strcmp.h"
 #include "strlen.h"
@@ -433,7 +430,6 @@
 #if !defined(__arm__)
 #  include "struct stat.h"
 #endif
-#include "struct termios.h"
 #include "struct timespec.h"
 #include "struct timeval.h"
 #if defined(__linux__) && defined(__x86_64__)
@@ -441,7 +437,6 @@
 #endif
 #include "struct utsname.h"
 #include "suseconds_t.h"
-#include "tcflag_t.h"
 #include "time_t.h"
 #include "timer_t.h"
 #include "uid_t.h"
@@ -468,3 +463,23 @@
 #include "wchar_t.h"
 #include "wint_t.h"
 #include "_Exit.h"
+
+#if 1 // has termios
+#  include "BRKINT.h"
+#  include "CS8.h"
+#  include "ICANON.h"
+#  include "ICRNL.h"
+#  include "IEXTEN.h"
+#  include "INPCK.h"
+#  include "ISIG.h"
+#  include "ISTRIP.h"
+#  include "IXON.h"
+#  include "NCCS.h"
+#  include "OPOST.h"
+#  include "VMIN.h"
+#  include "VTIME.h"
+#  include "cc_t.h"
+#  include "speed_t.h"
+#  include "struct termios.h"
+#  include "tcflag_t.h"
+#endif
