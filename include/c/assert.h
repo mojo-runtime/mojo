@@ -16,6 +16,7 @@
 #include "EXIT_FAILURE.h"
 #include "_Exit.h"
 
+#pragma clang diagnostic ignored "-Wgnu-zero-variadic-macro-arguments"
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 #pragma clang diagnostic ignored "-Wunused-parameter"
