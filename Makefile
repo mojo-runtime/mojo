@@ -60,8 +60,7 @@ output := $(BUILD)/$(input).$(target).asm
 $(output): $(TEST)/$(input) | $(BUILD)
 	$(CXX) -target armv5-none-linux-elf -mfloat-abi=hard -o $@ -S $<
 
-# FIXME
-# tests := $(tests) $(output)
+tests := $(tests) $(output)
 
 ####################################################################################################
 

@@ -1,6 +1,6 @@
 #if defined(__cplusplus)
 
-#if defined(__linux__)
+#if defined(__linux__) && defined(__x86_64__)
 #  include "chdir.hxx"
 #  include "chmod.hxx"
 #  include "chown.hxx"
@@ -17,7 +17,7 @@
 #  include "execve.hxx"
 #endif
 #include "exit.hxx"
-#if defined(__linux__)
+#if defined(__linux__) && defined(__x86_64__)
 #  include "exit_group.hxx"
 #  include "fchdir.hxx"
 #  include "fcntl.hxx"
@@ -42,7 +42,7 @@
 #if defined(__linux__) || defined(__FreeBSD__)
 #  include "getuid.hxx"
 #endif
-#if defined(__linux__)
+#if defined(__linux__) && defined(__x86_64__)
 #  include "inotify_add_watch.hxx"
 #  include "inotify_init1.hxx"
 #  include "inotify_rm_watch.hxx"

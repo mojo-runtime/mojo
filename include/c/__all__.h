@@ -416,7 +416,9 @@
 #include "offsetof.h"
 #include "pid_t.h"
 #include "ptrdiff_t.h"
-#include "siginfo_t.h"
+#if !defined(__arm__)
+#  include "siginfo_t.h"
+#endif
 #include "size_t.h"
 #include "speed_t.h"
 #include "ssize_t.h"
@@ -428,11 +430,13 @@
 #endif
 #include "struct pt_regs.h"
 #include "struct rusage.h"
-#include "struct stat.h"
+#if !defined(__arm__)
+#  include "struct stat.h"
+#endif
 #include "struct termios.h"
 #include "struct timespec.h"
 #include "struct timeval.h"
-#if defined(__linux__)
+#if defined(__linux__) && defined(__x86_64__)
 #  include "struct user_desc.h"
 #endif
 #include "struct utsname.h"
