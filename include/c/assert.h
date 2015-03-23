@@ -32,14 +32,38 @@
 #  error
 #endif
 
+#if defined(__unix__)
+#  include "STDERR_FILENO.h"
+#  include "strlen.h"
+#  if defined(__cplusplus)
+#    include "os/write.hxx"
+#    define __write(string) ::os::write(STDERR_FILENO, string, strlen(string))
+#  else
+#    error
+#  endif
+#else
+#  error
+#endif
+
 __attribute__((__noreturn__, __nothrow__))
 static inline
 void
 __assertion_error(const char* message, const char* file, const char* function, unsigned line)
 {
-    // TODO
+    // Super naive.
+    __write("\033[31;1massertion error:\033[0m ");
+    __write(message);
+    __write("\n  * function: ");
+    __write(function);
+    __write("\n  * file:     ");
+    __write(file);
+    __write("\n  * line:     TODO");
+    __write("\n");
+
     _Exit(EXIT_FAILURE);
 }
+
+#undef __write
 
 #pragma clang diagnostic pop
 
