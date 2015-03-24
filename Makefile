@@ -70,6 +70,19 @@ gcc := \
 	-Werror \
 	-Wno-unknown-pragmas
 
+g++ := \
+	g++ \
+	-fdiagnostics-color=always \
+	-iquote$(INCLUDE) \
+	-nostdlib \
+	-nostdinc \
+	-nostdinc++ \
+	-std=c++14 \
+	-O3 \
+	-Wall \
+	-Werror \
+	-Wno-unknown-pragmas
+
 ####################################################################################################
 
 $(BUILD):
@@ -107,6 +120,7 @@ $(eval $(call test-template,include-all.c,gcc))
 $(eval $(call test-template,include-all.cxx,clang++-arm-linux))
 $(eval $(call test-template,include-all.cxx,clang++-x86_64-freebsd))
 $(eval $(call test-template,include-all.cxx,clang++-x86_64-linux))
+# TODO: $(eval $(call test-template,include-all.cxx,g++))
 
 #---------------------------------------------------------------------------------------------------
 
