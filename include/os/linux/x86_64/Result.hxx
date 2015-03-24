@@ -1,12 +1,12 @@
 #pragma once
 
-#include "Word.h"
+#include "c/__Word.h"
 
 namespace os::linux::x86_64 {
 
 struct Result
 {
-    Result(Word n) noexcept
+    Result(__Word n) noexcept
     {
         asm volatile (
             "syscall"
@@ -19,7 +19,7 @@ struct Result
     //----------------------------------------------------------------------------------------------
 
     template <typename A1>
-    Result(Word n, A1 a1) noexcept
+    Result(__Word n, A1 a1) noexcept
     {
         register A1 r1 asm ("rdi") = a1;
 
@@ -34,7 +34,7 @@ struct Result
     //----------------------------------------------------------------------------------------------
 
     template <typename A1, typename A2>
-    Result(Word n, A1 a1, A2 a2) noexcept
+    Result(__Word n, A1 a1, A2 a2) noexcept
     {
         register A1 r1 asm ("rdi") = a1;
         register A2 r2 asm ("rsi") = a2;
@@ -48,7 +48,7 @@ struct Result
     }
 
     template <typename A1, typename A2, typename A3>
-    Result(Word n, A1 a1, A2 a2, A3 a3) noexcept
+    Result(__Word n, A1 a1, A2 a2, A3 a3) noexcept
     {
         register A1 r1 asm ("rdi") = a1;
         register A2 r2 asm ("rsi") = a2;
@@ -63,7 +63,7 @@ struct Result
     }
 
     template <typename A1, typename A2, typename A3, typename A4>
-    Result(Word n, A1 a1, A2 a2, A3 a3, A4 a4) noexcept
+    Result(__Word n, A1 a1, A2 a2, A3 a3, A4 a4) noexcept
     {
         register A1 r1 asm ("rdi") = a1;
         register A2 r2 asm ("rsi") = a2;
@@ -79,7 +79,7 @@ struct Result
     }
 
     template <typename A1, typename A2, typename A3, typename A4, typename A5>
-    Result(Word n, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5) noexcept
+    Result(__Word n, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5) noexcept
     {
         register A1 r1 asm ("rdi") = a1;
         register A2 r2 asm ("rsi") = a2;
@@ -96,7 +96,7 @@ struct Result
     }
 
     template <typename A1, typename A2, typename A3, typename A4, typename A5, typename A6>
-    Result(Word n, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6) noexcept
+    Result(__Word n, A1 a1, A2 a2, A3 a3, A4 a4, A5 a5, A6 a6) noexcept
     {
         register A1 r1 asm ("rdi") = a1;
         register A2 r2 asm ("rsi") = a2;
@@ -114,7 +114,7 @@ struct Result
     }
 
   protected:
-    Word
+    __Word
     __word;
 };
 

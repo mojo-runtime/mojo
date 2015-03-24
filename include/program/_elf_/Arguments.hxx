@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Byte.h"
-#include "Word.h"
+#include "c/__Byte.h"
+#include "c/__Word.h"
 
 namespace program { inline namespace _elf_ {
 
@@ -9,10 +9,10 @@ struct Arguments
 {
     //----------------------------------------------------------------------------------------------
 
-    Word
+    __Word
     __argc;
 
-    Byte*
+    __Byte*
     __argv[1]; // At least 1 - NULL terminated
 };
 
