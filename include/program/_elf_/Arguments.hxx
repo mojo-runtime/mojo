@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/__Word.h"
+#include "compat/__Word.h"
 
 namespace program { inline namespace _elf_ {
 
