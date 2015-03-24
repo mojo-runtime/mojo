@@ -1,17 +1,17 @@
 #pragma once
 
-#include "os/__call.hxx"
+#if defined(__x86_64__)
+#  include "x86_64/Result.hxx"
 
-namespace os { inline namespace _linux_ {
-
-template <typename Ok, typename Error>
-struct Result
+namespace os::linux {
+struct Result : x86_64::Result
 {
-    template <typename... Args>
-    Result(Args&&... args)
-        : __word(__call(args...))
-    {
-    }
+    using __Base = x86_64::Result;
+#else
+#  error
+#endif
+
+    using __Base::__Base;
 
     //----------------------------------------------------------------------------------------------
 
@@ -29,23 +29,19 @@ struct Result
 
     //----------------------------------------------------------------------------------------------
 
+    template <typename Error>
     Error
     error() const noexcept
     {
         return static_cast<Error>(-this->__word);
     }
 
+    template <typename Ok>
     Ok
     ok() const noexcept
     {
         return static_cast<Ok>(this->__word);
     }
-
-    //----------------------------------------------------------------------------------------------
-
-  private:
-    Word
-    __word;
 };
 
-}}
+};
