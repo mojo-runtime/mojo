@@ -13,6 +13,8 @@
 
 //--------------------------------------------------------------------------------------------------
 
+#include "compat/__noexcept.h"
+#include "compat/__noreturn.h"
 #include "EXIT_FAILURE.h"
 #include "_Exit.h"
 
@@ -43,10 +45,10 @@
 #  error
 #endif
 
-__attribute__((__noreturn__, __nothrow__))
+__noreturn
 static inline
 void
-__assertion_error(const char* message, const char* file, const char* function, unsigned line)
+__assertion_error(const char* message, const char* file, const char* function, unsigned line) __noexcept
 {
     // Super naive.
     __write("\033[31;1massertion error:\033[0m ");

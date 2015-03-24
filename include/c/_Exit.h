@@ -1,9 +1,12 @@
 #pragma once
 
-__attribute__((__noreturn__, __nothrow__))
+#include "compat/__noexcept.h"
+#include "compat/__noreturn.h"
+
+__noreturn
 static inline
 void
-_Exit(int status)
+_Exit(int status) __noexcept
 {
 #if defined(__unix__)
 #  include "SYS_exit.h"
