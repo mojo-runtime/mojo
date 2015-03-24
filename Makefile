@@ -58,6 +58,18 @@ clang++-x86_64-linux := \
 	$(clang++) \
 	-target x86_64-linux
 
+gcc := \
+	gcc \
+	-fdiagnostics-color=always \
+	-iquote$(INCLUDE) \
+	-nostdlib \
+	-nostdinc \
+	-std=c11 \
+	-O3 \
+	-Wall \
+	-Werror \
+	-Wno-unknown-pragmas
+
 ####################################################################################################
 
 $(BUILD):
@@ -88,6 +100,7 @@ endef
 #---------------------------------------------------------------------------------------------------
 
 $(eval $(call test-template,include-all.c,clang))
+$(eval $(call test-template,include-all.c,gcc))
 
 #---------------------------------------------------------------------------------------------------
 
