@@ -1,13 +1,26 @@
-ROOT  := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
-BUILD := $(ROOT)/build
-TEST  := $(ROOT)/test
+ROOT := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 
-CXX := clang \
+ifeq ($(shell pwd),$(ROOT))
+BUILD   := build
+INCLUDE := include
+TEST    := test
+else
+BUILD   := $(ROOT)/build
+INCLUDE := $(ROOT)/include
+TEST    := $(ROOT)/test
+endif
+
+.DEFAULT_GOAL := test
+
+####################################################################################################
+
+clang++ := \
+	clang \
 	-fcolor-diagnostics \
 	-ferror-limit=1 \
 	-fno-asynchronous-unwind-tables \
 	-fno-exceptions \
-	-iquote$(ROOT)/include \
+	-iquote$(INCLUDE) \
 	-nostdlib \
 	-nostdinc \
 	-nostdinc++ \
@@ -18,49 +31,56 @@ CXX := clang \
 	-Wno-c++98-compat \
 	-Wno-c++98-compat-pedantic
 
-.DEFAULT_GOAL := test
+clang++-arm-linux := \
+	$(clang++) \
+	-mfloat-abi=hard \
+	-target armv5-none-linux-elf
 
-####################################################################################################
+clang++-x86_64-freebsd := \
+	$(clang++) \
+	-target x86_64-freebsd
 
-tests :=
+clang++-x86_64-linux := \
+	$(clang++) \
+	-target x86_64-linux
 
 ####################################################################################################
 
 $(BUILD):
 	mkdir $@
 
-####################################################################################################
-
-input  := include-all.cxx
-target := x86_64-freebsd
-output := $(BUILD)/$(input).$(target).asm
-
-$(output): $(TEST)/$(input) | $(BUILD)
-	$(CXX) -target x86_64-freebsd -o $@ -S $<
-
-tests := $(tests) $(output)
+$(BUILD)/test: | $(BUILD)
+	mkdir $@
 
 ####################################################################################################
 
-input  := include-all.cxx
-target := x86_64-linux
-output := $(BUILD)/$(input).$(target).asm
+all :=
 
-$(output): $(TEST)/$(input) | $(BUILD)
-	$(CXX) -target x86_64-linux -o $@ -S $<
+source-directory  := $(TEST)
+target-directory := $(BUILD)/test
 
-tests := $(tests) $(output)
+#---------------------------------------------------------------------------------------------------
 
-####################################################################################################
+define test-template
+input    := $(source-directory)/$(1)
+output   := $(target-directory)/$(1).$(2).asm
 
-input  := include-all.cxx
-target := armv5-none-linux-elf
-output := $(BUILD)/$(input).$(target).asm
+$$(output): $$(input) | $(target-directory)
+	$$($(2)) -o $$@ -S $$<
 
-$(output): $(TEST)/$(input) | $(BUILD)
-	$(CXX) -target armv5-none-linux-elf -mfloat-abi=hard -o $@ -S $<
+all := $(all) $$(output)
+endef
 
-tests := $(tests) $(output)
+#---------------------------------------------------------------------------------------------------
+
+$(eval $(call test-template,include-all.cxx,clang++-arm-linux))
+$(eval $(call test-template,include-all.cxx,clang++-x86_64-freebsd))
+$(eval $(call test-template,include-all.cxx,clang++-x86_64-linux))
+
+#---------------------------------------------------------------------------------------------------
+
+.PHONY: test
+test: $(all)
 
 ####################################################################################################
 
@@ -68,5 +88,3 @@ tests := $(tests) $(output)
 clean:
 	rm -rf $(BUILD)
 
-.PHONY: test
-test: $(tests)
