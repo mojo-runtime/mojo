@@ -20,7 +20,7 @@
 #    error
 #  endif
 #else
-#  error
+#  define __noexcept
 #endif
 
 #pragma clang diagnostic pop

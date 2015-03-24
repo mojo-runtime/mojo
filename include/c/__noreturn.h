@@ -19,8 +19,12 @@
 #  else
 #    error
 #  endif
-#else
-#  error
+#elif defined(__STDC_VERSION__)
+#  if __STDC_VERSION__ >= 201112L
+#    define __noreturn _Noreturn
+#  else
+#    error
+#  endif
 #endif
 
 #pragma clang diagnostic pop

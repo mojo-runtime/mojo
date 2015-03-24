@@ -14,6 +14,20 @@ endif
 
 ####################################################################################################
 
+clang := \
+	clang \
+	-fcolor-diagnostics \
+	-ferror-limit=1 \
+	-fno-asynchronous-unwind-tables \
+	-fno-exceptions \
+	-iquote$(INCLUDE) \
+	-nostdlib \
+	-nostdinc \
+	-std=c11 \
+	-O3 \
+	-Werror \
+	-Weverything
+
 clang++ := \
 	clang \
 	-fcolor-diagnostics \
@@ -70,6 +84,10 @@ $$(output): $$(input) | $(target-directory)
 
 all := $(all) $$(output)
 endef
+
+#---------------------------------------------------------------------------------------------------
+
+$(eval $(call test-template,include-all.c,clang))
 
 #---------------------------------------------------------------------------------------------------
 

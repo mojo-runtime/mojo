@@ -32,7 +32,9 @@
     ((x) ? static_cast<void>(0) :                                       \
      __assertion_error(message, __FILE__, __PRETTY_FUNCTION__, __LINE__))
 #else
-#  error
+#  define __assert_2(x, message)                                        \
+    ((x) ? ((void)0) :                                                  \
+     __assertion_error(message, __FILE__, __PRETTY_FUNCTION__, __LINE__))
 #endif
 
 #if defined(__unix__)

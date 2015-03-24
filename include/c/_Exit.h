@@ -16,4 +16,4 @@ _Exit(int status) __noexcept
 #  error
 #endif
     __builtin_unreachable();
-};
+}
