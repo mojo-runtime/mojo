@@ -1,4 +1,7 @@
 #if defined(__cplusplus)
+#include "add_rvalue_reference.hxx"
+#include "add_rvalue_reference_t.hxx"
+#include "declval.hxx"
 #include "div_t.hxx"
 #include "enable_if.hxx"
 #include "enable_if_t.hxx"
