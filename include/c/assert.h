@@ -13,10 +13,10 @@
 
 //--------------------------------------------------------------------------------------------------
 
-#include "compat/__noexcept.h"
-#include "compat/__noreturn.h"
 #include "EXIT_FAILURE.h"
 #include "_Exit.h"
+#include "__noexcept.h"
+#include "__noreturn.h"
 
 #pragma clang diagnostic ignored "-Wgnu-zero-variadic-macro-arguments"
 #pragma clang diagnostic push

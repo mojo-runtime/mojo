@@ -1,6 +1,6 @@
 #pragma once
 
-#include "compat/__Word.h"
+#include "c/__Word.h"
 
 namespace os::linux::x86_64 {
 

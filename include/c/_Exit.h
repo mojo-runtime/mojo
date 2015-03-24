@@ -1,7 +1,7 @@
 #pragma once
 
-#include "compat/__noexcept.h"
-#include "compat/__noreturn.h"
+#include "__noexcept.h"
+#include "__noreturn.h"
 
 __noreturn
 static inline

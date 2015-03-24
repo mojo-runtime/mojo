@@ -1,7 +1,7 @@
 #pragma once
 
-#include "compat/__Byte.h"
-#include "compat/__Word.h"
+#include "c/__Byte.h"
+#include "c/__Word.h"
 
 namespace program { inline namespace _elf_ {
 
