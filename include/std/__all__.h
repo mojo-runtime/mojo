@@ -34,6 +34,7 @@
 #include "is_scalar.hxx"
 #include "is_signed.hxx"
 #include "is_union.hxx"
+#include "is_unsigned.hxx"
 #include "is_void.hxx"
 #include "ldiv_t.hxx"
 #include "lldiv_t.hxx"
