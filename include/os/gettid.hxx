@@ -3,7 +3,7 @@
 #if defined(__linux__)
 #  include "c/SYS_gettid.h"
 #  include "c/pid_t.h"
-#  include "c/__syscall_0_no_error.h"
+#  include "__call_0_no_error.hxx"
 
 namespace os {
 
@@ -11,7 +11,7 @@ static inline
 pid_t
 gettid() noexcept
 {
-    return static_cast<pid_t>(__syscall_0_no_error(SYS_gettid));
+    return __call_0_no_error<pid_t>(SYS_gettid);
 }
 
 }
