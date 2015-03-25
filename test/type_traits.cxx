@@ -41,10 +41,17 @@ static_assert(std::is_same<std::underlying_type_t<Long>, long>());
 
 //--------------------------------------------------------------------------------------------------
 
+#include "std/is_integral.hxx"
+
+static_assert( std::is_integral<unsigned int>());
+
+//--------------------------------------------------------------------------------------------------
+
 #include "std/is_arithmetic.hxx"
 
 static_assert( std::is_arithmetic<float>());
 static_assert(!std::is_arithmetic<void>());
+static_assert( std::is_arithmetic<unsigned int>());
 
 //--------------------------------------------------------------------------------------------------
 
