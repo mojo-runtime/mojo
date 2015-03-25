@@ -2,8 +2,8 @@
 
 #include "std/is_same.hxx"
 
-static_assert(!std::is_same<int, float>::value);
-static_assert(std::is_same<int, int>::value);
+static_assert(!std::is_same<int, float>());
+static_assert( std::is_same<int, int>());
 
 //--------------------------------------------------------------------------------------------------
 
@@ -16,16 +16,16 @@ enum class Color
     blue,
 };
 
-static_assert(std::is_enum<Color>::value);
+static_assert(std::is_enum<Color>());
 
 //--------------------------------------------------------------------------------------------------
 
 #include "std/remove_cv_t.hxx"
 
-static_assert(std::is_same<std::remove_cv_t<               int>, int>::value);
-static_assert(std::is_same<std::remove_cv_t<const          int>, int>::value);
-static_assert(std::is_same<std::remove_cv_t<      volatile int>, int>::value);
-static_assert(std::is_same<std::remove_cv_t<const volatile int>, int>::value);
+static_assert(std::is_same<std::remove_cv_t<               int>, int>());
+static_assert(std::is_same<std::remove_cv_t<const          int>, int>());
+static_assert(std::is_same<std::remove_cv_t<      volatile int>, int>());
+static_assert(std::is_same<std::remove_cv_t<const volatile int>, int>());
 
 //--------------------------------------------------------------------------------------------------
 
@@ -35,23 +35,23 @@ enum class Char : char {};
 enum class Int  : int  {};
 enum class Long : long {};
 
-static_assert(std::is_same<std::underlying_type_t<Char>, char>::value);
-static_assert(std::is_same<std::underlying_type_t<Int >, int >::value);
-static_assert(std::is_same<std::underlying_type_t<Long>, long>::value);
+static_assert(std::is_same<std::underlying_type_t<Char>, char>());
+static_assert(std::is_same<std::underlying_type_t<Int >, int >());
+static_assert(std::is_same<std::underlying_type_t<Long>, long>());
 
 //--------------------------------------------------------------------------------------------------
 
 #include "std/is_arithmetic.hxx"
 
-static_assert(std::is_arithmetic<float>::value);
-static_assert(!std::is_arithmetic<void>::value);
+static_assert( std::is_arithmetic<float>());
+static_assert(!std::is_arithmetic<void>());
 
 //--------------------------------------------------------------------------------------------------
 
 #include "std/is_fundamental.hxx"
 
-static_assert(std::is_fundamental<int>::value);
-static_assert(!std::is_fundamental<int&>::value);
+static_assert( std::is_fundamental<int>());
+static_assert(!std::is_fundamental<int&>());
 
 //--------------------------------------------------------------------------------------------------
 
@@ -66,16 +66,16 @@ union Union
     b;
 };
 
-static_assert(std::is_union<Union>::value);
-static_assert(!std::is_union<int>::value);
+static_assert( std::is_union<Union>());
+static_assert(!std::is_union<int>());
 
 //--------------------------------------------------------------------------------------------------
 
 #include "std/is_pointer.hxx"
 
-static_assert(std::is_pointer<char*>::value);
-static_assert(std::is_pointer<const char*>::value);
-static_assert(!std::is_pointer<int>::value);
+static_assert( std::is_pointer<char*>());
+static_assert( std::is_pointer<const char*>());
+static_assert(!std::is_pointer<int>());
 
 //--------------------------------------------------------------------------------------------------
 
@@ -85,9 +85,9 @@ struct Struct
 {
 };
 
-static_assert(std::is_scalar<int>::value);
-static_assert(std::is_scalar<const char*>::value);
-static_assert(!std::is_scalar<Struct>::value);
+static_assert( std::is_scalar<int>());
+static_assert( std::is_scalar<const char*>());
+static_assert(!std::is_scalar<Struct>());
 
 //--------------------------------------------------------------------------------------------------
 
