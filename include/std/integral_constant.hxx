@@ -2,35 +2,35 @@
 
 namespace std {
 
-template <typename __X, __X __x>
+template <typename X, X x>
 struct integral_constant
 {
     // Member types
 
     using type       = integral_constant;
-    using value_type = __X;
+    using value_type = X;
 
     // Member constants
 
     static constexpr
-    __X
-    value = __x;
+    value_type
+    value = x;
 
     // Member functions
 
     constexpr
     operator
-    __X() const noexcept
+    X() const noexcept
     {
-        return __x;
+        return x;
     }
 
     constexpr
-    __X
+    X
     operator
     ()() const noexcept
     {
-        return __x;
+        return x;
     }
 };
 

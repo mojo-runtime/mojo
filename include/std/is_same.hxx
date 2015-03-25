@@ -5,13 +5,13 @@
 
 namespace std {
 
-template <typename __X, typename __Y>
+template <typename, typename>
 struct is_same : false_type
 {
 };
 
-template <typename __X>
-struct is_same<__X, __X> : true_type
+template <typename T>
+struct is_same<T, T> : true_type
 {
 };
 

@@ -7,8 +7,8 @@
 
 namespace std {
 
-template <typename __X>
-struct is_enum : integral_constant<bool, __is_enum(__X)>
+template <typename T>
+struct is_enum : integral_constant<bool, __is_enum(T)>
 {
 };
 
