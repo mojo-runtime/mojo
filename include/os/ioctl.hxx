@@ -9,7 +9,7 @@ static inline
 auto
 ioctl(int d, unsigned long request, Arg arg) noexcept
 {
-#if defined(__linux__)
+#if defined(__linux__) || defined(__FreeBSD__) // Same errors
 #  include "c/EBADF.h"
 #  include "c/EFAULT.h"
 #  include "c/EINVAL.h"
