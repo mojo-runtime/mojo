@@ -1,13 +1,9 @@
 #pragma once
 
 #include "size_t.h"
+#include "__constexpr.h"
 
-static
-#if defined(__cplusplus)
-constexpr
-#else
-inline
-#endif
+static __constexpr
 size_t
 strlen(const char* s)
 {

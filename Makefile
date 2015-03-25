@@ -120,7 +120,7 @@ $(eval $(call test-template,include-all.c,gcc))
 $(eval $(call test-template,include-all.cxx,clang++-arm-linux))
 $(eval $(call test-template,include-all.cxx,clang++-x86_64-freebsd))
 $(eval $(call test-template,include-all.cxx,clang++-x86_64-linux))
-# TODO: $(eval $(call test-template,include-all.cxx,g++))
+$(eval $(call test-template,include-all.cxx,g++))
 
 #---------------------------------------------------------------------------------------------------
 

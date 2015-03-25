@@ -1,7 +1,14 @@
 #pragma once
 
 #if defined(__has_extension)
-#  if __has_extension(underlying_type)
+#  define _has_primitive __has_extension(underlying_type)
+#elif defined(__GNUC__) // Version?
+#  define _has_primitive 1
+#else
+#  error
+#endif
+
+#if _has_primitive
 
 namespace std {
 
@@ -13,9 +20,8 @@ struct underlying_type
 
 }
 
-#  else
-#    error
-#  endif
 #else
 #  error
 #endif
+
+#undef _has_primitive
