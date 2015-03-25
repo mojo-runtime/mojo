@@ -1,23 +1,18 @@
 #pragma once
 
-#include "size_t.hxx"
+#include "false_type.hxx"
+#include "true_type.hxx"
 
 namespace std {
 
 template <typename T>
-struct is_array
+struct is_array : false_type
 {
-    static
-    const bool
-    value = false;
 };
 
-template <typename T, size_t n>
-struct is_array<T[n]>
+template <typename T, decltype(sizeof(int)) n>
+struct is_array<T[n]> : true_type
 {
-    static
-    const bool
-    value = true;
 };
 
 }
