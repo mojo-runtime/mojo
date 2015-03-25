@@ -1,6 +1,5 @@
 #pragma once
 
-#include "__Bool.h"
 #include "__Word.h"
 #include "__noexcept.h"
 
@@ -193,7 +192,7 @@ typedef struct
     __Word
     __word;
 
-    __Bool
+    __Word
     __is_error;
 }
 __syscall_Result;
@@ -202,26 +201,26 @@ static inline
 __syscall_Result
 __syscall_0(__Word n) __noexcept
 {
-    __Bool is_error;
+    __Word sbb_result;
 
     register __Word r0 __asm__ (__syscall_R0) = n;
 
     __asm__ __volatile__ (
         "syscall\n"
         "sbb %1, %1"
-        : "=r" (r0), "=r" (is_error)
+        : "=r" (r0), "=r" (sbb_result)
         : "r" (r0)
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0, is_error };
+    return (__syscall_Result) { r0, (sbb_result != 0) };
 }
 
 static inline
 __syscall_Result
 __syscall_3(__Word n, __Word a1, __Word a2, __Word a3) __noexcept
 {
-    __Bool is_error;
+    __Word sbb_result;
 
     register __Word r0 __asm__ (__syscall_R0) = n;
     register __Word r1 __asm__ (__syscall_R1) = a1;
@@ -231,12 +230,12 @@ __syscall_3(__Word n, __Word a1, __Word a2, __Word a3) __noexcept
     __asm__ __volatile__ (
         "syscall\n"
         "sbb %1, %1"
-        : "=r" (r0), "=r" (is_error)
+        : "=r" (r0), "=r" (sbb_result)
         : "r" (r0), "r" (r1), "r" (r2), "r" (r3)
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0, is_error };
+    return (__syscall_Result) { r0, (sbb_result != 0) };
 }
 
 #else
