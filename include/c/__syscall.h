@@ -31,149 +31,14 @@
 #  else
 #    error
 #  endif
-
-typedef struct
-{
-    __Word
-    __word;
-}
-__syscall_Result;
-
-static inline
-__syscall_Result
-__syscall_0(__Word n) __noexcept
-{
-    register __Word r0 __asm__ (__syscall_R0) = n;
-
-    __asm__ __volatile__ (
-        __syscall_TRAP
-        : "=r" (r0)
-        : "r" (r0)
-        : __syscall_CLOBBERS
-    );
-
-    return (__syscall_Result) { r0 };
-}
-
-static inline
-__syscall_Result
-__syscall_1(__Word n, __Word a1) __noexcept
-{
-    register __Word r0 __asm__ (__syscall_R0) = n;
-    register __Word r1 __asm__ (__syscall_R1) = a1;
-
-    __asm__ __volatile__ (
-        __syscall_TRAP
-        : "=r" (r0)
-        : "r" (r0), "r" (r1)
-        : __syscall_CLOBBERS
-    );
-
-    return (__syscall_Result) { r0 };
-}
-
-static inline
-__syscall_Result
-__syscall_2(__Word n, __Word a1, __Word a2) __noexcept
-{
-    register __Word r0 __asm__ (__syscall_R0) = n;
-    register __Word r1 __asm__ (__syscall_R1) = a1;
-    register __Word r2 __asm__ (__syscall_R2) = a2;
-
-    __asm__ __volatile__ (
-        __syscall_TRAP
-        : "=r" (r0)
-        : "r" (r0), "r" (r1), "r" (r2)
-        : __syscall_CLOBBERS
-    );
-
-    return (__syscall_Result) { r0 };
-}
-
-static inline
-__syscall_Result
-__syscall_3(__Word n, __Word a1, __Word a2, __Word a3) __noexcept
-{
-    register __Word r0 __asm__ (__syscall_R0) = n;
-    register __Word r1 __asm__ (__syscall_R1) = a1;
-    register __Word r2 __asm__ (__syscall_R2) = a2;
-    register __Word r3 __asm__ (__syscall_R3) = a3;
-
-    __asm__ __volatile__ (
-        __syscall_TRAP
-        : "=r" (r0)
-        : "r" (r0), "r" (r1), "r" (r2), "r" (r3)
-        : __syscall_CLOBBERS
-    );
-
-    return (__syscall_Result) { r0 };
-}
-
-static inline
-__syscall_Result
-__syscall_4(__Word n, __Word a1, __Word a2, __Word a3, __Word a4) __noexcept
-{
-    register __Word r0 __asm__ (__syscall_R0) = n;
-    register __Word r1 __asm__ (__syscall_R1) = a1;
-    register __Word r2 __asm__ (__syscall_R2) = a2;
-    register __Word r3 __asm__ (__syscall_R3) = a3;
-    register __Word r4 __asm__ (__syscall_R4) = a4;
-
-    __asm__ __volatile__ (
-        __syscall_TRAP
-        : "=r" (r0)
-        : "r" (r0), "r" (r1), "r" (r2), "r" (r3), "r" (r4)
-        : __syscall_CLOBBERS
-    );
-
-    return (__syscall_Result) { r0 };
-}
-
-static inline
-__syscall_Result
-__syscall_5(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5) __noexcept
-{
-    register __Word r0 __asm__ (__syscall_R0) = n;
-    register __Word r1 __asm__ (__syscall_R1) = a1;
-    register __Word r2 __asm__ (__syscall_R2) = a2;
-    register __Word r3 __asm__ (__syscall_R3) = a3;
-    register __Word r4 __asm__ (__syscall_R4) = a4;
-    register __Word r5 __asm__ (__syscall_R5) = a5;
-
-    __asm__ __volatile__ (
-        __syscall_TRAP
-        : "=r" (r0)
-        : "r" (r0), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5)
-        : __syscall_CLOBBERS
-    );
-
-    return (__syscall_Result) { r0 };
-}
-
-static inline
-__syscall_Result
-__syscall_6(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5, __Word a6) __noexcept
-{
-    register __Word r0 __asm__ (__syscall_R0) = n;
-    register __Word r1 __asm__ (__syscall_R1) = a1;
-    register __Word r2 __asm__ (__syscall_R2) = a2;
-    register __Word r3 __asm__ (__syscall_R3) = a3;
-    register __Word r4 __asm__ (__syscall_R4) = a4;
-    register __Word r5 __asm__ (__syscall_R5) = a5;
-    register __Word r6 __asm__ (__syscall_R6) = a6;
-
-    __asm__ __volatile__ (
-        __syscall_TRAP
-        : "=r" (r0)
-        : "r" (r0), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5), "r" (r6)
-        : __syscall_CLOBBERS
-    );
-
-    return (__syscall_Result) { r0 };
-}
-
+#  define __syscall_SBB
+#  define __syscall_SBB_OUTPUT
+#  define __syscall_SBB_SETUP
+#  define __syscall_SBB_VALUE
 #elif defined(__FreeBSD__)
 #  if defined(__x86_64__)
+#    define __syscall_TRAP "syscall"
+#    define __syscall_OUTPUTS "=r" (r0), "=r" (sbb_result)
 #    define __syscall_CLOBBERS "memory"
 #    define __syscall_R0 "rax"
 #    define __syscall_R1 "rdi"
@@ -182,18 +47,26 @@ __syscall_6(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5, __W
 #    define __syscall_R4 "rcx"
 #    define __syscall_R5 "r8"
 #    define __syscall_R6 "r9"
-#    define __syscall_TRAP "syscall"
+#    define __syscall_SBB "\nsbb %1 %1"
+#    define __syscall_SBB_OUTPUT , "=r" (sbb_result)
+#    define __syscall_SBB_SETUP __Word sbb_result;
+#    define __syscall_SBB_VALUE , (sbb_result != 0)
 #  else
 #    error
 #  endif
+#else
+#  error
+#endif
 
 typedef struct
 {
     __Word
     __word;
 
+#if defined(__FreeBSD__)
     __Word
     __is_error;
+#endif
 }
 __syscall_Result;
 
@@ -201,67 +74,67 @@ static inline
 __syscall_Result
 __syscall_0(__Word n) __noexcept
 {
-    __Word sbb_result;
+    __syscall_SBB_SETUP
 
     register __Word r0 __asm__ (__syscall_R0) = n;
 
     __asm__ __volatile__ (
-        "syscall\n"
-        "sbb %1, %1"
-        : "=r" (r0), "=r" (sbb_result)
+        __syscall_TRAP
+        __syscall_SBB
+        : "=r" (r0) __syscall_SBB_OUTPUT
         : "r" (r0)
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0, (sbb_result != 0) };
+    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
 }
 
 static inline
 __syscall_Result
 __syscall_1(__Word n, __Word a1) __noexcept
 {
-    __Word sbb_result;
+    __syscall_SBB_SETUP
 
     register __Word r0 __asm__ (__syscall_R0) = n;
     register __Word r1 __asm__ (__syscall_R1) = a1;
 
     __asm__ __volatile__ (
-        "syscall\n"
-        "sbb %1, %1"
-        : "=r" (r0), "=r" (sbb_result)
+        __syscall_TRAP
+        __syscall_SBB
+        : "=r" (r0) __syscall_SBB_OUTPUT
         : "r" (r0), "r" (r1)
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0, (sbb_result != 0) };
+    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
 }
 
 static inline
 __syscall_Result
 __syscall_2(__Word n, __Word a1, __Word a2) __noexcept
 {
-    __Word sbb_result;
+    __syscall_SBB_SETUP
 
     register __Word r0 __asm__ (__syscall_R0) = n;
     register __Word r1 __asm__ (__syscall_R1) = a1;
     register __Word r2 __asm__ (__syscall_R2) = a2;
 
     __asm__ __volatile__ (
-        "syscall\n"
-        "sbb %1, %1"
-        : "=r" (r0), "=r" (sbb_result)
+        __syscall_TRAP
+        __syscall_SBB
+        : "=r" (r0) __syscall_SBB_OUTPUT
         : "r" (r0), "r" (r1), "r" (r2)
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0, (sbb_result != 0) };
+    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
 }
 
 static inline
 __syscall_Result
 __syscall_3(__Word n, __Word a1, __Word a2, __Word a3) __noexcept
 {
-    __Word sbb_result;
+    __syscall_SBB_SETUP
 
     register __Word r0 __asm__ (__syscall_R0) = n;
     register __Word r1 __asm__ (__syscall_R1) = a1;
@@ -269,21 +142,21 @@ __syscall_3(__Word n, __Word a1, __Word a2, __Word a3) __noexcept
     register __Word r3 __asm__ (__syscall_R3) = a3;
 
     __asm__ __volatile__ (
-        "syscall\n"
-        "sbb %1, %1"
-        : "=r" (r0), "=r" (sbb_result)
+        __syscall_TRAP
+        __syscall_SBB
+        : "=r" (r0) __syscall_SBB_OUTPUT
         : "r" (r0), "r" (r1), "r" (r2), "r" (r3)
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0, (sbb_result != 0) };
+    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
 }
 
 static inline
 __syscall_Result
 __syscall_4(__Word n, __Word a1, __Word a2, __Word a3, __Word a4) __noexcept
 {
-    __Word sbb_result;
+    __syscall_SBB_SETUP
 
     register __Word r0 __asm__ (__syscall_R0) = n;
     register __Word r1 __asm__ (__syscall_R1) = a1;
@@ -292,21 +165,21 @@ __syscall_4(__Word n, __Word a1, __Word a2, __Word a3, __Word a4) __noexcept
     register __Word r4 __asm__ (__syscall_R4) = a4;
 
     __asm__ __volatile__ (
-        "syscall\n"
-        "sbb %1, %1"
-        : "=r" (r0), "=r" (sbb_result)
+        __syscall_TRAP
+        __syscall_SBB
+        : "=r" (r0) __syscall_SBB_OUTPUT
         : "r" (r0), "r" (r1), "r" (r2), "r" (r3), "r" (r4)
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0, (sbb_result != 0) };
+    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
 }
 
 static inline
 __syscall_Result
 __syscall_5(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5) __noexcept
 {
-    __Word sbb_result;
+    __syscall_SBB_SETUP
 
     register __Word r0 __asm__ (__syscall_R0) = n;
     register __Word r1 __asm__ (__syscall_R1) = a1;
@@ -316,21 +189,21 @@ __syscall_5(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5) __n
     register __Word r5 __asm__ (__syscall_R5) = a5;
 
     __asm__ __volatile__ (
-        "syscall\n"
-        "sbb %1, %1"
-        : "=r" (r0), "=r" (sbb_result)
+        __syscall_TRAP
+        __syscall_SBB
+        : "=r" (r0) __syscall_SBB_OUTPUT
         : "r" (r0), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5)
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0, (sbb_result != 0) };
+    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
 }
 
 static inline
 __syscall_Result
 __syscall_6(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5, __Word a6) __noexcept
 {
-    __Word sbb_result;
+    __syscall_SBB_SETUP
 
     register __Word r0 __asm__ (__syscall_R0) = n;
     register __Word r1 __asm__ (__syscall_R1) = a1;
@@ -341,19 +214,15 @@ __syscall_6(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5, __W
     register __Word r6 __asm__ (__syscall_R6) = a6;
 
     __asm__ __volatile__ (
-        "syscall\n"
-        "sbb %1, %1"
-        : "=r" (r0), "=r" (sbb_result)
+        __syscall_TRAP
+        __syscall_SBB
+        : "=r" (r0) __syscall_SBB_OUTPUT
         : "r" (r0), "r" (r1), "r" (r2), "r" (r3), "r" (r4), "r" (r5), "r" (r6)
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0, (sbb_result != 0) };
+    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
 }
-
-#else
-#  error
-#endif
 
 #pragma clang diagnostic pop
 
