@@ -32,6 +32,7 @@
 #include "is_pointer.hxx"
 #include "is_same.hxx"
 #include "is_scalar.hxx"
+#include "is_signed.hxx"
 #include "is_union.hxx"
 #include "is_void.hxx"
 #include "ldiv_t.hxx"
