@@ -79,6 +79,18 @@ static_assert(!std::is_pointer<int>::value);
 
 //--------------------------------------------------------------------------------------------------
 
+#include "std/is_scalar.hxx"
+
+struct Struct
+{
+};
+
+static_assert(std::is_scalar<int>::value);
+static_assert(std::is_scalar<const char*>::value);
+static_assert(!std::is_scalar<Struct>::value);
+
+//--------------------------------------------------------------------------------------------------
+
 int
 main()
 {
