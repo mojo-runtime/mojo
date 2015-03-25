@@ -48,6 +48,13 @@ static_assert(!std::is_arithmetic<void>::value);
 
 //--------------------------------------------------------------------------------------------------
 
+#include "std/is_fundamental.hxx"
+
+static_assert(std::is_fundamental<int>::value);
+static_assert(!std::is_fundamental<int&>::value);
+
+//--------------------------------------------------------------------------------------------------
+
 int
 main()
 {
