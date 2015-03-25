@@ -71,6 +71,14 @@ static_assert(!std::is_union<int>::value);
 
 //--------------------------------------------------------------------------------------------------
 
+#include "std/is_pointer.hxx"
+
+static_assert(std::is_pointer<char*>::value);
+static_assert(std::is_pointer<const char*>::value);
+static_assert(!std::is_pointer<int>::value);
+
+//--------------------------------------------------------------------------------------------------
+
 int
 main()
 {

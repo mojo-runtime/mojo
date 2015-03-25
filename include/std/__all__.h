@@ -28,6 +28,7 @@
 #include "is_floating_point.hxx"
 #include "is_fundamental.hxx"
 #include "is_integral.hxx"
+#include "is_pointer.hxx"
 #include "is_same.hxx"
 #include "is_union.hxx"
 #include "is_void.hxx"
