@@ -1,19 +1,18 @@
 #pragma once
 
-#include "__noexcept.h"
-#include "__noreturn.h"
+#if defined(__unix__)
+#  include "SYS_exit.h"
+#  include "__static_cast.h"
+#  include "__syscall_1_no_return.h"
 
 __noreturn
 static inline
 void
 _Exit(int status) __noexcept
 {
-#if defined(__unix__)
-#  include "SYS_exit.h"
-#  include "__syscall_1_no_return.h"
-    __syscall_1_no_return(SYS_exit, status);
+    __syscall_1_no_return(SYS_exit, __static_cast(__Word, status));
+}
+
 #else
 #  error
 #endif
-    __builtin_unreachable();
-}

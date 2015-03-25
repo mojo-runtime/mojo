@@ -17,6 +17,7 @@
 #include "_Exit.h"
 #include "__noexcept.h"
 #include "__noreturn.h"
+#include "__static_cast.h"
 
 #pragma clang diagnostic ignored "-Wgnu-zero-variadic-macro-arguments"
 #pragma clang diagnostic push
@@ -26,16 +27,9 @@
 #define assert(...)               __assert_(__VA_ARGS__, 2, 1)(__VA_ARGS__)
 #define __assert_(_1, _2, n, ...) __assert_ ## n
 #define __assert_1(x)             __assert_2(x, #x)
-
-#if defined(__cplusplus)
-#  define __assert_2(x, message)                                        \
-    ((x) ? static_cast<void>(0) :                                       \
+#define __assert_2(x, message)                                          \
+    ((x) ? __static_cast(void, 0) :                                     \
      __assertion_error(message, __FILE__, __PRETTY_FUNCTION__, __LINE__))
-#else
-#  define __assert_2(x, message)                                        \
-    ((x) ? ((void)0) :                                                  \
-     __assertion_error(message, __FILE__, __PRETTY_FUNCTION__, __LINE__))
-#endif
 
 #if defined(__unix__)
 #  include "STDERR_FILENO.h"
