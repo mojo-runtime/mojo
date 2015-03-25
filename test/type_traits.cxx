@@ -20,6 +20,15 @@ static_assert(std::is_enum<Color>::value);
 
 //--------------------------------------------------------------------------------------------------
 
+#include "std/remove_cv_t.hxx"
+
+static_assert(std::is_same<std::remove_cv_t<               int>, int>::value);
+static_assert(std::is_same<std::remove_cv_t<const          int>, int>::value);
+static_assert(std::is_same<std::remove_cv_t<      volatile int>, int>::value);
+static_assert(std::is_same<std::remove_cv_t<const volatile int>, int>::value);
+
+//--------------------------------------------------------------------------------------------------
+
 int
 main()
 {
