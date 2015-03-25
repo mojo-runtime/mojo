@@ -41,6 +41,13 @@ static_assert(std::is_same<std::underlying_type_t<Long>, long>::value);
 
 //--------------------------------------------------------------------------------------------------
 
+#include "std/is_arithmetic.hxx"
+
+static_assert(std::is_arithmetic<float>::value);
+static_assert(!std::is_arithmetic<void>::value);
+
+//--------------------------------------------------------------------------------------------------
+
 int
 main()
 {
