@@ -41,8 +41,9 @@
 #  include "STDERR_FILENO.h"
 #  include "SYS_write.h"
 #  include "strlen.h"
-#  include "__syscall_3_no_error.h"
-#  define __write(string) __syscall_3_no_error(size_t, SYS_write, STDERR_FILENO, string, strlen(string))
+#  include "__reinterpret_cast.h"
+#  include "__syscall.h"
+#  define __write(string) __syscall_3(SYS_write, STDERR_FILENO, __reinterpret_cast(__Word, string), strlen(string))
 #else
 #  error
 #endif
