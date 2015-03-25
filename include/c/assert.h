@@ -1,5 +1,7 @@
 #pragma once
 
+#pragma clang diagnostic ignored "-Wgnu-zero-variadic-macro-arguments"
+
 #if defined(NDEBUG)
 #  if defined(__has_builtin)
 #    if __has_builtin(__builtin_assume)
@@ -16,7 +18,6 @@
 #include "__debug_error.h"
 #include "__static_cast.h"
 
-#pragma clang diagnostic ignored "-Wgnu-zero-variadic-macro-arguments"
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
