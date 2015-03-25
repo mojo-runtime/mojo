@@ -23,6 +23,7 @@
 #include "intmax_t.hxx"
 #include "intptr_t.hxx"
 #include "is_array.hxx"
+#include "is_enum.hxx"
 #include "is_same.hxx"
 #include "ldiv_t.hxx"
 #include "lldiv_t.hxx"
