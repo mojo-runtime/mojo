@@ -1,6 +1,6 @@
 #pragma once
 
-#include "std/size_t.hxx"
+#include "size_t.hxx"
 
 namespace std {
 

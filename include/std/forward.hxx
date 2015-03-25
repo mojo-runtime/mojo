@@ -1,6 +1,6 @@
 #pragma once
 
-#include "std/remove_reference_t.hxx"
+#include "remove_reference_t.hxx"
 
 namespace std {
 
