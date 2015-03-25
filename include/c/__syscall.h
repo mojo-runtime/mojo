@@ -242,3 +242,5 @@ __syscall_3(__Word n, __Word a1, __Word a2, __Word a3) __noexcept
 #  error
 #endif
 
+#pragma clang diagnostic pop
+
