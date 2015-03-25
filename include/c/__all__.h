@@ -464,6 +464,16 @@
 #include "wint_t.h"
 #include "_Exit.h"
 
+#if defined(__unix__)
+#  include "getegid.h"
+#  include "geteuid.h"
+#  include "getgid.h"
+#  include "getpgid.h"
+#  include "getpid.h"
+#  include "getppid.h"
+#  include "getuid.h"
+#endif
+
 #if 1 // has termios
 #  include "BRKINT.h"
 #  include "CS8.h"
