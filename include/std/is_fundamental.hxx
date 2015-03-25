@@ -10,9 +10,9 @@ namespace std {
 
 template <typename T>
 struct is_fundamental : integral_constant<bool,
-                                          is_arithmetic<T>::value ||
-                                          is_same<nullptr_t, remove_cv_t<T>>::value ||
-                                          is_void<T>::value>
+                                          is_arithmetic<T>()                   ||
+                                          is_same<nullptr_t, remove_cv_t<T>>() ||
+                                          is_void<T>()>
 {
 };
 

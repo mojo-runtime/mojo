@@ -12,11 +12,11 @@ namespace std {
 
 template <typename T>
 struct is_scalar : integral_constant<bool,
-                                     std::is_arithmetic<T>::value     ||
-                                     std::is_enum<T>::value           ||
-                                     std::is_member_pointer<T>::value ||
-                                     std::is_pointer<T>::value        ||
-                                     std::is_same<nullptr_t, remove_cv_t<T>>::value>
+                                     std::is_arithmetic<T>()     ||
+                                     std::is_enum<T>()           ||
+                                     std::is_member_pointer<T>() ||
+                                     std::is_pointer<T>()        ||
+                                     std::is_same<nullptr_t, remove_cv_t<T>>()>
 {
 };
 
