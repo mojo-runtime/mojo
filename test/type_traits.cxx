@@ -116,6 +116,13 @@ static_assert( std::is_unsigned<unsigned int>());
 
 //--------------------------------------------------------------------------------------------------
 
+#include "std/is_null_pointer.hxx"
+
+static_assert( std::is_null_pointer<decltype(nullptr)>());
+static_assert(!std::is_null_pointer<int>());
+
+//--------------------------------------------------------------------------------------------------
+
 int
 main()
 {

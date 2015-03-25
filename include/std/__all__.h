@@ -29,6 +29,7 @@
 #include "is_fundamental.hxx"
 #include "is_integral.hxx"
 #include "is_member_pointer.hxx"
+#include "is_null_pointer.hxx"
 #include "is_pointer.hxx"
 #include "is_same.hxx"
 #include "is_scalar.hxx"
