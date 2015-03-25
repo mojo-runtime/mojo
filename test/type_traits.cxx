@@ -55,6 +55,22 @@ static_assert(!std::is_fundamental<int&>::value);
 
 //--------------------------------------------------------------------------------------------------
 
+#include "std/is_union.hxx"
+
+union Union
+{
+    int
+    a;
+
+    float
+    b;
+};
+
+static_assert(std::is_union<Union>::value);
+static_assert(!std::is_union<int>::value);
+
+//--------------------------------------------------------------------------------------------------
+
 int
 main()
 {
