@@ -11,7 +11,7 @@ static inline
 pid_t
 getpid() noexcept
 {
-    return __syscall_0_no_error(pid_t, SYS_getpid);
+    return static_cast<pid_t>(__syscall_0_no_error(SYS_getpid));
 }
 
 }

@@ -11,7 +11,7 @@ static inline
 uid_t
 getuid() noexcept
 {
-    return __syscall_0_no_error(uid_t, SYS_getuid);
+    return static_cast<uid_t>(__syscall_0_no_error(SYS_getuid));
 }
 
 }

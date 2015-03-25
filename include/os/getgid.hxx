@@ -11,7 +11,7 @@ static inline
 gid_t
 getgid() noexcept
 {
-    return __syscall_0_no_error(gid_t, SYS_getgid);
+    return static_cast<gid_t>(__syscall_0_no_error(SYS_getgid));
 }
 
 }
