@@ -2,7 +2,7 @@
 
 #include "c/__Word.h"
 
-namespace os::linux::x86_64 {
+namespace os { namespace linux { namespace x86_64 {
 
 struct Result
 {
@@ -118,4 +118,4 @@ struct Result
     __word;
 };
 
-}
+}}}

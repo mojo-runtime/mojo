@@ -3,7 +3,7 @@
 #if defined(__x86_64__)
 #  include "x86_64/Result.hxx"
 
-namespace os::linux {
+namespace os { namespace linux {
 struct Result : x86_64::Result
 {
     using __Base = x86_64::Result;
@@ -44,4 +44,4 @@ struct Result : x86_64::Result
     }
 };
 
-};
+}}
