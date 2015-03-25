@@ -173,33 +173,6 @@ __syscall_6(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5, __W
     return (__syscall_Result) { r0 };
 }
 
-static inline
-__Bool
-__syscall_Result_is_error(const __syscall_Result self)
-{
-#if defined(__LP64__)
-    return self.__word > 0xFFFFFFFFFFFFF000UL;
-#elif defined(__ILP32__)
-    return self.__word > 0xFFFFF000UL;
-#else
-#  error
-#endif
-}
-
-static inline
-__Word
-__syscall_Result_error(const __syscall_Result self)
-{
-    return -self.__word;
-}
-
-static inline
-__Word
-__syscall_Result_ok(const __syscall_Result self)
-{
-    return self.__word;
-}
-
 #elif defined(__FreeBSD__)
 #  if defined(__x86_64__)
 #    define __syscall_CLOBBERS "memory"
@@ -264,27 +237,6 @@ __syscall_3(__Word n, __Word a1, __Word a2, __Word a3) __noexcept
     );
 
     return (__syscall_Result) { r0, is_error };
-}
-
-static inline
-__Bool
-__syscall_Result_is_error(const __syscall_Result self)
-{
-    return self.__is_error;
-}
-
-static inline
-__Word
-__syscall_Result_error(const __syscall_Result self)
-{
-    return self.__word;
-}
-
-static inline
-__Word
-__syscall_Result_ok(const __syscall_Result self)
-{
-    return self.__word;
 }
 
 #else
