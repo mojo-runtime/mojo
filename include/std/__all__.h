@@ -55,5 +55,7 @@
 #include "uint_least8_t.hxx"
 #include "uintmax_t.hxx"
 #include "uintptr_t.hxx"
+#include "underlying_type.hxx"
+#include "underlying_type_t.hxx"
 #include "va_list.hxx"
 #endif // __cplusplus

@@ -29,6 +29,18 @@ static_assert(std::is_same<std::remove_cv_t<const volatile int>, int>::value);
 
 //--------------------------------------------------------------------------------------------------
 
+#include "std/underlying_type_t.hxx"
+
+enum class Char : char {};
+enum class Int  : int  {};
+enum class Long : long {};
+
+static_assert(std::is_same<std::underlying_type_t<Char>, char>::value);
+static_assert(std::is_same<std::underlying_type_t<Int >, int >::value);
+static_assert(std::is_same<std::underlying_type_t<Long>, long>::value);
+
+//--------------------------------------------------------------------------------------------------
+
 int
 main()
 {
