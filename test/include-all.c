@@ -1,4 +1,4 @@
-#include "__all__.h"
+#include "c/__all__.h"
 
 int
 main()

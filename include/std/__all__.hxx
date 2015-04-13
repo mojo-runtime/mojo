@@ -1,4 +1,3 @@
-#if defined(__cplusplus)
 #include "add_rvalue_reference.hxx"
 #include "add_rvalue_reference_t.hxx"
 #include "declval.hxx"
@@ -70,4 +69,3 @@
 #include "underlying_type.hxx"
 #include "underlying_type_t.hxx"
 #include "va_list.hxx"
-#endif // __cplusplus
