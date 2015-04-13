@@ -1,11 +1,11 @@
 ROOT := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 
 ifeq ($(shell pwd),$(ROOT))
-BUILD   := build
+BUILD   := .build
 INCLUDE := include
 TEST    := test
 else
-BUILD   := $(ROOT)/build
+BUILD   := $(ROOT)/.build
 INCLUDE := $(ROOT)/include
 TEST    := $(ROOT)/test
 endif
