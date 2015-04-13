@@ -1,12 +1,14 @@
-
-#include "c/__static_assert.h"
+// FIXME: hack for GCC 4.9
+#if !defined(__clang__) && defined(__GNUC__)
+#  define static_assert(...) static_assert(__VA_ARGS__, "")
+#endif
 
 //--------------------------------------------------------------------------------------------------
 
 #include "std/is_same.hxx"
 
-__static_assert((!std::is_same<int, float>()));
-__static_assert(( std::is_same<int, int>()));
+static_assert(!std::is_same<int, float>());
+static_assert( std::is_same<int, int>());
 
 //--------------------------------------------------------------------------------------------------
 
@@ -19,16 +21,16 @@ enum class Color
     blue,
 };
 
-__static_assert((std::is_enum<Color>()));
+static_assert(std::is_enum<Color>());
 
 //--------------------------------------------------------------------------------------------------
 
 #include "std/remove_cv_t.hxx"
 
-__static_assert((std::is_same<std::remove_cv_t<               int>, int>()));
-__static_assert((std::is_same<std::remove_cv_t<const          int>, int>()));
-__static_assert((std::is_same<std::remove_cv_t<      volatile int>, int>()));
-__static_assert((std::is_same<std::remove_cv_t<const volatile int>, int>()));
+static_assert(std::is_same<std::remove_cv_t<               int>, int>());
+static_assert(std::is_same<std::remove_cv_t<const          int>, int>());
+static_assert(std::is_same<std::remove_cv_t<      volatile int>, int>());
+static_assert(std::is_same<std::remove_cv_t<const volatile int>, int>());
 
 //--------------------------------------------------------------------------------------------------
 
@@ -38,30 +40,30 @@ enum class Char : char {};
 enum class Int  : int  {};
 enum class Long : long {};
 
-__static_assert((std::is_same<std::underlying_type_t<Char>, char>()));
-__static_assert((std::is_same<std::underlying_type_t<Int >, int >()));
-__static_assert((std::is_same<std::underlying_type_t<Long>, long>()));
+static_assert(std::is_same<std::underlying_type_t<Char>, char>());
+static_assert(std::is_same<std::underlying_type_t<Int >, int >());
+static_assert(std::is_same<std::underlying_type_t<Long>, long>());
 
 //--------------------------------------------------------------------------------------------------
 
 #include "std/is_integral.hxx"
 
-__static_assert(( std::is_integral<unsigned int>()));
+static_assert( std::is_integral<unsigned int>());
 
 //--------------------------------------------------------------------------------------------------
 
 #include "std/is_arithmetic.hxx"
 
-__static_assert(( std::is_arithmetic<float>()));
-__static_assert((!std::is_arithmetic<void>()));
-__static_assert(( std::is_arithmetic<unsigned int>()));
+static_assert( std::is_arithmetic<float>());
+static_assert(!std::is_arithmetic<void>());
+static_assert( std::is_arithmetic<unsigned int>());
 
 //--------------------------------------------------------------------------------------------------
 
 #include "std/is_fundamental.hxx"
 
-__static_assert(( std::is_fundamental<int>()));
-__static_assert((!std::is_fundamental<int&>()));
+static_assert( std::is_fundamental<int>());
+static_assert(!std::is_fundamental<int&>());
 
 //--------------------------------------------------------------------------------------------------
 
@@ -76,16 +78,16 @@ union Union
     b;
 };
 
-__static_assert(( std::is_union<Union>()));
-__static_assert((!std::is_union<int>()));
+static_assert( std::is_union<Union>());
+static_assert(!std::is_union<int>());
 
 //--------------------------------------------------------------------------------------------------
 
 #include "std/is_pointer.hxx"
 
-__static_assert(( std::is_pointer<char*>()));
-__static_assert(( std::is_pointer<const char*>()));
-__static_assert((!std::is_pointer<int>()));
+static_assert( std::is_pointer<char*>());
+static_assert( std::is_pointer<const char*>());
+static_assert(!std::is_pointer<int>());
 
 //--------------------------------------------------------------------------------------------------
 
@@ -95,34 +97,34 @@ struct Struct
 {
 };
 
-__static_assert(( std::is_scalar<int>()));
-__static_assert(( std::is_scalar<const char*>()));
-__static_assert((!std::is_scalar<Struct>()));
+static_assert( std::is_scalar<int>());
+static_assert( std::is_scalar<const char*>());
+static_assert(!std::is_scalar<Struct>());
 
 //--------------------------------------------------------------------------------------------------
 
 #include "std/is_signed.hxx"
 
-__static_assert((!std::is_signed<Struct>()));
-__static_assert(( std::is_signed<float>()));
-__static_assert(( std::is_signed<int>()));
-__static_assert((!std::is_signed<unsigned int>()));
+static_assert(!std::is_signed<Struct>());
+static_assert( std::is_signed<float>());
+static_assert( std::is_signed<int>());
+static_assert(!std::is_signed<unsigned int>());
 
 //--------------------------------------------------------------------------------------------------
 
 #include "std/is_unsigned.hxx"
 
-__static_assert((!std::is_unsigned<Struct>()));
-__static_assert((!std::is_unsigned<float>()));
-__static_assert((!std::is_unsigned<int>()));
-__static_assert(( std::is_unsigned<unsigned int>()));
+static_assert(!std::is_unsigned<Struct>());
+static_assert(!std::is_unsigned<float>());
+static_assert(!std::is_unsigned<int>());
+static_assert( std::is_unsigned<unsigned int>());
 
 //--------------------------------------------------------------------------------------------------
 
 #include "std/is_null_pointer.hxx"
 
-__static_assert(( std::is_null_pointer<decltype(nullptr)>()));
-__static_assert((!std::is_null_pointer<int>()));
+static_assert( std::is_null_pointer<decltype(nullptr)>());
+static_assert(!std::is_null_pointer<int>());
 
 //--------------------------------------------------------------------------------------------------
 
