@@ -18,7 +18,7 @@
 #include "c/struct termios.h"
 #include "c/__todo.h"
 #include "c/__unreachable.h"
-#include "os/ioctl.hxx"
+#include "system/ioctl.hxx"
 
 namespace terminal {
 
@@ -31,7 +31,7 @@ struct Raw
         : __fd(fd)
     {
         auto
-        result = os::ioctl(this->__fd, TCGETS, &this->__saved);
+        result = system::ioctl(this->__fd, TCGETS, &this->__saved);
         if (result.is_error()) {
             switch (result.error()) {
             case EBADF:  __unreachable("bad `Reader`");
@@ -52,7 +52,7 @@ struct Raw
         raw.c_cc[VMIN] = 1;
         raw.c_cc[VTIME] = 0;
 
-        result = os::ioctl(this->__fd, TCSETS, &raw);
+        result = system::ioctl(this->__fd, TCSETS, &raw);
         if (result.is_error()) {
             switch (result.error()) {
             case EBADF:  __unreachable("we just used it");
@@ -65,7 +65,7 @@ struct Raw
 
     ~Raw()
     {
-        os::ioctl(this->__fd, TCSETS, &this->__saved);
+        system::ioctl(this->__fd, TCSETS, &this->__saved);
     }
 
   private:

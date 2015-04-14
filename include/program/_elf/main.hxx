@@ -1,6 +1,6 @@
 #pragma once
 
-#include "os/exit.hxx"
+#include "system/exit.hxx"
 #include "Arguments.hxx"
 
 namespace program { inline namespace _elf_ {
@@ -42,7 +42,7 @@ void
 __start(Arguments& arguments) noexcept
 {
     main(arguments);
-    os::exit(0);
+    system::exit(0);
 }
 
 } // extern "C"
