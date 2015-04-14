@@ -1,4 +1,4 @@
-#include "program/__all__.hxx"
+#include "program/_all.hxx"
 
 void
 program::main(program::Arguments&)

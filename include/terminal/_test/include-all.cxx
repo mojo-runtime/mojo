@@ -1,1 +1,1 @@
-#include "terminal/__all__.hxx"
+#include "terminal/_all.hxx"
