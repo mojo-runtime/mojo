@@ -1,140 +1,100 @@
+.DEFAULT_GOAL := all
+
 ROOT := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 
-ifeq ($(shell pwd),$(ROOT))
-BUILD   := .build
-INCLUDE := include
-TEST    := test
-else
-BUILD   := $(ROOT)/.build
-INCLUDE := $(ROOT)/include
-TEST    := $(ROOT)/test
-endif
-
-.DEFAULT_GOAL := test
-
 ####################################################################################################
 
-clang := \
-	clang \
-	-fcolor-diagnostics \
-	-ferror-limit=1 \
-	-fno-asynchronous-unwind-tables \
-	-fno-exceptions \
-	-iquote$(INCLUDE) \
-	-nostdlib \
-	-nostdinc \
-	-std=c11 \
-	-O3 \
-	-Werror \
-	-Weverything
+__clang := clang
+__gcc   := gcc
 
-clang++ := \
-	clang \
-	-fcolor-diagnostics \
-	-ferror-limit=1 \
-	-fno-asynchronous-unwind-tables \
-	-fno-exceptions \
-	-iquote$(INCLUDE) \
-	-nostdlib \
-	-nostdinc \
-	-nostdinc++ \
-	-std=c++1z \
-	-O3 \
-	-Werror \
-	-Weverything \
-	-Wno-c++98-compat \
-	-Wno-c++98-compat-pedantic
+__clang += -fcolor-diagnostics
+__gcc   += -fdiagnostics-color=always
 
-clang++-arm-linux := \
-	$(clang++) \
-	-mfloat-abi=hard \
-	-target armv5-none-linux-elf
+__clang += -ferror-limit=1
+# No equivalent.
 
-clang++-x86_64-freebsd := \
-	$(clang++) \
-	-target x86_64-freebsd
+__clang += -fno-asynchronous-unwind-tables -fno-exceptions
+__gcc   += -fno-asynchronous-unwind-tables -fno-exceptions
 
-clang++-x86_64-linux := \
-	$(clang++) \
-	-target x86_64-linux
+__clang += -iquote$(ROOT)/include
+__gcc   += -iquote$(ROOT)/include
 
-gcc := \
-	gcc \
-	-fdiagnostics-color=always \
-	-iquote$(INCLUDE) \
-	-nostdlib \
-	-nostdinc \
-	-std=c11 \
-	-O3 \
-	-Wall \
-	-Werror \
-	-Wno-unknown-pragmas
+__clang += -nostdinc -nostdlib
+__gcc   += -nostdinc -nostdlib
 
-g++ := \
-	g++ \
-	-fdiagnostics-color=always \
-	-iquote$(INCLUDE) \
-	-nostdlib \
-	-nostdinc \
-	-nostdinc++ \
-	-std=c++14 \
-	-O3 \
-	-Wall \
-	-Werror \
-	-Wno-unknown-pragmas
+__clang += -O3
+__gcc   += -O3
 
-####################################################################################################
+__clang += -Werror -Weverything
+__gcc   += -Werror -Wall
 
-$(BUILD):
-	mkdir $@
-
-$(BUILD)/test: | $(BUILD)
-	mkdir $@
-
-####################################################################################################
-
-all :=
-
-source-directory  := $(TEST)
-target-directory := $(BUILD)/test
+__clang += -Wno-c++98-compat -Wno-c++98-compat-pedantic
+__gcc   += -Wno-unknown-pragmas
 
 #---------------------------------------------------------------------------------------------------
 
-define test-template
-input    := $(source-directory)/$(1)
-output   := $(target-directory)/$(1).$(2).asm
+clang   := $(__clang) -std=c11
+gcc     := $(__gcc)   -std=c11
 
-$$(output): $$(input) | $(target-directory)
-	$$($(2)) -o $$@ -S $$<
+clang++ := $(__clang) -std=c++1z
+g++     := $(__gcc)   -std=c++14
 
-all := $(all) $$(output)
+#---------------------------------------------------------------------------------------------------
+
+clang++-arm-linux      := $(clang++) -target armv5-none-linux-elf -mfloat-abi=hard
+clang++-x86_64-freebsd := $(clang++) -target x86_64-freebsd
+clang++-x86_64-linux   := $(clang++) -target x86_64-linux
+
+#---------------------------------------------------------------------------------------------------
+
+c-compilers := \
+	clang \
+	gcc
+
+c++-compilers := \
+	clang++ \
+	clang++-arm-linux \
+	clang++-x86_64-freebsd \
+	clang++-x86_64-linux \
+	g++
+
+####################################################################################################
+
+__all__ :=
+
+#---------------------------------------------------------------------------------------------------
+
+define compile
+_target := $(.)/.build/$(1)/$(2).s
+
+$$(_target): $(.)/$(2) | $(.)/.build/$(1)
+	$$($(1)) -o $$@ -S $$<
+
+__all__ := $(__all__) $$(_target)
 endef
 
-#---------------------------------------------------------------------------------------------------
-
-$(eval $(call test-template,include-all.c,clang))
-$(eval $(call test-template,include-all.c,gcc))
-
-#---------------------------------------------------------------------------------------------------
-
-$(eval $(call test-template,include-all.cxx,clang++-arm-linux))
-$(eval $(call test-template,include-all.cxx,clang++-x86_64-freebsd))
-$(eval $(call test-template,include-all.cxx,clang++-x86_64-linux))
-$(eval $(call test-template,include-all.cxx,g++))
-
-#---------------------------------------------------------------------------------------------------
-
-$(eval $(call test-template,type_traits.cxx,clang++))
-$(eval $(call test-template,type_traits.cxx,g++))
-
-#---------------------------------------------------------------------------------------------------
-
-.PHONY: test
-test: $(all)
+define mkdir
+@echo mkdir $(subst $(ROOT)/,,$(1))
+@mkdir $(1)
+endef
 
 ####################################################################################################
+
+include include/c/_test/init.mk
+include include/os/_test/init.mk
+include include/program/_test/init.mk
+include include/std/_test/init.mk
+include include/terminal/_test/init.mk
+
+####################################################################################################
+
+.PHONY: all
+all: $(__all__)
 
 .PHONY: clean
 clean:
-	rm -rf $(BUILD)
-
+	rm -rf include/c/_test/.build
+	rm -rf include/os/_test/.build
+	rm -rf include/program/_test/.build
+	rm -rf include/std/_test/.build
+	rm -rf include/terminal/_test/.build
