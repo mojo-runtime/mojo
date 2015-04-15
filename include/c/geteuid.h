@@ -3,7 +3,7 @@
 #if defined(__linux__) || defined(__FreeBSD__)
 #  include "SYS_geteuid.h"
 #  include "uid_t.h"
-#  include "__syscall_0_no_error.h"
+#  include "abi/__syscall_0_no_error.h"
 
 static inline
 uid_t

@@ -1,8 +1,8 @@
 #pragma once
 
 #include "__Word.h"
-#include "__noexcept.h"
-#include "__noreturn.h"
+#include "compat/__noexcept.h"
+#include "compat/__noreturn.h"
 
 __noreturn
 static inline

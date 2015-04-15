@@ -3,7 +3,7 @@
 #if defined(__linux__)
 #  include "c/SYS_gettid.h"
 #  include "c/pid_t.h"
-#  include "c/__syscall_0_no_error.h"
+#  include "abi/__syscall_0_no_error.h"
 
 namespace system {
 

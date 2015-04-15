@@ -2,7 +2,7 @@
 
 #if defined(__linux__)
 #  include "c/SYS_exit_group.h"
-#  include "c/__syscall_1_no_return.h"
+#  include "abi/__syscall_1_no_return.h"
 
 namespace system {
 
