@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #include "add_rvalue_reference.hxx"
 #include "add_rvalue_reference_t.hxx"
 #include "declval.hxx"

@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #pragma once
 
 #include "c/struct epoll_event.h"

@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #pragma once
 
 #include "system/exit.hxx"

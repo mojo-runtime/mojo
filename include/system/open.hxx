@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #pragma once
 
 #include "c/mode_t.h"

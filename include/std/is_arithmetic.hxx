@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #pragma once
 
 #include "is_floating_point.hxx"

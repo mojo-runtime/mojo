@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #pragma once
 
 #if defined(__linux__)

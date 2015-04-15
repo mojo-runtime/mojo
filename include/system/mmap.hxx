@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #pragma once
 
 #include "c/off_t.h"

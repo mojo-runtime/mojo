@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #pragma once
 
 #include "add_rvalue_reference_t.hxx"

@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #if defined(__linux__) && defined(__x86_64__)
 #  include "chdir.hxx"
 #  include "chmod.hxx"

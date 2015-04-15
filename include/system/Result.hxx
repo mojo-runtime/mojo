@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #pragma once
 
 #include "abi/__syscall.h"
