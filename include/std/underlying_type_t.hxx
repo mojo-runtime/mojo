@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #pragma once
 
-#include "underlying_type.hxx"
+#include "underlying_type"
 
 namespace std {
 

@@ -2,7 +2,7 @@
 #pragma once
 
 #include "c/struct stat.h"
-#include "Result.hxx"
+#include "Result"
 
 namespace system {
 

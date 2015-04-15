@@ -1,8 +1,8 @@
 // -*- C++ -*-
 #pragma once
 
-#include "system/exit.hxx"
-#include "Arguments.hxx"
+#include "system/exit"
+#include "Arguments"
 
 namespace program { inline namespace _elf_ {
 

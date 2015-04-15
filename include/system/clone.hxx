@@ -3,7 +3,7 @@
 
 #include "c/pid_t.h"
 #include "c/struct pt_regs.h"
-#include "Result.hxx"
+#include "Result"
 
 namespace system {
 

@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #pragma once
 
-#include "integral_constant.hxx"
+#include "integral_constant"
 
 #if defined(__has_extension)
 #  define _has_primitive __has_extension(is_union)

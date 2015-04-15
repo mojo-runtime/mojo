@@ -1,10 +1,10 @@
 // -*- C++ -*-
 #pragma once
 
-#include "false_type.hxx"
-#include "nullptr_t.hxx"
-#include "remove_cv_t.hxx"
-#include "true_type.hxx"
+#include "false_type"
+#include "nullptr_t"
+#include "remove_cv_t"
+#include "true_type"
 
 namespace std {
 

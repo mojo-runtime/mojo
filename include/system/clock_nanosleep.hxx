@@ -3,7 +3,7 @@
 
 #include "c/clockid_t.h"
 #include "c/struct timespec.h"
-#include "Result.hxx"
+#include "Result"
 
 namespace system {
 

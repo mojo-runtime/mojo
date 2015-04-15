@@ -2,7 +2,7 @@
 #pragma once
 
 #include "c/struct epoll_event.h"
-#include "Result.hxx"
+#include "Result"
 
 namespace system {
 

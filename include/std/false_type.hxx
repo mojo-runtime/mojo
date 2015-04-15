@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #pragma once
 
-#include "integral_constant.hxx"
+#include "integral_constant"
 
 namespace std {
 

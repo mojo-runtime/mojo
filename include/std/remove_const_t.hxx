@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #pragma once
 
-#include "remove_const.hxx"
+#include "remove_const"
 
 namespace std {
 

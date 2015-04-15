@@ -3,7 +3,7 @@
 
 #include "c/gid_t.h"
 #include "c/uid_t.h"
-#include "Result.hxx"
+#include "Result"
 
 namespace system {
 

@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #pragma once
 
-#include "add_rvalue_reference_t.hxx"
+#include "add_rvalue_reference_t"
 
 namespace std {
 

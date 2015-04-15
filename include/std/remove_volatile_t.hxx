@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #pragma once
 
-#include "remove_volatile.hxx"
+#include "remove_volatile"
 
 namespace std {
 

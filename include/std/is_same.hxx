@@ -1,8 +1,8 @@
 // -*- C++ -*-
 #pragma once
 
-#include "false_type.hxx"
-#include "true_type.hxx"
+#include "false_type"
+#include "true_type"
 
 namespace std {
 

@@ -2,7 +2,7 @@
 #pragma once
 
 #include "c/uint32_t.h"
-#include "Result.hxx"
+#include "Result"
 
 namespace system {
 

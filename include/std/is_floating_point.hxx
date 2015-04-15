@@ -1,9 +1,9 @@
 // -*- C++ -*-
 #pragma once
 
-#include "false_type.hxx"
-#include "remove_cv_t.hxx"
-#include "true_type.hxx"
+#include "false_type"
+#include "remove_cv_t"
+#include "true_type"
 
 namespace std {
 

@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #pragma once
 
-#include "Result.hxx"
+#include "Result"
 
 namespace system {
 

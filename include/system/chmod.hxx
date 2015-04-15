@@ -2,7 +2,7 @@
 #pragma once
 
 #include "c/mode_t.h"
-#include "Result.hxx"
+#include "Result"
 
 namespace system {
 
