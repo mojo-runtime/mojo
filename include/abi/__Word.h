@@ -1,13 +1,7 @@
 #pragma once
 
-#if defined(__has_attribute)
-#  if __has_attribute(__mode__)
-typedef unsigned int __Word __attribute__((__mode__(__word__)));
-#  else
-#    error
-#  endif
-#elif defined(__GNUC__)
-typedef unsigned int __Word __attribute__((__mode__(__word__)));
+#if defined(__LP64__) || defined(__ILP32__)
+typedef unsigned long __Word;
 #else
 #  error
 #endif
