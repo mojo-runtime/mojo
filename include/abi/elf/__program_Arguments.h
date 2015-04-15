@@ -1,12 +1,9 @@
-// -*- C++ -*-
 #pragma once
 
-#include "c/__Byte.h"
-#include "c/__Word.h"
+#include "abi/__Byte.h"
+#include "abi/__Word.h"
 
-namespace program { inline namespace _elf_ {
-
-struct Arguments
+struct __program_Arguments
 {
     //----------------------------------------------------------------------------------------------
 
@@ -16,5 +13,3 @@ struct Arguments
     __Byte*
     __argv[1]; // At least 1 - NULL terminated
 };
-
-}}

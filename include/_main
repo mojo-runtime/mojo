@@ -1,0 +1,20 @@
+// -*- C++ -*-
+#pragma once
+
+#if defined(__ELF__)
+#  include "abi/elf/__program_Arguments.h"
+#else
+#  error
+#endif
+
+using Arguments = __program_Arguments;
+
+static
+void
+_main(Arguments&);
+
+#if defined(__ELF__)
+#  include "abi/elf/__start.h"
+#else
+#  error
+#endif

@@ -1,14 +1,7 @@
-// -*- C++ -*-
 #pragma once
 
-#include "system/exit"
-#include "Arguments"
-
-namespace program { inline namespace _elf_ {
-
-static
-void
-main(Arguments&);
+#include "c/_Exit.h"
+#include "__program_Arguments.h"
 
 //--------------------------------------------------------------------------------------------------
 
@@ -35,19 +28,19 @@ asm (
 
 //--------------------------------------------------------------------------------------------------
 
+#if defined(__cplusplus)
 extern "C" {
+#endif
 
 __attribute__((__noreturn__, __used__))
 static
 void
-__start(Arguments& arguments) noexcept
+__start(__program_Arguments& arguments) noexcept
 {
-    main(arguments);
-    system::exit(0);
+    _main(arguments);
+    _Exit(0);
 }
 
+#if defined(__cplusplus)
 } // extern "C"
-
-//--------------------------------------------------------------------------------------------------
-
-}}
+#endif
