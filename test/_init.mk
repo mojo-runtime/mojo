@@ -1,11 +1,10 @@
-. := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
+_ := $(dir $(lastword $(MAKEFILE_LIST)))
 
 #---------------------------------------------------------------------------------------------------
 
-$(.)/.build:
-	$(call mkdir,$@)
-
-$(c++-compilers:%=$(.)/.build/%): %: | $(.)/.build
-	$(call mkdir,$@)
+include $(_)c/_init.mk
+include $(_)std/_init.mk
+include $(_)system/_init.mk
+include $(_)terminal/_init.mk
 
 #---------------------------------------------------------------------------------------------------

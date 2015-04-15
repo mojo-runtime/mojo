@@ -80,11 +80,7 @@ endef
 
 ####################################################################################################
 
-include include/c/_test/init.mk
-include include/program/_test/init.mk
-include include/std/_test/init.mk
-include include/system/_test/init.mk
-include include/terminal/_test/init.mk
+include test/_init.mk
 
 ####################################################################################################
 
@@ -93,8 +89,7 @@ all: $(__all__)
 
 .PHONY: clean
 clean:
-	rm -rf include/c/_test/.build
-	rm -rf include/program/_test/.build
-	rm -rf include/std/_test/.build
-	rm -rf include/system/_test/.build
-	rm -rf include/terminal/_test/.build
+	rm -rf test/c/.build
+	rm -rf test/std/.build
+	rm -rf test/system/.build
+	rm -rf test/terminal/.build
