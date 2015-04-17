@@ -1,10 +1,12 @@
-_ := $(dir $(lastword $(MAKEFILE_LIST)))
+$(eval $(call push-makefile))
 
 #---------------------------------------------------------------------------------------------------
 
-include $(_)c/_init.mk
-include $(_)std/_init.mk
-include $(_)system/_init.mk
-include $(_)terminal/_init.mk
+include $(.)/c/__all__.mk
+include $(.)/std/__all__.mk
+include $(.)/system/__all__.mk
+include $(.)/terminal/__all__.mk
 
 #---------------------------------------------------------------------------------------------------
+
+$(eval $(call pop-makefile))

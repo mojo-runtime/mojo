@@ -1,7 +1,5 @@
 .DEFAULT_GOAL := all
 
-ROOT := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
-
 ####################################################################################################
 
 __clang := clang
@@ -62,46 +60,63 @@ COMPILERS := $(c-compilers) $(c++-compilers)
 
 ####################################################################################################
 
-__all__ :=
+__all   :=
+__file  := $(lastword $(MAKEFILE_LIST))
+__roots :=
 
 #---------------------------------------------------------------------------------------------------
 
-define compile
-_target := $(_build)/$(1)/$(2).s
+define push-makefile
+_parent := $(__file)
 
-$$(_target): $(_root)/$(2) | $(_build)/$(1)
-	$$($(1)) -o $$@ -S $$<
+$(eval $(call __set,$(lastword $(MAKEFILE_LIST))))
 
-__all__ := $(__all__) $$(_target)
+$$(__file)-parent := $$(_parent)
+
+$$(build):
+	mkdir $$@
+
+$(COMPILERS:%=$$(build)/%): %: | $$(build)
+	mkdir $$@
+
+__roots := $(__roots) $$(build)
 endef
 
 #---------------------------------------------------------------------------------------------------
 
-define initialize
+define pop-makefile
+$(eval $(call __set,$$($$(__file)-parent)))
+endef
 
-_root  := $(subst /$(notdir $(lastword $(MAKEFILE_LIST))),,$(lastword $(MAKEFILE_LIST)))
-_build := $$(_root)/_build
+#---------------------------------------------------------------------------------------------------
 
-$$(_build):
-	mkdir $$@
-
-$(COMPILERS:%=$$(_build)/%): %: | $$(_build)
-	mkdir $$@
-
+define __set
+__file := $(1)
+.      := $$(subst /$$(notdir $$(__file)),,$$(__file))
+build  := $$(.)/build
 endef
 
 ####################################################################################################
 
-include test/_init.mk
+define compile
+_source := $(.)/$(2)
+_target := $(build)/$(1)/$(2).s
+
+$$(_target): $$(_source) | $(build)/$(1)
+	$$($(1)) -o $$@ -S $$<
+
+__all := $(__all) $$(_target)
+endef
+
+####################################################################################################
+
+include test/__all__.mk
 
 ####################################################################################################
 
 .PHONY: all
-all: $(__all__)
+all: $(__all)
 
 .PHONY: clean
 clean:
-	rm -rf test/c/_build
-	rm -rf test/std/_build
-	rm -rf test/system/_build
-	rm -rf test/terminal/_build
+	rm -rf $(__roots)
