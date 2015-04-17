@@ -1,0 +1,10 @@
+// -*- C++ -*-
+#ifndef __utility_
+#define __utility_
+
+#include "std/forward.hxx"
+#include "std/move.hxx"
+
+#warning todo
+
+#endif

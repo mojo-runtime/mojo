@@ -1,0 +1,9 @@
+// -*- C++ -*-
+#ifndef __iterator_
+#define __iterator_
+
+#include "std/iterator_traits.hxx"
+
+#warning todo
+
+#endif

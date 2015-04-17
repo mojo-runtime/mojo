@@ -1,0 +1,10 @@
+// -*- C++ -*-
+#ifndef __memory_
+#define __memory_
+
+#include "std/default_delete.hxx"
+#include "std/unique_ptr.hxx"
+
+#warning todo
+
+#endif
