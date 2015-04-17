@@ -38,4 +38,4 @@
 // trace_event_set_t
 // trace_id_t
 #include "c/uid_t.h"
-// useconds_t
+#include "c/useconds_t.h"
