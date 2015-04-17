@@ -4,6 +4,7 @@
 #  include "SYS_geteuid.h"
 #  include "uid_t.h"
 #  include "abi/__syscall_0_no_error.h"
+#  include "compat/__static_cast.h"
 
 static inline
 uid_t

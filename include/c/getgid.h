@@ -4,6 +4,7 @@
 #  include "SYS_getgid.h"
 #  include "gid_t.h"
 #  include "abi/__syscall_0_no_error.h"
+#  include "compat/__static_cast.h"
 
 static inline
 gid_t

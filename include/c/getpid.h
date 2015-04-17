@@ -4,6 +4,7 @@
 #  include "SYS_getpid.h"
 #  include "pid_t.h"
 #  include "abi/__syscall_0_no_error.h"
+#  include "compat/__static_cast.h"
 
 static inline
 pid_t
