@@ -1,10 +1,10 @@
 ${eval ${call push-makefile}}
 #---------------------------------------------------------------------------------------------------
 
-include ${.}/c/__all__.mk
-include ${.}/std/__all__.mk
-include ${.}/system/__all__.mk
-include ${.}/terminal/__all__.mk
+include ${.}/c/_test.mk
+include ${.}/std/_test.mk
+include ${.}/system/_test.mk
+include ${.}/terminal/_test.mk
 
 #---------------------------------------------------------------------------------------------------
 
