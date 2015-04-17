@@ -1,10 +1,98 @@
 .DEFAULT_GOAL := all
 
+ROOT  := ${realpath ${dir ${firstword ${MAKEFILE_LIST}}}}
+BUILD := ${ROOT}/build
+
+####################################################################################################
+# ${ }: variable containing a single space
+
+null :=
+space := ${null} ${null}
+${space} := ${space}
+
+undefine null
+undefine space
+
+####################################################################################################
+# ${.}: variable containing the current directory
+
+. := ${ROOT}
+
 ####################################################################################################
 
-BUILD := build
-$(BUILD):
-	mkdir $@
+define directory
+${patsubst %/,%,${dir ${1}}}
+endef
+
+define path-from
+${patsubst ${abspath ${1}}/%,%,${abspath ${2}}}
+endef
+
+define path
+${patsubst ${ROOT}/%,%,${abspath ${1}}}
+endef
+
+####################################################################################################
+# pushd/popd
+
+__stack :=
+
+define pushd
+
+_directory := ${1}
+
+ifeq ($${words $${_directory}},0)
+$${error `pushd` called with no arguments}
+endif
+
+__stack := $${subst $${ },~*~,$${.}} $${__stack}
+.       := $${.}/$${_directory}
+
+endef
+
+#---------------------------------------------------------------------------------------------------
+
+define popd
+ifeq ($${words $${__stack}},0)
+$${error `popd` from empty stack}
+endif
+
+ifeq ($${words $${__stack}},1)
+.       := $${strip $${__stack}}
+__stack :=
+else
+.       := $${word 1,$${__stack}}
+__stack := $${wordlist 2,$${words $${__stack}},$${__stack}}
+endif
+
+. := $${subst ~*~,${ },$${.}}
+
+endef
+
+####################################################################################################
+# push-makefile/pop-makefile
+
+define push-makefile
+${call pushd,$${call path-from,${.},$${dir $${lastword $${MAKEFILE_LIST}}}}}
+
+build := $${BUILD}/$${call path,$${.}}
+
+$${build}: | $${call directory,$${build}}
+	mkdir $${call path,$$@}
+endef
+
+#---------------------------------------------------------------------------------------------------
+
+define pop-makefile
+$${eval $${call popd}}
+
+build := $${BUILD}/$${call path,$${.}}
+endef
+
+####################################################################################################
+
+${BUILD}:
+	mkdir ${call path,$@}
 
 ####################################################################################################
 
@@ -37,82 +125,63 @@ __gcc   += -Wno-unknown-pragmas
 
 #---------------------------------------------------------------------------------------------------
 
-clang   := $(__clang) -std=c11
-gcc     := $(__gcc)   -std=c11
+clang   := ${__clang} -std=c11
+gcc     :=   ${__gcc} -std=c11
 
-clang++ := $(__clang) -std=c++1z
-g++     := $(__gcc)   -std=c++14
-
-#---------------------------------------------------------------------------------------------------
-
-clang++-arm-linux      := $(clang++) -target armv5-none-linux-elf -mfloat-abi=hard
-clang++-x86_64-freebsd := $(clang++) -target x86_64-freebsd
-clang++-x86_64-linux   := $(clang++) -target x86_64-linux
+clang++ := ${__clang} -std=c++1z
+g++     :=   ${__gcc} -std=c++14
 
 #---------------------------------------------------------------------------------------------------
 
-c-compilers := \
+clang++-arm-linux      := ${clang++} -target armv5-none-linux-elf -mfloat-abi=hard
+clang++-x86_64-freebsd := ${clang++} -target x86_64-freebsd
+clang++-x86_64-linux   := ${clang++} -target x86_64-linux
+
+#---------------------------------------------------------------------------------------------------
+
+__c-compilers := \
 	clang \
 	gcc
 
-c++-compilers := \
+__c++-compilers := \
 	clang++ \
 	clang++-arm-linux \
 	clang++-x86_64-freebsd \
 	clang++-x86_64-linux \
 	g++
 
-COMPILERS := $(c-compilers) $(c++-compilers)
+####################################################################################################
+
+define __compiler-rules
+%/${1}: | %
+	mkdir $${call path,$$@}
+endef
+
+${foreach c,${__c-compilers} ${__c++-compilers},${eval ${call __compiler-rules,${c}}}}
 
 ####################################################################################################
 
-__all   :=
-__file  := $(lastword $(MAKEFILE_LIST))
+__all :=
 
-$(__file)-build := $(BUILD)
+define test-c-compilers
+${foreach c,${__c-compilers},${eval ${call __compile,${c},${value 1}}}}
+endef
 
-#---------------------------------------------------------------------------------------------------
-
-define push-makefile
-_parent := $(__file)
-
-$(eval $(call __set,$(lastword $(MAKEFILE_LIST))))
-
-$$(__file)-build  := $$(build)
-$$(__file)-parent := $$(_parent)
-
-$$(build): | $$($$(_parent)-build)
-	mkdir $$@
-
-$(COMPILERS:%=$$(build)/%): %: | $$(build)
-	mkdir $$@
-
+define test-c++-compilers
+${foreach c,${__c++-compilers},${eval ${call __compile,${c},${value 1}}}}
 endef
 
 #---------------------------------------------------------------------------------------------------
 
-define pop-makefile
-$(eval $(call __set,$$($$(__file)-parent)))
-endef
+define __compile
 
-#---------------------------------------------------------------------------------------------------
+_source := $${call path,${.}/${2}}
+_target := $${call path,$${build}/${1}/${2}.s}
 
-define __set
-__file := $(1)
-.      := $$(subst /$$(notdir $$(__file)),,$$(__file))
-build  := $$(BUILD)/$$(.)
-endef
+$${_target}: $${_source} | $${build}/${1}
+	$${${1}} -o $$@ -S $$<
 
-####################################################################################################
-
-define compile
-_source := $(.)/$(2)
-_target := $(build)/$(1)/$(2).s
-
-$$(_target): $$(_source) | $(build)/$(1)
-	$$($(1)) -o $$@ -S $$<
-
-__all := $(__all) $$(_target)
+__all := ${__all} $${_target}
 endef
 
 ####################################################################################################
@@ -122,8 +191,8 @@ include test/__all__.mk
 ####################################################################################################
 
 .PHONY: all
-all: $(__all)
+all: ${__all}
 
 .PHONY: clean
 clean:
-	rm -rf $(BUILD)
+	rm -rf ${call path,${BUILD}}

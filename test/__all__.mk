@@ -1,12 +1,11 @@
-$(eval $(call push-makefile))
+${eval ${call push-makefile}}
+#---------------------------------------------------------------------------------------------------
+
+include ${.}/c/__all__.mk
+include ${.}/std/__all__.mk
+include ${.}/system/__all__.mk
+include ${.}/terminal/__all__.mk
 
 #---------------------------------------------------------------------------------------------------
 
-include $(.)/c/__all__.mk
-include $(.)/std/__all__.mk
-include $(.)/system/__all__.mk
-include $(.)/terminal/__all__.mk
-
-#---------------------------------------------------------------------------------------------------
-
-$(eval $(call pop-makefile))
+${eval ${call pop-makefile}}

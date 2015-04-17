@@ -1,5 +1,5 @@
-$(eval $(call push-makefile))
+${eval ${call push-makefile}}
 
-$(foreach c,$(c-compilers),$(eval $(call compile,$(c),include-all.c)))
+${eval ${call test-c-compilers,include-all.c}}
 
-$(eval $(call pop-makefile))
+${eval ${call pop-makefile}}

@@ -1,6 +1,6 @@
-$(eval $(call push-makefile))
+${eval ${call push-makefile}}
 
-$(foreach c,$(c++-compilers),$(eval $(call compile,$(c),include-all.cxx)))
-$(foreach c,$(c++-compilers),$(eval $(call compile,$(c),type-traits.cxx)))
+${eval ${call test-c++-compilers,include-all.cxx}}
+${eval ${call test-c++-compilers,type-traits.cxx}}
 
-$(eval $(call pop-makefile))
+${eval ${call pop-makefile}}
