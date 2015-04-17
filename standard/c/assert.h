@@ -1,1 +1,1 @@
-#error not implemented
+#include "c/assert.h"

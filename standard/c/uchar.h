@@ -1,22 +1,27 @@
-// -*- C -*-
-
 #pragma once
 
-#include <char16_t>
-#include <char32_t>
+#include "c/char16_t.h"
+#include "c/char32_t.h"
 
 //--------------------------------------------------------------------------------------------------
 // Macros
 
-#define __STDC_UTF_16__ 1
-#define __STDC_UTF_32__ 1
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-id-macro"
+
+#if !defined(__STDC_UTF_16__)
+#  define __STDC_UTF_16__ 1
+#endif
+#if !defined(__STDC_UTF_32__)
+#  define __STDC_UTF_32__ 1
+#endif
+
+#pragma clang diagnostic pop
 
 //--------------------------------------------------------------------------------------------------
 // Functions
 
-#error todo
-
-#include <mbrtoc16>
-#include <c16rtomb>
-#include <mbrtoc32>
-#include <c32rtomb>
+// mbrtoc16
+// c16rtomb
+// mbrtoc32
+// c32rtomb

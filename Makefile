@@ -23,8 +23,8 @@ clang += -ferror-limit=1
 clang += -fno-asynchronous-unwind-tables -fno-exceptions
 gcc   += -fno-asynchronous-unwind-tables -fno-exceptions
 
-clang += -iquoteinclude
-gcc   += -iquoteinclude
+clang += -iquoteinclude -Istandard/c
+gcc   += -iquoteinclude -Istandard/c
 
 clang += -nostdinc -nostdlib
 gcc   += -nostdinc -nostdlib
@@ -55,10 +55,11 @@ compilers := \
 	gcc
 
 directories := \
-	include/c \
 	include/std \
 	include/system \
-	include/terminal
+	include/terminal \
+	standard/c \
+	standard/c/sys
 
 ####################################################################################################
 

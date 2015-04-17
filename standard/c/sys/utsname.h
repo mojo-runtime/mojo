@@ -1,1 +1,4 @@
-#error not implemented
+#pragma once
+
+#include "c/struct utsname.h"
+// uname

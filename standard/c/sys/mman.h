@@ -1,1 +1,42 @@
-#error not implemented
+#pragma once
+
+#include "c/MAP_ANONYMOUS.h"
+// MAP_FAILED
+// MAP_FIXED
+#include "c/MAP_PRIVATE.h"
+#include "c/MAP_SHARED.h"
+// MCL_CURRENT
+// MCL_FUTURE
+// MS_ASYNC
+// MS_SYNC
+// MS_INVALIDATE
+// POSIX_MADV_DONTNEED
+// POSIX_MADV_NORMAL
+// POSIX_MADV_RANDOM
+// POSIX_MADV_SEQUENTIAL
+// POSIX_MADV_WILLNEED
+// POSIX_TYPED_MEM_ALLOCATE
+// POSIX_TYPED_MEM_ALLOCATE_CONFIG
+// POSIX_TYPED_MEM_MAP_ALLOCATABLE
+#include "c/PROT_EXEC.h"
+#include "c/PROT_NONE.h"
+#include "c/PROT_READ.h"
+#include "c/PROT_WRITE.h"
+// mlock
+// mlockall
+#include "c/mode_t.h"
+// mmap
+// mprotect
+// msync
+// munlock
+// munlockall
+// munmap
+#include "c/off_t.h"
+// posix_madvise
+// posix_mem_offset
+// posix_mem_get_info
+// posix_mem_open
+// shm_open
+// shm_unlink
+#include "c/size_t.h"
+// struct posix_typed_mem_info
