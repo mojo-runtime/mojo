@@ -16,8 +16,8 @@ __clang += -ferror-limit=1
 __clang += -fno-asynchronous-unwind-tables -fno-exceptions
 __gcc   += -fno-asynchronous-unwind-tables -fno-exceptions
 
-__clang += -iquote$(ROOT)/include
-__gcc   += -iquote$(ROOT)/include
+__clang += -iquoteinclude
+__gcc   += -iquoteinclude
 
 __clang += -nostdinc -nostdlib
 __gcc   += -nostdinc -nostdlib
@@ -58,6 +58,8 @@ c++-compilers := \
 	clang++-x86_64-linux \
 	g++
 
+COMPILERS := $(c-compilers) $(c++-compilers)
+
 ####################################################################################################
 
 __all__ :=
@@ -65,17 +67,27 @@ __all__ :=
 #---------------------------------------------------------------------------------------------------
 
 define compile
-_target := $(.)/.build/$(1)/$(2).s
+_target := $(_build)/$(1)/$(2).s
 
-$$(_target): $(.)/$(2) | $(.)/.build/$(1)
+$$(_target): $(_root)/$(2) | $(_build)/$(1)
 	$$($(1)) -o $$@ -S $$<
 
 __all__ := $(__all__) $$(_target)
 endef
 
-define mkdir
-@echo mkdir $(subst $(ROOT)/,,$(1))
-@mkdir $(1)
+#---------------------------------------------------------------------------------------------------
+
+define initialize
+
+_root  := $(subst /$(notdir $(lastword $(MAKEFILE_LIST))),,$(lastword $(MAKEFILE_LIST)))
+_build := $$(_root)/_build
+
+$$(_build):
+	mkdir $$@
+
+$(COMPILERS:%=$$(_build)/%): %: | $$(_build)
+	mkdir $$@
+
 endef
 
 ####################################################################################################
@@ -89,7 +101,7 @@ all: $(__all__)
 
 .PHONY: clean
 clean:
-	rm -rf test/c/.build
-	rm -rf test/std/.build
-	rm -rf test/system/.build
-	rm -rf test/terminal/.build
+	rm -rf test/c/_build
+	rm -rf test/std/_build
+	rm -rf test/system/_build
+	rm -rf test/terminal/_build
