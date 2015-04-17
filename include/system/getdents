@@ -2,7 +2,7 @@
 #pragma once
 
 #include "c/size_t.h"
-#include "c/struct linux_dirent.h"
+#include "c/struct-linux_dirent.h"
 #include "Result"
 
 namespace system {

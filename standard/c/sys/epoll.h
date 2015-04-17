@@ -18,7 +18,7 @@
 // EPOLLWRNORM
 #include "c/EPOLLWAKEUP.h"
 #include "c/epoll_data_t.h"
-#include "c/struct epoll_event.h"
+#include "c/struct-epoll_event.h"
 // epoll_create
 // epoll_create1
 // epoll_ctl

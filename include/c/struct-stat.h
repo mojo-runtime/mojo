@@ -10,7 +10,7 @@
 #    include "mode_t.h"
 #    include "nlink_t.h"
 #    include "off_t.h"
-#    include "struct timespec.h"
+#    include "struct-timespec.h"
 #    include "time_t.h"
 #    include "uid_t.h"
 #  else
@@ -26,7 +26,7 @@
 #  include "mode_t.h"
 #  include "nlink_t.h"
 #  include "off_t.h"
-#  include "struct timespec.h"
+#  include "struct-timespec.h"
 #  include "uid_t.h"
 #else
 #  error

@@ -103,7 +103,7 @@
 // cfsetispeed
 // cfsetispeed
 #include "c/speed_t.h"
-#include "c/struct termios.h"
+#include "c/struct-termios.h"
 #include "c/tcflag_t.h"
 // tcdrain
 // tcflow

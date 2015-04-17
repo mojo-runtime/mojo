@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #pragma once
 
-#include "c/struct user_desc.h"
+#include "c/struct-user_desc.h"
 #include "Result"
 
 namespace system {

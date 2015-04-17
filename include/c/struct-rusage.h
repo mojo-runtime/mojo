@@ -1,7 +1,7 @@
 #pragma once
 
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "struct timeval.h"
+#  include "struct-timeval.h"
 
 struct rusage
 {

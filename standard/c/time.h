@@ -12,7 +12,7 @@
 // The <time.h> header shall declare the structure timespec...
 
 #if 1 // TMR
-#  include "c/struct timespec.h"
+#  include "c/struct-timespec.h"
 #endif
 
 // The <time.h> header shall also declare the itimerspec structure...

@@ -17,7 +17,7 @@
 #include "c/idtype_t.h"
 #include "c/pid_t.h"
 #include "c/siginfo_t.h"
-#include "c/struct rusage.h"
+#include "c/struct-rusage.h"
 // wait
 // waitid
 // waitpid

@@ -103,7 +103,7 @@
 // sigstack [XSI]
 // stack_t [XSI]
 // struct sigevent [rts]
-#include "c/union sigval.h" // [CX]
+#include "c/union-sigval.h" // [CX]
 // ucontext_t [XSI]
 
 //--------------------------------------------------------------------------------------------------

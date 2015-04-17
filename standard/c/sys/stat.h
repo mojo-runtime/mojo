@@ -34,7 +34,7 @@
 // S_TYPEISSHM
 // S_TYPEISTMO
 
-#include "c/struct stat.h"
+#include "c/struct-stat.h"
 
 // chmod
 // fchmod

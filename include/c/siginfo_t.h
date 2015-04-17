@@ -5,7 +5,7 @@
 #    include "clock_t.h"
 #    include "pid_t.h"
 #    include "uid_t.h"
-#    include "union sigval.h"
+#    include "union-sigval.h"
 
 typedef struct siginfo
 {
@@ -173,7 +173,7 @@ siginfo_t;
 #elif defined(__FreeBSD__)
 #  include "pid_t.h"
 #  include "uid_t.h"
-#  include "union sigval.h"
+#  include "union-sigval.h"
 
 typedef struct {
     int

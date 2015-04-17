@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #pragma once
 
-#include "c/struct epoll_event.h"
+#include "c/struct-epoll_event.h"
 #include "Result"
 
 namespace system {

@@ -1,4 +1,4 @@
 #pragma once
 
-#include "c/struct utsname.h"
+#include "c/struct-utsname.h"
 // uname

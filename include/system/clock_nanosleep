@@ -2,7 +2,7 @@
 #pragma once
 
 #include "c/clockid_t.h"
-#include "c/struct timespec.h"
+#include "c/struct-timespec.h"
 #include "Result"
 
 namespace system {
