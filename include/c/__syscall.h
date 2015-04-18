@@ -1,6 +1,6 @@
 #pragma once
 
-#include "__Word.h"
+#include "__Result.h"
 #include "__noexcept.h"
 
 #pragma clang diagnostic push
@@ -58,20 +58,8 @@
 #  error
 #endif
 
-typedef struct
-{
-    __Word
-    __word;
-
-#if defined(__FreeBSD__)
-    __Word
-    __is_error;
-#endif
-}
-__syscall_Result;
-
 static inline
-__syscall_Result
+__Result
 __syscall_0(__Word n) __noexcept
 {
     __syscall_SBB_SETUP
@@ -86,11 +74,11 @@ __syscall_0(__Word n) __noexcept
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
+    return (__Result) { r0 __syscall_SBB_VALUE };
 }
 
 static inline
-__syscall_Result
+__Result
 __syscall_1(__Word n, __Word a1) __noexcept
 {
     __syscall_SBB_SETUP
@@ -106,11 +94,11 @@ __syscall_1(__Word n, __Word a1) __noexcept
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
+    return (__Result) { r0 __syscall_SBB_VALUE };
 }
 
 static inline
-__syscall_Result
+__Result
 __syscall_2(__Word n, __Word a1, __Word a2) __noexcept
 {
     __syscall_SBB_SETUP
@@ -127,11 +115,11 @@ __syscall_2(__Word n, __Word a1, __Word a2) __noexcept
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
+    return (__Result) { r0 __syscall_SBB_VALUE };
 }
 
 static inline
-__syscall_Result
+__Result
 __syscall_3(__Word n, __Word a1, __Word a2, __Word a3) __noexcept
 {
     __syscall_SBB_SETUP
@@ -149,11 +137,11 @@ __syscall_3(__Word n, __Word a1, __Word a2, __Word a3) __noexcept
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
+    return (__Result) { r0 __syscall_SBB_VALUE };
 }
 
 static inline
-__syscall_Result
+__Result
 __syscall_4(__Word n, __Word a1, __Word a2, __Word a3, __Word a4) __noexcept
 {
     __syscall_SBB_SETUP
@@ -172,11 +160,11 @@ __syscall_4(__Word n, __Word a1, __Word a2, __Word a3, __Word a4) __noexcept
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
+    return (__Result) { r0 __syscall_SBB_VALUE };
 }
 
 static inline
-__syscall_Result
+__Result
 __syscall_5(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5) __noexcept
 {
     __syscall_SBB_SETUP
@@ -196,11 +184,11 @@ __syscall_5(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5) __n
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
+    return (__Result) { r0 __syscall_SBB_VALUE };
 }
 
 static inline
-__syscall_Result
+__Result
 __syscall_6(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5, __Word a6) __noexcept
 {
     __syscall_SBB_SETUP
@@ -221,7 +209,7 @@ __syscall_6(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5, __W
         : __syscall_CLOBBERS
     );
 
-    return (__syscall_Result) { r0 __syscall_SBB_VALUE };
+    return (__Result) { r0 __syscall_SBB_VALUE };
 }
 
 #pragma clang diagnostic pop
