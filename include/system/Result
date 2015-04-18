@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #pragma once
 
-#include "abi/__syscall.h"
+#include "c/__syscall.h"
 
 namespace system {
 

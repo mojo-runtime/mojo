@@ -1,7 +1,7 @@
 #pragma once
 
-#include "c/_Exit.h"
-#include "__program_Arguments.h"
+#include "../_Exit.h"
+#include "__Arguments.h"
 
 //--------------------------------------------------------------------------------------------------
 
@@ -35,7 +35,7 @@ extern "C" {
 __attribute__((__noreturn__, __used__))
 static
 void
-__start(__program_Arguments& arguments) noexcept
+__start(__Arguments& arguments) noexcept
 {
     _main(arguments);
     _Exit(0);

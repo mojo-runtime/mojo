@@ -1,8 +1,8 @@
 #pragma once
 
-#include "abi/__syscall.h"
 #include "SYS_getpgid.h"
 #include "pid_t.h"
+#include "__syscall.h"
 
 static inline
 pid_t

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "__Word.h"
-#include "compat/__noexcept.h"
+#include "__noexcept.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wc99-extensions"

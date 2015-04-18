@@ -1,8 +1,8 @@
 #pragma once
 
-#include "abi/__syscall.h"
 #include "SYS_geteuid.h"
 #include "uid_t.h"
+#include "__syscall.h"
 
 static inline
 uid_t

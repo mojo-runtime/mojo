@@ -1,9 +1,9 @@
 #pragma once
 
-#include "abi/__Byte.h"
-#include "abi/__Word.h"
+#include "../__Byte.h"
+#include "../__Word.h"
 
-struct __program_Arguments
+struct __Arguments
 {
     //----------------------------------------------------------------------------------------------
 

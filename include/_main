@@ -2,19 +2,19 @@
 #pragma once
 
 #if defined(__ELF__)
-#  include "abi/elf/__program_Arguments.h"
+#  include "c/_elf/__Arguments.h"
 #else
 #  error
 #endif
 
-using Arguments = __program_Arguments;
+using Arguments = __Arguments;
 
 static
 void
 _main(Arguments&);
 
 #if defined(__ELF__)
-#  include "abi/elf/__start.h"
+#  include "c/_elf/__start.h"
 #else
 #  error
 #endif

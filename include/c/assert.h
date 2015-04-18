@@ -16,7 +16,7 @@
 //--------------------------------------------------------------------------------------------------
 
 #include "__debug_error.h"
-#include "compat/__static_cast.h"
+#include "__static_cast.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
