@@ -60,5 +60,5 @@
 #  if defined(__x86_64__) // TODO: siginfo_t
 #    include "waitid"
 #  endif
-#  include "write"
 #endif
+#include "write"
