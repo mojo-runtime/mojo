@@ -1,12 +1,143 @@
 // -*- C++ -*-
-#ifndef __cstddef_
-#define __cstddef_
 
-#include "std/extent.hxx"
-#include "std/is_array.hxx"
-#include "std/is_same.hxx"
-#include "std/remove_extent.hxx"
+#pragma once
 
-#warning todo
+//--------------------------------------------------------------------------------------------------
+// Helper classes
 
-#endif
+#include "std/integral_constant"
+#include "std/true_type"
+#include "std/false_type"
+
+//--------------------------------------------------------------------------------------------------
+// Primary type categories
+
+#include "std/is_void"
+#include "std/is_null_pointer"
+#include "std/is_integral"
+#include "std/is_floating_point"
+#include "std/is_array"
+#include "std/is_enum"
+#include "std/is_union"
+// is_class
+// is_function
+#include "std/is_pointer"
+// is_lvalue_reference
+// is_rvalue_reference
+// is_member_object_pointer
+// is_member_function_pointer
+
+//--------------------------------------------------------------------------------------------------
+// Composite type categories
+
+#include "std/is_fundamental"
+#include "std/is_arithmetic"
+#include "std/is_scalar"
+// is_object
+// is_compound
+// is_reference
+#include "std/is_member_pointer"
+// is_const
+// is_volatile
+// is_trivial
+// is_trivially_copyable
+// is_standard_layout
+// is_pod
+// is_literal_type
+// is_empty
+// is_polymorphic
+// is_abstract
+#include "std/is_signed"
+#include "std/is_unsigned"
+
+//--------------------------------------------------------------------------------------------------
+// Supported operations
+
+// is_constructible
+// is_trivially_constructible
+// is_nothrow_constructible
+
+// is_default_constructible
+// is_trivially_default_constructible
+// is_nothrow_default_constructible
+
+// is_copy_constructible
+// is_trivially_move_constructible
+// is_nothrow_move_constructible
+
+// is_assignable
+// is_trivially_copy_assignable
+// is_nothrow_copy_assignable
+
+// is_move_assignable
+// is_trivially_move_assignable
+// is_nothrow_move_assignable
+
+// is_destructible
+// is_trivially_destructible
+// is_nothrow_destructible
+
+// has_virtual_destructor
+
+//--------------------------------------------------------------------------------------------------
+// Property queries
+
+// alignment_of
+// rank
+// extent
+
+//--------------------------------------------------------------------------------------------------
+// Type relationships
+
+#include "std/is_same"
+// is_base_of
+// is_convertible
+
+//--------------------------------------------------------------------------------------------------
+// Const-volatility specifiers
+
+#include "std/remove_cv"
+#include "std/remove_const"
+#include "std/remove_volatile"
+
+// add_cv
+// add_const
+// add_volatile
+
+//--------------------------------------------------------------------------------------------------
+// References
+
+#include "std/remove_reference"
+
+// add_lvalue_reference
+#include "std/add_rvalue_reference"
+
+//--------------------------------------------------------------------------------------------------
+// Pointers
+
+// remove_pointer
+// add_pointer
+
+//--------------------------------------------------------------------------------------------------
+// Sign modifiers
+
+// make_signed
+// make_unsigned
+
+//--------------------------------------------------------------------------------------------------
+// Arrays
+
+// remove_extent
+// remove_all_extents
+
+//--------------------------------------------------------------------------------------------------
+// Miscellaneous transformations
+
+// aligned_storage
+// aligned_union
+// decay
+#include "std/enable_if"
+// conditional
+// common_type
+#include "std/underlying_type"
+// result_of

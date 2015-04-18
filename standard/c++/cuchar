@@ -11,9 +11,7 @@
 //--------------------------------------------------------------------------------------------------
 // Functions
 
-#error todo
-
-#include <std::mbrtoc16>
-#include <std::c16rtomb>
-#include <std::mbrtoc32>
-#include <std::c32rtomb>
+// mbrtoc16
+// c16rtomb
+// mbrtoc32
+// c32rtomb

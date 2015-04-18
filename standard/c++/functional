@@ -1,11 +1,2 @@
 // -*- C++ -*-
-#ifndef __functional_
-#define __functional_
-
-#include "std/binary_function.hxx" // Until C++17
-#include "std/less.hxx"
-#include "std/unary_function.hxx" // Until C++17
-
-#warning todo
-
-#endif
+#error not implemented
