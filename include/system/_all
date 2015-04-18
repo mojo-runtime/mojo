@@ -1,6 +1,6 @@
 // -*- C++ -*-
+#include "chdir"
 #if defined(__linux__)
-#  include "chdir"
 #  include "chmod"
 #  include "chown"
 #  include "clock_getres"
