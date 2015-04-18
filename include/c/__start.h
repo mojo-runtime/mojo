@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../_Exit.h"
+#include "_Exit.h"
 #include "__Arguments.h"
 
 //--------------------------------------------------------------------------------------------------
+
+#if defined(__ELF__)
 
 asm (
     ".global _start\n"
@@ -26,8 +28,6 @@ asm (
 #endif
 );
 
-//--------------------------------------------------------------------------------------------------
-
 #if defined(__cplusplus)
 extern "C" {
 #endif
@@ -43,4 +43,10 @@ __start(__Arguments& arguments) noexcept
 
 #if defined(__cplusplus)
 } // extern "C"
+#endif
+
+//--------------------------------------------------------------------------------------------------
+
+#else
+#  error
 #endif

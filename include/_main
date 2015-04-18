@@ -1,11 +1,8 @@
 // -*- C++ -*-
+
 #pragma once
 
-#if defined(__ELF__)
-#  include "c/_elf/__Arguments.h"
-#else
-#  error
-#endif
+#include "c/__Arguments.h"
 
 using Arguments = __Arguments;
 
@@ -13,8 +10,4 @@ static
 void
 _main(Arguments&);
 
-#if defined(__ELF__)
-#  include "c/_elf/__start.h"
-#else
-#  error
-#endif
+#include "c/__start.h"
