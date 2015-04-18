@@ -47,7 +47,7 @@
 #    define __syscall_R4 "rcx"
 #    define __syscall_R5 "r8"
 #    define __syscall_R6 "r9"
-#    define __syscall_SBB "\nsbb %1 %1"
+#    define __syscall_SBB "\nsbb %1, %1"
 #    define __syscall_SBB_OUTPUT , "=r" (sbb_result)
 #    define __syscall_SBB_SETUP __Word sbb_result;
 #    define __syscall_SBB_VALUE , (sbb_result != 0)
