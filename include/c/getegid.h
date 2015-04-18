@@ -1,18 +1,23 @@
 #pragma once
 
-#if defined(__linux__) || defined(__FreeBSD__)
-#  include "SYS_getegid.h"
-#  include "gid_t.h"
-#  include "abi/__syscall_0_no_error.h"
-#  include "compat/__static_cast.h"
+#include "abi/__syscall.h"
+#include "SYS_getegid.h"
+#include "gid_t.h"
 
 static inline
 gid_t
-getegid() __noexcept
+getegid()
 {
-    return __static_cast(gid_t, __syscall_0_no_error(SYS_getegid));
-}
+    register
+    gid_t
+    r0 __asm__ (__syscall_R0) = SYS_getegid;
 
-#else
-#  error
-#endif
+    __asm__ (
+        __syscall_TRAP
+        : "=r" (r0)
+        : "r" (r0)
+        : __syscall_CLOBBERS
+    );
+
+    return r0;
+}

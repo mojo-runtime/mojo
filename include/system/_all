@@ -26,9 +26,6 @@
 #  include "getcwd"
 #  include "getdents"
 #endif
-#if defined(__linux__)
-#  include "gettid"
-#endif
 #if defined(__linux__) && defined(__x86_64__)
 #  include "inotify_add_watch"
 #  include "inotify_init1"

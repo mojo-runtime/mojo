@@ -1,18 +1,23 @@
 #pragma once
 
-#if defined(__linux__) || defined(__FreeBSD__)
-#  include "SYS_getuid.h"
-#  include "uid_t.h"
-#  include "abi/__syscall_0_no_error.h"
-#  include "compat/__static_cast.h"
+#include "abi/__syscall.h"
+#include "SYS_getuid.h"
+#include "uid_t.h"
 
 static inline
 uid_t
-getuid() __noexcept
+getuid()
 {
-    return __static_cast(uid_t, __syscall_0_no_error(SYS_getuid));
-}
+    register
+    uid_t
+    r0 __asm__ (__syscall_R0) = SYS_getuid;
 
-#else
-#  error
-#endif
+    __asm__ (
+        __syscall_TRAP
+        : "=r" (r0)
+        : "r" (r0)
+        : __syscall_CLOBBERS
+    );
+
+    return r0;
+}

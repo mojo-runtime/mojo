@@ -1,21 +1,21 @@
 #pragma once
 
 #include "abi/__syscall.h"
-#include "SYS_getgid.h"
-#include "gid_t.h"
+#include "SYS_gettid.h"
+#include "pid_t.h"
 
 static inline
-gid_t
-getgid()
+pid_t
+gettid()
 {
     register
-    gid_t
-    r0 __asm__ (__syscall_R0) = SYS_getgid;
+    pid_t
+    r0 __asm__ (__syscall_R0) = SYS_gettid;
 
     __asm__ (
         __syscall_TRAP
         : "=r" (r0)
-        : "r" (r0)
+        : "r" (r)
         : __syscall_CLOBBERS
     );
 
