@@ -74,13 +74,16 @@ build := $${call path,${BUILD}/${1}/${2}}
 $${build}/_test:
 	mkdir -p $$@
 
+$${build}/_test/%.s: $${.}/_test/%.c $${.}/%.h | $${build}/_test
+	$${${1}} -S -o $$@ -std=c11 $$<
+
+$${build}/_test/%.s: $${.}/_test/%.cxx $${.}/% | $${build}/_test
+	$${${1}} -S -o $$@ -std=c++14 $$<
+
 #---------------------------------------------------------------------------------------------------
 
 sources := $${wildcard $${.}/_test/*.c}
 targets := $${sources:$${.}/_test/%.c=$${build}/_test/%.s}
-
-$${targets}: $${build}/_test/%.s: $${.}/_test/%.c $${.}/%.h | $${build}/_test
-	$${${1}} -S -o $$@ -std=c11 $$<
 
 all := $${all} $${targets}
 
@@ -89,12 +92,7 @@ all := $${all} $${targets}
 sources := $${wildcard $${.}/_test/*.cxx}
 targets := $${sources:$${.}/_test/%.cxx=$${build}/_test/%.s}
 
-$${targets}: $${build}/_test/%.s: $${.}/_test/%.cxx $${.}/% | $${build}/_test
-	$${${1}} -S -o $$@ -std=c++14 $$<
-
 all := $${all} $${targets}
-
-#---------------------------------------------------------------------------------------------------
 
 endef
 
