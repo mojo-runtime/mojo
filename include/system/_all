@@ -42,7 +42,9 @@
 #  include "munmap"
 #  include "open"
 #  include "pipe2"
-#  include "read"
+#endif
+#include "read"
+#if defined(__linux__)
 #  include "readlink"
 #  include "rmdir"
 #  if !defined(__arm__) // TODO: struct user_desc
