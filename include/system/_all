@@ -1,5 +1,5 @@
 // -*- C++ -*-
-#if defined(__linux__) && defined(__x86_64__)
+#if defined(__linux__)
 #  include "chdir"
 #  include "chmod"
 #  include "chown"
@@ -16,17 +16,21 @@
 #  include "execve"
 #endif
 #include "exit"
-#if defined(__linux__) && defined(__x86_64__)
+#if defined(__linux__)
 #  include "fchdir"
 #  include "fcntl"
 #  include "fork"
-#  include "fstat"
-#  include "fstatat"
-#  include "get_thread_area"
+#  if !defined(__arm__) // TODO: struct stat
+#    include "fstat"
+#    include "fstatat"
+#  endif
+#  if !defined(__arm__) // TODO: struct user_desc
+#    include "get_thread_area"
+#  endif
 #  include "getcwd"
 #  include "getdents"
 #endif
-#if defined(__linux__) && defined(__x86_64__)
+#if defined(__linux__)
 #  include "inotify_add_watch"
 #  include "inotify_init1"
 #  include "inotify_rm_watch"
@@ -41,12 +45,18 @@
 #  include "read"
 #  include "readlink"
 #  include "rmdir"
-#  include "set_thread_area"
-#  include "stat"
+#  if !defined(__arm__) // TODO: struct user_desc
+#    include "set_thread_area"
+#  endif
+#  if !defined(__arm__) // TODO: struct stat
+#    include "stat"
+#  endif
 #  include "symlink"
 #  include "tgkill"
 #  include "uname"
 #  include "unlink"
-#  include "waitid"
+#  if defined(__x86_64__) // TODO: siginfo_t
+#    include "waitid"
+#  endif
 #  include "write"
 #endif
