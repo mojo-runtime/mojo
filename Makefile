@@ -55,6 +55,7 @@ compilers := \
 	gcc
 
 directories := \
+	include/io \
 	include/std \
 	include/system \
 	include/terminal \

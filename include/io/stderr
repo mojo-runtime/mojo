@@ -1,0 +1,9 @@
+// -*- C++ -*-
+
+#pragma once
+
+#if defined(__unix__)
+#  include "_posix/stderr"
+#else
+#  error
+#endif
