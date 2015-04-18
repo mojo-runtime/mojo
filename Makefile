@@ -1,13 +1,16 @@
+ifndef ROOT
+
+CWD  := ${realpath ${dir ${firstword ${MAKEFILE_LIST}}}}
+ROOT := ${realpath ${dir ${lastword ${MAKEFILE_LIST}}}}
+
 .DEFAULT_GOAL := all
+.SECONDEXPANSION:
 
-ROOT  := ${realpath ${dir ${firstword ${MAKEFILE_LIST}}}}
-BUILD := build
-
-####################################################################################################
-
-define path
-${patsubst ${ROOT}/%,%,${abspath ${1}}}
-endef
+__all   :=
+__roots :=
+ifeq (${CWD},${ROOT})
+__top := 1
+endif
 
 ####################################################################################################
 
@@ -23,8 +26,8 @@ clang += -ferror-limit=1
 clang += -fno-asynchronous-unwind-tables -fno-exceptions
 gcc   += -fno-asynchronous-unwind-tables -fno-exceptions
 
-clang += -iquoteinclude -Istandard/c -cxx-isystem standard/c++
-gcc   += -iquoteinclude -Istandard/c -isystemstandard/c++
+clang += -iquote${ROOT}/include -I${ROOT}/standard/c -cxx-isystem ${ROOT}/standard/c++
+gcc   += -iquote${ROOT}/include -I${ROOT}/standard/c -isystem${ROOT}/standard/c++
 
 clang += -nostdinc -nostdlib
 gcc   += -nostdinc -nostdlib
@@ -44,9 +47,7 @@ clang-arm-linux      := ${clang} -target armv5-none-linux-elf -mfloat-abi=hard
 clang-x86_64-freebsd := ${clang} -target x86_64-freebsd
 clang-x86_64-linux   := ${clang} -target x86_64-linux
 
-####################################################################################################
-
-all :=
+#---------------------------------------------------------------------------------------------------
 
 compilers := \
 	clang-arm-linux \
@@ -54,56 +55,85 @@ compilers := \
 	clang-x86_64-linux \
 	gcc
 
-directories := \
-	include/io \
-	include/std \
-	include/system \
-	include/terminal \
-	standard/c \
-	standard/c/sys \
-	standard/c++
-
 ####################################################################################################
 
-define define-tests
+define define-rules
 
-.     := $${call path,${ROOT}/${2}}
-build := $${call path,${BUILD}/${1}/${2}}
+$${build}/${1}: | $${build}
+	mkdir $${call relative,$$@}
 
-#---------------------------------------------------------------------------------------------------
+$${build}/${1}/%.c.s: $${.}/%.c | $${build}/${1}
+	$${${1}} -S -o $${call relative,$$@} $${call relative,$$<} -std=c11
 
-$${build}/_test:
-	mkdir -p $$@
-
-$${build}/_test/%.s: $${.}/_test/%.c $${.}/%.h | $${build}/_test
-	$${${1}} -S -o $$@ -std=c11 $$<
-
-$${build}/_test/%.s: $${.}/_test/%.cxx $${.}/% | $${build}/_test
-	$${${1}} -S -o $$@ -std=c++14 $$<
-
-#---------------------------------------------------------------------------------------------------
-
-sources := $${wildcard $${.}/_test/*.c}
-targets := $${sources:$${.}/_test/%.c=$${build}/_test/%.s}
-
-all := $${all} $${targets}
-
-#---------------------------------------------------------------------------------------------------
-
-sources := $${wildcard $${.}/_test/*.cxx}
-targets := $${sources:$${.}/_test/%.cxx=$${build}/_test/%.s}
-
-all := $${all} $${targets}
+$${build}/${1}/%.cxx.s: $${.}/%.cxx | $${build}/${1}
+	$${${1}} -S -o $${call relative,$$@} $${call relative,$$<} -std=c++14
 
 endef
 
-${foreach c,${compilers},${foreach d,${directories},${eval ${call define-tests,${c},${d}}}}}
+#---------------------------------------------------------------------------------------------------
+
+define directory
+${patsubst %/,%,${dir ${1}}}
+endef
+
+#---------------------------------------------------------------------------------------------------
+
+define relative
+${patsubst ${CWD}/%,%,${1}}
+endef
+
+#---------------------------------------------------------------------------------------------------
+
+define compile-all
+$${foreach c,$${compilers},$${eval $${call compile-one,$${c},${value 1}}}}
+endef
+
+#---------------------------------------------------------------------------------------------------
+
+define compile-one
+_sources := ${2}
+__all := $${__all} $${_sources:$${.}/%=$${build}/${1}/%.s}
+endef
 
 ####################################################################################################
 
 .PHONY: all
-all: ${all}
+all: $${__all}
 
 .PHONY: clean
 clean:
-	rm -rf ${call path,${BUILD}}
+	rm -rf ${patsubst ${CWD}/%,%,${__roots}}
+
+####################################################################################################
+endif # First time only
+####################################################################################################
+
+ifdef __top
+#---------------------------------------------------------------------------------------------------
+# We're the Makefile.
+
+undefine __top
+
+include include/io/_test/Makefile
+include include/std/_test/Makefile
+include include/system/_test/Makefile
+include include/terminal/_test/Makefile
+include standard/c/_test/Makefile
+include standard/c/sys/_test/Makefile
+include standard/c++/_test/Makefile
+
+else
+#---------------------------------------------------------------------------------------------------
+# We've been included.
+
+.       := ${realpath ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}}
+build   := ${.}/.build
+__roots := ${__roots} ${build}
+
+${build}:
+	mkdir ${call relative,$@}
+
+${foreach c,${compilers},${eval ${call define-rules,${c}}}}
+
+#---------------------------------------------------------------------------------------------------
+endif
