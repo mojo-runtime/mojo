@@ -9,7 +9,7 @@ typedef struct
     __word;
 
 #if defined(__FreeBSD__)
-    __Bool
+    __Word
     __is_error;
 #endif
 }
