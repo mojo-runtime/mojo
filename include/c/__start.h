@@ -32,10 +32,10 @@ asm (
 extern "C" {
 #endif
 
-__attribute__((__noreturn__, __used__))
+__attribute__((__noreturn__, __nothrow__, __used__))
 static
 void
-__start(__Arguments& arguments) noexcept
+__start(__Arguments& arguments)
 {
     _main(arguments);
     _Exit(0);
