@@ -28,6 +28,7 @@
 #  include "off_t.h"
 #  include "struct-timespec.h"
 #  include "uid_t.h"
+#  include "__static_cast.h"
 #else
 #  error
 #endif
@@ -141,12 +142,8 @@ struct stat
     st_birthtim;
 
     // Padding hacks
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wold-style-cast"
-    unsigned int :(8 / 2) * (16 - ((int)sizeof(struct timespec)));
-    unsigned int :(8 / 2) * (16 - ((int)sizeof(struct timespec)));
-#pragma clang diagnostic pop
-
+    unsigned int :(8 / 2) * (16 - (__static_cast(int, sizeof(struct timespec))));
+    unsigned int :(8 / 2) * (16 - (__static_cast(int, sizeof(struct timespec))));
 #else
 #  error
 #endif
