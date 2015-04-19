@@ -1,7 +1,7 @@
 #pragma once
 
 #include "__Result.h"
-#include "__noexcept.h"
+#include "__nothrow.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
@@ -59,9 +59,10 @@
 
 #pragma clang diagnostic pop
 
+__nothrow
 static inline
 __Result
-__syscall_0(__Word n) __noexcept
+__syscall_0(__Word n)
 {
     __syscall_SBB_SETUP
 
@@ -79,9 +80,10 @@ __syscall_0(__Word n) __noexcept
     return result;
 }
 
+__nothrow
 static inline
 __Result
-__syscall_1(__Word n, __Word a1) __noexcept
+__syscall_1(__Word n, __Word a1)
 {
     __syscall_SBB_SETUP
 
@@ -100,9 +102,10 @@ __syscall_1(__Word n, __Word a1) __noexcept
     return result;
 }
 
+__nothrow
 static inline
 __Result
-__syscall_2(__Word n, __Word a1, __Word a2) __noexcept
+__syscall_2(__Word n, __Word a1, __Word a2)
 {
     __syscall_SBB_SETUP
 
@@ -122,9 +125,10 @@ __syscall_2(__Word n, __Word a1, __Word a2) __noexcept
     return result;
 }
 
+__nothrow
 static inline
 __Result
-__syscall_3(__Word n, __Word a1, __Word a2, __Word a3) __noexcept
+__syscall_3(__Word n, __Word a1, __Word a2, __Word a3)
 {
     __syscall_SBB_SETUP
 
@@ -145,9 +149,10 @@ __syscall_3(__Word n, __Word a1, __Word a2, __Word a3) __noexcept
     return result;
 }
 
+__nothrow
 static inline
 __Result
-__syscall_4(__Word n, __Word a1, __Word a2, __Word a3, __Word a4) __noexcept
+__syscall_4(__Word n, __Word a1, __Word a2, __Word a3, __Word a4)
 {
     __syscall_SBB_SETUP
 
@@ -169,9 +174,10 @@ __syscall_4(__Word n, __Word a1, __Word a2, __Word a3, __Word a4) __noexcept
     return result;
 }
 
+__nothrow
 static inline
 __Result
-__syscall_5(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5) __noexcept
+__syscall_5(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5)
 {
     __syscall_SBB_SETUP
 
@@ -194,9 +200,10 @@ __syscall_5(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5) __n
     return result;
 }
 
+__nothrow
 static inline
 __Result
-__syscall_6(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5, __Word a6) __noexcept
+__syscall_6(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5, __Word a6)
 {
     __syscall_SBB_SETUP
 

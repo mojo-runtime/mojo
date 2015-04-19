@@ -2,8 +2,8 @@
 
 #include "EXIT_FAILURE.h"
 #include "_Exit.h"
-#include "__noexcept.h"
 #include "__noreturn.h"
+#include "__nothrow.h"
 
 #if defined(__unix__)
 #  include "STDERR_FILENO.h"
@@ -20,9 +20,10 @@
 #pragma clang diagnostic ignored "-Wunused-parameter"
 
 __noreturn
+__nothrow
 static inline
 void
-__debug_error(const char* kind, const char* message, const char* file, const char* function, unsigned line) __noexcept
+__debug_error(const char* kind, const char* message, const char* file, const char* function, unsigned line)
 {
     // Super naive.
     _write("\033[31;1m");
