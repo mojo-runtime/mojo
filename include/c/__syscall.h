@@ -4,7 +4,6 @@
 #include "__noexcept.h"
 
 #pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wc99-extensions"
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if defined(__linux__)
@@ -58,6 +57,8 @@
 #  error
 #endif
 
+#pragma clang diagnostic pop
+
 static inline
 __Result
 __syscall_0(__Word n) __noexcept
@@ -74,7 +75,8 @@ __syscall_0(__Word n) __noexcept
         : __syscall_CLOBBERS
     );
 
-    return (__Result) { r0 __syscall_SBB_VALUE };
+    __Result result = { r0 __syscall_SBB_VALUE };
+    return result;
 }
 
 static inline
@@ -94,7 +96,8 @@ __syscall_1(__Word n, __Word a1) __noexcept
         : __syscall_CLOBBERS
     );
 
-    return (__Result) { r0 __syscall_SBB_VALUE };
+    __Result result = { r0 __syscall_SBB_VALUE };
+    return result;
 }
 
 static inline
@@ -115,7 +118,8 @@ __syscall_2(__Word n, __Word a1, __Word a2) __noexcept
         : __syscall_CLOBBERS
     );
 
-    return (__Result) { r0 __syscall_SBB_VALUE };
+    __Result result = { r0 __syscall_SBB_VALUE };
+    return result;
 }
 
 static inline
@@ -137,7 +141,8 @@ __syscall_3(__Word n, __Word a1, __Word a2, __Word a3) __noexcept
         : __syscall_CLOBBERS
     );
 
-    return (__Result) { r0 __syscall_SBB_VALUE };
+    __Result result = { r0 __syscall_SBB_VALUE };
+    return result;
 }
 
 static inline
@@ -160,7 +165,8 @@ __syscall_4(__Word n, __Word a1, __Word a2, __Word a3, __Word a4) __noexcept
         : __syscall_CLOBBERS
     );
 
-    return (__Result) { r0 __syscall_SBB_VALUE };
+    __Result result = { r0 __syscall_SBB_VALUE };
+    return result;
 }
 
 static inline
@@ -184,7 +190,8 @@ __syscall_5(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5) __n
         : __syscall_CLOBBERS
     );
 
-    return (__Result) { r0 __syscall_SBB_VALUE };
+    __Result result = { r0 __syscall_SBB_VALUE };
+    return result;
 }
 
 static inline
@@ -209,8 +216,8 @@ __syscall_6(__Word n, __Word a1, __Word a2, __Word a3, __Word a4, __Word a5, __W
         : __syscall_CLOBBERS
     );
 
-    return (__Result) { r0 __syscall_SBB_VALUE };
+    __Result result = { r0 __syscall_SBB_VALUE };
+    return result;
 }
 
-#pragma clang diagnostic pop
 
