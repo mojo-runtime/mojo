@@ -2,7 +2,7 @@
 #pragma once
 
 #include "c/SYS_pipe2.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

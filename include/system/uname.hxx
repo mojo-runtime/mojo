@@ -2,7 +2,7 @@
 #pragma once
 
 #include "c/struct-utsname.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

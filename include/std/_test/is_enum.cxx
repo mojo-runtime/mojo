@@ -1,4 +1,4 @@
-#include "std/is_enum"
+#include "std/is_enum.hxx"
 
 enum class Color
 {

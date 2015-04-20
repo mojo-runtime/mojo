@@ -3,7 +3,7 @@
 
 #include "c/SYS_munmap.h"
 #include "c/size_t.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

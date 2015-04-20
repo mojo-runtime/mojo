@@ -1,8 +1,8 @@
 // -*- C++ -*-
 #pragma once
 
-#include "remove_const_t"
-#include "remove_volatile_t"
+#include "remove_const_t.hxx"
+#include "remove_volatile_t.hxx"
 
 namespace std {
 

@@ -4,7 +4,7 @@
 #include "c/SYS_mmap.h"
 #include "c/off_t.h"
 #include "c/size_t.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

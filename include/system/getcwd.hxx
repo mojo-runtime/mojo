@@ -2,7 +2,7 @@
 #pragma once
 
 #include "c/size_t.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

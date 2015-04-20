@@ -1,4 +1,4 @@
-#include "std/is_signed"
+#include "std/is_signed.hxx"
 
 struct Struct
 {

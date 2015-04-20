@@ -3,7 +3,7 @@
 
 #include "c/SYS_open.h"
 #include "c/mode_t.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

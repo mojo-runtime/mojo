@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #pragma once
 
-#include "remove_reference_t"
+#include "remove_reference_t.hxx"
 
 namespace std {
 

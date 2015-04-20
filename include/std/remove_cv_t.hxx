@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #pragma once
 
-#include "remove_cv"
+#include "remove_cv.hxx"
 
 namespace std {
 

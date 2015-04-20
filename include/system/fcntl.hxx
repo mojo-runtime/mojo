@@ -2,7 +2,7 @@
 #pragma once
 
 #include "c/SYS_fcntl.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 
@@ -31,10 +31,10 @@ fcntl(int fd, int cmd, Arg arg) noexcept
         _(EFAULT),
 #endif
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EINTR.h" //
-#  include "c/EINVAL.h" //
-#  include "c/EMFILE.h" //
-#  include "c/ENOLCK.h" //
+#  include "c/EINTR.h"
+#  include "c/EINVAL.h"
+#  include "c/EMFILE.h"
+#  include "c/ENOLCK.h"
         _(EINTR),
         _(EINVAL),
         _(EMFILE),

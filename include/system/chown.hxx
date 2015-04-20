@@ -4,7 +4,7 @@
 #include "c/SYS_chown.h"
 #include "c/gid_t.h"
 #include "c/uid_t.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

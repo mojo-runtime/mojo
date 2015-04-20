@@ -3,7 +3,7 @@
 
 #include "c/size_t.h"
 #include "c/struct-linux_dirent.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

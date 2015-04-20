@@ -1,61 +1,61 @@
 // -*- C++ -*-
-#include "chdir"
-#include "chmod"
-#include "chown"
-#include "clock_getres"
-#include "clock_gettime"
+#include "chdir.hxx"
+#include "chmod.hxx"
+#include "chown.hxx"
+#include "clock_getres.hxx"
+#include "clock_gettime.hxx"
 #if defined(__linux__)
-#  include "clock_nanosleep"
+#  include "clock_nanosleep.hxx"
 #endif
-#include "clock_settime"
+#include "clock_settime.hxx"
 #if defined(__linux__)
-#  include "clone"
+#  include "clone.hxx"
 #endif
-#include "close"
+#include "close.hxx"
 #if defined(__linux__)
-#  include "dup3"
-#  include "epoll_create1"
-#  include "epoll_ctl"
-#  include "epoll_wait"
+#  include "dup3.hxx"
+#  include "epoll_create1.hxx"
+#  include "epoll_ctl.hxx"
+#  include "epoll_wait.hxx"
 #endif
-#include "execve"
-#include "fchdir"
-#include "fcntl"
-#include "fork"
+#include "execve.hxx"
+#include "fchdir.hxx"
+#include "fcntl.hxx"
+#include "fork.hxx"
 #if !defined(__arm__) // TODO: struct stat
-#  include "fstat"
-#  include "fstatat"
+#  include "fstat.hxx"
+#  include "fstatat.hxx"
 #endif
 #if defined(__linux__)
-#  include "getcwd"
-#  include "getdents"
-#  include "inotify_add_watch"
-#  include "inotify_init1"
-#  include "inotify_rm_watch"
+#  include "getcwd.hxx"
+#  include "getdents.hxx"
+#  include "inotify_add_watch.hxx"
+#  include "inotify_init1.hxx"
+#  include "inotify_rm_watch.hxx"
 #endif
-#include "ioctl"
-#include "kill"
-#include "mkdir"
-#include "mmap"
+#include "ioctl.hxx"
+#include "kill.hxx"
+#include "mkdir.hxx"
+#include "mmap.hxx"
 #if defined(__linux__)
-#  include "mremap"
+#  include "mremap.hxx"
 #endif
-#include "munmap"
-#include "open"
-#include "pipe2"
-#include "read"
-#include "readlink"
-#include "rmdir"
+#include "munmap.hxx"
+#include "open.hxx"
+#include "pipe2.hxx"
+#include "read.hxx"
+#include "readlink.hxx"
+#include "rmdir.hxx"
 #if !defined(__arm__) // TODO: struct stat
-#  include "stat"
+#  include "stat.hxx"
 #endif
-#include "symlink"
+#include "symlink.hxx"
 #if defined(__linux__)
-#  include "tgkill"
-#  include "uname"
+#  include "tgkill.hxx"
+#  include "uname.hxx"
 #endif
-#include "unlink"
+#include "unlink.hxx"
 #if defined(__linux__) && defined(__x86_64__) // TODO: siginfo_t
-#  include "waitid"
+#  include "waitid.hxx"
 #endif
-#include "write"
+#include "write.hxx"

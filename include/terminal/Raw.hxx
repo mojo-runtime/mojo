@@ -19,7 +19,7 @@
 #include "c/struct-termios.h"
 #include "c/__todo.h"
 #include "c/__unreachable.h"
-#include "system/ioctl"
+#include "system/ioctl.hxx"
 
 namespace terminal {
 

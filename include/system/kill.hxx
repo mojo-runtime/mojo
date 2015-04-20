@@ -3,7 +3,7 @@
 
 #include "c/SYS_kill.h"
 #include "c/pid_t.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

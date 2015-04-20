@@ -1,5 +1,5 @@
 // -*- C++ -*-
 
-#include "stderr"
-#include "stdin"
-#include "stdout"
+#include "stderr.hxx"
+#include "stdin.hxx"
+#include "stdout.hxx"

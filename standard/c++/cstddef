@@ -11,7 +11,7 @@
 //--------------------------------------------------------------------------------------------------
 // Types
 
-#include "std/size_t"
-#include "std/ptrdiff_t"
-#include "std/nullptr_t"
+#include "std/size_t.hxx"
+#include "std/ptrdiff_t.hxx"
+#include "std/nullptr_t.hxx"
 // max_align_t

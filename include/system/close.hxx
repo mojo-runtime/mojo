@@ -2,7 +2,7 @@
 #pragma once
 
 #include "c/SYS_close.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

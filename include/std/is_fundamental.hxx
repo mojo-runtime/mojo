@@ -1,10 +1,10 @@
 // -*- C++ -*-
 #pragma once
 
-#include "is_arithmetic"
-#include "is_null_pointer"
-#include "is_same"
-#include "is_void"
+#include "is_arithmetic.hxx"
+#include "is_null_pointer.hxx"
+#include "is_same.hxx"
+#include "is_void.hxx"
 
 namespace std {
 

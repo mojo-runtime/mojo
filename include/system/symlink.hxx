@@ -2,7 +2,7 @@
 #pragma once
 
 #include "c/SYS_symlink.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

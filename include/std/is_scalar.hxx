@@ -1,12 +1,12 @@
 // -*- C++ -*-
 #pragma once
 
-#include "is_arithmetic"
-#include "is_enum"
-#include "is_member_pointer"
-#include "is_null_pointer"
-#include "is_pointer"
-#include "is_same"
+#include "is_arithmetic.hxx"
+#include "is_enum.hxx"
+#include "is_member_pointer.hxx"
+#include "is_null_pointer.hxx"
+#include "is_pointer.hxx"
+#include "is_same.hxx"
 
 namespace std {
 

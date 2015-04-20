@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "system/write"
+#include "system/write.hxx"
 
 namespace io { inline namespace _posix {
 

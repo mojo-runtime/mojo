@@ -3,7 +3,7 @@
 
 #include "c/SYS_fork.h"
 #include "c/pid_t.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

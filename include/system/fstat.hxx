@@ -3,7 +3,7 @@
 
 #include "c/SYS_fstat.h"
 #include "c/struct-stat.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

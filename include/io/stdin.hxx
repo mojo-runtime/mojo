@@ -3,7 +3,7 @@
 #pragma once
 
 #if defined(__unix__)
-#  include "_posix/stdin"
+#  include "_posix/stdin.hxx"
 #else
 #  error
 #endif

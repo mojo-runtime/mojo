@@ -3,7 +3,7 @@
 
 #include "c/SYS_chmod.h"
 #include "c/mode_t.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

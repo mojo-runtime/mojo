@@ -2,7 +2,7 @@
 #pragma once
 
 #include "c/SYS_fchdir.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

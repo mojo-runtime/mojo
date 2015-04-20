@@ -5,7 +5,7 @@
 #include "c/id_t.h"
 #include "c/siginfo_t.h"
 #include "c/struct-rusage.h"
-#include "Result"
+#include "Result.hxx"
 
 namespace system {
 

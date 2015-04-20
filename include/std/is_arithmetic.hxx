@@ -1,8 +1,8 @@
 // -*- C++ -*-
 #pragma once
 
-#include "is_floating_point"
-#include "is_integral"
+#include "is_floating_point.hxx"
+#include "is_integral.hxx"
 
 namespace std {
 

@@ -3,7 +3,7 @@
 #pragma once
 
 #include "c/STDERR_FILENO.h"
-#include "Writer"
+#include "Writer.hxx"
 
 namespace io { inline namespace _posix {
 

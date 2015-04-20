@@ -1,7 +1,7 @@
 // -*- C++ -*-
 #pragma once
 
-#include "is_arithmetic"
+#include "is_arithmetic.hxx"
 
 namespace std {
 
