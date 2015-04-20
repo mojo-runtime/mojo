@@ -1,4 +1,5 @@
-// -*- C++ -*-
+#pragma once
+
 #include "chdir.hxx"
 #include "chmod.hxx"
 #include "chown.hxx"

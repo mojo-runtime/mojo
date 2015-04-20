@@ -1,4 +1,3 @@
-// -*- C++ -*-
 #pragma once
 
 #include "c/uint32_t.h"

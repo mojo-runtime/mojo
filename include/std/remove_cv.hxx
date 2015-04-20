@@ -1,4 +1,3 @@
-// -*- C++ -*-
 #pragma once
 
 #include "remove_const_t.hxx"

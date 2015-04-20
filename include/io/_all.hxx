@@ -1,4 +1,4 @@
-// -*- C++ -*-
+#pragma once
 
 #include "stderr.hxx"
 #include "stdin.hxx"

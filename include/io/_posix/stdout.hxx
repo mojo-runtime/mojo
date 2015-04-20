@@ -1,5 +1,3 @@
-// -*- C++ -*-
-
 #pragma once
 
 #include "c/STDOUT_FILENO.h"

@@ -1,4 +1,3 @@
-// -*- C++ -*-
 #pragma once
 
 #if defined(__has_extension)

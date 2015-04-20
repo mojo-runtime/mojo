@@ -1,4 +1,3 @@
-// -*- C++ -*-
 #pragma once
 
 #include "Result.hxx"

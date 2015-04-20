@@ -1,4 +1,3 @@
-// -*- C++ -*-
 #pragma once
 
 #include "c/SYS_clock_getres.h"

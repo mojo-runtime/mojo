@@ -1,4 +1,3 @@
-// -*- C++ -*-
 #pragma once
 
 #include "c/idtype_t.h"
