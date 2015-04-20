@@ -14,8 +14,8 @@ endif
 
 ####################################################################################################
 
-clang := clang
-gcc   := gcc
+clang := clang-3.7
+gcc   := gcc-4.9
 
 clang += -fcolor-diagnostics
 gcc   += -fdiagnostics-color=always
