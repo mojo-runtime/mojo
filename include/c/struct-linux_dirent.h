@@ -1,8 +1,10 @@
 #pragma once
 
+#if defined(__linux__)
+#  include "__flexible_array.h"
+
 struct linux_dirent
 {
-#if defined(__linux__)
     unsigned long
     d_ino;
 
@@ -12,11 +14,8 @@ struct linux_dirent
     unsigned short
     d_reclen;
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wc99-extensions"
     char
-    d_name[];
-#pragma clang diagnostic pop
+    __flexible_array(d_name);
 
     /*
     char
@@ -25,7 +24,8 @@ struct linux_dirent
     char
     d_type;
     */
+};
+
 #else
 #  error
 #endif
-};
