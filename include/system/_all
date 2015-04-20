@@ -1,63 +1,67 @@
 // -*- C++ -*-
 #include "chdir"
+#include "chmod"
+#include "chown"
+#include "clock_getres"
+#include "clock_gettime"
 #if defined(__linux__)
-#  include "chmod"
-#  include "chown"
-#  include "clock_getres"
-#  include "clock_gettime"
 #  include "clock_nanosleep"
-#  include "clock_settime"
+#endif
+#include "clock_settime"
+#if defined(__linux__)
 #  include "clone"
-#  include "close"
+#endif
+#include "close"
+#if defined(__linux__)
 #  include "dup3"
 #  include "epoll_create1"
 #  include "epoll_ctl"
 #  include "epoll_wait"
-#  include "execve"
+#endif
+#include "execve"
+#include "fchdir"
+#include "fcntl"
+#include "fork"
+#if !defined(__arm__) // TODO: struct stat
+#  include "fstat"
+#  include "fstatat"
+#endif
+#if defined(__linux__) && !defined(__arm__) // TODO: struct user_desc
+#  include "get_thread_area"
 #endif
 #if defined(__linux__)
-#  include "fchdir"
-#  include "fcntl"
-#  include "fork"
-#  if !defined(__arm__) // TODO: struct stat
-#    include "fstat"
-#    include "fstatat"
-#  endif
-#  if !defined(__arm__) // TODO: struct user_desc
-#    include "get_thread_area"
-#  endif
 #  include "getcwd"
 #  include "getdents"
-#endif
-#if defined(__linux__)
 #  include "inotify_add_watch"
 #  include "inotify_init1"
 #  include "inotify_rm_watch"
-#  include "ioctl"
-#  include "kill"
-#  include "mkdir"
-#  include "mmap"
-#  include "mremap"
-#  include "munmap"
-#  include "open"
-#  include "pipe2"
 #endif
-#include "read"
+#include "ioctl"
+#include "kill"
+#include "mkdir"
+#include "mmap"
 #if defined(__linux__)
-#  include "readlink"
-#  include "rmdir"
-#  if !defined(__arm__) // TODO: struct user_desc
-#    include "set_thread_area"
-#  endif
-#  if !defined(__arm__) // TODO: struct stat
-#    include "stat"
-#  endif
-#  include "symlink"
+#  include "mremap"
+#endif
+#include "munmap"
+#include "open"
+#include "pipe2"
+#include "read"
+#include "readlink"
+#include "rmdir"
+#if defined(__linux__) && !defined(__arm__) // TODO: struct user_desc
+#  include "set_thread_area"
+#endif
+#if !defined(__arm__) // TODO: struct stat
+#  include "stat"
+#endif
+#include "symlink"
+#if defined(__linux__)
 #  include "tgkill"
 #  include "uname"
-#  include "unlink"
-#  if defined(__x86_64__) // TODO: siginfo_t
-#    include "waitid"
-#  endif
+#endif
+#include "unlink"
+#if defined(__linux__) && defined(__x86_64__) // TODO: siginfo_t
+#  include "waitid"
 #endif
 #include "write"
