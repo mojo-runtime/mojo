@@ -14,7 +14,7 @@ static inline
 auto
 ioctl(int fd, int request, Arg arg) noexcept
 {
-#define _(name) _##name = name
+#define _(name, doc) _##name = name
     enum Error
     {
 #if defined(__linux__) || defined(__FreeBSD__) // Same errors
@@ -22,10 +22,22 @@ ioctl(int fd, int request, Arg arg) noexcept
 #  include "c/EFAULT.h"
 #  include "c/EINVAL.h"
 #  include "c/ENOTTY.h"
-        _(EBADF),
-        _(EFAULT),
-        _(EINVAL),
-        _(ENOTTY),
+
+        _(EBADF,
+          "`fd` is not a valid descriptor."),
+
+        _(EFAULT,
+          "`argument` references an inaccessible memory area."),
+
+        _(EINVAL,
+          "`request` or `argument` is not valid."),
+
+        _(ENOTTY,
+          "`fd` is not associated with a character special device."
+          " / "
+          "The specified request does not apply to"
+          " the kind of object that the descriptor `d` references."),
+
 #endif
     };
 #undef _
