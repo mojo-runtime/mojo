@@ -19,18 +19,37 @@ inotify_add_watch(int fd, const char* pathname, uint32_t mask) noexcept
 #  include "c/ENOENT.h"
 #  include "c/ENOMEM.h"
 #  include "c/ENOSPC.h"
-#  define _(name) _##name = name
+#  define _(name, doc) _##name = name
 
     enum Error
     {
-        _(EACCES),
-        _(EBADF),
-        _(EFAULT),
-        _(EINVAL),
-        _(ENAMETOOLONG),
-        _(ENOENT),
-        _(ENOMEM),
-        _(ENOSPC),
+        _(EACCES,
+          "Read access to the given file is not permitted."),
+
+        _(EBADF,
+          "The given file descriptor is not valid."),
+
+        _(EFAULT,
+          "`path` points outside of the process's accessible address space."),
+
+        _(EINVAL,
+          "The given event mask contains no valid events."
+          " / "
+          "`fd` is not an inotify file descriptor."),
+
+        _(ENAMETOOLONG,
+          "`path` is too long"),
+
+        _(ENOENT,
+          "A directory component in `path` does not exist or is a dangling symbolic link."),
+
+        _(ENOMEM,
+          "Insufficient kernel memory was available."),
+
+        _(ENOSPC,
+          "The user limit on the total number of inotify watches was reached."
+          " / "
+          "The kernel failed to allocate a needed resource."),
     };
 
 #  undef _

@@ -12,12 +12,17 @@ inotify_rm_watch(int fd, int wd) noexcept
 #if defined(__linux__)
 #  include "c/EBADF.h"
 #  include "c/EINVAL.h"
-#  define _(name) _##name = name
+#  define _(name, doc) _##name = name
 
     enum Error
     {
-        _(EBADF),
-        _(EINVAL),
+        _(EBADF,
+          "`fd` is not a valid file descriptor."),
+
+        _(EINVAL,
+          "The watch descriptor `wd` is not valid."
+          " / "
+          "`fd` is not an inotify file descriptor."),
     };
 
 #  undef _
