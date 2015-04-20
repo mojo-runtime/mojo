@@ -11,11 +11,11 @@
 #include "c/EPOLLONESHOT.h"
 #include "c/EPOLLOUT.h"
 #include "c/EPOLLPRI.h"
-// EPOLLRDBAND
-// EPOLLRDNORM
-// EPOLLRDHUP
-// EPOLLWRBAND
-// EPOLLWRNORM
+#include "c/EPOLLRDBAND.h"
+#include "c/EPOLLRDNORM.h"
+#include "c/EPOLLRDHUP.h"
+#include "c/EPOLLWRBAND.h"
+#include "c/EPOLLWRNORM.h"
 #include "c/EPOLLWAKEUP.h"
 #include "c/epoll_data_t.h"
 #include "c/struct-epoll_event.h"
