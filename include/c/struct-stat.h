@@ -86,7 +86,7 @@ struct stat
     #define st_ctime st_ctim.tv_sec
 
     char
-    __unused[24];
+    __pad1[24];
 
 #elif defined(__FreeBSD__)
     // @see sys/sys/stat.h
