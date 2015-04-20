@@ -26,9 +26,6 @@
 #  include "fstat"
 #  include "fstatat"
 #endif
-#if defined(__linux__) && !defined(__arm__) // TODO: struct user_desc
-#  include "get_thread_area"
-#endif
 #if defined(__linux__)
 #  include "getcwd"
 #  include "getdents"
@@ -49,9 +46,6 @@
 #include "read"
 #include "readlink"
 #include "rmdir"
-#if defined(__linux__) && !defined(__arm__) // TODO: struct user_desc
-#  include "set_thread_area"
-#endif
 #if !defined(__arm__) // TODO: struct stat
 #  include "stat"
 #endif
