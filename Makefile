@@ -59,13 +59,13 @@ compilers := \
 
 define define-rules
 
-$${build}/${1}: | $${build}
+$$>/${1}: | $$>
 	mkdir $${call relative,$$@}
 
-$${build}/${1}/%.c.s: $${.}/%.c | $${build}/${1}
+$$>/${1}/%.c.s: $$./%.c | $$>/${1}
 	$${${1}} -S -o $${call relative,$$@} $${call relative,$$<} -std=c11
 
-$${build}/${1}/%.cxx.s: $${.}/%.cxx | $${build}/${1}
+$$>/${1}/%.cxx.s: $$./%.cxx | $$>/${1}
 	$${${1}} -S -o $${call relative,$$@} $${call relative,$$<} -std=c++14
 
 endef
@@ -92,7 +92,7 @@ endef
 
 define compile-one
 _sources := ${2}
-__all := $${__all} $${_sources:$${.}/%=$${build}/${1}/%.s}
+__all := $${__all} $${_sources:$$./%=$$>/${1}/%.s}
 endef
 
 ####################################################################################################
@@ -126,11 +126,12 @@ else
 #---------------------------------------------------------------------------------------------------
 # We've been included.
 
-.       := ${realpath ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}}
-build   := ${.}/.build
-__roots := ${__roots} ${build}
+. := ${realpath ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}}
+> := $./.build
 
-${build}:
+__roots := ${__roots} $>
+
+$>:
 	mkdir ${call relative,$@}
 
 ${foreach c,${compilers},${eval ${call define-rules,${c}}}}
