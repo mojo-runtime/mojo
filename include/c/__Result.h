@@ -1,7 +1,8 @@
 #pragma once
 
-#include "__Word.h"
 #include "__Bool.h"
+#include "__Word.h"
+#include "__static_cast.h"
 
 typedef struct
 {
@@ -35,13 +36,13 @@ __Result_is_error(const __Result self)
 }
 
 static inline
-__Word
+int
 __Result_error_number(const __Result self)
 {
 #if defined(__linux__)
-    return -self.__word;
+    return __static_cast(int, -self.__word);
 #elif defined(__FreeBSD__)
-    return self.__word;
+    return __static_cast(int, self.__word);
 #else
 #  error
 #endif
