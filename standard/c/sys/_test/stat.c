@@ -1,6 +1,4 @@
-#if !defined(__arm__) // FIXME
-#  include <sys/stat.h>
-#endif
+#include <sys/stat.h>
 
 int
 main()

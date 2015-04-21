@@ -23,10 +23,8 @@
 #include "fchdir.hxx"
 #include "fcntl.hxx"
 #include "fork.hxx"
-#if !defined(__arm__) // TODO: struct stat
-#  include "fstat.hxx"
-#  include "fstatat.hxx"
-#endif
+#include "fstat.hxx"
+#include "fstatat.hxx"
 #if defined(__linux__)
 #  include "getcwd.hxx"
 #  include "getdents.hxx"
@@ -47,9 +45,7 @@
 #include "read.hxx"
 #include "readlink.hxx"
 #include "rmdir.hxx"
-#if !defined(__arm__) // TODO: struct stat
-#  include "stat.hxx"
-#endif
+#include "stat.hxx"
 #include "symlink.hxx"
 #if defined(__linux__)
 #  include "tgkill.hxx"
