@@ -1,6 +1,6 @@
 #pragma once
 
-#include "system/read.hxx"
+#include "os/read.hxx"
 
 namespace io { inline namespace _posix {
 
@@ -17,7 +17,7 @@ struct Reader
     auto
     read(void* buffer, size_t length) const noexcept
     {
-        return system::read(this->__fd, buffer, length);
+        return os::read(this->__fd, buffer, length);
     }
 
   private:

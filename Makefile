@@ -116,7 +116,7 @@ undefine __top
 
 include include/io/_test/Makefile
 include include/std/_test/Makefile
-include include/system/_test/Makefile
+include include/os/_test/Makefile
 include include/terminal/_test/Makefile
 include standard/c/_test/Makefile
 include standard/c/sys/_test/Makefile

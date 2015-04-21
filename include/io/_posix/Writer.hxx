@@ -1,6 +1,6 @@
 #pragma once
 
-#include "system/write.hxx"
+#include "os/write.hxx"
 
 namespace io { inline namespace _posix {
 
@@ -17,7 +17,7 @@ struct Writer
     auto
     write(const void* data, size_t length) const noexcept
     {
-        return system::write(this->__fd, data, length);
+        return os::write(this->__fd, data, length);
     }
 
   private:
