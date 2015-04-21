@@ -73,7 +73,7 @@ struct Result : private __Result
     Ok
     ok() const noexcept
     {
-        return static_cast<Ok>(this->__word);
+        return Ok(this->__word);
     }
 };
 
