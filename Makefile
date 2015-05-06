@@ -114,6 +114,7 @@ ifdef __top
 
 undefine __top
 
+include include/builtin/_test/Makefile
 include include/io/_test/Makefile
 include include/std/_test/Makefile
 include include/os/_test/Makefile
