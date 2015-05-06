@@ -7,13 +7,17 @@
 // No C++1z feature tests yet
 #  if defined(__clang__)
 #    if ((__clang_major__ > 3) || ((__clang_major__ == 3) && (__clang_minor__ >= 5)))
-#      define __static_assert static_assert
+#      define __static_assert(...)                                  \
+         _Pragma("clang diagnostic push")                           \
+         _Pragma("clang diagnostic ignored \"-Wc++1z-extensions\"") \
+         static_assert(__VA_ARGS__)                                 \
+         _Pragma("clang diagnostic pop")
 #    else
 #      error
 #    endif
 #  elif defined(__GNUC__)
 #    if ((__GNUC__ > 4) || ((__GNUC__ == 4) && (__GNUC_MINOR__ >= 3)))
-#      define __static_assert_2 static_assert
+#      define __static_assert_2(x, y) static_assert(x, y)
 #    else
 #      error
 #    endif
@@ -23,13 +27,13 @@
 #else
 #  if defined(__has_feature)
 #    if __has_feature(c_static_assert)
-#      define __static_assert_2 _Static_assert
+#      define __static_assert_2(x, y) _Static_assert(x, y)
 #    else
 #      error
 #    endif
 #  elif defined(__GNUC__)
 #    if ((__GNUC__ > 4) || ((__GNUC__ == 4) && (__GNUC_MINOR__ >= 3)))
-#      define __static_assert_2 _Static_assert
+#      define __static_assert_2(x, y) _Static_assert(x, y)
 #    else
 #      error
 #    endif
