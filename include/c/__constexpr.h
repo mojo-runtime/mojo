@@ -4,20 +4,13 @@
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if defined(__cplusplus)
-#  if defined(__has_feature)
-#    if __has_feature(cxx_relaxed_constexpr)
-#      define __constexpr constexpr
-#    endif
-#  elif defined(__GNUC__)
-#    if __GNUC__ >= 5
-#      define __constexpr constexpr
-#    endif
+#  include "feature/__has_cxx_relaxed_constexpr.h"
+#  if __has_cxx_relaxed_constexpr
+#    define __constexpr constexpr
 #  else
-#    error
+#    define __constexpr
 #  endif
-#endif
-
-#if !defined(__constexpr)
+#else
 #  define __constexpr
 #endif
 

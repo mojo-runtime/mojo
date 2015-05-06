@@ -1,14 +1,12 @@
 #pragma once
 
-#include "feature/__has_attribute_unused.h"
-
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
-#if __has_attribute_unused
-#  define __unused __attribute__((__unused__))
+#if defined(__STDC_VERSION__)
+#  define __has_c_noreturn (__STDC_VERSION__ >= 201112L)
 #else
-#  error
+#  define __has_c_noreturn 0
 #endif
 
 #pragma clang diagnostic pop

@@ -4,23 +4,15 @@
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if defined(__cplusplus)
-#  if defined(__has_cpp_attribute)
-#    if __has_cpp_attribute(noreturn)
-#      define __noreturn [[noreturn]]
-#    else
-#      error
-#    endif
-#  elif defined(__GNUC__)
-#    if ((__GNUC__ > 4) || ((__GNUC__ == 4) && (__GNUC_MINOR__ >= 8)))
-#      define __noreturn [[noreturn]]
-#    else
-#      error
-#    endif
+#  include "feature/__has_cpp_attribute_noreturn.h"
+#  if __has_cpp_attribute_noreturn
+#    define __noreturn [[noreturn]]
 #  else
 #    error
 #  endif
-#elif defined(__STDC_VERSION__)
-#  if __STDC_VERSION__ >= 201112L
+#else
+#  include "feature/__has_c_noreturn.h"
+#  if __has_c_noreturn
 #    define __noreturn _Noreturn
 #  else
 #    error
