@@ -5,7 +5,7 @@
 namespace std {
 
 template <typename X>
-add_rvalue_reference<X>
-declval();
+add_rvalue_reference_t<X>
+declval() noexcept;
 
 }
