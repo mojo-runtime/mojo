@@ -114,14 +114,14 @@ ifdef __top
 
 undefine __top
 
-include include/builtin/_test/Makefile
-include include/io/_test/Makefile
-include include/std/_test/Makefile
-include include/os/_test/Makefile
-include include/terminal/_test/Makefile
-include standard/c/_test/Makefile
-include standard/c/sys/_test/Makefile
-include standard/c++/_test/Makefile
+include include/builtin/__test/Makefile
+include include/io/__test/Makefile
+include include/std/__test/Makefile
+include include/os/__test/Makefile
+include include/terminal/__test/Makefile
+include standard/c/__test/Makefile
+include standard/c/sys/__test/Makefile
+include standard/c++/__test/Makefile
 
 else
 #---------------------------------------------------------------------------------------------------
