@@ -90,7 +90,7 @@
 // Type relationships
 
 #include "std/is_same.hxx"
-// is_base_of
+#include "std/is_base_of.hxx"
 // is_convertible
 
 //--------------------------------------------------------------------------------------------------
