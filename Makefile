@@ -43,7 +43,7 @@ gcc   += -Wno-unknown-pragmas
 
 #---------------------------------------------------------------------------------------------------
 
-clang-arm-linux      := ${clang} -target armv5-none-linux-elf -mfloat-abi=hard
+clang-arm-linux      := ${clang} -target armv7-linux-android
 clang-x86_64-freebsd := ${clang} -target x86_64-freebsd
 clang-x86_64-linux   := ${clang} -target x86_64-linux
 
