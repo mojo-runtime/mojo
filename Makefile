@@ -8,9 +8,6 @@ ROOT := ${realpath ${dir ${lastword ${MAKEFILE_LIST}}}}
 
 __all   :=
 __roots :=
-ifeq (${CWD},${ROOT})
-__top := 1
-endif
 
 ####################################################################################################
 
@@ -102,11 +99,9 @@ clean:
 endif # First time only
 ####################################################################################################
 
-ifdef __top
+ifeq (${words ${MAKEFILE_LIST}},1)
 #---------------------------------------------------------------------------------------------------
 # We're the Makefile.
-
-undefine __top
 
 include include/builtin/__test/Makefile
 include include/io/__test/Makefile
