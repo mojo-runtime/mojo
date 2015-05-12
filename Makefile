@@ -1,6 +1,12 @@
-ifndef ROOT
+ifndef __initialized
+define __initialized :=
+1
+endef
 
-ROOT := ${realpath ${dir ${lastword ${MAKEFILE_LIST}}}}
+ROOT/ := ${dir ${lastword ${MAKEFILE_LIST}}}
+ifeq (${ROOT/},./)
+ROOT/ :=
+endif
 
 .DEFAULT_GOAL := all
 .SECONDEXPANSION:
@@ -22,8 +28,8 @@ clang += -ferror-limit=1
 clang += -fno-asynchronous-unwind-tables -fno-exceptions
 gcc   += -fno-asynchronous-unwind-tables -fno-exceptions
 
-clang += -iquote${ROOT}/include -I${ROOT}/standard/c -cxx-isystem ${ROOT}/standard/c++
-gcc   += -iquote${ROOT}/include -I${ROOT}/standard/c -isystem${ROOT}/standard/c++
+clang += -iquote${ROOT/}include -I${ROOT/}standard/c -cxx-isystem ${ROOT/}standard/c++
+gcc   += -iquote${ROOT/}include -I${ROOT/}standard/c -isystem${ROOT/}standard/c++
 
 clang += -nostdinc -nostdlib
 gcc   += -nostdinc -nostdlib
