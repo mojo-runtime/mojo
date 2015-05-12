@@ -62,20 +62,14 @@ compilers := \
 define define-rules
 
 $$>/$1: | $$>
-	mkdir $${call relative,$$@}
+	mkdir $$@
 
-$$>/$1/%.c.s: $$./%.c | $$>/$1
-	$${$1} -S -o $${call relative,$$@} $${call relative,$$<} -std=c11
+$$>/$1/%.c.s: $$/%.c | $$>/$1
+	$${$1} -S -o $$@ $$< -std=c11
 
-$$>/$1/%.cxx.s: $$./%.cxx | $$>/$1
-	$${$1} -S -o $${call relative,$$@} $${call relative,$$<} -std=c++14
+$$>/$1/%.cxx.s: $$/%.cxx | $$>/$1
+	$${$1} -S -o $$@ $$< -std=c++14
 
-endef
-
-#---------------------------------------------------------------------------------------------------
-
-define relative
-${patsubst ${CURDIR}/%,%,$1}
 endef
 
 #---------------------------------------------------------------------------------------------------
@@ -87,7 +81,7 @@ endef
 #---------------------------------------------------------------------------------------------------
 
 define compile-one
-__all := $${__all} $${patsubst $$./%,$$>/$1/%.s,$2}
+__all := $${__all} $${patsubst $$/%,$$>/$1/%.s,$2}
 endef
 
 ####################################################################################################
@@ -120,13 +114,17 @@ else
 #---------------------------------------------------------------------------------------------------
 # We've been included.
 
-. := ${realpath ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}}
-> := $./.build
+/ := ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}
+ifeq ($/,./)
+/ :=
+endif
+
+> := $/.build
 
 __roots := ${__roots} $>
 
 $>:
-	mkdir ${call relative,$@}
+	mkdir $@
 
 ${foreach c,${compilers},${eval ${call define-rules,${c}}}}
 
