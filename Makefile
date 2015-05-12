@@ -1,6 +1,5 @@
 ifndef ROOT
 
-CWD  := ${realpath ${dir ${firstword ${MAKEFILE_LIST}}}}
 ROOT := ${realpath ${dir ${lastword ${MAKEFILE_LIST}}}}
 
 .DEFAULT_GOAL := all
@@ -70,7 +69,7 @@ endef
 #---------------------------------------------------------------------------------------------------
 
 define relative
-${patsubst ${CWD}/%,%,$1}
+${patsubst ${CURDIR}/%,%,$1}
 endef
 
 #---------------------------------------------------------------------------------------------------
@@ -92,7 +91,7 @@ all: $${__all}
 
 .PHONY: clean
 clean:
-	rm -rf ${patsubst ${CWD}/%,%,${__roots}}
+	rm -rf ${patsubst ${CURDIR}/%,%,${__roots}}
 
 ####################################################################################################
 endif # First time only
