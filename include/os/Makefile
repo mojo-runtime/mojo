@@ -1,1 +1,1 @@
-include ${dir ${lastword ${MAKEFILE_LIST}}}__test/Makefile
+include ${dir ${lastword ${MAKEFILE_LIST}}}_test/Makefile

@@ -1,4 +1,4 @@
 include ${addprefix ${dir ${lastword ${MAKEFILE_LIST}}}, \
-	__test/Makefile \
+	_test/Makefile \
 	sys/Makefile \
 }
