@@ -3,9 +3,9 @@ define __initialized :=
 1
 endef
 
-ROOT/ := ${dir ${lastword ${MAKEFILE_LIST}}}
-ifeq (${ROOT/},./)
-ROOT/ :=
+// := ${dir ${lastword ${MAKEFILE_LIST}}}
+ifeq (${//},./)
+// :=
 __top := 1
 endif
 
@@ -26,8 +26,8 @@ gcc   += -fmax-errors=1
 clang += -fno-asynchronous-unwind-tables -fno-exceptions
 gcc   += -fno-asynchronous-unwind-tables -fno-exceptions
 
-clang += -iquote${ROOT/}include -I${ROOT/}standard/c -cxx-isystem ${ROOT/}standard/c++
-gcc   += -iquote${ROOT/}include -I${ROOT/}standard/c -isystem${ROOT/}standard/c++
+clang += -iquote${//}include -I${//}standard/c -cxx-isystem ${//}standard/c++
+gcc   += -iquote${//}include -I${//}standard/c -isystem${//}standard/c++
 
 clang += -nostdinc -nostdlib
 gcc   += -nostdinc -nostdlib
@@ -101,8 +101,8 @@ undefine __top
 #---------------------------------------------------------------------------------------------------
 # We're the Makefile.
 
-include ${ROOT/}include/Makefile
-include ${ROOT/}standard/Makefile
+include ${//}include/Makefile
+include ${//}standard/Makefile
 
 else
 #---------------------------------------------------------------------------------------------------
