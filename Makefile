@@ -86,7 +86,7 @@ all: $${__all}
 
 .PHONY: clean
 clean:
-	rm -rf ${patsubst ${CURDIR}/%,%,${__roots}}
+	rm -rf ${__roots}
 
 ####################################################################################################
 endif # First time only
