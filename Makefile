@@ -9,9 +9,6 @@ ROOT/ :=
 __top := 1
 endif
 
-.DEFAULT_GOAL := all
-.SECONDEXPANSION:
-
 __all   :=
 __roots :=
 
@@ -87,6 +84,7 @@ endef
 
 ####################################################################################################
 
+.SECONDEXPANSION:
 .PHONY: all
 all: $${__all}
 
