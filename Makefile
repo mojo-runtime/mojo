@@ -21,7 +21,7 @@ clang += -fcolor-diagnostics
 gcc   += -fdiagnostics-color=always
 
 clang += -ferror-limit=1
-# No equivalent.
+gcc   += -fmax-errors=1
 
 clang += -fno-asynchronous-unwind-tables -fno-exceptions
 gcc   += -fno-asynchronous-unwind-tables -fno-exceptions
