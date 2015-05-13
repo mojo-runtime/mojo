@@ -6,6 +6,7 @@ endef
 ROOT/ := ${dir ${lastword ${MAKEFILE_LIST}}}
 ifeq (${ROOT/},./)
 ROOT/ :=
+__top := 1
 endif
 
 .DEFAULT_GOAL := all
@@ -97,7 +98,8 @@ clean:
 endif # First time only
 ####################################################################################################
 
-ifeq (${words ${MAKEFILE_LIST}},1)
+ifdef __top
+undefine __top
 #---------------------------------------------------------------------------------------------------
 # We're the Makefile.
 
