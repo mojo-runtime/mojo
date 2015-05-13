@@ -101,14 +101,8 @@ undefine __top
 #---------------------------------------------------------------------------------------------------
 # We're the Makefile.
 
-include include/builtin/__test/Makefile
-include include/io/__test/Makefile
-include include/std/__test/Makefile
-include include/os/__test/Makefile
-include include/terminal/__test/Makefile
-include standard/c/__test/Makefile
-include standard/c/sys/__test/Makefile
-include standard/c++/__test/Makefile
+include ${ROOT/}include/Makefile
+include ${ROOT/}standard/Makefile
 
 else
 #---------------------------------------------------------------------------------------------------
