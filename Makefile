@@ -59,13 +59,13 @@ compilers := \
 
 define define-rules
 
-$$>/$1: | $$>
+$${build/}$1: | $${build/}
 	mkdir $$@
 
-$$>/$1/%.c.s: $$/%.c | $$>/$1
+$${build/}$1/%.c.s: $$/%.c | $${build/}$1
 	$${$1} -S -o $$@ $$< -std=c11
 
-$$>/$1/%.cxx.s: $$/%.cxx | $$>/$1
+$${build/}$1/%.cxx.s: $$/%.cxx | $${build/}$1
 	$${$1} -S -o $$@ $$< -std=c++14
 
 endef
@@ -74,7 +74,7 @@ endef
 
 define compile-all
 ${foreach c,${compilers},
-__all += $${patsubst $$/%,$$>/${c}/%.s,$1}
+__all += $${patsubst $$/%,$${build/}${c}/%.s,$1}
 }
 endef
 
@@ -109,12 +109,12 @@ ifeq ($/,./)
 / :=
 endif
 
-> := $/.build
+build/ := $/.build/
 
-__roots += $>
-
-$>:
+${build/}:
 	mkdir $@
+
+__roots += ${build/}
 
 ${foreach c,${compilers},${eval ${call define-rules,${c}}}}
 
