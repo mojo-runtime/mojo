@@ -1,3 +1,3 @@
 include ${dir ${lastword ${MAKEFILE_LIST}}}../../../Makefile
 
-test += ${call compile-all,${wildcard $/*.c}}
+tests += ${call compile-all,${wildcard $/*.c}}

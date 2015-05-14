@@ -9,8 +9,6 @@ ifeq (${//},./)
 __top := 1
 endif
 
-test :=
-
 ####################################################################################################
 
 define Compiler
@@ -91,13 +89,14 @@ endef
 
 .SECONDEXPANSION:
 .PHONY: all
-all: test
+all: tests
 
 .PHONY: clean
 clean: $${foreach x,$${__roots},$${if $${realpath $$x.build},__clean-$$x.build}}
 
-.PHONY: test
-test: $${test}
+.PHONY: tests
+tests: $${tests}
+tests :=
 
 ####################################################################################################
 endif # First time only
