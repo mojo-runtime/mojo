@@ -28,9 +28,9 @@ define $1.rules
 $${build/}$1:
 	mkdir -p $$$$@
 $${build/}$1/%.c.s: $$/%.c | $${build/}$1
-	$$$${$1.path} $$$${$1.flags} -S -o $$$$@ $$$$< -std=c11
+	$$$${$1.path} $$$$< -o $$$$@ $$$${$1.flags} -S -std=c11
 $${build/}$1/%.cxx.s: $$/%.cxx | $${build/}$1
-	$$$${$1.path} $$$${$1.flags} -S -o $$$$@ $$$$< -std=c++14
+	$$$${$1.path} $$$$< -o $$$$@ $$$${$1.flags} -S -std=c++14
 endef
 # Functions
 define $1.copy
