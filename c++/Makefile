@@ -1,4 +1,4 @@
-include ${addprefix ${dir ${lastword ${MAKEFILE_LIST}}}, \
-	include/Makefile \
-	system/Makefile \
+include ${patsubst %,${dir ${lastword ${MAKEFILE_LIST}}}%/Makefile, \
+	include \
+	system \
 }
