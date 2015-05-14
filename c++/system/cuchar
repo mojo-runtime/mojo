@@ -5,8 +5,13 @@
 //--------------------------------------------------------------------------------------------------
 // Macros
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-id-macro"
+
 #define __STDC_UTF_16__ 1
 #define __STDC_UTF_32__ 1
+
+#pragma clang diagnostic pop
 
 //--------------------------------------------------------------------------------------------------
 // Functions

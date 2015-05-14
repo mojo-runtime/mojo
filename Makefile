@@ -30,14 +30,14 @@ endef
 ${eval ${call Compiler,clang}}
 
 clang.path  := clang
-clang.flags := -cxx-isystem ${//}c++/system
-clang.flags += -fcolor-diagnostics
+clang.flags := -fcolor-diagnostics
 clang.flags += -ferror-limit=1
 clang.flags += -fno-asynchronous-unwind-tables
 clang.flags += -fno-exceptions
 clang.flags += -iquote${//}c/include
 clang.flags += -iquote${//}c++/include
 clang.flags += -I${//}c/system
+clang.flags += -I${//}c++/system
 clang.flags += -nostdinc
 clang.flags += -nostdlib
 clang.flags += -O3
