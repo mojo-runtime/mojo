@@ -100,8 +100,7 @@ endef
 all: test
 
 .PHONY: clean
-clean:
-	rm -rf ${__roots:%=%.build/}
+clean: $${foreach x,$${__roots},$${if $${realpath $$x.build},__clean-$$x.build}}
 
 .PHONY: test
 test: $${test}
@@ -133,6 +132,10 @@ endif
 ifeq ($/,./)
 / :=
 endif
+
+.PHONY:
+__clean-$/.build:
+	rm -r ${subst __clean-,,$@}
 
 ${foreach c,${compilers},${eval ${$c.rules}}}
 
