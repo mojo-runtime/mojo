@@ -74,9 +74,9 @@ gcc.flags := \
 	-fno-asynchronous-unwind-tables \
 	-fno-exceptions \
 	-I${//}c/system \
+	-I${//}c++/system \
 	-iquote${//}c/include \
 	-iquote${//}c++/include \
-	-isystem${//}c++/system \
 	-Wall \
 	-Werror \
 	-Wno-unknown-pragmas \
