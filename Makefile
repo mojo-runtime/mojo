@@ -9,8 +9,7 @@ ifeq (${//},./)
 __top := 1
 endif
 
-__all   :=
-__roots :=
+test :=
 
 ####################################################################################################
 
@@ -99,7 +98,7 @@ compilers := \
 
 define compile-all
 ${foreach c,${compilers},
-__all += $${patsubst $$/%,$${build/}${c}/%.s,$1}
+test += $${patsubst $$/%,$${build/}${c}/%.s,$1}
 }
 endef
 
@@ -107,11 +106,14 @@ endef
 
 .SECONDEXPANSION:
 .PHONY: all
-all: $${__all}
+all: test
 
 .PHONY: clean
 clean:
 	rm -rf ${__roots:%=%.build/}
+
+.PHONY: test
+test: $${test}
 
 ####################################################################################################
 endif # First time only
