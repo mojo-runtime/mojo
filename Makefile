@@ -20,8 +20,12 @@ endef
 ####################################################################################################
 
 define Compiler
-$1.path  = $${error never set}
-$1.flags = $${error never set}
+define $1.path
+$${error not implemented}
+endef
+define $1.flags
+$${error not implemented}
+endef
 define $1.rules
 $${build/}$1:
 	mkdir -p $$$$@
