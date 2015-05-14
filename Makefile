@@ -13,22 +13,26 @@ endif
 
 define Compiler
 # Fields
-$1.path  := $1
-$1.flags :=
+$1.path      := $1
+$1.flags     :=
+$1.c-flags   :=
+$1.c++-flags :=
 # Properties
 define $1.rules
 $$/.build/$1:
 	mkdir -p $$$$@
 $$/.build/$1/%.c.s: $$/%.c | $$/.build/$1
-	$$$${$1.path} $$$$< -o $$$$@ $$$${$1.flags} -S -std=c11
+	$$$${$1.path} $$$$< -o $$$$@ $$$${$1.flags} $$$${$1.c-flags} -S
 $$/.build/$1/%.cxx.s: $$/%.cxx | $$/.build/$1
-	$$$${$1.path} $$$$< -o $$$$@ $$$${$1.flags} -S -std=c++14
+	$$$${$1.path} $$$$< -o $$$$@ $$$${$1.flags} $$$${$1.c++-flags} -S
 endef
 # Functions
 define $1.copy
 $${call Compiler,$$1}
-$$1.path  := $${$1.path}
-$$1.flags := $${$1.flags}
+$$1.path      := $${$1.path}
+$$1.flags     := $${$1.flags}
+$$1.c-flags   := $${$1.c-flags}
+$$1.c++-flags := $${$1.c++-flags}
 endef
 endef
 
@@ -40,14 +44,20 @@ clang.flags := \
 	-fno-asynchronous-unwind-tables \
 	-fno-exceptions \
 	-iquote${//}c/include \
-	-iquote${//}c++/include \
 	-I${//}c/system \
-	-I${//}c++/system \
 	-nostdinc \
 	-nostdlib \
 	-O3 \
 	-Werror \
-	-Weverything \
+	-Weverything
+
+clang.c-flags := \
+	-std=c11
+
+clang.c++-flags := \
+	-I${//}c++/system \
+	-iquote${//}c++/include \
+	-std=c++14 \
 	-Wno-c++98-compat \
 	-Wno-c++98-compat-pedantic
 
@@ -67,12 +77,18 @@ gcc.flags := \
 	-fno-asynchronous-unwind-tables \
 	-fno-exceptions \
 	-I${//}c/system \
-	-I${//}c++/system \
 	-iquote${//}c/include \
-	-iquote${//}c++/include \
 	-Wall \
 	-Werror \
 	-Wno-unknown-pragmas
+
+gcc.c-flags := \
+	-std=c11
+
+gcc.c++-flags := \
+	-iquote${//}c++/include \
+	-I${//}c++/system \
+	-std=c++14
 
 compilers := \
 	clang \
