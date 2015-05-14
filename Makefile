@@ -9,6 +9,8 @@ ifeq (${//},./)
 __top := 1
 endif
 
+__roots :=
+
 ####################################################################################################
 
 define Compiler
@@ -132,11 +134,7 @@ else
 
 / := ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}
 
-ifdef __roots
 __roots := ${__roots} $/
-else
-__roots := $/
-endif
 
 ifeq ($/,./)
 / :=
