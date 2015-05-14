@@ -14,6 +14,12 @@ __roots :=
 
 ####################################################################################################
 
+define build/
+$/.build/
+endef
+
+####################################################################################################
+
 define Compiler
 $1.path  = $${error never set}
 $1.flags = $${error never set}
@@ -105,7 +111,7 @@ all: $${__all}
 
 .PHONY: clean
 clean:
-	rm -rf ${__roots}
+	rm -rf ${__roots:%=%.build/}
 
 ####################################################################################################
 endif # First time only
@@ -124,19 +130,15 @@ else
 # We've been included.
 
 / := ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}
-ifeq ($/,./)
-/ :=
-endif
-
-build/ := $/.build/
-
-${build/}:
-	mkdir $@
 
 ifdef __roots
-__roots := ${__roots} ${build/}
+__roots := ${__roots} $/
 else
-__roots := ${build/}
+__roots := $/
+endif
+
+ifeq ($/,./)
+/ :=
 endif
 
 ${foreach c,${compilers},${eval ${${c}.rules}}}
