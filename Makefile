@@ -13,23 +13,17 @@ test :=
 
 ####################################################################################################
 
-define build/
-$/.build/
-endef
-
-####################################################################################################
-
 define Compiler
 # Fields
 $1.path  := $1
 $1.flags :=
 # Properties
 define $1.rules
-$${build/}$1:
+$$/.build/$1:
 	mkdir -p $$$$@
-$${build/}$1/%.c.s: $$/%.c | $${build/}$1
+$$/.build/$1/%.c.s: $$/%.c | $$/.build/$1
 	$$$${$1.path} $$$$< -o $$$$@ $$$${$1.flags} -S -std=c11
-$${build/}$1/%.cxx.s: $$/%.cxx | $${build/}$1
+$$/.build/$1/%.cxx.s: $$/%.cxx | $$/.build/$1
 	$$$${$1.path} $$$$< -o $$$$@ $$$${$1.flags} -S -std=c++14
 endef
 # Functions
@@ -90,7 +84,7 @@ compilers := \
 	gcc
 
 define compile-all
-${foreach c,${compilers},${patsubst $/%,${build/}$c/%.s,$1}}
+${foreach c,${compilers},${patsubst $/%,$/.build/$c/%.s,$1}}
 endef
 
 ####################################################################################################
