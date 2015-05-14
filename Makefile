@@ -30,13 +30,14 @@ endef
 ${eval ${call Compiler,clang}}
 
 clang.path  := clang
-clang.flags := -cxx-isystem ${//}standard/c++
+clang.flags := -cxx-isystem ${//}c++/system
 clang.flags += -fcolor-diagnostics
 clang.flags += -ferror-limit=1
 clang.flags += -fno-asynchronous-unwind-tables
 clang.flags += -fno-exceptions
-clang.flags += -iquote${//}include
-clang.flags += -I${//}standard/c
+clang.flags += -iquote${//}c/include
+clang.flags += -iquote${//}c++/include
+clang.flags += -I${//}c/system
 clang.flags += -nostdinc
 clang.flags += -nostdlib
 clang.flags += -O3
@@ -70,9 +71,10 @@ gcc.flags := -fdiagnostics-color=always
 gcc.flags += -fmax-errors=1
 gcc.flags += -fno-asynchronous-unwind-tables
 gcc.flags += -fno-exceptions
-gcc.flags += -I${//}standard/c
-gcc.flags += -iquote${//}include
-gcc.flags += -isystem${//}standard/c++
+gcc.flags += -I${//}c/system
+gcc.flags += -iquote${//}c/include
+gcc.flags += -iquote${//}c++/include
+gcc.flags += -isystem${//}c++/system
 gcc.flags += -Wall
 gcc.flags += -Werror
 gcc.flags += -Wno-unknown-pragmas
@@ -112,8 +114,8 @@ undefine __top
 #---------------------------------------------------------------------------------------------------
 # We're the Makefile.
 
-include include/Makefile
-include standard/Makefile
+include c/Makefile
+include c++/Makefile
 
 else
 #---------------------------------------------------------------------------------------------------
