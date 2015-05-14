@@ -14,38 +14,68 @@ __roots :=
 
 ####################################################################################################
 
-clang := clang-3.7
-gcc   := gcc-4.9
+define Compiler
+$1.path  = $${error never set}
+$1.flags = $${error never set}
+define $1.rules
+$${build/}$1:
+	mkdir -p $$$$@
+$${build/}$1/%.c.s: $$/%.c | $${build/}$1
+	$$$${$1.path} $$$${$1.flags} -S -o $$$$@ $$$$< -std=c11
+$${build/}$1/%.cxx.s: $$/%.cxx | $${build/}$1
+	$$$${$1.path} $$$${$1.flags} -S -o $$$$@ $$$$< -std=c++14
+endef
+endef
 
-clang += -fcolor-diagnostics
-gcc   += -fdiagnostics-color=always
+${eval ${call Compiler,clang}}
 
-clang += -ferror-limit=1
-gcc   += -fmax-errors=1
+clang.path  := clang
+clang.flags := -cxx-isystem ${//}standard/c++
+clang.flags += -fcolor-diagnostics
+clang.flags += -ferror-limit=1
+clang.flags += -fno-asynchronous-unwind-tables
+clang.flags += -fno-exceptions
+clang.flags += -iquote${//}include
+clang.flags += -I${//}standard/c
+clang.flags += -nostdinc
+clang.flags += -nostdlib
+clang.flags += -O3
+clang.flags += -Werror
+clang.flags += -Weverything
+clang.flags += -Wno-c++98-compat
+clang.flags += -Wno-c++98-compat-pedantic
 
-clang += -fno-asynchronous-unwind-tables -fno-exceptions
-gcc   += -fno-asynchronous-unwind-tables -fno-exceptions
+${eval ${call Compiler,clang-arm-linux}}
 
-clang += -iquote${//}include -I${//}standard/c -cxx-isystem ${//}standard/c++
-gcc   += -iquote${//}include -I${//}standard/c -isystem${//}standard/c++
+clang-arm-linux.path  := ${clang.path}
+clang-arm-linux.flags := ${clang.flags}
+clang-arm-linux.flags += -target armv7-linux-android
 
-clang += -nostdinc -nostdlib
-gcc   += -nostdinc -nostdlib
+${eval ${call Compiler,clang-x86_64-freebsd}}
 
-clang += -O3
-gcc   += -O3
+clang-x86_64-freebsd.path  := ${clang.path}
+clang-x86_64-freebsd.flags := ${clang.flags}
+clang-x86_64-freebsd.flags += -target x86_64-freebsd
 
-clang += -Werror -Weverything
-gcc   += -Werror -Wall
+${eval ${call Compiler,clang-x86_64-linux}}
 
-clang += -Wno-c++98-compat -Wno-c++98-compat-pedantic
-gcc   += -Wno-unknown-pragmas
+clang-x86_64-linux.path  := ${clang.path}
+clang-x86_64-linux.flags := ${clang.flags}
+clang-x86_64-linux.flags += -target x86_64-linux
 
-#---------------------------------------------------------------------------------------------------
+${eval ${call Compiler,gcc}}
 
-clang-arm-linux      := ${clang} -target armv7-linux-android
-clang-x86_64-freebsd := ${clang} -target x86_64-freebsd
-clang-x86_64-linux   := ${clang} -target x86_64-linux
+gcc.path  := gcc
+gcc.flags := -fdiagnostics-color=always
+gcc.flags += -fmax-errors=1
+gcc.flags += -fno-asynchronous-unwind-tables
+gcc.flags += -fno-exceptions
+gcc.flags += -I${//}standard/c
+gcc.flags += -iquote${//}include
+gcc.flags += -isystem${//}standard/c++
+gcc.flags += -Wall
+gcc.flags += -Werror
+gcc.flags += -Wno-unknown-pragmas
 
 #---------------------------------------------------------------------------------------------------
 
@@ -56,21 +86,6 @@ compilers := \
 	gcc
 
 ####################################################################################################
-
-define define-rules
-
-$${build/}$1: | $${build/}
-	mkdir $$@
-
-$${build/}$1/%.c.s: $$/%.c | $${build/}$1
-	$${$1} -S -o $$@ $$< -std=c11
-
-$${build/}$1/%.cxx.s: $$/%.cxx | $${build/}$1
-	$${$1} -S -o $$@ $$< -std=c++14
-
-endef
-
-#---------------------------------------------------------------------------------------------------
 
 define compile-all
 ${foreach c,${compilers},
@@ -116,7 +131,7 @@ ${build/}:
 
 __roots += ${build/}
 
-${foreach c,${compilers},${eval ${call define-rules,${c}}}}
+${foreach c,${compilers},${eval ${${c}.rules}}}
 
 #---------------------------------------------------------------------------------------------------
 endif
