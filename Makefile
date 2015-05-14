@@ -20,12 +20,10 @@ endef
 ####################################################################################################
 
 define Compiler
-define $1.path
-$${error not implemented}
-endef
-define $1.flags
-$${error not implemented}
-endef
+# Fields
+$1.path  := $1
+$1.flags :=
+# Properties
 define $1.rules
 $${build/}$1:
 	mkdir -p $$$$@
@@ -34,11 +32,16 @@ $${build/}$1/%.c.s: $$/%.c | $${build/}$1
 $${build/}$1/%.cxx.s: $$/%.cxx | $${build/}$1
 	$$$${$1.path} $$$${$1.flags} -S -o $$$$@ $$$$< -std=c++14
 endef
+# Functions
+define $1.copy
+$${call Compiler,$$1}
+$$1.path  := $${$1.path}
+$$1.flags := $${$1.flags}
+endef
 endef
 
 ${eval ${call Compiler,clang}}
 
-clang.path  := clang
 clang.flags := \
 	-fcolor-diagnostics \
 	-ferror-limit=1 \
@@ -56,27 +59,16 @@ clang.flags := \
 	-Wno-c++98-compat \
 	-Wno-c++98-compat-pedantic
 
-${eval ${call Compiler,clang-arm-linux}}
+${eval ${call clang.copy,clang-arm-linux}}
+${eval ${call clang.copy,clang-x86_64-freebsd}}
+${eval ${call clang.copy,clang-x86_64-linux}}
 
-clang-arm-linux.path  := ${clang.path}
-clang-arm-linux.flags := ${clang.flags} \
-	-target armv7-linux-android
-
-${eval ${call Compiler,clang-x86_64-freebsd}}
-
-clang-x86_64-freebsd.path  := ${clang.path}
-clang-x86_64-freebsd.flags := ${clang.flags} \
-	-target x86_64-freebsd
-
-${eval ${call Compiler,clang-x86_64-linux}}
-
-clang-x86_64-linux.path  := ${clang.path}
-clang-x86_64-linux.flags := ${clang.flags} \
-	-target x86_64-linux
+clang-arm-linux.flags      += -target armv7-linux-android
+clang-x86_64-freebsd.flags += -target x86_64-freebsd
+clang-x86_64-linux.flags   += -target x86_64-linux
 
 ${eval ${call Compiler,gcc}}
 
-gcc.path  := gcc
 gcc.flags := \
 	-fdiagnostics-color=always \
 	-fmax-errors=1 \
@@ -88,17 +80,14 @@ gcc.flags := \
 	-iquote${//}c++/include \
 	-Wall \
 	-Werror \
-	-Wno-unknown-pragmas \
-
-#---------------------------------------------------------------------------------------------------
+	-Wno-unknown-pragmas
 
 compilers := \
+	clang \
 	clang-arm-linux \
 	clang-x86_64-freebsd \
 	clang-x86_64-linux \
 	gcc
-
-####################################################################################################
 
 define compile-all
 ${foreach c,${compilers},${patsubst $/%,${build/}$c/%.s,$1}}
