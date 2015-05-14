@@ -30,54 +30,56 @@ endef
 ${eval ${call Compiler,clang}}
 
 clang.path  := clang
-clang.flags := -fcolor-diagnostics
-clang.flags += -ferror-limit=1
-clang.flags += -fno-asynchronous-unwind-tables
-clang.flags += -fno-exceptions
-clang.flags += -iquote${//}c/include
-clang.flags += -iquote${//}c++/include
-clang.flags += -I${//}c/system
-clang.flags += -I${//}c++/system
-clang.flags += -nostdinc
-clang.flags += -nostdlib
-clang.flags += -O3
-clang.flags += -Werror
-clang.flags += -Weverything
-clang.flags += -Wno-c++98-compat
-clang.flags += -Wno-c++98-compat-pedantic
+clang.flags := \
+	-fcolor-diagnostics \
+	-ferror-limit=1 \
+	-fno-asynchronous-unwind-tables \
+	-fno-exceptions \
+	-iquote${//}c/include \
+	-iquote${//}c++/include \
+	-I${//}c/system \
+	-I${//}c++/system \
+	-nostdinc \
+	-nostdlib \
+	-O3 \
+	-Werror \
+	-Weverything \
+	-Wno-c++98-compat \
+	-Wno-c++98-compat-pedantic
 
 ${eval ${call Compiler,clang-arm-linux}}
 
 clang-arm-linux.path  := ${clang.path}
-clang-arm-linux.flags := ${clang.flags}
-clang-arm-linux.flags += -target armv7-linux-android
+clang-arm-linux.flags := ${clang.flags} \
+	-target armv7-linux-android
 
 ${eval ${call Compiler,clang-x86_64-freebsd}}
 
 clang-x86_64-freebsd.path  := ${clang.path}
-clang-x86_64-freebsd.flags := ${clang.flags}
-clang-x86_64-freebsd.flags += -target x86_64-freebsd
+clang-x86_64-freebsd.flags := ${clang.flags} \
+	-target x86_64-freebsd
 
 ${eval ${call Compiler,clang-x86_64-linux}}
 
 clang-x86_64-linux.path  := ${clang.path}
-clang-x86_64-linux.flags := ${clang.flags}
-clang-x86_64-linux.flags += -target x86_64-linux
+clang-x86_64-linux.flags := ${clang.flags} \
+	-target x86_64-linux
 
 ${eval ${call Compiler,gcc}}
 
 gcc.path  := gcc
-gcc.flags := -fdiagnostics-color=always
-gcc.flags += -fmax-errors=1
-gcc.flags += -fno-asynchronous-unwind-tables
-gcc.flags += -fno-exceptions
-gcc.flags += -I${//}c/system
-gcc.flags += -iquote${//}c/include
-gcc.flags += -iquote${//}c++/include
-gcc.flags += -isystem${//}c++/system
-gcc.flags += -Wall
-gcc.flags += -Werror
-gcc.flags += -Wno-unknown-pragmas
+gcc.flags := \
+	-fdiagnostics-color=always \
+	-fmax-errors=1 \
+	-fno-asynchronous-unwind-tables \
+	-fno-exceptions \
+	-I${//}c/system \
+	-iquote${//}c/include \
+	-iquote${//}c++/include \
+	-isystem${//}c++/system \
+	-Wall \
+	-Werror \
+	-Wno-unknown-pragmas \
 
 #---------------------------------------------------------------------------------------------------
 
@@ -131,7 +133,11 @@ build/ := $/.build/
 ${build/}:
 	mkdir $@
 
-__roots += ${build/}
+ifdef __roots
+__roots := ${__roots} ${build/}
+else
+__roots := ${build/}
+endif
 
 ${foreach c,${compilers},${eval ${${c}.rules}}}
 
