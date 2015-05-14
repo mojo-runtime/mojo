@@ -112,8 +112,8 @@ undefine __top
 #---------------------------------------------------------------------------------------------------
 # We're the Makefile.
 
-include ${//}include/Makefile
-include ${//}standard/Makefile
+include include/Makefile
+include standard/Makefile
 
 else
 #---------------------------------------------------------------------------------------------------
