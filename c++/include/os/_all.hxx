@@ -9,9 +9,6 @@
 #  include "clock_nanosleep.hxx"
 #endif
 #include "clock_settime.hxx"
-#if defined(__linux__)
-#  include "clone.hxx"
-#endif
 #include "close.hxx"
 #if defined(__linux__)
 #  include "dup3.hxx"
