@@ -39,29 +39,45 @@ endef
 endef
 
 ${eval ${call Compiler,clang}}
+${eval ${call Compiler,gcc}}
 
-clang.flags := \
-	-fcolor-diagnostics \
-	-ferror-limit=1 \
-	-fno-asynchronous-unwind-tables \
-	-fno-exceptions \
-	-iquote${//}c/include \
-	-I${//}c/system \
-	-nostdinc \
-	-nostdlib \
-	-O3 \
-	-Werror \
-	-Weverything
+clang.flags += -fcolor-diagnostics
+gcc.flags   += -fdiagnostics-color=always
 
-clang.c-flags := \
-	-std=c11
+clang.flags += -ferror-limit=1
+gcc.flags   += -fmax-errors=1
 
-clang.c++-flags := \
-	-I${//}c++/system \
-	-iquote${//}c++/include \
-	-std=c++14 \
-	-Wno-c++98-compat \
-	-Wno-c++98-compat-pedantic
+clang.flags += -fno-asynchronous-unwind-tables -fno-exceptions
+gcc.flags   += -fno-asynchronous-unwind-tables -fno-exceptions
+
+clang.flags += -I${//}c/system
+gcc.flags   += -I${//}c/system
+
+clang.c++-flags += -I${//}c++/system
+gcc.c++-flags   += -I${//}c++/system
+
+clang.flags += -iquote${//}c/include
+gcc.flags   += -iquote${//}c/include
+
+clang.c++-flags += -iquote${//}c++/include
+gcc.c++-flags   += -iquote${//}c++/include
+
+clang.flags += -nostdinc -nostdlib
+gcc.flags   += -nostdinc -nostdlib
+
+clang.flags += -O3
+gcc.flags   += -O3
+
+clang.c-flags += -std=c11
+gcc.c-flags   += -std=c11
+
+clang.c++-flags += -std=c++14
+gcc.c++-flags   += -std=c++14
+
+clang.flags += -Werror -Weverything
+gcc.flags   += -Werror -Wall -Wno-unknown-pragmas
+
+clang.c++-flags += -Wno-c++98-compat -Wno-c++98-compat-pedantic
 
 ${eval ${call clang.copy,clang-arm-linux}}
 ${eval ${call clang.copy,clang-x86_64-freebsd}}
@@ -70,27 +86,6 @@ ${eval ${call clang.copy,clang-x86_64-linux}}
 clang-arm-linux.flags      += -target armv7-linux-android
 clang-x86_64-freebsd.flags += -target x86_64-freebsd
 clang-x86_64-linux.flags   += -target x86_64-linux
-
-${eval ${call Compiler,gcc}}
-
-gcc.flags := \
-	-fdiagnostics-color=always \
-	-fmax-errors=1 \
-	-fno-asynchronous-unwind-tables \
-	-fno-exceptions \
-	-I${//}c/system \
-	-iquote${//}c/include \
-	-Wall \
-	-Werror \
-	-Wno-unknown-pragmas
-
-gcc.c-flags := \
-	-std=c11
-
-gcc.c++-flags := \
-	-iquote${//}c++/include \
-	-I${//}c++/system \
-	-std=c++14
 
 compilers := \
 	clang \
