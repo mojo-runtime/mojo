@@ -3,7 +3,7 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
-#if defined(NDEBUG)
+#if !defined(DEBUG)
 #  define __todo(message) __builtin_unreachable()
 #else
 #  include "__debug_error.h"
