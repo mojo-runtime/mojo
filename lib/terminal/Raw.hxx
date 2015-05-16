@@ -16,8 +16,8 @@
 #include "c/VMIN.h"
 #include "c/VTIME.h"
 #include "c/struct-termios.h"
-#include "c/__todo.h"
-#include "c/__unreachable.h"
+#include "debug/__todo.h"
+#include "debug/__unreachable.h"
 #include "os/ioctl.hxx"
 
 namespace terminal {
