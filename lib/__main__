@@ -1,7 +1,14 @@
+// -*- C++ -*-
+
 #pragma once
 
-#include "_Exit.h"
-#include "__Arguments.h"
+#include "c/_Exit.h"
+
+struct Arguments;
+
+static
+void
+__main__(Arguments&);
 
 //--------------------------------------------------------------------------------------------------
 
@@ -35,9 +42,9 @@ extern "C" {
 __attribute__((__noreturn__, __nothrow__, __used__))
 static
 void
-__start(__Arguments& arguments)
+__start(Arguments& arguments)
 {
-    _main(arguments);
+    __main__(arguments);
     _Exit(0);
 }
 
