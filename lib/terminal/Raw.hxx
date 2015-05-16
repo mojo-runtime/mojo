@@ -37,7 +37,7 @@ struct Raw
             case EBADF:  __unreachable("bad `Reader`");
             case EFAULT: __unreachable("pointer is fine");
             case EINVAL: __unreachable("invalid request");
-            case ENOTTY: __todo("not a tty");
+            case ENOTTY: __todo();
             }
         }
 

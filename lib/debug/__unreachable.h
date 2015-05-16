@@ -12,7 +12,7 @@
 #  endif
 #else
 #  include "__debug_error.h"
-#  define __unreachable(message) __debug_error("unreachable", message, __FILE__, __PRETTY_FUNCTION__, __LINE__)
+#  define __unreachable(message) __debug_error("unreachable", __FILE__, __PRETTY_FUNCTION__, __LINE__, message)
 #endif
 
 #pragma clang diagnostic pop

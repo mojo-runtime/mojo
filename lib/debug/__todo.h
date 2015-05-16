@@ -4,10 +4,10 @@
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if !defined(DEBUG)
-#  define __todo(message) __builtin_unreachable()
+#  define __todo() __builtin_unreachable()
 #else
 #  include "__debug_error.h"
-#  define __todo(message) __debug_error("todo", message, __FILE__, __PRETTY_FUNCTION__, __LINE__)
+#  define __todo() __debug_error("todo", __FILE__, __PRETTY_FUNCTION__, __LINE__, 0)
 #endif
 
 #pragma clang diagnostic pop

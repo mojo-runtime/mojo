@@ -7,5 +7,5 @@
 #  include "__static_cast.h"
 #  define assert(x)                                                     \
     ((x) ? __static_cast(void, 0) :                                     \
-     __debug_error("assertion error", message, __FILE__, __PRETTY_FUNCTION__, __LINE__))
+     __debug_error("assertion error", __FILE__, __PRETTY_FUNCTION__, __LINE__, message))
 #endif

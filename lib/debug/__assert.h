@@ -19,7 +19,7 @@
 #  define __assert_1(x)             __assert_2(x, #x)
 #  define __assert_2(x, message)                                        \
     ((x) ? __static_cast(void, 0) :                                     \
-     __debug_error("assertion error", message, __FILE__, __PRETTY_FUNCTION__, __LINE__))
+     __debug_error("assertion error", __FILE__, __PRETTY_FUNCTION__, __LINE__, message))
 #endif
 
 #pragma clang diagnostic pop
