@@ -1,6 +1,6 @@
 #pragma once
 
-#include "feature/__has_builtin_memcmp.h"
+#include "config/__has_builtin_memcmp.h"
 #include "size_t.h"
 
 static inline

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "feature/__has_is_base_of.h"
+#include "config/__has_is_base_of.h"
 #include "integral_constant.hxx"
 
 namespace std {

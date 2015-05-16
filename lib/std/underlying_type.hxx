@@ -1,6 +1,6 @@
 #pragma once
 
-#include "feature/__has_underlying_type.h"
+#include "config/__has_underlying_type.h"
 
 namespace std {
 

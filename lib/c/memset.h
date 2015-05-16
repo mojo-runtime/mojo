@@ -1,6 +1,6 @@
 #pragma once
 
-#include "feature/__has_builtin_memset.h"
+#include "config/__has_builtin_memset.h"
 #include "size_t.h"
 
 static inline

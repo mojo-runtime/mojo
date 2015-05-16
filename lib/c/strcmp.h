@@ -1,6 +1,6 @@
 #pragma once
 
-#include "feature/__has_builtin_strcmp.h"
+#include "config/__has_builtin_strcmp.h"
 
 static inline
 int

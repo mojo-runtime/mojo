@@ -4,7 +4,7 @@
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if defined(NDEBUG)
-#  include "feature/__has_builtin_unreachable.h"
+#  include "config/__has_builtin_unreachable.h"
 #  if __has_builtin_unreachable
 #    define __unreachable(message) __builtin_unreachable()
 #  else

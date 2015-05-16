@@ -1,6 +1,6 @@
 #pragma once
 
-#include "feature/__has_builtin_alloca.h"
+#include "config/__has_builtin_alloca.h"
 #include "size_t.h"
 
 #if __has_builtin_alloca

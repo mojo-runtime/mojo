@@ -3,7 +3,7 @@
 #pragma clang diagnostic ignored "-Wgnu-zero-variadic-macro-arguments"
 
 #if defined(NDEBUG)
-#  include "feature/__has_builtin_assume.h"
+#  include "config/__has_builtin_assume.h"
 #  if __has_builtin_assume
 #    define assert(x, ...) __builtin_assume(x)
 #  else

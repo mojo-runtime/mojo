@@ -4,7 +4,7 @@
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if defined(__cplusplus)
-#  include "feature/__has_cxx_relaxed_constexpr.h"
+#  include "config/__has_cxx_relaxed_constexpr.h"
 #  if __has_cxx_relaxed_constexpr
 #    define __constexpr constexpr
 #  else

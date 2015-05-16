@@ -1,6 +1,6 @@
 #pragma once
 
-#include "feature/__has_attribute_nothrow.h"
+#include "config/__has_attribute_nothrow.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
