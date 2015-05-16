@@ -50,17 +50,14 @@ gcc.flags   += -fmax-errors=1
 clang.flags += -fno-asynchronous-unwind-tables -fno-exceptions
 gcc.flags   += -fno-asynchronous-unwind-tables -fno-exceptions
 
-clang.flags += -I${//}c/system
-gcc.flags   += -I${//}c/system
+clang.flags += -I${//}compat/c
+gcc.flags   += -I${//}compat/c
 
-clang.c++-flags += -I${//}c++/system
-gcc.c++-flags   += -I${//}c++/system
+clang.c++-flags += -I${//}compat/c++
+gcc.c++-flags   += -I${//}compat/c++
 
-clang.flags += -iquote${//}c/include
-gcc.flags   += -iquote${//}c/include
-
-clang.c++-flags += -iquote${//}c++/include
-gcc.c++-flags   += -iquote${//}c++/include
+clang.flags += -iquote${//}lib
+gcc.flags   += -iquote${//}lib
 
 clang.flags += -nostdinc -nostdlib
 gcc.flags   += -nostdinc -nostdlib
@@ -120,8 +117,8 @@ undefine __top
 #---------------------------------------------------------------------------------------------------
 # We're the Makefile.
 
-include c/Makefile
-include c++/Makefile
+include compat/Makefile
+include lib/Makefile
 
 else
 #---------------------------------------------------------------------------------------------------
