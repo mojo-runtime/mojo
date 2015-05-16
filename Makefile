@@ -21,11 +21,11 @@ $1.c-flags   :=
 $1.c++-flags :=
 # Properties
 define $1.rules
-$$/.build/$1:
-	mkdir -p $$$$@
-$$/.build/$1/%.c.s: $$/%.c | $$/.build/$1
+$$>$1: | $$>
+	mkdir $$$$@
+$$>$1/%.c.s: $$/%.c | $$>$1
 	$$$${$1.path} $$$$< -o $$$$@ $$$${$1.flags} $$$${$1.c-flags} -S
-$$/.build/$1/%.cxx.s: $$/%.cxx | $$/.build/$1
+$$>$1/%.cxx.s: $$/%.cxx | $$>$1
 	$$$${$1.path} $$$$< -o $$$$@ $$$${$1.flags} $$$${$1.c++-flags} -S
 endef
 # Functions
@@ -92,7 +92,7 @@ compilers := \
 	gcc
 
 define compile-all
-${foreach c,${compilers},${patsubst $/%,$/.build/$c/%.s,$1}}
+${foreach c,${compilers},${patsubst $/%,$>$c/%.s,$1}}
 endef
 
 ####################################################################################################
@@ -131,6 +131,10 @@ __roots := ${__roots} $/
 ifeq ($/,./)
 / :=
 endif
+
+> := $/.build/
+$>:
+	mkdir $@
 
 .PHONY:
 __clean-$/.build:
