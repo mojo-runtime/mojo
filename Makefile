@@ -84,8 +84,13 @@ clang-arm-linux.flags      += -target armv7-linux-android
 clang-x86_64-freebsd.flags += -target x86_64-freebsd
 clang-x86_64-linux.flags   += -target x86_64-linux
 
+${eval ${call clang.copy,clang-debug}}
+
+clang-debug.flags += -DDEBUG
+
 compilers := \
 	clang \
+	clang-debug \
 	clang-arm-linux \
 	clang-x86_64-freebsd \
 	clang-x86_64-linux \
