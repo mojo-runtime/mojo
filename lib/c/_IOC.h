@@ -5,9 +5,9 @@
 
 #if defined(__FreeBSD__)
 #  include "IOCPARM_MASK.h"
-#  include "__static_cast.h"
+#  include "__cast.h"
 #  define _IOC(inout,group,num,len) \
-    __static_cast(unsigned long, ((inout) | (((len) & IOCPARM_MASK) << 16) | ((group) << 8) | (num)))
+    __cast(unsigned long, ((inout) | (((len) & IOCPARM_MASK) << 16) | ((group) << 8) | (num)))
 #else
 #  error
 #endif

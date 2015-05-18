@@ -4,8 +4,8 @@
 #  define assert(x)
 #else
 #  include "debug/__debug_error.h"
-#  include "__static_cast.h"
+#  include "__cast.h"
 #  define assert(x)                                                     \
-    ((x) ? __static_cast(void, 0) :                                     \
+    ((x) ? __cast(void, 0) :                                            \
      __debug_error("assertion error", __FILE__, __PRETTY_FUNCTION__, __LINE__, message))
 #endif

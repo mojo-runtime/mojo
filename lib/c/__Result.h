@@ -2,7 +2,7 @@
 
 #include "__Bool.h"
 #include "__Word.h"
-#include "__static_cast.h"
+#include "__cast.h"
 
 typedef struct
 {
@@ -40,9 +40,9 @@ int
 __Result_error_number(const __Result self)
 {
 #if defined(__linux__)
-    return __static_cast(int, -self.__word);
+    return __cast(int, -self.__word);
 #elif defined(__FreeBSD__)
-    return __static_cast(int, self.__word);
+    return __cast(int, self.__word);
 #else
 #  error
 #endif
