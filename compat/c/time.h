@@ -34,7 +34,7 @@
 #endif
 
 #if 0 // XSI
-#  include "c/getdate_err.h"
+// getdate_err
 #endif
 
 // The following shall be declared as functions and may also be defined as macros.
