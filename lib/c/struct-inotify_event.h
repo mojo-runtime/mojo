@@ -2,7 +2,7 @@
 
 #if defined(__linux__)
 #  include "uint32_t.h"
-#  include "__flexible_array.h"
+#  include "config/__flexible_array.h"
 
 struct inotify_event
 {

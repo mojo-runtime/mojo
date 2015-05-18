@@ -1,6 +1,6 @@
 #pragma once
 
-#include "config/__has_attribute_unused.h"
+#include "__has_attribute_unused.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreserved-id-macro"

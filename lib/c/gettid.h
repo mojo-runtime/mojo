@@ -2,7 +2,7 @@
 
 #include "SYS_gettid.h"
 #include "pid_t.h"
-#include "__syscall.h"
+#include "config/__syscall.h"
 
 static inline
 pid_t

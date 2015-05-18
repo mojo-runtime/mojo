@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/__syscall.h"
+#include "config/__syscall.h"
 
 namespace os {
 

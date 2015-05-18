@@ -4,16 +4,16 @@
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if defined(__cplusplus)
-#  include "config/__has_cxx_alignas.h"
-#  if __has_cxx_alignas
-#    define __alignas alignas
+#  include "__has_cpp_attribute_noreturn.h"
+#  if __has_cpp_attribute_noreturn
+#    define __noreturn [[noreturn]]
 #  else
 #    error
 #  endif
 #else
-#  include "config/__has_c_alignas.h"
-#  if __has_c_alignas
-#    define __alignas _Alignas
+#  include "__has_c_noreturn.h"
+#  if __has_c_noreturn
+#    define __noreturn _Noreturn
 #  else
 #    error
 #  endif

@@ -4,16 +4,16 @@
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if defined(__cplusplus)
-#  include "config/__has_cxx_alignof.h"
-#  if __has_cxx_alignof
-#    define __alignof alignof
+#  include "__has_cxx_alignas.h"
+#  if __has_cxx_alignas
+#    define __alignas alignas
 #  else
 #    error
 #  endif
 #else
-#  include "config/__has_c_alignof.h"
-#  if __has_c_alignof
-#    define __alignof _Alignof
+#  include "__has_c_alignas.h"
+#  if __has_c_alignas
+#    define __alignas _Alignas
 #  else
 #    error
 #  endif
