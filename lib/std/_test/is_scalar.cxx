@@ -1,4 +1,4 @@
-#include "std/is_scalar.hxx"
+#include "../is_scalar.hxx"
 
 struct Struct
 {

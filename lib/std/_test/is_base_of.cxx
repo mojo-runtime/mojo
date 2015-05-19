@@ -1,4 +1,4 @@
-#include "std/is_base_of.hxx"
+#include "../is_base_of.hxx"
 
 struct A
 {

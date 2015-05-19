@@ -1,5 +1,5 @@
-#include "std/is_same.hxx"
-#include "std/underlying_type_t.hxx"
+#include "../is_same.hxx"
+#include "../underlying_type_t.hxx"
 
 enum class Char : char {};
 enum class Int  : int  {};

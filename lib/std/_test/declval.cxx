@@ -1,4 +1,4 @@
-#include "std/declval.hxx"
+#include "../declval.hxx"
 
 struct Default
 {
