@@ -13,13 +13,21 @@ __roots :=
 
 ####################################################################################################
 
-define Compiler
+Configuration.all :=
+
+define Configuration
+
+$0.all += $1
+
 # Fields
+
 $1.path      := $1
 $1.flags     :=
 $1.c-flags   :=
 $1.c++-flags :=
+
 # Properties
+
 define $1.rules
 $$>$1: | $$>
 	mkdir $$$$@
@@ -28,18 +36,23 @@ $$>$1/%.c.s: $$/%.c | $$>$1
 $$>$1/%.cxx.s: $$/%.cxx | $$>$1
 	$$$${$1.path} $$$$< -o $$$$@ $$$${$1.flags} $$$${$1.c++-flags} -S
 endef
+
 # Functions
+
 define $1.copy
-$${call Compiler,$$1}
+$${call Configuration,$$1}
 $$1.path      := $${$1.path}
 $$1.flags     := $${$1.flags}
 $$1.c-flags   := $${$1.c-flags}
 $$1.c++-flags := $${$1.c++-flags}
 endef
+
 endef
 
-${eval ${call Compiler,clang}}
-${eval ${call Compiler,gcc}}
+####################################################################################################
+
+${eval ${call Configuration,clang}}
+${eval ${call Configuration,gcc}}
 
 clang.flags += -fcolor-diagnostics
 gcc.flags   += -fdiagnostics-color=always
@@ -88,16 +101,8 @@ ${eval ${call clang.copy,clang-debug}}
 
 clang-debug.flags += -DDEBUG
 
-compilers := \
-	clang \
-	clang-debug \
-	clang-arm-linux \
-	clang-x86_64-freebsd \
-	clang-x86_64-linux \
-	gcc
-
 define compile-all
-${foreach c,${compilers},${patsubst $/%,$>$c/%.s,$1}}
+${foreach c,${Configuration.all},${patsubst $/%,$>$c/%.s,$1}}
 endef
 
 ####################################################################################################
@@ -145,7 +150,7 @@ $>:
 __clean-$/.build:
 	rm -r ${subst __clean-,,$@}
 
-${foreach c,${compilers},${eval ${$c.rules}}}
+${foreach c,${Configuration.all},${eval ${$c.rules}}}
 
 #---------------------------------------------------------------------------------------------------
 endif
