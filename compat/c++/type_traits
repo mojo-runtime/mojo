@@ -5,23 +5,23 @@
 //--------------------------------------------------------------------------------------------------
 // Helper classes
 
-#include "std/integral_constant.hxx"
-#include "std/true_type.hxx"
-#include "std/false_type.hxx"
+#include "c++/integral_constant.hxx"
+#include "c++/true_type.hxx"
+#include "c++/false_type.hxx"
 
 //--------------------------------------------------------------------------------------------------
 // Primary type categories
 
-#include "std/is_void.hxx"
-#include "std/is_null_pointer.hxx"
-#include "std/is_integral.hxx"
-#include "std/is_floating_point.hxx"
-#include "std/is_array.hxx"
-#include "std/is_enum.hxx"
-#include "std/is_union.hxx"
+#include "c++/is_void.hxx"
+#include "c++/is_null_pointer.hxx"
+#include "c++/is_integral.hxx"
+#include "c++/is_floating_point.hxx"
+#include "c++/is_array.hxx"
+#include "c++/is_enum.hxx"
+#include "c++/is_union.hxx"
 // is_class
 // is_function
-#include "std/is_pointer.hxx"
+#include "c++/is_pointer.hxx"
 // is_lvalue_reference
 // is_rvalue_reference
 // is_member_object_pointer
@@ -30,13 +30,13 @@
 //--------------------------------------------------------------------------------------------------
 // Composite type categories
 
-#include "std/is_fundamental.hxx"
-#include "std/is_arithmetic.hxx"
-#include "std/is_scalar.hxx"
+#include "c++/is_fundamental.hxx"
+#include "c++/is_arithmetic.hxx"
+#include "c++/is_scalar.hxx"
 // is_object
 // is_compound
 // is_reference
-#include "std/is_member_pointer.hxx"
+#include "c++/is_member_pointer.hxx"
 // is_const
 // is_volatile
 // is_trivial
@@ -47,8 +47,8 @@
 // is_empty
 // is_polymorphic
 // is_abstract
-#include "std/is_signed.hxx"
-#include "std/is_unsigned.hxx"
+#include "c++/is_signed.hxx"
+#include "c++/is_unsigned.hxx"
 
 //--------------------------------------------------------------------------------------------------
 // Supported operations
@@ -89,16 +89,16 @@
 //--------------------------------------------------------------------------------------------------
 // Type relationships
 
-#include "std/is_same.hxx"
-#include "std/is_base_of.hxx"
+#include "c++/is_same.hxx"
+#include "c++/is_base_of.hxx"
 // is_convertible
 
 //--------------------------------------------------------------------------------------------------
 // Const-volatility specifiers
 
-#include "std/remove_cv.hxx"
-#include "std/remove_const.hxx"
-#include "std/remove_volatile.hxx"
+#include "c++/remove_cv.hxx"
+#include "c++/remove_const.hxx"
+#include "c++/remove_volatile.hxx"
 
 // add_cv
 // add_const
@@ -107,10 +107,10 @@
 //--------------------------------------------------------------------------------------------------
 // References
 
-#include "std/remove_reference.hxx"
+#include "c++/remove_reference.hxx"
 
 // add_lvalue_reference
-#include "std/add_rvalue_reference.hxx"
+#include "c++/add_rvalue_reference.hxx"
 
 //--------------------------------------------------------------------------------------------------
 // Pointers
@@ -136,8 +136,8 @@
 // aligned_storage
 // aligned_union
 // decay
-#include "std/enable_if.hxx"
+#include "c++/enable_if.hxx"
 // conditional
 // common_type
-#include "std/underlying_type.hxx"
+#include "c++/underlying_type.hxx"
 // result_of
