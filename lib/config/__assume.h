@@ -11,4 +11,10 @@
 #  error
 #endif
 
+#if __has_builtin_assume
+#  define __assume(x) __builtin_assume(x)
+#else
+#  define __assume(x)
+#endif
+
 #pragma clang diagnostic pop

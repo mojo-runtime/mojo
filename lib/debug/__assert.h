@@ -5,12 +5,8 @@
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if defined(DEBUG)
-#  include "config/__has_builtin_assume.h"
-#  if __has_builtin_assume
-#    define __assert(x, ...) __builtin_assume(x)
-#  else
-#    define __assert(...)
-#  endif
+#  include "config/__assume.h"
+#  define __assert(x, ...) __assume(x)
 #else
 #  include "c/__cast.h"
 #  include "__debug_error.h"
