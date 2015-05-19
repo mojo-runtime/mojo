@@ -2,7 +2,7 @@
 
 #include "SYS_getgid.h"
 #include "gid_t.h"
-#include "config/__syscall.h"
+#include "__syscall.h"
 
 static inline
 gid_t

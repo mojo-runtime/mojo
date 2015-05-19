@@ -71,7 +71,7 @@ struct stat
     // sys/sys/stat.h
 
 #elif defined(__FreeBSD__)
-#  include "config/__cast.h"
+#  include "__cast.h"
 
     dev_t           st_dev;
     ino_t           st_ino;

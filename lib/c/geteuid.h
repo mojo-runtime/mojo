@@ -2,7 +2,7 @@
 
 #include "SYS_geteuid.h"
 #include "uid_t.h"
-#include "config/__syscall.h"
+#include "__syscall.h"
 
 static inline
 uid_t

@@ -1,7 +1,7 @@
 #pragma once
 
 #if defined(__linux__)
-#  include "config/__flexible_array.h"
+#  include "__flexible_array.h"
 
 struct linux_dirent
 {

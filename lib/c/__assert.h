@@ -5,7 +5,7 @@
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #if defined(DEBUG)
-#  include "config/__assume.h"
+#  include "__assume.h"
 #  define __assert(x, ...) __assume(x)
 #else
 #  include "c/__cast.h"

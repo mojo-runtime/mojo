@@ -2,15 +2,15 @@
 
 #include "c/EXIT_FAILURE.h"
 #include "c/_Exit.h"
-#include "config/__noreturn.h"
-#include "config/__nothrow.h"
-#include "config/__unused.h"
+#include "__noreturn.h"
+#include "__nothrow.h"
+#include "__unused.h"
 
 #if defined(__unix__)
 #  include "c/STDERR_FILENO.h"
 #  include "c/SYS_write.h"
 #  include "c/strlen.h"
-#  include "config/__syscall.h"
+#  include "__syscall.h"
 #  define _write(string) __syscall_3(SYS_write, STDERR_FILENO, __cast(__Word, string), strlen(string))
 #else
 #  error
