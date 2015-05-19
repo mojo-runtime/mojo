@@ -1,7 +1,7 @@
 #pragma once
 
-#include "c/SYS_fork.h"
-#include "c/pid_t.h"
+#include <c/SYS_fork.h>
+#include <c/pid_t.h>
 #include "Result.hxx"
 
 namespace os {
@@ -14,13 +14,13 @@ fork() noexcept
     enum Error
     {
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EAGAIN.h"
-#  include "c/ENOMEM.h"
+#  include <c/EAGAIN.h>
+#  include <c/ENOMEM.h>
         _(EAGAIN),
         _(ENOMEM),
 #endif
 #if defined(__linux__)
-#  include "c/ENOSYS.h"
+#  include <c/ENOSYS.h>
         _(ENOSYS),
 #endif
     };

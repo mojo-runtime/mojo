@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/uint32_t.h"
+#include <c/uint32_t.h>
 #include "Result.hxx"
 
 namespace os {
@@ -10,14 +10,14 @@ auto
 inotify_add_watch(int fd, const char* pathname, uint32_t mask) noexcept
 {
 #if defined(__linux__)
-#  include "c/EACCES.h"
-#  include "c/EBADF.h"
-#  include "c/EFAULT.h"
-#  include "c/EINVAL.h"
-#  include "c/ENAMETOOLONG.h"
-#  include "c/ENOENT.h"
-#  include "c/ENOMEM.h"
-#  include "c/ENOSPC.h"
+#  include <c/EACCES.h>
+#  include <c/EBADF.h>
+#  include <c/EFAULT.h>
+#  include <c/EINVAL.h>
+#  include <c/ENAMETOOLONG.h>
+#  include <c/ENOENT.h>
+#  include <c/ENOMEM.h>
+#  include <c/ENOSPC.h>
 #  define _(name, doc) _##name = name
 
     enum Error
@@ -52,7 +52,7 @@ inotify_add_watch(int fd, const char* pathname, uint32_t mask) noexcept
     };
 
 #  undef _
-#  include "c/SYS_inotify_add_watch.h"
+#  include <c/SYS_inotify_add_watch.h>
 
     return Result<int, Error>(SYS_inotify_add_watch, fd, pathname, mask);
 

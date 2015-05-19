@@ -1,8 +1,8 @@
 #pragma once
 
-#include "c/SYS_clock_getres.h"
-#include "c/clockid_t.h"
-#include "c/struct-timespec.h"
+#include <c/SYS_clock_getres.h>
+#include <c/clockid_t.h>
+#include <c/struct-timespec.h>
 #include "Result.hxx"
 
 namespace os {
@@ -15,8 +15,8 @@ clock_getres(clockid_t clk_id, struct timespec* res) noexcept
     enum Error
     {
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EFAULT.h"
-#  include "c/EINVAL.h"
+#  include <c/EFAULT.h>
+#  include <c/EINVAL.h>
         _(EFAULT),
         _(EINVAL),
 #endif

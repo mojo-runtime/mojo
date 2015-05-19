@@ -1,7 +1,7 @@
 #pragma once
 
-#include "c/clockid_t.h"
-#include "c/struct-timespec.h"
+#include <c/clockid_t.h>
+#include <c/struct-timespec.h>
 #include "Result.hxx"
 
 namespace os {
@@ -13,9 +13,9 @@ clock_nanosleep(clockid_t clock_id, int flags,
                 struct timespec* remain) noexcept
 {
 #if defined(__linux__)
-#  include "c/EFAULT.h"
-#  include "c/EINTR.h"
-#  include "c/EINVAL.h"
+#  include <c/EFAULT.h>
+#  include <c/EINTR.h>
+#  include <c/EINVAL.h>
 #  define _(name) _##name = name
 
     enum Error
@@ -26,7 +26,7 @@ clock_nanosleep(clockid_t clock_id, int flags,
     };
 
 #  undef _
-#  include "c/SYS_clock_nanosleep.h"
+#  include <c/SYS_clock_nanosleep.h>
 
     return Result<void, Error>(SYS_clock_nanosleep, clock_id, flags, request, remain);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/SYS_fchdir.h"
+#include <c/SYS_fchdir.h>
 #include "Result.hxx"
 
 namespace os {
@@ -13,9 +13,9 @@ fchdir(int fd) noexcept
     enum Error
     {
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EACCES.h"
-#  include "c/EBADF.h"
-#  include "c/ENOTDIR.h"
+#  include <c/EACCES.h>
+#  include <c/EBADF.h>
+#  include <c/ENOTDIR.h>
         _(EACCES),
         _(EBADF),
         _(ENOTDIR),

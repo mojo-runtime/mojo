@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/SYS_ioctl.h"
+#include <c/SYS_ioctl.h>
 #include "Result.hxx"
 
 namespace os {
@@ -17,10 +17,10 @@ ioctl(int fd, int request, Arg arg) noexcept
     enum Error
     {
 #if defined(__linux__) || defined(__FreeBSD__) // Same errors
-#  include "c/EBADF.h"
-#  include "c/EFAULT.h"
-#  include "c/EINVAL.h"
-#  include "c/ENOTTY.h"
+#  include <c/EBADF.h>
+#  include <c/EFAULT.h>
+#  include <c/EINVAL.h>
+#  include <c/ENOTTY.h>
 
         _(EBADF,
           "`fd` is not a valid descriptor."),

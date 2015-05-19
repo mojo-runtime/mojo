@@ -1,7 +1,7 @@
 #pragma once
 
-#include "c/SYS_open.h"
-#include "c/mode_t.h"
+#include <c/SYS_open.h>
+#include <c/mode_t.h>
 #include "Result.hxx"
 
 namespace os {
@@ -14,7 +14,7 @@ open(const char* pathname, int flags) noexcept
     enum Error
     {
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EACCES.h"
+#  include <c/EACCES.h>
 
         _(EACCES, "Search permission is denied for a component of the path prefix."
           " / "
@@ -27,7 +27,7 @@ open(const char* pathname, int flags) noexcept
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EDQUOT.h"
+#  include <c/EDQUOT.h>
 
         _(EDQUOT, "O_CREAT is specified, the file does not exist, and"
           " the directory in which the entry for the new file is being placed cannot be extended"
@@ -40,25 +40,25 @@ open(const char* pathname, int flags) noexcept
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EEXIST.h"
+#  include <c/EEXIST.h>
 
         _(EEXIST, "O_CREAT and O_EXCL were specified and the file exists."),
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EFAULT.h"
+#  include <c/EFAULT.h>
 
         _(EFAULT, "The `path` argument points outside the process's allocated address space."),
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EINTR.h"
+#  include <c/EINTR.h>
 
         _(EINTR, "The `open()` operation was interrupted by a signal."),
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EINVAL.h"
+#  include <c/EINVAL.h>
 
         _(EINVAL, "An attempt was made to open a descriptor with an illegal combination of"
           " O_RDONLY, O_WRONLY, O_RDWR, and O_EXEC."
@@ -70,14 +70,14 @@ open(const char* pathname, int flags) noexcept
 
 #endif
 #if defined(__FreeBSD__)
-#  include "c/EIO.h"
+#  include <c/EIO.h>
 
         _(EIO, "An I/O error occurred while making the directory entry"
           " or allocating the inode for O_CREAT."),
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EISDIR.h"
+#  include <c/EISDIR.h>
 
         _(EISDIR, "The named file is a directory, and"
           " the arguments specified it is to be modified."
@@ -88,7 +88,7 @@ open(const char* pathname, int flags) noexcept
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/ELOOP.h"
+#  include <c/ELOOP.h>
 
         _(ELOOP, "Too many symbolic links were encountered in translating the pathname."
           " / "
@@ -96,32 +96,32 @@ open(const char* pathname, int flags) noexcept
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EMFILE.h"
+#  include <c/EMFILE.h>
 
         _(EMFILE, "The process has already reached its limit for open file descriptors."),
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/ENAMETOOLONG.h"
+#  include <c/ENAMETOOLONG.h>
 
         _(ENAMETOOLONG, "`path` was too long."),
 
 #endif
 #if defined(__linux__)
-#  include "c/ENFILE.h"
+#  include <c/ENFILE.h>
 
         _(ENFILE, "The system limit on the total number of open files has been reached."),
 
 #endif
 #if defined(__linux__)
-#  include "c/ENODEV.h"
+#  include <c/ENODEV.h>
 
         _(ENODEV, "`path` refers to a device special file and no corresponding device exists."
           " (This is a Linux kernel bug.)"), // Was this ever fixed?
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/ENOENT.h"
+#  include <c/ENOENT.h>
 
         _(ENOENT, "O_CREAT is not set and the named file does not exist."
           " / "
@@ -133,13 +133,13 @@ open(const char* pathname, int flags) noexcept
 
 #endif
 #if defined(__linux__)
-#  include "c/ENOMEM.h"
+#  include <c/ENOMEM.h>
 
         _(ENOMEM, "Insufficient kernel memory was available."),
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/ENOSPC.h"
+#  include <c/ENOSPC.h>
 
         _(ENOSPC, "O_CREAT is specified, the file does not exist, and"
           " the directory in which the entry for the new file is being placed"
@@ -151,7 +151,7 @@ open(const char* pathname, int flags) noexcept
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/ENOTDIR.h"
+#  include <c/ENOTDIR.h>
 
         _(ENOTDIR, "O_DIRECTORY is specified and the file is not a directory."
           " / "
@@ -159,7 +159,7 @@ open(const char* pathname, int flags) noexcept
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/ENXIO.h"
+#  include <c/ENXIO.h>
 
         _(ENXIO, "O_NONBLOCK is set, the named file is a fifo, O_WRONLY is set, and"
           " no process has the file open for reading."
@@ -169,7 +169,7 @@ open(const char* pathname, int flags) noexcept
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EOPNOTSUPP.h"
+#  include <c/EOPNOTSUPP.h>
 
         _(EOPNOTSUPP, "(freebsd) O_SHLOCK or O_EXLOCK is specified"
           " but the underlying file system does not support locking."
@@ -181,13 +181,13 @@ open(const char* pathname, int flags) noexcept
 
 #endif
 #if defined(__linux__)
-#  include "c/EOVERFLOW.h"
+#  include <c/EOVERFLOW.h>
 
         _(EOVERFLOW, "`path` refers to a regular file that is too large to be opened."),
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EPERM.h"
+#  include <c/EPERM.h>
 
         _(EPERM, "(freebsd) O_CREAT is specified, the file does not exist, and"
           " the directory in which it is to be created has its immutable flag set."
@@ -205,7 +205,7 @@ open(const char* pathname, int flags) noexcept
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EROFS.h"
+#  include <c/EROFS.h>
 
         _(EROFS, "The named file resides on a read-only filed system, and"
           " the file is to be modified."
@@ -214,14 +214,14 @@ open(const char* pathname, int flags) noexcept
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/ETXTBSY.h"
+#  include <c/ETXTBSY.h>
 
         _(ETXTBSY, "The file is a shared text file that is being executed and"
           " the open() system call requests write access."),
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EWOULDBLOCK.h"
+#  include <c/EWOULDBLOCK.h>
 
         _(EWOULDBLOCK, "(freebsd) O_NONBLOCK and one of O_SHLOCK or O_EXLOCK is specified and"
           " the file is locked."

@@ -9,10 +9,10 @@ auto
 epoll_create1(int flags) noexcept
 {
 #if defined(__linux__)
-#  include "c/EINVAL.h"
-#  include "c/EMFILE.h"
-#  include "c/ENFILE.h"
-#  include "c/ENOMEM.h"
+#  include <c/EINVAL.h>
+#  include <c/EMFILE.h>
+#  include <c/ENFILE.h>
+#  include <c/ENOMEM.h>
 #  define _(name, doc) _##name = name
 
     enum Error
@@ -32,7 +32,7 @@ epoll_create1(int flags) noexcept
     };
 
 #  undef _
-#  include "c/SYS_epoll_create1.h"
+#  include <c/SYS_epoll_create1.h>
 
     return Result<int, Error>(SYS_epoll_create1, flags);
 

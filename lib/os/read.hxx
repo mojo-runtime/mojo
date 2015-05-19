@@ -1,7 +1,7 @@
 #pragma once
 
-#include "c/SYS_read.h"
-#include "c/size_t.h"
+#include <c/SYS_read.h>
+#include <c/size_t.h>
 #include "Result.hxx"
 
 namespace os {
@@ -14,43 +14,43 @@ read(int fd, void* buf, size_t count) noexcept
     enum Error
     {
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EAGAIN.h"
+#  include <c/EAGAIN.h>
         _(EAGAIN),
 #endif
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EBADF.h"
+#  include <c/EBADF.h>
         _(EBADF),
 #endif
 #if defined(__FreeBSD__)
-#  include "c/EBUSY.h"
+#  include <c/EBUSY.h>
         _(EBUSY),
 #endif
 #if defined(__FreeBSD__)
-#  include "c/ECONNRESET.h"
+#  include <c/ECONNRESET.h>
         _(ECONNRESET),
 #endif
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EFAULT.h"
+#  include <c/EFAULT.h>
         _(EFAULT),
 #endif
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EINTR.h"
+#  include <c/EINTR.h>
         _(EINTR),
 #endif
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EINVAL.h"
+#  include <c/EINVAL.h>
         _(EINVAL),
 #endif
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EIO.h"
+#  include <c/EIO.h>
         _(EIO),
 #endif
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EISDIR.h"
+#  include <c/EISDIR.h>
         _(EISDIR),
 #endif
 #if defined(__FreeBSD__)
-#  include "c/EOPNOTSUPP.h"
+#  include <c/EOPNOTSUPP.h>
         _(EOPNOTSUPP),
 #endif
     };

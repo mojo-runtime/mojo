@@ -1,7 +1,7 @@
 #pragma once
 
-#include "c/SYS_kill.h"
-#include "c/pid_t.h"
+#include <c/SYS_kill.h>
+#include <c/pid_t.h>
 #include "Result.hxx"
 
 namespace os {
@@ -14,9 +14,9 @@ kill(pid_t pid, int sig) noexcept
     enum Error
     {
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EINVAL.h"
-#  include "c/EPERM.h"
-#  include "c/ESRCH.h"
+#  include <c/EINVAL.h>
+#  include <c/EPERM.h>
+#  include <c/ESRCH.h>
         _(EINVAL),
         _(EPERM),
         _(ESRCH),

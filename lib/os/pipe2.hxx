@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/SYS_pipe2.h"
+#include <c/SYS_pipe2.h>
 #include "Result.hxx"
 
 namespace os {
@@ -13,19 +13,19 @@ pipe2(int pipefd[2], int flags) noexcept
     enum Error
     {
 #if defined(__linux__)
-#  include "c/EFAULT.h"
+#  include <c/EFAULT.h>
         _(EFAULT),
 #endif
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EINVAL.h"
-#  include "c/EMFILE.h"
-#  include "c/ENFILE.h"
+#  include <c/EINVAL.h>
+#  include <c/EMFILE.h>
+#  include <c/ENFILE.h>
         _(EINVAL),
         _(EMFILE),
         _(ENFILE),
 #endif
 #if defined(__FreeBSD__)
-#  include "c/ENOMEM.h"
+#  include <c/ENOMEM.h>
         _(ENOMEM),
 #endif
     };

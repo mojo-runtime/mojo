@@ -1,7 +1,7 @@
 #pragma once
 
-#include "c/SYS_munmap.h"
-#include "c/size_t.h"
+#include <c/SYS_munmap.h>
+#include <c/size_t.h>
 #include "Result.hxx"
 
 namespace os {
@@ -14,7 +14,7 @@ munmap(void* address, size_t length) noexcept
     enum Error
     {
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EINVAL.h"
+#  include <c/EINVAL.h>
 
         _(EINVAL,
           "`address` is not page aligned"

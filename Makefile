@@ -69,8 +69,8 @@ gcc.flags   += -I${//}compat/c
 clang.c++-flags += -I${//}compat/c++
 gcc.c++-flags   += -I${//}compat/c++
 
-clang.flags += -iquote${//}lib
-gcc.flags   += -iquote${//}lib
+clang.flags += -I${//}lib
+gcc.flags   += -I${//}lib
 
 clang.flags += -nostdinc -nostdlib
 gcc.flags   += -nostdinc -nostdlib

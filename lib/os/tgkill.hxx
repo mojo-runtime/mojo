@@ -9,9 +9,9 @@ auto
 tgkill(int tgid, int tid, int sig) noexcept
 {
 #if defined(__linux__)
-#  include "c/EINVAL.h"
-#  include "c/EPERM.h"
-#  include "c/ESRCH.h"
+#  include <c/EINVAL.h>
+#  include <c/EPERM.h>
+#  include <c/ESRCH.h>
 #  define _(name) _##name = name
 
     enum Error
@@ -22,7 +22,7 @@ tgkill(int tgid, int tid, int sig) noexcept
     };
 
 #  undef _
-#  include "c/SYS_tgkill.h"
+#  include <c/SYS_tgkill.h>
 
     return Result<void, Error>(SYS_tgkill, tgid, tid, sig);
 

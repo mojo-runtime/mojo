@@ -1,8 +1,8 @@
 #pragma once
 
-#include "c/SYS_mmap.h"
-#include "c/off_t.h"
-#include "c/size_t.h"
+#include <c/SYS_mmap.h>
+#include <c/off_t.h>
+#include <c/size_t.h>
 #include "Result.hxx"
 
 namespace os {
@@ -20,7 +20,7 @@ mmap(void*  addr,
     enum Error
     {
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EACCES.h"
+#  include <c/EACCES.h>
 
         _(EACCES,
           "The flag PROT_READ was specified as part of the `prot` argument"
@@ -35,7 +35,7 @@ mmap(void*  addr,
 
 #endif
 #if defined(__linux__)
-#  include "c/EAGAIN.h"
+#  include <c/EAGAIN.h>
 
         _(EAGAIN,
           "The file has been locked."
@@ -44,8 +44,8 @@ mmap(void*  addr,
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/EBADF.h"
-#  include "c/EINVAL.h"
+#  include <c/EBADF.h>
+#  include <c/EINVAL.h>
 
         _(EBADF,
           "`fd` is not a valid file descriptor."),
@@ -81,15 +81,15 @@ mmap(void*  addr,
 
 #endif
 #if defined(__linux__)
-#  include "c/ENFILE.h"
+#  include <c/ENFILE.h>
 
         _(ENFILE,
           "The system limit on the total number of open files has been reached."),
 
 #endif
 #if defined(__FreeBSD__) || defined(__linux__)
-#  include "c/ENODEV.h"
-#  include "c/ENOMEM.h"
+#  include <c/ENODEV.h>
+#  include <c/ENOMEM.h>
 
         _(ENODEV,
           "(freebsd) MAP_ANON has not been specified and"
@@ -109,9 +109,9 @@ mmap(void*  addr,
 
 #endif
 #if defined(__linux__)
-#  include "c/EOVERFLOW.h"
-#  include "c/EPERM.h"
-#  include "c/ETXTBSY.h"
+#  include <c/EOVERFLOW.h>
+#  include <c/EPERM.h>
+#  include <c/ETXTBSY.h>
 
         _(EOVERFLOW,
           "On 32-bit architecture with the large file extension:"

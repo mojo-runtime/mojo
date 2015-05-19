@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/SYS_symlink.h"
+#include <c/SYS_symlink.h>
 #include "Result.hxx"
 
 namespace os {
@@ -13,14 +13,14 @@ symlink(const char* target, const char* linkpath) noexcept
     enum Error
     {
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/EACCES.h"
-#  include "c/EDQUOT.h"
-#  include "c/EEXIST.h"
-#  include "c/EFAULT.h"
-#  include "c/EIO.h"
-#  include "c/ELOOP.h"
-#  include "c/ENAMETOOLONG.h"
-#  include "c/ENOENT.h"
+#  include <c/EACCES.h>
+#  include <c/EDQUOT.h>
+#  include <c/EEXIST.h>
+#  include <c/EFAULT.h>
+#  include <c/EIO.h>
+#  include <c/ELOOP.h>
+#  include <c/ENAMETOOLONG.h>
+#  include <c/ENOENT.h>
         _(EACCES),
         _(EDQUOT),
         _(EEXIST),
@@ -31,14 +31,14 @@ symlink(const char* target, const char* linkpath) noexcept
         _(ENOENT),
 #endif
 #if defined(__linux__)
-#  include "c/ENOMEM.h"
+#  include <c/ENOMEM.h>
         _(ENOMEM),
 #endif
 #if defined(__linux__) || defined(__FreeBSD__)
-#  include "c/ENOSPC.h"
-#  include "c/ENOTDIR.h"
-#  include "c/EPERM.h"
-#  include "c/EROFS.h"
+#  include <c/ENOSPC.h>
+#  include <c/ENOTDIR.h>
+#  include <c/EPERM.h>
+#  include <c/EROFS.h>
         _(ENOSPC),
         _(ENOTDIR),
         _(EPERM),

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "c/struct-utsname.h"
+#include <c/struct-utsname.h>
 #include "Result.hxx"
 
 namespace os {
@@ -10,7 +10,7 @@ auto
 uname(struct utsname* buf) noexcept
 {
 #if defined(__linux__)
-#  include "c/EFAULT.h"
+#  include <c/EFAULT.h>
 #  define _(name) _##name = name
 
     enum Error
@@ -19,7 +19,7 @@ uname(struct utsname* buf) noexcept
     };
 
 #  undef _
-#  include "c/SYS_uname.h"
+#  include <c/SYS_uname.h>
 
     return Result<void, Error>(SYS_uname, buf);
 
