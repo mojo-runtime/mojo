@@ -1,6 +1,6 @@
 #pragma once
 
-#include "os/write.hxx"
+#include <os/write.hxx>
 
 template <size_t n>
 static

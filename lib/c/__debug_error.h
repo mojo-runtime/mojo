@@ -1,15 +1,15 @@
 #pragma once
 
-#include "c/EXIT_FAILURE.h"
-#include "c/_Exit.h"
+#include "EXIT_FAILURE.h"
+#include "_Exit.h"
 #include "__noreturn.h"
 #include "__nothrow.h"
 #include "__unused.h"
 
 #if defined(__unix__)
-#  include "c/STDERR_FILENO.h"
-#  include "c/SYS_write.h"
-#  include "c/strlen.h"
+#  include "STDERR_FILENO.h"
+#  include "SYS_write.h"
+#  include "strlen.h"
 #  include "__syscall.h"
 #  define _write(string) __syscall_3(SYS_write, STDERR_FILENO, __old_style_cast(__Word, string), strlen(string))
 #else
