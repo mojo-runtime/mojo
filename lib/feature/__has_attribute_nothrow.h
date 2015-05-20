@@ -3,7 +3,8 @@
 #if defined(__has_attribute)
 #  define __has_attribute_nothrow __has_attribute(nothrow)
 #elif defined(__GNUC__)
-#  define __has_attribute_nothrow ((__GNUC__ > 3) || ((__GNUC__ == 3) && (__GNUC_MINOR__ >= 3)))
+#  include "__has_gnuc.h"
+#  define __has_attribute_nothrow __has_gnuc(3, 3)
 #else
 #  error
 #endif

@@ -8,7 +8,8 @@
     name []                                                             \
     _Pragma("clang diagnostic pop")
 #  elif defined(__GNUC__)
-#    if ((__GNUC__ >= 2) || ((__GNUC__ == 2) && (__GNUC_MINOR__ >= 97)))
+#    include "__has_gnuc.h"
+#    if __has_gnuc(2, 97)
 #      define __flexible_array(name) name []
 #    else
 #      error
