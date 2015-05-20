@@ -1,10 +1,10 @@
 #pragma once
 
+#include <feature/__noreturn.h>
+#include <feature/__nothrow.h>
+#include <feature/__unused.h>
 #include "EXIT_FAILURE.h"
 #include "_Exit.h"
-#include "__noreturn.h"
-#include "__nothrow.h"
-#include "__unused.h"
 
 #if defined(__unix__)
 #  include "STDERR_FILENO.h"

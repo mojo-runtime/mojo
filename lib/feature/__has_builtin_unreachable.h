@@ -7,9 +7,3 @@
 #else
 #  error
 #endif
-
-#if __has_builtin_unreachable
-#  define __unreachable() __builtin_unreachable()
-#else
-#  define __unreachable()
-#endif

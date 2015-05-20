@@ -1,7 +1,7 @@
 #pragma once
 
+#include <feature/__nothrow.h>
 #include "__Result.h"
-#include "__nothrow.h"
 
 #if defined(__linux__)
 #  if defined(__x86_64__)

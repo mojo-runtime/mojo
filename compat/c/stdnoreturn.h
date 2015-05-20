@@ -1,6 +1,10 @@
 #pragma once
 
 #if !defined(__cplusplus)
-#  include "c/__noreturn.h"
-#  define noreturn __noreturn
+#  include <feature/__has_c_noreturn.h>
+#  if __has_c_noreturn
+#    define noreturn _Noreturn
+#  else
+#    error
+#  endif
 #endif

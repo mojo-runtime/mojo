@@ -1,10 +1,14 @@
 #pragma once
 
 #if !defined(__cplusplus)
-#  include "c/__alignas.h"
-#  include "c/__alignof.h"
-#  define alignas __alignas
-#  define alignof __alignof
+#  include <feature/__has_c_alignas.h>
+#  include <feature/__has_c_alignof.h>
+#  if __has_c_alignas && __has_c_alignof
+#    define alignas _Alignas
+#    define alignof _Alignof
+#  else
+#    error
+#  endif
 #endif
 
 #define __alignas_is_defined 1

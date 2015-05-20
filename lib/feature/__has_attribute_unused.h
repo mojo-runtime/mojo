@@ -7,9 +7,3 @@
 #else
 #  error
 #endif
-
-#if __has_attribute_unused
-#  define __unused __attribute__((__unused__))
-#else
-#  error
-#endif

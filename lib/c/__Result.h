@@ -1,8 +1,8 @@
 #pragma once
 
+#include <feature/__old_style_cast.h>
 #include "__Bool.h"
 #include "__Word.h"
-#include "__old_style_cast.h"
 
 typedef struct
 {
