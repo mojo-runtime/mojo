@@ -5,7 +5,7 @@
 
 #if defined(__has_attribute)
 #  define __has_attribute_unused __has_attribute(unused)
-#elif defined(__GNUC__) // Version?
+#elif defined(__GNUC__)
 #  define __has_attribute_unused ((__GNUC__ >= 3) || ((__GNUC__ == 3) && (__GNUC_MINOR__ >= 3)))
 #else
 #  error
