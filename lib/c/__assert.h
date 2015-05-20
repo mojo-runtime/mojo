@@ -1,8 +1,6 @@
 #pragma once
 
-#pragma clang diagnostic ignored "-Wgnu-zero-variadic-macro-arguments"
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wreserved-id-macro"
+#pragma clang diagnostic ignored "-Wgnu-zero-variadic-macro-arguments" // FIXME
 
 #if defined(DEBUG)
 #  include "__assume.h"
@@ -17,6 +15,4 @@
     ((x) ? __old_style_cast(void, 0) :                                  \
      __debug_error("assertion error", __FILE__, __PRETTY_FUNCTION__, __LINE__, message))
 #endif
-
-#pragma clang diagnostic pop
 

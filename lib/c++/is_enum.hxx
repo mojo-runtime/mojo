@@ -2,9 +2,6 @@
 
 #include "integral_constant.hxx"
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wreserved-id-macro"
-
 #if defined(__has_extension)
 #  define __has_is_enum __has_extension(is_enum)
 #elif defined(__GNUC__)
@@ -12,8 +9,6 @@
 #else
 #  error
 #endif
-
-#pragma clang diagnostic pop
 
 namespace std {
 

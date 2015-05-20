@@ -1,8 +1,5 @@
 #pragma once
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wreserved-id-macro"
-
 #if defined(__cplusplus)
 #  if defined(__clang__)
 #    define __flexible_array(name)                                      \
@@ -30,5 +27,3 @@
 #    error
 #  endif
 #endif
-
-#pragma clang diagnostic pop

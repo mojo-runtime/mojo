@@ -1,8 +1,5 @@
 #pragma once
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wreserved-id-macro"
-
 #if defined(__has_feature)
 #  define __has_c_alignas   __has_feature(c_alignas)
 #  define __has_cxx_alignas __has_feature(cxx_alignas)
@@ -26,5 +23,3 @@
 #    error
 #  endif
 #endif
-
-#pragma clang diagnostic pop

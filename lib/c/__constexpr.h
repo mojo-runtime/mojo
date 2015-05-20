@@ -1,8 +1,5 @@
 #pragma once
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wreserved-id-macro"
-
 #if defined(__cplusplus)
 #  if defined(__has_feature)
 #    define __has_cxx_relaxed_constexpr __has_feature(cxx_relaxed_constexpr)
@@ -20,5 +17,3 @@
 #else
 #  define __constexpr
 #endif
-
-#pragma clang diagnostic pop

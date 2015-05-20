@@ -1,8 +1,5 @@
 #pragma once
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wreserved-id-macro"
-
 #if defined(__FreeBSD__)
 #  include "IOC_OUT.h"
 #  include "_IOC.h"
@@ -10,5 +7,3 @@
 #else
 #  error
 #endif
-
-#pragma clang diagnostic pop

@@ -1,8 +1,5 @@
 #pragma once
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wreserved-id-macro"
-
 #if defined(__has_extension)
 #  define __has_underlying_type __has_extension(underlying_type)
 #elif defined(__GNUC__)
@@ -10,8 +7,6 @@
 #else
 #  error
 #endif
-
-#pragma clang diagnostic pop
 
 namespace std {
 

@@ -1,8 +1,5 @@
 #pragma once
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wreserved-id-macro"
-
 #if defined(__cplusplus)
 #  if defined(__has_cpp_attribute)
 #    define __has_cpp_attribute_noreturn __has_cpp_attribute(noreturn)
@@ -28,5 +25,3 @@
 #    error
 #  endif
 #endif
-
-#pragma clang diagnostic pop

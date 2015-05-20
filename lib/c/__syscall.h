@@ -3,9 +3,6 @@
 #include "__Result.h"
 #include "__nothrow.h"
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wreserved-id-macro"
-
 #if defined(__linux__)
 #  if defined(__x86_64__)
 #    define __syscall_CLOBBERS "rcx", "r11"
@@ -56,8 +53,6 @@
 #else
 #  error
 #endif
-
-#pragma clang diagnostic pop
 
 __nothrow
 static inline

@@ -84,7 +84,7 @@ gcc.c-flags   += -std=c11
 clang.c++-flags += -std=c++14
 gcc.c++-flags   += -std=c++14
 
-clang.flags += -Werror -Weverything
+clang.flags += -Werror -Weverything -Wno-reserved-id-macro
 gcc.flags   += -Werror -Wall -Wno-unknown-pragmas
 
 clang.c++-flags += -Wno-c++98-compat -Wno-c++98-compat-pedantic
