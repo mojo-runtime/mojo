@@ -11,7 +11,7 @@
 #  include "c/SYS_write.h"
 #  include "c/strlen.h"
 #  include "__syscall.h"
-#  define _write(string) __syscall_3(SYS_write, STDERR_FILENO, __cast(__Word, string), strlen(string))
+#  define _write(string) __syscall_3(SYS_write, STDERR_FILENO, __old_style_cast(__Word, string), strlen(string))
 #else
 #  error
 #endif
