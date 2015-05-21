@@ -1,7 +1,0 @@
-#include <sys/syscall.h>
-
-int
-main()
-{
-    return 0;
-}
