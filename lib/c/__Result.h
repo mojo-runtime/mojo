@@ -1,7 +1,6 @@
 #pragma once
 
 #include <feature/__old_style_cast.h>
-#include "__Bool.h"
 #include "__Word.h"
 
 typedef struct
@@ -17,7 +16,11 @@ typedef struct
 __Result;
 
 static inline
-__Bool
+#if defined(__cplusplus)
+bool
+#else
+_Bool
+#endif
 __Result_is_error(const __Result self)
 {
 #if defined(__linux__)

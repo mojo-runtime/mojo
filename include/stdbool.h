@@ -1,8 +1,7 @@
 #pragma once
 
 #if !defined(__cplusplus)
-#  include "c/__Bool.h"
-#  define bool __Bool
+#  define bool _Bool
 #  define false 0
 #  define true 1
 #endif
