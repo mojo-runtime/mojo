@@ -1,7 +1,7 @@
 #pragma once
 
+#include <abi/__Word.h>
 #include <feature/__old_style_cast.h>
-#include "__Word.h"
 
 typedef struct
 {
