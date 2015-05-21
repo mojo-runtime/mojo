@@ -4,7 +4,7 @@
 #  define __has_attribute_unused __has_attribute(unused)
 #elif defined(__GNUC__)
 #  include "__has_gnuc.h"
-#  define __has_attribute_unused __has_gnuc(3, 3)
+#  define __has_attribute_unused __has_gnuc(3, 1)
 #else
 #  error
 #endif
