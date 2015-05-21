@@ -87,7 +87,7 @@ gcc.c++-flags   += -std=c++14
 clang.flags += -Werror -Weverything -Wno-reserved-id-macro
 gcc.flags   += -Werror -Wall -Wno-unknown-pragmas
 
-clang.c++-flags += -Wno-c++98-compat -Wno-c++98-compat-pedantic
+clang.c++-flags += -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-c99-extensions
 
 ${eval ${call clang.copy,clang-arm-linux}}
 ${eval ${call clang.copy,clang-x86_64-freebsd}}

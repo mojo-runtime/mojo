@@ -1,7 +1,7 @@
 #pragma once
 
 #if defined(__linux__)
-#  include <feature/__flexible_array.h>
+#  include <feature/__has_flexible_array.h>
 
 struct linux_dirent
 {
@@ -14,8 +14,12 @@ struct linux_dirent
     unsigned short
     d_reclen;
 
+#if __has_flexible_array
     char
-    __flexible_array(d_name);
+    d_name[];
+#else
+#  error
+#endif
 
     /*
     char

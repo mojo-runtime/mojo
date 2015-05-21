@@ -1,7 +1,7 @@
 #pragma once
 
 #if defined(__linux__)
-#  include <feature/__flexible_array.h>
+#  include <feature/__has_flexible_array.h>
 #  include "uint32_t.h"
 
 struct inotify_event
@@ -18,8 +18,12 @@ struct inotify_event
     uint32_t
     len;
 
+#if __has_flexible_array
     char
-    __flexible_array(name);
+    name[];
+#else
+#  error
+#endif
 };
 
 #else
