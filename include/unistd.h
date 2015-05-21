@@ -146,9 +146,9 @@
 // ftruncate
 // getcwd
 // getdtablesize (LEGACY)
-#include "c/getegid.h"
-#include "c/geteuid.h"
-#include "c/getgid.h"
+// getegid
+// geteuid
+// getgid
 // getgroups
 // gethostid
 // getlogin
@@ -156,12 +156,12 @@
 // getopt
 // getpagesize (LEGACY)
 // getpass (LEGACY)
-#include "c/getpgid.h"
+// getpgid
 // getpgrp
-#include "c/getpid.h"
-#include "c/getppid.h"
+// getpid
+// getppid
 // getsid
-#include "c/getuid.h"
+// getuid
 // getwd
 // isatty
 // lchown
