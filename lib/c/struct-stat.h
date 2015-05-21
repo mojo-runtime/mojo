@@ -71,7 +71,6 @@ struct stat
     // sys/sys/stat.h
 
 #elif defined(__FreeBSD__)
-#  include <feature/__old_style_cast.h>
 
     dev_t           st_dev;
     ino_t           st_ino;
@@ -92,8 +91,8 @@ struct stat
     struct timespec st_birthtim;
 
     // Padding hacks
-    unsigned int :(8 / 2) * (16 - (__old_style_cast(int, sizeof(struct timespec))));
-    unsigned int :(8 / 2) * (16 - (__old_style_cast(int, sizeof(struct timespec))));
+    unsigned int :(8 / 2) * (16 - ((int)sizeof(struct timespec)));
+    unsigned int :(8 / 2) * (16 - ((int)sizeof(struct timespec)));
 
     //--------------------------------------------------------------------------------------------------
 

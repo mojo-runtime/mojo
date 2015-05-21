@@ -1,7 +1,6 @@
 #pragma once
 
 #include <abi/__Word.h>
-#include <feature/__old_style_cast.h>
 
 typedef struct
 {
@@ -43,9 +42,9 @@ int
 __Result_error_number(const __Result self)
 {
 #if defined(__linux__)
-    return __old_style_cast(int, -self.__word);
+    return ((int)-self.__word);
 #elif defined(__FreeBSD__)
-    return __old_style_cast(int, self.__word);
+    return ((int)self.__word);
 #else
 #  error
 #endif
