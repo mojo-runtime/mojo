@@ -1,8 +1,5 @@
 #pragma once
 
-#include <feature/__noreturn.h>
-#include <feature/__nothrow.h>
-#include <feature/__unused.h>
 #include <c/EXIT_FAILURE.h>
 #include <c/_Exit.h>
 
@@ -16,11 +13,14 @@
 #  error
 #endif
 
-__noreturn
-__nothrow
+__attribute__((__noreturn__, __nothrow__))
 static inline
 void
-__debug_error(const char* kind, const char* file, const char* function, __unused unsigned line, const char* message)
+__debug_error(const char* kind,
+              const char* file,
+              const char* function,
+              __attribute__((__unused__)) unsigned line,
+              const char* message)
 {
     // Super naive.
     _write("\033[31;1m");
