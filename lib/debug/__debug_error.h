@@ -3,14 +3,14 @@
 #include <feature/__noreturn.h>
 #include <feature/__nothrow.h>
 #include <feature/__unused.h>
-#include "EXIT_FAILURE.h"
-#include "_Exit.h"
+#include <c/EXIT_FAILURE.h>
+#include <c/_Exit.h>
 
 #if defined(__unix__)
-#  include "STDERR_FILENO.h"
-#  include "SYS_write.h"
-#  include "strlen.h"
-#  include "__syscall.h"
+#  include <c/STDERR_FILENO.h>
+#  include <c/SYS_write.h>
+#  include <c/strlen.h>
+#  include <c/__syscall.h>
 #  define _write(string) __syscall_3(SYS_write, STDERR_FILENO, (__Word)string, strlen(string))
 #else
 #  error
