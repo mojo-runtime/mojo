@@ -1,0 +1,1 @@
+#define EROFS 30

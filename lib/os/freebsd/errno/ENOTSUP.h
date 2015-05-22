@@ -1,0 +1,2 @@
+#include "EOPNOTSUPP.h"
+#define ENOTSUP EOPNOTSUPP

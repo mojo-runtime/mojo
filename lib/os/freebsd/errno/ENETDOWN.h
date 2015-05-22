@@ -1,0 +1,1 @@
+#define ENETDOWN 50

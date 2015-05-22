@@ -1,0 +1,1 @@
+#define ECONNRESET 54

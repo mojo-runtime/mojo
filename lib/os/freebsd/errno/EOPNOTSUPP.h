@@ -1,0 +1,1 @@
+#define EOPNOTSUPP 45

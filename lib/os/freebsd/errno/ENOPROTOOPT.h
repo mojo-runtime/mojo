@@ -1,0 +1,1 @@
+#define ENOPROTOOPT 42

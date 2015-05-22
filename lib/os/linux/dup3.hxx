@@ -1,10 +1,10 @@
 #pragma once
 
-#include "c/EBADF.h"
-#include "c/EBUSY.h"
-#include "c/EINTR.h"
-#include "c/EINVAL.h"
-#include "c/EMFILE.h"
+#include "errno/EBADF.h"
+#include "errno/EBUSY.h"
+#include "errno/EINTR.h"
+#include "errno/EINVAL.h"
+#include "errno/EMFILE.h"
 #include "syscall/SYS_dup3.h"
 #include "Result.hxx"
 

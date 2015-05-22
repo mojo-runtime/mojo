@@ -1,0 +1,1 @@
+#define ENOTSOCK 38

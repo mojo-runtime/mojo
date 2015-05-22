@@ -1,0 +1,1 @@
+#define ETIMEDOUT 60

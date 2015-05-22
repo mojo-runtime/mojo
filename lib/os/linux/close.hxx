@@ -1,8 +1,8 @@
 #pragma once
 
-#include "c/EBADF.h"
-#include "c/EINTR.h"
-#include "c/EIO.h"
+#include "errno/EBADF.h"
+#include "errno/EINTR.h"
+#include "errno/EIO.h"
 #include "syscall/SYS_close.h"
 #include "Result.hxx"
 

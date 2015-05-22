@@ -1,8 +1,8 @@
 #pragma once
 
-#include "c/EINVAL.h"
-#include "c/EPERM.h"
-#include "c/ESRCH.h"
+#include "errno/EINVAL.h"
+#include "errno/EPERM.h"
+#include "errno/ESRCH.h"
 #include "syscall/SYS_kill.h"
 #include "c/pid_t.h"
 #include "Result.hxx"

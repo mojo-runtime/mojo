@@ -1,0 +1,1 @@
+#define ENOTDIR 20
