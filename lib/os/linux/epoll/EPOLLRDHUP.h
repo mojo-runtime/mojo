@@ -1,0 +1,3 @@
+#include <c/POLLRDHUP.h>
+
+#define EPOLLRDHUP POLLRDHUP

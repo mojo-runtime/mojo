@@ -1,0 +1,3 @@
+#include <c/POLLWRNORM.h>
+
+#define EPOLLWRNORM POLLWRNORM

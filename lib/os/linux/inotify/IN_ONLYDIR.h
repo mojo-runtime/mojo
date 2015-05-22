@@ -1,0 +1,1 @@
+#define IN_ONLYDIR 0x1000000

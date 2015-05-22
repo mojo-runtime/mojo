@@ -1,26 +1,5 @@
-#pragma once
-
-#include "c/EPOLL_CLOEXEC.h"
-#include "c/EPOLL_CTL_ADD.h"
-#include "c/EPOLL_CTL_DEL.h"
-#include "c/EPOLL_CTL_MOD.h"
-#include "c/EPOLLERR.h"
-#include "c/EPOLLET.h"
-#include "c/EPOLLHUP.h"
-#include "c/EPOLLIN.h"
-#include "c/EPOLLONESHOT.h"
-#include "c/EPOLLOUT.h"
-#include "c/EPOLLPRI.h"
-#include "c/EPOLLRDBAND.h"
-#include "c/EPOLLRDNORM.h"
-#include "c/EPOLLRDHUP.h"
-#include "c/EPOLLWRBAND.h"
-#include "c/EPOLLWRNORM.h"
-#include "c/EPOLLWAKEUP.h"
-#include "c/epoll_data_t.h"
-#include "c/struct-epoll_event.h"
-// epoll_create
-// epoll_create1
-// epoll_ctl
-// epoll_pwait
-// epoll_wait
+#if defined(__linux__)
+#  include <os/linux/epoll/_all.h>
+#else
+#  error
+#endif

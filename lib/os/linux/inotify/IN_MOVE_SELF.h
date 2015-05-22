@@ -1,0 +1,1 @@
+#define IN_MOVE_SELF 0x800

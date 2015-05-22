@@ -1,0 +1,3 @@
+#include <c/POLLRDBAND.h>
+
+#define EPOLLRDBAND POLLRDBAND
