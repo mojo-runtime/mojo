@@ -3,12 +3,16 @@
 #include <c/EXIT_FAILURE.h>
 #include <c/_Exit.h>
 
+#if !defined(__cplusplus)
+#  error TODO: C version
+#endif
+
 #if defined(__unix__)
 #  include <c/STDERR_FILENO.h>
 #  include <c/SYS_write.h>
 #  include <c/strlen.h>
-#  include <c/__syscall.h>
-#  define _write(string) __syscall_3(SYS_write, STDERR_FILENO, (__Word)string, strlen(string))
+#  include <os/write.hxx>
+#  define _write(string) ::os::write(STDERR_FILENO, string, strlen(string))
 #else
 #  error
 #endif
