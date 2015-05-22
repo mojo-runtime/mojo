@@ -7,8 +7,8 @@
 #include "c/EXIT_FAILURE.h"
 #include "c/EXIT_SUCCESS.h"
 #include "c/NULL.h"
-#include "c/RAND_MAX.h"
-#include "c/MB_CUR_MAX.h"
+// RAND_MAX
+// MB_CUR_MAX
 
 // ...shall be defined through typedef:
 
