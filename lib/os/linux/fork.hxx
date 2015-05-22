@@ -3,7 +3,7 @@
 #include "c/EAGAIN.h"
 #include "c/ENOMEM.h"
 #include "c/ENOSYS.h"
-#include "c/SYS_fork.h"
+#include "syscall/SYS_fork.h"
 #include "c/pid_t.h"
 #include "Result.hxx"
 

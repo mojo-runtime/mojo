@@ -4,7 +4,7 @@
 #include "c/EFAULT.h"
 #include "c/EINVAL.h"
 #include "c/ENOTTY.h"
-#include "c/SYS_ioctl.h"
+#include "syscall/SYS_ioctl.h"
 #include "Result.hxx"
 
 namespace os { inline namespace linux {

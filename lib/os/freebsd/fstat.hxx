@@ -4,7 +4,7 @@
 #include "c/EFAULT.h"
 #include "c/EIO.h"
 #include "c/EOVERFLOW.h"
-#include "c/SYS_fstat.h"
+#include "syscall/SYS_fstat.h"
 #include "c/struct-stat.h"
 #include "Result.hxx"
 

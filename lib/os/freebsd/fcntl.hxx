@@ -11,7 +11,7 @@
 #include "c/EOVERFLOW.h"
 #include "c/EPERM.h"
 #include "c/ESRCH.h"
-#include "c/SYS_fcntl.h"
+#include "syscall/SYS_fcntl.h"
 #include "Result.hxx"
 
 namespace os { inline namespace freebsd {

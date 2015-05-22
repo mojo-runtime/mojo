@@ -3,7 +3,7 @@
 #include "c/EACCES.h"
 #include "c/EBADF.h"
 #include "c/ENOTDIR.h"
-#include "c/SYS_fchdir.h"
+#include "syscall/SYS_fchdir.h"
 #include "Result.hxx"
 
 namespace os { inline namespace linux {

@@ -9,7 +9,7 @@
 #include "c/ENOTDIR.h"
 #include "c/EPERM.h"
 #include "c/EROFS.h"
-#include "c/SYS_chown.h"
+#include "syscall/SYS_chown.h"
 #include "c/gid_t.h"
 #include "c/uid_t.h"
 #include "Result.hxx"

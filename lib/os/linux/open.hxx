@@ -23,7 +23,7 @@
 #include "c/EROFS.h"
 #include "c/ETXTBSY.h"
 #include "c/EWOULDBLOCK.h"
-#include "c/SYS_open.h"
+#include "syscall/SYS_open.h"
 #include "c/mode_t.h"
 #include "Result.hxx"
 

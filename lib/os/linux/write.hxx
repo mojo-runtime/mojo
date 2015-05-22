@@ -13,7 +13,7 @@
 #include "c/EIO.h"
 #include "c/ENOSPC.h"
 #include "c/EPIPE.h"
-#include "c/SYS_write.h"
+#include "syscall/SYS_write.h"
 #include "Result.hxx"
 
 namespace os { inline namespace linux {

@@ -10,7 +10,7 @@
 #include "c/ENOEXEC.h"
 #include "c/ENOTDIR.h"
 #include "c/ETXTBSY.h"
-#include "c/SYS_execve.h"
+#include "syscall/SYS_execve.h"
 #include "Result.hxx"
 
 namespace os { inline namespace freebsd {

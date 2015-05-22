@@ -8,7 +8,7 @@
 #include "c/ENAMETOOLONG.h"
 #include "c/ENOENT.h"
 #include "c/ENOTDIR.h"
-#include "c/SYS_readlink.h"
+#include "syscall/SYS_readlink.h"
 #include "c/size_t.h"
 #include "Result.hxx"
 

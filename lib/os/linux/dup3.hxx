@@ -5,7 +5,7 @@
 #include "c/EINTR.h"
 #include "c/EINVAL.h"
 #include "c/EMFILE.h"
-#include "c/SYS_dup3.h"
+#include "syscall/SYS_dup3.h"
 #include "Result.hxx"
 
 namespace os { inline namespace linux {

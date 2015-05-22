@@ -3,7 +3,7 @@
 #include "c/EBADF.h"
 #include "c/EINTR.h"
 #include "c/EIO.h"
-#include "c/SYS_close.h"
+#include "syscall/SYS_close.h"
 #include "Result.hxx"
 
 namespace os { inline namespace linux {

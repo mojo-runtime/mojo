@@ -5,7 +5,7 @@
 #include "c/EINVAL.h"
 #include "c/ENODEV.h"
 #include "c/ENOMEM.h"
-#include "c/SYS_mmap.h"
+#include "syscall/SYS_mmap.h"
 #include "c/off_t.h"
 #include "c/size_t.h"
 #include "Result.hxx"

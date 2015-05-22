@@ -12,7 +12,7 @@
 #include "c/ENOTDIR.h"
 #include "c/EPERM.h"
 #include "c/EROFS.h"
-#include "c/SYS_symlink.h"
+#include "syscall/SYS_symlink.h"
 #include "Result.hxx"
 
 namespace os { inline namespace freebsd {

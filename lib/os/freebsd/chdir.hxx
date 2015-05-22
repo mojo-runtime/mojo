@@ -9,7 +9,7 @@
 #include "c/ENOENT.h"
 #include "c/ENOLINK.h"
 #include "c/ENOTDIR.h"
-#include "c/SYS_chdir.h"
+#include "syscall/SYS_chdir.h"
 #include "Result.hxx"
 
 namespace os { inline namespace freebsd {

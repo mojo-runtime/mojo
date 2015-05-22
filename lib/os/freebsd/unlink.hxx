@@ -10,7 +10,7 @@
 #include "c/ENOTDIR.h"
 #include "c/EPERM.h"
 #include "c/EROFS.h"
-#include "c/SYS_unlink.h"
+#include "syscall/SYS_unlink.h"
 #include "Result.hxx"
 
 namespace os { inline namespace freebsd {

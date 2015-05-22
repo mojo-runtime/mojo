@@ -8,7 +8,7 @@
 #include "c/ENOMEM.h"
 #include "c/ENOTDIR.h"
 #include "c/EOVERFLOW.h"
-#include "c/SYS_stat.h"
+#include "syscall/SYS_stat.h"
 #include "c/struct-stat.h"
 #include "Result.hxx"
 

@@ -12,7 +12,7 @@
 #include "c/ENOTEMPTY.h"
 #include "c/EPERM.h"
 #include "c/EROFS.h"
-#include "c/SYS_rmdir.h"
+#include "syscall/SYS_rmdir.h"
 #include "Result.hxx"
 
 namespace os { inline namespace linux {

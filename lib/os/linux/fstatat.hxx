@@ -9,7 +9,7 @@
 #include "c/ENOMEM.h"
 #include "c/ENOTDIR.h"
 #include "c/EOVERFLOW.h"
-#include "c/SYS_fstatat.h"
+#include "syscall/SYS_fstatat.h"
 #include "c/struct-stat.h"
 #include "Result.hxx"
 

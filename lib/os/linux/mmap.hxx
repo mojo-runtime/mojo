@@ -10,7 +10,7 @@
 #include "c/EOVERFLOW.h"
 #include "c/EPERM.h"
 #include "c/ETXTBSY.h"
-#include "c/SYS_mmap.h"
+#include "syscall/SYS_mmap.h"
 #include "c/off_t.h"
 #include "c/size_t.h"
 #include "Result.hxx"

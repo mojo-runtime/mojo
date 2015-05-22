@@ -24,7 +24,7 @@
 #include "c/EROFS.h"
 #include "c/ETXTBSY.h"
 #include "c/EWOULDBLOCK.h"
-#include "c/SYS_openat.h"
+#include "syscall/SYS_openat.h"
 #include "c/mode_t.h"
 #include "Result.hxx"
 

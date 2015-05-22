@@ -11,7 +11,7 @@
 #include "c/ENOTDIR.h"
 #include "c/EPERM.h"
 #include "c/EROFS.h"
-#include "c/SYS_mkdir.h"
+#include "syscall/SYS_mkdir.h"
 #include "c/mode_t.h"
 #include "Result.hxx"
 

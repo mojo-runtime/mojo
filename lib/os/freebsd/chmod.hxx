@@ -10,7 +10,7 @@
 #include "c/ENOTDIR.h"
 #include "c/EPERM.h"
 #include "c/EROFS.h"
-#include "c/SYS_chmod.h"
+#include "syscall/SYS_chmod.h"
 #include "c/mode_t.h"
 #include "Result.hxx"
 

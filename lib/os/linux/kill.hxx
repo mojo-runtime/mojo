@@ -3,7 +3,7 @@
 #include "c/EINVAL.h"
 #include "c/EPERM.h"
 #include "c/ESRCH.h"
-#include "c/SYS_kill.h"
+#include "syscall/SYS_kill.h"
 #include "c/pid_t.h"
 #include "Result.hxx"
 

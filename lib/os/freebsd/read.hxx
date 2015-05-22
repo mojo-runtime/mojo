@@ -12,7 +12,7 @@
 #include "c/EIO.h"
 #include "c/EISDIR.h"
 #include "c/EOPNOTSUPP.h"
-#include "c/SYS_read.h"
+#include "syscall/SYS_read.h"
 #include "Result.hxx"
 
 namespace os { inline namespace freebsd {
