@@ -9,7 +9,6 @@
 
 #if defined(__unix__)
 #  include <c/STDERR_FILENO.h>
-#  include <c/SYS_write.h>
 #  include <c/strlen.h>
 #  include <os/write.hxx>
 #  define _write(string) ::os::write(STDERR_FILENO, string, strlen(string))
