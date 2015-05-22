@@ -19,9 +19,9 @@
 //--------------------------------------------------------------------------------------------------
 // Functions
 
-#include "c++/declval.hxx"
-#include "c++/forward.hxx"
-#include "c++/move.hxx"
+#include "std/declval.hxx"
+#include "std/forward.hxx"
+#include "std/move.hxx"
 // move_if_noexcept
 // make_pair
 // swap
