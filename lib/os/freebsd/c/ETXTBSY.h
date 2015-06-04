@@ -1,1 +1,1 @@
-#define ETXTBSY 26
+../../__unix/c/ETXTBSY.h

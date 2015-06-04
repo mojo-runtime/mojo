@@ -1,1 +1,1 @@
-#define EFBIG 27
+../../__unix/c/EFBIG.h

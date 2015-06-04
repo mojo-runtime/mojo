@@ -1,1 +1,1 @@
-#define ESRCH 3
+../../__unix/c/ESRCH.h

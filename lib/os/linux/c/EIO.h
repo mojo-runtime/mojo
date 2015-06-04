@@ -1,1 +1,1 @@
-#define EIO 5
+../../__unix/c/EIO.h

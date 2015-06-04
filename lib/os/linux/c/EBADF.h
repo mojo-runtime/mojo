@@ -1,1 +1,1 @@
-#define EBADF 9
+../../__unix/c/EBADF.h

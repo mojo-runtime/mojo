@@ -1,1 +1,1 @@
-#define EACCES 13
+../../__unix/c/EACCES.h

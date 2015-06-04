@@ -1,1 +1,1 @@
-#define ERANGE 34
+../../__unix/c/ERANGE.h

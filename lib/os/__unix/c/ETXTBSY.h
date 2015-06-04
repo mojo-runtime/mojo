@@ -1,0 +1,1 @@
+#define ETXTBSY 26

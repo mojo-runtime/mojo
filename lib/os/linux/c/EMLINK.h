@@ -1,1 +1,1 @@
-#define EMLINK 31
+../../__unix/c/EMLINK.h

@@ -1,1 +1,1 @@
-#define E2BIG 7
+../../__unix/c/E2BIG.h

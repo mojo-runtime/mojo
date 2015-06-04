@@ -1,1 +1,1 @@
-#define EROFS 30
+../../__unix/c/EROFS.h

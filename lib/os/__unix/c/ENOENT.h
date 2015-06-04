@@ -1,0 +1,1 @@
+#define ENOENT 2

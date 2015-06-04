@@ -1,1 +1,1 @@
-#define EBUSY 16
+../../__unix/c/EBUSY.h

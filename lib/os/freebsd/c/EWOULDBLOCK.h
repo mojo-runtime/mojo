@@ -1,2 +1,1 @@
-#include "EAGAIN.h"
-#define EWOULDBLOCK EAGAIN
+../../__unix/c/EWOULDBLOCK.h

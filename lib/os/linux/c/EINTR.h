@@ -1,1 +1,1 @@
-#define EINTR 4
+../../__unix/c/EINTR.h

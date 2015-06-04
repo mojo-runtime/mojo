@@ -1,1 +1,1 @@
-#define ENOTTY 25
+../../__unix/c/ENOTTY.h

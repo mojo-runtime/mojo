@@ -1,1 +1,1 @@
-#define EPERM 1
+../../__unix/c/EPERM.h
