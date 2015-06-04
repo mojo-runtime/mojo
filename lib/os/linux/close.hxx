@@ -3,8 +3,15 @@
 #include "errno/EBADF.h"
 #include "errno/EINTR.h"
 #include "errno/EIO.h"
-#include "syscall/SYS_close.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_close 6
+#elif defined(__x86_64__)
+#  define __NR_close 3
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -19,7 +26,7 @@ close(int fd) noexcept
         _E(IO),
     };
 
-    return Result<void, Error>(SYS_close, fd);
+    return Result<void, Error>(__NR_close, fd);
 }
 
 }}

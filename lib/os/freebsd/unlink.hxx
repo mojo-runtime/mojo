@@ -10,8 +10,9 @@
 #include "errno/ENOTDIR.h"
 #include "errno/EPERM.h"
 #include "errno/EROFS.h"
-#include "syscall/SYS_unlink.h"
 #include "Result.hxx"
+
+#define __NR_unlink 10
 
 namespace os { inline namespace freebsd {
 
@@ -33,7 +34,7 @@ unlink(const char* pathname) noexcept
         _E(ROFS),
     };
 
-    return Result<void, Error>(SYS_unlink, pathname);
+    return Result<void, Error>(__NR_unlink, pathname);
 }
 
 }}

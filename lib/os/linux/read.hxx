@@ -9,8 +9,15 @@
 #include "errno/EINVAL.h"
 #include "errno/EIO.h"
 #include "errno/EISDIR.h"
-#include "syscall/SYS_read.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_read 3
+#elif defined(__x86_64__)
+#  define __NR_read 0
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -29,7 +36,7 @@ read(int fd, void* buffer, size_t length) noexcept
         _E(ISDIR),
     };
 
-    return Result<size_t, Error>(SYS_read, fd, buffer, length);
+    return Result<size_t, Error>(__NR_read, fd, buffer, length);
 }
 
 }}

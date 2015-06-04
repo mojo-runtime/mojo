@@ -24,9 +24,16 @@
 #include "errno/EROFS.h"
 #include "errno/ETXTBSY.h"
 #include "errno/EWOULDBLOCK.h"
-#include "syscall/SYS_openat.h"
 #include "c/mode_t.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_openat 322
+#elif defined(__x86_64__)
+#  define __NR_openat 257
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -62,7 +69,7 @@ openat(int dirfd, const char* pathname, int flags) noexcept
         _E(WOULDBLOCK),
     };
 
-    return Result<int, Error>(SYS_openat, dirfd, pathname, flags);
+    return Result<int, Error>(__NR_openat, dirfd, pathname, flags);
 }
 
 }}

@@ -4,8 +4,9 @@
 #include "errno/EMFILE.h"
 #include "errno/ENFILE.h"
 #include "errno/ENOMEM.h"
-#include "syscall/SYS_pipe2.h"
 #include "Result.hxx"
+
+#define __NR_pipe2 542
 
 namespace os { inline namespace freebsd {
 
@@ -21,7 +22,7 @@ pipe2(int pipefd[2], int flags) noexcept
         _E(NOMEM),
     };
 
-    return Result<void, Error>(SYS_pipe2, pipefd, flags);
+    return Result<void, Error>(__NR_pipe2, pipefd, flags);
 }
 
 }}

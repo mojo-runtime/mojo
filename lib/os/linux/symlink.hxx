@@ -13,8 +13,15 @@
 #include "errno/ENOTDIR.h"
 #include "errno/EPERM.h"
 #include "errno/EROFS.h"
-#include "syscall/SYS_symlink.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_symlink 83
+#elif defined(__x86_64__)
+#  define __NR_symlink 88
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -39,7 +46,7 @@ symlink(const char* target, const char* linkpath) noexcept
         _E(ROFS),
     };
 
-    return Result<void, Error>(SYS_symlink, target, linkpath);
+    return Result<void, Error>(__NR_symlink, target, linkpath);
 }
 
 }}

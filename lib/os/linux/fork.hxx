@@ -3,9 +3,16 @@
 #include "errno/EAGAIN.h"
 #include "errno/ENOMEM.h"
 #include "errno/ENOSYS.h"
-#include "syscall/SYS_fork.h"
 #include "c/pid_t.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_fork 2
+#elif defined(__x86_64__)
+#  define __NR_fork 57
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -20,7 +27,7 @@ fork() noexcept
         _E(NOSYS),
     };
 
-    return Result<pid_t, Error>(SYS_fork);
+    return Result<pid_t, Error>(__NR_fork);
 }
 
 }}

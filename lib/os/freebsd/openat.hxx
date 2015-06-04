@@ -20,9 +20,10 @@
 #include "errno/EROFS.h"
 #include "errno/ETXTBSY.h"
 #include "errno/EWOULDBLOCK.h"
-#include "syscall/SYS_openat.h"
 #include "c/mode_t.h"
 #include "Result.hxx"
+
+#define __NR_openat 499
 
 namespace os { inline namespace freebsd {
 
@@ -54,7 +55,7 @@ openat(int dirfd, const char* pathname, int flags) noexcept
         _E(WOULDBLOCK),
     };
 
-    return Result<int, Error>(SYS_openat, dirfd, pathname, flags);
+    return Result<int, Error>(__NR_openat, dirfd, pathname, flags);
 }
 
 }}

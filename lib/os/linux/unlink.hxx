@@ -12,8 +12,15 @@
 #include "errno/ENOTDIR.h"
 #include "errno/EPERM.h"
 #include "errno/EROFS.h"
-#include "syscall/SYS_unlink.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_unlink 10
+#elif defined(__x86_64__)
+#  define __NR_unlink 87
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -37,7 +44,7 @@ unlink(const char* pathname) noexcept
         _E(ROFS),
     };
 
-    return Result<void, Error>(SYS_unlink, pathname);
+    return Result<void, Error>(__NR_unlink, pathname);
 }
 
 }}

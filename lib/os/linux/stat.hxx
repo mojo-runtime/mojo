@@ -8,9 +8,16 @@
 #include "errno/ENOMEM.h"
 #include "errno/ENOTDIR.h"
 #include "errno/EOVERFLOW.h"
-#include "syscall/SYS_stat.h"
 #include "c/struct-stat.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_stat 106
+#elif defined(__x86_64__)
+#  define __NR_stat 4
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -30,7 +37,7 @@ stat(const char* pathname, struct stat* buf) noexcept
         _E(OVERFLOW),
     };
 
-    return Result<void, Error>(SYS_stat, pathname, buf);
+    return Result<void, Error>(__NR_stat, pathname, buf);
 }
 
 }}

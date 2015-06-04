@@ -4,9 +4,10 @@
 #include "errno/EFAULT.h"
 #include "errno/EIO.h"
 #include "errno/EOVERFLOW.h"
-#include "syscall/SYS_fstat.h"
 #include "c/struct-stat.h"
 #include "Result.hxx"
+
+#define __NR_fstat 189
 
 namespace os { inline namespace freebsd {
 
@@ -22,7 +23,7 @@ fstat(int fd, struct stat* sb) noexcept
         _E(OVERFLOW),
     };
 
-    return Result<void, Error>(SYS_fstat, fd, sb);
+    return Result<void, Error>(__NR_fstat, fd, sb);
 }
 
 }}

@@ -13,8 +13,9 @@
 #include "errno/EIO.h"
 #include "errno/ENOSPC.h"
 #include "errno/EPIPE.h"
-#include "syscall/SYS_write.h"
 #include "Result.hxx"
+
+#define __NR_write 4
 
 namespace os { inline namespace freebsd {
 
@@ -37,7 +38,7 @@ write(int fd, const void* buffer, size_t length) noexcept
         _E(PIPE),
     };
 
-    return Result<size_t, Error>(SYS_write, fd, buffer, length);
+    return Result<size_t, Error>(__NR_write, fd, buffer, length);
 }
 
 }}

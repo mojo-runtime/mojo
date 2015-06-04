@@ -9,9 +9,16 @@
 #include "errno/ENOENT.h"
 #include "errno/ENOMEM.h"
 #include "errno/ENOTDIR.h"
-#include "syscall/SYS_readlink.h"
 #include "c/size_t.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_readlink 85
+#elif defined(__x86_64__)
+#  define __NR_readlink 89
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -32,7 +39,7 @@ readlink(const char* pathname, char* buf, size_t bufsiz) noexcept
         _E(NOTDIR),
     };
 
-    return Result<size_t, Error>(SYS_readlink, pathname, buf, bufsiz);
+    return Result<size_t, Error>(__NR_readlink, pathname, buf, bufsiz);
 }
 
 }}

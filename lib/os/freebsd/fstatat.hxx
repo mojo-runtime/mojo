@@ -9,9 +9,10 @@
 #include "errno/ENOENT.h"
 #include "errno/ENOTDIR.h"
 #include "errno/EOVERFLOW.h"
-#include "syscall/SYS_fstatat.h"
 #include "c/struct-stat.h"
 #include "Result.hxx"
+
+#define __NR_fstatat 493
 
 namespace os { inline namespace freebsd {
 
@@ -32,7 +33,7 @@ fstatat(int dirfd, const char* path, struct stat* buffer, int flags) noexcept
         _E(OVERFLOW),
     };
 
-    return Result<void, Error>(SYS_fstatat, dirfd, path, buffer, flags);
+    return Result<void, Error>(__NR_fstatat, dirfd, path, buffer, flags);
 }
 
 }}

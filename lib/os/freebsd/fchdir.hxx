@@ -3,8 +3,9 @@
 #include "errno/EACCES.h"
 #include "errno/EBADF.h"
 #include "errno/ENOTDIR.h"
-#include "syscall/SYS_fchdir.h"
 #include "Result.hxx"
+
+#define __NR_fchdir 13
 
 namespace os { inline namespace freebsd {
 
@@ -19,7 +20,7 @@ fchdir(int fd) noexcept
         _E(NOTDIR),
     };
 
-    return Result<void, Error>(SYS_fchdir, fd);
+    return Result<void, Error>(__NR_fchdir, fd);
 }
 
 }}

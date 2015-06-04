@@ -1,9 +1,10 @@
 #pragma once
 
 #include "errno/EINVAL.h"
-#include "syscall/SYS_munmap.h"
 #include "c/size_t.h"
 #include "Result.hxx"
+
+#define __NR_munmap 73
 
 namespace os { inline namespace freebsd {
 
@@ -16,7 +17,7 @@ munmap(void* address, size_t length) noexcept
         _E(INVAL),
     };
 
-    return Result<void, Error>(SYS_munmap, address, length);
+    return Result<void, Error>(__NR_munmap, address, length);
 }
 
 }}

@@ -17,8 +17,15 @@
 #include "errno/ENOTDIR.h"
 #include "errno/EPERM.h"
 #include "errno/ETXTBSY.h"
-#include "syscall/SYS_execve.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_execve 11
+#elif defined(__x86_64__)
+#  define __NR_execve 59
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -47,7 +54,7 @@ execve(const char* filename, char *const argv[], char *const envp[]) noexcept
         _E(TXTBSY),
     };
 
-    return Result<void, Error>(SYS_execve, filename, argv, envp).error();
+    return Result<void, Error>(__NR_execve, filename, argv, envp).error();
 }
 
 }}

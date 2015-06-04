@@ -12,8 +12,15 @@
 #include "errno/ENOTEMPTY.h"
 #include "errno/EPERM.h"
 #include "errno/EROFS.h"
-#include "syscall/SYS_rmdir.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_rmdir 40
+#elif defined(__x86_64__)
+#  define __NR_rmdir 84
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -37,7 +44,7 @@ rmdir(const char* pathname) noexcept
         _E(ROFS),
     };
 
-    return Result<void, Error>(SYS_rmdir, pathname);
+    return Result<void, Error>(__NR_rmdir, pathname);
 }
 
 }}

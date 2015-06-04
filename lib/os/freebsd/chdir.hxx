@@ -9,8 +9,9 @@
 #include "errno/ENOENT.h"
 #include "errno/ENOLINK.h"
 #include "errno/ENOTDIR.h"
-#include "syscall/SYS_chdir.h"
 #include "Result.hxx"
+
+#define __NR_chdir 12
 
 namespace os { inline namespace freebsd {
 
@@ -31,7 +32,7 @@ chdir(const char* path) noexcept
         _E(NOTDIR),
     };
 
-    return Result<void, Error>(SYS_chdir, path);
+    return Result<void, Error>(__NR_chdir, path);
 }
 
 }}

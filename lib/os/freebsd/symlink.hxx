@@ -12,8 +12,9 @@
 #include "errno/ENOTDIR.h"
 #include "errno/EPERM.h"
 #include "errno/EROFS.h"
-#include "syscall/SYS_symlink.h"
 #include "Result.hxx"
+
+#define __NR_symlink 57
 
 namespace os { inline namespace freebsd {
 
@@ -37,7 +38,7 @@ symlink(const char* target, const char* linkpath) noexcept
         _E(ROFS),
     };
 
-    return Result<void, Error>(SYS_symlink, target, linkpath);
+    return Result<void, Error>(__NR_symlink, target, linkpath);
 }
 
 }}

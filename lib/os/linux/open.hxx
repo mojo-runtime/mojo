@@ -23,9 +23,16 @@
 #include "errno/EROFS.h"
 #include "errno/ETXTBSY.h"
 #include "errno/EWOULDBLOCK.h"
-#include "syscall/SYS_open.h"
 #include "c/mode_t.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_open 5
+#elif defined(__x86_64__)
+#  define __NR_open 2
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -60,7 +67,7 @@ open(const char* pathname, int flags) noexcept
         _E(WOULDBLOCK),
     };
 
-    return Result<int, Error>(SYS_open, pathname, flags);
+    return Result<int, Error>(__NR_open, pathname, flags);
 }
 
 }}

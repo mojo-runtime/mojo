@@ -13,9 +13,16 @@
 #include "errno/ENOTDIR.h"
 #include "errno/EPERM.h"
 #include "errno/EROFS.h"
-#include "syscall/SYS_mkdir.h"
 #include "c/mode_t.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_mkdir 39
+#elif defined(__x86_64__)
+#  define __NR_mkdir 83
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -40,7 +47,7 @@ mkdir(const char* pathname, mode_t mode) noexcept
         _E(ROFS),
     };
 
-    return Result<void, Error>(SYS_mkdir, pathname, mode);
+    return Result<void, Error>(__NR_mkdir, pathname, mode);
 }
 
 }}

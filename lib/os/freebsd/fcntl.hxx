@@ -11,8 +11,9 @@
 #include "errno/EOVERFLOW.h"
 #include "errno/EPERM.h"
 #include "errno/ESRCH.h"
-#include "syscall/SYS_fcntl.h"
 #include "Result.hxx"
+
+#define __NR_fcntl 92
 
 namespace os { inline namespace freebsd {
 
@@ -36,7 +37,7 @@ fcntl(int fd, int cmd, Arg arg) noexcept
         _E(SRCH),
     };
 
-    return Result<void, Error>(SYS_fcntl, fd, cmd, arg);
+    return Result<void, Error>(__NR_fcntl, fd, cmd, arg);
 }
 
 }}

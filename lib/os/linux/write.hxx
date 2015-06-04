@@ -13,8 +13,15 @@
 #include "errno/EIO.h"
 #include "errno/ENOSPC.h"
 #include "errno/EPIPE.h"
-#include "syscall/SYS_write.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_write 4
+#elif defined(__x86_64__)
+#  define __NR_write 1
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -37,7 +44,7 @@ write(int fd, const void* buffer, size_t length) noexcept
         _E(PIPE),
     };
 
-    return Result<size_t, Error>(SYS_write, fd, buffer, length);
+    return Result<size_t, Error>(__NR_write, fd, buffer, length);
 }
 
 }}

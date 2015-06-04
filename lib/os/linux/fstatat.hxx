@@ -9,9 +9,16 @@
 #include "errno/ENOMEM.h"
 #include "errno/ENOTDIR.h"
 #include "errno/EOVERFLOW.h"
-#include "syscall/SYS_fstatat.h"
 #include "c/struct-stat.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_fstatat 327
+#elif defined(__x86_64__)
+#  define __NR_fstatat 262
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -33,7 +40,7 @@ fstatat(int dirfd, const char* path, struct stat* buffer, int flags) noexcept
         _E(OVERFLOW),
     };
 
-    return Result<void, Error>(SYS_fstatat, dirfd, path, buffer, flags);
+    return Result<void, Error>(__NR_fstatat, dirfd, path, buffer, flags);
 }
 
 }}

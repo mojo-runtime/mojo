@@ -10,8 +10,9 @@
 #include "errno/ENOEXEC.h"
 #include "errno/ENOTDIR.h"
 #include "errno/ETXTBSY.h"
-#include "syscall/SYS_execve.h"
 #include "Result.hxx"
+
+#define __NR_execve 59
 
 namespace os { inline namespace freebsd {
 
@@ -33,7 +34,7 @@ execve(const char* filename, char *const argv[], char *const envp[]) noexcept
         _E(TXTBSY),
     };
 
-    return Result<void, Error>(SYS_execve, filename, argv, envp).error();
+    return Result<void, Error>(__NR_execve, filename, argv, envp).error();
 }
 
 }}

@@ -4,9 +4,16 @@
 #include "errno/EFAULT.h"
 #include "errno/ENOMEM.h"
 #include "errno/EOVERFLOW.h"
-#include "syscall/SYS_fstat.h"
 #include "c/struct-stat.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_fstat 108
+#elif defined(__x86_64__)
+#  define __NR_fstat 5
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -22,7 +29,7 @@ fstat(int fd, struct stat* sb) noexcept
         _E(OVERFLOW),
     };
 
-    return Result<void, Error>(SYS_fstat, fd, sb);
+    return Result<void, Error>(__NR_fstat, fd, sb);
 }
 
 }}

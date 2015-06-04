@@ -12,8 +12,9 @@
 #include "errno/EIO.h"
 #include "errno/EISDIR.h"
 #include "errno/EOPNOTSUPP.h"
-#include "syscall/SYS_read.h"
 #include "Result.hxx"
+
+#define __NR_read 3
 
 namespace os { inline namespace freebsd {
 
@@ -35,7 +36,7 @@ read(int fd, void* buffer, size_t length) noexcept
         _E(OPNOTSUPP),
     };
 
-    return Result<size_t, Error>(SYS_read, fd, buffer, length);
+    return Result<size_t, Error>(__NR_read, fd, buffer, length);
 }
 
 }}

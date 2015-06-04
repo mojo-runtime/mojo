@@ -10,9 +10,16 @@
 #include "errno/ENOTDIR.h"
 #include "errno/EPERM.h"
 #include "errno/EROFS.h"
-#include "syscall/SYS_chmod.h"
 #include "c/mode_t.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_chmod 15
+#elif defined(__x86_64__)
+#  define __NR_chmod 90
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -34,7 +41,7 @@ chmod(const char* pathname, mode_t mode) noexcept
         _E(ROFS),
     };
 
-    return Result<void, Error>(SYS_chmod, pathname, mode);
+    return Result<void, Error>(__NR_chmod, pathname, mode);
 }
 
 }}

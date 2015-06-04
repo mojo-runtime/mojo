@@ -8,8 +8,15 @@
 #include "errno/ENOENT.h"
 #include "errno/ENOMEM.h"
 #include "errno/ENOTDIR.h"
-#include "syscall/SYS_chdir.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_chdir 12
+#elif defined(__x86_64__)
+#  define __NR_chdir 80
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -29,7 +36,7 @@ chdir(const char* path) noexcept
         _E(NOTDIR),
     };
 
-    return Result<void, Error>(SYS_chdir, path);
+    return Result<void, Error>(__NR_chdir, path);
 }
 
 }}

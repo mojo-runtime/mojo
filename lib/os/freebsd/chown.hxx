@@ -9,10 +9,11 @@
 #include "errno/ENOTDIR.h"
 #include "errno/EPERM.h"
 #include "errno/EROFS.h"
-#include "syscall/SYS_chown.h"
 #include "c/gid_t.h"
 #include "c/uid_t.h"
 #include "Result.hxx"
+
+#define __NR_chown 16
 
 namespace os { inline namespace freebsd {
 
@@ -33,7 +34,7 @@ chown(const char* pathname, uid_t owner, gid_t group) noexcept
         _E(ROFS),
     };
 
-    return Result<void, Error>(SYS_chown, pathname, owner, group);
+    return Result<void, Error>(__NR_chown, pathname, owner, group);
 }
 
 }}

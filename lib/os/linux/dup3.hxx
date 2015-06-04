@@ -5,8 +5,15 @@
 #include "errno/EINTR.h"
 #include "errno/EINVAL.h"
 #include "errno/EMFILE.h"
-#include "syscall/SYS_dup3.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_dup3 358
+#elif defined(__x86_64__)
+#  define __NR_dup3 292
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -23,7 +30,7 @@ dup3(int oldfd, int newfd, int flags) noexcept
         _E(MFILE),
     };
 
-    return Result<int, Error>(SYS_dup3, oldfd, newfd, flags);
+    return Result<int, Error>(__NR_dup3, oldfd, newfd, flags);
 }
 
 }}

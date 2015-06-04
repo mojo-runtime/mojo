@@ -3,8 +3,15 @@
 #include "errno/EACCES.h"
 #include "errno/EBADF.h"
 #include "errno/ENOTDIR.h"
-#include "syscall/SYS_fchdir.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_fchdir 133
+#elif defined(__x86_64__)
+#  define __NR_fchdir 81
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -19,7 +26,7 @@ fchdir(int fd) noexcept
         _E(NOTDIR),
     };
 
-    return Result<void, Error>(SYS_fchdir, fd);
+    return Result<void, Error>(__NR_fchdir, fd);
 }
 
 }}

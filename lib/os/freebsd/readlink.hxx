@@ -8,9 +8,10 @@
 #include "errno/ENAMETOOLONG.h"
 #include "errno/ENOENT.h"
 #include "errno/ENOTDIR.h"
-#include "syscall/SYS_readlink.h"
 #include "c/size_t.h"
 #include "Result.hxx"
+
+#define __NR_readlink 58
 
 namespace os { inline namespace freebsd {
 
@@ -30,7 +31,7 @@ readlink(const char* pathname, char* buf, size_t bufsiz) noexcept
         _E(NOTDIR),
     };
 
-    return Result<size_t, Error>(SYS_readlink, pathname, buf, bufsiz);
+    return Result<size_t, Error>(__NR_readlink, pathname, buf, bufsiz);
 }
 
 }}

@@ -12,8 +12,9 @@
 #include "errno/ENOTEMPTY.h"
 #include "errno/EPERM.h"
 #include "errno/EROFS.h"
-#include "syscall/SYS_rmdir.h"
 #include "Result.hxx"
+
+#define __NR_rmdir 137
 
 namespace os { inline namespace freebsd {
 
@@ -37,7 +38,7 @@ rmdir(const char* pathname) noexcept
         _E(ROFS),
     };
 
-    return Result<void, Error>(SYS_rmdir, pathname);
+    return Result<void, Error>(__NR_rmdir, pathname);
 }
 
 }}

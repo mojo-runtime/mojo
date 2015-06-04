@@ -1,9 +1,16 @@
 #pragma once
 
 #include "errno/EINVAL.h"
-#include "syscall/SYS_munmap.h"
 #include "c/size_t.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_munmap 91
+#elif defined(__x86_64__)
+#  define __NR_munmap 11
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -16,7 +23,7 @@ munmap(void* address, size_t length) noexcept
         _E(INVAL),
     };
 
-    return Result<void, Error>(SYS_munmap, address, length);
+    return Result<void, Error>(__NR_munmap, address, length);
 }
 
 }}

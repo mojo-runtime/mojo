@@ -10,10 +10,17 @@
 #include "errno/EOVERFLOW.h"
 #include "errno/EPERM.h"
 #include "errno/ETXTBSY.h"
-#include "syscall/SYS_mmap.h"
 #include "c/off_t.h"
 #include "c/size_t.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_mmap 90
+#elif defined(__x86_64__)
+#  define __NR_mmap 9
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -35,7 +42,7 @@ mmap(void* addr, size_t length, int prot, int flags, int fd, off_t offset) noexc
         _E(TXTBSY),
     };
 
-    return Result<void*, Error>(SYS_mmap, addr, length, prot, flags, fd, offset);
+    return Result<void*, Error>(__NR_mmap, addr, length, prot, flags, fd, offset);
 }
 
 }}

@@ -5,8 +5,9 @@
 #include "errno/ECONNRESET.h"
 #include "errno/EINTR.h"
 #include "errno/ENOSPC.h"
-#include "syscall/SYS_close.h"
 #include "Result.hxx"
+
+#define __NR_close 6
 
 namespace os { inline namespace freebsd {
 
@@ -22,7 +23,7 @@ close(int fd) noexcept
         _E(NOSPC),
     };
 
-    return Result<void, Error>(SYS_close, fd);
+    return Result<void, Error>(__NR_close, fd);
 }
 
 }}

@@ -4,8 +4,9 @@
 #include "errno/EFAULT.h"
 #include "errno/EINVAL.h"
 #include "errno/ENOTTY.h"
-#include "syscall/SYS_ioctl.h"
 #include "Result.hxx"
+
+#define __NR_ioctl 54
 
 namespace os { inline namespace freebsd {
 
@@ -25,7 +26,7 @@ ioctl(int fd, int request, Arg arg) noexcept
         _E(NOTTY),
     };
 
-    return Result<void, Error>(SYS_ioctl, fd, request, arg);
+    return Result<void, Error>(__NR_ioctl, fd, request, arg);
 }
 
 }}

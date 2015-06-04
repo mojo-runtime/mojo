@@ -10,8 +10,15 @@
 #include "errno/EMFILE.h"
 #include "errno/ENOLCK.h"
 #include "errno/EPERM.h"
-#include "syscall/SYS_fcntl.h"
 #include "Result.hxx"
+
+#if defined(__arm__)
+#  define __NR_fcntl 55
+#elif defined(__x86_64__)
+#  define __NR_fcntl 72
+#else
+#  error
+#endif
 
 namespace os { inline namespace linux {
 
@@ -34,7 +41,7 @@ fcntl(int fd, int cmd, Arg arg) noexcept
         _E(PERM),
     };
 
-    return Result<void, Error>(SYS_fcntl, fd, cmd, arg);
+    return Result<void, Error>(__NR_fcntl, fd, cmd, arg);
 }
 
 }}

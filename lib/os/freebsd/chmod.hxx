@@ -10,9 +10,10 @@
 #include "errno/ENOTDIR.h"
 #include "errno/EPERM.h"
 #include "errno/EROFS.h"
-#include "syscall/SYS_chmod.h"
 #include "c/mode_t.h"
 #include "Result.hxx"
+
+#define __NR_chmod 15
 
 namespace os { inline namespace freebsd {
 
@@ -34,7 +35,7 @@ chmod(const char* pathname, mode_t mode) noexcept
         _E(ROFS),
     };
 
-    return Result<void, Error>(SYS_chmod, pathname, mode);
+    return Result<void, Error>(__NR_chmod, pathname, mode);
 }
 
 }}

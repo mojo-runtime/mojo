@@ -8,9 +8,10 @@
 #include "errno/ENOENT.h"
 #include "errno/ENOTDIR.h"
 #include "errno/EOVERFLOW.h"
-#include "syscall/SYS_stat.h"
 #include "c/struct-stat.h"
 #include "Result.hxx"
+
+#define __NR_stat 188
 
 namespace os { inline namespace freebsd {
 
@@ -30,7 +31,7 @@ stat(const char* pathname, struct stat* buf) noexcept
         _E(OVERFLOW),
     };
 
-    return Result<void, Error>(SYS_stat, pathname, buf);
+    return Result<void, Error>(__NR_stat, pathname, buf);
 }
 
 }}

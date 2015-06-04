@@ -20,9 +20,10 @@
 #include "errno/EROFS.h"
 #include "errno/ETXTBSY.h"
 #include "errno/EWOULDBLOCK.h"
-#include "syscall/SYS_open.h"
 #include "c/mode_t.h"
 #include "Result.hxx"
+
+#define __NR_open 5
 
 namespace os { inline namespace freebsd {
 
@@ -54,7 +55,7 @@ open(const char* pathname, int flags) noexcept
         _E(WOULDBLOCK),
     };
 
-    return Result<int, Error>(SYS_open, pathname, flags);
+    return Result<int, Error>(__NR_open, pathname, flags);
 }
 
 }}
