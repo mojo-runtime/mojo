@@ -2,9 +2,7 @@
 
 #if defined(__linux__)
 // Note that the kernel does not define this; we have to inspect `stat::st_blksize`.
-#  if defined(__x86_64__)
-typedef int blksize_t;
-#  elif defined(__arm__)
+#  if defined(__arm__) || defined(__x86_64__)
 typedef unsigned long blksize_t;
 #  else
 #    error
