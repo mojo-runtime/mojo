@@ -2,16 +2,16 @@
 
 #include <c/size_t.h>
 
-#include "errno/EAGAIN.h"
-#include "errno/EBADF.h"
-#include "errno/EBUSY.h"
-#include "errno/ECONNRESET.h"
-#include "errno/EFAULT.h"
-#include "errno/EINTR.h"
-#include "errno/EINVAL.h"
-#include "errno/EIO.h"
-#include "errno/EISDIR.h"
-#include "errno/EOPNOTSUPP.h"
+#include "c/EAGAIN.h"
+#include "c/EBADF.h"
+#include "c/EBUSY.h"
+#include "c/ECONNRESET.h"
+#include "c/EFAULT.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/EIO.h"
+#include "c/EISDIR.h"
+#include "c/EOPNOTSUPP.h"
 #include "Result.hxx"
 
 #define __NR_read 3

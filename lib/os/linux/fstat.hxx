@@ -1,9 +1,9 @@
 #pragma once
 
-#include "errno/EBADF.h"
-#include "errno/EFAULT.h"
-#include "errno/ENOMEM.h"
-#include "errno/EOVERFLOW.h"
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/ENOMEM.h"
+#include "c/EOVERFLOW.h"
 #include "c/struct-stat.h"
 #include "Result.hxx"
 

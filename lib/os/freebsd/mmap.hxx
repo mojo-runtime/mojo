@@ -1,10 +1,10 @@
 #pragma once
 
-#include "errno/EACCES.h"
-#include "errno/EBADF.h"
-#include "errno/EINVAL.h"
-#include "errno/ENODEV.h"
-#include "errno/ENOMEM.h"
+#include "c/EACCES.h"
+#include "c/EBADF.h"
+#include "c/EINVAL.h"
+#include "c/ENODEV.h"
+#include "c/ENOMEM.h"
 #include "c/off_t.h"
 #include "c/size_t.h"
 #include "Result.hxx"

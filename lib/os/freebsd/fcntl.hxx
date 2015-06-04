@@ -1,16 +1,16 @@
 #pragma once
 
-#include "errno/EAGAIN.h"
-#include "errno/EBADF.h"
-#include "errno/EDEADLK.h"
-#include "errno/EINTR.h"
-#include "errno/EINVAL.h"
-#include "errno/EMFILE.h"
-#include "errno/ENOLCK.h"
-#include "errno/EOPNOTSUPP.h"
-#include "errno/EOVERFLOW.h"
-#include "errno/EPERM.h"
-#include "errno/ESRCH.h"
+#include "c/EAGAIN.h"
+#include "c/EBADF.h"
+#include "c/EDEADLK.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/EMFILE.h"
+#include "c/ENOLCK.h"
+#include "c/EOPNOTSUPP.h"
+#include "c/EOVERFLOW.h"
+#include "c/EPERM.h"
+#include "c/ESRCH.h"
 #include "Result.hxx"
 
 #define __NR_fcntl 92

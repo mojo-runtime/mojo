@@ -1,9 +1,9 @@
 #pragma once
 
-#include "errno/EINVAL.h"
-#include "errno/EMFILE.h"
-#include "errno/ENFILE.h"
-#include "errno/ENOMEM.h"
+#include "c/EINVAL.h"
+#include "c/EMFILE.h"
+#include "c/ENFILE.h"
+#include "c/ENOMEM.h"
 #include "Result.hxx"
 
 #define __NR_pipe2 542

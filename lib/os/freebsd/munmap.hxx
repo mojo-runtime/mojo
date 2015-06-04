@@ -1,6 +1,6 @@
 #pragma once
 
-#include "errno/EINVAL.h"
+#include "c/EINVAL.h"
 #include "c/size_t.h"
 #include "Result.hxx"
 

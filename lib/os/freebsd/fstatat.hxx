@@ -1,14 +1,14 @@
 #pragma once
 
-#include "errno/EACCES.h"
-#include "errno/EBADF.h"
-#include "errno/EFAULT.h"
-#include "errno/EIO.h"
-#include "errno/ELOOP.h"
-#include "errno/ENAMETOOLONG.h"
-#include "errno/ENOENT.h"
-#include "errno/ENOTDIR.h"
-#include "errno/EOVERFLOW.h"
+#include "c/EACCES.h"
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/EIO.h"
+#include "c/ELOOP.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ENOTDIR.h"
+#include "c/EOVERFLOW.h"
 #include "c/struct-stat.h"
 #include "Result.hxx"
 

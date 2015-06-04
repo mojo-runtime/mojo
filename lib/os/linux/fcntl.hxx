@@ -1,15 +1,15 @@
 #pragma once
 
-#include "errno/EACCES.h"
-#include "errno/EAGAIN.h"
-#include "errno/EBADF.h"
-#include "errno/EDEADLK.h"
-#include "errno/EFAULT.h"
-#include "errno/EINTR.h"
-#include "errno/EINVAL.h"
-#include "errno/EMFILE.h"
-#include "errno/ENOLCK.h"
-#include "errno/EPERM.h"
+#include "c/EACCES.h"
+#include "c/EAGAIN.h"
+#include "c/EBADF.h"
+#include "c/EDEADLK.h"
+#include "c/EFAULT.h"
+#include "c/EINTR.h"
+#include "c/EINVAL.h"
+#include "c/EMFILE.h"
+#include "c/ENOLCK.h"
+#include "c/EPERM.h"
 #include "Result.hxx"
 
 #if defined(__arm__)

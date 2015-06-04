@@ -1,14 +1,14 @@
 #pragma once
 
-#include "errno/EACCES.h"
-#include "errno/EFAULT.h"
-#include "errno/EINTR.h"
-#include "errno/EIO.h"
-#include "errno/ELOOP.h"
-#include "errno/ENAMETOOLONG.h"
-#include "errno/ENOENT.h"
-#include "errno/ENOLINK.h"
-#include "errno/ENOTDIR.h"
+#include "c/EACCES.h"
+#include "c/EFAULT.h"
+#include "c/EINTR.h"
+#include "c/EIO.h"
+#include "c/ELOOP.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ENOLINK.h"
+#include "c/ENOTDIR.h"
 #include "Result.hxx"
 
 #define __NR_chdir 12

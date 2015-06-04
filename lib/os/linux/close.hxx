@@ -1,8 +1,8 @@
 #pragma once
 
-#include "errno/EBADF.h"
-#include "errno/EINTR.h"
-#include "errno/EIO.h"
+#include "c/EBADF.h"
+#include "c/EINTR.h"
+#include "c/EIO.h"
 #include "Result.hxx"
 
 #if defined(__arm__)

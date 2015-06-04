@@ -1,9 +1,9 @@
 #pragma once
 
-#include "errno/EFAULT.h"
-#include "errno/EINVAL.h"
-#include "errno/EMFILE.h"
-#include "errno/ENFILE.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/EMFILE.h"
+#include "c/ENFILE.h"
 #include "Result.hxx"
 
 #if defined(__arm__)

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "errno/EBADF.h"
-#include "errno/EFAULT.h"
-#include "errno/EINVAL.h"
-#include "errno/ENOTTY.h"
+#include "c/EBADF.h"
+#include "c/EFAULT.h"
+#include "c/EINVAL.h"
+#include "c/ENOTTY.h"
 #include "Result.hxx"
 
 #define __NR_ioctl 54

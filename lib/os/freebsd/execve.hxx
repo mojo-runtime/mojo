@@ -1,15 +1,15 @@
 #pragma once
 
-#include "errno/E2BIG.h"
-#include "errno/EACCES.h"
-#include "errno/EFAULT.h"
-#include "errno/EIO.h"
-#include "errno/ELOOP.h"
-#include "errno/ENAMETOOLONG.h"
-#include "errno/ENOENT.h"
-#include "errno/ENOEXEC.h"
-#include "errno/ENOTDIR.h"
-#include "errno/ETXTBSY.h"
+#include "c/E2BIG.h"
+#include "c/EACCES.h"
+#include "c/EFAULT.h"
+#include "c/EIO.h"
+#include "c/ELOOP.h"
+#include "c/ENAMETOOLONG.h"
+#include "c/ENOENT.h"
+#include "c/ENOEXEC.h"
+#include "c/ENOTDIR.h"
+#include "c/ETXTBSY.h"
 #include "Result.hxx"
 
 #define __NR_execve 59

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "errno/EACCES.h"
-#include "errno/EBADF.h"
-#include "errno/ENOTDIR.h"
+#include "c/EACCES.h"
+#include "c/EBADF.h"
+#include "c/ENOTDIR.h"
 #include "Result.hxx"
 
 #if defined(__arm__)
