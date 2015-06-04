@@ -1,41 +1,7 @@
-#pragma once
-
-#include "c/blkcnt_t.h"
-#include "c/blksize_t.h"
-#include "c/clock_t.h"
-#include "c/clockid_t.h"
-#include "c/dev_t.h"
-// fsblkcnt_t
-// fsfilcnt_t
-#include "c/gid_t.h"
-#include "c/id_t.h"
-#include "c/ino_t.h"
-// key_t
-#include "c/mode_t.h"
-#include "c/nlink_t.h"
-#include "c/off_t.h"
-#include "c/pid_t.h"
-// pthread_attr_t
-// pthread_barrier_t
-// pthread_barrierattr_t
-// pthread_cond_t
-// pthread_condattr_t
-// pthread_key_t
-// pthread_mutex_t
-// pthread_mutexattr_t
-// pthread_once_t
-// pthread_rwlock_t
-// pthread_rwlockattr_t
-// pthread_spinlock_t
-// pthread_t
-#include "c/size_t.h"
-#include "c/ssize_t.h"
-#include "c/suseconds_t.h"
-#include "c/time_t.h"
-#include "c/timer_t.h"
-// trace_attr_t
-// trace_event_id_t
-// trace_event_set_t
-// trace_id_t
-#include "c/uid_t.h"
-#include "c/useconds_t.h"
+#if defined(__FreeBSD__)
+#  include <os/freebsd/c/__types.h>
+#elif defined(__linux__)
+#  include <os/linux/c/__types.h>
+#else
+#  error
+#endif

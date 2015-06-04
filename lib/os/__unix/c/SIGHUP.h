@@ -1,0 +1,1 @@
+#define SIGHUP 1

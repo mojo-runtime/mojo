@@ -1,0 +1,1 @@
+#define SIGILL 4

@@ -1,23 +1,7 @@
-#pragma once
-
-#include "c/POLLERR.h"
-#include "c/POLLHUP.h"
-#include "c/POLLIN.h"
-#include "c/POLLNVAL.h"
-#include "c/POLLOUT.h"
-#include "c/POLLPRI.h"
-#include "c/POLLRDBAND.h"
-#include "c/POLLRDNORM.h"
-#include "c/POLLWRBAND.h"
-#include "c/POLLWRNORM.h"
-
-//--------------------------------------------------------------------------------------------------
-// Types
-
-// nfds_t
-// struct pollfd
-
-//--------------------------------------------------------------------------------------------------
-// Functions
-
-// poll
+#if defined(__FreeBSD__)
+#  include <os/freebsd/c/__poll.h>
+#elif defined(__linux__)
+#  include <os/linux/c/__poll.h>
+#else
+#  error
+#endif

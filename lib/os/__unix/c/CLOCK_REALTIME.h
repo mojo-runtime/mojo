@@ -1,0 +1,1 @@
+#define CLOCK_REALTIME 0

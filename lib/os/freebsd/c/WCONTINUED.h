@@ -1,0 +1,1 @@
+#define WCONTINUED 0x4

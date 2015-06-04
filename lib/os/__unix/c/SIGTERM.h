@@ -1,0 +1,1 @@
+#define SIGTERM 15

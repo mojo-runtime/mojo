@@ -1,0 +1,1 @@
+#define SIGQUIT 3

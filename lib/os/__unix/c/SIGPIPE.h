@@ -1,0 +1,1 @@
+#define SIGPIPE 13

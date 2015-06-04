@@ -1,0 +1,1 @@
+#define POLLIN 0x1
