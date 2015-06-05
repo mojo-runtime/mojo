@@ -81,7 +81,7 @@ gcc.flags   += -O3
 clang.c-flags += -std=c11
 gcc.c-flags   += -std=c11
 
-clang.c++-flags += -std=c++14
+clang.c++-flags += -std=c++1z
 gcc.c++-flags   += -std=c++14
 
 clang.flags += -Werror -Weverything -Wno-reserved-id-macro
