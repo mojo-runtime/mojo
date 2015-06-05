@@ -2,16 +2,4 @@
 
 #pragma once
 
-//--------------------------------------------------------------------------------------------------
-// Macros
-
-#include "c/NULL.h"
-#include "c/offsetof.h"
-
-//--------------------------------------------------------------------------------------------------
-// Types
-
-#include "std/size_t.hxx"
-#include "std/ptrdiff_t.hxx"
-#include "std/nullptr_t.hxx"
-// max_align_t
+#include <std/__cstddef.hxx>

@@ -1,0 +1,121 @@
+// -*- C++ -*-
+
+#pragma once
+
+#if __cplusplus >= 201103L
+// add_const
+// add_cv
+// add_lvalue_reference
+// add_pointer
+#include "add_rvalue_reference.hxx"
+// add_volatile
+// aligned_storage
+// aligned_union
+// alignment_of
+// common_type
+// conditional
+// decay
+#include "enable_if.hxx"
+// extent
+#include "false_type.hxx"
+// has_virtual_destructor
+#include "integral_constant.hxx"
+// is_abstract
+#include "is_arithmetic.hxx"
+#include "is_array.hxx"
+// is_assignable
+#include "is_base_of.hxx"
+// is_class
+// is_compound
+// is_const
+// is_constructible
+// is_convertible
+// is_copy_constructible
+// is_default_constructible
+// is_destructible
+// is_empty
+#include "is_enum.hxx"
+#include "is_floating_point.hxx"
+// is_function
+#include "is_fundamental.hxx"
+#include "is_integral.hxx"
+// is_literal_type
+// is_lvalue_reference
+// is_member_function_pointer
+// is_member_object_pointer
+#include "is_member_pointer.hxx"
+// is_move_assignable
+// is_nothrow_constructible
+// is_nothrow_copy_assignable
+// is_nothrow_default_constructible
+// is_nothrow_destructible
+// is_nothrow_move_assignable
+// is_nothrow_move_constructible
+#include "is_null_pointer.hxx"
+// is_object
+// is_pod
+#include "is_pointer.hxx"
+// is_polymorphic
+// is_reference
+// is_rvalue_reference
+#include "is_same.hxx"
+#include "is_scalar.hxx"
+#include "is_signed.hxx"
+// is_standard_layout
+// is_trivial
+// is_trivially_constructible
+// is_trivially_copy_assignable
+// is_trivially_copyable
+// is_trivially_default_constructible
+// is_trivially_destructible
+// is_trivially_move_assignable
+// is_trivially_move_constructible
+#include "is_union.hxx"
+#include "is_unsigned.hxx"
+#include "is_void.hxx"
+// is_volatile
+// make_signed
+// make_unsigned
+// rank
+// remove_all_extents
+#include "remove_const.hxx"
+#include "remove_cv.hxx"
+// remove_extent
+// remove_pointer
+#include "remove_reference.hxx"
+#include "remove_volatile.hxx"
+// result_of
+#include "true_type.hxx"
+#include "underlying_type.hxx"
+#endif
+
+#if __cplusplus >= 201402L
+// add_const_t
+// add_cv_t
+// add_lvalue_reference_t
+// add_point_t
+#include "add_rvalue_reference_t.hxx"
+// add_volatile_t
+// aligned_storage_t
+// aligned_union_t
+// common_type_t
+// conditional_t
+// decay_t
+#include "enable_if_t.hxx"
+#include "is_null_pointer.hxx"
+// make_signed_t
+// make_unsigned_t
+// remove_all_extents_t
+#include "remove_const_t.hxx"
+#include "remove_cv_t.hxx"
+// remove_extent_t
+// remove_pointer_t
+#include "remove_reference_t.hxx"
+#include "remove_volatile_t.hxx"
+// result_t_t
+#include "underlying_type_t.hxx"
+#endif
+
+#if __cplusplus >= 2017L
+// bool_constant
+#endif
