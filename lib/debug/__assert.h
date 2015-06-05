@@ -2,7 +2,7 @@
 
 #pragma clang diagnostic ignored "-Wgnu-zero-variadic-macro-arguments" // FIXME
 
-#if defined(DEBUG)
+#if !defined(DEBUG)
 #  include <feature/__has_builtin_assume.h>
 #  if __has_builtin_assume
 #    define __assert(x, ...) __builtin_assume(x)
