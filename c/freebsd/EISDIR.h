@@ -1,1 +1,1 @@
-../__unix/EISDIR.h
+#define EISDIR 21

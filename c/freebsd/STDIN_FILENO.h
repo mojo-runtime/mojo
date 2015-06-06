@@ -1,1 +1,3 @@
-../__unix/STDIN_FILENO.h
+#pragma once
+
+#define STDIN_FILENO 0

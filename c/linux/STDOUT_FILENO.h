@@ -1,1 +1,3 @@
-../__unix/STDOUT_FILENO.h
+#pragma once
+
+#define STDOUT_FILENO 1

@@ -1,1 +1,1 @@
-../__unix/O_WRONLY.h
+#define O_WRONLY 0x1

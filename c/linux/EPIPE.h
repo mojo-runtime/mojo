@@ -1,1 +1,1 @@
-../__unix/EPIPE.h
+#define EPIPE 32

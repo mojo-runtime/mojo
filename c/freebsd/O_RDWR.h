@@ -1,1 +1,1 @@
-../__unix/O_RDWR.h
+#define O_RDWR 0x2

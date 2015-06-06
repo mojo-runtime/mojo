@@ -1,3 +1,0 @@
-#include "WUNTRACED.h"
-
-#define WSTOPPED WUNTRACED

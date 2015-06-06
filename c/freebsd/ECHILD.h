@@ -1,1 +1,1 @@
-../__unix/ECHILD.h
+#define ECHILD 10

@@ -1,1 +1,1 @@
-../__unix/DT_BLK.h
+#define DT_BLK 6

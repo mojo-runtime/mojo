@@ -1,1 +1,1 @@
-../__unix/O_RDONLY.h
+#define O_RDONLY 0x0

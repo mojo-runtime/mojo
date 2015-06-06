@@ -1,1 +1,1 @@
-../__unix/F_SETFL.h
+#define F_SETFL 4

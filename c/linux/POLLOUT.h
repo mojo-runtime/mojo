@@ -1,1 +1,1 @@
-../__unix/POLLOUT.h
+#define POLLOUT 0x4

@@ -1,1 +1,1 @@
-../__unix/WUNTRACED.h
+#define WUNTRACED 0x2

@@ -1,1 +1,1 @@
-../__unix/ENOMEM.h
+#define ENOMEM 12

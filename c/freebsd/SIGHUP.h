@@ -1,1 +1,1 @@
-../__unix/SIGHUP.h
+#define SIGHUP 1

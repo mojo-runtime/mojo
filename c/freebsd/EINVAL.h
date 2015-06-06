@@ -1,1 +1,1 @@
-../__unix/EINVAL.h
+#define EINVAL 22

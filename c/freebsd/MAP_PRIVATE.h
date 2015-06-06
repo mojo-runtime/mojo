@@ -1,1 +1,1 @@
-../__unix/MAP_PRIVATE.h
+#define MAP_PRIVATE 0x2

@@ -1,1 +1,1 @@
-../__unix/CLD_CONTINUED.h
+#define CLD_CONTINUED 6

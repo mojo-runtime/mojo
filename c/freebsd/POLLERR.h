@@ -1,1 +1,1 @@
-../__unix/POLLERR.h
+#define POLLERR 0x8

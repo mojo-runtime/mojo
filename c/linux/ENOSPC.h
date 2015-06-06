@@ -1,1 +1,1 @@
-../__unix/ENOSPC.h
+#define ENOSPC 28

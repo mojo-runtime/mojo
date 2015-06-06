@@ -1,1 +1,1 @@
-../__unix/SIGABRT.h
+#define SIGABRT 6

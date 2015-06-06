@@ -1,1 +1,1 @@
-../__unix/SEEK_SET.h
+#define SEEK_SET 0

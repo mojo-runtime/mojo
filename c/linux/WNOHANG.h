@@ -1,1 +1,1 @@
-../__unix/WNOHANG.h
+#define WNOHANG 0x1

@@ -1,1 +1,1 @@
-../__unix/SEEK_END.h
+#define SEEK_END 2

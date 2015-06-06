@@ -1,1 +1,1 @@
-../__unix/DT_LNK.h
+#define DT_LNK 10

@@ -1,1 +1,1 @@
-../__unix/POLLRDNORM.h
+#define POLLRDNORM 0x40

@@ -1,1 +1,0 @@
-#define ENOTTY 25

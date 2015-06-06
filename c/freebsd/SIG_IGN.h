@@ -1,1 +1,1 @@
-../__unix/SIG_IGN.h
+#define SIG_IGN ((void (*)(int))1)

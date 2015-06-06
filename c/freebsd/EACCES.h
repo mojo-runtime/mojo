@@ -1,1 +1,1 @@
-../__unix/EACCES.h
+#define EACCES 13

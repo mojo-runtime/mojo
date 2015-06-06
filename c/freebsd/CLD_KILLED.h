@@ -1,1 +1,1 @@
-../__unix/CLD_KILLED.h
+#define CLD_KILLED 2

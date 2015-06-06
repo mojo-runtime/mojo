@@ -1,1 +1,1 @@
-../__unix/NAME_MAX.h
+#define NAME_MAX 255

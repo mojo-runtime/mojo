@@ -1,1 +1,1 @@
-../__unix/F_GETFD.h
+#define F_GETFD 1

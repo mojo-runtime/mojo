@@ -1,1 +1,1 @@
-../__unix/SIG_DFL.h
+#define SIG_DFL ((void (*)(int))0)

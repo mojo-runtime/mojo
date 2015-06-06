@@ -1,1 +1,1 @@
-../__unix/SIGILL.h
+#define SIGILL 4

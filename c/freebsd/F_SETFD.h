@@ -1,1 +1,1 @@
-../__unix/F_SETFD.h
+#define F_SETFD 2

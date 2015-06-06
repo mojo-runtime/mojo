@@ -1,1 +1,0 @@
-#define SIGABRT 6

@@ -1,1 +1,1 @@
-../__unix/DT_SOCK.h
+#define DT_SOCK 12

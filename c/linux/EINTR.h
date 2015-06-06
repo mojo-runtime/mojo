@@ -1,1 +1,1 @@
-../__unix/EINTR.h
+#define EINTR 4

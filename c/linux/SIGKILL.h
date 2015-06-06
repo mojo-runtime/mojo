@@ -1,1 +1,1 @@
-../__unix/SIGKILL.h
+#define SIGKILL 9

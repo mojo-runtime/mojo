@@ -1,1 +1,1 @@
-../__unix/DT_REG.h
+#define DT_REG 8

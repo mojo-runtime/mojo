@@ -1,1 +1,0 @@
-#define ENOMEM 12

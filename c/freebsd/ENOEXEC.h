@@ -1,1 +1,1 @@
-../__unix/ENOEXEC.h
+#define ENOEXEC 8

@@ -1,1 +1,1 @@
-../__unix/SIGINT.h
+#define SIGINT 2
