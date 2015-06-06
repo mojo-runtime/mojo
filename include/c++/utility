@@ -1,5 +1,3 @@
 // -*- C++ -*-
 
-#pragma once
-
-#include <std/__utility.hxx>
+#include <std/_utility.hxx>

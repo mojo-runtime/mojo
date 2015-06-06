@@ -1,5 +1,3 @@
 // -*- C++ -*-
 
-#pragma once
-
-#include <std/__type_traits.hxx>
+#include <std/_type_traits.hxx>

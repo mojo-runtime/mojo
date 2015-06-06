@@ -1,5 +1,3 @@
 // -*- C++ -*-
 
-#pragma once
-
-#include <std/__cstddef.hxx>
+#include <std/_cstddef.hxx>
