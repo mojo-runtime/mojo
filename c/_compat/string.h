@@ -1,0 +1,27 @@
+#pragma once
+
+#include <std/NULL.h>
+// memccpy
+// memchr
+#include <std/memcpy.h>
+// memmove
+#include <std/memset.h>
+#include <std/size_t.h>
+// strcat
+// strchr
+// strcoll
+// strcpy
+// strcspn
+// strdup
+// strerror
+#include <std/strlen.h>
+// strncat
+// strncmp
+// strncpy
+// strpbrk
+// strrchr
+// strspn
+// strstr
+// strtok
+// strtok_r
+// strxfrm

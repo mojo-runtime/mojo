@@ -3,10 +3,17 @@ define __initialized :=
 1
 endef
 
-// := ${dir ${lastword ${MAKEFILE_LIST}}}
-ifeq (${//},./)
-// :=
+/ROOT := ${abspath ${dir ${lastword ${MAKEFILE_LIST}}}}
+
+ifeq (${/ROOT},${CURDIR})
+/     :=
 __top := 1
+else ifeq (${words ${/ROOT}},1)
+empty  :=
+space  := ${empty} ${empty}
+/      := ${subst ${space},/,${patsubst %,..,${subst /,${space},${CURDIR:${/ROOT}/%=%}}}}/
+else
+${error todo}
 endif
 
 ####################################################################################################
@@ -69,15 +76,16 @@ _ := ${call Configuration,_top}
 
 $_.cflags   := -std=c11
 $_.cppflags := \
-	-I${//}include \
-	-I${//}lib \
+	-I$/c \
+	-I$/c/_compat \
 	-O3 \
 	-Wall \
 	-Werror \
 	-fno-exceptions \
 	-nostdinc
 $_.cxxflags := \
-	-I${//}include/c++ \
+	-I$/c++ \
+	-I$/c++/_compat \
 	-nostdinc++ \
 	-std=c++14
 $_.ldflags  := \
@@ -150,8 +158,8 @@ undefine __top
 #---------------------------------------------------------------------------------------------------
 # We're the Makefile.
 
-include include/Makefile
-include lib/Makefile
+include c/Makefile
+include c++/Makefile
 
 else
 #---------------------------------------------------------------------------------------------------
