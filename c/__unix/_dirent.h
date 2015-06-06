@@ -17,7 +17,7 @@
 
 // DIR
 #include "ino_t.h" // [XSI]
-// struct dirent
+#include "struct-dirent.h"
 
 //--------------------------------------------------------------------------------------------------
 // Functions
