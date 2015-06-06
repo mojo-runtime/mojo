@@ -13,99 +13,122 @@ __roots :=
 
 ####################################################################################################
 
-Configuration.all :=
-
 define Configuration
+${eval
 
-$0.all += $1
+ifneq (${filter-out _%,$1},)
+ifdef $0.__names
+$0.__names += $1
+else
+$0.__names := $1
+endif
+endif
 
 # Fields
+#--------
 
-$1.path      := $1
-$1.flags     :=
-$1.c-flags   :=
-$1.c++-flags :=
+$0[$1].base     =
+$0[$1].cc       = $${if $${$0[$1].base},$${$0[$${$0[$1].base}].cc},      $${error todo - cc}}
+$0[$1].cflags   = $${if $${$0[$1].base},$${$0[$${$0[$1].base}].cflags},  $${error todo - cflags}}
+$0[$1].cppflags = $${if $${$0[$1].base},$${$0[$${$0[$1].base}].cppflags},$${error todo - cppflags}}
+$0[$1].cxx      = $${if $${$0[$1].base},$${$0[$${$0[$1].base}].cxx},     $${error todo - cxx}}
+$0[$1].cxxflags = $${if $${$0[$1].base},$${$0[$${$0[$1].base}].cxxflags},$${error todo - cxxflags}}
+$0[$1].ld       = $${if $${$0[$1].base},$${$0[$${$0[$1].base}].ld},      $${error todo - ld}}
+$0[$1].ldflags  = $${if $${$0[$1].base},$${$0[$${$0[$1].base}].ldflags}, $${error todo - ldflags}}
 
 # Properties
+#------------
 
-define $1.rules
-$$>$1: | $$>
+define $0[$1].rules
+$${__build/}$1/: | $${__build/}
 	mkdir $$$$@
-$$>$1/%.c.s: $$/%.c | $$>$1
-	$$$${$1.path} $$$$< -o $$$$@ $$$${$1.flags} $$$${$1.c-flags} -S
-$$>$1/%.cxx.s: $$/%.cxx | $$>$1
-	$$$${$1.path} $$$$< -o $$$$@ $$$${$1.flags} $$$${$1.c++-flags} -S
+$${__build/}$1/%.c.s: $${__root/}%.c | $${__build/}$1/
+	$$$${$0[$1].cc} $$$${$0[$1].cppflags} $$$${$0[$1].cflags} -o $$$$@ -S $$$$<
+$${__build/}$1/%.cxx.s: $${__root/}%.cxx | $${__build/}$1/
+	$$$${$0[$1].cxx} $$$${$0[$1].cppflags} $$$${$0[$1].cxxflags} -o $$$$@ -S $$$$<
 endef
 
 # Functions
+#-----------
 
-define $1.copy
-$${call Configuration,$$1}
-$$1.path      := $${$1.path}
-$$1.flags     := $${$1.flags}
-$$1.c-flags   := $${$1.c-flags}
-$$1.c++-flags := $${$1.c++-flags}
+define $0[$1].compile
+$${__build/}$1/$$1.s
 endef
 
+}$0[$1]
+endef
+
+# Properties
+#============
+
+define Configuration.instances
+${Configuration.__names:%=Configuration[%]}
 endef
 
 ####################################################################################################
 
-${eval ${call Configuration,clang}}
-${eval ${call Configuration,gcc}}
+_ := ${call Configuration,_top}
 
-clang.flags += -fcolor-diagnostics
-gcc.flags   += -fdiagnostics-color=always
+$_.cflags   := -std=c11
+$_.cppflags := \
+	-I${//}include \
+	-I${//}lib \
+	-O3 \
+	-Wall \
+	-Werror \
+	-fno-exceptions \
+	-nostdinc
+$_.cxxflags := \
+	-I${//}include/c++ \
+	-nostdinc++ \
+	-std=c++14
+$_.ldflags  := \
+	-fno-asynchronous-unwind-tables \
+	-nostdlib
 
-clang.flags += -ferror-limit=1
-gcc.flags   += -fmax-errors=1
+_ := ${call Configuration,clang}
 
-clang.flags += -fno-asynchronous-unwind-tables -fno-exceptions
-gcc.flags   += -fno-asynchronous-unwind-tables -fno-exceptions
+$_.base     := _top
+$_.cc       := clang
+$_.cppflags += \
+	-fcolor-diagnostics \
+	-ferror-limit=1 \
+	-Weverything \
+	-Wno-reserved-id-macro
+$_.cxx      := clang++
+$_.cxxflags += \
+	-std=c++1z \
+	-Wno-c99-extensions \
+	-Wno-c++98-compat \
+	-Wno-c++98-compat-pedantic \
+	-Wno-old-style-cast
 
-clang.flags += -I${//}include
-gcc.flags   += -I${//}include
+_ := ${call Configuration,clang-arm-linux}
 
-clang.c++-flags += -I${//}include/c++
-gcc.c++-flags   += -I${//}include/c++
+$_.base     := clang
+$_.cppflags += -target armv7-linux-android
 
-clang.flags += -I${//}lib
-gcc.flags   += -I${//}lib
+_ := ${call Configuration,clang-x86_64-freebsd}
 
-clang.flags += -nostdinc -nostdlib
-gcc.flags   += -nostdinc -nostdlib
+$_.base     := clang
+$_.cppflags += -target x86_64-freebsd
 
-clang.flags += -O3
-gcc.flags   += -O3
+_ := ${call Configuration,clang-x86_64-linux}
 
-clang.c-flags += -std=c11
-gcc.c-flags   += -std=c11
+$_.base     := clang
+$_.cppflags += -target x86_64-linux
 
-clang.c++-flags += -std=c++1z
-gcc.c++-flags   += -std=c++14
+_ := ${call Configuration,clang-debug}
 
-clang.flags += -Werror -Weverything -Wno-reserved-id-macro
-gcc.flags   += -Werror -Wall -Wno-unknown-pragmas
+$_.base     := clang
+$_.cppflags += -DDEBUG
 
-clang.c++-flags += -Wno-c++98-compat -Wno-c++98-compat-pedantic
-clang.c++-flags += -Wno-c99-extensions
-clang.c++-flags += -Wno-old-style-cast
+_ := ${call Configuration,gcc}
 
-${eval ${call clang.copy,clang-arm-linux}}
-${eval ${call clang.copy,clang-x86_64-freebsd}}
-${eval ${call clang.copy,clang-x86_64-linux}}
-
-clang-arm-linux.flags      += -target armv7-linux-android
-clang-x86_64-freebsd.flags += -target x86_64-freebsd
-clang-x86_64-linux.flags   += -target x86_64-linux
-
-${eval ${call clang.copy,clang-debug}}
-
-clang-debug.flags += -DDEBUG
-
-define compile-all
-${foreach c,${Configuration.all},${patsubst $/%,$>$c/%.s,$1}}
-endef
+$_.base     := _top
+$_.cc       := gcc
+$_.cppflags += -fdiagnostics-color=always -fmax-errors=1
+$_.cxx      := g++
 
 ####################################################################################################
 
@@ -136,23 +159,24 @@ else
 #---------------------------------------------------------------------------------------------------
 # We've been included.
 
-/ := ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}
+__root/ := ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}
 
-__roots := ${__roots} $/
+__roots := ${__roots} ${__root/}
 
-ifeq ($/,./)
-/ :=
+ifeq (${__root/},./)
+__root/ :=
 endif
 
-> := $/.build/
-$>:
+__build/ := ${__root/}.build/
+
+${__build/}:
 	mkdir $@
 
 .PHONY:
-__clean-$/.build:
+__clean-${__root/}.build:
 	rm -r ${subst __clean-,,$@}
 
-${foreach c,${Configuration.all},${eval ${$c.rules}}}
+${foreach c,${Configuration.instances},${eval ${$c.rules}}}
 
 #---------------------------------------------------------------------------------------------------
 endif

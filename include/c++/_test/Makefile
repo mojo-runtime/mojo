@@ -1,3 +1,12 @@
 include ${dir ${lastword ${MAKEFILE_LIST}}}../../../Makefile
 
-tests += ${call compile-all,${wildcard $/*.cxx}}
+tests += ${foreach x,${Configuration.instances},${foreach y,\
+\
+cstdarg\
+cstddef\
+cstdint\
+cuchar\
+type_traits\
+utility\
+\
+,${call $x.compile,$y.cxx}}}
