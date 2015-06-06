@@ -1,1 +1,3 @@
-../__unix/cc_t.h
+#pragma once
+
+typedef unsigned char cc_t;

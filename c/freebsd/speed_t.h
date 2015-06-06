@@ -1,1 +1,3 @@
-../__unix/speed_t.h
+#pragma once
+
+typedef unsigned int speed_t;
