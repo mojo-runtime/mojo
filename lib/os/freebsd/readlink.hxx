@@ -1,5 +1,6 @@
 #pragma once
 
+#include <c/size_t.h>
 #include "c/EACCES.h"
 #include "c/EFAULT.h"
 #include "c/EINVAL.h"
@@ -8,7 +9,6 @@
 #include "c/ENAMETOOLONG.h"
 #include "c/ENOENT.h"
 #include "c/ENOTDIR.h"
-#include "c/size_t.h"
 #include "Result.hxx"
 
 #define __NR_readlink 58

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <c/size_t.h>
 #include "c/EACCES.h"
 #include "c/EAGAIN.h"
 #include "c/EBADF.h"
@@ -11,7 +12,6 @@
 #include "c/EPERM.h"
 #include "c/ETXTBSY.h"
 #include "c/off_t.h"
-#include "c/size_t.h"
 #include "Result.hxx"
 
 #if defined(__arm__)
