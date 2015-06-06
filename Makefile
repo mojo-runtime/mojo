@@ -9,8 +9,6 @@ ifeq (${//},./)
 __top := 1
 endif
 
-__roots :=
-
 ####################################################################################################
 
 define Configuration
@@ -161,7 +159,11 @@ else
 
 __root/ := ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}
 
-__roots := ${__roots} ${__root/}
+ifdef __roots
+__roots += ${__roots} ${__root/}
+else
+__roots := ${__root/}
+endif
 
 ifeq (${__root/},./)
 __root/ :=
