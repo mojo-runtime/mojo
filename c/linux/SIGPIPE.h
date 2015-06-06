@@ -1,1 +1,1 @@
-../__unix/SIGPIPE.h
+#define SIGPIPE 13

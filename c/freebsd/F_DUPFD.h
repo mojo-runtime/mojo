@@ -1,1 +1,1 @@
-../__unix/F_DUPFD.h
+#define F_DUPFD 0

@@ -1,1 +1,1 @@
-../__unix/PROT_WRITE.h
+#define PROT_WRITE 0x2

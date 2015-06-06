@@ -1,1 +1,1 @@
-../__unix/PROT_NONE.h
+#define PROT_NONE 0

@@ -1,1 +1,1 @@
-../__unix/POLLPRI.h
+#define POLLPRI 0x2

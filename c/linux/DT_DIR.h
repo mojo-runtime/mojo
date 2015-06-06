@@ -1,1 +1,1 @@
-../__unix/DT_DIR.h
+#define DT_DIR 4

@@ -1,1 +1,0 @@
-#define ENFILE 23

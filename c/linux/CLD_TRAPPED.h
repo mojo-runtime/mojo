@@ -1,1 +1,1 @@
-../__unix/CLD_TRAPPED.h
+#define CLD_TRAPPED 4

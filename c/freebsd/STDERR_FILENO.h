@@ -1,1 +1,3 @@
-../__unix/STDERR_FILENO.h
+#pragma once
+
+#define STDERR_FILENO 2

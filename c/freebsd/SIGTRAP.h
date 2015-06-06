@@ -1,1 +1,1 @@
-../__unix/SIGTRAP.h
+#define SIGTRAP 5

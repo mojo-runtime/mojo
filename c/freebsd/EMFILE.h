@@ -1,1 +1,1 @@
-../__unix/EMFILE.h
+#define EMFILE 24

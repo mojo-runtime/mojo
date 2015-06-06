@@ -1,1 +1,1 @@
-../__unix/PROT_READ.h
+#define PROT_READ 0x1

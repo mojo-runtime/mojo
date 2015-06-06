@@ -1,1 +1,1 @@
-../__unix/CLD_EXITED.h
+#define CLD_EXITED 1

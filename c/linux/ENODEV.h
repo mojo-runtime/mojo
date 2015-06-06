@@ -1,1 +1,1 @@
-../__unix/ENODEV.h
+#define ENODEV 19

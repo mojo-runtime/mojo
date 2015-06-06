@@ -1,1 +1,1 @@
-../__unix/POLLIN.h
+#define POLLIN 0x1

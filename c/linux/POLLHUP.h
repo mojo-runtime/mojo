@@ -1,1 +1,1 @@
-../__unix/POLLHUP.h
+#define POLLHUP 0x10

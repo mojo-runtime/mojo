@@ -1,1 +1,1 @@
-../__unix/ESPIPE.h
+#define ESPIPE 29

@@ -1,1 +1,1 @@
-../__unix/SIGQUIT.h
+#define SIGQUIT 3

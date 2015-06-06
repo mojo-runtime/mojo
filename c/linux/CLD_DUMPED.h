@@ -1,1 +1,1 @@
-../__unix/CLD_DUMPED.h
+#define CLD_DUMPED 3

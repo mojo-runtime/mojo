@@ -1,1 +1,1 @@
-../__unix/SEEK_CUR.h
+#define SEEK_CUR 1

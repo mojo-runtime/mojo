@@ -1,1 +1,1 @@
-../__unix/POLLNVAL.h
+#define POLLNVAL 0x20

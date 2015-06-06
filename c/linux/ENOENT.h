@@ -1,1 +1,1 @@
-../__unix/ENOENT.h
+#define ENOENT 2

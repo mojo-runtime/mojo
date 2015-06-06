@@ -1,1 +1,1 @@
-../__unix/SIGALRM.h
+#define SIGALRM 14

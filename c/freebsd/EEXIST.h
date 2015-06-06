@@ -1,1 +1,1 @@
-../__unix/EEXIST.h
+#define EEXIST 17

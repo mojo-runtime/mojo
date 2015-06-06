@@ -1,1 +1,1 @@
-../__unix/SIGFPE.h
+#define SIGFPE 8

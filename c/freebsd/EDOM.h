@@ -1,1 +1,1 @@
-../__unix/EDOM.h
+#define EDOM 33

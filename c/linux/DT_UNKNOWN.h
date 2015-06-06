@@ -1,1 +1,1 @@
-../__unix/DT_UNKNOWN.h
+#define DT_UNKNOWN 0

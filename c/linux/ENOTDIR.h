@@ -1,1 +1,1 @@
-../__unix/ENOTDIR.h
+#define ENOTDIR 20

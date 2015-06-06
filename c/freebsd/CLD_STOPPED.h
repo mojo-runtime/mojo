@@ -1,1 +1,1 @@
-../__unix/CLD_STOPPED.h
+#define CLD_STOPPED 5

@@ -1,1 +1,1 @@
-../__unix/ENFILE.h
+#define ENFILE 23

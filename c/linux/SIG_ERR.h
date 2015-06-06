@@ -1,1 +1,1 @@
-../__unix/SIG_ERR.h
+#define SIG_ERR ((void (*)(int))-1)

@@ -1,1 +1,1 @@
-../__unix/EFAULT.h
+#define EFAULT 14

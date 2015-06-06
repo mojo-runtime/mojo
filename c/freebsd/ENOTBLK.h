@@ -1,1 +1,1 @@
-../__unix/ENOTBLK.h
+#define ENOTBLK 15

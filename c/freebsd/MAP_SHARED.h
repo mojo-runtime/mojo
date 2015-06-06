@@ -1,1 +1,1 @@
-../__unix/MAP_SHARED.h
+#define MAP_SHARED 0x1

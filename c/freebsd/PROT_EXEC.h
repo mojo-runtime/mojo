@@ -1,1 +1,1 @@
-../__unix/PROT_EXEC.h
+#define PROT_EXEC 4

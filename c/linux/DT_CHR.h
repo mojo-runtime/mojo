@@ -1,1 +1,1 @@
-../__unix/DT_CHR.h
+#define DT_CHR 2

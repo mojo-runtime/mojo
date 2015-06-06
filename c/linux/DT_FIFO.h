@@ -1,1 +1,1 @@
-../__unix/DT_FIFO.h
+#define DT_FIFO 1

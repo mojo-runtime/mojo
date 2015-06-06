@@ -1,1 +1,1 @@
-../__unix/SIGSEGV.h
+#define SIGSEGV 11

@@ -1,1 +1,1 @@
-../__unix/SIGTERM.h
+#define SIGTERM 15

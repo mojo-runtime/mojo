@@ -1,1 +1,1 @@
-../__unix/ENXIO.h
+#define ENXIO 6
