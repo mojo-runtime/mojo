@@ -1,1 +1,0 @@
-../../__unix/c/SEEK_CUR.h
