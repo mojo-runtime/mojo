@@ -1,1 +1,4 @@
-../__unix/_utsname.h
+#pragma once
+
+#include "struct-utsname.h"
+// uname
