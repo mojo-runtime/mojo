@@ -3,10 +3,6 @@
 #include <std/EXIT_FAILURE.h>
 #include <std/_Exit.h>
 
-#if !defined(__cplusplus)
-#  error TODO: C version
-#endif
-
 #if defined(__linux__)
 #  include <linux/write.hxx>
 #  include <std/strlen.h>
