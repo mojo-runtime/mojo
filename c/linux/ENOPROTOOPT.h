@@ -6,6 +6,6 @@
 #  define ENOPROTOOPT 220
 #elif defined(__mips__)
 #  define ENOPROTOOPT 99
-#elif defined(__sparc__)
+#else
 #  define ENOPROTOOPT 92
 #endif
