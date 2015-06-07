@@ -7,10 +7,10 @@
 #  error TODO: C version
 #endif
 
-#if defined(__unix__)
-#  include <os/write.hxx>
+#if defined(__linux__)
+#  include <linux/write.hxx>
 #  include <std/strlen.h>
-#  define _write(string) ::os::write(2, string, strlen(string))
+#  define _write(string) ::linux::write(2, string, strlen(string))
 #else
 #  error
 #endif

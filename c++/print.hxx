@@ -1,6 +1,10 @@
 #pragma once
 
-#include <os/write.hxx>
+#if defined(__linux__)
+#  include "linux/write.hxx"
+#else
+#  error
+#endif
 
 template <size_t n>
 static
@@ -16,5 +20,9 @@ print(const char(& string)[n])
 
     buffer[n] = '\n';
 
-    return os::write(1, buffer, n + 1);
+#if defined(__linux__)
+    return linux::write(1, buffer, n + 1);
+#else
+#  error
+#endif
 }
