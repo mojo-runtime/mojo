@@ -1,1 +1,0 @@
-#define EFAULT 14

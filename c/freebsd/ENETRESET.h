@@ -1,1 +1,0 @@
-#define ENETRESET 52

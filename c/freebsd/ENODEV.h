@@ -1,1 +1,0 @@
-#define ENODEV 19

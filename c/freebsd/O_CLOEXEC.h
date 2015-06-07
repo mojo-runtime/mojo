@@ -1,1 +1,0 @@
-#define O_CLOEXEC 0x100000

@@ -1,1 +1,0 @@
-#define POLLRDNORM 0x40

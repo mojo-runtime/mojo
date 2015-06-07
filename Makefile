@@ -109,21 +109,6 @@ $_.cxxflags += \
 	-Wno-c++98-compat-pedantic \
 	-Wno-old-style-cast
 
-_ := ${call Configuration,clang-arm-linux}
-
-$_.base     := clang
-$_.cppflags += -target armv7-linux-android
-
-_ := ${call Configuration,clang-x86_64-freebsd}
-
-$_.base     := clang
-$_.cppflags += -target x86_64-freebsd
-
-_ := ${call Configuration,clang-x86_64-linux}
-
-$_.base     := clang
-$_.cppflags += -target x86_64-linux
-
 _ := ${call Configuration,clang-debug}
 
 $_.base     := clang
