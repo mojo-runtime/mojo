@@ -77,7 +77,7 @@ _ := ${call Configuration,_top}
 $_.cflags   := -std=c11
 $_.cppflags := \
 	-I$/c \
-	-I$/c/_compat \
+	-I$/compat/c \
 	-O3 \
 	-Wall \
 	-Werror \
@@ -85,7 +85,7 @@ $_.cppflags := \
 	-nostdinc
 $_.cxxflags := \
 	-I$/c++ \
-	-I$/c++/_compat \
+	-I$/compat/c++ \
 	-nostdinc++ \
 	-std=c++14
 $_.ldflags  := \
@@ -158,8 +158,8 @@ undefine __top
 #---------------------------------------------------------------------------------------------------
 # We're the Makefile.
 
-include c/Makefile
 include c++/Makefile
+include compat/Makefile
 
 else
 #---------------------------------------------------------------------------------------------------
