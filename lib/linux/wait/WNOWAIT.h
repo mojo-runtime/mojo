@@ -1,1 +1,0 @@
-#define WNOWAIT 0x1000000
