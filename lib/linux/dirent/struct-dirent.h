@@ -3,8 +3,8 @@
 #if defined(_FILE_OFFSET_BITS)
 #  error
 #else
-#  include "ino_t.h"
-#  include "off_t.h"
+#  include "../types/ino_t.h"
+#  include "../types/off_t.h"
 #endif
 
 struct dirent

@@ -1,10 +1,10 @@
 #pragma once
 
-#include "c/EBADF.h"
-#include "c/EFAULT.h"
-#include "c/EIO.h"
-#include "c/EOVERFLOW.h"
-#include "c/struct-stat.h"
+#include "errno/EBADF.h"
+#include "errno/EFAULT.h"
+#include "errno/EIO.h"
+#include "errno/EOVERFLOW.h"
+#include "stat/struct-stat.h"
 #include "Result.hxx"
 
 #define __NR_fstat 189

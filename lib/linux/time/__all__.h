@@ -4,7 +4,7 @@
 
 // The <time.h> header shall define the following symbolic names:
 
-#include <std/NULL.h>
+#include <c/NULL.h>
 // CLOCKS_PER_SEC
 // CLOCK_PROCESS_CPUTIME_ID [TMR\CPT]
 // CLOCK_THREAD_CPUTIME_ID [TMR\CPT]
@@ -25,12 +25,12 @@
 // TIMER_ABSTIME
 // CLOCK_MONOTONIC [MON]
 
-#include "clock_t.h"
-#include <std/size_t.h>
-#include "time_t.h"
+#include "../types/clock_t.h"
+#include <c/size_t.h>
+#include "../types/time_t.h"
 #if 1 // TMR
-#  include "clockid_t.h"
-#  include "timer_t.h"
+#  include "../types/clockid_t.h"
+#  include "../types/timer_t.h"
 #endif
 
 #if 0 // XSI

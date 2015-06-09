@@ -1,7 +1,7 @@
 #pragma once
 
 #include <c/size_t.h>
-#include "c/EINVAL.h"
+#include "errno/EINVAL.h"
 #include "Result.hxx"
 
 #if defined(__arm__)

@@ -1,10 +1,10 @@
 #pragma once
 
 #include <c/size_t.h>
-#include "c/EBADF.h"
-#include "c/ECONNRESET.h"
-#include "c/EINTR.h"
-#include "c/ENOSPC.h"
+#include "errno/EBADF.h"
+#include "errno/ECONNRESET.h"
+#include "errno/EINTR.h"
+#include "errno/ENOSPC.h"
 #include "Result.hxx"
 
 #define __NR_close 6

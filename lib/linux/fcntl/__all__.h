@@ -33,16 +33,16 @@
 // POSIX_FADV_RANDOM [XSI]
 // POSIX_FADV_SEQUENTIAL [XSI]
 // POSIX_FADV_WILLNEED [XSI]
-#include "SEEK_CUR.h" // [XSI]
-#include "SEEK_END.h" // [XSI]
-#include "SEEK_SET.h" // [XSI]
+#include "../unistd/SEEK_CUR.h" // [XSI]
+#include "../unistd/SEEK_END.h" // [XSI]
+#include "../unistd/SEEK_SET.h" // [XSI]
 
 //--------------------------------------------------------------------------------------------------
 // Types
 
-#include "mode_t.h"
-#include "off_t.h"
-#include "pid_t.h"
+#include "../types/mode_t.h"
+#include "../types/off_t.h"
+#include "../types/pid_t.h"
 // struct flock
 
 //--------------------------------------------------------------------------------------------------

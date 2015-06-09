@@ -96,7 +96,7 @@
 // Types
 
 // mcontext_t [XSI]
-#include "pid_t.h" // [CX]
+#include "../types/pid_t.h" // [CX]
 // sig_atomic_t
 // siginfo_t [CX]
 // sigset_t [CX]

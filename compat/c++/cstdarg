@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------------------------
 // Macros
 
-#include <std/va_start.h>
-#include <std/va_arg.h>
-#include <std/va_copy.h>
-#include <std/va_end.h>
+#include <c/va_start.h>
+#include <c/va_arg.h>
+#include <c/va_copy.h>
+#include <c/va_end.h>

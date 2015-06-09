@@ -1,7 +1,7 @@
 #pragma once
 
-#include <std/char16_t.h>
-#include <std/char32_t.h>
+#include <c/char16_t.h>
+#include <c/char32_t.h>
 
 //--------------------------------------------------------------------------------------------------
 // Macros

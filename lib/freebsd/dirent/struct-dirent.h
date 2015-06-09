@@ -1,8 +1,8 @@
 #pragma once
 
-#include <std/uint8_t.h>
-#include <std/uint16_t.h>
-#include <std/uint32_t.h>
+#include <c/uint8_t.h>
+#include <c/uint16_t.h>
+#include <c/uint32_t.h>
 
 struct dirent
 {

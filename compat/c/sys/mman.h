@@ -1,7 +1,7 @@
 #if defined(__FreeBSD__)
-#  include <freebsd/_mman.h>
+#  include <freebsd/mman/__all__.h>
 #elif defined(__linux__)
-#  include <linux/_mman.h>
+#  include <linux/mman/__all__.h>
 #else
 #  error
 #endif

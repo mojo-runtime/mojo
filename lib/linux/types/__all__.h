@@ -28,8 +28,8 @@
 // pthread_rwlockattr_t
 // pthread_spinlock_t
 // pthread_t
-#include <std/size_t.h>
-#include <std/ssize_t.h>
+#include <c/size_t.h>
+#include <c/ssize_t.h>
 #include "suseconds_t.h"
 #include "time_t.h"
 #include "timer_t.h"

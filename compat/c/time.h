@@ -1,7 +1,7 @@
 #if defined(__FreeBSD__)
-#  include <freebsd/_time.h>
+#  include <freebsd/time/__all__.h>
 #elif defined(__linux__)
-#  include <linux/_time.h>
+#  include <linux/time/__all__.h>
 #else
 #  error
 #endif

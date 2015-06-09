@@ -213,12 +213,12 @@
 //--------------------------------------------------------------------------------------------------
 // Duplicates
 
-#include <std/NULL.h>
-#include <std/intptr_t.h>
-#include "gid_t.h"
-#include "off_t.h"
-#include "pid_t.h"
-#include <std/size_t.h>
-#include <std/ssize_t.h> // FIXME: not standard
-#include "uid_t.h"
-#include "useconds_t.h"
+#include <c/NULL.h>
+#include <c/intptr_t.h>
+#include "../types/gid_t.h"
+#include "../types/off_t.h"
+#include "../types/pid_t.h"
+#include <c/size_t.h>
+#include <c/ssize_t.h> // FIXME: not standard
+#include "../types/uid_t.h"
+#include "../types/useconds_t.h"

@@ -1,12 +1,12 @@
 #pragma once
 
-#include <std/NULL.h>
+#include <c/NULL.h>
 // memccpy
 // memchr
-#include <std/memcpy.h>
+#include <c/memcpy.h>
 // memmove
-#include <std/memset.h>
-#include <std/size_t.h>
+#include <c/memset.h>
+#include <c/size_t.h>
 // strcat
 // strchr
 // strcoll
@@ -14,7 +14,7 @@
 // strcspn
 // strdup
 // strerror
-#include <std/strlen.h>
+#include <c/strlen.h>
 // strncat
 // strncmp
 // strncpy

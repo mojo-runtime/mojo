@@ -4,19 +4,19 @@
 
 // ...shall define the following macros:
 
-#include <std/EXIT_FAILURE.h>
-#include <std/EXIT_SUCCESS.h>
-#include <std/NULL.h>
+#include <c/EXIT_FAILURE.h>
+#include <c/EXIT_SUCCESS.h>
+#include <c/NULL.h>
 // RAND_MAX
 // MB_CUR_MAX
 
 // ...shall be defined through typedef:
 
-#include <std/div_t.h>
-#include <std/ldiv_t.h>
-#include <std/lldiv_t.h>
-#include <std/size_t.h>
-#include <std/wchar_t.h>
+#include <c/div_t.h>
+#include <c/ldiv_t.h>
+#include <c/lldiv_t.h>
+#include <c/size_t.h>
+#include <c/wchar_t.h>
 
 // ...the following symbolic names and macros shall be defined as in <sys/wait.h>:
 
@@ -34,14 +34,14 @@
 // ...shall be declared as functions and may also be defined as macros.
 // Function prototypes shall be provided.
 
-#include <std/_Exit.h>
+#include <c/_Exit.h>
 
 #if 0 // XSI
 // a64l
 #endif
 
 // abort
-#include <std/abs.h>
+#include <c/abs.h>
 // atexit
 // atof
 // atoi

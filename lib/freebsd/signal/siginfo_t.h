@@ -1,7 +1,7 @@
 #pragma once
 
-#include "pid_t.h"
-#include "uid_t.h"
+#include "../types/pid_t.h"
+#include "../types/uid_t.h"
 #include "union-sigval.h"
 
 typedef struct

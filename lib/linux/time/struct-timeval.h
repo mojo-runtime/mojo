@@ -1,7 +1,7 @@
 #pragma once
 
-#include "time_t.h"
-#include "suseconds_t.h"
+#include "../types/time_t.h"
+#include "../types/suseconds_t.h"
 
 struct timeval
 {

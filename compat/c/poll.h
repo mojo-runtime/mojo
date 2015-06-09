@@ -1,7 +1,7 @@
 #if defined(__FreeBSD__)
-#  include <freebsd/_poll.h>
+#  include <freebsd/poll/__all__.h>
 #elif defined(__linux__)
-#  include <linux/_poll.h>
+#  include <linux/poll/__all__.h>
 #else
 #  error
 #endif

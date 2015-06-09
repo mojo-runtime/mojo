@@ -13,11 +13,11 @@
 // WSTOPSIG
 // WTERMSIG
 // WUNTRACED
-#include "id_t.h"
+#include "../types/id_t.h"
 #include "idtype_t.h"
-#include "pid_t.h"
-#include "siginfo_t.h"
-#include "struct-rusage.h"
+#include "../types/pid_t.h"
+#include "../signal/siginfo_t.h"
+#include "../resource/struct-rusage.h"
 // wait
 // waitid
 // waitpid

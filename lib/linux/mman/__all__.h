@@ -24,19 +24,19 @@
 #include "PROT_WRITE.h"
 // mlock
 // mlockall
-#include "mode_t.h"
+#include "../types/mode_t.h"
 // mmap
 // mprotect
 // msync
 // munlock
 // munlockall
 // munmap
-#include "off_t.h"
+#include "../types/off_t.h"
 // posix_madvise
 // posix_mem_offset
 // posix_mem_get_info
 // posix_mem_open
 // shm_open
 // shm_unlink
-#include <std/size_t.h>
+#include <c/size_t.h>
 // struct posix_typed_mem_info

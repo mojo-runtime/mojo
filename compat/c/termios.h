@@ -1,7 +1,7 @@
 #if defined(__FreeBSD__)
-#  include <freebsd/_termios.h>
+#  include <freebsd/termios/__all__.h>
 #elif defined(__linux__)
-#  include <linux/_termios.h>
+#  include <linux/termios/__all__.h>
 #else
 #  error
 #endif

@@ -1,17 +1,17 @@
 #pragma once
 
 #include <c/size_t.h>
-#include "c/EACCES.h"
-#include "c/EAGAIN.h"
-#include "c/EBADF.h"
-#include "c/EINVAL.h"
-#include "c/ENFILE.h"
-#include "c/ENODEV.h"
-#include "c/ENOMEM.h"
-#include "c/EOVERFLOW.h"
-#include "c/EPERM.h"
-#include "c/ETXTBSY.h"
-#include "c/off_t.h"
+#include "errno/EACCES.h"
+#include "errno/EAGAIN.h"
+#include "errno/EBADF.h"
+#include "errno/EINVAL.h"
+#include "errno/ENFILE.h"
+#include "errno/ENODEV.h"
+#include "errno/ENOMEM.h"
+#include "errno/EOVERFLOW.h"
+#include "errno/EPERM.h"
+#include "errno/ETXTBSY.h"
+#include "types/off_t.h"
 #include "Result.hxx"
 
 #if defined(__arm__)

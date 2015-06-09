@@ -1,7 +1,7 @@
 #pragma once
 
+#include <c/uint32_t.h>
 #include <feature/__has_flexible_array.h>
-#include <std/uint32_t.h>
 
 struct inotify_event
 {

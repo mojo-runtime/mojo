@@ -1,7 +1,7 @@
 #pragma once
 
 #include <c/size_t.h>
-#include "c/EINVAL.h"
+#include "errno/EINVAL.h"
 #include "Result.hxx"
 
 #define __NR_munmap 73
