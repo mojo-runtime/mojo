@@ -1,1 +1,0 @@
-#define ENAMETOOLONG 63

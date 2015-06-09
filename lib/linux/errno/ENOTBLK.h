@@ -1,1 +1,0 @@
-#define ENOTBLK 15

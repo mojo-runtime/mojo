@@ -1,1 +1,0 @@
-#define ENOSYS 78

@@ -1,1 +1,0 @@
-#define EFTYPE 79

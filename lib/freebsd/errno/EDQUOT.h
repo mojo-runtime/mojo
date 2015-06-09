@@ -1,1 +1,0 @@
-#define EDQUOT 69

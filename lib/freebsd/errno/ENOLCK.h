@@ -1,1 +1,0 @@
-#define ENOLCK 77

@@ -1,1 +1,0 @@
-#define ENOTCONN 57

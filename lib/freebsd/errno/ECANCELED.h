@@ -1,2 +1,0 @@
-#define ECANCELED 85
-
