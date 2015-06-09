@@ -1,6 +1,5 @@
 #pragma once
 
-#include "types/mode_t.h"
 #include "Result.hxx"
 
 #define EACCES 13

@@ -11,7 +11,7 @@
 
 #define __NR_stat 188
 
-#include "stat/struct-stat.h"
+#include "c/struct-stat.h"
 #include "Result.hxx"
 
 namespace freebsd {

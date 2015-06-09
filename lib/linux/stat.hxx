@@ -1,6 +1,6 @@
 #pragma once
 
-#include "stat/struct-stat.h"
+#include "c/struct-stat.h"
 #include "Result.hxx"
 
 #define EACCES 13

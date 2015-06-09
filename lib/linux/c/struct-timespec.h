@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../types/time_t.h"
+#include "time_t.h"
 
 struct timespec
 {

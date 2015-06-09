@@ -1,9 +1,9 @@
 #pragma once
 
 #if defined(__x86_64__)
-#  include "../types/clock_t.h"
-#  include "../types/pid_t.h"
-#  include "../types/uid_t.h"
+#  include "clock_t.h"
+#  include "pid_t.h"
+#  include "uid_t.h"
 #  include "union-sigval.h"
 
 typedef struct siginfo

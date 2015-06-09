@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../time/struct-timeval.h"
+#include "struct-timeval.h"
 
 struct rusage
 {
