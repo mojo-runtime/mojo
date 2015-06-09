@@ -13,7 +13,7 @@
 #  error
 #endif
 
-namespace os { inline namespace linux {
+namespace linux {
 
 static inline
 auto
@@ -29,4 +29,4 @@ close(int fd) noexcept
     return Result<void, Error>(__NR_close, fd);
 }
 
-}}
+}

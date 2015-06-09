@@ -9,7 +9,7 @@
 
 #define __NR_fstat 189
 
-namespace os { inline namespace freebsd {
+namespace freebsd {
 
 static inline
 auto
@@ -26,4 +26,4 @@ fstat(int fd, struct stat* sb) noexcept
     return Result<void, Error>(__NR_fstat, fd, sb);
 }
 
-}}
+}

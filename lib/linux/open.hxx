@@ -34,7 +34,7 @@
 #  error
 #endif
 
-namespace os { inline namespace linux {
+namespace linux {
 
 static inline
 auto
@@ -70,4 +70,4 @@ open(const char* pathname, int flags) noexcept
     return Result<int, Error>(__NR_open, pathname, flags);
 }
 
-}}
+}

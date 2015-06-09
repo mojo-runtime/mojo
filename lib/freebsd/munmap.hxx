@@ -6,7 +6,7 @@
 
 #define __NR_munmap 73
 
-namespace os { inline namespace freebsd {
+namespace freebsd {
 
 static inline
 auto
@@ -20,4 +20,4 @@ munmap(void* address, size_t length) noexcept
     return Result<void, Error>(__NR_munmap, address, length);
 }
 
-}}
+}

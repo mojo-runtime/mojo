@@ -15,7 +15,7 @@
 #  error
 #endif
 
-namespace os { inline namespace linux {
+namespace linux {
 
 static inline
 auto
@@ -32,4 +32,4 @@ fstat(int fd, struct stat* sb) noexcept
     return Result<void, Error>(__NR_fstat, fd, sb);
 }
 
-}}
+}

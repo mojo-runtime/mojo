@@ -25,7 +25,7 @@
 
 #define __NR_open 5
 
-namespace os { inline namespace freebsd {
+namespace freebsd {
 
 static inline
 auto
@@ -58,4 +58,4 @@ open(const char* pathname, int flags) noexcept
     return Result<int, Error>(__NR_open, pathname, flags);
 }
 
-}}
+}

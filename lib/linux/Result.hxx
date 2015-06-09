@@ -26,7 +26,7 @@
 #  error
 #endif
 
-namespace os { inline namespace linux {
+namespace linux {
 
 template <typename Ok, typename Error>
 struct Result;
@@ -196,7 +196,7 @@ struct Result : Result<void, Error>
     }
 };
 
-}}
+}
 
 #undef __CLOBBERS
 #undef __R0

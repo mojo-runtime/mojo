@@ -15,7 +15,7 @@
 
 #define __NR_read 3
 
-namespace os { inline namespace freebsd {
+namespace freebsd {
 
 static inline
 auto
@@ -38,4 +38,4 @@ read(int fd, void* buffer, size_t length) noexcept
     return Result<size_t, Error>(__NR_read, fd, buffer, length);
 }
 
-}}
+}

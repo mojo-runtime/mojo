@@ -19,7 +19,7 @@
 #  error
 #endif
 
-namespace os { inline namespace linux {
+namespace linux {
 
 static inline
 auto
@@ -40,4 +40,4 @@ stat(const char* pathname, struct stat* buf) noexcept
     return Result<void, Error>(__NR_stat, pathname, buf);
 }
 
-}}
+}

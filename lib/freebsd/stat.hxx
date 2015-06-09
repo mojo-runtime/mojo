@@ -13,7 +13,7 @@
 
 #define __NR_stat 188
 
-namespace os { inline namespace freebsd {
+namespace freebsd {
 
 static inline
 auto
@@ -34,4 +34,4 @@ stat(const char* pathname, struct stat* buf) noexcept
     return Result<void, Error>(__NR_stat, pathname, buf);
 }
 
-}}
+}

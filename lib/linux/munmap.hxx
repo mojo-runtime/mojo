@@ -12,7 +12,7 @@
 #  error
 #endif
 
-namespace os { inline namespace linux {
+namespace linux {
 
 static inline
 auto
@@ -26,4 +26,4 @@ munmap(void* address, size_t length) noexcept
     return Result<void, Error>(__NR_munmap, address, length);
 }
 
-}}
+}

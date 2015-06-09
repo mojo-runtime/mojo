@@ -16,7 +16,7 @@
 
 #define __NR_write 4
 
-namespace os { inline namespace freebsd {
+namespace freebsd {
 
 static inline
 auto
@@ -40,4 +40,4 @@ write(int fd, const void* buffer, size_t length) noexcept
     return Result<size_t, Error>(__NR_write, fd, buffer, length);
 }
 
-}}
+}

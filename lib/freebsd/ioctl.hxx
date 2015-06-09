@@ -8,7 +8,7 @@
 
 #define __NR_ioctl 54
 
-namespace os { inline namespace freebsd {
+namespace freebsd {
 
 // The type of `request` varies from man page to man page.
 // See: https://sourceware.org/bugzilla/show_bug.cgi?id=14362
@@ -29,4 +29,4 @@ ioctl(int fd, int request, Arg arg) noexcept
     return Result<void, Error>(__NR_ioctl, fd, request, arg);
 }
 
-}}
+}

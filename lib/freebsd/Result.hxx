@@ -2,7 +2,7 @@
 
 #define _E(rest) E##rest##_ = E##rest
 
-namespace os { inline namespace freebsd {
+namespace freebsd {
 
 template <typename Ok, typename Error>
 struct Result;
@@ -129,4 +129,4 @@ struct Result : Result<void, Error>
     }
 };
 
-}}
+}

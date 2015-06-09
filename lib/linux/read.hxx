@@ -18,7 +18,7 @@
 #  error
 #endif
 
-namespace os { inline namespace linux {
+namespace linux {
 
 static inline
 auto
@@ -38,4 +38,4 @@ read(int fd, void* buffer, size_t length) noexcept
     return Result<size_t, Error>(__NR_read, fd, buffer, length);
 }
 
-}}
+}

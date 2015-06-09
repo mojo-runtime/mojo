@@ -9,7 +9,7 @@
 
 #define __NR_close 6
 
-namespace os { inline namespace freebsd {
+namespace freebsd {
 
 static inline
 auto
@@ -26,4 +26,4 @@ close(int fd) noexcept
     return Result<void, Error>(__NR_close, fd);
 }
 
-}}
+}

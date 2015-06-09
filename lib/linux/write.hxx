@@ -22,7 +22,7 @@
 #  error
 #endif
 
-namespace os { inline namespace linux {
+namespace linux {
 
 static inline
 auto
@@ -46,4 +46,4 @@ write(int fd, const void* buffer, size_t length) noexcept
     return Result<size_t, Error>(__NR_write, fd, buffer, length);
 }
 
-}}
+}
