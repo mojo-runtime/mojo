@@ -106,6 +106,7 @@ $_.cxxflags += \
 	-Wno-c99-extensions \
 	-Wno-c++98-compat \
 	-Wno-c++98-compat-pedantic \
+	-Wno-gnu-zero-variadic-macro-arguments \
 	-Wno-old-style-cast
 
 _ := ${call Configuration,clang-arm-linux}
