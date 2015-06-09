@@ -1,15 +1,11 @@
 #pragma once
 
-#include <std/EXIT_FAILURE.h>
-#include <std/_Exit.h>
-
-#if !defined(__cplusplus)
-#  error TODO: C version
-#endif
+#include <c/EXIT_FAILURE.h>
+#include <c/_Exit.h>
 
 #if defined(__unix__)
+#  include <c/strlen.h>
 #  include <os/write.hxx>
-#  include <std/strlen.h>
 #  define _write(string) ::os::write(2, string, strlen(string))
 #else
 #  error
