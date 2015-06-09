@@ -1,9 +1,10 @@
 #pragma once
 
-#include "NCCS.h"
 #include "cc_t.h"
 #include "speed_t.h"
 #include "tcflag_t.h"
+
+#define NCCS 20
 
 struct termios
 {

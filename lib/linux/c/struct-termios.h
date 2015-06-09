@@ -1,8 +1,15 @@
 #pragma once
 
-#include "NCCS.h"
 #include "cc_t.h"
 #include "tcflag_t.h"
+
+#if defined(__mips__)
+#  define NCCS 23
+#elif defined(__sparc__)
+#  define NCCS 17
+#else
+#  define NCCS 19
+#endif
 
 struct termios
 {
