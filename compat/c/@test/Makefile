@@ -1,6 +1,4 @@
-__level__ := ../../..
-
-include ${dir ${lastword ${MAKEFILE_LIST}}}${__level__}/Makefile
+include ${dir ${lastword ${MAKEFILE_LIST}}}../../../Makefile
 
 tests += ${foreach x,${Configuration.instances},${foreach y,\
 \
