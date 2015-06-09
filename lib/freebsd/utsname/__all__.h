@@ -1,1 +1,0 @@
-../../linux/utsname/__all__.h

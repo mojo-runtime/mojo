@@ -1,5 +1,5 @@
 #if defined(__linux__)
-#  include <linux/inotify/__all__.h>
+#  include <linux/inotify/@all.h>
 #else
 #  error
 #endif

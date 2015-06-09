@@ -1,7 +1,7 @@
 #if defined(__FreeBSD__)
-#  include <freebsd/signal/__all__.h>
+#  include <freebsd/signal/@all.h>
 #elif defined(__linux__)
-#  include <linux/signal/__all__.h>
+#  include <linux/signal/@all.h>
 #else
 #  error
 #endif

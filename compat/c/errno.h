@@ -1,7 +1,7 @@
 #if defined(__FreeBSD__)
-#  include <freebsd/errno/__all__.h>
+#  include <freebsd/errno/@all.h>
 #elif defined(__linux__)
-#  include <linux/errno/__all__.h>
+#  include <linux/errno/@all.h>
 #else
 #  error
 #endif

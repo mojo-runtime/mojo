@@ -1,7 +1,7 @@
 #if defined(__FreeBSD__)
-#  include <freebsd/stat/__all__.h>
+#  include <freebsd/stat/@all.h>
 #elif defined(__linux__)
-#  include <linux/stat/__all__.h>
+#  include <linux/stat/@all.h>
 #else
 #  error
 #endif

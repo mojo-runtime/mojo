@@ -1,5 +1,5 @@
 #if defined(__linux__)
-#  include <linux/epoll/__all__.h>
+#  include <linux/epoll/@all.h>
 #else
 #  error
 #endif
