@@ -1,6 +1,6 @@
 include ${dir ${lastword ${MAKEFILE_LIST}}}../../../Makefile
 
-__tests__ += ${foreach x,${Configuration.instances},${foreach y,\
+tests := ${foreach x,${Configuration.instances},${foreach y,\
 \
 cstdarg\
 cstddef\
@@ -10,3 +10,7 @@ type_traits\
 utility\
 \
 ,${call $x.compile,$y.cxx}}}
+
+${tests} : @preprocessor-flags += -I$/compat/c++
+
+__tests__ += ${tests}

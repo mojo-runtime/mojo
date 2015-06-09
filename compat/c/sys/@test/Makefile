@@ -1,6 +1,6 @@
 include ${dir ${lastword ${MAKEFILE_LIST}}}../../../../Makefile
 
-__tests__ += ${foreach x,${Configuration.instances},${foreach y,\
+tests := ${foreach x,${Configuration.instances},${foreach y,\
 \
 epoll\
 inotify\
@@ -12,3 +12,7 @@ utsname\
 wait\
 \
 ,${call $x.compile,$y.c}}}
+
+${tests} : @preprocessor-flags += -I$/compat/c
+
+__tests__ += ${tests}

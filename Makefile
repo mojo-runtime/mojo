@@ -34,6 +34,12 @@ ${error todo}
 endif
 
 ####################################################################################################
+# Target-specific variables
+
+define @preprocessor-flags :=
+endef
+
+####################################################################################################
 
 define Configuration
 ${eval
@@ -65,9 +71,9 @@ define $0[$1].rules
 $${__build/}$1/: | $${__build/}
 	mkdir $$$$@
 $${__build/}$1/%.c.s: $${__root/}%.c | $${__build/}$1/
-	$$$${$0[$1].cc} $$$${$0[$1].cppflags} $$$${$0[$1].cflags} -o $$$$@ -S $$$$<
+	$$$${$0[$1].cc} $$$${$0[$1].cppflags} $$$${$0[$1].cflags} -o $$$$@ -S $$$$< $$$${@preprocessor-flags}
 $${__build/}$1/%.cxx.s: $${__root/}%.cxx | $${__build/}$1/
-	$$$${$0[$1].cxx} $$$${$0[$1].cppflags} $$$${$0[$1].cxxflags} -o $$$$@ -S $$$$<
+	$$$${$0[$1].cxx} $$$${$0[$1].cppflags} $$$${$0[$1].cxxflags} -o $$$$@ -S $$$$< $$$${@preprocessor-flags}
 endef
 
 # Functions
@@ -94,14 +100,12 @@ _ := ${call Configuration,_top}
 $_.cflags   := -std=c11
 $_.cppflags := \
 	-I$/lib \
-	-I$/compat/c \
 	-O3 \
 	-Wall \
 	-Werror \
 	-fno-exceptions \
 	-nostdinc
 $_.cxxflags := \
-	-I$/compat/c++ \
 	-nostdinc++ \
 	-std=c++14
 $_.ldflags  := \
