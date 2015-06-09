@@ -1,11 +1,12 @@
 #pragma once
 
-#include "errno/EBADF.h"
-#include "errno/EFAULT.h"
-#include "errno/EIO.h"
-#include "errno/EOVERFLOW.h"
 #include "stat/struct-stat.h"
 #include "Result.hxx"
+
+#define EBADF 9
+#define EFAULT 14
+#define EIO 5
+#define EOVERFLOW 98
 
 #define __NR_fstat 189
 
@@ -23,7 +24,23 @@ fstat(int fd, struct stat* sb) noexcept
         _E(OVERFLOW),
     };
 
-    return Result<void, Error>(__NR_fstat, fd, sb);
+    Result<void, Error>
+    result;
+
+#if defined(__x86_64__)
+    asm volatile ("syscall"
+                  "\nsbb %1, %1"
+                  : "=a" (result.__word),
+                    "=r" (result.__is_error)
+                  : "a" (__NR_fstat),
+                    "D" (fd),
+                    "S" (sb)
+                  : "memory");
+#else
+#  error
+#endif
+
+    return result;
 }
 
 }

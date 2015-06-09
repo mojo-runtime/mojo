@@ -1,18 +1,19 @@
 #pragma once
 
 #include <c/size_t.h>
-#include "errno/EAGAIN.h"
-#include "errno/EBADF.h"
-#include "errno/EDESTADDRREQ.h"
-#include "errno/EDQUOT.h"
-#include "errno/EFAULT.h"
-#include "errno/EFBIG.h"
-#include "errno/EINTR.h"
-#include "errno/EINVAL.h"
-#include "errno/EIO.h"
-#include "errno/ENOSPC.h"
-#include "errno/EPIPE.h"
 #include "Result.hxx"
+
+#define EAGAIN 35
+#define EBADF 9
+#define EDESTADDRREQ 39
+#define EDQUOT 69
+#define EFAULT 14
+#define EFBIG 27
+#define EINTR 4
+#define EINVAL 22
+#define EIO 5
+#define ENOSPC 28
+#define EPIPE 32
 
 #define __NR_write 4
 
@@ -37,7 +38,24 @@ write(int fd, const void* buffer, size_t length) noexcept
         _E(PIPE),
     };
 
-    return Result<size_t, Error>(__NR_write, fd, buffer, length);
+    Result<size_t, Error>
+    result;
+
+#if defined(__x86_64__)
+    asm volatile ("syscall\n"
+                  "sbb %1, %1"
+                  : "=a" (result.__word),
+                    "=r" (result.__is_error)
+                  : "a" (__NR_write),
+                    "D" (fd),
+                    "S" (buffer),
+                    "d" (length)
+                  : "memory");
+#else
+#  error
+#endif
+
+    return result;
 }
 
 }

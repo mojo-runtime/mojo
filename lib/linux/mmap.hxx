@@ -1,22 +1,27 @@
 #pragma once
 
 #include <c/size_t.h>
-#include "errno/EACCES.h"
-#include "errno/EAGAIN.h"
-#include "errno/EBADF.h"
-#include "errno/EINVAL.h"
-#include "errno/ENFILE.h"
-#include "errno/ENODEV.h"
-#include "errno/ENOMEM.h"
-#include "errno/EOVERFLOW.h"
-#include "errno/EPERM.h"
-#include "errno/ETXTBSY.h"
 #include "types/off_t.h"
 #include "Result.hxx"
 
+#define EACCES 13
+// EAGAIN
+#define EBADF 9
+#define EINVAL 22
+#define ENFILE 23
+#define ENODEV 19
+#define ENOMEM 12
+// EOVERFLOW
+#define EPERM 1
+#define ETXTBSY 26
+
 #if defined(__arm__)
+#  define EAGAIN 11
+#  define EOVERFLOW 75
 #  define __NR_mmap 90
 #elif defined(__x86_64__)
+#  define EAGAIN 11
+#  define EOVERFLOW 75
 #  define __NR_mmap 9
 #else
 #  error
@@ -42,7 +47,54 @@ mmap(void* addr, size_t length, int prot, int flags, int fd, off_t offset) noexc
         _E(TXTBSY),
     };
 
-    return Result<void*, Error>(__NR_mmap, addr, length, prot, flags, fd, offset);
+    Result<void*, Error>
+    result;
+
+#if defined(__arm__)
+
+    register Word r0 asm ("r0") = __NR_mmap;
+    register auto r1 asm ("r1") = addr;
+    register auto r2 asm ("r2") = length;
+    register auto r3 asm ("r3") = prot;
+    register auto r4 asm ("r4") = flags;
+    register auto r5 asm ("r5") = fd;
+    register auto r6 asm ("r6") = offset;
+
+    asm volatile ("swi 0x0"
+                  : "=r" (r0)
+                  : "r" (r0),
+                    "r" (r1),
+                    "r" (r2),
+                    "r" (r3),
+                    "r" (r4),
+                    "r" (r5),
+                    "r" (r6)
+                  : "memory");
+
+    result.__word = r0;
+
+#elif defined(__x86_64__)
+
+    register auto r10 asm ("r10") = flags;
+    register auto r8  asm ("r8")  = fd;
+    register auto r9  asm ("r9")  = offset;
+
+    asm volatile ("syscall"
+                  : "=a" (result.__word)
+                  : "a" (__NR_mmap),
+                    "D" (addr),
+                    "S" (length),
+                    "d" (prot),
+                    "r" (r10),
+                    "r" (r8),
+                    "r" (r9)
+                  : "rcx", "r11");
+
+#else
+#  error
+#endif
+
+    return result;
 }
 
 }

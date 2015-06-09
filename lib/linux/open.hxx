@@ -1,34 +1,46 @@
 #pragma once
 
-#include "errno/EACCES.h"
-#include "errno/EDQUOT.h"
-#include "errno/EEXIST.h"
-#include "errno/EFAULT.h"
-#include "errno/EINTR.h"
-#include "errno/EINVAL.h"
-#include "errno/EISDIR.h"
-#include "errno/ELOOP.h"
-#include "errno/EMFILE.h"
-#include "errno/ENAMETOOLONG.h"
-#include "errno/ENFILE.h"
-#include "errno/ENODEV.h"
-#include "errno/ENOENT.h"
-#include "errno/ENOMEM.h"
-#include "errno/ENOSPC.h"
-#include "errno/ENOTDIR.h"
-#include "errno/ENXIO.h"
-#include "errno/EOPNOTSUPP.h"
-#include "errno/EOVERFLOW.h"
-#include "errno/EPERM.h"
-#include "errno/EROFS.h"
-#include "errno/ETXTBSY.h"
-#include "errno/EWOULDBLOCK.h"
-#include "types/mode_t.h"
 #include "Result.hxx"
 
+#define EACCES 13
+// EDQUOT
+#define EEXIST 17
+#define EFAULT 14
+#define EINTR 4
+#define EINVAL 22
+#define EISDIR 21
+// ELOOP
+#define EMFILE 24
+// ENAMETOOLONG
+#define ENFILE 23
+#define ENODEV 19
+#define ENOENT 2
+#define ENOMEM 12
+#define ENOSPC 28
+#define ENOTDIR 20
+#define ENXIO 6
+// EOPNOTSUPP
+// EOVERFLOW
+#define EPERM 1
+#define EROFS 30
+#define ETXTBSY 26
+// EWOULDBLOCK
+
 #if defined(__arm__)
+#  define EDQUOT 122
+#  define ELOOP 40
+#  define ENAMETOOLONG 36
+#  define EOPNOTSUPP 95
+#  define EOVERFLOW 75
+#  define EWOULDBLOCK 11
 #  define __NR_open 5
 #elif defined(__x86_64__)
+#  define EDQUOT 122
+#  define ELOOP 40
+#  define ENAMETOOLONG 36
+#  define EOPNOTSUPP 95
+#  define EOVERFLOW 75
+#  define EWOULDBLOCK 11
 #  define __NR_open 2
 #else
 #  error
@@ -67,7 +79,38 @@ open(const char* pathname, int flags) noexcept
         _E(WOULDBLOCK),
     };
 
-    return Result<int, Error>(__NR_open, pathname, flags);
+    Result<int, Error>
+    result;
+
+#if defined(__arm__)
+
+    register Word r0 asm ("r0") = __NR_open;
+    register auto r1 asm ("r1") = pathname;
+    register auto r2 asm ("r2") = flags;
+
+    asm volatile ("swi 0x0"
+                  : "=r" (r0)
+                  : "r" (r0),
+                    "r" (r1),
+                    "r" (r2)
+                  : "memory");
+
+    result.__word = r0;
+
+#elif defined(__x86_64__)
+
+    asm volatile ("syscall"
+                  : "=a" (result.__word)
+                  : "a" (__NR_open),
+                    "D" (pathname),
+                    "S" (flags)
+                  : "rcx", "r11");
+
+#else
+#  error
+#endif
+
+    return result;
 }
 
 }

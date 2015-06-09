@@ -1,13 +1,14 @@
 #pragma once
 
 #include <c/size_t.h>
-#include "errno/EACCES.h"
-#include "errno/EBADF.h"
-#include "errno/EINVAL.h"
-#include "errno/ENODEV.h"
-#include "errno/ENOMEM.h"
 #include "types/off_t.h"
 #include "Result.hxx"
+
+#define EACCES 13
+#define EBADF 9
+#define EINVAL 22
+#define ENODEV 19
+#define ENOMEM 12
 
 #define __NR_mmap 477
 
@@ -26,7 +27,30 @@ mmap(void* addr, size_t length, int prot, int flags, int fd, off_t offset) noexc
         _E(NOMEM),
     };
 
-    return Result<void*, Error>(__NR_mmap, addr, length, prot, flags, fd, offset);
+    Result<void*, Error>
+    result;
+
+#if defined(__x86_64__)
+    register auto r8 asm ("r8") = fd;
+    register auto r9 asm ("r9") = offset;
+
+    asm volatile ("syscall\n"
+                  "sbb %1, %1"
+                  : "=a" (result.__word),
+                    "=r" (result.__is_error)
+                  : "a" (__NR_mmap),
+                    "D" (addr),
+                    "S" (length),
+                    "d" (prot),
+                    "c" (flags),
+                    "r" (r8),
+                    "r" (r9)
+                  : "memory");
+#else
+#  error
+#endif
+
+    return result;
 }
 
 }

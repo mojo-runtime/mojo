@@ -1,27 +1,28 @@
 #pragma once
 
-#include "errno/EACCES.h"
-#include "errno/EDQUOT.h"
-#include "errno/EEXIST.h"
-#include "errno/EFAULT.h"
-#include "errno/EINTR.h"
-#include "errno/EINVAL.h"
-#include "errno/EIO.h"
-#include "errno/EISDIR.h"
-#include "errno/ELOOP.h"
-#include "errno/EMFILE.h"
-#include "errno/ENAMETOOLONG.h"
-#include "errno/ENOENT.h"
-#include "errno/ENOSPC.h"
-#include "errno/ENOTDIR.h"
-#include "errno/ENXIO.h"
-#include "errno/EOPNOTSUPP.h"
-#include "errno/EPERM.h"
-#include "errno/EROFS.h"
-#include "errno/ETXTBSY.h"
-#include "errno/EWOULDBLOCK.h"
 #include "types/mode_t.h"
 #include "Result.hxx"
+
+#define EACCES 13
+#define EDQUOT 69
+#define EEXIST 17
+#define EFAULT 14
+#define EINTR 4
+#define EINVAL 22
+#define EIO 5
+#define EISDIR 21
+#define ELOOP 62
+#define EMFILE 24
+#define ENAMETOOLONG 63
+#define ENOENT 2
+#define ENOSPC 28
+#define ENOTDIR 20
+#define ENXIO 6
+#define EOPNOTSUPP 45
+#define EPERM 1
+#define EROFS 30
+#define ETXTBSY 26
+#define EWOULDBLOCK 35
 
 #define __NR_open 5
 
@@ -55,7 +56,23 @@ open(const char* pathname, int flags) noexcept
         _E(WOULDBLOCK),
     };
 
-    return Result<int, Error>(__NR_open, pathname, flags);
+    Result<int, Error>
+    result;
+
+#if defined(__x86_64__)
+    asm volatile ("syscall\n"
+                  "sbb %1, %1"
+                  : "=a" (result.__word),
+                    "=r" (result.__is_error)
+                  : "a" (__NR_open),
+                    "D" (pathname),
+                    "S" (flags)
+                  : "memory");
+#else
+#  error
+#endif
+
+    return result;
 }
 
 }

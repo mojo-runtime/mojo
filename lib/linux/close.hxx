@@ -1,9 +1,10 @@
 #pragma once
 
-#include "errno/EBADF.h"
-#include "errno/EINTR.h"
-#include "errno/EIO.h"
 #include "Result.hxx"
+
+#define EBADF 9
+#define EINTR 4
+#define EIO 5
 
 #if defined(__arm__)
 #  define __NR_close 6
@@ -26,7 +27,35 @@ close(int fd) noexcept
         _E(IO),
     };
 
-    return Result<void, Error>(__NR_close, fd);
+    Result<void, Error>
+    result;
+
+#if defined(__arm__)
+
+    register Word r0 asm ("r0") = __NR_close;
+    register auto r1 asm ("r1") = fd;
+
+    asm volatile ("swi 0x0"
+                  : "=r" (r0)
+                  : "r" (r0),
+                    "r" (r1)
+                  : "memory");
+
+    result.__word = r0;
+
+#elif defined(__x86_64__)
+
+    asm volatile ("syscall"
+                  : "=a" (result.__word)
+                  : "a" (__NR_close),
+                    "D" (fd)
+                  : "rcx", "r11");
+
+#else
+#  error
+#endif
+
+    return result;
 }
 
 }
