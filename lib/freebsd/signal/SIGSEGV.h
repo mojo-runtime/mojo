@@ -1,1 +1,0 @@
-#define SIGSEGV 11

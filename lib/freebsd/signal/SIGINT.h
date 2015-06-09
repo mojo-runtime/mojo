@@ -1,1 +1,0 @@
-#define SIGINT 2
