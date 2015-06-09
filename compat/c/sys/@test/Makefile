@@ -6,6 +6,7 @@ tests += ${foreach x,${Configuration.instances},${foreach y,\
 \
 epoll\
 inotify\
+ioctl\
 mman\
 stat\
 types\
