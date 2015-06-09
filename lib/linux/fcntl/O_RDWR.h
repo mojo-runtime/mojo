@@ -1,1 +1,0 @@
-#define O_RDWR 0x2

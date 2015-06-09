@@ -24,6 +24,14 @@
 #define ETXTBSY 26
 #define EWOULDBLOCK 35
 
+#define O_CLOEXEC 0x100000
+#define O_CREAT 0x200
+#define O_DIRECTORY 0x20000
+#define O_NONBLOCK 0x4
+#define O_RDONLY 0x0
+#define O_RDWR 0x2
+#define O_WRONLY 0x1
+
 #define __NR_open 5
 
 namespace freebsd {

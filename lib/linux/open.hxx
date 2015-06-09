@@ -26,6 +26,14 @@
 #define ETXTBSY 26
 // EWOULDBLOCK
 
+// O_CLOEXEC
+// O_CREAT
+// O_DIRECTORY
+// O_NONBLOCK
+#define O_RDONLY 0x0
+#define O_RDWR 0x2
+#define O_WRONLY 0x1
+
 #if defined(__arm__)
 #  define EDQUOT 122
 #  define ELOOP 40
@@ -33,6 +41,10 @@
 #  define EOPNOTSUPP 95
 #  define EOVERFLOW 75
 #  define EWOULDBLOCK 11
+#  define O_CLOEXEC 0x80000
+#  define O_CREAT 0x40
+#  define O_DIRECTORY 0x4000
+#  define O_NONBLOCK 0x800
 #  define __NR_open 5
 #elif defined(__x86_64__)
 #  define EDQUOT 122
@@ -41,6 +53,10 @@
 #  define EOPNOTSUPP 95
 #  define EOVERFLOW 75
 #  define EWOULDBLOCK 11
+#  define O_CLOEXEC 0x80000
+#  define O_CREAT 0x40
+#  define O_DIRECTORY 0x10000
+#  define O_NONBLOCK 0x800
 #  define __NR_open 2
 #else
 #  error

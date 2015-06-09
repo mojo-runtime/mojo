@@ -1,1 +1,0 @@
-#define O_DIRECTORY 0x20000
