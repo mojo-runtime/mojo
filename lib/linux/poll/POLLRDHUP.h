@@ -1,1 +1,0 @@
-#define POLLRDHUP 0x2000
