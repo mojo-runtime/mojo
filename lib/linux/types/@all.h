@@ -29,7 +29,7 @@
 // pthread_spinlock_t
 // pthread_t
 #include <c/size_t.h>
-#include <c/ssize_t.h>
+#include "ssize_t.h"
 #include "suseconds_t.h"
 #include "time_t.h"
 #include "timer_t.h"

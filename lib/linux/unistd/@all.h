@@ -219,6 +219,6 @@
 #include "../types/off_t.h"
 #include "../types/pid_t.h"
 #include <c/size_t.h>
-#include <c/ssize_t.h> // FIXME: not standard
+#include "../types/ssize_t.h"
 #include "../types/uid_t.h"
 #include "../types/useconds_t.h"
