@@ -3,8 +3,25 @@ define __initialized :=
 1
 endef
 
-/ROOT := ${abspath ${dir ${lastword ${MAKEFILE_LIST}}}}
+.PHONY: all
+.SECONDEXPANSION:
+all: $${__all__}
 
+.PHONY: clean
+.SECONDEXPANSION:
+clean: $${__clean__}
+
+.PHONY: test
+.SECONDEXPANSION:
+tests: $${__tests__}
+
+__all__   := tests
+__clean__ :=
+__tests__ :=
+
+####################################################################################################
+
+/ROOT := ${abspath ${dir ${lastword ${MAKEFILE_LIST}}}}
 ifeq (${/ROOT},${CURDIR})
 /     :=
 __top := 1
@@ -137,19 +154,6 @@ $_.cppflags += -fdiagnostics-color=always -fmax-errors=1
 $_.cxx      := g++
 
 ####################################################################################################
-
-.SECONDEXPANSION:
-.PHONY: all
-all: tests
-
-.PHONY: clean
-clean: $${foreach x,$${__roots},$${if $${realpath $$x.build},__clean-$$x.build}}
-
-.PHONY: tests
-tests: $${tests}
-tests :=
-
-####################################################################################################
 endif # First time only
 ####################################################################################################
 
@@ -166,13 +170,6 @@ else
 # We've been included.
 
 __root/ := ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}
-
-ifdef __roots
-__roots += ${__roots} ${__root/}
-else
-__roots := ${__root/}
-endif
-
 ifeq (${__root/},./)
 __root/ :=
 endif
@@ -182,9 +179,17 @@ __build/ := ${__root/}.build/
 ${__build/}:
 	mkdir $@
 
-.PHONY:
-__clean-${__root/}.build:
-	rm -r ${subst __clean-,,$@}
+ifdef MAKECMDGOALS
+ifeq (${MAKECMDGOALS},clean)
+ifneq (${realpath ${__build/}},)
+phony     := _<clean>-${__build/}
+__clean__ += ${phony}
+.PHONY: ${phony}
+${phony}:
+	rm -r ${subst _<clean>-,,$@}
+endif
+endif
+endif
 
 ${foreach c,${Configuration.instances},${eval ${$c.rules}}}
 
