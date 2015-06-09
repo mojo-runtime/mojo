@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include <std/_Exit.h>
+#include <c/_Exit.h>
 
 struct Arguments;
 
