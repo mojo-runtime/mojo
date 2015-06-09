@@ -1,1 +1,0 @@
-#define IN_ONESHOT 0x80000000

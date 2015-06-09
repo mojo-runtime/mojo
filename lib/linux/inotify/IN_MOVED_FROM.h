@@ -1,1 +1,0 @@
-#define IN_MOVED_FROM 0x40

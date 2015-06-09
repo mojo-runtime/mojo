@@ -1,1 +1,0 @@
-#define IN_IGNORED 0x8000
