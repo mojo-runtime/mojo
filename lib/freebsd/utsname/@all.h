@@ -1,1 +1,0 @@
-../../linux/utsname/@all.h

@@ -1,1 +1,0 @@
-../../linux/types/@all.h
