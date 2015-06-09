@@ -11,14 +11,16 @@
 #  error
 #endif
 
+namespace debug {
+
 __attribute__((__noreturn__, __nothrow__))
 static inline
 void
-__debug_error(const char* kind,
-              const char* file,
-              const char* function,
-              __attribute__((__unused__)) unsigned line,
-              const char* message)
+__error(const char* kind,
+        const char* file,
+        const char* function,
+        __attribute__((__unused__)) unsigned line,
+        const char* message)
 {
     // Super naive.
     _write("\033[31;1m");
@@ -36,6 +38,8 @@ __debug_error(const char* kind,
     _write("\n");
 
     _Exit(EXIT_FAILURE);
+}
+
 }
 
 #undef _write
