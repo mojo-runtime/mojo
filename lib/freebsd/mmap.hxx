@@ -10,6 +10,15 @@
 #define ENODEV 19
 #define ENOMEM 12
 
+#define MAP_ANONYMOUS 0x1000
+#define MAP_PRIVATE 0x2
+#define MAP_SHARED 0x1
+
+#define PROT_EXEC 0x4
+#define PROT_NONE 0x0
+#define PROT_READ 0x1
+#define PROT_WRITE 0x2
+
 #define __NR_mmap 477
 
 namespace freebsd {

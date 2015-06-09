@@ -1,1 +1,0 @@
-#define MAP_ANONYMOUS 0x1000
