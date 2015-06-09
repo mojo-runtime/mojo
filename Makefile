@@ -23,12 +23,12 @@ __tests__ :=
 
 /ROOT := ${abspath ${dir ${lastword ${MAKEFILE_LIST}}}}
 ifeq (${/ROOT},${CURDIR})
-/     :=
+ROOT/ :=
 __top := 1
 else ifeq (${words ${/ROOT}},1)
 empty  :=
 space  := ${empty} ${empty}
-/      := ${subst ${space},/,${patsubst %,..,${subst /,${space},${CURDIR:${/ROOT}/%=%}}}}/
+ROOT/  := ${subst ${space},/,${patsubst %,..,${subst /,${space},${CURDIR:${/ROOT}/%=%}}}}/
 else
 ${error todo}
 endif
@@ -70,9 +70,9 @@ $0[$1].ldflags  = $${if $${$0[$1].base},$${$0[$${$0[$1].base}].ldflags}, $${erro
 define $0[$1].rules
 $${__build/}$1/: | $${__build/}
 	mkdir $$$$@
-$${__build/}$1/%.c.s: $${__root/}%.c | $${__build/}$1/
+$${__build/}$1/%.c.s: $$/%.c | $${__build/}$1/
 	$$$${$0[$1].cc} $$$${$0[$1].cppflags} $$$${$0[$1].cflags} -o $$$$@ -S $$$$< $$$${@preprocessor-flags}
-$${__build/}$1/%.cxx.s: $${__root/}%.cxx | $${__build/}$1/
+$${__build/}$1/%.cxx.s: $$/%.cxx | $${__build/}$1/
 	$$$${$0[$1].cxx} $$$${$0[$1].cppflags} $$$${$0[$1].cxxflags} -o $$$$@ -S $$$$< $$$${@preprocessor-flags}
 endef
 
@@ -99,7 +99,7 @@ _ := ${call Configuration,_top}
 
 $_.cflags   := -std=c11
 $_.cppflags := \
-	-I$/lib \
+	-I${ROOT/}lib \
 	-O3 \
 	-Wall \
 	-Werror \
@@ -173,12 +173,12 @@ else
 #---------------------------------------------------------------------------------------------------
 # We've been included.
 
-__root/ := ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}
-ifeq (${__root/},./)
-__root/ :=
+/ := ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}
+ifeq ($/,./)
+/ :=
 endif
 
-__build/ := ${__root/}.build/
+__build/ := $/.build/
 
 ${__build/}:
 	mkdir $@

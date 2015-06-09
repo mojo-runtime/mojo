@@ -16,6 +16,6 @@ uchar\
 \
 ,${call $x.compile,$y.c}}}
 
-${tests} : @preprocessor-flags += -I$/compat/c
+${tests} : @preprocessor-flags += -I${ROOT/}compat/c
 
 __tests__ += ${tests}

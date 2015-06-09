@@ -11,6 +11,6 @@ utility\
 \
 ,${call $x.compile,$y.cxx}}}
 
-${tests} : @preprocessor-flags += -I$/compat/c++
+${tests} : @preprocessor-flags += -I${ROOT/}compat/c++
 
 __tests__ += ${tests}
