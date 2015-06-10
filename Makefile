@@ -154,7 +154,7 @@ _ := ${call Configuration,gcc}
 
 $_.base     := _top
 $_.cc       := gcc
-$_.cppflags += -fdiagnostics-color=always -fmax-errors=1
+$_.cppflags += -fdiagnostics-color=always -fmax-errors=1 -Wno-unknown-pragmas
 $_.cxx      := g++
 
 ####################################################################################################
