@@ -1,24 +1,32 @@
 [submodule "emacs"]
+	branch = master
 	path = emacs
 	url = git@github.com:mojo-runtime/emacs.git
 [submodule "lib/c"]
+	branch = master
 	path = lib/c
 	url = git@github.com:mojo-runtime/lib-c.git
 [submodule "lib/debug"]
+	branch = master
 	path = lib/debug
 	url = git@github.com:mojo-runtime/lib-debug.git
 [submodule "lib/feature"]
+	branch = master
 	path = lib/feature
 	url = git@github.com:mojo-runtime/lib-feature.git
 [submodule "lib/freebsd"]
+	branch = master
 	path = lib/freebsd
 	url = git@github.com:mojo-runtime/lib-freebsd.git
 [submodule "lib/linux"]
+	branch = master
 	path = lib/linux
 	url = git@github.com:mojo-runtime/lib-linux.git
 [submodule "lib/os"]
+	branch = master
 	path = lib/os
 	url = git@github.com:mojo-runtime/lib-os.git
 [submodule "lib/std"]
+	branch = master
 	path = lib/std
 	url = git@github.com:mojo-runtime/lib-std.git
