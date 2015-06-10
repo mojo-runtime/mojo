@@ -16,12 +16,10 @@
 #  define ELOOP 40
 #  define ENAMETOOLONG 36
 #  define EOVERFLOW 75
-#  define __NR_stat 106
 #elif defined(__x86_64__)
 #  define ELOOP 40
 #  define ENAMETOOLONG 36
 #  define EOVERFLOW 75
-#  define __NR_stat 4
 #else
 #  error
 #endif
@@ -49,7 +47,7 @@ stat(const char* pathname, struct stat* buf) noexcept
 
 #if defined(__arm__)
 
-    register Word r0 asm ("r0") = __NR_stat;
+    register Word r0 asm ("r0") = 106;
     register auto r1 asm ("r1") = pathname;
     register auto r2 asm ("r2") = buf;
 
@@ -66,7 +64,7 @@ stat(const char* pathname, struct stat* buf) noexcept
 
     asm volatile ("syscall"
                   : "=a" (result.__word)
-                  : "a" (__NR_stat),
+                  : "a" (4),
                     "D" (pathname),
                     "S" (buf)
                   : "rcx", "r11");

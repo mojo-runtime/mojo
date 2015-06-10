@@ -45,7 +45,6 @@
 #  define O_CREAT 0x40
 #  define O_DIRECTORY 0x4000
 #  define O_NONBLOCK 0x800
-#  define __NR_open 5
 #elif defined(__x86_64__)
 #  define EDQUOT 122
 #  define ELOOP 40
@@ -57,7 +56,6 @@
 #  define O_CREAT 0x40
 #  define O_DIRECTORY 0x10000
 #  define O_NONBLOCK 0x800
-#  define __NR_open 2
 #else
 #  error
 #endif
@@ -100,7 +98,7 @@ open(const char* pathname, int flags) noexcept
 
 #if defined(__arm__)
 
-    register Word r0 asm ("r0") = __NR_open;
+    register Word r0 asm ("r0") = 5;
     register auto r1 asm ("r1") = pathname;
     register auto r2 asm ("r2") = flags;
 
@@ -117,7 +115,7 @@ open(const char* pathname, int flags) noexcept
 
     asm volatile ("syscall"
                   : "=a" (result.__word)
-                  : "a" (__NR_open),
+                  : "a" (2),
                     "D" (pathname),
                     "S" (flags)
                   : "rcx", "r11");

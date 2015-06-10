@@ -13,10 +13,8 @@
 
 #if defined(__arm__)
 #  define EAGAIN 11
-#  define __NR_read 3
 #elif defined(__x86_64__)
 #  define EAGAIN 11
-#  define __NR_read 0
 #else
 #  error
 #endif
@@ -43,7 +41,7 @@ read(int fd, void* buffer, size_t length) noexcept
 
 #if defined(__arm__)
 
-    register Word r0 asm ("r0") = __NR_read;
+    register Word r0 asm ("r0") = 3;
     register auto r1 asm ("r1") = fd;
     register auto r2 asm ("r2") = buffer;
     register auto r3 asm ("r3") = length;
@@ -62,7 +60,7 @@ read(int fd, void* buffer, size_t length) noexcept
 
     asm volatile ("syscall"
                   : "=a" (result.__word)
-                  : "a" (__NR_read),
+                  : "a" (0),
                     "D" (fd),
                     "S" (buffer),
                     "d" (length)

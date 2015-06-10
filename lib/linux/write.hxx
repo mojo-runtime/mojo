@@ -19,12 +19,10 @@
 #  define EAGAIN 11
 #  define EDQUOT 122
 #  define EDESTADDRREQ 89
-#  define __NR_write 4
 #elif defined(__x86_64__)
 #  define EAGAIN 11
 #  define EDESTADDRREQ 89
 #  define EDQUOT 122
-#  define __NR_write 1
 #else
 #  error
 #endif
@@ -55,7 +53,7 @@ write(int fd, const void* buffer, size_t length) noexcept
 
 #if defined(__arm__)
 
-    register Word r0 asm ("r0") = __NR_write;
+    register Word r0 asm ("r0") = 4;
     register auto r1 asm ("r1") = fd;
     register auto r2 asm ("r2") = buffer;
     register auto r3 asm ("r3") = length;
@@ -74,7 +72,7 @@ write(int fd, const void* buffer, size_t length) noexcept
 
     asm volatile ("syscall"
                   : "=a" (result.__word)
-                  : "a" (__NR_write),
+                  : "a" (1),
                     "D" (fd),
                     "S" (buffer),
                     "d" (length)

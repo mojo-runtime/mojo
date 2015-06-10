@@ -24,12 +24,10 @@
 #  define ELIBBAD 80
 #  define ELOOP 40
 #  define ENAMETOOLONG 36
-#  define __NR_execve 11
 #elif defined(__x86_64__)
 #  define ELIBBAD 80
 #  define ELOOP 40
 #  define ENAMETOOLONG 36
-#  define __NR_execve 59
 #else
 #  error
 #endif
@@ -66,7 +64,7 @@ execve(const char* filename, char* const argv[], char* const envp[]) noexcept
 
 #if defined(__arm__)
 
-    register Word r0 asm ("r0") = __NR_execve;
+    register Word r0 asm ("r0") = 11;
     register auto r1 asm ("r1") = filename;
     register auto r2 asm ("r2") = argv;
     register auto r3 asm ("r3") = envp;
@@ -85,7 +83,7 @@ execve(const char* filename, char* const argv[], char* const envp[]) noexcept
 
     asm volatile ("syscall"
                   : "=a" (result.__word)
-                  : "a" (__NR_execve),
+                  : "a" (59),
                     "D" (filename),
                     "S" (argv),
                     "d" (envp)
