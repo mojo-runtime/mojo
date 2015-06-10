@@ -89,7 +89,7 @@ endef
 # Properties
 #============
 
-define Configuration.instances
+define Configuration.all
 ${Configuration.__names:%=Configuration[%]}
 endef
 
@@ -195,7 +195,7 @@ endif
 endif
 endif
 
-${foreach c,${Configuration.instances},${eval ${$c.rules}}}
+${foreach c,${Configuration.all},${eval ${$c.rules}}}
 
 #---------------------------------------------------------------------------------------------------
 endif

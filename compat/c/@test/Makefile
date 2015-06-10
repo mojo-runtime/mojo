@@ -1,6 +1,6 @@
 include ${dir ${lastword ${MAKEFILE_LIST}}}../../../Makefile
 
-tests := ${foreach x,${Configuration.instances},${foreach y,\
+tests := ${foreach x,${Configuration.all},${foreach y,\
 \
 assert\
 limits\

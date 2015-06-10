@@ -1,6 +1,6 @@
 include ${dir ${lastword ${MAKEFILE_LIST}}}../../../Makefile
 
-__tests__ += ${foreach x,${Configuration.instances},${foreach y,\
+__tests__ += ${foreach x,${Configuration.all},${foreach y,\
 \
 declval\
 is_arithmetic\
