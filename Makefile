@@ -19,7 +19,7 @@ __all__   := tests
 __clean__ :=
 __tests__ :=
 
-####################################################################################################
+
 
 /ROOT := ${abspath ${dir ${lastword ${MAKEFILE_LIST}}}}
 ifeq (${/ROOT},${CURDIR})
@@ -33,13 +33,13 @@ else
 ${error todo}
 endif
 
-####################################################################################################
+
 # Target-specific variables
 
 define @preprocessor-flags :=
 endef
 
-####################################################################################################
+
 
 define Configuration
 ${eval
@@ -93,7 +93,7 @@ define Configuration.all
 ${Configuration.__names:%=Configuration[%]}
 endef
 
-####################################################################################################
+
 
 _ := ${call Configuration,_top}
 
@@ -157,20 +157,19 @@ $_.cc       := gcc
 $_.cppflags += -fdiagnostics-color=always -fmax-errors=1 -Wno-unknown-pragmas
 $_.cxx      := g++
 
-####################################################################################################
 endif # First time only
-####################################################################################################
+
 
 ifdef __top
 undefine __top
-#---------------------------------------------------------------------------------------------------
+
 # We're the Makefile.
 
 include compat/Makefile
 include lib/Makefile
 
 else
-#---------------------------------------------------------------------------------------------------
+
 # We've been included.
 
 / := ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}
@@ -197,5 +196,5 @@ endif
 
 ${foreach c,${Configuration.all},${eval ${$c.rules}}}
 
-#---------------------------------------------------------------------------------------------------
+
 endif
