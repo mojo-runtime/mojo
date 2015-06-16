@@ -68,11 +68,11 @@ $0[$1].ldflags  = $${if $${$0[$1].base},$${$0[$${$0[$1].base}].ldflags}, $${erro
 #------------
 
 define $0[$1].rules
-$${__build/}$1/: | $${__build/}
+$${build/}$1/: | $${build/}
 	mkdir $$$$@
-$${__build/}$1/%.c.s: $$/%.c | $${__build/}$1/
+$${build/}$1/%.c.s: $$/%.c | $${build/}$1/
 	$$$${$0[$1].cc} $$$${$0[$1].cppflags} $$$${$0[$1].cflags} -o $$$$@ -S $$$$< $$$${@preprocessor-flags}
-$${__build/}$1/%.cxx.s: $$/%.cxx | $${__build/}$1/
+$${build/}$1/%.cxx.s: $$/%.cxx | $${build/}$1/
 	$$$${$0[$1].cxx} $$$${$0[$1].cppflags} $$$${$0[$1].cxxflags} -o $$$$@ -S $$$$< $$$${@preprocessor-flags}
 endef
 
@@ -80,7 +80,7 @@ endef
 #-----------
 
 define $0[$1].compile
-$${__build/}$1/$$1.s
+$${build/}$1/$$1.s
 endef
 
 }$0[$1]
@@ -167,6 +167,7 @@ undefine __top
 
 include compat/Makefile
 include lib/Makefile
+include tools/Makefile
 
 else
 
@@ -177,15 +178,15 @@ ifeq ($/,./)
 / :=
 endif
 
-__build/ := $/.build/
+build/ := $/.build/
 
-${__build/}:
+${build/}:
 	mkdir $@
 
 ifdef MAKECMDGOALS
 ifeq (${MAKECMDGOALS},clean)
-ifneq (${realpath ${__build/}},)
-phony     := _<clean>-${__build/}
+ifneq (${realpath ${build/}},)
+phony     := _<clean>-${build/}
 __clean__ += ${phony}
 .PHONY: ${phony}
 ${phony}:
