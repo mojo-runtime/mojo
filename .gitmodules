@@ -30,3 +30,9 @@
 	branch = master
 	path = lib/std
 	url = git@github.com:mojo-runtime/lib-std.git
+[submodule "tools/clang"]
+	path = tools/clang
+	url = https://github.com/llvm-mirror/clang
+[submodule "tools/llvm"]
+	path = tools/llvm
+	url = https://github.com/llvm-mirror/llvm
