@@ -1,7 +1,3 @@
-[submodule "emacs"]
-	branch = master
-	path = emacs
-	url = git@github.com:mojo-runtime/emacs.git
 [submodule "lib/c"]
 	branch = master
 	path = lib/c
