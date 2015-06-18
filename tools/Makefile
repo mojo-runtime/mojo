@@ -24,4 +24,5 @@ clang := ${build/}llvm/bin/clang
 ${clang}: ${build/}llvm/Makefile
 	${MAKE} --directory=${<D} ${@F}
 
-__all__ += ${clang}
+.PHONY: clang
+clang: ${clang}
