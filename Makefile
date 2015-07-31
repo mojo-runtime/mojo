@@ -165,7 +165,7 @@ undefine __top
 
 # We're the Makefile.
 
-include ${patsubst %,${/ROOT}/%/Makefile,\
+include ${patsubst %,${/ROOT}/%/@test/Makefile,\
 	debug\
 	os\
 	std\
