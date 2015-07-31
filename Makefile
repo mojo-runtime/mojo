@@ -167,7 +167,6 @@ undefine __top
 
 include compat/Makefile
 include lib/Makefile
-include tools/Makefile
 
 else
 
