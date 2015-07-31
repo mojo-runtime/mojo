@@ -99,7 +99,7 @@ _ := ${call Configuration,_top}
 
 $_.cflags   := -std=c11
 $_.cppflags := \
-	-I${ROOT/}lib \
+	-I${or ${ROOT/},.} \
 	-O3 \
 	-Wall \
 	-Werror \
@@ -165,7 +165,11 @@ undefine __top
 
 # We're the Makefile.
 
-include lib/Makefile
+include ${patsubst %,${/ROOT}/%/Makefile,\
+	debug\
+	os\
+	std\
+}
 
 else
 
