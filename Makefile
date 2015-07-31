@@ -165,7 +165,6 @@ undefine __top
 
 # We're the Makefile.
 
-include compat/Makefile
 include lib/Makefile
 
 else
