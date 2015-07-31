@@ -70,9 +70,9 @@ $0[$1].ldflags  = $${if $${$0[$1].base},$${$0[$${$0[$1].base}].ldflags}, $${erro
 define $0[$1].rules
 $${build/}$1/: | $${build/}
 	mkdir $$$$@
-$${build/}$1/%.c.s: $$/%.c | $${build/}$1/
+$${build/}$1/%.c.s: $${./}%.c | $${build/}$1/
 	$$$${$0[$1].cc} $$$${$0[$1].cppflags} $$$${$0[$1].cflags} -o $$$$@ -S $$$$< $$$${@preprocessor-flags}
-$${build/}$1/%.cxx.s: $$/%.cxx | $${build/}$1/
+$${build/}$1/%.cxx.s: $${./}%.cxx | $${build/}$1/
 	$$$${$0[$1].cxx} $$$${$0[$1].cppflags} $$$${$0[$1].cxxflags} -o $$$$@ -S $$$$< $$$${@preprocessor-flags}
 endef
 
@@ -175,12 +175,12 @@ else
 
 # We've been included.
 
-/ := ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}
-ifeq ($/,./)
-/ :=
+./ := ${dir ${lastword ${filter-out ${lastword ${MAKEFILE_LIST}},${MAKEFILE_LIST}}}}
+ifeq (${./},./)
+./ :=
 endif
 
-build/ := $/.build/
+build/ := ${./}.build/
 
 ${build/}:
 	mkdir $@
