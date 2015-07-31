@@ -112,10 +112,10 @@ $_.ldflags  := \
 	-fno-asynchronous-unwind-tables \
 	-nostdlib
 
-_ := ${call Configuration,clang}
+_ := ${call Configuration,_clang}
 
 $_.base     := _top
-$_.cc       := clang
+$_.cc       := _clang
 $_.cppflags += \
 	-fcolor-diagnostics \
 	-ferror-limit=1 \
@@ -132,22 +132,22 @@ $_.cxxflags += \
 
 _ := ${call Configuration,clang-arm-linux}
 
-$_.base     := clang
+$_.base     := _clang
 $_.cppflags += -target armv7-linux-android
 
 _ := ${call Configuration,clang-x86_64-freebsd}
 
-$_.base     := clang
+$_.base     := _clang
 $_.cppflags += -target x86_64-freebsd
 
 _ := ${call Configuration,clang-x86_64-linux}
 
-$_.base     := clang
+$_.base     := _clang
 $_.cppflags += -target x86_64-linux
 
 _ := ${call Configuration,clang-debug}
 
-$_.base     := clang
+$_.base     := _clang
 $_.cppflags += -DDEBUG
 
 _ := ${call Configuration,gcc}
