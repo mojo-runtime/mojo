@@ -80,7 +80,7 @@ endef
 #-----------
 
 define $0[$1].compile
-$${build/}$1/$$1.s
+$${foreach source,$$1,$${build/}$1/$${source}.s}
 endef
 
 }$0[$1]
