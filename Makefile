@@ -26,12 +26,6 @@ ${error todo}
 endif
 
 
-# Target-specific variables
-
-define @preprocessor-flags :=
-endef
-
-
 
 define Configuration
 ${eval
@@ -63,9 +57,9 @@ define $0[$1].rules
 $${build/}$1/: | $${build/}
 	mkdir $$$$@
 $${build/}$1/%.c.s: $${./}%.c | $${build/}$1/
-	$$$${$0[$1].cc} $$$${$0[$1].cppflags} $$$${$0[$1].cflags} -o $$$$@ -S $$$$< $$$${@preprocessor-flags}
+	$$$${$0[$1].cc} $$$${$0[$1].cppflags} $$$${$0[$1].cflags} -o $$$$@ -S $$$$<
 $${build/}$1/%.cxx.s: $${./}%.cxx | $${build/}$1/
-	$$$${$0[$1].cxx} $$$${$0[$1].cppflags} $$$${$0[$1].cxxflags} -o $$$$@ -S $$$$< $$$${@preprocessor-flags}
+	$$$${$0[$1].cxx} $$$${$0[$1].cppflags} $$$${$0[$1].cxxflags} -o $$$$@ -S $$$$<
 endef
 
 # Functions
