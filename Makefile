@@ -3,21 +3,13 @@ define __initialized :=
 1
 endef
 
-.PHONY: all
+.PHONY: all clean test
 .SECONDEXPANSION:
-all: $${__all__}
+.SUFFIXES:
 
-.PHONY: clean
-.SECONDEXPANSION:
-clean: $${__clean__}
-
-.PHONY: test
-.SECONDEXPANSION:
-tests: $${__tests__}
-
-__all__   := tests
-__clean__ :=
-__tests__ :=
+all  :: test
+clean::
+test ::
 
 
 
@@ -188,11 +180,10 @@ ${build/}:
 ifdef MAKECMDGOALS
 ifeq (${MAKECMDGOALS},clean)
 ifneq (${realpath ${build/}},)
-phony     := _<clean>-${build/}
-__clean__ += ${phony}
-.PHONY: ${phony}
-${phony}:
-	rm -r ${subst _<clean>-,,$@}
+
+clean:: ${build/}
+	rm -r $<
+
 endif
 endif
 endif
