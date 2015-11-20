@@ -60,6 +60,8 @@ $${build/}$1/%.c.s: $${./}%.c | $${build/}$1/
 	$$$${$0[$1].cc} $$$${$0[$1].cppflags} $$$${$0[$1].cflags} -o $$$$@ -S $$$$<
 $${build/}$1/%.cxx.s: $${./}%.cxx | $${build/}$1/
 	$$$${$0[$1].cxx} $$$${$0[$1].cppflags} $$$${$0[$1].cxxflags} -o $$$$@ -S $$$$<
+$${build/}$1/%: $${./}%.cxx | $${build/}$1/
+	$$$${$0[$1].cxx} $$$${$0[$1].cppflags} $$$${$0[$1].cxxflags} $$$${$0[$1].ldflags} -o $$$$@ $$$$<
 endef
 
 # Functions
